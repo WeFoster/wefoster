@@ -30,7 +30,7 @@ add_action( 'bp_init', 'wff_default_avatar' );
 
 
    if ( $wf_plus_default_group_avatar == '') {
-      $custom_avatar = get_template_directory_uri() . '/assets/img/avatar-group.jpg';
+      $custom_avatar = WEFOSTER_DEFAULT_GROUP_AVATAR ;
    } else {
      $custom_avatar = get_theme_mod( 'wf_plus_default_group_avatar' );
    }

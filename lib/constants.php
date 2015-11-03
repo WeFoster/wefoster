@@ -285,6 +285,11 @@ if ( !defined( 'BP_AVATAR_ORIGINAL_MAX_FILESIZE' ) ) {
 	define ( 'BP_AVATAR_ORIGINAL_MAX_FILESIZE', 5120000 );
 }
 
+
+if ( !defined( 'WEFOSTER_DEFAULT_GROUP_AVATAR' ) ) {
+	define ( 'WEFOSTER_DEFAULT_GROUP_AVATAR', WEFOSTER_ASSETS_URL . '/assets/img/avatar-group.jpg' );
+}
+
 /////////////// 											///////////////
 ///////////////     DEVELOPERS 				///////////////
 /////////////// 											///////////////
