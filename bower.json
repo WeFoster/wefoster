@@ -1,0 +1,33 @@
+{
+  "name": "wefoster-framework",
+  "version": "1.0.0",
+  "homepage": "http://wefoster.co",
+  "authors": [
+    "Bowe Frankema <bowe@wefoster.co"
+  ],
+  "description": "The WeFoster Framework allows your to rapidly build BuddyPress and WordPress Communities",
+  "keywords": [
+    "buddypress",
+    "wordpress"
+  ],
+  "license": "GPL v3",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "assets/vendor",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap-less": "~3.3.4",
+    "fontawesome": "~4.3.0",
+    "bootstrap-select": "~1.7.3",
+    "headroom.js": "~0.7.0",
+    "autosize": "https://github.com/jackmoore/autosize.git#~3.0.8",
+    "smartmenus": "https://github.com/vadikom/smartmenus.git#~0.9.7",
+    "readmore": "~2.0.5",
+    "fastclick": "~1.0.6",
+    "jquery-autogrow-textarea": "~1.0.3"
+  }
+}

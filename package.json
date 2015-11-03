@@ -1,0 +1,42 @@
+{
+  "name": "wefoster-framework",
+  "version": "1.1.2",
+  "author": "Bowe Frankema <bowe@wefoster.co>",
+  "homepage": "http://wefoster.co",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/wefoster/wefoster-framework.git"
+  },
+  "bugs": {
+    "url": "https://github.com/wefoster-framework.git/wefoster/issues"
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "http://opensource.org/licenses/MIT"
+    }
+  ],
+  "engines": {
+    "node": ">= 0.12.2",
+    "npm": ">= 2.11.2"
+  },
+  "devDependencies": {
+    "grunt": "~0.4.2",
+    "grunt-contrib-clean": "~0.6.0",
+    "grunt-contrib-compress": "~0.13.0",
+    "grunt-contrib-copy": "~0.8.0",
+    "grunt-contrib-imagemin": "~0.9.4",
+    "grunt-contrib-jshint": "~0.6.4",
+    "grunt-contrib-less": "^1.0.1",
+    "grunt-contrib-uglify": "~0.2.4",
+    "grunt-contrib-watch": "~0.5.3",
+    "grunt-git": "~0.3.4",
+    "grunt-glotpress": "^0.2.1",
+    "grunt-pot": "~0.2.0",
+    "grunt-wp-i18n": "~0.5.2",
+    "grunt-wp-version": "~0.1.0"
+  },
+  "dependencies": {
+    "matchdep": "~0.3.0"
+  }
+}

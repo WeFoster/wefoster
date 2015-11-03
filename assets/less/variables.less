@@ -1,0 +1,371 @@
+//
+// Layout Variables
+// -----------------------------------------------------
+@container-width: 1170px;
+
+//Make sure these always add up to 100%
+@sidebar-width: 25%;
+@content-width: 75%;
+
+//Padding & Margin
+@padding-full: 30px;
+@padding-half: ( @padding-full / 2 );
+@padding-double: (@padding-full * 2 );
+@margin-full: @padding-full;
+@margin-half: ( @margin-full / 2 );
+@margin-double: (@margin-full * 2 );
+
+//Global Styling
+@body-bg: darken(@white, 6%);
+@font-family-base: "Helvetica Neue", Helvetica, Arial, sans-serif;
+@font-size-base: 16px;
+@headings-font-family: inherit;
+@font-line-height: 160%;
+
+//Layout
+@main-bg: @white;
+@main-border: 0;
+@sidebar-bg: transparent;
+@sidebar-border: 0;
+@inner-sidebar-bg: @white;
+@inner-sidebar-border: 0;
+
+//Responsive Grid changes.
+@grid-float-breakpoint-max: 769px;
+@screen-sm: 769px;
+@screen-tablet: 769px;
+@container-tablet: (100% - 3);
+
+//logo-height
+@logo-height: 30px;
+@logo-position: -4px;
+
+// Typography
+// -------------------------
+@font-size-h1: floor((@font-size-base * 2.6)); // ~36px
+@font-size-h2: floor((@font-size-base * 2)); // ~30px
+@font-size-h3: ceil((@font-size-base * 1.7)); // ~24px
+@font-size-h4: ceil((@font-size-base * 1.30)); // ~18px
+@font-size-h5: @font-size-base;
+@font-size-h6: ceil((@font-size-base * 0.85)); // ~12px
+@font-header-weight: 200;
+
+// Page Headers
+@page-header-background: @white;
+@page-header-border-bottom: 1px solid darken(@page-header-background, 2%);
+@page-header-color: @text-color;
+@page-header-link-color: inherit;
+@page-header-link-color-hover: inherit;
+
+//Archive/Loop Headers
+@loop-header-background: @page-header-background;
+@loop-header-color: @page-header-color;
+@loop-header-link-color: @page-header-link-color;
+@loop-header-link-color-hover: @page-header-link-color-hover;
+
+//Widgets
+@widget-header-background: @page-header-background;
+@widget-header-color: @text-color;
+@widget-header-font-family: @font-family-base;
+
+// CSS3 Magic
+// --------------------------------------------------
+@global-border-radius: 4px;
+@global-box-shadow: none;
+
+//
+// Colors
+// --------------------------------------------------
+//Inversed color, Navigation Hightlights
+@brand-primary: #454a54;
+@brand-secondary: #28a587;
+@brand-complimentary: #3abb9a;
+@link-color: @brand-secondary;
+@link-hover-color: @link-color;
+@link-opacity: 1;
+@color-base: #555;
+@widget-bg: #fff;
+@white: #fff;
+
+// Grays
+@gray-darker: lighten(@text-color, 5%);
+@gray-dark: lighten(@text-color, 15%);
+@gray: lighten(@text-color, 26%);
+@gray-light: lighten(@text-color, 35%);
+@gray-lighter: lighten(@text-color, 50%);
+@inverse: white;
+
+// Scaffolding
+// -------------------------
+@text-color: #343434;
+@header-color: @white;
+
+//Navigation
+@navbar-padding: 0;
+@navbar-margin: 0 0 @margin-full 0;
+@navbar-margin-fixed: 0;
+@navbar-border-bottom: 0;
+@navbar-default-color: @text-color;
+@navbar-default-bg: @white;
+@navbar-default-border: darken(@navbar-default-bg, 6.5%);
+
+// Navbar links
+@navbar-padding-vertical: (@padding-half * 1.25 );
+@navbar-default-link-color: @brand-primary;
+@navbar-default-link-hover-color: @white;
+@navbar-default-link-hover-bg: @brand-primary;
+@navbar-default-link-active-color: @white;
+@navbar-default-link-active-bg: @brand-primary;
+@navbar-default-link-disabled-color: #ccc;
+@navbar-default-link-disabled-bg: transparent;
+@navbar-inverse-bg: @brand-primary;
+@navbar-inverse-link-hover-bg: darken(@brand-primary, 10%);
+@navbar-inverse-link-color: darken(white, 10%);
+@navbar-inverse-link-active-color: @white;
+@navbar-inverse-link-active-bg: @navbar-inverse-link-hover-bg;
+
+//** Unit-less `line-height` for use in components like buttons.
+@line-height-base: 1.428571429; // 20/14
+//** Computed "line-height" (`font-size` * `line-height`) for use with `margin`, `padding`, etc.
+@line-height-computed: floor((@font-size-base * @line-height-base)); // ~20px
+//** Global color for active items (e.g., navs or dropdowns).
+@component-active-color: #999;
+
+//Comments
+@comment-bg: darken(@white, 2%);
+@comment-border-bottom: 1px solid darken(@comment-bg, 2%);
+@comment-border-top: 1px solid darken(@comment-bg, 3%);
+@comment-padding: @padding-half;
+@comment-margin: -@margin-full 0 0 (@medium-avatar-size + @padding-half);
+@comment-font-size:inherit:;
+@comment-color: inherit;
+@comment-box-shadow: none;
+@comment-content-bg: darken(@white, 2%);
+@comment-avatar-width: 45px;
+@comment-avatar-height: 45px;
+@comment-avatar-height-nested: 30px;
+@comment-avatar-width-nested: 30px;
+
+// Post Meta
+@post-meta-background: @brand-primary;
+@post-meta-font-size: @font-size-small;
+@post-meta-border-bottom: 1px solid #ddefff;
+@post-meta-border-top: none;
+@post-meta-color: @text-color;
+@post-meta-link-color: @white;
+@post-meta-font-weight: bold;
+
+//
+// Components
+// --------------------------------------------------
+//Buttons
+@btn-font-weight: bold;
+@btn-padding: 8px 10px;
+@btn-size: 100%;
+@btn-small-size: 80%;
+@btn-radius: 4px;
+
+//Avatars
+@big-avatar-size: inherit;
+@big-avatar-radius: 0;
+@big-avatar-border: 0;
+@big-avatar-padding: 0;
+@big-avatar-bg: none;
+@big-avatar-shadow: none;
+@medium-avatar-size: 40px;
+@medium-avatar-radius: 50%;
+@medium-avatar-border: 1px solid @brand-complimentary;
+@medium-avatar-padding: 2px;
+@medium-avatar-bg: @white;
+@medium-avatar-shadow: none;
+@small-avatar-size: 25px;
+@small-avatar-radius: 50%;
+@small-avatar-border: 0;
+@small-avatar-padding: 0;
+@small-avatar-bg: none;
+@small-avatar-shadow: none;
+
+//Alerts
+@alert-success-bg: #efc;
+@alert-success-color: #250;
+@alert-error-bg: #faa;
+@alert-error-color: darken(@alert-error-bg, 30%);
+@alert-message-bg: #fdc;
+@alert-message-color: darken(@alert-message-bg, 30%);
+@alert-font-weight: normal;
+
+//Forms
+@form-bg: @white;
+@form-color: @text-color;
+@form-padding: 3px 8px;
+@form-margin: 0;
+@form-radius: 2px;
+@form-shadow: none;
+@form-font-size: 90%;
+@form-font-weight: 400;
+@form-font-family: inherit;
+@form-border: 1px inset darken(@form-bg, 5%);
+@form-focus: @white;
+@form-label-color: @text-color;
+@form-label-font-weight: 500;
+@form-label-font-size: 90%;
+@form-label-transform: none;
+@form-label-margin: 15px 0 5px 0;
+
+//Icons
+@icon-font-family: "FontAwesome";
+@icon-size: inherit;
+@icon-color: inherit;
+@icon-padding-right: 7px;
+@icon-shadow: none;
+
+// Listings
+@listing-bg: @white;
+@listing-margin: 0 -@margin-full;
+@listing-padding: @padding-full;
+@listing-border-bottom: 1px solid darken(@listing-bg, 2%);
+@listing-border-top: 1px solid darken(@listing-bg, 1%);
+@listing-box-shadow: none;
+
+// Listings
+@listing-widget-bg: @white;
+@listing-widget-margin: @listing-margin;
+@listing-widget-padding: @listing-padding;
+@listing-widget-border-bottom: 1px solid darken(@listing-widget-bg, 2%);
+@listing-widget-border-top: 1px solid darken(@listing-widget-bg, 1%);
+@listing-widget-box-shadow: none;
+
+// Item List Tabs
+@item-tabs-wrap-bg: @white;
+@item-tabs-wrap-border-top: 0;
+@item-tabs-wrap-border-bottom: 0;
+@item-tabs-bg: darken(@item-tabs-wrap-bg, 2%);
+@item-tabs-hover-bg: darken(@item-tabs-wrap-bg, 10%);
+@item-tabs-border-top: 1px solid darken(@item-tabs-wrap-bg, 6%);
+@item-tabs-border-bottom: 1px solid darken(@item-tabs-wrap-bg, 4%);
+@item-tabs-color: @text-color;
+@item-tabs-hover-color: @brand-primary;
+@item-tabs-active-bg: @brand-primary;
+@item-tabs-active-color: @white;
+@item-tabs-active-span-bg: lighten(@item-tabs-active-bg, 15%);
+@item-tabs-active-span-color: @white;
+@item-tabs-active-font-weight: inherit;
+@item-tabs-border-radius: 6px;
+@item-tabs-margin: 0 -@margin-full @margin-full -@margin-full;
+@item-tabs-padding: @padding-half;
+@item-tabs-shadow: none;
+
+// Sub Item Tabs
+@sub-item-tabs-wrap-bg: @item-tabs-wrap-bg;
+@sub-item-tabs-wrap-border-top: 0;
+@sub-item-tabs-wrap-border-bottom: 0;
+@sub-item-tabs-bg: lighten(@sub-item-tabs-wrap-bg, 1.5%);
+@sub-item-tabs-hover-bg: @brand-primary;
+@sub-item-tabs-border-bottom: 1px solid darken(@sub-item-tabs-wrap-bg, 4%);
+@sub-item-tabs-border-top: 1px solid darken(@sub-item-tabs-wrap-bg, 3%);
+@sub-item-tabs-color: @gray-lighter;
+@sub-item-tabs-active-color: @gray-lighter;
+@sub-item-tabs-hover-color: @brand-secondary;
+@sub-item-tabs-border-radius: 6px;
+
+// Vertical List Tabs
+@vert-tabs-wrap-bg: @item-tabs-wrap-bg;
+@vert-tabs-bg: @item-tabs-wrap-bg;
+@vert-tabs-hover-bg: @brand-primary;
+@vert-tabs-box-shadow: none;
+@vert-tabs-border-bottom: 0 solid darken(@vert-tabs-bg, 3%);
+@vert-tabs-border-top: 0 solid darken(@vert-tabs-bg, 1%);
+@vert-tabs-color: @text-color;
+@vert-tabs-hover-color: @white;
+@vert-tabs-active-bg: @brand-primary;
+@vert-tabs-active-color: @white;
+@vert-tabs-active-span-bg: darken(@item-tabs-active-bg, 5%);
+@vert-tabs-active-span-color: darken(@item-tabs-active-bg, 2%);
+@vert-tabs-active-border-bottom: 0;
+@vert-tabs-active-border-top: 0;
+@vert-tabs-active-font-weight: inherit;
+@vert-tabs-border-radius: 6px;
+@vert-tabs-margin: 0 -@margin-full;
+@vert-tabs-padding: 0 @padding-full;
+@vert-tabs-shadow: none;
+
+// Sidebar Headers
+@header-avatar-bg: @brand-primary;
+@header-border-radius: inherit;
+
+//
+// ACTIVITY COMPONENT
+//
+//Activity Update
+@activity-filter-background: @page-header-background;
+@whats-new-background: darken(@page-header-background, 2%);
+@whats-new-margin: 0 -@margin-full 0;
+@whats-new-padding: @padding-full @padding-full 0;
+@whats-new-color: @text-color;
+@whats-new-font-weight: bold;
+@whats-new-border-top: 1px solid darken(@page-header-background, 3%);
+@whats-new-border-bottom: 1px solid darken(@page-header-background, 5%);
+
+
+//Activity Update
+@activity-inner-bg: darken(@listing-bg, 2%);
+@activity-inner-margin: 10px 10px 5px 0;
+@activity-inner-padding: @padding-half;
+@activity-inner-color: @text-color;
+@activity-inner-font-size: inherit;
+@activity-inner-border: none;
+@activity-inner-border-color: #ddd;
+@activity-inner-box-shadow: none;
+
+
+//Activity Header
+@activity-header-bg: @white;
+@activity-header-margin: 0 -@margin-full;
+@activity-header-padding: @padding-full;
+@activity-header-color: @gray;
+@activity-header-font-size: 85%;
+@activity-header-line-height: 220%;
+@activity-header-font-weight: 500;
+
+//Activity Inner
+@activity-inner-bg: darken(@listing-bg, 2%);
+@activity-inner-margin: 10px 10px 5px 0;
+@activity-inner-padding: @padding-half;
+@activity-inner-color: @text-color;
+@activity-inner-font-size: inherit;
+@activity-inner-border: none;
+@activity-inner-border-color: #ddd;
+@activity-inner-box-shadow: none;
+
+//Activity Comments
+@activity-comment-bg: @activity-inner-bg;
+@activity-comment-border-bottom: 1px solid darken(@activity-comment-bg, 4%);
+@activity-comment-border-top: 1px solid darken(@activity-comment-bg, 3%);
+@activity-comment-padding: @padding-half;
+@activity-comment-margin: 0 0 -1px 0;
+@acitivity-comment-font-size: 90%;
+@activity-comment-color: inherit;
+@activity-comment-box-shadow: none;
+
+//
+// ****** WordPress *******
+//
+//Post Meta
+@post-meta-bg: darken(@white, 2%);
+@post-meta-border-bottom: 1px solid darken(@post-meta-bg, 4%);
+@post-meta-border-top: 1px solid darken(@post-meta-bg, 3%);
+@post-meta-padding: (@padding-half * 0.66) @padding-full;
+@post-meta-margin: -30px -30px 30px;
+@post-meta-font-size: 90%;
+@post-meta-color: inherit;
+@post-meta-box-shadow: none;
+
+//Post Author
+@author-bio-background: @post-meta-bg;
+@author-bio-color: inherit;
+@author-bio-font-size: inherit;
+@author-bio-border-bottom: 1px solid darken(@author-bio-background, 4%);
+@author-bio-border-top: 1px solid darken(@author-bio-background, 3%);
+
+//Groups Component
+//Members Component
