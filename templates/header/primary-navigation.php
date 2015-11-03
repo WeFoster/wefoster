@@ -1,5 +1,5 @@
 <?php do_action('before_primary_navigation'); ?>
-<nav class="collapse navbar-collapse <?php do_action('class_navbar'); ?>" role="navigation">
+<nav class="collapse navbar-collapse primary-nav-wrap <?php do_action('class_navbar'); ?>" role="navigation">
 		 <?php do_action('open_primary_navigation'); ?>
           <?php
               wp_nav_menu(array(

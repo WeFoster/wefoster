@@ -28,16 +28,21 @@ if ( WEFOSTER_AUTO_SETUP == 'true'  ) {
 
         $menus = get_terms( 'nav_menu' );
 
+
         foreach ( $menus as $menu ) {
             if( $name === 'Primary Navigation' ) {
                 return $menu->term_id;
             }
         }
 
+
         // Set the menu to primary menu location
         $locations = get_theme_mod( 'nav_menu_locations' );
         $locations['primary_navigation'] = $menu->term_id;
-        set_theme_mod ( 'nav_menu_locations', $locations );
+
+        if( get_terms( 'nav_menu')  == 0 ) {
+          set_theme_mod ( 'nav_menu_locations', $locations );
+        }
     }
   }
   //Only assign when the theme is activated.
@@ -288,6 +293,7 @@ function wf_theme_populate_sidebars() {
  */
 function wf_theme_add_default_menu()
 {
+
 	// setup pages
 	$pages = array(
 		array(
