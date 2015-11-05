@@ -62,3 +62,9 @@ function wefoster_plus_background_pictures() {
   }
 
 }
+
+
+
+function do_not_filter_anything( $value ) {
+	return $value;
+}
