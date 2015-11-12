@@ -7,6 +7,8 @@
 * @since 1.0
 * @package WeFoster Framework
 */
+define( 'WEFOSTER_VERSION', '1.0' );
+
 if ( !defined( 'WEFOSTER_THEME_DIR' ) ) {
 	define( 'WEFOSTER_THEME_DIR', get_template_directory() );
 }
@@ -38,11 +40,12 @@ require WEFOSTER_THEME_DIR . '/lib/constants.php';         // Set up our constan
 require_once WEFOSTER_THEME_DIR . '/lib/setup/stylekits.php';         // Set up our constants.
 
 //Setting up the theme
-require_once WEFOSTER_THEME_DIR . '/lib/setup/init.php';              // Initial theme setup
-require_once WEFOSTER_THEME_DIR . '/lib/setup/scripts.php';         	// Scripts and stylesheets
-require_once WEFOSTER_THEME_DIR . '/lib/setup/menus.php';             // BP Menu Walker
-require_once WEFOSTER_THEME_DIR . '/lib/setup/sidebars.php';          // BP Sidebars
+require_once WEFOSTER_THEME_DIR . '/lib/setup/init.php';             // Initial theme setup
+require_once WEFOSTER_THEME_DIR . '/lib/setup/scripts.php';          // Scripts and stylesheets
+require_once WEFOSTER_THEME_DIR . '/lib/setup/menus.php';            // BP Menu Walker
+require_once WEFOSTER_THEME_DIR . '/lib/setup/sidebars.php';         // BP Sidebars
 require_once WEFOSTER_THEME_DIR . '/lib/setup/activation.php';       // Automagically set up widgets and homepage
+require_once WEFOSTER_THEME_DIR . '/lib/setup/helpers.php';          // Helper functions
 
 //Our Customiser Options
 require_once ( WEFOSTER_THEME_DIR . '/lib/customiser/init.php' );

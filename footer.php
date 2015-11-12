@@ -13,6 +13,8 @@
 </div><!-- /.content -->
 </div><!-- /.wrap -->
 
+<?php do_action('before_footer'); ?>
+
   <footer class="content-info <?php do_action('class_footer'); ?>" role="contentinfo">
 
     <div class="<?php do_action('class_container'); do_action('class_container_footer'); ?>">
@@ -31,8 +33,24 @@
 
           <?php else: ?>
 
-            <?php echo get_theme_mod( 'wf_plus_footer_text' ); ?>
-            
+            <?php $footer_copyright = get_theme_mod( 'wf_plus_footer_text' ) ?>
+
+            <?php // Data validation: Allow anchor and strong tags
+              echo wp_kses( $footer_copyright,
+                array(
+                    'strong' => array(),
+                    'a' => array(
+                    'href' => true,
+                    'rel' => true,
+                    'rev' => true,
+                    'name' => true,
+                    'target' => true,
+                  )
+                )
+                );
+            ?>
+
+
           <?php endif; ?>
 
         </div>

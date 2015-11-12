@@ -896,7 +896,7 @@ Kirki::add_field( 'wefoster_plus', array(
 		'label'       => __( 'Footer Text', 'wefoster' ),
 		'description' => __( 'Change the text displayed in your footer. You can use hyperlinks as well.', 'wefoster' ),
 		'priority'    => 10,
-		'sanitize_callback' => 'esc_url_raw',
+		'sanitize_callback' => 'do_not_filter_anything',
 	) );
 
 	////////////////

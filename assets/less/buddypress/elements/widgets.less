@@ -1,17 +1,27 @@
-.widget.buddypress {
+.widget {
+  ul.item-list {
+    margin: 0;
+    padding: 0;
+  }
+
   ul.item-list li {
+    margin: 0;
+    padding: 0;
     padding-bottom: @padding-half;
+    padding-top: @padding-half;
     
     &:last-child {
       margin-bottom: -@margin-full;
     }
   }
-  
 
   div.avatar-block {
     overflow: hidden;
   }
-  
+
+  img.avatar-20 {
+    display: none;
+  }
 
   div.item-options {
     background: darken(@white, 2%);
@@ -25,12 +35,10 @@
       color: lighten(@widget-header-color, 20%);
     }
   }
-  
 
   span.activity {
     display: inline-block;
   }
-  
 
   div.item {
     margin: 0 0 1em;
