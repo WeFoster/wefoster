@@ -115,6 +115,9 @@ module.exports = function(grunt) {
             //Add auto grow plugin
             'assets/vendor/jquery-autogrow-textarea/src/jquery.autogrow.js',
 
+            //Fluid Vids
+            'assets/vendor/fluidvids/dist/fluidvids.js',
+
             //Load custom JS for WeFoster framework
             'assets/js/_main.js',
 

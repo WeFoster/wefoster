@@ -7,6 +7,8 @@
 * @since 1.0
 * @package WeFoster Framework
 */
+define( 'WEFOSTER_VERSION', '1.0' );
+
 if ( !defined( 'WEFOSTER_THEME_DIR' ) ) {
 	define( 'WEFOSTER_THEME_DIR', get_template_directory() );
 }
