@@ -1,5 +1,5 @@
 .page {
-  
+
   .entry-content {
     margin-top: @margin-full;
   }
@@ -15,14 +15,15 @@
   margin        : -@margin-full -@margin-full @margin-full;
   border-bottom : 0;
   padding-left  : @padding-full;
+  padding-right  : @padding-full;
   position      : relative;
   z-index       : 0;
   border-bottom : @page-header-border-bottom;
-  
+
   a {
     font-weight: @font-header-weight;
   }
-  
+
 
   h1,
   h2 {
@@ -32,15 +33,15 @@
     font-weight: @font-header-weight;
     font-size  : @font-size-h2;
     color      : @page-header-color;
-    
+
     a {
       color: @page-header-link-color;
-      
+
       &:hover {
         color: @page-header-link-color-hover;
       }
     }
-    
+
 
     .btn-primary {
       background-color: darken(@page-header-color, 25%);
