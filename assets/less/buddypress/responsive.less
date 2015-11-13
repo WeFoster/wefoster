@@ -1,3 +1,17 @@
+.buddypress-active {
+  .inner-sidebar.mobile {
+    border-radius: 0;
+    margin-top: -10px;
+    position: relative;
+    top: -100px;
+    z-index: 100;
+  }
+
+  .sidebar-offcanvas {
+    top: 100px;
+  }
+}
+
 /*--------------------------------------------------------------
 4.1 - Smartphones - landscape
 --------------------------------------------------------------*/
@@ -6,22 +20,20 @@
   position: absolute;
 }
 
-
 @media only screen and (max-width: 480px ) {
   a.bp-title-button {
     margin-left: 10px;
   }
-  
 
   div.dir-search {
     float: right;
     text-align: right;
+    
     input[type="text"] {
       margin-bottom: 1em;
       width: 50%;
     }
   }
-  
 
   form.standard-form {
     .main-column {
@@ -30,7 +42,6 @@
           width: 100%;
         }
       }
-      
 
       div.action {
         position: relative;
@@ -39,7 +50,6 @@
     }
   }
 }
-
 
 /*--------------------------------------------------------------
 4.2 - Smartphones - portrait
@@ -50,7 +60,6 @@
       margin-left: 0;
     }
   }
-  
 
   ul.item-list {
     li {
@@ -60,12 +69,10 @@
         margin: 10px 0 0;
         width: auto;
       }
-      
 
       div.meta {
         margin-top: 0;
       }
-      
 
       div.action {
         clear: left;
@@ -79,13 +86,11 @@
       }
     }
   }
-  
 
   li#groups-order-select {
     clear: left;
     float: left;
   }
-  
 
   li {
     div.item {
@@ -93,14 +98,12 @@
       width: auto;
     }
   }
-  
 
   .item-desc {
     p {
       margin: 0 0 10px;
     }
   }
-  
 
   div.dir-search {
     clear: left;
@@ -109,7 +112,6 @@
     text-align: left;
   }
 }
-
 
 /*--------------------------------------------------------------
 4.2 - Smartphones - smaller screen sizes
@@ -123,12 +125,10 @@
       }
     }
   }
-  
 
   li#groups-order-select {
     float: left;
   }
-  
 
   h1 {
     a.bp-title-button {
@@ -137,16 +137,15 @@
       margin: 10px 0 20px;
     }
   }
-  
 
   div.dir-search {
     float: left;
     margin: 0;
+    
     input[type="text"] {
       width: 50%;
     }
   }
-  
 
   ul.item-list li div.action,
   li div.item {
@@ -154,15 +153,12 @@
   }
 }
 
-
 /*! Hiding stuff that is not crucial for mobile experience
 But greatly improves the layout */
 @media only screen and (max-width: @grid-float-breakpoint-max) {
-  
   .bp-title-button {
     display: none;
   }
-  
 
   .buddypress div.item-list-tabs ul li.last {
     position: inherit;
@@ -174,13 +170,11 @@ But greatly improves the layout */
     text-align: center;
     padding: 15px;
   }
-  
 
   div.dir-search {
     top: 15px;
   }
 }
-
 
 #buddypress .mobile-profile-header {
   margin: -@margin-full -@margin-full @margin-full;
@@ -194,7 +188,6 @@ But greatly improves the layout */
     z-index: 100;
     padding: 0;
   }
-  
 
   .wf-member-action-button {
     width: 60%;

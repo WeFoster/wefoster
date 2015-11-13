@@ -9,13 +9,13 @@
  * @package WeFoster Framework
  */
  ?>
-
 </div><!-- /.content -->
 </div><!-- /.wrap -->
 
 <?php do_action('before_footer'); ?>
 
   <footer class="content-info <?php do_action('class_footer'); ?>" role="contentinfo">
+
 
     <div class="<?php do_action('class_container'); do_action('class_container_footer'); ?>">
 

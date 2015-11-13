@@ -89,5 +89,5 @@ if ( ! function_exists ( 'wff_theme_user_mobile_navigation' ) ) {
     </div>
     <?php
   }
-  add_action( 'open_sidebar', 'wff_theme_user_mobile_navigation', 1 );
+  add_action( 'open_mobile_sidebar', 'wff_theme_user_mobile_navigation', 1 );
 }

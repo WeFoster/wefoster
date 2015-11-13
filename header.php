@@ -17,7 +17,7 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-  <?php if ( function_exists( '_wp_render_title_tag' )  ): ?> 
+  <?php if ( function_exists( '_wp_render_title_tag' )  ): ?>
     <title><?php wp_title( '|', true, 'right' ); ?></title>
   <?php endif; ?>
 
@@ -45,3 +45,5 @@
     <?php do_action('before_content'); ?>
 
     <div id="site-content" class="content row row-offcanvas row-offcanvas-left <?php do_action('class_content'); ?>">
+
+<?php get_template_part('templates/sidebar/mobile-sidebar'); ?>
