@@ -1,14 +1,26 @@
-.buddypress-active {
-  .inner-sidebar.mobile {
-    border-radius: 0;
-    margin-top: -10px;
-    position: relative;
-    top: -100px;
-    z-index: 100;
-  }
+@media screen and (max-width: @grid-float-breakpoint-max) {
+  .buddypress-active {
+    .inner-sidebar.mobile {
+      border-radius: 0;
+      margin-top: -10px;
+      position: relative;
+      top: -100px;
+      z-index: 100;
+    }
 
-  .sidebar-offcanvas {
-    top: 100px;
+    .sidebar-offcanvas {
+      top: 100px;
+    }
+
+    &.logged-in {
+      .inner-sidebar.mobile {
+        top: -75px;
+      }
+
+      .sidebar-offcanvas {
+        top: 75px;
+      }
+    }
   }
 }
 
