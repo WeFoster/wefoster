@@ -290,6 +290,21 @@ if ( !defined( 'WEFOSTER_DEFAULT_GROUP_AVATAR' ) ) {
 	define ( 'WEFOSTER_DEFAULT_GROUP_AVATAR', WEFOSTER_ASSETS_URL . '/assets/img/avatar-group.jpg' );
 }
 
+
+/////////////// 											///////////////
+///////////////     COVER PHOTOS 			///////////////
+/////////////// 											///////////////
+
+// By default these will be based on your Post Thumbnails settings.
+if ( !defined( 'WEFOSTER_DEFAULT_BP_COVER_WIDTH' ) ) {
+	define( 'WEFOSTER_DEFAULT_BP_COVER_WIDTH', WEFOSTER_POST_THUMBNAIL_WIDTH );
+}
+
+if ( !defined( 'WEFOSTER_DEFAULT_BP_COVER_HEIGHT' ) ) {
+	define( 'WEFOSTER_DEFAULT_BP_COVER_HEIGHT', WEFOSTER_POST_THUMBNAIL_HEIGHT );
+}
+
+
 //Set our Default Cover Photo if none is set
 if ( !defined( 'WEFOSTER_DEFAULT_GROUP_COVER_PHOTO' ) ) {
 	define ( 'WEFOSTER_DEFAULT_GROUP_COVER_PHOTO', WEFOSTER_ASSETS_URL . '/assets/img/default-cover-photo.png' );

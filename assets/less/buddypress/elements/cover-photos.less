@@ -1,5 +1,26 @@
 .no-cover-photo {
-  text-align: center;
+  display: inline-block;
+  margin: 0 auto;
   position: absolute;
+  text-align: center;
+  width: 100%;
   z-index: 100;
+  
+  &.my-profile {
+    right: 0;
+    text-align: right;
+    top: 4px;
+    transform: none;
+    
+    a {
+      font-size: 45%;
+    }
+  }
+
+  a {
+    background: fade(@brand-primary, 85%);
+    color: @white;
+    padding: 15px;
+    font-size: 60%;
+  }
 }
