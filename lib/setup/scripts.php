@@ -24,11 +24,11 @@ function wff_scripts() {
   wp_deregister_style( 'bp-legacy-css' );
 
   //Enqueue our Main Stylesheet.
-  wp_enqueue_style('wff_main', $enq_path . 'main.css', false, '6ee17105aaae3d20bb56ee840e0cabcd');
+  wp_enqueue_style('wff_main', $enq_path . 'main.css', false, '6ee17105aaae3sffd20bb56ee840e0cabcd');
 
   //Load our BuddyPress Stylesheet based on being active (on root or multiblog)
   if ( class_exists( 'BuddyPress') && bp_is_root_blog() || class_exists( 'BuddyPress') && defined('BP_ENABLE_MULTIBLOG')   ) {
-    wp_enqueue_style('wff_buddypress', $enq_path . 'buddypress.css', false, '731ef031f390528505ab02fds023b2c7a7');
+    wp_enqueue_style('wff_buddypress', $enq_path . 'buddypress.css', false, '731ef031fsfsd390528505ab02fds023b2c7a7');
   }
 
   if (is_single() && comments_open() && get_option('thread_comments')) {

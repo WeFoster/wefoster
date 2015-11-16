@@ -290,12 +290,14 @@ if ( !defined( 'WEFOSTER_DEFAULT_GROUP_AVATAR' ) ) {
 	define ( 'WEFOSTER_DEFAULT_GROUP_AVATAR', WEFOSTER_ASSETS_URL . '/assets/img/avatar-group.jpg' );
 }
 
+//Set our Default Cover Photo if none is set
 if ( !defined( 'WEFOSTER_DEFAULT_GROUP_COVER_PHOTO' ) ) {
-	define ( 'WEFOSTER_DEFAULT_GROUP_COVER_PHOTO', WEFOSTER_ASSETS_URL . '/assets/img/avatar-group.jpg' );
+	define ( 'WEFOSTER_DEFAULT_GROUP_COVER_PHOTO', WEFOSTER_ASSETS_URL . '/assets/img/default-cover-photo.png' );
 }
 
+//Change this value if you'd like different default cover photos for Members & Groups.
 if ( !defined( 'WEFOSTER_DEFAULT_MEMBER_COVER_PHOTO' ) ) {
-	define ( 'WEFOSTER_DEFAULT_MEMBER_COVER_PHOTO', WEFOSTER_ASSETS_URL . '/assets/img/avatar-group.jpg' );
+	define ( 'WEFOSTER_DEFAULT_MEMBER_COVER_PHOTO', WEFOSTER_DEFAULT_GROUP_COVER_PHOTO );
 }
 
 /////////////// 											///////////////
@@ -308,7 +310,7 @@ if ( !defined( 'WEFOSTER_DEFAULT_MEMBER_COVER_PHOTO' ) ) {
 // More Documentation coming soon!
 
 if ( !defined( 'WEFOSTER_DEVELOPER' ) ) {
-	define('WEFOSTER_DEVELOPER', 'on' );
+	define('WEFOSTER_DEVELOPER', 'off' );
 }
 
 if ( !defined( 'WEFOSTER_AUTO_SETUP' ) ) {

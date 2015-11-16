@@ -1,22 +1,18 @@
-
 .item-list li div.item-title,
 ul.item-list li h4 {
   font-weight: normal;
   margin: 0;
 }
 
-
 span.activity {
   display: inline-block;
   font-size: 70%;
 }
 
-
 body.activity-permalink ul.item-list,
 body.activity-permalink ul.item-list li.activity-item {
   border: none;
 }
-
 
 #admins-list li,
 #mods-list li,
@@ -25,12 +21,12 @@ body.activity-permalink ul.item-list li.activity-item {
   list-style: none;
 }
 
-
 ul.item-list {
   list-style: none;
   clear: both;
   margin: 0;
   padding: 0;
+  
   li {
     background: @listing-bg;
     border-bottom: @listing-border-bottom;
@@ -41,6 +37,7 @@ ul.item-list {
     position: relative;
     list-style: none;
     box-shadow: @listing-box-shadow;
+    
     h5 {
       span.small {
         float: right;
@@ -49,11 +46,9 @@ ul.item-list {
       }
     }
 
-
     .item {
       margin-left: (@medium-avatar-size + 15);
     }
-
 
     div.item-desc {
       color: @gray-light;
@@ -62,19 +57,16 @@ ul.item-list {
       margin-top: 10px;
     }
 
-
     div.meta {
       color: @gray-light;
       font-size: 80%;
       margin-top: 10px;
     }
 
-
     img.avatar {
       float: left;
       margin: 0 10px 0 0;
     }
-
 
     div.item-title {
       span {
@@ -83,13 +75,12 @@ ul.item-list {
       }
     }
 
-
     div.action {
       position: absolute;
       top: @margin-full;
       text-align: right;
       right: @margin-full;
-
+      
       div.generic-button a {
         border: medium none;
         display: block;
@@ -101,18 +92,15 @@ ul.item-list {
   }
 }
 
-
 div#item-header ul h5,
 div#item-header ul span,
 div#item-header ul hr {
   display: none;
 }
 
-
 .item-body {
   margin: 20px 0;
 }
-
 
 ul.single-line {
   li {
@@ -120,25 +108,19 @@ ul.single-line {
   }
 }
 
-
 .dir-form {
   clear: both;
 }
-
-
-
-
 
 div.dir-search {
   position: absolute;
   right: @padding-half;
   top: (@padding-half);
   z-index: 10;
-
+  
   input {
     font-size: @font-size-small;
   }
-
 
   .form-control {
     display: inline-block;
@@ -146,37 +128,24 @@ div.dir-search {
   }
 }
 
-
 .directory.groups,
 .directory.members,
  {
+  ul.item-list li .action {
+    .opacity-hide();
+  }
 
-
-     ul.item-list li .action {
-       .opacity-hide();
-     }
-
-
-     ul.item-list li:hover div.action {
-       .opacity-show();
-     }
-
-    .responsive(@grid-float-breakpoint-max, {
-      ul.item-list li .action {
-        .opacity-show();
-      }
-    });
-
-
+  ul.item-list li:hover div.action {
+    .opacity-show();
+  }
+  .responsive(@grid-float-breakpoint-max, { ul.item-list li .action { .opacity-show(); } });
 }
-
 
 noscript {
   div.pagination {
     margin-bottom: @margin-half;
   }
 }
-
 
 div.pagination {
   background: transparent;
@@ -189,20 +158,20 @@ div.pagination {
   float: left;
   width: 100%;
   padding: 10px 0;
+  
   .pag-count {
     font-size: 90%;
   }
 
-
   .pagination-links {
     float: right;
     margin-right: 10px;
+    
     a:hover {
       font-weight: bold;
     }
   }
 }
-
 
 .messages div.pagination,
 .notifications div.pagination {
@@ -210,11 +179,9 @@ div.pagination {
   display: inline-block;
 }
 
-
 #nav-above {
   display: none;
 }
-
 
 div.pagination .pagination-links span,
 div.pagination .pagination-links a {
@@ -222,13 +189,11 @@ div.pagination .pagination-links a {
   padding: 0 5px;
 }
 
-
 .paged {
   #nav-above {
     display: block;
   }
 }
-
 
 .groups-members-search {
   label {
@@ -236,7 +201,6 @@ div.pagination .pagination-links a {
     top: 7px;
     margin: 0;
   }
-
 
   #members_search_submit,
   #groups_search_submit {

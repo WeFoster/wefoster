@@ -18,12 +18,29 @@ $cover_image_url = bp_attachments_get_attachment( 'url', array(
   'object_dir' => 'members',
   'item_id'    => bp_displayed_user_id(),
   ) );
+
+  if ( empty($cover_image_url)) {
+    $cover_image_url = WEFOSTER_DEFAULT_MEMBER_COVER_PHOTO;
+
+
+    if ( ! bp_is_my_profile() ) {
+      $action = '<div class="no-cover-photo site-description">' . sprintf( __( "<a href='%s'><i class='fa fa-link'></i> No Cover Photo added</a>", 'wefoster' ), bp_loggedin_user_domain() . $bp->profile->slug . 'profile/change-cover-image/' ) . '</div>';
+
+    }
+
+  }
+
+
 } else {
   $cover_image_url = bp_attachments_get_attachment( 'url', array(
     'object_dir' => 'groups',
     'item_id'    => bp_get_current_group_id(),
     ) );
+
 }
+
+
+
 
 $src = wpthumb( $cover_image_url, 'width=' . $settings['width'] .'&height=' . $settings['height'] . '&crop=true');
 
@@ -32,6 +49,7 @@ $src = wpthumb( $cover_image_url, 'width=' . $settings['width'] .'&height=' . $s
 <div class="negative-row no-padding postthumb <?php do_action('postthumb_class'); ?>"
     style="height:<?php echo $settings['height'] ?>px; background-image: url(<?php echo $src; ?> );"
   >
+    <?php echo $action;?>
     <?php do_action('open_post_thumbnail'); ?>
 
 </div>
