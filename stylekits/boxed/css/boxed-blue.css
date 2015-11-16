@@ -6416,7 +6416,7 @@ iframe {
 .visible {
   display: block !important;
 }
-.dropdown-menu > li > a {
+.wefoster-framework .dropdown-menu > li > a {
   clear: both;
   display: block;
   font-weight: normal;
@@ -6424,7 +6424,15 @@ iframe {
   padding: 10px 15px 6px !important;
   white-space: nowrap;
 }
-#subnav ul span.caret {
+.wefoster-framework .bootstrap-select.btn-group .dropdown-toggle .caret {
+  position: relative;
+  top: 50%;
+  left: -1px;
+  margin-top: -2px;
+  vertical-align: middle;
+  margin-right: -11px;
+}
+.wefoster-framework #subnav ul span.caret {
   display: inline-block !important;
   width: 0 !important;
   height: 0 !important;
@@ -6434,43 +6442,43 @@ iframe {
   border-right: 4px solid transparent !important;
   border-left: 4px solid transparent !important;
 }
-.dropdown-menu input[type=text],
-.dropdown-menu input[type=password] {
+.wefoster-framework .dropdown-menu input[type=text],
+.wefoster-framework .dropdown-menu input[type=password] {
   font-size: 90%;
   font-weight: 700;
   max-width: 80%;
   padding: 0 10px;
 }
-.dropdown-menu .pull-left {
+.wefoster-framework .dropdown-menu .pull-left {
   float: none !important;
 }
-.tooltip .tooltip-inner {
+.wefoster-framework .tooltip .tooltip-inner {
   width: auto;
   padding: 10px;
 }
-.tooltip.right {
+.wefoster-framework .tooltip.right {
   min-width: 220px;
   text-shadow: none;
 }
-.wefoster-framework .bootstrap-select > .dropdown-toggle {
+.wefoster-framework .wefoster-framework .bootstrap-select > .dropdown-toggle {
   width: auto;
 }
-.wefoster-framework .bootstrap-select:not([class*="col-"]):not([class*="form-control"]):not(.input-group-btn) {
+.wefoster-framework .wefoster-framework .bootstrap-select:not([class*="col-"]):not([class*="form-control"]):not(.input-group-btn) {
   width: auto;
 }
-header .tooltip .tooltip-inner {
+.wefoster-framework header .tooltip .tooltip-inner {
   width: 260px;
   padding: 15px;
   max-width: 260px;
   font-style: italic;
   opacity: 1 !important;
 }
-.table > thead > tr > th,
-.table > tbody > tr > th,
-.table > tfoot > tr > th,
-.table > thead > tr > td,
-.table > tbody > tr > td,
-.table > tfoot > tr > td {
+.wefoster-framework .table > thead > tr > th,
+.wefoster-framework .table > tbody > tr > th,
+.wefoster-framework .table > tfoot > tr > th,
+.wefoster-framework .table > thead > tr > td,
+.wefoster-framework .table > tbody > tr > td,
+.wefoster-framework .table > tfoot > tr > td {
   vertical-align: inherit;
 }
 .headroom {
@@ -7289,6 +7297,7 @@ body.wefoster-navbar-fixed-top {
   margin: -30px -30px 30px;
   border-bottom: 0;
   padding-left: 30px;
+  padding-right: 30px;
   position: relative;
   z-index: 0;
   border-bottom: 1px solid #fafafa;
@@ -7558,6 +7567,7 @@ body.wefoster-navbar-fixed-top {
   margin: -30px -30px 30px;
   border-bottom: 0;
   padding-left: 30px;
+  padding-right: 30px;
   position: relative;
   z-index: 0;
   border-bottom: 1px solid #fafafa;

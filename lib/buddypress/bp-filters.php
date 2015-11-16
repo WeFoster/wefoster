@@ -11,15 +11,8 @@
 */
 function wff_bp_cover_image_sizes( $settings = array() ) {
 
-	$option = get_theme_mod( 'wf_plus_featured_image_default_sizes' );
-
-	if ( $option == 'custom' ) {
-    $settings['width']  = WEFOSTER_POST_THUMBNAIL_WIDTH;
-    $settings['height'] = WEFOSTER_POST_THUMBNAIL_HEIGHT;
-	} else {
-		$settings['width']  = get_theme_mod ('wf_plus_featured_image_width');
-		$settings['height'] = get_theme_mod ('wf_plus_featured_image_height');
-	}
+	  $settings['width']  = 3000;
+	  $settings['height'] = 3000;
 
     return $settings;
 }

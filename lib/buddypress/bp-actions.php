@@ -17,6 +17,20 @@ if ( ! function_exists ( 'wff_theme_activity_tabs' ) ) {
   add_action( 'open_sidebar', 'wff_theme_activity_tabs' );
 }
 
+/**
+ * Add Cover Photos to BuddyPress.
+ */
+if ( ! function_exists ( 'wff_theme_cover_photos' ) ) {
+
+  function wff_theme_cover_photos()
+  {
+    if ( bp_is_user() || bp_is_group() ):
+      get_template_part( 'buddypress/parts/cover-photo' );
+    endif;
+  }
+  add_action( 'open_bp_page_content', 'wff_theme_cover_photos' );
+}
+
 
 /**
  * Add Group Navigation Items to Group Pages
