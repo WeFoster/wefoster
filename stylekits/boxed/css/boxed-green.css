@@ -6460,10 +6460,10 @@ iframe {
   min-width: 220px;
   text-shadow: none;
 }
-.wefoster-framework .wefoster-framework .bootstrap-select > .dropdown-toggle {
-  width: auto;
+.wefoster-framework .bootstrap-select > .dropdown-toggle {
+  width: auto !important;
 }
-.wefoster-framework .wefoster-framework .bootstrap-select:not([class*="col-"]):not([class*="form-control"]):not(.input-group-btn) {
+.wefoster-framework .bootstrap-select:not([class*="col-"]):not([class*="form-control"]):not(.input-group-btn) {
   width: auto;
 }
 .wefoster-framework header .tooltip .tooltip-inner {
@@ -6521,7 +6521,6 @@ iframe {
   top: 50%;
   transform: translateY(-50%);
   font-size: 30px;
-  display: block;
   color: #333333;
 }
 .site-description span {
@@ -7775,6 +7774,11 @@ body.wefoster-navbar-fixed-top {
   margin-bottom: -60px;
   padding-top: 30px;
   padding-bottom: 30px;
+}
+.vertical-center {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
 }
 .margin-top-full {
   margin-top: 30px;
@@ -10779,6 +10783,32 @@ div.vertical-list-tabs ul li.loading a:before {
   margin: 0 0 -30px;
   padding: 0 0 9px;
   white-space: nowrap;
+}
+.bp-cover-photo {
+  background: #454a54;
+}
+.cover-photo-action {
+  display: inline-block;
+  margin: 0 auto;
+  position: absolute;
+  text-align: center;
+  width: 100%;
+  z-index: 100;
+}
+.cover-photo-action.my-profile {
+  right: 0;
+  text-align: right;
+  top: 4px;
+  transform: none;
+}
+.cover-photo-action.my-profile a {
+  font-size: 45%;
+}
+.cover-photo-action a {
+  background: rgba(69, 74, 84, 0.85);
+  color: #ffffff;
+  padding: 15px;
+  font-size: 60%;
 }
 /*--------------------------------------------------------------
 3.10 - Profile and Group Headers

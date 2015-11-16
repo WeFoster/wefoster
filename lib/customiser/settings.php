@@ -972,6 +972,75 @@ Kirki::add_field( 'wefoster_plus', array(
 if ( class_exists( 'BuddyPress' ) ) {
 
 	Kirki::add_field( 'wefoster_plus', array(
+		'type'        => 'radio',
+		'settings'    => 'wf_plus_bp_cover_photo_default_sizes',
+		'label'       => __( 'Cover Photos', 'wefoster' ),
+		'description' => __( 'Do you want to set custom image sizes for your BuddyPress Cover Photos?', 'wefoster' ),
+		'section'     => 'wf_plus_bp_general_section',
+		'default'     => 'default',
+		'priority'    => 10,
+		'choices'     => array(
+			'default' => __( 'No, use default sizes', 'wefoster' ),
+			'custom' => __( 'Yes, set custom image sizes', 'wefoster' ),
+		),
+	) );
+
+	Kirki::add_field( 'wefoster_plus', array(
+		 'type'     => 'slider',
+		 'settings'  => 'wf_plus_bp_cover_photo_width',
+		 'default'  => WEFOSTER_DEFAULT_BP_COVER_WIDTH,
+		 'label'    => __( 'Cover Image Width', 'wefoster'),
+		 'section'  => 'wf_plus_bp_general_section',
+		 'priority' => 10,
+		 'choices'  => array(
+				 'min'  => 50,
+				 'max'  => 2000,
+				 'step' => 10,
+		 ),
+		 'required'  => array(
+			array(
+					'setting'  => 'wf_plus_bp_cover_photo_default_sizes',
+					'operator' => '==',
+					'value'    => 'custom',
+			),
+		),
+	) );
+
+	// Posts and Pages (WordPress)
+	Kirki::add_field( 'wefoster_plus', array(
+		 'type'     => 'slider',
+		 'settings'  => 'wf_plus_bp_cover_photo_height',
+		 'label'    => __( 'Cover Image Height', 'wefoster'),
+		 'section'  => 'wf_plus_bp_general_section',
+		 'default'  => WEFOSTER_DEFAULT_BP_COVER_HEIGHT,
+		 'priority' => 10,
+		 'choices'  => array(
+				 'min'  => 50,
+				 'max'  => 2000,
+				 'step' => 10,
+		 ),
+		 'required'  => array(
+			array(
+					'setting'  => 'wf_plus_bp_cover_photo_default_sizes',
+					'operator' => '==',
+					'value'    => 'custom',
+			),
+		),
+	) );
+
+
+	Kirki::add_field( 'wefoster_plus', array(
+		'type'        => 'radio',
+		'settings'    => 'wf_plus_bp_cover_photo_effect',
+		'label'       => __( 'Image Effects', 'wefoster' ),
+		'description' => __( 'Apply an image effect to your featured images. Note: Some of these effects will not work on Internet Explorer. In these cases the image will be shown without the effect.', 'wefoster' ),
+		'section'     => 'wf_plus_bp_general_section',
+		'default'     => 'default',
+		'priority'    => 10,
+	  'choices'  => wefoster_plus_image_effects(),
+	) );
+
+	Kirki::add_field( 'wefoster_plus', array(
 	  'type'        => 'image',
 	  'settings'     => 'wf_plus_default_member_avatar',
 	  'label'       => __( 'Default Member Photo', 'wefoster' ),
@@ -988,6 +1057,8 @@ if ( class_exists( 'BuddyPress' ) ) {
 	  'section'     => 'wf_plus_bp_general_section',
 	  'priority'    => 10,
 ) );
+
+
 
   ////////////////
 	// Members
