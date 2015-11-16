@@ -290,6 +290,14 @@ if ( !defined( 'WEFOSTER_DEFAULT_GROUP_AVATAR' ) ) {
 	define ( 'WEFOSTER_DEFAULT_GROUP_AVATAR', WEFOSTER_ASSETS_URL . '/assets/img/avatar-group.jpg' );
 }
 
+if ( !defined( 'WEFOSTER_DEFAULT_GROUP_COVER_PHOTO' ) ) {
+	define ( 'WEFOSTER_DEFAULT_GROUP_COVER_PHOTO', WEFOSTER_ASSETS_URL . '/assets/img/avatar-group.jpg' );
+}
+
+if ( !defined( 'WEFOSTER_DEFAULT_MEMBER_COVER_PHOTO' ) ) {
+	define ( 'WEFOSTER_DEFAULT_MEMBER_COVER_PHOTO', WEFOSTER_ASSETS_URL . '/assets/img/avatar-group.jpg' );
+}
+
 /////////////// 											///////////////
 ///////////////     DEVELOPERS 				///////////////
 /////////////// 											///////////////

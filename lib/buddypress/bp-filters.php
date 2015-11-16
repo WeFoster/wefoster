@@ -1,9 +1,45 @@
 <?php
 /**
- * Changes default BuddyPress behavior through filters. Has some overlap with bp-custom.php
- */
- /**
+* Changes default BuddyPress behavior through filters. Has some overlap with bp-custom.php
+*
+*/
 
+/**
+* Set proper default sizes
+* TODO: Move to a plugin
+* @since 1.0
+*/
+function wff_bp_cover_image_sizes( $settings = array() ) {
+
+	$option = get_theme_mod( 'wf_plus_featured_image_default_sizes' );
+
+	if ( $option == 'custom' ) {
+    $settings['width']  = WEFOSTER_POST_THUMBNAIL_WIDTH;
+    $settings['height'] = WEFOSTER_POST_THUMBNAIL_HEIGHT;
+	} else {
+		$settings['width']  = get_theme_mod ('wf_plus_featured_image_width');
+		$settings['height'] = get_theme_mod ('wf_plus_featured_image_height');
+	}
+
+    return $settings;
+}
+add_filter( 'bp_before_xprofile_cover_image_settings_parse_args', 'wff_bp_cover_image_sizes', 10, 1 );
+add_filter( 'bp_before_groups_cover_image_settings_parse_args', 'wff_bp_cover_image_sizes', 10, 1 );
+
+
+function wff_bp_group_cover_image_default( $settings = array() ) {
+    $settings['default_cover'] = WEFOSTER_DEFAULT_GROUP_COVER_PHOTO;
+    return $settings;
+}
+add_filter( 'bp_before_groups_cover_image_settings_parse_args', 'wff_bp_group_cover_image_default', 10, 1 );
+
+function wff_bp_member_cover_image_default( $settings = array() ) {
+    $settings['default_cover'] = WEFOSTER_DEFAULT_MEMBER_COVER_PHOTO;
+    return $settings;
+}
+add_filter( 'bp_before_xprofile_cover_image_settings_parse_args', 'wff_bp_member_cover_image_default', 10, 1 );
+
+/**
 * Replace default group avatar
 * TODO: Move to a plugin
 * @since 1.0
