@@ -1,13 +1,13 @@
-# WeFoster BuddyPress Theme #
-**Contributors:** wefoster  
-**Donate link:** https://wefoster.co  
-**Tags:** buddypress, black, brown, orange, tan, white, yellow, light, one-column, two-columns, right-sidebar, fluid-layout, fixed-layout, responsive-layout, full-width-template, theme-options, threaded-comments, custom-header, custom-menu, editor-style, featured-images, rtl-language-support, sticky-post, translation-ready,accessibility-ready  
-**Requires at least:** 4.0  
-**Tested up to:** 4.4  
-**License:** GPLv2 or later  
-**License URI:** http://www.gnu.org/licenses/gpl-2.0.html  
+=== WeFoster BuddyPress Theme ===
+Contributors: wefoster
+Donate link: https://wefoster.co
+Tags: buddypress, black, brown, orange, tan, white, yellow, light, one-column, two-columns, right-sidebar, fluid-layout, fixed-layout, responsive-layout, full-width-template, theme-options, threaded-comments, custom-header, custom-menu, editor-style, featured-images, rtl-language-support, sticky-post, translation-ready,accessibility-ready
+Requires at least: 4.0
+Tested up to: 4.4
+License: GPLv2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-## Description ##
+== Description ==
 
 Thousands of site owners & developers are using the WeFoster theme to built better..
 
@@ -44,12 +44,12 @@ Join our community of BuddyPress site owners and developers on [WeFoster.co](htt
 
 [See the Full Feature List](http://try.wefoster.co/default)
 
-## Installation ##
+== Installation ==
 
 1. Upload the theme zip file from Appearance > Themes
 2. Activate the theme.
 
-## Theme Customization ##
+== Theme Customization ==
 
 All theme customization options are located at "Appearance > Customize > Theme Options".
 
@@ -61,29 +61,29 @@ Theme Options tabs:
 * Blog: Enter blog page title and subtitle.
 * Footer: Enter footer copyright text.
 
-## Navigation ##
+== Navigation ==
 
 This theme supports two navigation menus. You can edit this menu in WordPress at "Appearance > Menus".
 
-## Widgets ##
+== Widgets ==
 
 This theme supports several different widgetized areas. Post, Pages, BBPress & BuddyPress pages are all supported out of the box.
 
-## Child Theme ##
+== Child Theme ==
 
 Child themes allow you to modify or add to the functionality of the WeFoster theme. A child theme is the best, safest, and easiest way to modify an existing theme, whether you want to make a few tiny changes or extensive changes. Instead of modifying the WeFoster theme files directly, download our child theme and override within.
 
 [Download the WeFoster Child Theme](https://github.com/WeFoster/wefoster-child/archive/master.zip)
 
-## Frequently Asked Questions ##
+== Frequently Asked Questions ==
 
-### Where do I go if I have some questions? ###
+= Where do I go if I have some questions? =
 
 Join our community on WeFoster.co and we will be happy to answer any questions you might have!
 
 [WeFoster Community](https://wefoster.co/communities)
 
-## License Info ##
+== License Info ==
 
 Bootstrap 3 - ​getbootstrap.com/
 License: MIT - https://github.com/twbs/bootstrap/blob/master/LICENSE
@@ -93,7 +93,7 @@ License: GPL-2.0+ - http://www.gnu.org/licenses/gpl-2.0.html
 Copyright: @aristath
 
 
-## Changelog ##
+== Changelog ==
 
-### 1.0 November 18, 2015 ###
+= 1.0 November 18, 2015 =
 * Initial Release

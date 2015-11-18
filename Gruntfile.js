@@ -42,7 +42,7 @@ module.exports = function(grunt) {
       //Dev Customizer + Login Stylesheet
       other: {
         files: {
-          'assets/css/min/login-style.css': [
+          'assets/css/login-style.css': [
             'assets/less/login-style.less'
           ],
           'lib/customiser/assets/css/customizer.css': [
@@ -173,36 +173,9 @@ module.exports = function(grunt) {
           '!.ds_store',
 
           //Include font awesome
-
           'assets/vendor/fontawesome/fonts/*',
 
-          //TODO: Find a way to makes these a grunt template
-          'assets/vendor/bootstrap-less/js/transition.js',
-          'assets/vendor/bootstrap-less/js/button.js',
-          'assets/vendor/bootstrap-less/js/collapse.js',
-          'assets/vendor/bootstrap-less/js/dropdown.js',
-          'assets/vendor/bootstrap-less/js/tooltip.js',
-          'assets/vendor/bootstrap-less/js/popover.js',
-          'assets/vendor/bootstrap-less/js/tab.js',
-          'assets/vendor/bootstrap-less/js/affix.js',
-
-          //Smart Menus for multi-level Bootstrap menus
-          'assets/vendor/smartmenus/dist/jquery.smartmenus.js',
-          'assets/vendor/smartmenus/dist/addons/bootstrap/jquery.smartmenus.bootstrap.js',
-
-          //Headroom for fancy header
-          'assets/vendor/headroom.js/dist/headroom.js',
-          'assets/vendor/headroom.js/dist/jQuery.headroom.js',
-
-          //Autogrow Whats News box
-          'assets/vendor/jquery-autogrow-textarea/src/jquery.autogrow.js',
-
-          //Fancy Dropdown select boxes
-          'assets/vendor/bootstrap-select/dist/js/bootstrap-select.js',
-          'assets/vendor/fastclick/lib/fastclick.js',
-
-          //Load custom JS for WeFoster framework
-          'assets/js/_main.js'
+          'assets/vendor/fastclick/lib/fastclick.js'
         ],
         dest: 'build/',
         expand: true
@@ -248,6 +221,14 @@ module.exports = function(grunt) {
         jsHandle: 'wff_scripts'
       },
     },
+    //Create our readme.md
+    wp_readme_to_markdown: {
+      your_target: {
+        files: {
+          'readme.md': 'readme.txt'
+        },
+      },
+    },
     // Compress the build folder into an upload-ready zip file
     compress: {
       build: {
@@ -281,14 +262,14 @@ module.exports = function(grunt) {
     'version'
   ]);
 
-
   grunt.registerTask('build', [
     'makepot',
     'less',
     //'glotpress_download',
     'copy',
     'compress',
-    'clean'
+    'clean',
+    'wp_readme_to_markdown'
   ]);
 
 
