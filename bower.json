@@ -28,6 +28,7 @@
     "smartmenus": "https://github.com/vadikom/smartmenus.git#~0.9.7",
     "readmore": "~2.0.5",
     "fastclick": "~1.0.6",
-    "jquery-autogrow-textarea": "~1.0.3"
+    "jquery-autogrow-textarea": "~1.0.3",
+    "fitvids": "~1.1.0"
   }
 }

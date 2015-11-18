@@ -5,13 +5,11 @@ a span.time-since {
   font-size: @font-size-small;
 }
 
-
 .activity-list .activity-content .activity-inner,
 .activity-list .activity-content blockquote {
   margin: @activity-inner-margin;
   overflow: hidden;
 }
-
 
 .activity-header a,
 .comment-meta a,
@@ -19,14 +17,12 @@ a span.time-since {
   text-decoration: none;
 }
 
-
 a.bp-primary-action:hover span,
 #reply-title small a:hover span {
-
+  
   //background: #555;
   //color: @white;
 }
-
 
 div.activity-content div.activity-inner {
   background: @activity-inner-bg;
@@ -35,14 +31,16 @@ div.activity-content div.activity-inner {
   margin-left: 0;
   padding: @activity-inner-padding;
   color: @activity-inner-color;
+  
+  iframe {
+    .embed-responsive-item();
+  }
 }
-
 
 a.activity-time-since:hover {
   color: @gray-light;
   text-decoration: underline;
 }
-
 
 .activity-permalink .activity-list li.mini .activity-avatar img.avatar,
 .activity-permalink .activity-list li.mini .activity-avatar img.FB_profile_pic {
@@ -51,16 +49,13 @@ a.activity-time-since:hover {
   width: auto;
 }
 
-
 ul.item-list.activity-list {
   li.has-comments {
     padding-bottom: @activity-inner-padding;
   }
 }
 
-
 .activity-list {
-
   li.load-more a {
     font-size: 110%;
     margin: @margin-half 0;
@@ -69,30 +64,26 @@ ul.item-list.activity-list {
     background: @brand-secondary;
     display: block;
     color: @white;
-
+    
     &:hover {
       opacity: 0.7;
     }
   }
 
-
   .activity-content {
-
     img.thumbnail {
       border: 2px solid #eee;
       float: left;
       margin: 0 10px 5px 0;
     }
 
-
     .activity-header {
       img.avatar {
-
+        
         //display: none !important;
       }
     }
   }
-
 
   .activity-avatar {
     margin-top: -2px;
@@ -100,11 +91,11 @@ ul.item-list.activity-list {
     width: @medium-avatar-size;
   }
 
-
   li {
     .activity-inreplyto {
       color: @gray-light;
       font-size: 90%;
+      
       & > p {
         margin: 0;
         display: inline;
@@ -112,19 +103,18 @@ ul.item-list.activity-list {
     }
   }
 
-
   li.mini {
     padding-bottom: 0;
     padding-top: 15px;
     position: relative;
-
+    
     .activity-avatar .avatar {
       display: none;
     }
 
-
     .activity-header {
       margin: 0;
+      
       p {
         margin-bottom: -15px;
         margin-top: -15px;
@@ -133,22 +123,17 @@ ul.item-list.activity-list {
       }
     }
 
-
     .activity-meta {
       .opacity-hide();
       height: auto;
     }
 
-
     &:hover .activity-meta {
       .opacity-show();
-            height: auto;
+      height: auto;
     }
-
-
   }
 }
-
 
 ul.activity-list.mini {
   li {
@@ -158,28 +143,23 @@ ul.activity-list.mini {
   }
 }
 
-
 #activity-stream {
   margin-top: -5px;
 }
-
 
 .activity-read-more {
   margin-left: 1em;
   white-space: nowrap;
 }
 
-
 .activity-inner {
   & > .activity-inner {
     margin: 0;
   }
 
-
   & > blockquote {
     margin: 0;
   }
-
 
   & > p {
     word-wrap: break-word;
@@ -187,14 +167,12 @@ ul.activity-list.mini {
   }
 }
 
-
 .activity-list li.mini .activity-avatar img.avatar,
 .activity-list li.mini .activity-avatar img.FB_profile_pic {
   height: 20px;
   margin-left: @margin-full;
   width: 20px;
 }
-
 
 .activity-header {
   margin-bottom: @margin-full;
@@ -206,7 +184,6 @@ ul.activity-list.mini {
   font-weight: @activity-header-font-weight;
 }
 
-
 .activity-list li .activity-inreplyto blockquote,
 .activity-list li .activity-inreplyto div.activity-inner {
   background: none;
@@ -217,32 +194,28 @@ ul.activity-list.mini {
   padding: 0;
 }
 
-
 body.activity-permalink .activity-content .activity-inner,
 body.activity-permalink .activity-content blockquote {
   margin-left: 0;
   margin-top: 5px;
 }
 
-
 .activity-meta {
   border-radius: 4px;
   margin-bottom: @margin-half;
   margin-top: @margin-half;
-
+  
   .btn-primary {
     background: transparent;
     color: inherit;
     border: none;
   }
 
-
   .btn {
     font-size: 80%;
     font-weight: bold;
   }
 }
-
 
 .mini .activity-meta {
   position: relative;
@@ -254,9 +227,7 @@ body.activity-permalink .activity-content blockquote {
   top: -@margin-half;
 }
 
-
 div.activity-inner {
-
   img {
     max-width: 100%;
     margin-top: @margin-full;
@@ -267,11 +238,9 @@ div.activity-inner {
     display: block;
   }
 
-
   + p {
     margin-bottom: 0;
   }
-
 
   p {
     margin-bottom: 0;
