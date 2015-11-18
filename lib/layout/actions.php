@@ -127,7 +127,12 @@ if ( ! function_exists ( 'wff_author_box_location' ) ) {
 }
 
 
-// Hide Admin bar by default for regular users
+/**
+ * Hide Admin bar by default for regular users.
+ *
+ * @since 1.0.0
+ *
+ */
 if ( ! function_exists ( 'wff_hide_admin_bar' ) ) {
   function wff_hide_admin_bar() {
       add_filter('show_admin_bar', '__return_false');

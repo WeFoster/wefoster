@@ -293,8 +293,7 @@ function wf_theme_populate_sidebars() {
 /**
  * Sets up a default sub menu in the WeFoster theme.
  *
- * This function is fired on 'get_header' on the frontend to give CBOX
- * components a chance to configure from the admin area (like BP Docs).
+ * This function is fired on 'get_header' on the frontend.
  */
 function wf_theme_add_default_menu()
 {
@@ -335,7 +334,7 @@ function wf_theme_add_default_menu()
 	) );
 }
 /**
- * Register and create a default menu in CBOX.
+ * Register and create a default menu in WeFoster.
  *
  * @param array $args Arguments to register the default menu:
  *  'menu_name' - The internal menu name we should give our new menu.
