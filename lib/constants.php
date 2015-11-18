@@ -230,14 +230,14 @@ if ( !defined( 'WEFOSTER_BODY_BACKGROUND' ) ) {
 	//Local
 	//define('WEFOSTER_BODY_BACKGROUND', get_stylesheet_directory_uri . '/assets/img/bg.jpg' );
 	//External
-	//define('WEFOSTER_BODY_BACKGROUND', 'http://cdn.wefoster.co/backgrounds/appartment-grid.jpeg');
+	define('WEFOSTER_BODY_BACKGROUND', 'none');
 }
 
 if ( !defined( 'WEFOSTER_HEADER_BACKGROUND' ) ) {
 	//Local
 	//define('WEFOSTER_HEADER_BACKGROUND', get_stylesheet_directory_uri . '/assets/img/bg.jpg' );
 	//External
-	//define('WEFOSTER_HEADER_BACKGROUND', 'http://cdn.wefoster.co/backgrounds/autumn-desk.jpeg');
+	define('WEFOSTER_HEADER_BACKGROUND', 'none');
 }
 
 

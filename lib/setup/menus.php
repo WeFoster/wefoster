@@ -102,6 +102,17 @@ function wff_nav_menu_css_class($classes, $item) {
 add_filter('nav_menu_css_class', 'wff_nav_menu_css_class', 100, 2);
 add_filter('nav_menu_item_id', '__return_null');
 
+function add_filters($tags, $function) {
+  foreach($tags as $tag) {
+    add_filter($tag, $function);
+  }
+}
+
+function is_element_empty($element) {
+  $element = trim($element);
+  return empty($element) ? false : true;
+}
+
 /**
  * Clean up wp_nav_menu_args
  *
@@ -131,7 +142,7 @@ add_filter('wp_nav_menu_args', 'wff_nav_menu_args');
  *
  * @since 1.0.0
  *
- */  
+ */
 function wff_wp_nav_menu_objects($sorted_menu_items, $args){
     // check if the current page is really a blog post.
     global $wp_query;
