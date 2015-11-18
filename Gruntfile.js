@@ -115,9 +115,6 @@ module.exports = function(grunt) {
             //Add auto grow plugin
             'assets/vendor/jquery-autogrow-textarea/src/jquery.autogrow.js',
 
-            //Add Flexible Videos
-            'assets/vendor/fitvids/jquery.fitvids.js',
-
             //Load custom JS for WeFoster framework
             'assets/js/_main.js',
 
@@ -203,9 +200,6 @@ module.exports = function(grunt) {
           //Fancy Dropdown select boxes
           'assets/vendor/bootstrap-select/dist/js/bootstrap-select.js',
           'assets/vendor/fastclick/lib/fastclick.js',
-
-          //Add Flexible Videos
-          'assets/vendor/fitvids/jquery.fitvids.js',
 
           //Load custom JS for WeFoster framework
           'assets/js/_main.js'
