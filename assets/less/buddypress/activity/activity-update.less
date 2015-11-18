@@ -7,7 +7,6 @@
   font-weight: bold;
 }
 
-
 #dropdown-filter {
   background: @activity-filter-background;
   border-radius: 2px;
@@ -16,11 +15,10 @@
   position: absolute;
   right: @margin-full;
   top: @margin-half;
-
+  
   li {
     list-style: none;
   }
-
 
   label {
     font-size: 90%;
@@ -38,7 +36,6 @@
   }
 }
 
-
 #whats-new-form {
   background: @whats-new-background;
   border-top: @whats-new-border-top;
@@ -46,23 +43,19 @@
   font-weight: @whats-new-font-weight;
   margin: @whats-new-margin;
   padding: @whats-new-padding;
-
+  
   #whats-new-content {
     margin-bottom: @margin-full;
     margin-top: 20px;
     padding: 0;
   }
 
-
   #whats-new-options {
-    height: 0;
-
     select {
       max-width: 200px;
       margin-top: 12px;
     }
   }
-
 
   textarea {
     font-family: inherit;
@@ -71,18 +64,15 @@
     margin-bottom: @margin-half;
   }
 
-
   p.activity-greeting {
     line-height: 0.5em;
     margin-bottom: @margin-half;
   }
 
-
   #whats-new-post-in-box {
-
+    
     //padding-top: 20px;
   }
-
 
   #whats-new-submit #aw-whats-new-submit {
     float: right;
@@ -91,9 +81,8 @@
   }
 }
 
-
 #activity-filter-notice {
-
+  
   //hide by default
   background: lighten(@alert-success-bg, 5%);
   border-bottom: 1px solid lighten(@alert-success-bg, 7%);
@@ -104,12 +93,11 @@
   font-weight: normal;
   margin: @margin-double -@margin-full 0;
   padding: 8px @padding-full;
-
+  
   span {
     font-weight: bold;
   }
 }
-
 
 body.no-js {
   form#whats-new-form {
@@ -118,18 +106,14 @@ body.no-js {
     }
   }
 
-
   #whats-new-options {
     height: auto;
   }
 }
 
-
 #whats-new-options {
   overflow: hidden;
-  height: 0;
 }
-
 
 body.no-js #whats-new-options {
   height: auto;

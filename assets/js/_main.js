@@ -28,6 +28,7 @@
         $('#quick-menu-wrap').removeClass('js-flash');
         $('#dropdown-filter').removeClass('js-flash');
         $('#whats-new-js-wrap').removeClass('js-flash');
+        $('#whats-new-options').removeClass('js-flash');
 
         if ($("html").hasClass('touch')) {
           FastClick.attach(document.body);

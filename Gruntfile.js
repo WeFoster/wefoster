@@ -56,7 +56,7 @@ module.exports = function(grunt) {
       //Compress+ Source Map Main
       main: {
         files: {
-          'assets/css/min-main.css': [
+          'assets/css/main.css': [
             'assets/less/main.less'
           ],
         },
@@ -65,14 +65,14 @@ module.exports = function(grunt) {
           yuicompress: true,
           optimization: 2,
           sourceMap: true,
-          sourceMapFilename: 'assets/css/min-main.css.map',
+          sourceMapFilename: 'assets/css/main.css.map',
           sourceMapRootpath: '/wp-content/themes/wefoster/'
         }
       },
       //Compress+ Source Map BuddyPress
       buddypress: {
         files: {
-          'assets/css/min-buddypress.css': [
+          'assets/css/buddypress.css': [
             'assets/less/buddypress.less'
           ],
         },
@@ -81,7 +81,7 @@ module.exports = function(grunt) {
           yuicompress: true,
           optimization: 2,
           sourceMap: true,
-          sourceMapFilename: 'assets/css/min-buddypress.css.map',
+          sourceMapFilename: 'assets/css/buddypress.css.map',
           sourceMapRootpath: '/wp-content/themes/wefoster/'
         }
       }

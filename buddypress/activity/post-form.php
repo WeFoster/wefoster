@@ -12,7 +12,7 @@
 <form action="<?php bp_activity_post_form_action(); ?>" method="post" id="whats-new-form" name="whats-new-form" role="complementary">
 
 	<?php do_action( 'bp_before_activity_post_form' ); ?>
-	
+
 	<p class="activity-greeting"><?php if ( bp_is_group() )
 	printf( __( "What's new in %s, %s?", 'buddypress' ), bp_get_group_name(), bp_get_user_firstname() );
 	else
@@ -24,7 +24,7 @@
 			<textarea class="bp-suggestions form-control" name="whats-new" id="whats-new" cols="50" rows="10"><?php if ( isset( $_GET['r'] ) ) : ?>@<?php echo esc_textarea( $_GET['r'] ); ?> <?php endif; ?></textarea>
 			</div>
 
-			<div id="whats-new-options">
+			<div id="whats-new-options" class="js-flash">
 				<div id="whats-new-submit">
 					<input type="submit" name="aw-whats-new-submit" id="aw-whats-new-submit" value="<?php esc_attr_e( 'Post Update', 'buddypress' ); ?>" />
 				</div>
