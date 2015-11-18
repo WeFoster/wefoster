@@ -146,24 +146,24 @@
         //Responsive Embeds
         function setup_videos() {
           // For embed YouTube videos
-          $('iframe[src*="youtube.com"]').wrap('<div class="embed-responsive embed-responsive-16by9"></div>');
-          $('iframe[src*="youtube.com"]').addClass('embed-responsive-item');
+          $('iframe:not(.embed-responsive-item)[src*="youtube.com"]').wrap('<div class="embed-responsive embed-responsive-16by9"></div>');
+          $('iframe:not(.embed-responsive-item)[src*="youtube.com"]').addClass('embed-responsive-item');
 
           // For embed Vimeo videos
-          $('iframe[src*="vimeo.com"]').wrap('<div class="embed-responsive embed-responsive-16by9"></div>');
-          $('iframe[src*="vimeo.com"]').addClass('embed-responsive-item');
+          $('iframe:not(.embed-responsive-item)[src*="vimeo.com"]').wrap('<div class="embed-responsive embed-responsive-16by9"></div>');
+          $('iframe:not(.embed-responsive-item)[src*="vimeo.com"]').addClass('embed-responsive-item');
 
           // For SlideShare slides
-          $('iframe[src*="slideshare.net"]').wrap('<div class="embed-responsive embed-responsive-16by9"></div>');
-          $('iframe[src*="slideshare.net"]').addClass('embed-responsive-item');
+          $('iframe:not(.embed-responsive-item)[src*="slideshare.net"]').wrap('<div class="embed-responsive embed-responsive-16by9"></div>');
+          $('iframe:not(.embed-responsive-item)[src*="slideshare.net"]').addClass('embed-responsive-item');
         }
+        setup_videos();
 
         //Add them to BuddyPress Stream
         $(document).ajaxSuccess(function(response) {
 
           setup_videos();
           setTimeout(setup_videos, 205);
-          setTimeout(setup_videos, 500);
 
         });
 
