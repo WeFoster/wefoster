@@ -10,6 +10,12 @@
 
 <div class="visible-md-block visible-lg-block">
 	<a class="navbar-brand" title="<?php echo get_bloginfo('name'); ?> | <?php echo get_bloginfo('description'); ?> " href="<?php echo esc_url( home_url( '/' ) ); ?>">
-		<?php echo apply_filters( 'wff_logo', $logo ); ?>
+			<?php
+			if (empty($logo)) {
+			$logo = WEFOSTER_DEFAULT_LOGO;
+			}
+
+			echo apply_filters( 'wff_logo', $logo );
+		?>
 	</a>
 </div>
