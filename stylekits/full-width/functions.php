@@ -20,4 +20,4 @@ function wefoster_plus_load_preset() {
 	wp_dequeue_style( 'wff_main' );
 	wp_enqueue_style('wff_plus_stylekit_' . WEFOSTER_PLUS_STYLEKIT_NAME . '', WEFOSTER_THEME_URL . '/stylekits/ ' . WEFOSTER_PLUS_STYLEKIT_NAME . '/css/' . WEFOSTER_PLUS_STYLEKIT_NAME . '-' . $color_scheme . '.css', false);
 }
-add_action('wp_enqueue_scripts', 'wefoster_plus_load_preset', 10000);
+//add_action('wp_enqueue_scripts', 'wefoster_plus_load_preset', 10000);

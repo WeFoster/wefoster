@@ -1,0 +1,30 @@
+/*!
+ * This stylesheet is only loaded on the login pages.
+ Version: 1.1.2
+ */
+body {
+  background: #454a54;
+}
+.login #backtoblog a,
+.login #nav a,
+.login h1 a {
+  color: #fff;
+}
+.login #backtoblog a:hover,
+.login #nav a:hover,
+.login h1 a:hover {
+  color: #3abb9a;
+}
+.wp-core-ui .button-primary {
+  background: #3abb9a;
+  border: 1px solid #38b394;
+}
+.wp-core-ui .button-primary:hover {
+  background: #309c80;
+  border: 1px solid #2e947a;
+}
+#loginform {
+  background: #fff;
+  border: 6px solid #505662;
+  border-radius: 2px;
+}

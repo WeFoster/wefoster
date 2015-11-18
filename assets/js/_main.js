@@ -70,7 +70,7 @@
           },
         });
 
-        jQuery(".wefoster-bootstrap-tooltips .wefoster-sidebar-left #vertical-activity-tabs li a,.wefoster-bootstrap-tooltips .dropdown a").tooltip({
+        jQuery(".wefoster-bootstrap-tooltips.wefoster-sidebar-left #vertical-activity-tabs li a,.wefoster-bootstrap-tooltips .dropdown a").tooltip({
           container: "body",
           placement: "right",
           delay: {
@@ -79,7 +79,7 @@
           },
         });
 
-        jQuery(".wefoster-bootstrap-tooltips .wefoster-sidebar-right #vertical-activity-tabs li a,.wefoster-bootstrap-tooltips .dropdown a").tooltip({
+        jQuery(".wefoster-bootstrap-tooltips.wefoster-sidebar-right #vertical-activity-tabs li a,.wefoster-bootstrap-tooltips .dropdown a").tooltip({
           container: "body",
           placement: "left",
           delay: {

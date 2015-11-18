@@ -1,0 +1,223 @@
+#user-sidebar-menu {
+  border-bottom: 1.5px solid @brand-complimentary;
+  border-radius: 3px 3px 0 0;
+  font-size: 90%;
+  border-radius: 0;
+  font-weight: bold;
+  overflow: hidden;
+  padding: @padding-half (@padding-half + 5);
+  text-shadow: none;
+  position: relative;
+  z-index: 1;
+  margin-bottom: (-@margin-full - 1.5);
+  .avatar {
+    float: left;
+    height: auto;
+    margin-right: 8px;
+    width: @medium-avatar-size;
+  }
+}
+
+
+div.vertical-list-tabs {
+  
+  &#vertical-activity-tabs h4 {
+    margin-bottom: 0;
+  }
+  
+margin-left: 0;
+  margin-right: 0;
+  padding-bottom: 0 !important;
+  background: @vert-tabs-wrap-bg;
+  margin-bottom: 0 !important;
+  
+  .sidebar-nav {
+    margin-top: -@margin-full;
+  }
+  
+
+  ul li {
+    float: none;
+    margin: @vert-tabs-margin;
+    padding: @vert-tabs-padding;
+    border-bottom: 0;
+    border-top: 0;
+    
+    &.selected,
+    &.current {
+      a {
+        background: @vert-tabs-active-bg;
+        border-top: @vert-tabs-active-border-top;
+        border-bottom: @vert-tabs-active-border-bottom;
+      }
+    }
+    
+
+    a:hover {
+      border-color: @brand-secondary;
+    }
+    
+
+    li:last-child a {
+      border-bottom: 2px solid darken(@brand-secondary, 5%);
+    }
+    
+
+    a {
+      background: @vert-tabs-bg;
+      margin-left: -@margin-full;
+      margin-right: -@margin-full;
+      padding: @padding-half @padding-full;
+      border-bottom: @vert-tabs-border-bottom;
+      border-top: @vert-tabs-border-top;
+      color: darken(@widget-bg, 40%);
+    }
+    
+
+    a:hover {
+      background: @vert-tabs-hover-bg;
+      color: @vert-tabs-hover-color;
+      padding-left: @padding-full !important;
+      padding-right: @padding-full !important;
+      
+      span {
+        background: darken(@vert-tabs-hover-bg, 8%);
+        border: 1px solid darken(@vert-tabs-hover-bg, 5%);
+      }
+    }
+    
+
+    // Activity Stream Tabs
+    &.loading {
+      -webkit-transition: all 0.3s ease;
+      -moz-transition: all 0.3s ease;
+      -ms-transition: all 0.3s ease;
+      -o-transition: all 0.3s ease;
+      transition: all 0.3s ease;
+    }
+    
+
+    // Activity Stream Tabs
+    &.loading a {
+      color: darken(@white, 5%);
+      padding-left: @padding-full + 19px !important;
+      padding-right: @padding-full !important;
+      position: relative;
+      &:hover {
+        padding-left: @padding-full + 19px !important;
+      }
+    }
+    
+
+    &.loading a:before {
+      position: absolute !important;
+      left: 30px;
+      content: "\f110" !important;
+      padding: 0 !important;
+      top: 20px;
+      color: @white;
+      -webkit-animation: spin 1.5s infinite linear;
+      -moz-animation: spin 1.5s infinite linear;
+      -o-animation: spin 1.5s infinite linear;
+      animation: spin 1.5s infinite linear;
+    }
+    
+
+    @-moz-keyframes spin {
+      0% {
+        -moz-transform: rotate(0deg);
+      }
+      
+
+      100% {
+        -moz-transform: rotate(359deg);
+      }
+    }
+    
+
+    @-webkit-keyframes spin {
+      0% {
+        -webkit-transform: rotate(0deg);
+      }
+      
+
+      100% {
+        -webkit-transform: rotate(359deg);
+      }
+    }
+    
+
+    @-o-keyframes spin {
+      0% {
+        -o-transform: rotate(0deg);
+      }
+      
+
+      100% {
+        -o-transform: rotate(359deg);
+      }
+    }
+    
+
+    @-ms-keyframes spin {
+      0% {
+        -ms-transform: rotate(0deg);
+      }
+      
+
+      100% {
+        -ms-transform: rotate(359deg);
+      }
+    }
+    
+
+    @keyframes spin {
+      0% {
+        transform: rotate(0deg);
+      }
+      
+
+      100% {
+        transform: rotate(359deg);
+      }
+    }
+  }
+}
+
+
+#buddypress {
+  .item-list-tabs {
+    position: relative;
+  }
+  
+
+  .item-list-tabs > ul:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+  }
+}
+
+
+#subnav li.last {
+  text-shadow: none;
+  
+  a {
+    padding: 3px 20px;
+  }
+  
+
+  span {
+    background: none;
+    border: 0 none;
+    float: none;
+    font-size: 80%;
+    height: inherit;
+    line-height: 160%;
+    margin: 0 0 -@margin-full;
+    padding: 0 0 9px;
+    white-space: nowrap;
+  }
+}

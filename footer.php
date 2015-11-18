@@ -63,6 +63,8 @@
 
   </footer>
 
+  <!-- layout wrapper -->
+  </div>
   <?php do_action('after_footer'); ?>
   <?php wp_footer(); ?>
 </body>

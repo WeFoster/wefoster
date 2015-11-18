@@ -1,0 +1,33 @@
+/*!
+ * We Foster Framework LESS
+ Version: 1.1.2
+ */
+// First load Bootstrap and all our 3rd Party vendors.
+@import "vendor.less";
+
+//Layout
+@import "layout/scaffolding.less";
+@import "layout/header.less";
+@import "layout/navigation.less";
+@import "layout/sidebar.less";
+@import "layout/layout.less";
+@import "layout/footer.less";
+@import "layout/customiser-options.less";
+
+//Responsive
+@import "layout/responsive.less";
+
+//WordPress
+@import "wordpress/single.less";
+@import "wordpress/archives.less";
+@import "wordpress/comments.less";
+@import "wordpress/wp-scaffolding.less";
+@import "wordpress/page.less";
+@import "wordpress/parts.less";
+
+//Load BuddyPress Widgets because they can appear everywhere.
+@import "buddypress/elements/widgets.less";
+
+// Variables that can be customised through child themes
+@import "mixins.less";
+@import "variables.less";

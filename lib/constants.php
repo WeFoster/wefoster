@@ -14,7 +14,6 @@
 
 // Note: To keep things easy we are working from top to bottom according to the HTML structure.
 
-
 // Layout Class: Choose our main container class that is wrapped around our main elements.
 if ( !defined( 'WEFOSTER_LAYOUT_CLASS' ) ) {
 		// 'container' or 'container-fluid'

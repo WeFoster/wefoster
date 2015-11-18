@@ -1,0 +1,99 @@
+.small-font-uppercase {
+  font-size: 75%;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.medium-font-uppercase {
+  .small-font-uppercase();
+  font-size: 85%;
+}
+
+.margin-full-horizontal {
+  margin-left: -@margin-full;
+  margin-right: -@margin-full;
+  padding-left: @padding-full;
+  padding-right: @padding-full;
+}
+
+.margin-full-vertical {
+  margin-top: -@margin-full;
+  margin-bottom: -@margin-full;
+  padding-top: @padding-full;
+  padding-bottom: @padding-full;
+}
+
+.margin-double-horizontal {
+  margin-left: -@margin-double;
+  margin-right: -@margin-double;
+  padding-left: @padding-double;
+  padding-right: @padding-double;
+}
+
+.margin-double-vertical {
+  margin-top: -@margin-double;
+  margin-bottom: -@margin-double;
+  padding-top: @padding-full;
+  padding-bottom: @padding-full;
+}
+
+.vertical-center {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.margin-top-full {
+  margin-top: @margin-full;
+}
+
+.margin-bottom-full {
+  margin-bottom: @margin-full;
+}
+
+.padding-top-full {
+  margin-top: @padding-full;
+}
+
+.padding-bottom-full {
+  margin-bottom: @padding-full;
+}
+
+.opacity-hide {
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
+  filter:alpha(opacity=50);
+  opacity: 0.0;
+  height: 0;
+}
+
+.opacity-show {
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+  filter:alpha(opacity=100);
+  opacity: 1;
+  -webkit-transition-property: opacity;
+  -moz-transition-property: opacity;
+  -o-transition-property: opacity;
+  -ms-transition-property: opacity;
+  transition-property: opacity;
+  -webkit-transition-duration: 0.6s;
+  -moz-transition-duration: 0.6s;
+  -o-transition-duration: 0.6s;
+  -ms-transition-duration: 0.4s;
+  transition-duration: 0.6s;
+  opacity: 1;
+}
+
+@media only screen and (max-width: @grid-float-breakpoint-max) {
+  .opacity-hide {
+    height: auto !important;
+    opacity: 1 !important;
+  }
+}
+
+// Mixins
+.responsive(@maxWidth; @rules) {
+  @media only screen and (max-width: @maxWidth) {
+    @rules();
+  }
+}

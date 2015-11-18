@@ -20,7 +20,7 @@ function wff_scripts() {
 
   //Load our BuddyPress Stylesheet based on being active (on root or multiblog)
   if ( class_exists( 'BuddyPress') && bp_is_root_blog() || class_exists( 'BuddyPress') && defined('BP_ENABLE_MULTIBLOG')   ) {
-    wp_enqueue_style('wff_buddypress', $path . '/css/buddypress.css', false, '75219230f779a23b4a0eb5099cf43cbf');
+    wp_enqueue_style('wff_buddypress', $path . '/css/buddypress.css', false, '9d5bd7a6a2c6a8cfb750ac360d0edd40');
   }
 
   if (is_single() && comments_open() && get_option('thread_comments')) {
@@ -37,7 +37,7 @@ function wff_scripts() {
   wp_register_script('modernizr', $path . '/js/vendor/modernizr-2.7.0.min.js', array(), null, false);
 
   //Custom Scripts
-  wp_register_script('wff_scripts', $path . '/js/scripts.min.js', array(), '0214399ecdbd77fb70dc11443e998dac', true);
+  wp_register_script('wff_scripts', $path . '/js/scripts.min.js', array(), '673d39e853c8a843815c427814ece320', true);
 
   wp_enqueue_script('modernizr');
   wp_enqueue_script('jquery');

@@ -1,0 +1,169 @@
+/* ==========================================================================
+   WordPress Generated Classes
+   See: http://codex.wordpress.org/CSS#WordPress_Generated_Classes
+   ========================================================================== */
+.entry-content {
+  .aligncenter {
+    display: block;
+    margin: @margin-full auto;
+  }
+
+
+  img {
+    max-width: 100%;
+    margin-top: @margin-full;
+    border: 1px solid darken(@white, 3%);
+    margin-bottom: @margin-full;
+    padding: 5px;
+    background-color: darken(@white, 2%);
+  }
+
+
+  .alignleft {
+    float: left;
+    margin-right: @margin-full;
+  }
+
+
+  .alignright {
+    margin-left: @margin-full;
+    float: right;
+  }
+
+
+  figure.alignnone {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+
+  /* Gallery Shortcode */
+  .gallery-row {
+    padding: @padding-half 0;
+  }
+
+
+  img.wp-post-image {
+    background: none repeat scroll 0 0 #fff;
+    border: 1px solid #f5f5f5;
+    border-radius: 4px;
+    box-shadow: 0 0.5px 1px rgba(0, 0, 0, 0.15);
+  }
+
+
+  img.wp-smiley {
+    border: 0 none;
+    box-shadow: none;
+    display: inline;
+    height: 12px;
+    padding: 0;
+    position: relative;
+    top: -1px;
+    width: 12px;
+  }
+}
+
+
+.wp-caption {
+  margin-bottom: @padding-half;
+  max-width: 100%;
+
+  img[class*="wp-image-"] {
+    .img-responsive();
+  }
+
+
+  .wp-caption-text {
+    background: none repeat scroll 0 0 darken(@white, 2%);
+    font-size: 90%;
+    font-style: italic;
+    margin-right: 10px;
+    margin-top: -@margin-full;
+    padding: 2px 8px 8px;
+    width: auto;
+  }
+}
+
+
+//Quite possibly the most useless CSS in the framework.
+.sticky,
+.bypostauthor,
+.gallery-caption {
+  display: block;
+}
+
+
+.wp-caption-text {
+  text-align: center;
+}
+
+
+.edit-link {
+  opacity: 0.4;
+
+  &:hover {
+    opacity: 1;
+  }
+}
+
+
+.post-nav {
+  font-size: 110%;
+}
+
+
+.wp-pagenavi {
+  clear: both;
+
+  a,
+  span {
+    text-decoration: none;
+    border: 1px solid darken(@white, 3%);
+    padding: 5px 10px;
+    margin: 5px;
+  }
+
+
+  a:hover,
+  span.current {
+    background: @brand-complimentary;
+    color: @white;
+  }
+
+
+  span.current {
+    font-weight: bold;
+  }
+}
+
+
+/* Text meant only for screen readers. */
+.screen-reader-text {
+  clip: rect(1px, 1px, 1px, 1px);
+  position: absolute !important;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+}
+
+
+.screen-reader-text:focus {
+  background-color: #f1f1f1;
+  border-radius: 3px;
+  box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
+  clip: auto !important;
+  color: #21759b;
+  display: block;
+  font-size: 14px;
+  font-size: 0.875rem;
+  font-weight: bold;
+  height: auto;
+  left: 5px;
+  line-height: normal;
+  padding: 15px 23px 14px;
+  text-decoration: none;
+  top: 5px;
+  width: auto;
+  z-index: 100000;
+  /* Above WP toolbar. */
+}

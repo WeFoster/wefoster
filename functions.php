@@ -46,9 +46,12 @@ if ( !defined( 'WEFOSTER_PLUS_PLUGIN_DIR' ) ) {
  * @since 1.0.0
  *
  */
-require WEFOSTER_THEME_DIR . '/lib/constants.php';         // Set up our constants.
+
 
 require_once WEFOSTER_THEME_DIR . '/lib/setup/stylekits.php';         // Set up our constants.
+
+require WEFOSTER_THEME_DIR . '/lib/constants.php';         // Set up our constants.
+
 
 //Setting up the theme
 require_once WEFOSTER_THEME_DIR . '/lib/setup/init.php';             // Initial theme setup

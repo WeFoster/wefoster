@@ -1,6 +1,6 @@
 <?php do_action('before_full_header'); ?>
 
-<div class="full-header-wrap <?php do_action('full_header_class'); ?>">
+<div class="full-header-wrap container-fluid">
 
 <?php do_action('open_full_header'); ?>
 
