@@ -57,7 +57,7 @@ module.exports = function(grunt) {
       main: {
         files: {
           'assets/css/min-main.css': [
-                'assets/less/main.less'
+            'assets/less/main.less'
           ],
         },
         options: {
@@ -73,7 +73,7 @@ module.exports = function(grunt) {
       buddypress: {
         files: {
           'assets/css/min-buddypress.css': [
-          'assets/less/buddypress.less'
+            'assets/less/buddypress.less'
           ],
         },
         options: {
@@ -138,7 +138,9 @@ module.exports = function(grunt) {
           'assets/less/**/**/**/*.less',
           'lib/customiser/assets/less/customizer.less'
         ],
-        tasks: ['less:main', ['less:buddypress'], ['less:other'], 'version']
+        tasks: ['less:main', ['less:buddypress'],
+          ['less:other'], 'version'
+        ]
       },
       js: {
         files: [
@@ -243,9 +245,11 @@ module.exports = function(grunt) {
         file: 'lib/setup/scripts.php',
         css: 'assets/css/main.css',
         cssHandle: 'wff_main',
+        css: 'assets/css/buddypress.css',
+        cssHandle: 'wff_buddypress',
         js: 'assets/js/scripts.min.js',
         jsHandle: 'wff_scripts'
-      }
+      },
     },
     // Compress the build folder into an upload-ready zip file
     compress: {
