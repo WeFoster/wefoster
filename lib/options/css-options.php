@@ -49,6 +49,8 @@ function wf_plus_body_background_div() {
 
 	}
 	//Do not output an image when it's set to none.
+	$bg_picture = get_theme_mod( 'wf_body_background_picture', 'none' );
+
 	if ( $bg_picture == 'none' ) {
 		$image_cropped = '';
 	}
