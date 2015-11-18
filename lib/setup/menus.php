@@ -8,6 +8,9 @@
 
 /**
  * Set up the menus (including the different language menus)
+ *
+ * @since 1.0.0
+ *
  */
 if ( ! function_exists ( 'wff_setup_menu' ) ) {
   function wff_setup_menu() {
@@ -22,7 +25,7 @@ if ( ! function_exists ( 'wff_setup_menu' ) ) {
       register_nav_menus(array(
         'secondary_navigation' => __('Secondary Navigation', 'wefoster'),
       ));
-        
+
     }
 
   }
@@ -123,8 +126,12 @@ function wff_nav_menu_args($args = '') {
 }
 add_filter('wp_nav_menu_args', 'wff_nav_menu_args');
 
-//Fix the annoying highlighing of Blog menu items.
-// http://dtbaker.net/web-development/how-to-stop-wordpress-automatically-highlighting-the-blog-page-in-the-menu/
+/**
+ * Fix the annoying highlighing of Blog menu items.
+ *
+ * @since 1.0.0
+ *
+ */  
 function wff_wp_nav_menu_objects($sorted_menu_items, $args){
     // check if the current page is really a blog post.
     global $wp_query;

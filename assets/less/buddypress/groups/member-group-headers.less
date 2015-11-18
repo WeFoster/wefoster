@@ -2,50 +2,42 @@
 3.10 - Profile and Group Headers
 --------------------------------------------------------------*/
 .buddypress-component-title {
-  margin-bottom: 0;
-
-      span {
-        color: @gray-light;
-        display: inline-block;
-        font-size: 50%;
-        font-weight: 300;
-        position: relative;
-        top: -3px;
-
-        &.activity {
-          font-size: 35%;
-          color: @gray-lighter;
-        }
-      }
+  margin-bottom: 0 !important;
+  
+  span {
+    color: @gray-light;
+    display: inline-block;
+    font-size: 50%;
+    font-weight: 300;
+    position: relative;
+    top: -3px;
+    
+    &.activity {
+      font-size: 35%;
+      color: @gray-lighter;
+    }
+  }
 }
-
-
-
 
 //BuddyPress Group Admin
 .group-admin,
 .my-account {
-
   .small a {
     font-size: 100%;
   }
-
 
   ul.single-line li {
     border-bottom: 1px solid darken(@white, 5%);
   }
 
-
   #subnav.item-list-tabs {
     margin-bottom: @margin-full;
   }
-
 
   //Fix table layout on profile
   &.settings.notifications th.title {
     width: 100%;
   }
-
 
   //Change title for visibility settings
   &.settings {
@@ -55,43 +47,39 @@
   }
 }
 
-
 // BUDDYPRESS PROFILES
 div#item-header {
   margin-top: 0;
   margin-bottom: @margin-full;
-
+  
   #item-buttons {
     padding-left: @padding-full;
     padding: 0.1px 10px;
   }
 
-
   div#message.info {
     line-height: 80%;
   }
 
-
   ul {
     overflow: hidden;
     padding: 0;
+    
     li {
       float: left;
       list-style: none;
     }
   }
 
-
   div#item-actions {
     background: darken(@white, 2%);
     padding: 0 @padding-half @padding-half;
     margin-bottom: @margin-half;
-
+    
     img.avatar {
       height: @small-avatar-size;
       width: @small-avatar-size;
     }
-
 
     h3 {
       border-bottom: 1px solid darken(@white, 5%);
@@ -102,13 +90,12 @@ div#item-header {
       padding-top: (@padding-half * 0.66);
       text-align: center;
       margin-top: 0;
-
+      
       &#wf-group-mods {
         margin-top: (@margin-half * 0.66);
       }
     }
   }
-
 
   div#item-header-content {
     background: darken(@page-header-background, 1.5%);
@@ -116,21 +103,19 @@ div#item-header {
     padding: 5px @padding-full;
   }
 
-
   img.avatar {
     float: left;
     margin: 0 15px 19px 0;
   }
 
-
   h2 {
     line-height: 120%;
     margin: 0 0 5px;
+    
     a {
       color: lighten(@gray-light, 10%);
       text-decoration: none;
     }
-
 
     span.highlight {
       font-size: 60%;
@@ -138,6 +123,7 @@ div#item-header {
       line-height: 170%;
       vertical-align: middle;
       display: inline-block;
+      
       span {
         background: @gray-lighter;
         color: @white;
@@ -154,7 +140,6 @@ div#item-header {
     }
   }
 }
-
 
 div#item-meta {
   font-size: 95%;

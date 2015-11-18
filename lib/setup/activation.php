@@ -4,15 +4,17 @@
  *  Props to Marshall Sorenson, Boone Gorges and the rest of the CBOX Team.
  */
 
+
 /**
- * This function does all the magic.
- * Want to disable the auto setup? add:
- * define('WEFOSTER_AUTO_SETUP', FALSE );
- * To your child theme/stylekit or wp-config.php
- */
-
+* This function automatically sets up some sensible defaults.
+* Want to disable the auto setup? add:
+* define('WEFOSTER_AUTO_SETUP', FALSE );
+* To your child theme/stylekit or wp-config.php
+*
+* @since 1.0.0
+*
+*/
 if ( WEFOSTER_AUTO_SETUP == 'true'  ) {
-
   function wf_theme_magic_setup() {
   	// load requirements
     require_once WEFOSTER_THEME_DIR . '/lib/classes/widget-setter.php';
@@ -50,9 +52,12 @@ if ( WEFOSTER_AUTO_SETUP == 'true'  ) {
 }
 
 
- /**
-  * Automagically create a front page if one has not been set already
-  */
+/**
+ * Automagically create a front page if one has not been set already
+ *
+ * @since 1.0.0
+ *
+ */
  function wff_theme_auto_create_home_page()
  {
  	$is_root_blog = function_exists( 'bp_is_root_blog' ) ? bp_is_root_blog() : is_main_site();
@@ -286,7 +291,7 @@ function wf_theme_populate_sidebars() {
 
 
 /**
- * Sets up a default sub menu in the CBOX theme.
+ * Sets up a default sub menu in the WeFoster theme.
  *
  * This function is fired on 'get_header' on the frontend to give CBOX
  * components a chance to configure from the admin area (like BP Docs).

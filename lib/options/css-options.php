@@ -1,13 +1,21 @@
 <?php
-// Add the CSS that is needed for our image manipulation.
+/**
+ * Add the CSS that is needed for our image manipulation.
+ *
+ * @since 1.0.0
+ *
+ */
 function wf_plus_css_output() {
 ?><style type="text/css"><?php do_action('wefoster_inline_css'); ?></style><?php
 }
 add_action( 'wp_head', 'wf_plus_css_output',1 );
 
-///
-// Body CSS Output
-//
+/**
+ * Body CSS Output
+ *
+ * @since 1.0.0
+ *
+ */
 function wf_plus_body_background_div() {
 	//Retrieve our option and set default if empty.
 	$bg_image_type = get_theme_mod( 'wf_body_background_type', 'picture' );
@@ -60,7 +68,12 @@ function wf_plus_body_background_div() {
 }
 add_action( 'open_body', 'wf_plus_body_background_div' );
 
-
+/**
+ * Output Background Texture
+ *
+ * @since 1.0.0
+ *
+ */
 function wf_plus_body_background_texture() {
 	//Background Texture
 	$image_cropped = wpthumb( get_theme_mod('wf_body_background_texture') );
@@ -79,6 +92,12 @@ function wf_plus_body_background_texture() {
 }
 add_action( 'wefoster_inline_css', 'wf_plus_body_background_texture' );
 
+/**
+ * Output Body ackground Effects
+ *
+ * @since 1.0.0
+ *
+ */
 function wf_plus_body_background_effects() {
 	//Body background
 	$bg_image_type = get_theme_mod( 'wf_body_background_type', 'upload' );
@@ -109,10 +128,13 @@ function wf_plus_body_background_effects() {
 }
 add_action( 'wefoster_inline_css', 'wf_plus_body_background_effects' );
 
-///
-// HEADER CSS Output
-//
 
+/**
+ * Output Header CSS
+ *
+ * @since 1.0.0
+ *
+ */
 function wf_plus_header_background_effects() {
 	$header_image_type = get_theme_mod( 'wf_header_background_type', 'picture' );
 
@@ -159,7 +181,12 @@ function wf_plus_header_background_effects() {
 }
 add_action( 'wefoster_inline_css', 'wf_plus_header_background_effects' );
 
-// Add an extra div for our header image or texture
+/**
+ * Add an extra div for our header image or texture
+ *
+ * @since 1.0.0
+ *
+ */
 function wf_plus_header_div() {
 	$header_image_type = get_theme_mod( 'wf_header_background_type', 'upload' );
 	$color = get_theme_mod( 'wf_header_background_image_color', 'default' );
@@ -170,9 +197,12 @@ function wf_plus_header_div() {
 add_action( 'open_full_header', 'wf_plus_header_div', 1 );
 
 
-///
-// LOGO OUTPUT CSS
-//
+/**
+ * Output the CSS for our Custom Logo.
+ *
+ * @since 1.0.0
+ *
+ */
 function wf_plus_logo_css() {
 		$logo_position = get_theme_mod( 'wf_plus_custom_logo_position', 'default' );
 		$logo_height = get_theme_mod( 'wf_plus_custom_logo_height', 'default' );

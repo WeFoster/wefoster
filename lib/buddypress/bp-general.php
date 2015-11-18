@@ -2,12 +2,13 @@
 /**
  * Common BuddyPress functions
  */
+
 /**
- * Change Default Avatar Size
- */
-/**
- * Add class when it's not a BuddyPress page
- */
+* Add class when it's not a BuddyPress page
+*
+* @since 1.0.0
+*
+*/
 if ( ! function_exists ( 'wff_base_wordpress_page' ) ) {
 	function wff_base_wordpress_page( $classes )
 	{
@@ -65,13 +66,13 @@ function wff_populate_group_global() {
 	}
 }
 
-//
-// Helpers
-//
+/**
+ * Activity Stream Conditional
+ *
+ * @since 1.0.0
+ *
+ */
 if ( false == function_exists( 'wff_is_activity_page' ) ) {
-	/**
-	 * Activity Stream Conditional
-	 */
 	function wff_is_activity_page() {
 		return ( bp_is_activity_component() && !bp_is_user() );
 	}

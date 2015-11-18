@@ -1,17 +1,17 @@
 <?php
-function wf_register_sections( $wp_customize ) {
 /**
- * Add sections
+ * Register our Customizer Panels.
+ *
+ * @since 1.0.0
+ *
  */
+function wff_register_sections( $wp_customize ) {
 $wp_customize->add_section( 'wf_plus_stylekit_section', array(
   'title'       => __( 'Choose Stylekits', 'wefoster' ),
   'priority'    => 1,
   'description' => __( 'Change the way your site header looks', 'wefoster' ),
 ) );
 
-/**
- * Add sections
- */
 $wp_customize->add_section( 'wf_plus_body_section', array(
   'title'       => __( 'Body', 'wefoster' ),
   'priority'    => 10,
@@ -127,4 +127,4 @@ $wp_customize->add_section( 'wf_plus_typography_body_section', array(
 ) );
 
 }
-add_action( 'customize_register', 'wf_register_sections', 1000 );
+add_action( 'customize_register', 'wff_register_sections', 1000 );

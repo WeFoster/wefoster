@@ -3,7 +3,12 @@
  * Modifies BuddyPress templates via hooks.
  */
 
- //Show a message when a filter is active.
+/**
+* Show a message when an activity stream filter is active
+*
+* @since 1.0.0
+*
+*/
 if ( ! function_exists ( 'wff_activity_filter_warning' ) ) {
   function wff_activity_filter_warning() {
      ?>

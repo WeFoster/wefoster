@@ -121,9 +121,9 @@ if ( !defined( 'WEFOSTER_HEADER_HIDE' ) ) {
 		define('WEFOSTER_HEADER_HIDE', 'navbar-no-headroom');
 }
 
-///
-/// Default Assets (images, css, js etc)
-///
+/////////////// 										 ///////////////
+///////////////     DEFAULT ASSETS	 ///////////////
+/////////////// 										 ///////////////
 
 // Path: You can easily overwrite the default images by telling WeFoster to look for them in a different place.
 // The most obvious example would be get_stylesheet_directory_uri or your plugin folder.

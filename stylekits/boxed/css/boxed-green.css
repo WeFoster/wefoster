@@ -6382,7 +6382,7 @@ a {
 a:hover {
   color: #23252a;
   text-decoration: none;
-  opacity: 1;
+  opacity: 0.8;
 }
 .navbar a:hover,
 .item-list-tabs a:hover,
@@ -6480,6 +6480,9 @@ iframe {
 .wefoster-framework .table > tbody > tr > td,
 .wefoster-framework .table > tfoot > tr > td {
   vertical-align: inherit;
+}
+.wefoster-framework .fa {
+  transform: inherit;
 }
 .headroom {
   transition: transform 300ms linear;
@@ -6956,10 +6959,6 @@ body.wefoster-navbar-fixed-top {
     width: 125px;
     z-index: 20;
   }
-  .groups .page-header h1 a,
-  .bp-user .page-header h1 a {
-    padding-left: 140px;
-  }
   .navbar-collapse #bp-user-navigation,
   .tooltip {
     display: none !important;
@@ -7160,7 +7159,8 @@ body.wefoster-navbar-fixed-top {
   }
 }
 @media (max-width: 568px) {
-  .postthumb {
+  .postthumb,
+  .bp-cover-photo .default {
     height: 160px !important;
   }
   .row-offcanvas-right .sidebar-offcanvas {
@@ -7217,23 +7217,6 @@ body.wefoster-navbar-fixed-top {
   .mobile-avatar img.avatar {
     height: 60px;
     width: 60px;
-  }
-  .bp-user .container .content .main .page-header h1,
-  .groups .container .content .main .page-header h1 {
-    background: transparent !important;
-    border: 0;
-    border-bottom: 0;
-    margin: 0 -30px 30px !important;
-    padding-left: 0;
-    position: relative;
-    padding-top: 5px;
-    padding-bottom: 5px;
-  }
-  .bp-user .container .content .main .page-header h1 a,
-  .groups .container .content .main .page-header h1 a {
-    color: #333333;
-    font-size: 80%;
-    padding-left: 105px;
   }
 }
 .main .tiled-gallery img {
@@ -8362,11 +8345,6 @@ ul.item-list li div.action div.generic-button a {
   font-size: 90%;
   margin-bottom: 3px;
   padding: 5px 6px;
-}
-div#item-header ul h5,
-div#item-header ul span,
-div#item-header ul hr {
-  display: none;
 }
 .item-body {
   margin: 20px 0;
@@ -10814,7 +10792,7 @@ div.vertical-list-tabs ul li.loading a:before {
 3.10 - Profile and Group Headers
 --------------------------------------------------------------*/
 .buddypress-component-title {
-  margin-bottom: 0;
+  margin-bottom: 0 !important;
 }
 .buddypress-component-title span {
   color: #777777;

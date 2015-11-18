@@ -1,4 +1,10 @@
 <?php
+/**
+ * Add Textures to choose from in the Customizer.
+ *
+ * @since 1.0.0
+ *
+ */
 function wefoster_plus_background_textures() {
 
   if ( ! defined('WEFOSTER_PLUS_PLUGIN_DIR') ) {
@@ -21,6 +27,12 @@ function wefoster_plus_background_textures() {
 
 }
 
+/**
+ * Add Image Effects to choose from in the Customizer.
+ *
+ * @since 1.0.0
+ *
+ */
 function wefoster_plus_image_effects() {
 
   if ( ! defined('WEFOSTER_PLUS_PLUGIN_DIR') ) {
@@ -39,6 +51,12 @@ function wefoster_plus_image_effects() {
 
 }
 
+/**
+ * Add Background Pictures to choose from in the Customizer.
+ *
+ * @since 1.0.0
+ *
+ */
 function wefoster_plus_background_pictures() {
 
   if ( ! defined('WEFOSTER_PLUS_PLUGIN_DIR') ) {
@@ -64,7 +82,12 @@ function wefoster_plus_background_pictures() {
 }
 
 
-
+/**
+ * Do not KSES footer output. This is taken care of in the footer template.
+ *
+ * @since 1.0.0
+ *
+ */
 function do_not_filter_anything( $value ) {
 	return $value;
 }

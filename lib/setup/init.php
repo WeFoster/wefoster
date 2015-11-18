@@ -1,13 +1,16 @@
 <?php
 /**
  * All the basic theme setup functionality for our Framework.
- * Big props to the Roots/Sage team for providing the foundation
+ * Big props to the Roots/Sage team for providing parts of the foundation.
  */
 add_theme_support('bootstrap-gallery');     // Enable Bootstrap's thumbnails component on [gallery]
 
 /**
-* Add theme support for Responsive Videos.
-*/
+ * Add theme support for Responsive Videos.
+ *
+ * @since 1.0.0
+ *
+ */
 if ( ! function_exists ( 'wff_jetpack_responsive_videos_setup' ) ) {
   function wff_jetpack_responsive_videos_setup() {
       add_theme_support( 'jetpack-responsive-videos' );
@@ -19,6 +22,7 @@ if ( ! function_exists ( 'wff_jetpack_responsive_videos_setup' ) ) {
 /**
  * $content_width is a global variable used by WordPress for max image upload sizes
  * and media embeds (in pixels).
+ * @since 1.0.0
  *
  * Example: If the content area is 640px wide, set $content_width = 620; so images and videos will not overflow.
  * Default: 1140px is the default Bootstrap container width.
@@ -28,6 +32,9 @@ if (!isset($content_width)) { $content_width = 1140; }
 
 /**
  * wefoster initial setup and constants
+ *
+ * @since 1.0.0
+ *
  */
 function wff_setup_theme() {
   // Make theme available for translation
@@ -53,13 +60,12 @@ function wff_setup_theme() {
 add_action('after_setup_theme', 'wff_setup_theme');
 
 
+/**
+ *	Style the comment form and comments to match Bootstrap
+ * 	Also includes schema.org microdata
+ */
 if ( ! function_exists( 'wff_comments_template' ) ) :
 function wff_comments_template() {
-	/**
-	 *	Style the comment form and comments to match Bootstrap
-	 * 	Also includes schema.org microdata
-	 */
-
 	// Custom comment
 	function wff_comment_callback($comment, $args, $depth) {
 		$GLOBALS['comment'] = $comment;
@@ -75,7 +81,7 @@ function wff_comments_template() {
 
 		?>
 
- <?php include(locate_template('templates/parts/single-comment.php')); ?>
+       <?php include(locate_template('templates/parts/single-comment.php')); ?>
 
 
 		<?php
@@ -91,7 +97,12 @@ function wff_comments_template() {
 		echo '</article>';
 	}
 
-	// Add bootstrap3 styling to comment form
+/**
+ * Add bootstrap3 styling to comment form
+ *
+ * @since 1.0.0
+ *
+ */
 	function wff_comment_form_fields( $fields ) {
 	    $commenter = wp_get_current_commenter();
 
@@ -112,7 +123,12 @@ function wff_comments_template() {
 	}
 	add_filter( 'comment_form_default_fields', 'wff_comment_form_fields' );
 
-	// Add bootstrap3 styling to comment form
+  /**
+ * Add bootstrap3 styling to comment form
+ *
+ * @since 1.0.0
+ *
+ */  
 	function wff_comment_form( $args ) {
 	    $args['comment_field'] = '<div class="form-group comment-form-comment">
 	            <label for="comment">' . _x( 'Comment', 'noun' ) . '</label>

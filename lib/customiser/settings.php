@@ -2,7 +2,10 @@
 
 /**
  * Add controls using the 'kirki/fields' filter.
- */
+ *
+ * @since 1.0.0
+ *
+ */	
 function wf_plus_register_settings( $fields ) {
 
 	////////////////

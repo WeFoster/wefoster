@@ -2,7 +2,7 @@
 /**
 * Thank you for using the WeFoster framework! If you're reading this it means you're probably interested
 * in creating awesome BuddyPress communities for yourself our your clients. Please take a look at our
-* Developer documentation at https://wefoster.co/documentation/?bpd_tag=developers to get started <3
+* Developer documentation at https://documentation.wefoster.co/ to get started <3
 *
 * @since 1.0
 * @package WeFoster Framework
@@ -24,6 +24,12 @@ if ( !defined( 'WEFOSTER_CUSTOMIZER_URL' ) ) {
 	define( 'WEFOSTER_CUSTOMIZER_URL', get_template_directory_uri() );
 }
 
+/**
+ * Set up Kirki
+ *
+ * @since 1.0.0
+ *
+ */
 if ( !defined( 'WEFOSTER_PLUS_PLUGIN_DIR' ) ) {
 
 	require( WEFOSTER_CUSTOMIZER_DIR . '/lib/vendor/kirki/kirki.php' );
@@ -34,7 +40,12 @@ if ( !defined( 'WEFOSTER_PLUS_PLUGIN_DIR' ) ) {
 	) );
 }
 
-// Set up our constants that are used across the theme
+/**
+ * Load our Files
+ *
+ * @since 1.0.0
+ *
+ */
 require WEFOSTER_THEME_DIR . '/lib/constants.php';         // Set up our constants.
 
 require_once WEFOSTER_THEME_DIR . '/lib/setup/stylekits.php';         // Set up our constants.
@@ -71,7 +82,12 @@ require_once WEFOSTER_THEME_DIR . '/lib/layout/filters.php';           // Set up
 require_once WEFOSTER_THEME_DIR . '/lib/layout/custom-login.php';      			// Make the login pretty.
 require_once WEFOSTER_THEME_DIR . '/lib/layout/actions.php';           // Set up our actions.
 
-//BuddyPress Specific
+/**
+ * BuddyPress Specific
+ *
+ * @since 1.0.0
+ *
+ */
 if ( class_exists( 'BuddyPress' ) ) {
 	require_once WEFOSTER_THEME_DIR . '/lib/buddypress/bp-general.php';
 	require_once WEFOSTER_THEME_DIR . '/lib/buddypress/bp-actions.php';

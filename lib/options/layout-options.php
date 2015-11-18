@@ -1,5 +1,10 @@
 <?php
-//Check theme options for layout
+/**
+ * Check theme options for layout type set by constant.
+ *
+ * @since 1.0.0
+ *
+ */
 function wefoster_plus_change_layout_type() {
 
 	$option = get_theme_mod( 'wf_layout_type', 'default' );
@@ -21,7 +26,12 @@ function wefoster_plus_change_layout_type() {
 add_filter( 'wf_header_type', 'wefoster_plus_change_layout_type' );
 
 
-//Check theme options for layout
+/**
+ * Check theme options for layout container class set by constant.
+ *
+ * @since 1.0.0
+ *
+ */
 function wefoster_plus_change_layout_class() {
 
 	$option = get_theme_mod( 'wf_layout_class', 'default' );
@@ -44,7 +54,12 @@ function wefoster_plus_change_layout_class() {
 add_filter( 'wff_container_class', 'wefoster_plus_change_layout_class' );
 add_filter( 'wff_content_wrapper_class', 'wefoster_plus_change_layout_class' );
 
-//Check theme options for sidebar position
+/**
+ * Check theme options for sidebar position
+ *
+ * @since 1.0.0
+ *
+ */
 function wefoster_plus_change_sidebar_class() {
 
 		$option = get_theme_mod( 'wf_plus_sidebar_position', 'default' );
@@ -78,7 +93,12 @@ function wefoster_plus_show_site_description() {
 }
 add_filter( 'wf_site_description', 'wefoster_plus_show_site_description' );
 
-//Check theme options for navbar style
+/**
+ * Check theme options for navbar style
+ *
+ * @since 1.0.0
+ *
+ */
 function wefoster_plus_change_navbar_class() {
 
 		$option = get_theme_mod( 'wf_plus_header_style', 'default' );
@@ -96,7 +116,12 @@ function wefoster_plus_change_navbar_class() {
 }
 add_filter( 'wff_navbar_inverse_class', 'wefoster_plus_change_navbar_class' );
 
-//Check theme options for layout size
+/**
+ * Check theme options for layout size
+ *
+ * @since 1.0.0
+ *
+ */
 function wefoster_plus_change_content_width() {
 
 	//Retrieve our option
@@ -130,7 +155,12 @@ function wefoster_plus_change_content_width() {
 }
 add_filter( 'wff_main_class', 'wefoster_plus_change_content_width' );
 
-//Check theme options for sidebar position
+/**
+ * Check theme options for Sidebar/Content Width
+ *
+ * @since 1.0.0
+ *
+ */
 function wefoster_plus_change_sidebar_width() {
 
 	$option = get_theme_mod( 'wf_plus_content_width', 'default' );
@@ -164,7 +194,12 @@ function wefoster_plus_change_sidebar_width() {
 }
 add_filter( 'wff_sidebar_class', 'wefoster_plus_change_sidebar_width' );
 
-//Set the Footer Class
+/**
+ * Check theme options for Footer Class
+ *
+ * @since 1.0.0
+ *
+ */
 function wefoster_plus_change_footer_class() {
 
 		$option = get_theme_mod( 'wf_plus_footer_style', 'default' );
@@ -181,7 +216,12 @@ function wefoster_plus_change_footer_class() {
 }
 add_filter( 'wff_footer_class', 'wefoster_plus_change_footer_class' );
 
-//Set the amount of footer widgets
+/**
+ * Set the amount of footer widgets
+ *
+ * @since 1.0.0
+ *
+ */
 function wefoster_plus_change_footer_widgets() {
 
 	$option = get_theme_mod( 'wf_plus_footer_widgets', 'default' );
@@ -199,11 +239,12 @@ function wefoster_plus_change_footer_widgets() {
 add_filter( 'wf_footer_type', 'wefoster_plus_change_footer_widgets' );
 
 
-////////
-//WeFoster Logo Overwrite.
-//////
-
-//Check theme options for sidebar position
+/**
+ * Check theme options for custom logo. And overwrite the default one using the provided filter.
+ *
+ * @since 1.0.0
+ *
+ */
 function wefoster_plus_custom_logo() {
 
 	//Retrieve our option
@@ -243,16 +284,26 @@ function wefoster_plus_custom_logo() {
 }
 add_filter( 'wff_logo', 'wefoster_plus_custom_logo', 11 );
 
-
-function wefoster_hide_logo_desktop()
+/**
+ * Check theme options and see if the logo should be completely hidden.
+ *
+ * @since 1.0.0
+ *
+ */
+function wefoster_plus_hide_logo_desktop()
 {
 		if ( get_theme_mod('wf_plus_logo_type') == 'hide' ){
 			echo 'hidden-sm hidden-md hidden-lg';
 		}
 }
-add_action( 'class_navbar_header', 'wefoster_hide_logo_desktop' );
+add_action( 'class_navbar_header', 'wefoster_plus_hide_logo_desktop' );
 
-//Check theme options for sidebar position
+/**
+ * Check theme options for custom mobile logo. Overwrite the default logo if set.
+ *
+ * @since 1.0.0
+ *
+ */
 function wefoster_plus_custom_mobile_logo() {
 
 	//Retrieve our option
@@ -296,7 +347,12 @@ add_filter( 'wff_mobile_logo', 'wefoster_plus_custom_mobile_logo', 11 );
 // Header
 ///////////////
 
-//Check theme options for layout
+/**
+ * Check theme options to see if the Header should Stick.
+ *
+ * @since 1.0.0
+ *
+ */
 function wefoster_plus_change_fixed_navbar() {
 
 	//Retrieve our option
@@ -320,8 +376,12 @@ function wefoster_plus_change_fixed_navbar() {
 add_filter( 'wff_navbar_fixed_class', 'wefoster_plus_change_fixed_navbar' );
 
 
-
-
+/**
+ * Check theme options to see if the Header should Stick and add the body class.
+ *
+ * @since 1.0.0
+ *
+ */
 function wff_plus_fixed_body_class( $classes ) {
 
 	//Retrieve our option
@@ -345,9 +405,12 @@ function wff_plus_fixed_body_class( $classes ) {
 add_filter( 'wff_navbar_fixed_body_class', 'wff_plus_fixed_body_class',11 );
 
 
-//
-///
-//Check theme options for layout
+/**
+ * Check theme options and add the CSS classes to Body to enabled the Headroom Script.
+ *
+ * @since 1.0.0
+ *
+ */
 function wefoster_plus_change_headroom_navbar() {
 
 	//Retrieve our option
@@ -375,9 +438,11 @@ add_filter( 'wff_navbar_headroom_class', 'wefoster_plus_change_headroom_navbar' 
 ///////////////
 
 /**
-* Add the code below to your WeFoster Child Theme
-*/
-//Retrieve our option
+ * Check theme options to see if Custom Post Thumbnail sizes should be set.
+ *
+ * @since 1.0.0
+ *
+ */
 $option = get_theme_mod( 'wf_plus_featured_image_default_sizes' );
 if ( $option == 'custom' ) {
 
@@ -392,10 +457,12 @@ if ( $option == 'custom' ) {
 		add_filter( 'wff_post_thumbnail_sizes', 'wefoster_plus_thumb_sizes', 11 );
 }
 
-////////////////
-// Misc.
-///////////////
-
+/**
+ * Check theme options to see if the WordPress Admin bar should be hidden for non-admins.
+ *
+ * @since 1.0.0
+ *
+ */
 $option = get_theme_mod( 'wf_plus_hide_admin_bar', 'hide' );
 if ( $option == 'hide'  ) {
 

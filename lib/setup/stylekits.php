@@ -20,6 +20,12 @@ if(file_exists($file)){
 	require_once( WEFOSTER_PLUS_STYLEKIT_DIR . '/functions.php' );
 }
 
+/**
+ * Add Stylekits Selections
+ *
+ * @since 1.0.0
+ *
+ */
 function wefoster_stylekits() {
 
     if ( ! defined('WEFOSTER_PLUS_PLUGIN_DIR') ) {

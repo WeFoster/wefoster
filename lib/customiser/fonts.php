@@ -1,4 +1,10 @@
 <?php
+/**
+ * Add a Google Font selection to the Kirki font settings.
+ *
+ * @since 1.0.0
+ *
+ */
 function wefoster_plus_google_fonts() {
 
 	$wf_google_fonts =  array (

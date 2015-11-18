@@ -5,27 +5,38 @@
 */
 
 /**
-* Set proper default sizes
-* TODO: Move to a plugin
+* Set the default cover image sizes. This is to be able to resize them to any size later using WP Thumb
+*
 * @since 1.0
 */
 function wff_bp_cover_image_sizes( $settings = array() ) {
 
-	  $settings['width']  = 3000;
-	  $settings['height'] = 3000;
+	  $settings['width']  = 2000;
+	  $settings['height'] = 2000;
 
     return $settings;
 }
 add_filter( 'bp_before_xprofile_cover_image_settings_parse_args', 'wff_bp_cover_image_sizes', 10, 1 );
 add_filter( 'bp_before_groups_cover_image_settings_parse_args', 'wff_bp_cover_image_sizes', 10, 1 );
 
-
+/**
+ * Set default BP Cover Photos for Groups
+ *
+ * @since 1.0.0
+ *
+ */
 function wff_bp_group_cover_image_default( $settings = array() ) {
     $settings['default_cover'] = WEFOSTER_DEFAULT_GROUP_COVER_PHOTO;
     return $settings;
 }
 add_filter( 'bp_before_groups_cover_image_settings_parse_args', 'wff_bp_group_cover_image_default', 10, 1 );
 
+/**
+ * Set default BP Cover Photos for Members
+ *
+ * @since 1.0.0
+ *
+ */
 function wff_bp_member_cover_image_default( $settings = array() ) {
     $settings['default_cover'] = WEFOSTER_DEFAULT_MEMBER_COVER_PHOTO;
     return $settings;
@@ -33,10 +44,11 @@ function wff_bp_member_cover_image_default( $settings = array() ) {
 add_filter( 'bp_before_xprofile_cover_image_settings_parse_args', 'wff_bp_member_cover_image_default', 10, 1 );
 
 /**
-* Replace default group avatar
-* TODO: Move to a plugin
-* @since 1.0
-*/
+ * Set default BP Cover Photos for Groups and Members
+ *
+ * @since 1.0.0
+ *
+ */
 if ( ! function_exists ( 'wff_default_group_avatar' ) ) {
 	function wff_default_group_avatar($avatar)
 	{

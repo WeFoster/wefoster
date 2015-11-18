@@ -7,7 +7,12 @@
 * Read our developer docs at https://wefoster.co/documentation
  */
 
- // Change Default Avatar
+ /**
+ * Change Default Avatar
+ *
+ * @since 1.0.0
+ *
+ */
  if ( ! function_exists ( 'wff_default_avatar' ) ) {
 
  	function wff_default_avatar() {
@@ -17,7 +22,12 @@
 
  }
 
-//Load our Header Type. This can be filtered if needed. See filters.php
+ /**
+  * Load our Header Type. This can be filtered if needed. See filters.php
+  *
+  * @since 1.0.0
+  *
+  */
 if ( ! function_exists ( 'wff_load_full_header_template' ) ) {
   function wff_load_full_header_template()
   {
@@ -46,8 +56,11 @@ if ( ! function_exists ( 'wff_primary_navigation_location' ) ) {
 
 
 /**
- * Hook the secondary navigation into our full header template.
- */
+* Hook the secondary navigation into our full header template.
+*
+* @since 1.0.0
+*
+*/
 if ( ! function_exists ( 'wff_secondary_navigation_location' ) ) {
   function wff_secondary_navigation_location()
   {
@@ -58,6 +71,9 @@ if ( ! function_exists ( 'wff_secondary_navigation_location' ) ) {
 
 /**
  * Hook the post thumbnails into our pages and posts.
+ *
+ * @since 1.0.0
+ *
  */
 if ( ! function_exists ( 'wff_post_thumbnail_location' ) ) {
   function wff_post_thumbnail_location()
@@ -69,7 +85,10 @@ if ( ! function_exists ( 'wff_post_thumbnail_location' ) ) {
 }
 
 /**
- * Hook the Post Meta template.
+ * Hook the Post Meta template
+ *
+ * @since 1.0.0
+ *
  */
 if ( ! function_exists ( 'wff_entry_meta_location' ) ) {
   function wff_entry_meta_location()
@@ -79,6 +98,12 @@ if ( ! function_exists ( 'wff_entry_meta_location' ) ) {
   add_action( 'after_single_header', 'wff_entry_meta_location' );
 }
 
+/**
+ * Hook the Entry Tags template
+ *
+ * @since 1.0.0
+ *
+ */
 if ( ! function_exists ( 'wff_entry_tags_location' ) ) {
   function wff_entry_tags_location()
   {
@@ -87,6 +112,12 @@ if ( ! function_exists ( 'wff_entry_tags_location' ) ) {
   add_action( 'after_entry_content', 'wff_entry_tags_location' );
 }
 
+/**
+ * Hook the Author Box template
+ *
+ * @since 1.0.0
+ *
+ */
 if ( ! function_exists ( 'wff_author_box_location' ) ) {
   function wff_author_box_location()
   {

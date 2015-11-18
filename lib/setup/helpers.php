@@ -3,8 +3,7 @@
  * See: https://github.com/humanmade/hm-core/blob/1204806c83497d04379d287753cbe3b6c7c66a9b/hm-core.functions.php#L1236
  * Like get_template_part() put lets you pass args to the template file
  * Args are available in the tempalte as $template_args array
- * @param string filepart
- * @param mixed wp_args style argument list
+ * @since 1.0
  */
 function wf_get_template_part( $file, $template_args = array(), $cache_args = array() ) {
 
@@ -105,6 +104,9 @@ if ( ! function_exists ( 'wff_caption' ) ) {
 
 /**
  * Clean up the_excerpt()
+ *
+ * @since 1.0.0
+ *
  */
 if ( ! function_exists ( 'wff_excerpt_more' ) ) {
   // custom excerpt length
@@ -155,7 +157,10 @@ if ( ! function_exists ( 'wff_title' ) ) {
 
 /**
  * Add class="thumbnail img-thumbnail" to attachment items
- */
+ *
+ * @since 1.0.0
+ *
+ */  
 if ( ! function_exists ( 'wff_attachment_link_class' ) ) {
   function wff_attachment_link_class($html) {
     $postid = get_the_ID();
@@ -163,19 +168,4 @@ if ( ! function_exists ( 'wff_attachment_link_class' ) ) {
     return $html;
   }
   add_filter('wp_get_attachment_link', 'wff_attachment_link_class', 10, 1);
-}
-
-
-/**
- * Utility functions
- */
-function add_filters($tags, $function) {
-  foreach($tags as $tag) {
-    add_filter($tag, $function);
-  }
-}
-
-function is_element_empty($element) {
-  $element = trim($element);
-  return empty($element) ? false : true;
 }

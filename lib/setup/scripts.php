@@ -9,7 +9,9 @@
 /**
  * Enqueue scripts and stylesheets
  *
- */
+ * @since 1.0.0
+ *
+ */  
 function wff_scripts() {
 
   if ( WEFOSTER_DEVELOPER == 'on' ) {

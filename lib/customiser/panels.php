@@ -1,4 +1,10 @@
 <?php
+/**
+ * Register our Customizer Panels.
+ *
+ * @since 1.0.0
+ *
+ */
 function wf_plus_register_panels( $wp_customize ) {
 	/**
   * Add Stylekit Panel

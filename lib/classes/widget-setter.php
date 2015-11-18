@@ -3,7 +3,9 @@
  * Utility class for dealing with sidebar widgets
  * Props to Marshall Sorenson, Boone Gorges and the rest of the CBOX Team.
  * https://github.com/cuny-academic-commons/cbox-theme
+ * @since 1.0.0
  */
+
 class WeFoster_Widget_Setter {
 	public static function set_widget( $args ) {
 		$r = wp_parse_args( $args, array(
