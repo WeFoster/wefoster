@@ -51,9 +51,7 @@ function wf_plus_body_background_div() {
 	//Do not output an image when it's set to none.
 	$bg_picture = get_theme_mod( 'wf_body_background_picture', 'none' );
 
-	if ( $bg_picture == 'none' ) {
-		$image_cropped = '';
-	}
+
 	// Enable the image effects for pictures and uploads, but not for textures
 	if ( $bg_image_type != 'none' ) {
 		$color = get_theme_mod('wf_body_background_image_color');
