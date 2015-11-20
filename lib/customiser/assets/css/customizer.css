@@ -58,7 +58,7 @@
   line-height: 153%;
   margin-bottom: 0;
   max-width: 300px;
-  padding: 12px 15px 12px;
+  padding: 12px 15px;
   text-align: center;
   top: 20px;
   width: 260px;
@@ -179,7 +179,9 @@ margin-top: -15px; */
   width: 120px;
 }
 #customize-theme-controls #input_wf_plus_content_width.image label img,
-#customize-theme-controls #input_wf_plus_sidebar_position.image label img {
+#customize-theme-controls #input_wf_plus_sidebar_position.image label img,
+#customize-theme-controls #input_wf_plus_single_members_sidebar.image label img,
+#customize-theme-controls #input_wf_plus_single_groups_sidebar.image label img {
   border: 2px solid #eee;
   display: inline-block;
   margin-right: 5px;
