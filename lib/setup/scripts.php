@@ -1,22 +1,14 @@
 <?php
 /**
-* Register our styles and scripts
-*
-* @since 1.0
-* @package WeFoster Framework
-*/
-
-/**
  * Enqueue scripts and stylesheets
+ *
+ * @since 1.0.0
  *
  */
 function wff_scripts() {
 
-  if ( WEFOSTER_DEVELOPER == 'on' ) {
-    $enq_path = get_template_directory_uri() . '/assets/css/min-';
-  } else {
-    $enq_path = get_template_directory_uri() . '/assets/css/';
-  }
+  //Register path
+  $path = get_template_directory_uri() . '/assets';
 
   //First let's remove the default BuddyPress CSS
   wp_deregister_style( 'bp-child-css' );
@@ -24,11 +16,11 @@ function wff_scripts() {
   wp_deregister_style( 'bp-legacy-css' );
 
   //Enqueue our Main Stylesheet.
-  wp_enqueue_style('wff_main', $enq_path . 'main.css', false, '6ee17105aaae3d20bb56ee840e0cabcd');
+  wp_enqueue_style('wff_main', $path . '/css/main.css', false, '6ee17105aaae3sffd20bb56ee840e0cabcd');
 
   //Load our BuddyPress Stylesheet based on being active (on root or multiblog)
   if ( class_exists( 'BuddyPress') && bp_is_root_blog() || class_exists( 'BuddyPress') && defined('BP_ENABLE_MULTIBLOG')   ) {
-    wp_enqueue_style('wff_buddypress', $enq_path . 'buddypress.css', false, '731ef031f390528505ab02fds023b2c7a7');
+    wp_enqueue_style('wff_buddypress', $path . '/css/buddypress.css', false, '9d5bd7a6a2c6a8cfb750ac360d0edd40');
   }
 
   if (is_single() && comments_open() && get_option('thread_comments')) {
@@ -37,12 +29,15 @@ function wff_scripts() {
 
   // Add jQuery Fastclick for mobile devices
   if (wp_is_mobile() ) {
-     wp_register_script('cf-fastclick', get_template_directory_uri() . '/assets/vendor/fastclick/lib/fastclick.js', array(), null, false);
-     wp_enqueue_script('cf-fastclick');
+     wp_register_script('wff-fastclick', $path . '/vendor/fastclick/lib/fastclick.js', array(), null, false);
+     wp_enqueue_script('wff-fastclick');
   }
-  wp_register_script('modernizr', get_template_directory_uri() . '/assets/js/vendor/modernizr-2.7.0.min.js', array(), null, false);
 
- wp_register_script('wff_scripts', get_template_directory_uri() . '/assets/js/scripts.min.js', array(), '3ba2536360f89b710e1a524d21e875cb', true);
+  //Modernizr
+  wp_register_script('modernizr', $path . '/js/vendor/modernizr-2.7.0.min.js', array(), null, false);
+
+  //Custom Scripts
+  wp_register_script('wff_scripts', $path . '/js/scripts.min.js', array(), '673d39e853c8a843815c427814ece320', true);
 
   wp_enqueue_script('modernizr');
   wp_enqueue_script('jquery');

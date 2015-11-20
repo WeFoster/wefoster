@@ -1,0 +1,29 @@
+//
+// WeFoster Stylekit: Please check out stylekit/*name*/less/*name*.less for source.
+// You can use sourcemaps to find sources. See: https://developer.chrome.com/devtools/docs/css-preprocessors
+//
+@import "../../../../../themes/wefoster/assets/less/app.less";
+@link-color: @brand-primary;
+@link-hover-color: lighten(@link-color, 20%);
+@color-base: #3097d1;
+@brand-primary: #3097d1;
+@brand-secondary: #3b77a2;
+@brand-complimentary: #3b77a2;
+@widget-bg: #fff;
+@white: #fff;
+@body-bg: #f5f8fa;
+@main-border: 1px solid #d3e0e9;
+@inner-sidebar-border: 1px solid #d3e0e9;
+@medium-avatar-radius: 50%;
+@btn-success-bg: lighten(@link-color, 20%);
+
+//This is a bit of weird way to fix the path loading error.
+@font-face {
+  font-family: 'FontAwesome';
+  src: url("../../../../../themes/wefoster/assets/vendor/fontawesome/fonts/fontawesome-webfont.eot?v=@{fa-version}");
+  src: url("../../../../../themes/wefoster/assets/vendor/fontawesome/fonts/fontawesome-webfont.eot?#iefix&v=@{fa-version}") format('embedded-opentype'), url("../../../../../themes/wefoster/assets/vendor/fontawesome/fonts/fontawesome-webfont.woff?v=@{fa-version}") format('woff'), url("../../../../../themes/wefoster/assets/vendor/fontawesome/fonts/fontawesome-webfont.ttf?v=@{fa-version}") format('truetype'), url("../../../../../themes/wefoster/assets/vendor/fontawesome/fonts/fontawesome-webfont.svg?v=@{fa-version}#fontawesomeregular") format('svg');
+  
+  //  src: url('@{fa-font-path}/FontAwesome.otf') format('opentype'); // used when developing fonts
+  font-weight: normal;
+  font-style: normal;
+}

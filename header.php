@@ -33,6 +33,8 @@
   <?php do_action('open_body'); ?>
   <!--[if lt IE 8]><div class="alert alert-warning"><?php _e('You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.', 'wefoster'); ?></div><![endif]-->
 
+  <div class="layout-wrapper">
+
   <?php
   // Content inside the header (navigation and extra content based on header type)
   get_template_part('templates/header/content');

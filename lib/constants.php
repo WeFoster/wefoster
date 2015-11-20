@@ -14,7 +14,6 @@
 
 // Note: To keep things easy we are working from top to bottom according to the HTML structure.
 
-
 // Layout Class: Choose our main container class that is wrapped around our main elements.
 if ( !defined( 'WEFOSTER_LAYOUT_CLASS' ) ) {
 		// 'container' or 'container-fluid'
@@ -121,9 +120,9 @@ if ( !defined( 'WEFOSTER_HEADER_HIDE' ) ) {
 		define('WEFOSTER_HEADER_HIDE', 'navbar-no-headroom');
 }
 
-///
-/// Default Assets (images, css, js etc)
-///
+/////////////// 										 ///////////////
+///////////////     DEFAULT ASSETS	 ///////////////
+/////////////// 										 ///////////////
 
 // Path: You can easily overwrite the default images by telling WeFoster to look for them in a different place.
 // The most obvious example would be get_stylesheet_directory_uri or your plugin folder.
@@ -230,14 +229,14 @@ if ( !defined( 'WEFOSTER_BODY_BACKGROUND' ) ) {
 	//Local
 	//define('WEFOSTER_BODY_BACKGROUND', get_stylesheet_directory_uri . '/assets/img/bg.jpg' );
 	//External
-	//define('WEFOSTER_BODY_BACKGROUND', 'http://cdn.wefoster.co/backgrounds/appartment-grid.jpeg');
+	define('WEFOSTER_BODY_BACKGROUND', 'none');
 }
 
 if ( !defined( 'WEFOSTER_HEADER_BACKGROUND' ) ) {
 	//Local
 	//define('WEFOSTER_HEADER_BACKGROUND', get_stylesheet_directory_uri . '/assets/img/bg.jpg' );
 	//External
-	//define('WEFOSTER_HEADER_BACKGROUND', 'http://cdn.wefoster.co/backgrounds/autumn-desk.jpeg');
+	define('WEFOSTER_HEADER_BACKGROUND', 'none');
 }
 
 
@@ -290,6 +289,31 @@ if ( !defined( 'WEFOSTER_DEFAULT_GROUP_AVATAR' ) ) {
 	define ( 'WEFOSTER_DEFAULT_GROUP_AVATAR', WEFOSTER_ASSETS_URL . '/assets/img/avatar-group.jpg' );
 }
 
+
+/////////////// 											///////////////
+///////////////     COVER PHOTOS 			///////////////
+/////////////// 											///////////////
+
+// By default these will be based on your Post Thumbnails settings.
+if ( !defined( 'WEFOSTER_DEFAULT_BP_COVER_WIDTH' ) ) {
+	define( 'WEFOSTER_DEFAULT_BP_COVER_WIDTH', WEFOSTER_POST_THUMBNAIL_WIDTH );
+}
+
+if ( !defined( 'WEFOSTER_DEFAULT_BP_COVER_HEIGHT' ) ) {
+	define( 'WEFOSTER_DEFAULT_BP_COVER_HEIGHT', WEFOSTER_POST_THUMBNAIL_HEIGHT );
+}
+
+
+//Set our Default Cover Photo if none is set
+if ( !defined( 'WEFOSTER_DEFAULT_GROUP_COVER_PHOTO' ) ) {
+	define ( 'WEFOSTER_DEFAULT_GROUP_COVER_PHOTO', WEFOSTER_ASSETS_URL . '/assets/img/default-cover-photo.png' );
+}
+
+//Change this value if you'd like different default cover photos for Members & Groups.
+if ( !defined( 'WEFOSTER_DEFAULT_MEMBER_COVER_PHOTO' ) ) {
+	define ( 'WEFOSTER_DEFAULT_MEMBER_COVER_PHOTO', WEFOSTER_DEFAULT_GROUP_COVER_PHOTO );
+}
+
 /////////////// 											///////////////
 ///////////////     DEVELOPERS 				///////////////
 /////////////// 											///////////////
@@ -300,7 +324,7 @@ if ( !defined( 'WEFOSTER_DEFAULT_GROUP_AVATAR' ) ) {
 // More Documentation coming soon!
 
 if ( !defined( 'WEFOSTER_DEVELOPER' ) ) {
-	define('WEFOSTER_DEVELOPER', 'on' );
+	define('WEFOSTER_DEVELOPER', 'off' );
 }
 
 if ( !defined( 'WEFOSTER_AUTO_SETUP' ) ) {

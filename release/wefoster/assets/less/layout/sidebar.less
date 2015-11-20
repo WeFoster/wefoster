@@ -1,0 +1,47 @@
+/* ==========================================================================
+   Sidebar
+   ========================================================================== */
+.sidebar {
+  border-radius: @global-border-radius;
+  
+  .widget {
+    padding: @padding-full;
+    background: @widget-bg;
+    margin-bottom: @margin-half;
+    border-radius: @global-border-radius;
+    
+    h4 {
+      background: @widget-header-background;
+      font-weight: @font-header-weight;
+      border-bottom: 1.5px solid darken(@white, 5%);
+      margin: -@margin-full -@margin-full @margin-full;
+      padding: @padding-half @padding-full;
+      color: @widget-header-color;
+      
+      a {
+        color: @widget-header-color;
+      }
+    }
+    
+
+    &:last-child {
+      border-radius: 0 0 @global-border-radius @global-border-radius;
+    }
+    
+
+    &:first-child {
+      border-radius: @global-border-radius @global-border-radius 0 0;
+      h4 {
+        border-radius: @global-border-radius @global-border-radius 0 0;
+        margin-top: -@margin-full;
+      }
+    }
+    
+
+    img {
+      display: block;
+      height: auto;
+      max-width: 100%;
+    }
+  }
+}

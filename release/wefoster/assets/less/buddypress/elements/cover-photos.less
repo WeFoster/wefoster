@@ -1,0 +1,31 @@
+.bp-cover-photo {
+  background: @brand-primary;
+}
+
+//Action for Cover Photos
+.cover-photo-action {
+  display: inline-block;
+  margin: 0 auto;
+  position: absolute;
+  text-align: center;
+  width: 100%;
+  z-index: 100;
+  
+  &.my-profile {
+    right: 0;
+    text-align: right;
+    top: 5px;
+    transform: none;
+    
+    a {
+      font-size: 45%;
+    }
+  }
+
+  a {
+    background: fade(@brand-primary, 85%);
+    color: @white;
+    padding: @padding-half;
+    font-size: 60%;
+  }
+}

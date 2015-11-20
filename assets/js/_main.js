@@ -28,6 +28,7 @@
         $('#quick-menu-wrap').removeClass('js-flash');
         $('#dropdown-filter').removeClass('js-flash');
         $('#whats-new-js-wrap').removeClass('js-flash');
+        $('#whats-new-options').removeClass('js-flash');
 
         if ($("html").hasClass('touch')) {
           FastClick.attach(document.body);
@@ -69,7 +70,7 @@
           },
         });
 
-        jQuery(".wefoster-bootstrap-tooltips .wefoster-sidebar-left #vertical-activity-tabs li a,.wefoster-bootstrap-tooltips .dropdown a").tooltip({
+        jQuery(".wefoster-bootstrap-tooltips.wefoster-sidebar-left #vertical-activity-tabs li a,.wefoster-bootstrap-tooltips .dropdown a").tooltip({
           container: "body",
           placement: "right",
           delay: {
@@ -78,7 +79,7 @@
           },
         });
 
-        jQuery(".wefoster-bootstrap-tooltips .wefoster-sidebar-right #vertical-activity-tabs li a,.wefoster-bootstrap-tooltips .dropdown a").tooltip({
+        jQuery(".wefoster-bootstrap-tooltips.wefoster-sidebar-right #vertical-activity-tabs li a,.wefoster-bootstrap-tooltips .dropdown a").tooltip({
           container: "body",
           placement: "left",
           delay: {
@@ -142,11 +143,30 @@
 
         });
 
-        //Fluid Videos
-        fluidvids.init({
-          selector: ['iframe', 'object'], // runs querySelectorAll()
-          players: ['www.youtube.com', 'player.vimeo.com'] // players to support
+        //Responsive Embeds
+        function setup_videos() {
+          // For embed YouTube videos
+          $('iframe:not(.embed-responsive-item)[src*="youtube.com"]').wrap('<div class="embed-responsive embed-responsive-16by9"></div>');
+          $('iframe:not(.embed-responsive-item)[src*="youtube.com"]').addClass('embed-responsive-item');
+
+          // For embed Vimeo videos
+          $('iframe:not(.embed-responsive-item)[src*="vimeo.com"]').wrap('<div class="embed-responsive embed-responsive-16by9"></div>');
+          $('iframe:not(.embed-responsive-item)[src*="vimeo.com"]').addClass('embed-responsive-item');
+
+          // For SlideShare slides
+          $('iframe:not(.embed-responsive-item)[src*="slideshare.net"]').wrap('<div class="embed-responsive embed-responsive-16by9"></div>');
+          $('iframe:not(.embed-responsive-item)[src*="slideshare.net"]').addClass('embed-responsive-item');
+        }
+        setup_videos();
+
+        //Add them to BuddyPress Stream
+        $(document).ajaxSuccess(function(response) {
+
+          setup_videos();
+          setTimeout(setup_videos, 205);
+
         });
+
 
       }
     },

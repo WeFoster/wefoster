@@ -1,0 +1,159 @@
+//Body
+body {
+  background: @body-bg;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  line-height: @font-line-height;
+
+  &.admin-bar-showing .navbar-fixed-top {
+    top: 32px;
+  }
+
+
+  &.wefoster-navbar-fixed-top {
+    padding-top: (50 + @margin-full);
+  }
+}
+
+
+//Add default row margin when using a full width container
+.content-wrapper.container-fluid {
+  margin-left: @margin-half;
+  margin-right: @margin-half;
+}
+
+
+.container-fluid .navigation-wrap {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+
+.navbar {
+  margin: @navbar-margin;
+
+  &.navbar-fixed-top {
+    margin: @navbar-margin-fixed;
+  }
+}
+
+
+.container {
+
+  //width: @container-width;
+}
+
+
+.main {
+  padding: @padding-full;
+  background: @main-bg;
+  border: @main-border;
+  
+  //width: @content-width;
+}
+
+
+.page-template-template-full-width .main {
+  width: 100%;
+}
+
+
+.sidebar {
+  background: @sidebar-bg;
+  border: @sidebar-border;
+}
+
+
+.inner-sidebar {
+  background: @inner-sidebar-bg;
+  border: @inner-sidebar-border;
+}
+
+
+.container-fluid {
+
+  //padding-left: @padding-full;
+  //padding-right: @padding-full;
+}
+
+
+//Sidebar right on regular pages
+@media screen and (min-width: @grid-float-breakpoint-max) {
+
+  .main {
+    float: left;
+    min-height: 400px;
+  }
+
+
+  .sidebar {
+    padding-right: 0;
+  }
+
+
+  .inner-sidebar {
+    padding-left: 0;
+  }
+}
+
+
+// Sidebar left on Activity & Single Groups/Members and Sidebar left template
+.wefoster-sidebar-left {
+  .main {
+    float: right;
+  }
+
+
+  .sidebar {
+    padding-right: @padding-half;
+    padding-left: 0;
+  }
+}
+
+
+@media screen and (max-width: @grid-float-breakpoint-max) {
+  .main {
+    width: 100% !important;
+  }
+
+
+  .inner-sidebar {
+    padding-right: @padding-half;
+  }
+}
+
+
+//Remove the sidebar on Group & Site Creation
+.group-create {
+
+  .sidebar {
+    display: none;
+  }
+
+
+  .main {
+    float: left !important;
+    margin-left: @margin-half;
+  }
+
+
+  .intro-text {
+    display: none;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+}
+
+
+.create-blog {
+  .sidebar,
+  form#setupform.standard-form p label {
+    display: none;
+  }
+
+
+  .main {
+    float: left;
+    margin-left: @margin-half;
+  }
+}
