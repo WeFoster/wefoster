@@ -72,3 +72,39 @@ if ( ! function_exists ( 'wff_default_group_avatar' ) ) {
 	add_filter( 'bp_get_group_avatar', 'wff_default_group_avatar', 1);
 	add_filter( 'bp_get_new_group_avatar', 'wff_default_group_avatar', 1 );
 }
+
+// Add specific CSS class by filter
+add_filter( 'body_class', 'wff_bp_is_active_body_class' );
+function wff_bp_is_active_body_class( $classes ) {
+	// add 'class-name' to the $classes array
+	$classes[] = 'buddypress-active';
+	// return the $classes array
+	return $classes;
+}
+
+// Apply a filter only when a condition is met.
+// https://codex.wordpress.org/Conditional_Tags
+function wf_change_bp_register_page_width()
+{
+  // Our Conditional Tags
+  if ( bp_is_register_page() ) {
+    function wf_profile_main_filter() {
+    	//Change our class for .main
+    	$class = 'col-sm-12';
+    	//Return it
+    	return $class;
+    }
+    //Add the filter.
+    add_filter( 'wff_main_class', 'wf_profile_main_filter' );
+    function wf_profile_sidebar_filter() {
+    	//Change our class for the sidebar
+    	$class = 'hidden';
+    	//Return it
+    	return $class;
+    }
+    //Add the filter.
+    add_filter( 'wff_sidebar_class', 'wf_profile_sidebar_filter' );
+  }
+}
+// Hook our function at the right place.
+add_action('init', 'wf_change_bp_register_page_width');

@@ -110,10 +110,11 @@
     }
   }
 
-  // .groups .page-header h1 a,
-  // .bp-user .page-header h1 a {
-  //   padding-left: 140px;
-  // }
+  .groups .page-header h1 a,
+  .bp-user .page-header h1 a {
+    padding-left: 140px;
+  }
+
   .navbar-collapse #bp-user-navigation,
   .tooltip {
     display: none !important;
@@ -168,11 +169,33 @@
       background: @brand-primary;
       border-bottom: 3px solid darken(@brand-primary, 10%);
       padding: 0 @padding-full;
+      border-radius: 0 !important;
+    }
+
+    &.mobile {
+      border-radius: 0;
+      margin-top: -10px;
+      position: relative;
+      top: 0;
+      z-index: 100;
     }
 
     #bp-user-navigation {
       background: transparent;
       
+      &.navbar-nav li a {
+        color: @white;
+        
+        &:hover {
+          background: darken(@brand-primary, 2%);
+          color: @white;
+        }
+      }
+
+      label {
+        color: @gray;
+      }
+
       #bp-profile-menu {
         background: @brand-primary;
         
@@ -353,8 +376,7 @@
 }
 
 @media (max-width: 568px) {
-  .postthumb,
-  .bp-cover-photo .default {
+  .postthumb {
     height: 160px !important;
   }
 
@@ -427,21 +449,21 @@
     }
   }
 
-  // .bp-user .container .content .main .page-header h1,
-  // .groups .container .content .main .page-header h1 {
-  //   background: transparent !important;
-  //   border: 0;
-  //   border-bottom: 0;
-  //   margin: 0 -@margin-full @margin-full !important;
-  //   padding-left: 0;
-  //   position: relative;
-  //   padding-top: 5px;
-  //   padding-bottom: 5px;
-  //
-  //   a {
-  //     color: @text-color;
-  //     font-size: 80%;
-  //     padding-left: 105px;
-  //   }
-  // }
+  .bp-user .container .content .main .page-header h1,
+  .groups .container .content .main .page-header h1 {
+    background: transparent !important;
+    border: 0;
+    border-bottom: 0;
+    margin: 0 -@margin-full @margin-full !important;
+    padding-left: 0;
+    position: relative;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    
+    a {
+      color: @text-color;
+      font-size: 80%;
+      padding-left: 105px;
+    }
+  }
 }

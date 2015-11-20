@@ -25,7 +25,11 @@ if ( ! function_exists ( 'wff_theme_cover_photos' ) ) {
   function wff_theme_cover_photos()
   {
     if ( bp_is_user() || bp_is_group() ):
-      get_template_part( 'buddypress/parts/cover-photo' );
+
+      global $bp;
+      if ( bp_disable_cover_image_uploads() == FALSE ) {
+          get_template_part( 'buddypress/parts/cover-photo' );
+      }
     endif;
   }
   add_action( 'open_bp_page_content', 'wff_theme_cover_photos' );
@@ -103,5 +107,5 @@ if ( ! function_exists ( 'wff_theme_user_mobile_navigation' ) ) {
     </div>
     <?php
   }
-  add_action( 'open_sidebar', 'wff_theme_user_mobile_navigation', 1 );
+  add_action( 'open_mobile_sidebar', 'wff_theme_user_mobile_navigation', 1 );
 }
