@@ -97,12 +97,14 @@ body {
 //////// Full Width Layout
 ///////
 //Add default row margin when using a full width container
-.content-wrapper.container-fluid {
-  margin-left: @margin-full;
-  margin-right: @margin-full;
-}
+@media screen and (min-width: @grid-float-breakpoint-max) {
+  .content-wrapper.container-fluid {
+    margin-left: @margin-full;
+    margin-right: @margin-full;
+  }
 
-.container-fluid .navigation-wrap {
-  margin-left: @margin-full;
-  margin-right: @margin-full;
+  .container-fluid .navigation-wrap {
+    margin-left: @margin-full;
+    margin-right: @margin-full;
+  }
 }

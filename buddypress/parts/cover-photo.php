@@ -69,14 +69,14 @@ $src = wpthumb( $cover_image_url, 'width=' . $settings['width'] .'&height=' . $s
 ?>
 
 
-<div class="bp-cover-photo negative-row no-padding postthumb">
+<div style="height:<?php echo $settings['height'] ?>px;" class="bp-cover-photo negative-row no-padding postthumb">
 
   <?php echo $action;?>
 
   <?php do_action('open_bp_cover_photo'); ?>
 
     <div class="<?php do_action('cover_photo_class'); ?> bp-cover-image"
-        style="height:<?php echo $settings['height'] ?>px; background-image: url(<?php echo $src; ?> );"
+        style="background-image: url(<?php echo $src; ?> );"
       >
 
         <?php do_action('inside_bp_cover_photo'); ?>

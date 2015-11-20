@@ -170,6 +170,8 @@
       border-bottom: 3px solid darken(@brand-primary, 10%);
       padding: 0 @padding-full;
       border-radius: 0 !important;
+      margin-bottom: 0;
+      margin-top: -10px;
     }
 
     &.mobile {
@@ -237,10 +239,17 @@
       }
 
       .avatar {
+        background: #222 none repeat scroll 0 0;
+        border: 0 none;
+        border-radius: 2px;
         float: left;
-        width: 35px;
         height: auto;
-        margin-right: 5px;
+        margin-left: 0;
+        margin-right: 13px;
+        padding: 0;
+        position: relative;
+        top: 10px;
+        width: 32px;
       }
 
       #bp-adminbar-notifications-menu {
@@ -373,6 +382,10 @@
     top: 0;
     width: 55%;
   }
+}
+
+.bp-cover-image {
+  height: 100% !important;
 }
 
 @media (max-width: 568px) {
