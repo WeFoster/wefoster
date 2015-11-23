@@ -60,9 +60,7 @@ class Kirki_Styles_Customizer {
 				$suffix = '';
 			}
 
-			self::enqueue_customizer_control_script( 'ace', 'vendor/ace/src-min-noconflict/ace', array( 'jquery' ) );
-			self::enqueue_customizer_control_script( 'formstone', 'vendor/formstone-core', array( 'jquery' ) );
-			self::enqueue_customizer_control_script( 'formstone-number', 'vendor/formstone-number', array( 'jquery', 'formstone' ) );
+			self::enqueue_customizer_control_script( 'codemirror', 'vendor/codemirror/lib/codemirror', array( 'jquery' ) );
 			self::enqueue_customizer_control_script( 'selectize', 'vendor/selectize', array( 'jquery' ) );
 			wp_enqueue_script( 'jquery-ui-core' );
 			wp_enqueue_script( 'jquery-ui-sortable' );
@@ -74,9 +72,8 @@ class Kirki_Styles_Customizer {
 				'jquery-ui-core',
 				'jquery-ui-button',
 				'jquery-ui-sortable',
-				'ace',
-				'formstone',
-				'formstone-number',
+				'codemirror',
+				'jquery-ui-spinner',
 				'selectize'
 			);
 
@@ -108,7 +105,7 @@ class Kirki_Styles_Customizer {
 		$color  = $this->get_admin_colors();
 		$config = apply_filters( 'kirki/config', array() );
 		// Calculate the accent color
-		$this->color_accent = ( isset( $color['icon_colors'] ) && isset( $color['icon_colos']['focus'] ) ) ? $color['icon_colors']['focus'] : '#3498DB';
+		$this->color_accent = ( isset( $color['colors'] ) && isset( $color['colors'][3] ) ) ? $color['colors'][3] : '#3498DB';
 		if ( isset( $config['color_accent'] ) ) {
 			$this->color_accent = Kirki_Color::sanitize_hex( $config['color_accent'] );
 		}

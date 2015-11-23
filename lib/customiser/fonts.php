@@ -750,6 +750,7 @@ function wefoster_plus_google_fonts() {
 	  ),
 	);
 
+
 	$google_fonts = $wf_google_fonts;
 
 	return $google_fonts;
@@ -757,4 +758,4 @@ function wefoster_plus_google_fonts() {
 
 
 }
-add_filter( 'kirki/fonts/google_fonts', 'wefoster_plus_google_fonts' );
+//add_filter( 'kirki/fonts/google_fonts', 'wefoster_plus_google_fonts' );

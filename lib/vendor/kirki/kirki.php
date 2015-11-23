@@ -5,7 +5,7 @@
  * Description:   The ultimate WordPress Customizer Toolkit
  * Author:        Aristeides Stathopoulos
  * Author URI:    http://aristeides.com
- * Version:       1.0.2
+ * Version:       2.0-alpha.20151122
  * Text Domain:   kirki
  *
  *
@@ -45,20 +45,6 @@ if ( ! function_exists( 'Kirki' ) ) {
 		 * The path of the current Kirki instance
 		 */
 		Kirki::$path = dirname( __FILE__ );
-		/**
-		 * The URL of the current Kirki instance
-		 */
-		if ( false !== strpos( dirname( __FILE__ ), WP_PLUGIN_DIR ) ) {
-			/**
-			 * Kirki is activated as a plugin.
-			 */
-			Kirki::$url = plugin_dir_url( __FILE__ );
-		} else if ( false !== strpos( dirname( __FILE__ ), get_template_directory() ) ) {
-			/**
-			 * Kirki is embedded in a theme
-			 */
-			Kirki::$url = get_template_directory_uri() . str_replace( get_template_directory(), '', dirname( __FILE__ ) );
-		}
 
 		return $kirki;
 
@@ -71,13 +57,15 @@ if ( ! function_exists( 'Kirki' ) ) {
 /**
  * Apply the filters to the Kirki::$url
  */
-function kirki_filtered_url() {
-	$config = apply_filters( 'kirki/config', array() );
-	if ( isset( $config['url_path'] ) ) {
-		Kirki::$url = esc_url_raw( $config['url_path'] );
+if ( ! function_exists( 'kirki_filtered_url' ) ) {
+	function kirki_filtered_url() {
+		$config = apply_filters( 'kirki/config', array() );
+		if ( isset( $config['url_path'] ) ) {
+			Kirki::$url = esc_url_raw( $config['url_path'] );
+		}
 	}
+	add_action( 'after_setup_theme', 'kirki_filtered_url' );
 }
-add_action( 'after_setup_theme', 'kirki_filtered_url' );
 
 include_once( Kirki::$path . DIRECTORY_SEPARATOR . 'includes' . DIRECTORY_SEPARATOR . 'deprecated.php' );
 // Include the API class
