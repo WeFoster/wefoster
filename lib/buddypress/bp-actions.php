@@ -26,8 +26,7 @@ if ( ! function_exists ( 'wff_theme_cover_photos' ) ) {
   {
     if ( bp_is_user() || bp_is_group() ):
 
-      global $bp;
-      if ( bp_disable_cover_image_uploads() == FALSE ) {
+      if ( bp_disable_cover_image_uploads() == FALSE && ! bp_is_group_create()  )  {
           get_template_part( 'buddypress/parts/cover-photo' );
       }
     endif;
