@@ -224,19 +224,20 @@ if ( !defined( 'WEFOSTER_FONT_SIZE' ) ) {
 
 // Choose a default image for your backgrounds.
 // If the image is found it will be resized, saved cached locally. Note: Ideal width is between 1300/1600px;
+// Keep the value empty to use the default
 
 if ( !defined( 'WEFOSTER_BODY_BACKGROUND' ) ) {
 	//Local
 	//define('WEFOSTER_BODY_BACKGROUND', get_stylesheet_directory_uri . '/assets/img/bg.jpg' );
 	//External
-	define('WEFOSTER_BODY_BACKGROUND', 'none');
+	define('WEFOSTER_BODY_BACKGROUND', '');
 }
 
 if ( !defined( 'WEFOSTER_HEADER_BACKGROUND' ) ) {
 	//Local
 	//define('WEFOSTER_HEADER_BACKGROUND', get_stylesheet_directory_uri . '/assets/img/bg.jpg' );
 	//External
-	define('WEFOSTER_HEADER_BACKGROUND', 'none');
+	define('WEFOSTER_HEADER_BACKGROUND', '');
 }
 
 

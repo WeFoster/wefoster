@@ -52,6 +52,7 @@ function wf_plus_body_background_div() {
 	$bg_picture = get_theme_mod( 'wf_body_background_picture', 'none' );
 
 
+
 	// Enable the image effects for pictures and uploads, but not for textures
 	if ( $bg_image_type != 'none' ) {
 		$color = get_theme_mod('wf_body_background_image_color');
@@ -60,7 +61,7 @@ function wf_plus_body_background_div() {
 	}
 	?>
 	<div class="wefoster-plus-background-overlay <?php echo $bg_image_type ?> <?php echo $color ?>">
-		<?php if ( $bg_image_type != 'none' ) : ?>
+		<?php if ( $bg_image_type != 'none' || $bg_image_type != ''  ) : ?>
 			<?php echo $image_cropped; ?>
 		<?php endif; ?>
 	</div>
@@ -104,7 +105,7 @@ function wf_plus_body_background_effects() {
 	$bg_blur = get_theme_mod( 'wf_body_background_image_blur', 'inherit' );
 	$bg_opacity = get_theme_mod( 'wf_body_background_image_opacity', '1' );
 
-	if ( $bg_image_type != 'none' ) {
+	if ( $bg_image_type != 'none' || $bg_image_type != ''  ) {
 ?>
 
 	.wefoster-plus-background-overlay img {
