@@ -140,6 +140,8 @@ if ( WEFOSTER_LAYOUT_PRESET == 'minimal'  ) {
   }
   add_action( 'class_header','wff_navbar_headroom' );
 
+
+
   /**
    * Add a body class to add styling for a fixed navbar. See assets/less/layout/header.less
    *
@@ -150,6 +152,7 @@ if ( WEFOSTER_LAYOUT_PRESET == 'minimal'  ) {
       function wff_navbar_fixed_body_class( $classes ) {
       	// add a body class
       	$classes[] = apply_filters( 'wff_navbar_fixed_body_class', 'wefoster-'. WEFOSTER_HEADER_STICKY );
+
       	// return the $classes array
       	return $classes;
       }

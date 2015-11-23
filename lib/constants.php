@@ -81,7 +81,7 @@ if ( !defined( 'WEFOSTER_FOOTER_CLASS' ) ) {
 
 if ( !defined( 'WEFOSTER_LAYOUT_PRESET' ) ) {
 		// 'minimal' or 'full'
-		define('WEFOSTER_LAYOUT_PRESET', 'full');
+		define('WEFOSTER_LAYOUT_PRESET', 'minimal');
 }
 
 

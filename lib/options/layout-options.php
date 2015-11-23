@@ -417,7 +417,7 @@ function wefoster_plus_change_headroom_navbar() {
 	$option = get_theme_mod( 'wf_plus_header_headroom', 'default' );
 
 	if ( $option == 0 || $option == 'default' ) {
-	  $option = ' ' . WEFOSTER_HEADER_HIDE ;
+	  $navbar_headroom = ' ' . WEFOSTER_HEADER_HIDE ;
 	}
 
   if ( get_theme_mod( 'wf_plus_header_headroom') == 'navbar-headroom' ) {

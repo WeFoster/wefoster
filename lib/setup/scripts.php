@@ -37,7 +37,7 @@ function wff_scripts() {
   wp_register_script('modernizr', $path . '/js/vendor/modernizr-2.7.0.min.js', array(), null, false);
 
   //Custom Scripts
-  wp_register_script('wff_scripts', $path . '/js/scripts.min.js', array(), '673d39e853c8a843815c427814ece320', true);
+  wp_register_script('wff_scripts', $path . '/js/scripts.min.js', array(), 'ca21f3760d99a71fc6190713929ee27d', true);
 
   wp_enqueue_script('modernizr');
   wp_enqueue_script('jquery');

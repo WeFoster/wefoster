@@ -10,7 +10,7 @@ $stylekit = get_theme_mod( 'wf_stylekit', 'default' );
 
 Kirki::add_field( 'wefoster_plus', array(
     'type'      => 'radio',
-    'settings'  => ''. $stylekit . '' . '_color_scheme',
+    'settings'  => 'stylekit_color_scheme',
     'label'     => __( 'Color Scheme', 'translation_domain' ),
     'section'   => 'wf_plus_stylekit_section',
     'default'   => 'blue',
