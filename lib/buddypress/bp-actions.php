@@ -26,7 +26,7 @@ if ( ! function_exists ( 'wff_group_creation_button' ) ) {
       if ( bp_is_groups_component() && bp_is_directory() ): ?>
 
         <div class="btn btn-primary create-group-button hidden-xs">
-          <?php bp_group_create_button(); ?>
+          <i class="fa fa-user-plus"></i> <?php bp_group_create_button(); ?>
         </div>
 
       <?php endif;
@@ -34,18 +34,18 @@ if ( ! function_exists ( 'wff_group_creation_button' ) ) {
   add_action( 'close_bp_page_header', 'wff_group_creation_button' );
 }
 
-if ( ! function_exists ( 'wff_group_creation_button' ) ) {
-  function wff_group_creation_button()
+if ( ! function_exists ( 'wff_blog_creation_button' ) ) {
+  function wff_blog_creation_button()
   {
       if ( bp_is_blogs_component() && bp_is_directory() ): ?>
 
         <div class="btn btn-primary create-group-button hidden-xs">
-          <?php bp_blog_create_button(); ?>
+          <i class="fa fa-desktop"></i> <?php bp_blog_create_button(); ?>
         </div>
 
       <?php endif;
   }
-  add_action( 'close_bp_page_header', 'wff_group_creation_button' );
+  add_action( 'close_bp_page_header', 'wff_blog_creation_button' );
 }
 
 /**

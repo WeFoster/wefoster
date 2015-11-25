@@ -1078,6 +1078,28 @@ if ( class_exists( 'BuddyPress' ) ) {
 		  'priority'    => 1,
 	) );
 
+	Kirki::add_field( 'wefoster_plus', array(
+		'section'     => 'wf_plus_members_section',
+		'type'        => 'editor',
+		'settings'    => 'wf_plus_buddypress_member_intro',
+		'label'       => __( 'Intro Text', 'wefoster' ),
+		'description' => __( 'Change the text displayed in your footer. You can use hyperlinks as well.', 'wefoster' ),
+		'priority'    => 10,
+		'sanitize_callback' => 'do_not_filter_anything',
+		'default'     => __( 'This is your Member Introduction text. Use this space to tell your members something about the members displayed below! You can edit this text via the WordPress customizer.', 'kirki' ),
+	) );
+
+	Kirki::add_field( 'wefoster_plus', array(
+		'section'     => 'wf_plus_groups_section',
+		'type'        => 'editor',
+		'settings'    => 'wf_plus_buddypress_groups_intro',
+		'label'       => __( 'Intro Text', 'wefoster' ),
+		'description' => __( 'Change the text displayed on your Groups Directory page. You can use hyperlinks as well.', 'wefoster' ),
+		'priority'    => 10,
+		'sanitize_callback' => 'do_not_filter_anything',
+		'default'     => __( 'This is your Group Introduction text. Use this space to tell your members something about the groups displayed below! You can edit this text via the WordPress customizer.', 'kirki' ),
+	) );
+
 
 
 		Kirki::add_field( 'wefoster_plus', array(

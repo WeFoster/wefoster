@@ -170,3 +170,56 @@ if ( ! empty ( $wf_plus_groups_title )  ) {
   }
   add_filter( 'bp_get_directory_title', 'wf_plus_change_groups_title' );
 }
+
+function wff_add_members_intro() {
+?>
+
+    <div id="item-meta" class="directory-intro margin-bottom-full margin-top-full">
+
+      <?php // Data validation: Allow anchor and strong tags
+        echo wp_kses( get_theme_mod( 'wf_plus_buddypress_members_intro' ),
+          array(
+              'strong' => array(),
+              'a' => array(
+              'href' => true,
+              'rel' => true,
+              'rev' => true,
+              'name' => true,
+              'target' => true,
+              'img' => true,
+            )
+          )
+          );
+      ?>
+    </div>
+
+  <?php
+  }
+add_action( 'bp_before_directory_members_tabs', 'wff_add_members_intro' );
+
+function wff_add_groups_intro() {
+?>
+  <?php if ( !bp_is_user() && bp_is_current_component( 'groups' ) && ! bp_is_group() && ! bp_is_group_create() ) { ?>
+    <div id="item-meta" class="directory-intro margin-bottom-full margin-top-full">
+
+      <?php // Data validation: Allow anchor and strong tags
+        echo wp_kses( get_theme_mod( 'wf_plus_buddypress_groups_intro' ),
+          array(
+              'br' => array(),
+              'em' => array(),
+              'strong' => array(),
+              'a' => array(
+                  'href' => true,
+                  'rel' => true,
+                  'rev' => true,
+                  'name' => true,
+                  'target' => true
+              ),
+            )
+          );
+      ?>
+    </div>
+  <?php } ?>
+  <?php
+  }
+add_action( 'template_notices', 'wff_add_groups_intro' );
