@@ -469,6 +469,9 @@ input[type="button"].btn-block {
 .buddypress-component-title h1 {
   display: inline;
 }
+#item-meta.directory-intro {
+  padding-bottom: 0;
+}
 .create-group-button {
   display: inline;
   font-size: 75%;
@@ -12286,7 +12289,6 @@ body.wefoster-navbar-fixed-top {
     background: transparent !important;
     border: 0;
     border-bottom: 0;
-    margin: 0 -30px 30px !important;
     padding-left: 0;
     position: relative;
     padding-top: 5px;
