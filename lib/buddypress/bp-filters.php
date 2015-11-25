@@ -4,6 +4,9 @@
 *
 */
 
+//Remove the default Group Creation button. It's ugly.
+add_filter( 'bp_get_group_create_nav_item', '__return_false' );
+
 /**
 * Set the default cover image sizes. This is to be able to resize them to any size later using WP Thumb
 *

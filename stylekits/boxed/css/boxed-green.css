@@ -466,6 +466,20 @@ input[type="button"].btn-block {
 .alert-danger .alert-link {
   color: #843534;
 }
+.buddypress-component-title h1 {
+  display: inline;
+}
+.create-group-button {
+  display: inline;
+  font-size: 75%;
+  font-weight: bold;
+  margin-left: 4px;
+  position: relative;
+  top: -5px;
+}
+.create-group-button a {
+  color: #ffffff;
+}
 .item-list li div.item-title,
 ul.item-list li h4 {
   font-weight: normal;
@@ -490,6 +504,7 @@ ul.item-list {
   clear: both;
   margin: 0;
   padding: 0;
+  position: relative;
 }
 ul.item-list li {
   background: #ffffff;
@@ -635,11 +650,13 @@ div.pagination {
   position: relative;
   display: block;
   float: left;
-  width: 100%;
+  top: -45px;
   padding: 10px 0;
+  width: 100%;
 }
 div.pagination .pag-count {
   font-size: 90%;
+  float: left;
 }
 div.pagination .pagination-links {
   float: right;
@@ -673,6 +690,25 @@ div.pagination .pagination-links a {
 .groups-members-search #groups_search_submit {
   position: relative;
   top: -6px;
+}
+.directory.groups .main div.item-list-tabs ul li.last,
+.directory.members .main div.item-list-tabs ul li.last,
+.directory.blogs .main div.item-list-tabs ul li.last {
+  position: absolute;
+  right: 15px;
+  top: -48.5px;
+  font-size: 14px;
+}
+.directory.groups .main .item-list,
+.directory.members .main .item-list,
+.directory.blogs .main .item-list {
+  position: relative;
+  top: -45px;
+}
+.directory.groups .main .item-list li:first-child,
+.directory.members .main .item-list li:first-child,
+.directory.blogs .main .item-list li:first-child {
+  border-top: none;
 }
 @media screen and (max-width: 769px) {
   .buddypress-active .inner-sidebar.mobile {
