@@ -12222,7 +12222,7 @@ body.wefoster-navbar-fixed-top {
     width: 55%;
   }
 }
-.bp-cover-image {
+.bp-cover-image-wrap {
   height: 100% !important;
 }
 @media (max-width: 568px) {
