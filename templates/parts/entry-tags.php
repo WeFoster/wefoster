@@ -1,4 +1,4 @@
-<div class="post-entry-bottom <?php do_action('post_meta_class'); ?>">
+<div class="post-entry-bottom <?php do_action('entry_meta_class'); ?>">
   <?php if ( has_tag() ): ?>
     <i class="fa fa-tags"></i>
     <?php

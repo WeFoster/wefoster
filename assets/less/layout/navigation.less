@@ -2,6 +2,7 @@
   padding: @navbar-padding;
   border: 0;
   border-bottom: @navbar-border-bottom;
+  font-family: @navigation-font-family;
   
   .navbar-brand {
     
@@ -17,7 +18,6 @@
       top: @logo-position;
     }
   }
-  
 
   //Remove smart menu markup
   .dropdown-toggle .sub-arrow {
@@ -25,9 +25,7 @@
   }
 }
 
-
 .navbar-inverse {
-  
   .inverse-dropdown {
     background-color: @navbar-inverse-bg;
     border-color: darken(@navbar-inverse-bg, 8%);
@@ -35,7 +33,6 @@
     label {
       color: darken(@white, 10%);
     }
-    
 
     input {
       background: lighten(@navbar-inverse-bg, 10%);
@@ -45,25 +42,21 @@
       &::-webkit-input-placeholder {
         color: lighten(@navbar-inverse-bg, 20%);
       }
-      
 
       &:-moz-placeholder {
         /* Firefox 18- */
         color: lighten(@navbar-inverse-bg, 20%);
       }
-      
 
       &::-moz-placeholder {
         /* Firefox 19+ */
         color: lighten(@brand-complimentary, 20%);
       }
-      
 
       &:-ms-input-placeholder {
         color: lighten(@navbar-inverse-bg, 20%);
       }
     }
-    
 
     li a {
       color: @navbar-inverse-link-color;

@@ -7,15 +7,14 @@
   max-width: inherit;
   padding: @post-meta-padding;
   position: relative;
-
+  
   span {
     margin-right: ( @margin-half / 2);
-
+    
     &.comments {
       margin-right: -@margin-half;
     }
   }
-
 
   a,
   i {
@@ -23,12 +22,11 @@
   }
 }
 
-
 //Post Entry Bottom
 .post-entry-bottom {
   color: @gray-light;
   font-size: 90%;
-
+  
   .tags-links a {
     color: @gray-light;
     font-weight: bold;
@@ -46,7 +44,6 @@
   background-position: center;
 }
 
-
 //Author Bio on Archives
 .archive.author .author-bio {
   margin-top: -@margin-full;
@@ -55,19 +52,17 @@
 
 //Single Pages
 .author-bio {
-  .margin-full-horizontal();
-  background: @author-bio-background;
-  color: @author-bio-color;
-  border-top: @author-bio-border-top;
-  border-bottom: @author-bio-border-bottom;
-  font-size: @author-bio-font-size;
+  .box-horizontal-padding-full();
   margin-top: @margin-full;
-
+  
   #author-description {
     padding-top: @padding-full;
     padding-bottom: @padding-full;
-    color: lighten(@text-color, 20%);
     font-size: 90%;
+    
+    .author-text {
+      opacity: 0.8;
+    }
 
     h3 {
       margin: 0;
@@ -88,9 +83,6 @@
     position: relative;
     top: 6px;
   }
-
-
-
 
   .all-author-posts {
     .small-font-uppercase();

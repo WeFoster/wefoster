@@ -17,8 +17,10 @@
         print get_avatar( get_the_author_meta( 'user_email' ), '100' );
       ?>
     </div>
+      <div class="author-text">
+              <?php the_author_meta('description');?>
+      </div>
 
-      <?php the_author_meta('description');?>
     </div>
 
     <?php
