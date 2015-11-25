@@ -730,6 +730,23 @@ div.pagination .pagination-links a {
   .buddypress-active.logged-in .sidebar-offcanvas {
     top: 75px;
   }
+  .directory.members .main div.item-list-tabs ul li.last,
+  .directory.blogs .main div.item-list-tabs ul li.last {
+    position: inherit;
+    right: 15px;
+    top: -48.5px;
+    font-size: 14px;
+    padding: 8px;
+  }
+  div.pagination {
+    position: inherit;
+  }
+  .directory.groups .main .item-list,
+  .directory.members .main .item-list,
+  .directory.blogs .main .item-list {
+    position: inh;
+    top: 30px;
+  }
 }
 /*--------------------------------------------------------------
 4.1 - Smartphones - landscape
@@ -3319,7 +3336,7 @@ div.vertical-list-tabs ul li.loading a:before {
 .bp-cover-photo {
   background: #2c3e50;
 }
-.bp-cover-image {
+.bp-cover-image-wrap {
   background-repeat: no-repeat;
   -webkit-background-size: cover;
   -moz-background-size: cover;
