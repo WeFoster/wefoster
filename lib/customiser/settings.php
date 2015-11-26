@@ -1039,6 +1039,7 @@ if ( class_exists( 'BuddyPress' ) ) {
 		'description' => __( 'Apply an image effect to your featured images. Note: Some of these effects will not work on Internet Explorer. In these cases the image will be shown without the effect.', 'wefoster' ),
 		'section'     => 'wf_plus_bp_general_section',
 		'default'     => 'default',
+			'transport'    => 'postMessage',
 		'priority'    => 10,
 	  'choices'  => wefoster_plus_image_effects(),
 	) );
@@ -1316,6 +1317,7 @@ Kirki::add_field( 'wefoster_plus', array(
 	'description' => __( 'Apply an image effect to your featured images. Note: Some of these effects will not work on Internet Explorer. In these cases the image will be shown without the effect.', 'wefoster' ),
 	'section'     => 'wf_plus_featured_images_section',
 	'default'     => 'default',
+	'transport'    => 'postMessage',
 	'priority'    => 10,
   'choices'  => wefoster_plus_image_effects(),
 ) );
