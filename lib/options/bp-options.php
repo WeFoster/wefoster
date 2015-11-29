@@ -64,7 +64,7 @@ function wf_plus_change_members_loop( $retval ) {
 
     //do not exclude in admin
     if( is_admin() && ! defined( 'DOING_AJAX' ) ) {
-        return $args;
+        return $retval;
     }
 
     $retval['per_page'] = get_theme_mod( 'wf_plus_member_loop_amount', '20' );
@@ -83,7 +83,7 @@ function wf_plus_change_groups_loop( $retval ) {
 
         //do not exclude in admin
         if( is_admin() && ! defined( 'DOING_AJAX' ) ) {
-            return $args;
+            return $retval;
         }
 
         $retval['per_page'] = get_theme_mod( 'wf_plus_group_loop_amount', '20' );
@@ -102,7 +102,7 @@ function wf_plus_change_activity_loop( $retval ) {
 
         //do not exclude in admin
         if( is_admin() && ! defined( 'DOING_AJAX' ) ) {
-            return $args;
+              return $retval;
         }
 
         $retval['per_page'] = get_theme_mod( 'wf_plus_activity_loop_amount','20' );
@@ -172,26 +172,30 @@ if ( ! empty ( $wf_plus_groups_title )  ) {
 }
 
 function wff_add_members_intro() {
+  $member_intro = get_theme_mod( 'wf_plus_buddypress_groups_intro', 'default' );
 ?>
-
     <div id="item-meta" class="directory-intro margin-bottom-full margin-top-full">
 
-      <?php // Data validation: Allow anchor and strong tags
-      echo wp_kses( get_theme_mod( 'wf_plus_buddypress_member_intro' ),
-        array(
-            'br' => array(),
-            'em' => array(),
-            'strong' => array(),
-            'a' => array(
-                'href' => true,
-                'rel' => true,
-                'rev' => true,
-                'name' => true,
-                'target' => true
-            ),
-          )
-        );
+      <?php if ($member_intro == 'default'): ?>
+          <?php _e('This is your Member Introduction text. Use this space to tell your members something about the members displayed below! You can edit this text via the WordPress customizer.', 'wefoster'); ?>
+      <?php else:
+        // Data validation: Allow anchor and strong tags
+          echo wp_kses( $member_intro,
+            array(
+                'br' => array(),
+                'em' => array(),
+                'strong' => array(),
+                'a' => array(
+                    'href' => true,
+                    'rel' => true,
+                    'rev' => true,
+                    'name' => true,
+                    'target' => true
+                ),
+              )
+            );
       ?>
+      <?php endif; ?>
     </div>
 
   <?php
@@ -199,12 +203,19 @@ function wff_add_members_intro() {
 add_action( 'bp_before_directory_members_tabs', 'wff_add_members_intro' );
 
 function wff_add_groups_intro() {
+    if ( !bp_is_user() && bp_is_current_component( 'groups' ) && ! bp_is_group() && ! bp_is_group_create() ) {
+
+    $group_intro = get_theme_mod( 'wf_plus_buddypress_groups_intro', 'default' );
+
 ?>
-  <?php if ( !bp_is_user() && bp_is_current_component( 'groups' ) && ! bp_is_group() && ! bp_is_group_create() ) { ?>
     <div id="item-meta" class="directory-intro margin-bottom-full margin-top-full">
 
-      <?php // Data validation: Allow anchor and strong tags
-        echo wp_kses( get_theme_mod( 'wf_plus_buddypress_groups_intro' ),
+      <?php  if ($group_intro == 'default'): ?>
+
+        <?php _e('    This is your Group Introduction text. Use this space to tell your members something about the groups displayed below! You can edit this text via the WordPress customizer.', 'wefoster'); ?>
+
+      <?php else:
+        echo wp_kses( $group_intro,
           array(
               'br' => array(),
               'em' => array(),
@@ -219,6 +230,9 @@ function wff_add_groups_intro() {
             )
           );
       ?>
+
+      <?php endif; ?>
+
     </div>
   <?php } ?>
   <?php

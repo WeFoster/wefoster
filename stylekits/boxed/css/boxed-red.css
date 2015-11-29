@@ -744,7 +744,7 @@ div.pagination .pagination-links a {
   .directory.groups .main .item-list,
   .directory.members .main .item-list,
   .directory.blogs .main .item-list {
-    position: inh;
+    position: inherit;
     top: 30px;
   }
 }
@@ -2781,7 +2781,8 @@ li#activity-filter-select label:before,
 .second-active a:after,
 .acomment-reply:before,
 .bp-secondary-action:before,
-.navbar li a:before {
+.navbar li a:before,
+.sticky .entry-title:after {
   color: inherit;
   font-family: "FontAwesome";
   font-size: inherit;
@@ -12346,6 +12347,21 @@ body.wefoster-navbar-fixed-top {
 }
 .post-loop .hentry h2.entry-title {
   font-size: 28px;
+}
+.post-loop .sticky .entry-title {
+  background: #be3a30;
+  color: #ffffff;
+}
+.post-loop .sticky .entry-title:after {
+  content: "\f08d";
+  /* opacity: .6; */
+  float: right;
+  background: #aa342b;
+  color: #ffffff;
+  padding: 9px 13px;
+  border-radius: 50%;
+  font-size: 75%;
+  top: -3px;
 }
 .post-loop .read-more {
   color: #be3a30;
