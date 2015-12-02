@@ -1,4 +1,5 @@
-//Hide The Group Header.
+// Apologies for the state of this CSS. But I'd like to see you try style BBPress. 
+///
 .groups.forum {
   #item-header,
   .buddypress-component-title,
@@ -30,6 +31,15 @@
   + .bbp-pagination {
     
     //display: none;
+  }
+
+  .bbp-pagination,
+  .bbp-pagination-count {
+    background: darken(@white, 2%);
+    padding: 5px 8px;
+    font-size: 90%;
+    color: @gray-light;
+    font-weight: 600;
   }
 }
 
@@ -131,11 +141,6 @@
     padding-top: @padding-half;
   }
 
-  .bbp-pagination-count {
-    font-size: 85%;
-    color: @gray;
-  }
-
   .bbp-topic-freshness {
     font-size: 90%;
   }
@@ -161,6 +166,8 @@
     margin-bottom: @padding-half;
     margin-top: 8px;
     text-transform: uppercase;
+    z-index: 1;
+    position: relative;
     
     .bbp-reply-post-date {
       float: right;
@@ -274,6 +281,7 @@
     width: 12%;
     background: darken(@white, 5%);
     border-radius: 2px;
+    padding: @padding-half;
     
     //border: 1px solid darken(@white, 7%);
     a {
@@ -388,5 +396,18 @@
       padding-bottom: @padding-full !important;
       position: relative;
     }
+  }
+}
+
+//Responsive Tweaks.
+@media screen and (max-width: @grid-float-breakpoint-max) {
+  .wefoster-framework #bbpress-forums ul.bbp-lead-topic,
+  .wefoster-framework #bbpress-forums ul.bbp-topics,
+  .wefoster-framework #bbpress-forums ul.bbp-forums,
+  .wefoster-framework #bbpress-forums ul.bbp-replies,
+  .wefoster-framework #bbpress-forums ul.bbp-search-results,
+  .wefoster-framework #bbpress-forums .bbp-user-section {
+    padding-left: @padding-half;
+    padding-right: @padding-half;
   }
 }

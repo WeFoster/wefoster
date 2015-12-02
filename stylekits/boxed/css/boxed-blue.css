@@ -853,6 +853,11 @@ But greatly improves the layout */
   .bp-title-button {
     display: none;
   }
+  .bp-user .postthumb {
+    position: relative;
+    top: -30px;
+    margin-bottom: 0 !important;
+  }
   .buddypress div.item-list-tabs ul li.last {
     position: inherit;
     right: 15px;
@@ -868,7 +873,7 @@ But greatly improves the layout */
   }
 }
 #buddypress .mobile-profile-header {
-  margin: -30px -30px 30px;
+  margin: 0 -30px;
   overflow: hidden;
 }
 #buddypress .mobile-profile-header img.avatar {
@@ -4079,6 +4084,16 @@ body.register div.page ul {
 .bbpress #bbpress-forums h3 {
   font-size: 2em;
 }
+.forum .bbp-pagination,
+.bbpress .bbp-pagination,
+.forum .bbp-pagination-count,
+.bbpress .bbp-pagination-count {
+  background: #fafafa;
+  padding: 5px 8px;
+  font-size: 90%;
+  color: #8d8d8d;
+  font-weight: 600;
+}
 .forum #item-body {
   margin-left: -30px;
   margin-right: -30px;
@@ -4163,10 +4178,6 @@ body.register div.page ul {
 .wefoster-framework #bbpress-forums li.bbp-body div.hentry {
   padding-top: 15px;
 }
-.wefoster-framework #bbpress-forums .bbp-pagination-count {
-  font-size: 85%;
-  color: #767676;
-}
 .wefoster-framework #bbpress-forums .bbp-topic-freshness {
   font-size: 90%;
 }
@@ -4188,6 +4199,8 @@ body.register div.page ul {
   margin-bottom: 15px;
   margin-top: 8px;
   text-transform: uppercase;
+  z-index: 1;
+  position: relative;
 }
 .wefoster-framework #bbpress-forums div.bbp-reply-header .bbp-reply-post-date {
   float: right;
@@ -4278,6 +4291,7 @@ body.register div.page ul {
   width: 12%;
   background: #f2f2f2;
   border-radius: 2px;
+  padding: 15px;
 }
 .wefoster-framework #bbpress-forums .bbp-reply-author a {
   font-size: 90%;
@@ -4393,6 +4407,17 @@ body.register div.page ul {
   margin-bottom: 0;
   padding-bottom: 30px !important;
   position: relative;
+}
+@media screen and (max-width: 769px) {
+  .wefoster-framework #bbpress-forums ul.bbp-lead-topic,
+  .wefoster-framework #bbpress-forums ul.bbp-topics,
+  .wefoster-framework #bbpress-forums ul.bbp-forums,
+  .wefoster-framework #bbpress-forums ul.bbp-replies,
+  .wefoster-framework #bbpress-forums ul.bbp-search-results,
+  .wefoster-framework #bbpress-forums .bbp-user-section {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
 }
 .vertical-center {
   position: absolute;
