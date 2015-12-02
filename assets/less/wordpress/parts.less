@@ -7,15 +7,14 @@
   max-width: inherit;
   padding: @post-meta-padding;
   position: relative;
-
+  
   span {
     margin-right: ( @margin-half / 2);
-
+    
     &.comments {
       margin-right: -@margin-half;
     }
   }
-
 
   a,
   i {
@@ -23,12 +22,11 @@
   }
 }
 
-
 //Post Entry Bottom
 .post-entry-bottom {
   color: @gray-light;
   font-size: 90%;
-
+  
   .tags-links a {
     color: @gray-light;
     font-weight: bold;
@@ -46,7 +44,6 @@
   background-position: center;
 }
 
-
 //Author Bio on Archives
 .archive.author .author-bio {
   margin-top: -@margin-full;
@@ -62,13 +59,13 @@
   border-bottom: @author-bio-border-bottom;
   font-size: @author-bio-font-size;
   margin-top: @margin-full;
-
+  
   #author-description {
     padding-top: @padding-full;
     padding-bottom: @padding-full;
     color: lighten(@text-color, 20%);
     font-size: 90%;
-
+    
     h3 {
       margin: 0;
       padding: 0;
@@ -84,13 +81,10 @@
     height: @medium-avatar-size;
     width: @medium-avatar-size;
     float: left;
-    margin-right: 15px;
+    margin-right: @margin-half;
     position: relative;
     top: 6px;
   }
-
-
-
 
   .all-author-posts {
     .small-font-uppercase();

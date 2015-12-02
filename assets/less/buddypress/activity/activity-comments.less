@@ -95,7 +95,7 @@ div.activity-comments {
     div.ac-reply-content {
       color: @gray-light;
       margin-left: 50px;
-      padding-left: 15px;
+      padding-left: @padding-half;
       a {
         text-decoration: none;
       }
@@ -115,7 +115,7 @@ div.activity-comments {
 
   li {
     form.ac-form {
-      margin-right: 15px;
+      margin-right: @padding-half;
       clear: both;
     }
   }
@@ -127,8 +127,8 @@ div.activity-comments {
     border-radius: 4px 4px 4px 4px;
     
     //display: none;
-    margin-top: 30px;
-    padding: 30px 30px 15px 15px;
+    margin-top: @margin-full;
+    padding: @margin-full @margin-full @padding-half @padding-half;
   }
   
 
@@ -141,7 +141,7 @@ div.activity-comments {
 
 .acomment-options {
   font-size: 90%;
-  margin: 15px 0 0 30px;
+  margin: @padding-half 0 0 @margin-full;
   
   a:hover {
     color: inherit;

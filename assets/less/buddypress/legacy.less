@@ -72,7 +72,7 @@ div.pagination .pagination-links a:hover {
 
 
 noscript div.pagination {
-  margin-bottom: 15px;
+  margin-bottom: @padding-half;
 }
 
 
@@ -142,7 +142,7 @@ form#whats-new-form #whats-new-content {
 
 form#whats-new-form p.activity-greeting {
   line-height: 0.5em;
-  margin-bottom: 15px;
+  margin-bottom: @padding-half;
   margin-left: 75px;
 }
 
@@ -197,7 +197,7 @@ body.no-js #whats-new-options {
 --------------------------------------------------------------*/
 ul.activity-list li {
   overflow: hidden;
-  padding: 15px 0 0;
+  padding: @padding-half 0 0;
   list-style: none;
 }
 
@@ -208,7 +208,7 @@ ul.activity-list li {
 
 
 ul.item-list.activity-list li.has-comments {
-  padding-bottom: 15px;
+  padding-bottom: @padding-half;
 }
 
 
@@ -226,7 +226,7 @@ body.activity-permalink ul.activity-list li.has-comments {
 .activity-list li.mini .activity-avatar img.avatar,
 .activity-list li.mini .activity-avatar img.FB_profile_pic {
   height: 20px;
-  margin-left: 30px;
+  margin-left: @margin-full;
   width: 20px;
 }
 
@@ -396,8 +396,8 @@ body.activity-permalink .activity-content blockquote {
 .activity-list li.load-more {
   background: #f0f0f0;
   font-size: 110%;
-  margin: 15px 0;
-  padding: 10px 15px;
+  margin: @padding-half 0;
+  padding: 10px @padding-half;
   text-align: center;
 }
 
@@ -526,7 +526,7 @@ div.activity-comments ul li:last-child {
 
 
 div.activity-comments ul li > ul {
-  margin-left: 30px;
+  margin-left: @margin-full;
   margin-top: 0;
   padding-left: 10px;
 }
@@ -538,7 +538,7 @@ body.activity-permalink div.activity-comments ul li > ul {
 
 
 body.activity-permalink div.activity-comments > ul {
-  padding: 0 10px 0 15px;
+  padding: 0 10px 0 @padding-half;
 }
 
 
@@ -582,7 +582,7 @@ div.activity-comments form.ac-form {
 
 
 div.activity-comments li form.ac-form {
-  margin-right: 15px;
+  margin-right: @padding-half;
   clear: both;
 }
 
@@ -593,7 +593,7 @@ div.activity-comments form.root {
 
 
 div.activity-comments div#message {
-  margin-top: 15px;
+  margin-top: @padding-half;
   margin-bottom: 0;
 }
 
@@ -639,7 +639,7 @@ div.ac-reply-avatar img {
 div.activity-comments form div.ac-reply-content {
   color: #888;
   margin-left: 50px;
-  padding-left: 15px;
+  padding-left: @padding-half;
 }
 
 
@@ -688,7 +688,7 @@ div.dir-search input[type=text] {
 3.4 - Errors / Success Messages
 --------------------------------------------------------------*/
 div#message {
-  margin: 0 0 15px;
+  margin: 0 0 @padding-half;
 }
 
 
@@ -706,7 +706,7 @@ div#message p,
 #sitewide-notice p {
   font-size: 90%;
   display: block;
-  padding: 10px 15px;
+  padding: 10px @padding-half;
 }
 
 
@@ -820,7 +820,7 @@ ul.button-nav li.current a {
 .standard-form span.label {
   display: block;
   font-weight: bold;
-  margin: 15px 0 5px;
+  margin: @padding-half 0 5px;
 }
 
 
@@ -871,7 +871,7 @@ ul.button-nav li.current a {
 
 
 div#signup-avatar img {
-  margin: 0 15px 10px 0;
+  margin: 0 @padding-half 10px 0;
 }
 
 
@@ -900,23 +900,23 @@ div#signup-avatar img {
 
 .standard-form div.submit {
   clear: both;
-  padding: 15px 0 0;
+  padding: @padding-half 0 0;
 }
 
 
 .standard-form p.submit {
   margin-bottom: 0;
-  padding: 15px 0 0;
+  padding: @padding-half 0 0;
 }
 
 
 .standard-form div.submit input {
-  margin-right: 15px;
+  margin-right: @padding-half;
 }
 
 
 .standard-form div.radio ul {
-  margin: 10px 0 15px 38px;
+  margin: 10px 0 @padding-half 38px;
   list-style: disc;
 }
 
@@ -1145,7 +1145,7 @@ ul#topic-post-list {
 
 
 ul#topic-post-list li {
-  padding: 15px;
+  padding: @padding-half;
   position: relative;
 }
 
@@ -1175,14 +1175,14 @@ div.admin-links {
   color: #888;
   font-size: 80%;
   position: absolute;
-  top: 15px;
+  top: @padding-half;
   right: 25px;
 }
 
 
 div#topic-meta {
   margin: 0;
-  padding: 5px 19px 30px;
+  padding: 5px 19px @margin-full;
   position: relative;
 }
 
@@ -1367,13 +1367,13 @@ table.forum td p.topic-text {
 
 table.forum tr > td:first-child,
 table.forum tr > th:first-child {
-  padding-left: 15px;
+  padding-left: @padding-half;
 }
 
 
 table.forum tr > td:last-child,
 table.forum tr > th:last-child {
-  padding-right: 15px;
+  padding-right: @padding-half;
 }
 
 
@@ -1484,7 +1484,7 @@ div#item-header div#item-header-content {
 
 div#item-header h2 {
   line-height: 120%;
-  margin: 0 0 15px;
+  margin: 0 0 @padding-half;
 }
 
 
@@ -1496,7 +1496,7 @@ div#item-header h2 a {
 
 div#item-header img.avatar {
   float: left;
-  margin: 0 15px 19px 0;
+  margin: 0 @padding-half 19px 0;
 }
 
 
@@ -1533,14 +1533,14 @@ div#item-header div#item-meta {
   font-size: 80%;
   color: #aaa;
   overflow: hidden;
-  margin: 15px 0 5px;
+  margin: @padding-half 0 5px;
   padding-bottom: 10px;
 }
 
 
 div#item-header div#item-actions {
   float: right;
-  margin: 0 0 15px 15px;
+  margin: 0 0 @padding-half @padding-half;
   text-align: right;
   width: 20%;
 }
@@ -1552,7 +1552,7 @@ div#item-header div#item-actions h3 {
 
 
 div#item-header ul {
-  margin-bottom: 15px;
+  margin-bottom: @padding-half;
   overflow: hidden;
 }
 
@@ -1572,9 +1572,9 @@ div#item-header ul li {
 
 div#item-header ul img.avatar,
 div#item-header ul.avatars img.avatar {
-  height: 30px;
+  height: @margin-full;
   margin: 2px;
-  width: 30px;
+  width: @margin-full;
 }
 
 
@@ -1608,7 +1608,7 @@ body.activity-permalink ul.item-list li.activity-item {
 
 ul.item-list li {
   border-bottom: 1px solid #eaeaea;
-  padding: 15px 0;
+  padding: @padding-half 0;
   margin: 0;
   position: relative;
   list-style: none;
@@ -1651,7 +1651,7 @@ ul.item-list li div.item-desc {
 
 ul.item-list li div.action {
   position: absolute;
-  top: 15px;
+  top: @padding-half;
   right: 0;
   text-align: right;
 }
@@ -1811,14 +1811,14 @@ div.messages-options-nav {
   background: #eee;
   font-size: 80%;
   margin: 0;
-  padding: 5px 15px;
+  padding: 5px @padding-half;
   text-align: right;
 }
 
 
 div#message-thread div.message-box {
   margin: 0;
-  padding: 15px;
+  padding: @padding-half;
 }
 
 
@@ -1886,12 +1886,12 @@ div.message-search {
 --------------------------------------------------------------*/
 div.profile h4 {
   margin-bottom: auto;
-  margin-top: 15px;
+  margin-top: @padding-half;
 }
 
 
 #profile-edit-form ul.button-nav {
-  margin-top: 15px;
+  margin-top: @padding-half;
 }
 
 
@@ -1953,7 +1953,7 @@ body.register div.page ul {
 --------------------------------------------------------------*/
 .widget.buddypress div.item-avatar img.avatar {
   float: left;
-  margin: 0 10px 15px 0;
+  margin: 0 10px @padding-half 0;
 }
 
 
@@ -2159,7 +2159,7 @@ screen and (-webkit-min-device-pixel-ratio: 2) {
   
 
   ul.item-list li img.avatar {
-    width: 30px;
+    width: @margin-full;
     height: auto;
   }
   
