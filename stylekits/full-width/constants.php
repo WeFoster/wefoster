@@ -25,7 +25,12 @@ if ( $layout == 'full-width' ) {
 
 
 } elseif ( $layout == 'minimal-header' ) {
-  
+
+  if ( !defined( 'WEFOSTER_LAYOUT_PRESET' ) ) {
+  		// 'minimal' or 'full'
+  		define('WEFOSTER_LAYOUT_PRESET', 'minimal');
+  }
+
 
   if ( !defined( 'WEFOSTER_LAYOUT_CLASS' ) ) {
     define('WEFOSTER_LAYOUT_CLASS', 'container');

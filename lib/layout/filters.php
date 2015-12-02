@@ -357,3 +357,25 @@ function wff_add_featured_image_body_class( $classes ) {
     return $classes;
 }
 add_filter( 'body_class', 'wff_add_featured_image_body_class' );
+
+/**
+ * Add filterable class to post author box.
+ *
+ * @since 1.0.0
+ *
+ */
+function wff_author_bio() {
+  echo apply_filters( 'wff_author_bio_class', 'box-light margin-vertical-full' );
+}
+add_action( 'author_bio_class','wff_author_bio' );
+
+/**
+ * Add filterable class to post entry meta.
+ *
+ * @since 1.0.0
+ *
+ */
+function wff_post_meta() {
+  echo apply_filters( 'wff_post_meta_class', 'box-light' );
+}
+add_action( 'post_meta_class','wff_post_meta' );

@@ -54,7 +54,6 @@ if ( ! function_exists ( 'wff_primary_navigation_location' ) ) {
   add_action( 'before_header_navigation', 'wff_primary_navigation_location' );
 }
 
-
 /**
 * Hook the secondary navigation into our full header template.
 *
@@ -67,6 +66,28 @@ if ( ! function_exists ( 'wff_secondary_navigation_location' ) ) {
     get_template_part( 'templates/header/secondary-navigation' );
   }
   add_action( 'after_full_header', 'wff_secondary_navigation_location' );
+}
+
+/**
+ * Hook the Page Titles into our pages and posts.
+ *
+ * @since 1.0.0
+ *
+ */
+if ( ! function_exists ( 'wff_page_header' ) ) {
+  function wff_page_header()
+  {
+    get_template_part( 'templates/parts/page-header' );
+  }
+  add_action( 'open_page_content', 'wff_page_header' );
+}
+
+if ( ! function_exists ( 'wff_post_header' ) ) {
+  function wff_post_header()
+  {
+    get_template_part( 'templates/parts/post-header' );
+  }
+  add_action( 'before_entry_content', 'wff_post_header' );
 }
 
 /**

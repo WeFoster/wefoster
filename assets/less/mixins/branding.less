@@ -1,0 +1,80 @@
+.vertical-center {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+//
+//Branding Classes
+//
+.box-light {
+  background: @box-light-background;
+  color: @box-light-color;
+  border-top: @box-light-border-top;
+  border-bottom: @box-light-border-bottom;
+  
+  a,
+  a:hover {
+    color: contrast(@box-light-background, @text-color, @white);
+  }
+
+  img {
+    background: darken(@box-light-background, 3%) !important;
+    border-color: lighten(@box-light-background, 2%) !important;
+  }
+}
+
+.box-brand-secondary {
+  background: @brand-secondary;
+  color: contrast(@brand-secondary, @text-color, @white);
+  border-color: darken(@brand-secondary, 4%) !important;
+  
+  a,
+  a:hover {
+    color: contrast(@brand-secondary, @text-color, @white);
+  }
+
+  img {
+    background: darken(@brand-secondary, 3%) !important;
+    border-color: lighten(@brand-secondary, 2%) !important;
+  }
+}
+
+.box-brand-primary {
+  background: @brand-primary;
+  color: contrast(@brand-primary, @text-color, @white);
+  border-color: darken(@brand-primary, 4%) !important;
+  
+  a,
+  a:hover {
+    color: contrast(@brand-primary, @text-color, @white);
+  }
+
+  img {
+    background: darken(@brand-primary, 3%) !important;
+    border-color: lighten(@brand-primary, 2%) !important;
+  }
+}
+
+.box-brand-complimentary {
+  background: @brand-complimentary;
+  color: contrast(@brand-complimentary, @text-color, @white);
+  border-color: darken(@brand-complimentary, 4%) !important;
+  
+  a,
+  a:hover {
+    color: contrast(@brand-complimentary, @text-color, @white);
+  }
+
+  img {
+    background: darken(@brand-complimentary, 3%) !important;
+    border-color: lighten(@brand-complimentary, 2%) !important;
+  }
+}
+
+// Mixins
+.responsive(@maxWidth; @rules) {
+  @media only screen and (max-width: @maxWidth) {
+    @rules();
+  }
+}

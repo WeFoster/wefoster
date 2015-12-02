@@ -75,7 +75,7 @@ $src = wpthumb( $cover_image_url, 'width=' . $settings['width'] .'&height=' . $s
 
   <?php do_action('open_bp_cover_photo'); ?>
 
-    <div class="<?php do_action('cover_photo_class'); ?> bp-cover-image"
+    <div class="<?php do_action('cover_photo_class'); ?> bp-cover-image-wrap"
         style="background-image: url(<?php echo $src; ?> );"
       >
 

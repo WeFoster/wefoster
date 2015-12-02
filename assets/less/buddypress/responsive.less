@@ -22,6 +22,26 @@
       }
     }
   }
+
+  .directory.members .main div.item-list-tabs ul li.last,
+  .directory.blogs .main div.item-list-tabs ul li.last {
+    position: inherit;
+    right: 15px;
+    top: -48.5px;
+    font-size: 14px;
+    padding: 8px;
+  }
+
+  div.pagination {
+    position: inherit;
+  }
+
+  .directory.groups .main .item-list,
+  .directory.members .main .item-list,
+  .directory.blogs .main .item-list {
+    position: inherit;
+    top: @margin-full;
+  }
 }
 
 /*--------------------------------------------------------------
@@ -172,6 +192,14 @@ But greatly improves the layout */
     display: none;
   }
 
+  .bp-user {
+    .postthumb {
+      position: relative;
+      top: -30px;
+      margin-bottom: 0 !important;
+    }
+  }
+
   .buddypress div.item-list-tabs ul li.last {
     position: inherit;
     right: @padding-half;
@@ -189,7 +217,7 @@ But greatly improves the layout */
 }
 
 #buddypress .mobile-profile-header {
-  margin: -@margin-full -@margin-full @margin-full;
+  margin: 0 -@margin-full;
   overflow: hidden;
   
   img.avatar {

@@ -7,13 +7,17 @@
 @sidebar-width: 25%;
 @content-width: 75%;
 
-//Padding & Margin
+//Padding
 @padding-full: 30px;
 @padding-half: ( @padding-full / 2 );
 @padding-double: (@padding-full * 2 );
+@padding-one-half: (@padding-full * 1.5 );
+
+//Margin
 @margin-full: @padding-full;
 @margin-half: ( @margin-full / 2 );
 @margin-double: (@margin-full * 2 );
+@margin-one-half: (@margin-full * 1.5 );
 
 //Global Styling
 @body-bg: darken(@white, 6%);
@@ -101,6 +105,7 @@
 @header-color: @white;
 
 //Navigation
+@navigation-font-family: @font-family-base;
 @navbar-padding: 0;
 @navbar-margin: 0 0 @margin-full 0;
 @navbar-margin-fixed: 0;
@@ -166,6 +171,10 @@
 @btn-size: 100%;
 @btn-small-size: 80%;
 @btn-radius: 4px;
+
+//Change Bootstrap Colors
+@btn-primary-bg: @brand-secondary;
+@btn-success-bg: @brand-complimentary;
 
 //Avatars
 @big-avatar-size: inherit;
@@ -360,12 +369,12 @@
 @post-meta-color: inherit;
 @post-meta-box-shadow: none;
 
-//Post Author
-@author-bio-background: @post-meta-bg;
-@author-bio-color: inherit;
-@author-bio-font-size: inherit;
-@author-bio-border-bottom: 1px solid darken(@author-bio-background, 4%);
-@author-bio-border-top: 1px solid darken(@author-bio-background, 3%);
+//Boxes.
+@box-light-background: @post-meta-bg;
+@box-light-color: inherit;
+@box-light-font-size: inherit;
+@box-light-border-bottom: 1px solid darken(@box-light-background, 4%);
+@box-light-border-top: 1px solid darken(@box-light-background, 3%);
 
 //Groups Component
 //Members Component

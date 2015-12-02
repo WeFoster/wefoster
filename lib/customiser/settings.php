@@ -1039,6 +1039,7 @@ if ( class_exists( 'BuddyPress' ) ) {
 		'description' => __( 'Apply an image effect to your featured images. Note: Some of these effects will not work on Internet Explorer. In these cases the image will be shown without the effect.', 'wefoster' ),
 		'section'     => 'wf_plus_bp_general_section',
 		'default'     => 'default',
+			'transport'    => 'postMessage',
 		'priority'    => 10,
 	  'choices'  => wefoster_plus_image_effects(),
 	) );
@@ -1076,6 +1077,28 @@ if ( class_exists( 'BuddyPress' ) ) {
 		  'transport'   => 'refresh',
 		  'default'     => '',
 		  'priority'    => 1,
+	) );
+
+	Kirki::add_field( 'wefoster_plus', array(
+		'section'     => 'wf_plus_members_section',
+		'type'        => 'editor',
+		'settings'    => 'wf_plus_buddypress_member_intro',
+		'label'       => __( 'Intro Text', 'wefoster' ),
+		'description' => __( 'Change the text displayed in your footer. You can use hyperlinks as well.', 'wefoster' ),
+		'priority'    => 10,
+		'sanitize_callback' => 'do_not_filter_anything',
+		'default'     => __( 'This is your Member Introduction text.', 'wefoster' ),
+	) );
+
+	Kirki::add_field( 'wefoster_plus', array(
+		'section'     => 'wf_plus_groups_section',
+		'type'        => 'editor',
+		'settings'    => 'wf_plus_buddypress_groups_intro',
+		'label'       => __( 'Intro Text', 'wefoster' ),
+		'description' => __( 'Change the text displayed on your Groups Directory page. You can use hyperlinks as well.', 'wefoster' ),
+		'priority'    => 10,
+		'sanitize_callback' => 'do_not_filter_anything',
+		'default'     => __( 'This is your Group Introduction text.', 'wefoster' ),
 	) );
 
 
@@ -1294,6 +1317,7 @@ Kirki::add_field( 'wefoster_plus', array(
 	'description' => __( 'Apply an image effect to your featured images. Note: Some of these effects will not work on Internet Explorer. In these cases the image will be shown without the effect.', 'wefoster' ),
 	'section'     => 'wf_plus_featured_images_section',
 	'default'     => 'default',
+	'transport'    => 'postMessage',
 	'priority'    => 10,
   'choices'  => wefoster_plus_image_effects(),
 ) );

@@ -2,11 +2,11 @@
 .comment-header {
   .page-header();
   margin-top: @margin-half;
+  
   h2 {
     font-size: @font-size-h3;
   }
 }
-
 
 .comment {
   margin-right: -@margin-full;
@@ -14,18 +14,17 @@
   margin-left: -@margin-full;
   padding: 0 @padding-full @padding-full;
   border-bottom: @comment-border-bottom;
+  
   .comment-content {
     margin-bottom: @margin-half;
-    padding: @padding-half @padding-half 1px;
+    padding: @padding-half;
     background: @comment-content-bg;
   }
 }
 
-
 .media-body {
   position: relative;
 }
-
 
 .children {
   .depth-2.comment {
@@ -33,11 +32,10 @@
     margin-left: @margin-half;
     padding-left: 0;
     border: 0 none;
-
+    
     .media-heading {
       font-size: 120%;
     }
-
 
     .media-object .avatar {
       position: relative;
@@ -47,25 +45,21 @@
     }
   }
 
-
   .comment:last-child {
     margin-bottom: -@margin-half;
     padding-bottom: 0;
   }
 }
 
-
 .comment-reply-link {
   display: none;
 }
-
 
 .media-body:hover {
   .comment-reply-link {
     display: block;
   }
 }
-
 
 .comment-reply {
   font-size: 90%;
@@ -74,14 +68,13 @@
   bottom: @margin-half;
   margin-top: 10px;
   opacity: 0.6;
-
+  
   &:hover {
     text-decoration: none;
     opacity: 1;
     border-bottom: 0;
   }
 }
-
 
 .media-object .avatar {
   width: @comment-avatar-width;
@@ -93,7 +86,6 @@
   border: @medium-avatar-border;
 }
 
-
 .media-heading {
   overflow: hidden;
   margin-top: 0;
@@ -102,7 +94,6 @@
   padding-bottom: 0;
 }
 
-
 .comment-meta-item {
   font-size: 55%;
   font-weight: 600;
@@ -110,17 +101,15 @@
   letter-spacing: 1px;
   text-transform: uppercase;
   color: @gray;
-
+  
   a {
     color: @gray;
   }
 }
 
-
 .children .comment {
   border: 0;
 }
-
 
 .comment-form {
   .form-control {
@@ -128,6 +117,5 @@
     margin-bottom: @margin-half;
   }
 }
-
 
 // Add reply arrow icon to comment reply button
