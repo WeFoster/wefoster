@@ -1,10 +1,4 @@
 // Variables
-// @icon-font-family
-// @icon-size:
-// @icon-color
-// @icon-padding-right
-// @icon-shadow
-// @icon-size
 /* Using some fancy CSS magic to add our icons */
 .item-list-tabs * a:before,
 #item-buttons * a:before,
@@ -24,10 +18,6 @@ span.post-tags:before,
 #author-description h3:before,
 .single_add_to_cart_button:before,
 .load-more a:before,
-#whats-new,
-.main-menu *:before,
-.link-home h2 a:before,
-div.link-vote-panel div.clickers a.up:before,
 #bbpress-forums .bbp-forums-list li a:before,
 .favorite-toggle:before,
 .subscription-toggle:before,
@@ -47,7 +37,8 @@ li#activity-filter-select label:before,
 .acomment-reply:before,
 .bp-secondary-action:before,
 .navbar li a:before,
-.sticky .entry-title:after {
+.sticky .entry-title:after,
+#bbpress-forums > h3:after {
   color: @icon-color;
   font-family: @icon-font-family;
   font-size: @icon-size;
@@ -59,43 +50,9 @@ li#activity-filter-select label:before,
   line-height: 100%;
 }
 
-/* Sidebar toggle icon */
-/* ================ */
-/* ! Post Formats   */
-/* ================ */
-.format-video .entry-title:before {
-  content: "\f03d";
-}
-
-.format-link .entry-title:before {
-  content: "\f02e";
-}
-
-.format-gallery .entry-title:before {
-  content: "\f083";
-}
-
-.format-image .entry-title:before {
-  content: "\f03e";
-}
-
-.format-audio .entry-title:before {
-  content: "\f028";
-}
-
-.format-chat .post-title:before {
-  content: "\f086";
-}
-
-.format-status .post-title:before {
-  content: "\f0eb";
-}
-
-.format-quote .post-title:before {
-  content: "\f10e";
-}
-
-//Groups
+//
+// BuddyPress Groups
+//
 #group-create-nav a:before {
   content: "\f234";
 }
@@ -146,15 +103,9 @@ div#item-header a.button {
   text-decoration: none;
 }
 
-// div#object-nav ul li a {
-//     padding: 4px 6px 8px !important;
-//     text-decoration: none;
-// }
-// div.activity-type-tabs li a {
-//     padding: 4px 6px 8px !important;
-//     text-decoration: none;
-// }
-/* Stream Icons. no shorthand CSS to maintain hover effects */
+//
+// BuddyPress Activity
+//
 li#activity-all a:before,
 li#activity-swa-home a:before {
   content: "\f140";
@@ -208,20 +159,6 @@ li#following-personal-li a:before {
 
 .spam-activity:before {
   content: "\f06a";
-}
-
-//comment
-.comment-reply-link:before {
-  content: "\f112";
-}
-
-#comments time a:before {
-  content: "\f017";
-  right: -4px;
-}
-
-#comments .comment-edit-link:before {
-  content: "\f040";
 }
 
 .delete-activity:before,
@@ -293,7 +230,9 @@ li#nav-announcements-groups-li a:before {
   content: "\f18d";
 }
 
-/* Profile Icons  */
+//
+// BuddyPress Profiles
+//
 #user-activity:before {
   content: "\f079";
 }
@@ -351,10 +290,6 @@ a.friendship-button:before,
   content: "\f0fe";
 }
 
-.follow-button a.follow:before {
-  content: "\f06e";
-}
-
 div#post-mention a.mention:before {
   content: "\f06e";
 }
@@ -365,6 +300,32 @@ div#post-mention a.mention:before {
 
 #item-buttons a:before {
   content: "\f005";
+}
+
+//
+// BuddyPress 3rd Party Plugins
+//
+.pin-group:before {
+  content: "\f08d";
+}
+
+.unpin-group:before {
+  content: "\f147";
+}
+
+//// BBPress Forums
+#bbpress-forums > h3:after {
+  &:after {
+    content: "\f08d";
+    /* opacity: .6; */
+    float: right;
+    background: darken(@brand-secondary, 5%);
+    color: @white;
+    padding: 9px 13px;
+    border-radius: 50%;
+    font-size: 75%;
+    top: -3px;
+  }
 }
 
 .favorite-toggle:before {
@@ -379,11 +340,7 @@ div#post-mention a.mention:before {
   content: "\f00d";
 }
 
-//BuddyPress Group Types Icon
-.pin-group:before {
-  content: "\f08d";
-}
-
-.unpin-group:before {
-  content: "\f147";
+//BP Follow
+.follow-button a.follow:before {
+  content: "\f06e";
 }

@@ -1,3 +1,5 @@
+<?php do_action('before_page_header'); ?>
+
 <div class="page-header <?php do_action('page_header_class'); ?>">
   <?php do_action('open_page_header'); ?>
   <h1>
@@ -5,3 +7,5 @@
   </h1>
     <?php do_action('close_page_header'); ?>
 </div>
+
+<?php do_action('after_page_header'); ?>

@@ -127,7 +127,7 @@
         });
 
 
-        jQuery(".wefoster-bootstrap-select #whats-new-post-in,.wefoster-bootstrap-select .filter select,.field-visibility select, .wefoster-bootstrap-select .messages-options-nav select,.wefoster-bootstrap-select #profile-quick-menu select").selectpicker({
+        jQuery(".wefoster-bootstrap-select #whats-new-post-in,.wefoster-bootstrap-select .filter select,.field-visibility select, .wefoster-bootstrap-select .messages-options-nav select,.wefoster-bootstrap-select #profile-quick-menu select,.bbp-form select").selectpicker({
           style: 'btn-hg btn-default',
           menuStyle: 'dropdown',
           container: 'body'
