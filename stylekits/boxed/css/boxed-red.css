@@ -4408,6 +4408,20 @@ body.register div.page ul {
   padding-bottom: 30px !important;
   position: relative;
 }
+.forum-archive #bbpress-forums {
+  position: inherit;
+}
+.forum-archive #bbpress-forums .bbp-breadcrumb {
+  display: none;
+}
+.forum-archive #bbpress-forums .bbp-search-form {
+  position: absolute;
+  top: 15px;
+  right: 30px;
+}
+.forum-archive #bbpress-forums .bbp-header {
+  position: inherit !important;
+}
 @media screen and (max-width: 769px) {
   .wefoster-framework #bbpress-forums ul.bbp-lead-topic,
   .wefoster-framework #bbpress-forums ul.bbp-topics,

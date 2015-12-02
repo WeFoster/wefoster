@@ -1,4 +1,4 @@
-// Apologies for the state of this CSS. But I'd like to see you try style BBPress. 
+// Apologies for the state of this CSS. But I'd like to see you try style BBPress.
 ///
 .groups.forum {
   #item-header,
@@ -396,6 +396,24 @@
       padding-bottom: @padding-full !important;
       position: relative;
     }
+  }
+}
+
+.forum-archive #bbpress-forums {
+  position: inherit;
+  
+  .bbp-breadcrumb {
+    display: none;
+  }
+
+  .bbp-search-form {
+    position: absolute;
+    top: 15px;
+    right: 30px;
+  }
+
+  .bbp-header {
+    position: inherit !important;
   }
 }
 
