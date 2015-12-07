@@ -172,7 +172,7 @@ if ( ! empty ( $wf_plus_groups_title )  ) {
 }
 
 function wff_add_members_intro() {
-  $member_intro = get_theme_mod( 'wf_plus_buddypress_groups_intro', 'default' );
+  $member_intro = get_theme_mod( 'wf_plus_buddypress_member_intro', 'default' );
 ?>
     <div id="item-meta" class="directory-intro margin-bottom-full margin-top-full">
 
