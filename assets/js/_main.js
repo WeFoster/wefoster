@@ -167,6 +167,20 @@
 
         });
 
+        //BuddyPress Cover Photo Dynamic Updating.
+        if ('undefined' !== typeof window.bp) {
+          if (window.bp.Avatar) {
+            bp.Avatar.Attachment.on('change:url', function(data) {
+              console.log(data.attributes);
+            });
+          }
+          if (window.bp.CoverImage) {
+            bp.CoverImage.Attachment.on('change:url', function(data) {
+              console.log(data.attributes);
+            });
+          }
+        }
+
 
       }
     },
