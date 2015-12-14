@@ -231,3 +231,71 @@ function wff_base_sidebars()
 	return true;
 
 }
+
+/**
+ * Register more sidebars
+ */
+function wff_homepage_widgets()
+{
+	register_sidebar( array(
+		'name' => 'Homepage Top Left',
+		'id' => 'homepage-top-left',
+		'description' => "The Top Left Widget",
+		'before_widget' => '<div id="%1$s" class="widget %2$s">',
+		'after_widget' => '</div>',
+		'before_title' => '<h4>',
+		'after_title' => '</h4>'
+	));
+
+	register_sidebar( array(
+		'name' => 'Homepage Top Right',
+		'id' => 'homepage-top-right',
+		'description' => "The Top Right Widget next to the Slider",
+		'before_widget' => '<div id="%1$s" class="widget %2$s">',
+		'after_widget' => '</div>',
+		'before_title' => '<h4>',
+		'after_title' => '</h4>'
+	));
+
+	register_sidebar( array(
+		'name' => 'Homepage Center Widget',
+		'id' => 'homepage-center-widget',
+		'description' => "The Full Width Center Widget on the Homepage",
+		'before_widget' => '<div id="%1$s" class="widget %2$s">',
+		'after_widget' => '</div>',
+		'before_title' => '<h4>',
+		'after_title' => '</h4>'
+	));
+
+	register_sidebar( array(
+		'name' => 'Homepage Left',
+		'id' => 'homepage-left',
+		'description' => "The Left Widget on the Homepage",
+		'before_widget' => '<div id="%1$s" class="widget %2$s">',
+		'after_widget' => '</div>',
+		'before_title' => '<h4>',
+		'after_title' => '</h4>'
+	));
+
+	register_sidebar( array(
+		'name' => 'Homepage Middle',
+		'id' => 'homepage-middle',
+		'description' => "The Middle Widget on the Homepage",
+		'before_widget' => '<div id="%1$s" class="widget %2$s">',
+		'after_widget' => '</div>',
+		'before_title' => '<h4>',
+		'after_title' => '</h4>'
+	));
+
+	register_sidebar( array(
+		'name' => 'Homepage Right',
+		'id' => 'homepage-right',
+		'description' => "The right Widget on the Homepage",
+		'before_widget' => '<div id="%1$s" class="widget %2$s">',
+		'after_widget' => '</div>',
+		'before_title' => '<h4>',
+		'after_title' => '</h4>'
+	));
+
+}
+add_action( 'widgets_init', 'wff_homepage_widgets' );
