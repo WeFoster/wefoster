@@ -28,12 +28,12 @@
     "package.json",
     "test.html"
   ],
-  "version": "1.7.5",
-  "_release": "1.7.5",
+  "version": "1.7.7",
+  "_release": "1.7.7",
   "_resolution": {
     "type": "version",
-    "tag": "v1.7.5",
-    "commit": "265257d035dd3d7e42a5500164d8a2195511e6ac"
+    "tag": "v1.7.7",
+    "commit": "8c961c506638b370a80faf0d237a42ef7c09904c"
   },
   "_source": "git://github.com/silviomoreto/bootstrap-select.git",
   "_target": "~1.7.3",
