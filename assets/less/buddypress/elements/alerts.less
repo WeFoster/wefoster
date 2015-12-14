@@ -25,7 +25,7 @@ div.reject {
 div#message {
   .alert();
   .alert-warning();
-
+  
   &.updated {
     .alert-success();
   }
@@ -40,7 +40,6 @@ div#message {
 }
 
 //SiteWide Notices
-
 #sitewide-notice {
   strong {
     display: block;
@@ -52,12 +51,15 @@ div#message {
     display: block;
   }
 
-#message {
-    left: 2%;
+  #message {
+    left: 0;
     position: fixed;
-    top: 1em;
-    width: 96%;
+    bottom: 0;
     z-index: 9999;
-    font-weight: @alert-font-weight;
+    font-weight: normal;
+    right: 0;
+    width: 100%;
+    margin: 0;
+    border-radius: 0;
   }
 }

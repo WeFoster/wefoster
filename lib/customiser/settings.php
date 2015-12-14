@@ -1062,6 +1062,20 @@ if ( class_exists( 'BuddyPress' ) ) {
 	  'priority'    => 10,
 ) );
 
+Kirki::add_field( 'wefoster_plus', array(
+	'type'        => 'radio',
+	'settings'    => 'wf_plus_bp_menu_user_name',
+	'label'       => __( 'Show User Name in Menu', 'wefoster' ),
+	'description' => __( 'Do you want show the full name of the user in the Profile Navigation Menu?', 'wefoster' ),
+	'section'     => 'wf_plus_bp_general_section',
+	'default'     => 'no',
+	'priority'    => 10,
+	'choices'     => array(
+		'no' => __( 'No, only show the avatar', 'wefoster' ),
+		'yes' => __( 'Yes, show name and avatar', 'wefoster' ),
+	),
+) );
+
 
 
   ////////////////
