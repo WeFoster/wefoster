@@ -4452,6 +4452,12 @@ body.register div.page ul {
   background: #f2f2f2 !important;
   border-color: #ffffff !important;
 }
+.box-light.darken {
+  background: #f2f2f2 !important;
+}
+.box-light.lighten {
+  background: #ffffff !important;
+}
 .box-brand-secondary {
   background: #8d48ab;
   color: #ffffff;
@@ -4464,6 +4470,12 @@ body.register div.page ul {
 .box-brand-secondary img {
   background: #8443a0 !important;
   border-color: #934bb2 !important;
+}
+.box-brand-secondary.darken {
+  background: #8443a0 !important;
+}
+.box-brand-secondary.lighten {
+  background: #954eb4 !important;
 }
 .box-brand-primary {
   background: #34495e;
@@ -4478,6 +4490,12 @@ body.register div.page ul {
   background: #2f4154 !important;
   border-color: #384e65 !important;
 }
+.box-brand-primary.darken {
+  background: #2f4154 !important;
+}
+.box-brand-primary.lighten {
+  background: #395168 !important;
+}
 .box-brand-complimentary {
   background: #8d48ab;
   color: #ffffff;
@@ -4490,6 +4508,12 @@ body.register div.page ul {
 .box-brand-complimentary img {
   background: #8443a0 !important;
   border-color: #934bb2 !important;
+}
+.box-brand-complimentary.darken {
+  background: #8443a0 !important;
+}
+.box-brand-complimentary.lighten {
+  background: #954eb4 !important;
 }
 .box-full {
   margin: -30px;
@@ -4648,6 +4672,17 @@ body.register div.page ul {
 .larger-font {
   font-size: 120%;
   line-height: 160%;
+}
+.font-icon {
+  color: inherit;
+  font-family: "FontAwesome";
+  font-size: inherit;
+  font-weight: normal;
+  padding-right: 7px;
+  position: relative;
+  text-transform: none;
+  box-shadow: none;
+  line-height: 100%;
 }
 .no-margin {
   margin: 0 !important;
@@ -11278,6 +11313,9 @@ a:hover {
   color: #8d48ab;
   text-decoration: none;
   opacity: 0.8;
+}
+p {
+  margin-bottom: 15px;
 }
 .navbar a:hover,
 .item-list-tabs a:hover,
