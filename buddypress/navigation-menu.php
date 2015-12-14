@@ -11,9 +11,15 @@
 		<li id="bp-profile-menu" class="dropdown menu-groups">
 
 			<a href="<?php echo bp_get_loggedin_user_link(); ?>" data-target="#" data-toggle="dropdown" class="dropdown-toggle"><?php echo bp_loggedin_user_avatar( 'type=thumb&width=70&height=70' ); ?>
-					<span class="visible-xs">
+					<?php if ( get_theme_mod( 'wf_plus_bp_menu_user_name', 'no') == 'yes' ) :?>
+						<span class="bp-profile-menu-name">
+						 <?php echo bp_core_get_user_displayname( bp_loggedin_user_id() );?>
+						</span>
+					<?php else : ?>
+						<span class="visible-xs bp-profile-menu-name">
 						<?php echo bp_core_get_user_displayname( bp_loggedin_user_id() );?>
 					</span>
+					<?php endif;?>
 			</a>
 
 		<?php wff_bp_navigation_menu(); ?>
