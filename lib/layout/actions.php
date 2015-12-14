@@ -106,6 +106,20 @@ if ( ! function_exists ( 'wff_post_thumbnail_location' ) ) {
 }
 
 /**
+ * Hook the post author avatar into our Post Thumbnail template.
+ *
+ * @since 1.0.0
+ *
+ */
+if ( ! function_exists ( 'wff_post_author_avatar' ) ) {
+  function wff_post_author_avatar()
+  {
+    get_template_part( 'templates/parts/author-avatar' );
+  }
+  add_action( 'open_post_thumbnail', 'wff_post_author_avatar' );
+}
+
+/**
  * Hook the Post Meta template
  *
  * @since 1.0.0
