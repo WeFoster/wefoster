@@ -101,8 +101,22 @@ if ( ! function_exists ( 'wff_post_thumbnail_location' ) ) {
   {
     get_template_part( 'templates/parts/post-thumbnail' );
   }
-  add_action( 'before_single_content', 'wff_post_thumbnail_location' );
-  add_action( 'before_page_header', 'wff_post_thumbnail_location' );
+  add_action( 'before_entry_content', 'wff_post_thumbnail_location',1 );
+  add_action( 'before_page_content', 'wff_post_thumbnail_location', 1 );
+}
+
+/**
+ * Hook the post author avatar into our Post Thumbnail template.
+ *
+ * @since 1.0.0
+ *
+ */
+if ( ! function_exists ( 'wff_post_author_avatar' ) ) {
+  function wff_post_author_avatar()
+  {
+    get_template_part( 'templates/parts/author-avatar' );
+  }
+  add_action( 'open_post_thumbnail', 'wff_post_author_avatar' );
 }
 
 /**
@@ -116,7 +130,7 @@ if ( ! function_exists ( 'wff_entry_meta_location' ) ) {
   {
     get_template_part( 'templates/parts/entry-meta' );
   }
-  add_action( 'after_single_header', 'wff_entry_meta_location' );
+  add_action( 'before_entry_content', 'wff_entry_meta_location',11 );
 }
 
 /**

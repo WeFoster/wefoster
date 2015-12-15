@@ -2,7 +2,7 @@
   <article <?php post_class(); ?>>
 
     <?php
-    //This action is used to insert the Post Title and meta
+    //This action is used to insert the Post Title/Post Meta & Post Thumbnail
     do_action('before_entry_content');
     ?>
 

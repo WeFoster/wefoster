@@ -25,11 +25,9 @@
   }
 
   div.item-options {
-    background: darken(@white, 2%);
     font-size: 70%;
     font-weight: bold;
-    margin: -@margin-full -@margin-full 0;
-    padding: 8px @padding-full;
+    margin: -@margin-half 0 @margin-half;
     text-transform: uppercase;
     margin-bottom: @margin-half;
     
@@ -40,5 +38,13 @@
 
   span.activity {
     display: inline-block;
+  }
+}
+
+.sidebar .widget {
+  div.item-options {
+    background: darken(@white, 2%);
+    padding: 8px @padding-full;
+    margin: -@margin-full -@margin-full 0;
   }
 }
