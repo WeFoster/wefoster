@@ -29,7 +29,10 @@ $src = wp_get_attachment_image_src(get_post_thumbnail_id($post->ID), 'width=' . 
     style="height:<?php echo $height ?>px; background-image: url(<?php echo $src[0]; ?> );"
   >
 
-    <?php do_action('open_post_thumbnail'); ?>
+    <?php
+      //Used to show the Post Author Avatar
+      do_action('open_post_thumbnail');
+    ?>
 
   </div>
 

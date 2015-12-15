@@ -1,0 +1,18 @@
+.page-template-homepage-template {
+  .main {
+
+    //Apply Padding but remove gutter width
+    padding: (@padding-full - @grid-gutter-width / 2);
+
+    .widget {
+      margin-bottom: @margin-full;
+      
+      h4 {
+        background: none repeat scroll 0 0 @white;
+        border-bottom: 1px solid darken(@white, 3%);
+        margin-bottom: @margin-half;
+        padding: @padding-half 0;
+      }
+    }
+  }
+}
