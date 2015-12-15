@@ -359,6 +359,29 @@ function wff_add_featured_image_body_class( $classes ) {
 add_filter( 'body_class', 'wff_add_featured_image_body_class' );
 
 /**
+ * Add class based on Post Category
+ *
+ * @since 1.0.0
+ *
+ */
+function wff_add_category_body_class( $classes ) {
+
+  if (is_single() ) {
+		global $post;
+		foreach((get_the_category($post->ID)) as $category) {
+			// add category slug to the $classes array
+			$classes[] = 'post-category-' . $category->category_nicename;
+		}
+	}
+  if (is_singular('post') ) {
+	  $classes[] = 'single-post';
+  }
+	// return the $classes array
+	return $classes;
+}
+add_filter( 'body_class', 'wff_add_category_body_class' );
+
+/**
  * Add filterable class to post author box.
  *
  * @since 1.0.0
