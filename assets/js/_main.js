@@ -121,7 +121,7 @@
 
         //Turn Selectbox into pretty dropdown
         jQuery("wefoster-bootstrap-select.directory.activity #activity-filter-select select,.wefoster-bootstrap-select .last select").selectpicker({
-          style: 'btn-hg btn-link',
+          style: 'btn-hg btn-default',
           menuStyle: 'dropdown',
           container: 'body'
         });
