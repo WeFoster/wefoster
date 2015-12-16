@@ -238,3 +238,26 @@ function wff_add_groups_intro() {
   <?php
   }
 add_action( 'template_notices', 'wff_add_groups_intro' );
+
+/**
+ * Check theme options for navbar style
+ *
+ * @since 1.0.0
+ *
+ */
+function wefoster_plus_change_bp_navbar_class_position() {
+
+		$option = get_theme_mod( 'wf_plus_bp_navigation_class', 'default' );
+
+		if ( $option == 'default' ) {
+					$classes = WEFOSTER_BP_NAVBAR_POSITION_CLASS;
+		}
+
+		else {
+	    $classes = ' ' . $option  . ' ';
+		}
+
+		return $classes;
+
+}
+add_filter( 'wff_bp_navbar_position_class', 'wefoster_plus_change_bp_navbar_class_position' );

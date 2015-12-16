@@ -2,7 +2,7 @@
 
 		<aside class="sidebar sidebar-offcanvas <?php do_action('class_sidebar'); ?>" role="complementary">
 
-			<div class="inner-sidebar">
+			<div class="inner-sidebar <?php do_action('class_inner_sidebar'); ?>">
 
 					<?php do_action( 'open_sidebar' ); ?>
 					<?php wff_base_sidebars(); ?>

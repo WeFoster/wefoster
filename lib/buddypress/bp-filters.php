@@ -111,3 +111,14 @@ function wf_change_bp_register_page_width()
 }
 // Hook our function at the right place.
 add_action('init', 'wf_change_bp_register_page_width');
+
+/**
+ * Allow developers and theme options to set the BuddyPress Navbar menu position
+ *
+ * @since 1.0.0
+ *
+ */
+function wff_bp_navbar_position() {
+  echo apply_filters( 'wff_bp_navbar_position_class', ' ' . WEFOSTER_BP_NAVBAR_POSITION_CLASS . ' ' );
+}
+add_action( 'class_bp_menu','wff_bp_navbar_position' );

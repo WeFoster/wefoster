@@ -117,6 +117,29 @@ function wefoster_plus_change_navbar_class() {
 add_filter( 'wff_navbar_inverse_class', 'wefoster_plus_change_navbar_class' );
 
 /**
+ * Check theme options for navbar style
+ *
+ * @since 1.0.0
+ *
+ */
+function wefoster_plus_change_navbar_class_position() {
+
+		$option = get_theme_mod( 'wf_plus_header_navigation_class', 'default' );
+
+		if ( $option == 'default' ) {
+					$classes = WEFOSTER_NAVBAR_POSITION_CLASS;
+		}
+
+		else {
+	    $classes = ' ' . $option  . ' ';
+		}
+
+		return $classes;
+
+}
+add_filter( 'wff_navbar_position_class', 'wefoster_plus_change_navbar_class_position' );
+
+/**
  * Check theme options for layout size
  *
  * @since 1.0.0

@@ -61,6 +61,12 @@ if ( !defined( 'WEFOSTER_SIDEBAR_POSITION' ) ) {
 		define('WEFOSTER_SIDEBAR_POSITION', 'wefoster-sidebar-right');
 }
 
+//The Default Position of our Navigation Menu
+if ( !defined( 'WEFOSTER_NAVBAR_POSITION_CLASS' ) ) {
+		// 'navbar-left' or 'navbar-right' or 'navbar-center'
+		define('WEFOSTER_NAVBAR_POSITION_CLASS', 'navbar-left');
+}
+
 //Specify the default footer widgets that should be loaded from templates/footer/
 if ( !defined( 'WEFOSTER_FOOTER_WIDGETS' ) ) {
 	define('WEFOSTER_FOOTER_WIDGETS', 'four-widgets');
@@ -258,6 +264,12 @@ if ( !defined( 'WEFOSTER_CUSTOMIZER_VALUES' ) ) {
 /////////////// 											///////////////
 ///////////////     BUDDYPRESS 				///////////////
 /////////////// 											///////////////
+
+//The Default Position of our BP Navigation Menu
+if ( !defined( 'WEFOSTER_BP_NAVBAR_POSITION_CLASS' ) ) {
+		// 'navbar-left' or 'navbar-right' or 'navbar-center'
+		define('WEFOSTER_BP_NAVBAR_POSITION_CLASS', 'navbar-right');
+}
 
 
 // Change Default Avatar Size

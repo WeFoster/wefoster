@@ -1,7 +1,7 @@
 <?php do_action('before_bp_navigation_menu'); ?>
 <?php  if ( function_exists( 'bp_is_member' ) ):  ?>
 
-<ul id="bp-user-navigation" class="nav navbar-nav navbar-right">
+<ul id="bp-user-navigation" class="nav navbar-nav <?php do_action('class_bp_menu'); ?>">
 
 	<?php do_action('open_bp_navigation_menu'); ?>
 	<?php if ( is_user_logged_in() ): ?>

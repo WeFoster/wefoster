@@ -466,6 +466,41 @@ Kirki::add_field( 'wefoster_plus', array(
 	),
 ) );
 
+Kirki::add_field( 'wefoster_plus', array(
+	'section'     => 'wf_plus_header_section',
+	'type'        => 'radio',
+	'settings'    => 'wf_plus_header_navigation_class',
+	'label'       => __( 'Navigation Menu Position', 'wefoster' ),
+	'description' => __( 'Where do you want to show your menu?', 'wefoster' ),
+	'default'     => WEFOSTER_NAVBAR_POSITION_CLASS,
+	'priority'    => 2,
+	'choices'     => array(
+		'navbar-left' => __( 'Left', 'wefoster' ),
+		'navbar-right' => __( 'Right', 'wefoster' ),
+	  'navbar-center' => __( 'Center', 'wefoster' ),
+	)
+) );
+
+if ( class_exists( 'BuddyPress' ) ) {
+
+	Kirki::add_field( 'wefoster_plus', array(
+		'section'     => 'wf_plus_header_section',
+		'type'        => 'radio',
+		'settings'    => 'wf_plus_bp_navigation_class',
+		'label'       => __( 'BuddyPress Navigation Menu Position', 'wefoster' ),
+		'description' => __( 'Where do you want to show your BuddyPress Menu?', 'wefoster' ),
+		'default'     => WEFOSTER_BP_NAVBAR_POSITION_CLASS,
+		'priority'    => 2,
+		'choices'     => array(
+			'navbar-left' => __( 'Left', 'wefoster' ),
+			'navbar-right' => __( 'Right', 'wefoster' ),
+		  'navbar-center' => __( 'Center', 'wefoster' ),
+			'hidden' => __( 'Hidden', 'wefoster' ),
+		)
+	) );
+
+}
+
 
 Kirki::add_field( 'wefoster_plus', array(
 	'section'     => 'wf_plus_header_section',

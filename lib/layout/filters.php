@@ -116,6 +116,17 @@ function wff_navbar_inverse() {
 }
 add_action( 'class_header','wff_navbar_inverse' );
 
+/**
+ * Allow developers and theme options to set the navbar menu position
+ *
+ * @since 1.0.0
+ *
+ */
+function wff_navbar_position() {
+  echo apply_filters( 'wff_navbar_position_class', ' ' . WEFOSTER_NAVBAR_POSITION_CLASS . ' ' );
+}
+add_action( 'class_primary_menu','wff_navbar_position' );
+
 
 if ( WEFOSTER_LAYOUT_PRESET == 'minimal'  ) {
   /**
