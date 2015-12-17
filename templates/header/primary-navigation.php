@@ -3,6 +3,7 @@
 		 <?php do_action('open_primary_navigation'); ?>
 
 		 <div class="nav navbar-nav navbar-primary <?php do_action('class_primary_menu'); ?>">
+			 		 <?php do_action('inside_primary_navigation'); ?>
 			 <?php
 					 wp_nav_menu(array(
 							 'theme_location' => 'primary_navigation',
@@ -17,4 +18,4 @@
           <?php do_action('close_primary_navigation'); ?>
 
 </nav>
-<?php do_action('before_primary_navigation'); ?>
+<?php do_action('close_primary_navigation'); ?>
