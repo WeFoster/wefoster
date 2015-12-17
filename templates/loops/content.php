@@ -1,3 +1,4 @@
+<?php while (have_posts()) : the_post(); ?>
 <div class="post-loop <?php do_action('post_loop_class'); ?>">
     <article <?php post_class(); ?>>
 
@@ -19,3 +20,4 @@
     <?php get_template_part('templates/parts/entry-tags'); ?>
     </article>
 </div>
+<?php endwhile; ?>
