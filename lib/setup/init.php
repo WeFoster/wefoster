@@ -60,6 +60,16 @@ function wff_setup_theme() {
 add_action('after_setup_theme', 'wff_setup_theme');
 
 
+//Render our Title on Older Installations
+if ( ! function_exists( '_wp_render_title_tag' ) ) :
+	function wff_render_legacy_title() {
+		?>
+		<title><?php wp_title( '|', true, 'right' ); ?></title>
+		<?php
+	}
+	add_action( 'wp_head', 'wff_render_legacy_title' );
+endif;
+
 /**
  *	Style the comment form and comments to match Bootstrap
  * 	Also includes schema.org microdata
@@ -128,7 +138,7 @@ function wff_comments_template() {
  *
  * @since 1.0.0
  *
- */  
+ */
 	function wff_comment_form( $args ) {
 	    $args['comment_field'] = '<div class="form-group comment-form-comment">
 	            <label for="comment">' . _x( 'Comment', 'noun' ) . '</label>
