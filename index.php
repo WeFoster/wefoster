@@ -12,10 +12,13 @@
 
 <div class="main <?php do_action('class_main'); ?>" role="main">
 
-    <?php get_template_part('templates/parts/page', 'header'); ?>
-    <?php do_action('before_loop'); ?>
-    <?php get_template_part('templates/parts/archive-intro'); ?>
+    <?php
+    //Use to Load to Page Title. see lib/actions.php
+    do_action('before_page_content');
+    ?>
 
+    <?php do_action('before_loop'); ?>
+    
     <?php if (!have_posts()) : ?>
       <div class="alert alert-warning">
 

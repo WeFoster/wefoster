@@ -3,7 +3,7 @@
 // show the category box when on a category page
     if ( is_category() ):
 ?>
-        <div class="intro-paragraph category-description">
+        <div class="box-intro category-description">
             <?php
                 // get cat desc
                 $category_description = category_description();
@@ -17,14 +17,28 @@
     endif;
 ?>
 
+<!-- Show The tag box when on a Tags Page -->
+<?php
+    if ( is_tax() ):
+?>
+        <div class="box-intro tag-description">
+            <?php
+                    $tag_description = tag_description();
+                    if ( ! empty( $tag_description ) )
+                        echo  $tag_description ;
+                ?>
+            </div>
+<?php
+    endif;
+?>
 
 <!-- Show The tag box when on a Tags Page -->
 <?php
     if ( is_tag() ):
 ?>
-        <div class="intro-paragraph tag-description">
+        <div class="box-intro taxonomy-description">
             <?php
-                    $tag_description = tag_description();
+                    $tag_description = term_description();
                     if ( ! empty( $tag_description ) )
                         echo  $tag_description ;
                 ?>

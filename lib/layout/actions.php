@@ -120,6 +120,20 @@ if ( ! function_exists ( 'wff_post_author_avatar' ) ) {
 }
 
 /**
+ * Hook the Archive Intro into our Template
+ *
+ * @since 1.0.0
+ *
+ */
+if ( ! function_exists ( 'wff_archive_intro' ) ) {
+  function wff_archive_intro()
+  {
+    get_template_part('templates/parts/archive-intro');
+  }
+  add_action( 'before_page_content', 'wff_archive_intro',20 );
+}
+
+/**
  * Hook the Post Meta template
  *
  * @since 1.0.0
