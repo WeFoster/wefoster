@@ -11,7 +11,7 @@
 
    <?php do_action('before_page'); ?>
 
-    <div class="main <?php do_action('class_main'); ?>" role="main">
+    <div id="main-content" class="main <?php do_action('class_main'); ?>" role="main">
       <?php do_action('open_page_content'); ?>
 
         <?php do_action('before_page_header'); ?>

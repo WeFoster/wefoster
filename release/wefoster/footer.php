@@ -2,7 +2,7 @@
 /**
  * The footer of our theme.
  *
- * This is the template that closes the <div class="main"> and end our markup for the theme
+ * This is the template that closes the <div id="main-content" class="main"> and end our markup for the theme
  *
  * @since 1.0
  *

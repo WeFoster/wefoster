@@ -8,7 +8,7 @@
 ?>
 <?php get_template_part('header'); ?>
 
-<div class="main <?php do_action('class_main'); ?>" role="main">
+<div id="main-content" class="main <?php do_action('class_main'); ?>" role="main">
 
     <?php
       // Used for the Post Thumbnails see lib/layout.php

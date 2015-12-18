@@ -10,7 +10,7 @@
 
 <?php get_template_part('header'); ?>
 
-    <div class="main <?php do_action('class_main'); ?>" role="main">
+    <div id="main-content" class="main <?php do_action('class_main'); ?>" role="main">
 
       <div class="page-header">
         <h1><?php _e('This is pretty lame, we found nothing here!', 'wefoster'); ?></h1>

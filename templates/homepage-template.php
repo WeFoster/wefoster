@@ -14,7 +14,7 @@
 
 <?php do_action( 'before_homepage' ); ?>
 
-<div class="main col-sm-12" role="main">
+<div id="main-content" class="main col-sm-12" role="main">
 
 	<?php do_action( 'open_homepage' ); ?>
 

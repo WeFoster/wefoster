@@ -10,7 +10,7 @@
 
 <?php get_template_part('header'); ?>
 
-<div class="main <?php do_action('class_main'); ?>" role="main">
+<div id="main-content" class="main <?php do_action('class_main'); ?>" role="main">
 
     <?php
     //Use to Load to Page Title. see lib/actions.php
@@ -18,7 +18,7 @@
     ?>
 
     <?php do_action('before_loop'); ?>
-    
+
     <?php if (!have_posts()) : ?>
       <div class="alert alert-warning">
 

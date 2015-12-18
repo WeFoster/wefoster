@@ -2,7 +2,7 @@
 /**
  * The header for our theme.
  *
- * This is the template that displays all of the <head> section and everything up until <div class="main">
+ * This is the template that displays all of the <head> section and everything up until <div id="main-content" class="main">
  *
  * @since 1.0
  *
