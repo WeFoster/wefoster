@@ -18,4 +18,3 @@
           <?php do_action('close_primary_navigation'); ?>
 
 </nav>
-<?php do_action('close_primary_navigation'); ?>
