@@ -1,4 +1,4 @@
-<aside class="sidebar sidebar-offcanvas <?php do_action('class_sidebar'); ?>" role="complementary">
+<aside id="sidebar-content" class="sidebar sidebar-offcanvas <?php do_action('class_sidebar'); ?>" role="complementary">
 <?php do_action('before_sidebar'); ?>
 	<div class="inner-sidebar <?php do_action('class_inner_sidebar'); ?>">
 
