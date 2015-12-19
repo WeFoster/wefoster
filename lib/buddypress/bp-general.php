@@ -3,15 +3,13 @@
  * Common BuddyPress functions
  */
 
-if ( ! function_exists ( 'wff_base_wordpress_page' ) ) {
+if ( ! function_exists( 'wff_base_wordpress_page' ) ) {
 	/**
-	* Add class when it's not a BuddyPress page
-	*
-	* @since 1.0.0
-	*
-	*/
-	function wff_base_wordpress_page( $classes )
-	{
+	 * Add class when it's not a BuddyPress page
+	 *
+	 * @since 1.0.0
+	 */
+	function wff_base_wordpress_page( $classes ) {
 		if ( ! is_buddypress() && ! is_front_page() ) {
 			// *append* class to the array
 			$classes[] = 'wordpress-page';
@@ -49,7 +47,6 @@ add_action( 'wp_head', 'wff_add_bp_head' );
  * This issue should be fixed more elegantly upstream in BuddyPress, ideally
  * by making the template functions fall back on the current group when the
  * loop global is not populated.
- *
  */
 function wff_populate_group_global() {
 	global $groups_template;
@@ -70,11 +67,10 @@ function wff_populate_group_global() {
  * Activity Stream Conditional
  *
  * @since 1.0.0
- *
  */
 if ( false == function_exists( 'wff_is_activity_page' ) ) {
 	function wff_is_activity_page() {
-		return ( bp_is_activity_component() && !bp_is_user() );
+		return ( bp_is_activity_component() && ! bp_is_user() );
 	}
 }
 
@@ -85,31 +81,31 @@ if ( false == function_exists( 'wff_is_activity_page' ) ) {
  */
 function wff_bp_notifications_menu() {
 
-    if ( ! is_user_logged_in() ) {
-        return false;
-    }
+	if ( ! is_user_logged_in() ) {
+		return false;
+	}
 
-    echo '<li class="dropdown menu-groups notification-nav" id="bp-adminbar-notifications-menu"><a data-toggle="dropdown" class="dropdown-toggle has-submenu" href="' . esc_url( bp_loggedin_user_domain() ) . '"><i class="fa fa-bell"></i>';
-    _e( '', 'buddypress' );
+	echo '<li class="dropdown menu-groups notification-nav" id="bp-adminbar-notifications-menu"><a data-toggle="dropdown" class="dropdown-toggle has-submenu" href="' . esc_url( bp_loggedin_user_domain() ) . '"><i class="fa fa-bell"></i>';
+	_e( '', 'buddypress' );
 
-    if ( $notification_count = bp_notifications_get_unread_notification_count( bp_loggedin_user_id() ) ) : ?>
+	if ( $notification_count = bp_notifications_get_unread_notification_count( bp_loggedin_user_id() ) ) : ?>
         <span id="notification-counter"><?php echo bp_core_number_format( $notification_count ); ?></span>
     <?php
-    endif;
+	endif;
 
-    echo '</a>';
-    echo '<ul class="dropdown-menu">';
+	echo '</a>';
+	echo '<ul class="dropdown-menu">';
 
-    if ( $notifications = bp_notifications_get_notifications_for_user( bp_loggedin_user_id() ) ) {
-        $counter = 0;
-        for ( $i = 0, $count = count( $notifications ); $i < $count; ++$i ) {
-            $alt = ( 0 == $counter % 2 ) ? ' class="alt"' : ''; ?>
+	if ( $notifications = bp_notifications_get_notifications_for_user( bp_loggedin_user_id() ) ) {
+		$counter = 0;
+		for ( $i = 0, $count = count( $notifications ); $i < $count; ++$i ) {
+			$alt = ( 0 == $counter % 2 ) ? ' class="alt"' : ''; ?>
 
-            <li<?php echo $alt ?>><?php echo $notifications[$i] ?></li>
+            <li<?php echo $alt ?>><?php echo $notifications[ $i ] ?></li>
 
             <?php $counter++;
-        }
-    } else { ?>
+		}
+	} else { ?>
 
         <li>
 					<a href="<?php echo esc_url( bp_loggedin_user_domain() ); ?>">
@@ -118,10 +114,10 @@ function wff_bp_notifications_menu() {
 				</li>
 
     <?php
-    }
+	}
 
-    echo '</ul>';
-    echo '</li>';
+	echo '</ul>';
+	echo '</li>';
 }
 
 /**
@@ -132,35 +128,35 @@ function wff_bp_notifications_menu() {
 function wff_bp_navigation_menu() {
 	global $bp;
 
-	if ( !$bp->bp_nav || !is_user_logged_in() )
-		return false;
+	if ( ! $bp->bp_nav || ! is_user_logged_in() ) {
+		return false; }
 
 	echo '<ul class="dropdown-menu">';
 
 	// Loop through each navigation item
 	$counter = 0;
-	foreach( (array) $bp->bp_nav as $nav_item ) {
+	foreach ( (array) $bp->bp_nav as $nav_item ) {
 		$alt = ( 0 == $counter % 2 ) ? ' class="alt"' : '';
 
-		if ( -1 == $nav_item['position'] )
-			continue;
+		if ( -1 == $nav_item['position'] ) {
+			continue; }
 
 		echo '<li' . $alt . '>';
 		echo '<a id="bp-admin-' . $nav_item['css_id'] . '" href="' . $nav_item['link'] . '">' . $nav_item['name'] . '</a>';
 
-		if ( isset( $bp->bp_options_nav[$nav_item['slug']] ) && is_array( $bp->bp_options_nav[$nav_item['slug']] ) ) {
+		if ( isset( $bp->bp_options_nav[ $nav_item['slug'] ] ) && is_array( $bp->bp_options_nav[ $nav_item['slug'] ] ) ) {
 			echo '<ul class="dropdown-menu">';
 			$sub_counter = 0;
 
-			foreach( (array) $bp->bp_options_nav[$nav_item['slug']] as $subnav_item ) {
+			foreach ( (array) $bp->bp_options_nav[ $nav_item['slug'] ] as $subnav_item ) {
 				$link = $subnav_item['link'];
 				$name = $subnav_item['name'];
 
-				if ( bp_displayed_user_domain() )
-					$link = str_replace( bp_displayed_user_domain(), bp_loggedin_user_domain(), $subnav_item['link'] );
+				if ( bp_displayed_user_domain() ) {
+					$link = str_replace( bp_displayed_user_domain(), bp_loggedin_user_domain(), $subnav_item['link'] ); }
 
-				if ( isset( $bp->displayed_user->userdata->user_login ) )
-					$name = str_replace( $bp->displayed_user->userdata->user_login, $bp->loggedin_user->userdata->user_login, $subnav_item['name'] );
+				if ( isset( $bp->displayed_user->userdata->user_login ) ) {
+					$name = str_replace( $bp->displayed_user->userdata->user_login, $bp->loggedin_user->userdata->user_login, $subnav_item['name'] ); }
 
 				$alt = ( 0 == $sub_counter % 2 ) ? ' class="alt"' : '';
 				echo '<li' . $alt . '><a id="bp-admin-' . $subnav_item['css_id'] . '" href="' . $link . '">' . $name . '</a></li>';

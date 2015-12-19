@@ -5,9 +5,9 @@
 
 
 if ( ! function_exists( 'wff_theme_activity_tabs' ) ) {
-  /**
-  	 * Add Group Creation Button to Header
-  	 */
+	/**
+	 * Add Group Creation Button to Header
+	 */
 	function wff_theme_activity_tabs() {
 
 		if ( bp_is_activity_component() && bp_is_directory() ) :
@@ -50,9 +50,9 @@ if ( ! function_exists( 'wff_blog_creation_button' ) ) {
 
 
 if ( ! function_exists( 'wff_theme_cover_photos' ) ) {
-  /**
-   * Add Cover Photos to BuddyPress.
-   */
+	/**
+	 * Add Cover Photos to BuddyPress.
+	 */
 	function wff_theme_cover_photos() {
 
 		if ( bp_is_user() || bp_is_group() ) :
@@ -68,9 +68,9 @@ if ( ! function_exists( 'wff_theme_cover_photos' ) ) {
 
 
 if ( ! function_exists( 'wff_theme_group_navigation' ) ) {
-  /**
-   * Add Group Navigation Items to Group Pages
-   */
+	/**
+	 * Add Group Navigation Items to Group Pages
+	 */
 	function wff_theme_group_navigation() {
 
 		if ( bp_is_group() ) :
@@ -116,9 +116,9 @@ if ( ! function_exists( 'wff_theme_mobile_member_navigation' ) ) {
 
 
 if ( ! function_exists( 'wff_theme_user_navigation' ) ) {
-  /**
-   * Add User Navigation/Notifications menus to Header Navigation
-   */
+	/**
+	 * Add User Navigation/Notifications menus to Header Navigation
+	 */
 	function wff_theme_user_navigation() {
 
 		get_template_part( 'buddypress/navigation-menu' );
@@ -130,9 +130,9 @@ if ( ! function_exists( 'wff_theme_user_navigation' ) ) {
  * Add User Navigation/Notifications menus to Sidebar for mobile
  */
 if ( ! function_exists( 'wff_theme_user_mobile_navigation' ) ) {
-  /**
-   * Add User Navigation/Notifications menus to Sidebar for mobile
-   */
+	/**
+	 * Add User Navigation/Notifications menus to Sidebar for mobile
+	 */
 	function wff_theme_user_mobile_navigation() {
 	?>
     <div class="widget bp-user-navigation-widget sidebar-member-nav">

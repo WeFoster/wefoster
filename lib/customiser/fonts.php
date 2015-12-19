@@ -3,63 +3,62 @@
  * Add a Google Font selection to the Kirki font settings.
  *
  * @since 1.0.0
- *
  */
 function wefoster_plus_google_fonts() {
 
-	$wf_google_fonts =  array (
+	$wf_google_fonts = array(
 	  'ABeeZee' =>
-	  array (
+	  array(
 	    'label' => 'ABeeZee',
 	    'variants' =>
-	    array (
+	    array(
 	      0 => 'regular',
 	      1 => 'italic',
 	    ),
 	    'subsets' =>
-	    array (
+	    array(
 	      0 => 'latin',
 	    ),
 	  ),
 	  'Abel' =>
-	  array (
+	  array(
 	    'label' => 'Abel',
 	    'variants' =>
-	    array (
+	    array(
 	      0 => 'regular',
 	    ),
 	    'subsets' =>
-	    array (
+	    array(
 	      0 => 'latin',
 	    ),
 	  ),
 	  'Amaranth' =>
-	  array (
+	  array(
 	    'label' => 'Amaranth',
 	    'variants' =>
-	    array (
+	    array(
 	      0 => 'regular',
 	      1 => 'italic',
 	      2 => '700',
 	      3 => '700italic',
 	    ),
 	    'subsets' =>
-	    array (
+	    array(
 	      0 => 'latin',
 	    ),
 	  ),
 	  'Anonymous Pro' =>
-	  array (
+	  array(
 	    'label' => 'Anonymous Pro',
 	    'variants' =>
-	    array (
+	    array(
 	      0 => 'regular',
 	      1 => 'italic',
 	      2 => '700',
 	      3 => '700italic',
 	    ),
 	    'subsets' =>
-	    array (
+	    array(
 	      0 => 'cyrillic',
 	      1 => 'latin-ext',
 	      2 => 'greek',
@@ -67,33 +66,33 @@ function wefoster_plus_google_fonts() {
 	    ),
 	  ),
 	  'Archivo Narrow' =>
-	  array (
+	  array(
 	    'label' => 'Archivo Narrow',
 	    'variants' =>
-	    array (
+	    array(
 	      0 => 'regular',
 	      1 => 'italic',
 	      2 => '700',
 	      3 => '700italic',
 	    ),
 	    'subsets' =>
-	    array (
+	    array(
 	      0 => 'latin-ext',
 	      1 => 'latin',
 	    ),
 	  ),
 	  'Arimo' =>
-	  array (
+	  array(
 	    'label' => 'Arimo',
 	    'variants' =>
-	    array (
+	    array(
 	      0 => 'regular',
 	      1 => 'italic',
 	      2 => '700',
 	      3 => '700italic',
 	    ),
 	    'subsets' =>
-	    array (
+	    array(
 	      0 => 'cyrillic',
 	      1 => 'latin-ext',
 	      2 => 'cyrillic-ext',
@@ -105,61 +104,61 @@ function wefoster_plus_google_fonts() {
 	    ),
 	  ),
 	  'Arvo' =>
-	  array (
+	  array(
 	    'label' => 'Arvo',
 	    'variants' =>
-	    array (
+	    array(
 	      0 => 'regular',
 	      1 => 'italic',
 	      2 => '700',
 	      3 => '700italic',
 	    ),
 	    'subsets' =>
-	    array (
+	    array(
 	      0 => 'latin',
 	    ),
 	  ),
 	  'Arya' =>
-	  array (
+	  array(
 	    'label' => 'Arya',
 	    'variants' =>
-	    array (
+	    array(
 	      0 => 'regular',
 	      1 => '700',
 	    ),
 	    'subsets' =>
-	    array (
+	    array(
 	      0 => 'latin-ext',
 	      1 => 'latin',
 	      2 => 'devanagari',
 	    ),
 	  ),
 	  'Bitter' =>
-	  array (
+	  array(
 	    'label' => 'Bitter',
 	    'variants' =>
-	    array (
+	    array(
 	      0 => 'regular',
 	      1 => 'italic',
 	      2 => '700',
 	    ),
 	    'subsets' =>
-	    array (
+	    array(
 	      0 => 'latin-ext',
 	      1 => 'latin',
 	    ),
 	  ),
 	  'Cardo' =>
-	  array (
+	  array(
 	    'label' => 'Cardo',
 	    'variants' =>
-	    array (
+	    array(
 	      0 => 'regular',
 	      1 => 'italic',
 	      2 => '700',
 	    ),
 	    'subsets' =>
-	    array (
+	    array(
 	      0 => 'latin-ext',
 	      1 => 'greek',
 	      2 => 'latin',
@@ -167,22 +166,22 @@ function wefoster_plus_google_fonts() {
 	    ),
 	  ),
 	  'Carme' =>
-	  array (
+	  array(
 	    'label' => 'Carme',
 	    'variants' =>
-	    array (
+	    array(
 	      0 => 'regular',
 	    ),
 	    'subsets' =>
-	    array (
+	    array(
 	      0 => 'latin',
 	    ),
 	  ),
 	  'Crimson Text' =>
-	  array (
+	  array(
 	    'label' => 'Crimson Text',
 	    'variants' =>
-	    array (
+	    array(
 	      0 => 'regular',
 	      1 => 'italic',
 	      2 => '600',
@@ -191,56 +190,56 @@ function wefoster_plus_google_fonts() {
 	      5 => '700italic',
 	    ),
 	    'subsets' =>
-	    array (
+	    array(
 	      0 => 'latin',
 	    ),
 	  ),
 	  'Donegal One' =>
-	  array (
+	  array(
 	    'label' => 'Donegal One',
 	    'variants' =>
-	    array (
+	    array(
 	      0 => 'regular',
 	    ),
 	    'subsets' =>
-	    array (
+	    array(
 	      0 => 'latin-ext',
 	      1 => 'latin',
 	    ),
 	  ),
 	  'Droid Sans' =>
-	  array (
+	  array(
 	    'label' => 'Droid Sans',
 	    'variants' =>
-	    array (
+	    array(
 	      0 => 'regular',
 	      1 => '700',
 	    ),
 	    'subsets' =>
-	    array (
+	    array(
 	      0 => 'latin',
 	    ),
 	  ),
 	  'Droid Serif' =>
-	  array (
+	  array(
 	    'label' => 'Droid Serif',
 	    'variants' =>
-	    array (
+	    array(
 	      0 => 'regular',
 	      1 => 'italic',
 	      2 => '700',
 	      3 => '700italic',
 	    ),
 	    'subsets' =>
-	    array (
+	    array(
 	      0 => 'latin',
 	    ),
 	  ),
 	  'Josefin Sans' =>
-	  array (
+	  array(
 	    'label' => 'Josefin Sans',
 	    'variants' =>
-	    array (
+	    array(
 	      0 => '100',
 	      1 => '100italic',
 	      2 => '300',
@@ -253,16 +252,16 @@ function wefoster_plus_google_fonts() {
 	      9 => '700italic',
 	    ),
 	    'subsets' =>
-	    array (
+	    array(
 	      0 => 'latin-ext',
 	      1 => 'latin',
 	    ),
 	  ),
 	  'Josefin Slab' =>
-	  array (
+	  array(
 	    'label' => 'Josefin Slab',
 	    'variants' =>
-	    array (
+	    array(
 	      0 => '100',
 	      1 => '100italic',
 	      2 => '300',
@@ -275,15 +274,15 @@ function wefoster_plus_google_fonts() {
 	      9 => '700italic',
 	    ),
 	    'subsets' =>
-	    array (
+	    array(
 	      0 => 'latin',
 	    ),
 	  ),
 	  'Lato' =>
-	  array (
+	  array(
 	    'label' => 'Lato',
 	    'variants' =>
-	    array (
+	    array(
 	      0 => '100',
 	      1 => '100italic',
 	      2 => '300',
@@ -296,48 +295,48 @@ function wefoster_plus_google_fonts() {
 	      9 => '900italic',
 	    ),
 	    'subsets' =>
-	    array (
+	    array(
 	      0 => 'latin-ext',
 	      1 => 'latin',
 	    ),
 	  ),
 	  'Libre Baskerville' =>
-	  array (
+	  array(
 	    'label' => 'Libre Baskerville',
 	    'variants' =>
-	    array (
+	    array(
 	      0 => 'regular',
 	      1 => 'italic',
 	      2 => '700',
 	    ),
 	    'subsets' =>
-	    array (
+	    array(
 	      0 => 'latin-ext',
 	      1 => 'latin',
 	    ),
 	  ),
 	  'Lora' =>
-	  array (
+	  array(
 	    'label' => 'Lora',
 	    'variants' =>
-	    array (
+	    array(
 	      0 => 'regular',
 	      1 => 'italic',
 	      2 => '700',
 	      3 => '700italic',
 	    ),
 	    'subsets' =>
-	    array (
+	    array(
 	      0 => 'cyrillic',
 	      1 => 'latin-ext',
 	      2 => 'latin',
 	    ),
 	  ),
 	  'Merriweather' =>
-	  array (
+	  array(
 	    'label' => 'Merriweather',
 	    'variants' =>
-	    array (
+	    array(
 	      0 => '300',
 	      1 => '300italic',
 	      2 => 'regular',
@@ -348,16 +347,16 @@ function wefoster_plus_google_fonts() {
 	      7 => '900italic',
 	    ),
 	    'subsets' =>
-	    array (
+	    array(
 	      0 => 'latin-ext',
 	      1 => 'latin',
 	    ),
 	  ),
 	  'Merriweather Sans' =>
-	  array (
+	  array(
 	    'label' => 'Merriweather Sans',
 	    'variants' =>
-	    array (
+	    array(
 	      0 => '300',
 	      1 => '300italic',
 	      2 => 'regular',
@@ -368,56 +367,56 @@ function wefoster_plus_google_fonts() {
 	      7 => '800italic',
 	    ),
 	    'subsets' =>
-	    array (
+	    array(
 	      0 => 'latin-ext',
 	      1 => 'latin',
 	    ),
 	  ),
 	  'Montserrat' =>
-	  array (
+	  array(
 	    'label' => 'Montserrat',
 	    'variants' =>
-	    array (
+	    array(
 	      0 => 'regular',
 	      1 => '700',
 	    ),
 	    'subsets' =>
-	    array (
+	    array(
 	      0 => 'latin',
 	    ),
 	  ),
 	  'Old Standard TT' =>
-	  array (
+	  array(
 	    'label' => 'Old Standard TT',
 	    'variants' =>
-	    array (
+	    array(
 	      0 => 'regular',
 	      1 => 'italic',
 	      2 => '700',
 	    ),
 	    'subsets' =>
-	    array (
+	    array(
 	      0 => 'latin',
 	    ),
 	  ),
 	  'Oldenburg' =>
-	  array (
+	  array(
 	    'label' => 'Oldenburg',
 	    'variants' =>
-	    array (
+	    array(
 	      0 => 'regular',
 	    ),
 	    'subsets' =>
-	    array (
+	    array(
 	      0 => 'latin-ext',
 	      1 => 'latin',
 	    ),
 	  ),
 	  'Open Sans' =>
-	  array (
+	  array(
 	    'label' => 'Open Sans',
 	    'variants' =>
-	    array (
+	    array(
 	      0 => '300',
 	      1 => '300italic',
 	      2 => 'regular',
@@ -430,7 +429,7 @@ function wefoster_plus_google_fonts() {
 	      9 => '800italic',
 	    ),
 	    'subsets' =>
-	    array (
+	    array(
 	      0 => 'cyrillic',
 	      1 => 'latin-ext',
 	      2 => 'cyrillic-ext',
@@ -441,16 +440,16 @@ function wefoster_plus_google_fonts() {
 	    ),
 	  ),
 	  'Open Sans Condensed' =>
-	  array (
+	  array(
 	    'label' => 'Open Sans Condensed',
 	    'variants' =>
-	    array (
+	    array(
 	      0 => '300',
 	      1 => '300italic',
 	      2 => '700',
 	    ),
 	    'subsets' =>
-	    array (
+	    array(
 	      0 => 'cyrillic',
 	      1 => 'latin-ext',
 	      2 => 'cyrillic-ext',
@@ -461,17 +460,17 @@ function wefoster_plus_google_fonts() {
 	    ),
 	  ),
 	  'PT Sans' =>
-	  array (
+	  array(
 	    'label' => 'PT Sans',
 	    'variants' =>
-	    array (
+	    array(
 	      0 => 'regular',
 	      1 => 'italic',
 	      2 => '700',
 	      3 => '700italic',
 	    ),
 	    'subsets' =>
-	    array (
+	    array(
 	      0 => 'cyrillic',
 	      1 => 'latin-ext',
 	      2 => 'cyrillic-ext',
@@ -479,15 +478,15 @@ function wefoster_plus_google_fonts() {
 	    ),
 	  ),
 	  'PT Sans Caption' =>
-	  array (
+	  array(
 	    'label' => 'PT Sans Caption',
 	    'variants' =>
-	    array (
+	    array(
 	      0 => 'regular',
 	      1 => '700',
 	    ),
 	    'subsets' =>
-	    array (
+	    array(
 	      0 => 'cyrillic',
 	      1 => 'latin-ext',
 	      2 => 'cyrillic-ext',
@@ -495,15 +494,15 @@ function wefoster_plus_google_fonts() {
 	    ),
 	  ),
 	  'PT Sans Narrow' =>
-	  array (
+	  array(
 	    'label' => 'PT Sans Narrow',
 	    'variants' =>
-	    array (
+	    array(
 	      0 => 'regular',
 	      1 => '700',
 	    ),
 	    'subsets' =>
-	    array (
+	    array(
 	      0 => 'cyrillic',
 	      1 => 'latin-ext',
 	      2 => 'cyrillic-ext',
@@ -511,17 +510,17 @@ function wefoster_plus_google_fonts() {
 	    ),
 	  ),
 	  'PT Serif' =>
-	  array (
+	  array(
 	    'label' => 'PT Serif',
 	    'variants' =>
-	    array (
+	    array(
 	      0 => 'regular',
 	      1 => 'italic',
 	      2 => '700',
 	      3 => '700italic',
 	    ),
 	    'subsets' =>
-	    array (
+	    array(
 	      0 => 'cyrillic',
 	      1 => 'latin-ext',
 	      2 => 'cyrillic-ext',
@@ -529,22 +528,22 @@ function wefoster_plus_google_fonts() {
 	    ),
 	  ),
 	  'Pacifico' =>
-	  array (
+	  array(
 	    'label' => 'Pacifico',
 	    'variants' =>
-	    array (
+	    array(
 	      0 => 'regular',
 	    ),
 	    'subsets' =>
-	    array (
+	    array(
 	      0 => 'latin',
 	    ),
 	  ),
 	  'Poppins' =>
-	  array (
+	  array(
 	    'label' => 'Poppins',
 	    'variants' =>
-	    array (
+	    array(
 	      0 => '300',
 	      1 => 'regular',
 	      2 => '500',
@@ -552,17 +551,17 @@ function wefoster_plus_google_fonts() {
 	      4 => '700',
 	    ),
 	    'subsets' =>
-	    array (
+	    array(
 	      0 => 'latin-ext',
 	      1 => 'latin',
 	      2 => 'devanagari',
 	    ),
 	  ),
 	  'Raleway' =>
-	  array (
+	  array(
 	    'label' => 'Raleway',
 	    'variants' =>
-	    array (
+	    array(
 	      0 => '100',
 	      1 => '200',
 	      2 => '300',
@@ -574,15 +573,15 @@ function wefoster_plus_google_fonts() {
 	      8 => '900',
 	    ),
 	    'subsets' =>
-	    array (
+	    array(
 	      0 => 'latin',
 	    ),
 	  ),
 	  'Roboto' =>
-	  array (
+	  array(
 	    'label' => 'Roboto',
 	    'variants' =>
-	    array (
+	    array(
 	      0 => '100',
 	      1 => '100italic',
 	      2 => '300',
@@ -597,7 +596,7 @@ function wefoster_plus_google_fonts() {
 	      11 => '900italic',
 	    ),
 	    'subsets' =>
-	    array (
+	    array(
 	      0 => 'cyrillic',
 	      1 => 'latin-ext',
 	      2 => 'cyrillic-ext',
@@ -608,10 +607,10 @@ function wefoster_plus_google_fonts() {
 	    ),
 	  ),
 	  'Roboto Condensed' =>
-	  array (
+	  array(
 	    'label' => 'Roboto Condensed',
 	    'variants' =>
-	    array (
+	    array(
 	      0 => '300',
 	      1 => '300italic',
 	      2 => 'regular',
@@ -620,7 +619,7 @@ function wefoster_plus_google_fonts() {
 	      5 => '700italic',
 	    ),
 	    'subsets' =>
-	    array (
+	    array(
 	      0 => 'cyrillic',
 	      1 => 'latin-ext',
 	      2 => 'cyrillic-ext',
@@ -631,10 +630,10 @@ function wefoster_plus_google_fonts() {
 	    ),
 	  ),
 	  'Roboto Mono' =>
-	  array (
+	  array(
 	    'label' => 'Roboto Mono',
 	    'variants' =>
-	    array (
+	    array(
 	      0 => '100',
 	      1 => '100italic',
 	      2 => '300',
@@ -647,7 +646,7 @@ function wefoster_plus_google_fonts() {
 	      9 => '700italic',
 	    ),
 	    'subsets' =>
-	    array (
+	    array(
 	      0 => 'cyrillic',
 	      1 => 'latin-ext',
 	      2 => 'cyrillic-ext',
@@ -658,17 +657,17 @@ function wefoster_plus_google_fonts() {
 	    ),
 	  ),
 	  'Roboto Slab' =>
-	  array (
+	  array(
 	    'label' => 'Roboto Slab',
 	    'variants' =>
-	    array (
+	    array(
 	      0 => '100',
 	      1 => '300',
 	      2 => 'regular',
 	      3 => '700',
 	    ),
 	    'subsets' =>
-	    array (
+	    array(
 	      0 => 'cyrillic',
 	      1 => 'latin-ext',
 	      2 => 'cyrillic-ext',
@@ -679,10 +678,10 @@ function wefoster_plus_google_fonts() {
 	    ),
 	  ),
 	  'Ubuntu' =>
-	  array (
+	  array(
 	    'label' => 'Ubuntu',
 	    'variants' =>
-	    array (
+	    array(
 	      0 => '300',
 	      1 => '300italic',
 	      2 => 'regular',
@@ -693,7 +692,7 @@ function wefoster_plus_google_fonts() {
 	      7 => '700italic',
 	    ),
 	    'subsets' =>
-	    array (
+	    array(
 	      0 => 'cyrillic',
 	      1 => 'latin-ext',
 	      2 => 'cyrillic-ext',
@@ -703,59 +702,56 @@ function wefoster_plus_google_fonts() {
 	    ),
 	  ),
 	  'Varela' =>
-	  array (
+	  array(
 	    'label' => 'Varela',
 	    'variants' =>
-	    array (
+	    array(
 	      0 => 'regular',
 	    ),
 	    'subsets' =>
-	    array (
+	    array(
 	      0 => 'latin-ext',
 	      1 => 'latin',
 	    ),
 	  ),
 	  'Varela Round' =>
-	  array (
+	  array(
 	    'label' => 'Varela Round',
 	    'variants' =>
-	    array (
+	    array(
 	      0 => 'regular',
 	    ),
 	    'subsets' =>
-	    array (
+	    array(
 	      0 => 'latin',
 	    ),
 	  ),
 	  'Vollkorn' =>
-	  array (
+	  array(
 	    'label' => 'Vollkorn',
 	    'variants' =>
-	    array (
+	    array(
 	      0 => 'regular',
 	      1 => 'italic',
 	      2 => '700',
 	      3 => '700italic',
 	    ),
 	    'subsets' =>
-	    array (
+	    array(
 	      0 => 'latin',
 	    ),
 	  ),
 	  '' =>
-	  array (
-	    'label' => NULL,
-	    'variants' => NULL,
-	    'subsets' => NULL,
+	  array(
+	    'label' => null,
+	    'variants' => null,
+	    'subsets' => null,
 	  ),
 	);
-
 
 	$google_fonts = $wf_google_fonts;
 
 	return $google_fonts;
 
-
-
 }
-//add_filter( 'kirki/fonts/google_fonts', 'wefoster_plus_google_fonts' );
+// add_filter( 'kirki/fonts/google_fonts', 'wefoster_plus_google_fonts' );
