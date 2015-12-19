@@ -3,27 +3,26 @@
  * Add Textures to choose from in the Customizer.
  *
  * @since 1.0.0
- *
  */
 function wefoster_plus_background_textures() {
 
-  if ( ! defined('WEFOSTER_PLUS_PLUGIN_DIR') ) {
+	if ( ! defined( 'WEFOSTER_PLUS_PLUGIN_DIR' ) ) {
 
-	$cdn = 'http://cdn.wefoster.co/textures/';
-	$bg_textures = array(
+		$cdn = 'http://cdn.wefoster.co/textures/';
+		$bg_textures = array(
 		 'none' => 'No Background',
 			$cdn . 'black_lozenge_@2X.png'  => 'Black Lozenge',
 			$cdn . 'brickwall_@2X.png'  => 'Brick Wall',
 			$cdn . 'bright_squares_@2X.png'  => 'Bright Squares',
-			$cdn . 'concrete_seamless.png'  => 'Concrete'
-	);
+			$cdn . 'concrete_seamless.png'  => 'Concrete',
+		);
 
-  return $bg_textures;
+		return $bg_textures;
 
-  } else {
-    //Load the fonts from WeFoster Plus
-    return wefoster_plus_textures();
-  }
+	} else {
+		// Load the fonts from WeFoster Plus
+		return wefoster_plus_textures();
+	}
 
 }
 
@@ -31,23 +30,22 @@ function wefoster_plus_background_textures() {
  * Add Image Effects to choose from in the Customizer.
  *
  * @since 1.0.0
- *
  */
 function wefoster_plus_image_effects() {
 
-  if ( ! defined('WEFOSTER_PLUS_PLUGIN_DIR') ) {
+	if ( ! defined( 'WEFOSTER_PLUS_PLUGIN_DIR' ) ) {
 
-	$effects = array(
+		$effects = array(
 		'default'  => 'No Effect',
-    'greyscale'  => 'Black & White',
-	);
+		'greyscale'  => 'Black & White',
+		);
 
-  return $effects;
+		return $effects;
 
-  } else {
-    //Load the fonts from WeFoster Plus
-    return wefoster_plus_effects();
-  }
+	} else {
+		// Load the fonts from WeFoster Plus
+		return wefoster_plus_effects();
+	}
 
 }
 
@@ -55,29 +53,28 @@ function wefoster_plus_image_effects() {
  * Add Background Pictures to choose from in the Customizer.
  *
  * @since 1.0.0
- *
  */
 function wefoster_plus_background_pictures() {
 
-  if ( ! defined('WEFOSTER_PLUS_PLUGIN_DIR') ) {
+	if ( ! defined( 'WEFOSTER_PLUS_PLUGIN_DIR' ) ) {
 
-	$cdn = 'http://cdn.wefoster.co/backgrounds/';
+		$cdn = 'http://cdn.wefoster.co/backgrounds/';
 
-	$bg_pictures = array(
+		$bg_pictures = array(
 		'none' => 'No Background',
 		 WEFOSTER_BODY_BACKGROUND  => 'Default',
 		 $cdn . 'autumn-desk.jpeg' => 'Black Waves by Samual Zeller',
 		 $cdn . 'appartment-grid.jpeg' => 'Apartment Grid by  Roman Kraft',
-		 $cdn . 'cape-town-dusk.jpeg' =>  'Cape Town Dusk by Fred Viljoen',
-		 $cdn . 'outlook.jpeg' =>  'Outlook by Joshua Earle'
-	);
+		 $cdn . 'cape-town-dusk.jpeg' => 'Cape Town Dusk by Fred Viljoen',
+		 $cdn . 'outlook.jpeg' => 'Outlook by Joshua Earle',
+		);
 
-  return $bg_pictures;
+		return $bg_pictures;
 
-  } else {
-    //Load the fonts from WeFoster Plus
-    return wefoster_plus_backgrounds();
-  }
+	} else {
+		// Load the fonts from WeFoster Plus
+		return wefoster_plus_backgrounds();
+	}
 
 }
 
@@ -86,7 +83,6 @@ function wefoster_plus_background_pictures() {
  * Do not KSES footer output. This is taken care of in the footer template.
  *
  * @since 1.0.0
- *
  */
 function do_not_filter_anything( $value ) {
 	return $value;

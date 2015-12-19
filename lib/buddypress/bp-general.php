@@ -3,13 +3,13 @@
  * Common BuddyPress functions
  */
 
-/**
-* Add class when it's not a BuddyPress page
-*
-* @since 1.0.0
-*
-*/
 if ( ! function_exists ( 'wff_base_wordpress_page' ) ) {
+	/**
+	* Add class when it's not a BuddyPress page
+	*
+	* @since 1.0.0
+	*
+	*/
 	function wff_base_wordpress_page( $classes )
 	{
 		if ( ! is_buddypress() && ! is_front_page() ) {
