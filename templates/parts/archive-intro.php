@@ -1,10 +1,13 @@
 <?php
+do_action('before_archive_intro');
 //Are we on a category archive?
 if ( is_category() ):
   $category_description = category_description();
   if ( !empty( $category_description ) ) {
     echo '<div class="box-intro tag-description">';
-      print $category_description;
+      do_action('open_category_description');
+        echo  $category_description ;
+      do_action('close_category_description');
     echo '</div>';
   }
 endif;
@@ -14,7 +17,9 @@ if ( is_tax() ):
   $tax_description = tag_description();
   if ( ! empty( $tax_description ) ) {
     echo '<div class="box-intro tag-description">';
+      do_action('open_tax_description');
         echo  $tax_description ;
+      do_action('close_tax_description');
     echo '</div>';
   }
 endif;
@@ -25,7 +30,9 @@ if ( is_tag() ):
   $tag_description = term_description();
       if ( ! empty( $tag_description ) ) {
       echo '<div class="box-intro tag-description">';
-          echo $tag_description ;
+        do_action('open_tag_description');
+          echo  $tag_description ;
+        do_action('close_tag_description');
       echo '</div>';
     }
 endif;
@@ -44,3 +51,4 @@ if ( is_author() ):
     rewind_posts();
   endif;
 endif;
+do_action('after_archive_intro');
