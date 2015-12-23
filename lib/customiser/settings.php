@@ -1015,7 +1015,6 @@ function wf_plus_register_settings($fields)
           )
       ));
 
-      // Posts and Pages (WordPress)
       Kirki::add_field('wefoster_plus', array(
           'type' => 'slider',
           'settings' => 'wf_plus_bp_cover_photo_height',
@@ -1323,6 +1322,16 @@ function wf_plus_register_settings($fields)
       'transport' => 'postMessage',
       'priority' => 10,
       'choices' => wefoster_plus_image_effects()
+  ));
+
+	Kirki::add_field('wefoster_plus', array(
+      'type' => 'text',
+      'settings' => 'wf_plus_excerpt_length',
+      'label' => __('Excerpt Length', 'wefoster'),
+      'description' => __('How many words should the excerpts on your Post Archive contain?', 'wefoster'),
+      'section' => 'wf_plus_archives_section',
+      'priority' => 10,
+	    'default' => 50,
   ));
 
 }

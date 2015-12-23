@@ -164,3 +164,30 @@ if ( ! function_exists( 'wff_attachment_link_class' ) ) {
 	}
 	add_filter( 'wp_get_attachment_link', 'wff_attachment_link_class', 10, 1 );
 }
+
+/**
+ * Use excerpts as smart as possible. Props Matt from WordImpress
+ * https://www.mattcromwell.com/smart-excerpts-in-wordpress-themes/
+ * @since 1.0.0
+ */
+if ( ! function_exists( 'wff_smart_excerpt' ) ) {
+		function wff_smart_excerpt() {
+				global $post;
+				$yoastdesc = get_post_meta(get_the_ID(), '_yoast_wpseo_metadesc', true);
+				$excerptlength = get_theme_mod('wf_plus_excerpt_length', 50);
+				$excerpt = get_the_excerpt();
+				$content = get_the_content();
+				$screenreader = ' <a href="' . get_permalink() . '"> <span class="screen-reader-text">' . get_the_title( ) . '</span><span class="hidden">Read More &hellip;</span>[....] <i class="fa fa-long-arrow-right"></i></a>';
+
+				if(!empty($yoastdesc)) {
+				$trimyoast = wp_trim_words($yoastdesc, $excerptlength, $screenreader);
+				echo $trimyoast;
+				} elseif(has_excerpt() == true) {
+					$trimexcerpt = wp_trim_words( $excerpt , $excerptlength, $screenreader  );
+					echo strip_shortcodes($trimexcerpt);
+				} else {
+					$trimmed_content = wp_trim_words( $content, $excerptlength, $screenreader );
+					echo strip_shortcodes($trimmed_content);
+				}
+		}
+}

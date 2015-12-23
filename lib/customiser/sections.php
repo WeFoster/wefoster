@@ -114,6 +114,13 @@ function wff_register_sections( $wp_customize ) {
 		'description' => __( 'Change the Featured Image Dimensions', 'wefoster' ),
 	) );
 
+	$wp_customize->add_section( 'wf_plus_archives_section', array(
+		'title'       => __( 'Archives', 'wefoster' ),
+		'priority'    => 10,
+		'panel'       => 'wf_plus_wordpress_panel',
+		'description' => __( 'Change how your Post Archives look', 'wefoster' ),
+	) );
+
 	// Typography
 	$wp_customize->add_section( 'wf_plus_typography_body_section', array(
 		'title'       => __( 'Global', 'wefoster' ),
