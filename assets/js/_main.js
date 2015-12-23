@@ -120,14 +120,14 @@
         jQuery('table').addClass('table table-striped');
 
         //Turn Selectbox into pretty dropdown
-        jQuery("wefoster-bootstrap-select.directory.activity #activity-filter-select select,.wefoster-bootstrap-select .last select").selectpicker({
+        jQuery("wefoster-bootstrap-select.directory.activity #activity-filter-select select,.wefoster-bootstrap-select .last select, #profile-quick-menu select").selectpicker({
           style: 'btn-hg btn-default',
           menuStyle: 'dropdown',
           container: 'body'
         });
 
 
-        jQuery(".wefoster-bootstrap-select #whats-new-post-in,.wefoster-bootstrap-select .filter select,.field-visibility select, .wefoster-bootstrap-select .messages-options-nav select,.wefoster-bootstrap-select #profile-quick-menu select,.bbp-form select").selectpicker({
+        jQuery(".wefoster-bootstrap-select #whats-new-post-in,.wefoster-bootstrap-select .filter select,.field-visibility select, .wefoster-bootstrap-select .messages-options-nav select,.bbp-form select").selectpicker({
           style: 'btn-hg btn-default',
           menuStyle: 'dropdown',
           container: 'body'
