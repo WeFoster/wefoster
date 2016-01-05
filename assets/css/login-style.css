@@ -8,7 +8,7 @@ body {
 .login #backtoblog a,
 .login #nav a,
 .login h1 a {
-  color: #ffffff;
+  color: #fff;
 }
 .login #backtoblog a:hover,
 .login #nav a:hover,
@@ -24,7 +24,7 @@ body {
   border: 1px solid #2e947a;
 }
 #loginform {
-  background: #ffffff;
+  background: #fff;
   border: 6px solid #505662;
   border-radius: 2px;
 }

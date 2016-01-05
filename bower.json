@@ -29,6 +29,7 @@
     "readmore": "~2.0.5",
     "fastclick": "~1.0.6",
     "jquery-autogrow-textarea": "~1.0.3",
-    "fitvids": "~1.1.0"
+    "fitvids": "~1.1.0",
+    "reflex-grid": "~1.0.8"
   }
 }
