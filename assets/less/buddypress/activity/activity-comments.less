@@ -3,11 +3,12 @@ div.activity-comments {
   position: relative;
   width: auto;
   clear: both;
+
   
   li.hidden {
     display: none !important;
   }
-  
+
 
   ul {
     clear: both;
@@ -17,7 +18,7 @@ div.activity-comments {
     li:last-child {
       margin-bottom: 0;
     }
-    
+
 
     li {
       background: @activity-comment-bg;
@@ -27,6 +28,7 @@ div.activity-comments {
       margin: @activity-comment-margin;
       font-size: @acitivity-comment-font-size;
       color: @activity-comment-color;
+      
       & > ul {
         background: transparent;
         margin-left: @margin-half;
@@ -36,7 +38,7 @@ div.activity-comments {
       }
     }
   }
-  
+
 
   div.acomment-avatar {
     img {
@@ -47,13 +49,13 @@ div.activity-comments {
       width: 25px;
     }
   }
-  
+
 
   div#message {
     margin-top: @margin-half;
     margin-bottom: 0;
   }
-  
+
 
   div.acomment-meta {
     color: @gray-light;
@@ -61,12 +63,12 @@ div.activity-comments {
     margin-bottom: @margin-half;
     font-weight: bold;
   }
-  
+
 
   form.root {
     margin-left: 0;
   }
-  
+
 
   form {
     .ac-textarea {
@@ -75,7 +77,7 @@ div.activity-comments {
       margin-bottom: 10px;
       padding: 8px;
     }
-    
+
 
     textarea {
       border: none;
@@ -90,28 +92,29 @@ div.activity-comments {
       margin: 0;
       width: 100%;
     }
-    
+
 
     div.ac-reply-content {
       color: @gray-light;
       margin-left: 50px;
       padding-left: @padding-half;
+      
       a {
         text-decoration: none;
       }
     }
-    
+
 
     div.ac-reply-avatar {
       float: left;
     }
-    
+
 
     input {
       margin-top: 5px;
     }
   }
-  
+
 
   li {
     form.ac-form {
@@ -119,18 +122,18 @@ div.activity-comments {
       clear: both;
     }
   }
-  
+
 
   form.ac-form {
     display: none;
     background: none repeat scroll 0 0 #fff;
+
     border-radius: 4px 4px 4px 4px;
-    
     //display: none;
     margin-top: @margin-full;
     padding: @margin-full @margin-full @padding-half @padding-half;
   }
-  
+
 
   div.acomment-content {
     font-size: 90%;

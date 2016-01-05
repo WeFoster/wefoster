@@ -14,7 +14,7 @@
 
 
     <div class="entry-summary intro-paragraph">
-    	<?php the_excerpt(); ?>
+    	<?php wff_smart_excerpt(); ?>
     </div>
 
     <?php get_template_part('templates/parts/entry-tags'); ?>

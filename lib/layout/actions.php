@@ -107,8 +107,10 @@ if ( ! function_exists( 'wff_post_thumbnail_location' ) ) {
  */
 if ( ! function_exists( 'wff_post_author_avatar' ) ) {
 	function wff_post_author_avatar() {
-
-		get_template_part( 'templates/parts/author-avatar' );
+		//Don't show avatars on pages.
+		if ( ! is_page() ) {
+				get_template_part( 'templates/parts/author-avatar' );
+		}
 	}
 	add_action( 'open_post_thumbnail', 'wff_post_author_avatar' );
 }
