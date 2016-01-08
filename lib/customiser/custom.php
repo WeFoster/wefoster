@@ -8,7 +8,7 @@ function wefoster_plus_background_textures() {
 
 	if ( ! defined( 'WEFOSTER_PLUS_PLUGIN_DIR' ) ) {
 
-		$cdn = 'http://cdn.wefoster.co/textures/';
+		$cdn = 'https://cdn.wefoster.co/textures/';
 		$bg_textures = array(
 		 'none' => 'No Background',
 			$cdn . 'black_lozenge_@2X.png'  => 'Black Lozenge',
@@ -58,7 +58,7 @@ function wefoster_plus_background_pictures() {
 
 	if ( ! defined( 'WEFOSTER_PLUS_PLUGIN_DIR' ) ) {
 
-		$cdn = 'http://cdn.wefoster.co/backgrounds/';
+		$cdn = 'https://cdn.wefoster.co/backgrounds/';
 
 		$bg_pictures = array(
 		'none' => 'No Background',
