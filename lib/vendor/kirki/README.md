@@ -4,7 +4,7 @@
 **Donate link:** http://kirki.org/  
 **Requires at least:** 4.0  
 **Tested up to:** 4.3  
-**Stable tag:** 1.0.2  
+**Stable tag:** 2.0.5  
 **License:** GPLv2 or later  
 **License URI:** http://www.gnu.org/licenses/gpl-2.0.html  
 
@@ -85,6 +85,7 @@ Feel free to improve them! :)
 * radio-buttonset
 * radio-image
 * radio
+* repeater
 * select
 * slider
 * sortable
@@ -118,9 +119,51 @@ To get an idea on how to include Kirki in your next project, you can take a look
 
 ## Changelog ##
 
-### 1.1.0 ###
+### 2.0.5 ###
 
-WIP, dev time > 130 hours
+December 23, 2015, dev time: 2.5 hours
+
+* FIX: Disabled the ajax-loading method for stylesheets. All styles are now added inline. Will be re-examined for a future release.
+* FIX: Number controls were not properly triggering changes
+* FIX: Styling for number controls
+* FIX: In some cases the dynamic CSS was added before the main stylesheet. We now add them using a priority of 999 to ensure they are enqueued afterwards.
+
+### 2.0.4 ###
+
+December 19, 2015, dev time: 3 hours
+
+* NEW: Added units support to the Typography field
+* NEW: Default methods of enqueuing styles in now inline.
+* NEW: Added 'inline_css' argument to config. set to false to add styles using AJAX.
+* FIX: HTML mode for CodeMirror now functional
+* FIX: PHP Notices when the config filter is used wrong
+* FIX: Monor bugfix for text inputs
+* FIX: Indentation & coding standards
+* FIX: failing PHPUNIT test.
+* TWEAK: Remove passing click event object
+
+### 2.0.3 ###
+
+December 6, 2015, dev time: 45 minutes
+
+* Bugfix for updates
+
+### 2.0.2 ###
+
+December 6, 2015, dev time: 30 minutes
+
+* FIX: Fatal error on update (not on new installations)
+* FIX: Typo
+
+### 2.0.1 ###
+
+December 6, 2015, dev time: 10 minutes
+
+* FIX: Some configurations were failing with the new autoloader. Reverted to a simpler file structure.
+
+### 2.0 ###
+
+December 6, 2015, dev time > 140 hours
 
 * NEW: Added support for `sanitize_callback` arguments on each item in the CSS `output`.
 * NEW: Added the ability to define an array as element in the `output`.

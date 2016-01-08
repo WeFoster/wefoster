@@ -4,7 +4,7 @@
  * Add the theme's styles.css
  */
 function kirki_demo_scripts() {
-	wp_enqueue_style( 'kirki-demo', Kirki::$url . '/demo-theme/style.css', array(), time() );
+	wp_enqueue_style( 'kirki-demo', trailingslashit( Kirki::$url ) . 'demo-theme/style.css', array(), time() );
 }
 add_action( 'wp_enqueue_scripts', 'kirki_demo_scripts' );
 
@@ -246,6 +246,9 @@ if ( class_exists( 'Kirki' ) ) {
 				'function' => 'css',
 			),
 		),
+		'choices' => array(
+			'units' => array( '%', 'rem', 'vmax' )
+		),
 	) );
 
 	Kirki::add_field( 'kirki_demo', array(
@@ -445,6 +448,7 @@ if ( class_exists( 'Kirki' ) ) {
 			'font-weight'    => true,
 			'line-height'    => true,
 			'letter-spacing' => true,
+			'units'          => array( 'px', 'rem' ),
 		),
 		'output' => array(
 			array(
