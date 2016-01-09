@@ -2,9 +2,9 @@
 # This file is distributed under the GNU General Public License v2 or later.
 msgid ""
 msgstr ""
-"Project-Id-Version: WeFoster 1\n"
+"Project-Id-Version: WeFoster 1.0\n"
 "Report-Msgid-Bugs-To: https://github.com/WeFoster/wefoster/\n"
-"POT-Creation-Date: 2016-01-07 17:02:37+00:00\n"
+"POT-Creation-Date: 2016-01-09 16:25:32+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -13,39 +13,36 @@ msgstr ""
 "Language-Team: The WeFoster Community\n"
 "X-Generator: grunt-wp-i18n 0.5.3\n"
 
-#: 404.php:16 release/wefoster/404.php:16
+#: 404.php:16
 msgid "This is pretty lame, we found nothing here!"
 msgstr ""
 
-#: 404.php:20 release/wefoster/404.php:20
+#: 404.php:20
 msgid "It looks like this was the result of either:"
 msgstr ""
 
-#: 404.php:24 release/wefoster/404.php:24
+#: 404.php:24
 msgid "a mistyped address"
 msgstr ""
 
-#: 404.php:25 release/wefoster/404.php:25
+#: 404.php:25
 msgid "an out-of-date link"
 msgstr ""
 
-#: 404.php:31 release/wefoster/404.php:31
+#: 404.php:31
 msgid "How about you try using our search form?"
 msgstr ""
 
 #: buddypress/members/profile-header.php:27
 #: buddypress/members/profile-header.php:29
-#: release/wefoster/buddypress/members/profile-header.php:29
 msgid "Quick Links"
 msgstr ""
 
 #: buddypress/members/profile-header.php:30
-#: release/wefoster/buddypress/members/profile-header.php:30
 msgid "Edit Profile"
 msgstr ""
 
 #: buddypress/members/profile-header.php:31
-#: release/wefoster/buddypress/members/profile-header.php:31
 msgid "Change Avatar"
 msgstr ""
 
@@ -54,12 +51,10 @@ msgid "Profile Visibility"
 msgstr ""
 
 #: buddypress/members/profile-header.php:34
-#: release/wefoster/buddypress/members/profile-header.php:33
 msgid "Settings"
 msgstr ""
 
 #: buddypress/members/profile-header.php:35
-#: release/wefoster/buddypress/members/profile-header.php:34
 msgid "Email and Password settings"
 msgstr ""
 
@@ -68,71 +63,59 @@ msgid "Notification Settings"
 msgstr ""
 
 #: buddypress/members/profile-header.php:37
-#: release/wefoster/buddypress/members/profile-header.php:35
-#: release/wefoster/lib/buddypress/bp-general.php:179
 msgid "Log Out"
 msgstr ""
 
 #: buddypress/navigation-menu.php:37
-#: release/wefoster/buddypress/navigation-menu.php:31
 msgid "Register"
 msgstr ""
 
 #: buddypress/navigation-menu.php:46
-#: release/wefoster/buddypress/navigation-menu.php:40
 msgid "Log In"
 msgstr ""
 
 #: buddypress/parts/cover-photo.php:18 buddypress/parts/cover-photo.php:41
-#: release/wefoster/buddypress/parts/cover-photo.php:18
-#: release/wefoster/buddypress/parts/cover-photo.php:41
 msgid "<a href='%s'><i class='fa fa-camera-retro'></i>  Change Cover Photo</a>"
 msgstr ""
 
 #: buddypress/parts/cover-photo.php:25
-#: release/wefoster/buddypress/parts/cover-photo.php:25
 msgid "<a href='%s'><i class='fa fa-camera-retro'></i>  Upload Your Cover Photo</a>"
 msgstr ""
 
 #: buddypress/parts/cover-photo.php:50
-#: release/wefoster/buddypress/parts/cover-photo.php:50
 msgid ""
 "<a href='%s'><i class='fa fa-camera-retro'></i>  Upload a Group Cover "
 "Photo</a>"
 msgstr ""
 
-#: footer.php:32 release/wefoster/footer.php:32
+#: footer.php:32
 msgid "Powered by WordPress. Theme developed by %s"
 msgstr ""
 
-#: header.php:28 release/wefoster/header.php:32
+#: header.php:28
 msgid "Skip to main content"
 msgstr ""
 
-#: header.php:30 release/wefoster/header.php:34
+#: header.php:30
 msgid ""
 "You are using an <strong>outdated</strong> browser. Please <a "
 "href=\"http://browsehappy.com/\">upgrade your browser</a> to improve your "
 "experience."
 msgstr ""
 
-#: index.php:25 release/wefoster/index.php:22 release/wefoster/search.php:19
-#: search.php:19
+#: index.php:25 search.php:19
 msgid "Sorry, no results were found."
 msgstr ""
 
-#: index.php:43 release/wefoster/index.php:42 release/wefoster/search.php:37
-#: search.php:33
+#: index.php:43 search.php:33
 msgid "&larr; Older posts"
 msgstr ""
 
-#: index.php:44 release/wefoster/index.php:43 release/wefoster/search.php:38
-#: search.php:34
+#: index.php:44 search.php:34
 msgid "Newer posts &rarr;"
 msgstr ""
 
 #: lib/buddypress/bp-hooks.php:15
-#: release/wefoster/lib/buddypress/bp-hooks.php:16
 msgid ""
 "You are filtering your newsfeed to only see <span></span>. <a href=\"#\" "
 "id=\"reset\">Click here to reset</a>"
@@ -142,192 +125,161 @@ msgstr ""
 msgid "WeFoster"
 msgstr ""
 
-#: lib/customiser/init.php:62 release/wefoster/lib/customiser/init.php:62
+#: lib/customiser/init.php:62
 msgid "Upgrade to WeFoster +"
 msgstr ""
 
-#: lib/customiser/panels.php:14 release/wefoster/lib/customiser/panels.php:14
+#: lib/customiser/panels.php:14
 msgid "Stylekit"
 msgstr ""
 
-#: lib/customiser/panels.php:15 release/wefoster/lib/customiser/panels.php:15
+#: lib/customiser/panels.php:15
 msgid "Awesome pre-made layouts"
 msgstr ""
 
-#: lib/customiser/panels.php:23 release/wefoster/lib/customiser/panels.php:23
+#: lib/customiser/panels.php:23
 msgid "Appearance"
 msgstr ""
 
-#: lib/customiser/panels.php:24 release/wefoster/lib/customiser/panels.php:24
+#: lib/customiser/panels.php:24
 msgid "Fine grained control over the appearance of your site"
 msgstr ""
 
-#: lib/customiser/panels.php:32 release/wefoster/lib/customiser/panels.php:32
+#: lib/customiser/panels.php:32
 msgid "Typography"
 msgstr ""
 
-#: lib/customiser/panels.php:33 release/wefoster/lib/customiser/panels.php:33
+#: lib/customiser/panels.php:33
 msgid "Change the font display settings."
 msgstr ""
 
-#: lib/customiser/panels.php:41 release/wefoster/lib/customiser/panels.php:41
+#: lib/customiser/panels.php:41
 msgid "BuddyPress"
 msgstr ""
 
-#: lib/customiser/panels.php:42 release/wefoster/lib/customiser/panels.php:42
+#: lib/customiser/panels.php:42
 msgid "Customize the look of your BuddyPress pages"
 msgstr ""
 
-#: lib/customiser/panels.php:51 release/wefoster/lib/customiser/panels.php:51
+#: lib/customiser/panels.php:51
 msgid "Posts & Pages"
 msgstr ""
 
-#: lib/customiser/panels.php:52 release/wefoster/lib/customiser/panels.php:52
+#: lib/customiser/panels.php:52
 msgid "Change how your posts and pages look"
 msgstr ""
 
 #: lib/customiser/sections.php:9
-#: release/wefoster/lib/customiser/sections.php:10
 msgid "Choose Stylekits"
 msgstr ""
 
 #: lib/customiser/sections.php:11 lib/customiser/sections.php:32
 #: lib/customiser/sections.php:47
-#: release/wefoster/lib/customiser/sections.php:12
-#: release/wefoster/lib/customiser/sections.php:33
-#: release/wefoster/lib/customiser/sections.php:48
 msgid "Change the way your site header looks"
 msgstr ""
 
 #: lib/customiser/sections.php:15
-#: release/wefoster/lib/customiser/sections.php:16
 msgid "Body"
 msgstr ""
 
 #: lib/customiser/sections.php:18
-#: release/wefoster/lib/customiser/sections.php:19
 msgid "This section allows you to quickly change the layout of your community."
 msgstr ""
 
 #: lib/customiser/sections.php:22
-#: release/wefoster/lib/customiser/sections.php:23
 msgid "Logo"
 msgstr ""
 
 #: lib/customiser/sections.php:25
-#: release/wefoster/lib/customiser/sections.php:26
 msgid "Choose or upload a custom logo"
 msgstr ""
 
 #: lib/customiser/sections.php:29
-#: release/wefoster/lib/customiser/sections.php:30
 msgid "Header"
 msgstr ""
 
 #: lib/customiser/sections.php:36
-#: release/wefoster/lib/customiser/sections.php:37
 msgid "Content Area"
 msgstr ""
 
 #: lib/customiser/sections.php:39
-#: release/wefoster/lib/customiser/sections.php:40
 msgid "Change the way your content area looks"
 msgstr ""
 
 #: lib/customiser/sections.php:43
-#: release/wefoster/lib/customiser/sections.php:44
 msgid "Sidebar"
 msgstr ""
 
 #: lib/customiser/sections.php:51
-#: release/wefoster/lib/customiser/sections.php:52
 msgid "Footer"
 msgstr ""
 
 #: lib/customiser/sections.php:54
-#: release/wefoster/lib/customiser/sections.php:55
 msgid "Change the way your site footer looks"
 msgstr ""
 
 #: lib/customiser/sections.php:58
-#: release/wefoster/lib/customiser/sections.php:59
 msgid "Admin Bar"
 msgstr ""
 
 #: lib/customiser/sections.php:61
-#: release/wefoster/lib/customiser/sections.php:62
 msgid "Show or Hide the Admin Bar"
 msgstr ""
 
 #: lib/customiser/sections.php:68
-#: release/wefoster/lib/customiser/sections.php:69
 msgid "General"
 msgstr ""
 
 #: lib/customiser/sections.php:71
-#: release/wefoster/lib/customiser/sections.php:72
 msgid "General BuddyPress Settings"
 msgstr ""
 
 #: lib/customiser/sections.php:75
-#: release/wefoster/lib/customiser/sections.php:77
 msgid "Members Directory"
 msgstr ""
 
 #: lib/customiser/sections.php:78
-#: release/wefoster/lib/customiser/sections.php:80
 msgid "Change the Members Directory"
 msgstr ""
 
 #: lib/customiser/sections.php:82
-#: release/wefoster/lib/customiser/sections.php:84
 msgid "Member Profiles"
 msgstr ""
 
 #: lib/customiser/sections.php:85
-#: release/wefoster/lib/customiser/sections.php:87
 msgid "Change Member Profiles"
 msgstr ""
 
 #: lib/customiser/sections.php:89
-#: release/wefoster/lib/customiser/sections.php:91
 msgid "Groups Directory"
 msgstr ""
 
 #: lib/customiser/sections.php:92
-#: release/wefoster/lib/customiser/sections.php:94
 msgid "Change the Groups Directory"
 msgstr ""
 
 #: lib/customiser/sections.php:96 lib/customiser/sections.php:99
-#: release/wefoster/lib/customiser/sections.php:98
-#: release/wefoster/lib/customiser/sections.php:101
 msgid "Single Groups"
 msgstr ""
 
 #: lib/customiser/sections.php:103
-#: release/wefoster/lib/customiser/sections.php:106
 msgid "Activity"
 msgstr ""
 
 #: lib/customiser/sections.php:106
-#: release/wefoster/lib/customiser/sections.php:109
 msgid "Change the Activity Directory"
 msgstr ""
 
 #: lib/customiser/sections.php:111 lib/customiser/settings.php:1217
-#: release/wefoster/lib/customiser/sections.php:114
-#: release/wefoster/lib/customiser/settings.php:1191
 msgid "Featured Images"
 msgstr ""
 
 #: lib/customiser/sections.php:114
-#: release/wefoster/lib/customiser/sections.php:117
 msgid "Change the Featured Image Dimensions"
 msgstr ""
 
-#: lib/customiser/sections.php:118 lib/setup/activation.php:135
-#: release/wefoster/lib/setup/activation.php:139
+#: lib/customiser/sections.php:118 lib/setup/activation.php:242
+#: lib/setup/activation.php:276
 msgid "Archives"
 msgstr ""
 
@@ -336,58 +288,46 @@ msgid "Change how your Post Archives look"
 msgstr ""
 
 #: lib/customiser/sections.php:126
-#: release/wefoster/lib/customiser/sections.php:123
 msgid "Global"
 msgstr ""
 
 #: lib/customiser/sections.php:129
-#: release/wefoster/lib/customiser/sections.php:126
 msgid "Change the Global Font Settings"
 msgstr ""
 
 #: lib/customiser/settings.php:16
-#: release/wefoster/lib/customiser/settings.php:18
 msgid "Apply Stylekit"
 msgstr ""
 
 #: lib/customiser/settings.php:17
-#: release/wefoster/lib/customiser/settings.php:19
 msgid "Choose a stylekit below..."
 msgstr ""
 
 #: lib/customiser/settings.php:27
-#: release/wefoster/lib/customiser/settings.php:30
 msgid "Instructions"
 msgstr ""
 
 #: lib/customiser/settings.php:48
-#: release/wefoster/lib/customiser/settings.php:53
 msgid "Layout Width"
 msgstr ""
 
 #: lib/customiser/settings.php:49
-#: release/wefoster/lib/customiser/settings.php:54
 msgid "Choose a layout width"
 msgstr ""
 
 #: lib/customiser/settings.php:54
-#: release/wefoster/lib/customiser/settings.php:59
 msgid "Boxed"
 msgstr ""
 
 #: lib/customiser/settings.php:55
-#: release/wefoster/lib/customiser/settings.php:60
 msgid "Fluid"
 msgstr ""
 
 #: lib/customiser/settings.php:65
-#: release/wefoster/lib/customiser/settings.php:74
 msgid "Body Background Image"
 msgstr ""
 
 #: lib/customiser/settings.php:68 lib/customiser/settings.php:679
-#: release/wefoster/lib/customiser/settings.php:77
-#: release/wefoster/lib/customiser/settings.php:671
 msgid ""
 "A beautiful background image or pattern does wonders for the look of your "
 "site. You can select one of our carefully picked photos or textures, or "
@@ -395,48 +335,36 @@ msgid ""
 msgstr ""
 
 #: lib/customiser/settings.php:71
-#: release/wefoster/lib/customiser/settings.php:80
 msgid "Upload your own image"
 msgstr ""
 
 #: lib/customiser/settings.php:72
-#: release/wefoster/lib/customiser/settings.php:81
 msgid "Choose a background image"
 msgstr ""
 
 #: lib/customiser/settings.php:73
-#: release/wefoster/lib/customiser/settings.php:82
 msgid "No Background Image"
 msgstr ""
 
 #: lib/customiser/settings.php:80 lib/customiser/settings.php:774
-#: release/wefoster/lib/customiser/settings.php:90
-#: release/wefoster/lib/customiser/settings.php:766
 msgid "Upload a background image"
 msgstr ""
 
 #: lib/customiser/settings.php:98 lib/customiser/settings.php:699
-#: release/wefoster/lib/customiser/settings.php:110
-#: release/wefoster/lib/customiser/settings.php:691
 msgid "Choose a background picture"
 msgstr ""
 
 #: lib/customiser/settings.php:100 lib/customiser/settings.php:700
-#: release/wefoster/lib/customiser/settings.php:112
-#: release/wefoster/lib/customiser/settings.php:692
 msgid ""
 "All pictures are handpicked from Unsplash.com and come with a unlimited "
 "license. This means they can be used for personal or commercial use."
 msgstr ""
 
 #: lib/customiser/settings.php:117 lib/customiser/settings.php:798
-#: release/wefoster/lib/customiser/settings.php:130
-#: release/wefoster/lib/customiser/settings.php:790
 msgid "Image Effect"
 msgstr ""
 
 #: lib/customiser/settings.php:118
-#: release/wefoster/lib/customiser/settings.php:131
 msgid ""
 "Apply an image effect to your header. Note: Some of these effects will not "
 "work on Internet Explorer. In these cases the image will be shown without "
@@ -444,47 +372,34 @@ msgid ""
 msgstr ""
 
 #: lib/customiser/settings.php:136
-#: release/wefoster/lib/customiser/settings.php:149
 msgid "Image Blur"
 msgstr ""
 
 #: lib/customiser/settings.php:137
-#: release/wefoster/lib/customiser/settings.php:150
 msgid "Blur your image."
 msgstr ""
 
 #: lib/customiser/settings.php:159 lib/customiser/settings.php:846
-#: release/wefoster/lib/customiser/settings.php:172
-#: release/wefoster/lib/customiser/settings.php:838
 msgid "Image Opacity"
 msgstr ""
 
 #: lib/customiser/settings.php:160 lib/customiser/settings.php:847
-#: release/wefoster/lib/customiser/settings.php:173
-#: release/wefoster/lib/customiser/settings.php:839
 msgid "Change the opacity of your image."
 msgstr ""
 
 #: lib/customiser/settings.php:185 lib/customiser/settings.php:816
-#: release/wefoster/lib/customiser/settings.php:200
-#: release/wefoster/lib/customiser/settings.php:808
-#: release/wefoster/lib/vendor/kirki/includes/class-kirki-toolkit.php:52
 msgid "Background Color"
 msgstr ""
 
 #: lib/customiser/settings.php:186 lib/customiser/settings.php:817
-#: release/wefoster/lib/customiser/settings.php:201
-#: release/wefoster/lib/customiser/settings.php:809
 msgid "Set a background color."
 msgstr ""
 
 #: lib/customiser/settings.php:209
-#: release/wefoster/lib/customiser/settings.php:225
 msgid "Background Pattern"
 msgstr ""
 
 #: lib/customiser/settings.php:210
-#: release/wefoster/lib/customiser/settings.php:226
 msgid ""
 "Choose from a collection of patterns taken from Subtlepaterns.com. You can "
 "achieve some great looking results by setting a background color or picture "
@@ -492,105 +407,80 @@ msgid ""
 msgstr ""
 
 #: lib/customiser/settings.php:221
-#: release/wefoster/lib/customiser/settings.php:237
 msgid "Pattern Opacity"
 msgstr ""
 
 #: lib/customiser/settings.php:222
-#: release/wefoster/lib/customiser/settings.php:238
 msgid "Change the opacity of your pattern.."
 msgstr ""
 
 #: lib/customiser/settings.php:244
-#: release/wefoster/lib/customiser/settings.php:262
 msgid "Hide Admin Bar"
 msgstr ""
 
 #: lib/customiser/settings.php:245
-#: release/wefoster/lib/customiser/settings.php:263
 msgid ""
 "Do you want to hide the WordPress Admin bar for all users except site "
 "administrators?"
 msgstr ""
 
 #: lib/customiser/settings.php:250
-#: release/wefoster/lib/customiser/settings.php:268
 msgid "Hide Adminbar for all members"
 msgstr ""
 
 #: lib/customiser/settings.php:251
-#: release/wefoster/lib/customiser/settings.php:269
 msgid "Show Adminbar to all members"
 msgstr ""
 
 #: lib/customiser/settings.php:261
-#: release/wefoster/lib/customiser/settings.php:280
 msgid "Content Width"
 msgstr ""
 
 #: lib/customiser/settings.php:262
-#: release/wefoster/lib/customiser/settings.php:281
 msgid "The size of your content area in relation to your sidebar."
 msgstr ""
 
 #: lib/customiser/settings.php:282
-#: release/wefoster/lib/customiser/settings.php:302
 msgid "Sidebar Position"
 msgstr ""
 
 #: lib/customiser/settings.php:283
-#: release/wefoster/lib/customiser/settings.php:303
 msgid "Where do you want to show the sidebar?"
 msgstr ""
 
 #: lib/customiser/settings.php:301
-#: release/wefoster/lib/customiser/settings.php:323
 msgid "Logo Type"
 msgstr ""
 
 #: lib/customiser/settings.php:302
-#: release/wefoster/lib/customiser/settings.php:324
 msgid "What type of logo do you like to display?"
 msgstr ""
 
 #: lib/customiser/settings.php:306 lib/customiser/settings.php:395
-#: release/wefoster/lib/customiser/settings.php:328
-#: release/wefoster/lib/customiser/settings.php:417
 msgid "Upload a Logo"
 msgstr ""
 
 #: lib/customiser/settings.php:307 lib/customiser/settings.php:396
-#: release/wefoster/lib/customiser/settings.php:329
-#: release/wefoster/lib/customiser/settings.php:418
 msgid "Minimal Logo Inversed"
 msgstr ""
 
 #: lib/customiser/settings.php:308 lib/customiser/settings.php:397
-#: release/wefoster/lib/customiser/settings.php:330
-#: release/wefoster/lib/customiser/settings.php:419
 msgid "Minimal Logo Regular"
 msgstr ""
 
 #: lib/customiser/settings.php:309 lib/customiser/settings.php:398
-#: release/wefoster/lib/customiser/settings.php:331
-#: release/wefoster/lib/customiser/settings.php:420
 msgid "Full Logo Inversed"
 msgstr ""
 
 #: lib/customiser/settings.php:310 lib/customiser/settings.php:399
-#: release/wefoster/lib/customiser/settings.php:332
-#: release/wefoster/lib/customiser/settings.php:421
 msgid "Full Logo Regular"
 msgstr ""
 
 #: lib/customiser/settings.php:311 lib/customiser/settings.php:400
-#: release/wefoster/lib/customiser/settings.php:333
-#: release/wefoster/lib/customiser/settings.php:422
 msgid "Text"
 msgstr ""
 
 #: lib/customiser/settings.php:312
-#: release/wefoster/lib/customiser/settings.php:334
 msgid "Hide Logo"
 msgstr ""
 
@@ -598,104 +488,77 @@ msgstr ""
 #: lib/customiser/settings.php:420 lib/customiser/settings.php:435
 #: lib/customiser/settings.php:527 lib/customiser/settings.php:587
 #: lib/customiser/settings.php:882 lib/customiser/settings.php:898
-#: release/wefoster/lib/customiser/settings.php:335
-#: release/wefoster/lib/customiser/settings.php:423
-#: release/wefoster/lib/customiser/settings.php:443
-#: release/wefoster/lib/customiser/settings.php:458
-#: release/wefoster/lib/customiser/settings.php:517
-#: release/wefoster/lib/customiser/settings.php:577
-#: release/wefoster/lib/customiser/settings.php:875
-#: release/wefoster/lib/customiser/settings.php:891
 msgid "Default"
 msgstr ""
 
 #: lib/customiser/settings.php:320
-#: release/wefoster/lib/customiser/settings.php:342
 msgid "Your Custom Logo"
 msgstr ""
 
 #: lib/customiser/settings.php:321
-#: release/wefoster/lib/customiser/settings.php:343
 msgid "Upload a custom logo for your site."
 msgstr ""
 
 #: lib/customiser/settings.php:336
-#: release/wefoster/lib/customiser/settings.php:358
 msgid "Logo Height"
 msgstr ""
 
 #: lib/customiser/settings.php:337
-#: release/wefoster/lib/customiser/settings.php:359
 msgid "Set the height of your logo"
 msgstr ""
 
 #: lib/customiser/settings.php:367
-#: release/wefoster/lib/customiser/settings.php:389
 msgid "Logo Position"
 msgstr ""
 
 #: lib/customiser/settings.php:368
-#: release/wefoster/lib/customiser/settings.php:390
 msgid "Set the position of your logo"
 msgstr ""
 
 #: lib/customiser/settings.php:390
-#: release/wefoster/lib/customiser/settings.php:412
 msgid "Mobile Logo"
 msgstr ""
 
 #: lib/customiser/settings.php:391
-#: release/wefoster/lib/customiser/settings.php:413
 msgid "What type of logo do you like to display on mobile devices?"
 msgstr ""
 
 #: lib/customiser/settings.php:411
-#: release/wefoster/lib/customiser/settings.php:434
 msgid "Header Design"
 msgstr ""
 
 #: lib/customiser/settings.php:412
-#: release/wefoster/lib/customiser/settings.php:435
 msgid "Choose a Header Design"
 msgstr ""
 
 #: lib/customiser/settings.php:413
-#: release/wefoster/lib/customiser/settings.php:436
 msgid ""
 "You can make your header as fancy as you wish. Choose between a minimal "
 "design or choose the Full Header to add some extra branding and flair to "
 "your site!"
 msgstr ""
 
-#: lib/customiser/settings.php:418
-#: release/wefoster/lib/customiser/settings.php:441
-#: stylekits/full-width/settings.php:43
+#: lib/customiser/settings.php:418 stylekits/full-width/settings.php:43
 msgid "Minimal Header"
 msgstr ""
 
-#: lib/customiser/settings.php:419
-#: release/wefoster/lib/customiser/settings.php:442
-#: stylekits/full-width/settings.php:44
+#: lib/customiser/settings.php:419 stylekits/full-width/settings.php:44
 msgid "Full Header"
 msgstr ""
 
 #: lib/customiser/settings.php:428 lib/customiser/settings.php:450
-#: release/wefoster/lib/customiser/settings.php:451
 msgid "Navigation Menu Position"
 msgstr ""
 
 #: lib/customiser/settings.php:429
-#: release/wefoster/lib/customiser/settings.php:452
 msgid "Where do you want to show your primary navigation menu?"
 msgstr ""
 
 #: lib/customiser/settings.php:433
-#: release/wefoster/lib/customiser/settings.php:456
 msgid "Above Header"
 msgstr ""
 
 #: lib/customiser/settings.php:434
-#: release/wefoster/lib/customiser/settings.php:457
 msgid "Below Header"
 msgstr ""
 
@@ -704,12 +567,10 @@ msgid "Where do you want to show your menu?"
 msgstr ""
 
 #: lib/customiser/settings.php:455 lib/customiser/settings.php:472
-#: release/wefoster/lib/vendor/kirki/includes/class-kirki-toolkit.php:106
 msgid "Left"
 msgstr ""
 
 #: lib/customiser/settings.php:456 lib/customiser/settings.php:473
-#: release/wefoster/lib/vendor/kirki/includes/class-kirki-toolkit.php:107
 msgid "Right"
 msgstr ""
 
@@ -730,135 +591,106 @@ msgid "Hidden"
 msgstr ""
 
 #: lib/customiser/settings.php:485
-#: release/wefoster/lib/customiser/settings.php:474
 msgid "Color Style"
 msgstr ""
 
 #: lib/customiser/settings.php:490
-#: release/wefoster/lib/customiser/settings.php:479
 msgid "Inversed Color"
 msgstr ""
 
 #: lib/customiser/settings.php:491
-#: release/wefoster/lib/customiser/settings.php:480
 msgid "Regular Color"
 msgstr ""
 
 #: lib/customiser/settings.php:499
-#: release/wefoster/lib/customiser/settings.php:489
 msgid "Sticky Header"
 msgstr ""
 
 #: lib/customiser/settings.php:500
-#: release/wefoster/lib/customiser/settings.php:490
 msgid "Stick your header to the top of the page?"
 msgstr ""
 
 #: lib/customiser/settings.php:504 lib/customiser/settings.php:525
-#: release/wefoster/lib/customiser/settings.php:494
-#: release/wefoster/lib/customiser/settings.php:515
 msgid "Yes"
 msgstr ""
 
 #: lib/customiser/settings.php:505 lib/customiser/settings.php:526
-#: release/wefoster/lib/customiser/settings.php:495
-#: release/wefoster/lib/customiser/settings.php:516
 msgid "No"
 msgstr ""
 
 #: lib/customiser/settings.php:520
-#: release/wefoster/lib/customiser/settings.php:510
 msgid "Hide Header on Scroll"
 msgstr ""
 
 #: lib/customiser/settings.php:521
-#: release/wefoster/lib/customiser/settings.php:511
 msgid "Hide the header when you scroll down?"
 msgstr ""
 
 #: lib/customiser/settings.php:541
-#: release/wefoster/lib/customiser/settings.php:531
 msgid "The height of your header"
 msgstr ""
 
 #: lib/customiser/settings.php:542
-#: release/wefoster/lib/customiser/settings.php:532
 msgid "Change the height of your header."
 msgstr ""
 
 #: lib/customiser/settings.php:580
-#: release/wefoster/lib/customiser/settings.php:570
 msgid "Show Site Description?"
 msgstr ""
 
 #: lib/customiser/settings.php:581
-#: release/wefoster/lib/customiser/settings.php:571
 msgid "Do you want to show the site description and title?"
 msgstr ""
 
 #: lib/customiser/settings.php:585
-#: release/wefoster/lib/customiser/settings.php:575
 msgid "Show"
 msgstr ""
 
 #: lib/customiser/settings.php:586
-#: release/wefoster/lib/customiser/settings.php:576
 msgid "Hide"
 msgstr ""
 
 #: lib/customiser/settings.php:601
-#: release/wefoster/lib/customiser/settings.php:591
 msgid "Header Text Color"
 msgstr ""
 
 #: lib/customiser/settings.php:636
-#: release/wefoster/lib/customiser/settings.php:626
 msgid "Title Font Size"
 msgstr ""
 
 #: lib/customiser/settings.php:637
-#: release/wefoster/lib/customiser/settings.php:627
 msgid "The font size of the description"
 msgstr ""
 
 #: lib/customiser/settings.php:678
-#: release/wefoster/lib/customiser/settings.php:670
 msgid "Header Background Image"
 msgstr ""
 
 #: lib/customiser/settings.php:684
-#: release/wefoster/lib/customiser/settings.php:676
 msgid "Upload a background"
 msgstr ""
 
 #: lib/customiser/settings.php:685
-#: release/wefoster/lib/customiser/settings.php:677
 msgid "Choose a Background Photo"
 msgstr ""
 
 #: lib/customiser/settings.php:686
-#: release/wefoster/lib/customiser/settings.php:678
 msgid "Choose a Background Pattern/Texture"
 msgstr ""
 
 #: lib/customiser/settings.php:722
-#: release/wefoster/lib/customiser/settings.php:714
-#: release/wefoster/lib/vendor/kirki/includes/class-kirki-toolkit.php:75
 msgid "Background Position"
 msgstr ""
 
 #: lib/customiser/settings.php:757
-#: release/wefoster/lib/customiser/settings.php:749
 msgid "Choose a background texture"
 msgstr ""
 
 #: lib/customiser/settings.php:758
-#: release/wefoster/lib/customiser/settings.php:750
 msgid "Choose a background texture or pattern to use for your header"
 msgstr ""
 
 #: lib/customiser/settings.php:799
-#: release/wefoster/lib/customiser/settings.php:791
 msgid ""
 "Apply an image effect to your background. Note: Some of these effects will "
 "not work on Internet Explorer. In these cases the image will be shown "
@@ -866,116 +698,90 @@ msgid ""
 msgstr ""
 
 #: lib/customiser/settings.php:873
-#: release/wefoster/lib/customiser/settings.php:866
 msgid "Footer Widgets"
 msgstr ""
 
 #: lib/customiser/settings.php:874
-#: release/wefoster/lib/customiser/settings.php:867
 msgid "How many widgets do you want for your footer?"
 msgstr ""
 
 #: lib/customiser/settings.php:878
-#: release/wefoster/lib/customiser/settings.php:871
 msgid "One Widget"
 msgstr ""
 
 #: lib/customiser/settings.php:879
-#: release/wefoster/lib/customiser/settings.php:872
 msgid "Two Widgets"
 msgstr ""
 
 #: lib/customiser/settings.php:880
-#: release/wefoster/lib/customiser/settings.php:873
 msgid "Three Widgets"
 msgstr ""
 
 #: lib/customiser/settings.php:881
-#: release/wefoster/lib/customiser/settings.php:874
 msgid "Four Widgets"
 msgstr ""
 
 #: lib/customiser/settings.php:890
-#: release/wefoster/lib/customiser/settings.php:883
 msgid "Footer Style"
 msgstr ""
 
 #: lib/customiser/settings.php:891
-#: release/wefoster/lib/customiser/settings.php:884
 msgid "Choose the colors for your footer"
 msgstr ""
 
 #: lib/customiser/settings.php:896
-#: release/wefoster/lib/customiser/settings.php:889
 msgid "Inversed"
 msgstr ""
 
 #: lib/customiser/settings.php:897
-#: release/wefoster/lib/customiser/settings.php:890
 msgid "Regular"
 msgstr ""
 
 #: lib/customiser/settings.php:906
-#: release/wefoster/lib/customiser/settings.php:899
 msgid "Footer Text"
 msgstr ""
 
 #: lib/customiser/settings.php:907 lib/customiser/settings.php:1102
-#: release/wefoster/lib/customiser/settings.php:900
 msgid "Change the text displayed in your footer. You can use hyperlinks as well."
 msgstr ""
 
 #: lib/customiser/settings.php:918
-#: release/wefoster/lib/customiser/settings.php:912
 msgid "Global Font Style"
 msgstr ""
 
 #: lib/customiser/settings.php:949
-#: release/wefoster/lib/customiser/settings.php:944
 msgid "Typography Control"
 msgstr ""
 
 #: lib/customiser/settings.php:986
-#: release/wefoster/lib/customiser/settings.php:980
 msgid "Cover Photos"
 msgstr ""
 
 #: lib/customiser/settings.php:987
-#: release/wefoster/lib/customiser/settings.php:981
 msgid "Do you want to set custom image sizes for your BuddyPress Cover Photos?"
 msgstr ""
 
 #: lib/customiser/settings.php:992 lib/customiser/settings.php:1223
-#: release/wefoster/lib/customiser/settings.php:986
-#: release/wefoster/lib/customiser/settings.php:1197
 msgid "No, use default sizes"
 msgstr ""
 
 #: lib/customiser/settings.php:993 lib/customiser/settings.php:1224
-#: release/wefoster/lib/customiser/settings.php:987
-#: release/wefoster/lib/customiser/settings.php:1198
 msgid "Yes, set custom image sizes"
 msgstr ""
 
 #: lib/customiser/settings.php:1001
-#: release/wefoster/lib/customiser/settings.php:995
 msgid "Cover Image Width"
 msgstr ""
 
 #: lib/customiser/settings.php:1021
-#: release/wefoster/lib/customiser/settings.php:1016
 msgid "Cover Image Height"
 msgstr ""
 
 #: lib/customiser/settings.php:1042 lib/customiser/settings.php:1318
-#: release/wefoster/lib/customiser/settings.php:1038
-#: release/wefoster/lib/customiser/settings.php:1293
 msgid "Image Effects"
 msgstr ""
 
 #: lib/customiser/settings.php:1043 lib/customiser/settings.php:1319
-#: release/wefoster/lib/customiser/settings.php:1039
-#: release/wefoster/lib/customiser/settings.php:1294
 msgid ""
 "Apply an image effect to your featured images. Note: Some of these effects "
 "will not work on Internet Explorer. In these cases the image will be shown "
@@ -983,24 +789,20 @@ msgid ""
 msgstr ""
 
 #: lib/customiser/settings.php:1054
-#: release/wefoster/lib/customiser/settings.php:1049
 msgid "Default Member Photo"
 msgstr ""
 
 #: lib/customiser/settings.php:1055
-#: release/wefoster/lib/customiser/settings.php:1050
 msgid ""
 "The default picture that is shown for new members who have not set a "
 "profile picture yet."
 msgstr ""
 
 #: lib/customiser/settings.php:1063
-#: release/wefoster/lib/customiser/settings.php:1058
 msgid "Default Group Avatar"
 msgstr ""
 
 #: lib/customiser/settings.php:1064
-#: release/wefoster/lib/customiser/settings.php:1059
 msgid ""
 "The default picture that is shown for new group who have not set a group "
 "photo yet."
@@ -1024,14 +826,10 @@ msgstr ""
 
 #: lib/customiser/settings.php:1089 lib/customiser/settings.php:1147
 #: lib/customiser/settings.php:1204
-#: release/wefoster/lib/customiser/settings.php:1073
-#: release/wefoster/lib/customiser/settings.php:1114
-#: release/wefoster/lib/customiser/settings.php:1173
 msgid "Page Title"
 msgstr ""
 
 #: lib/customiser/settings.php:1090
-#: release/wefoster/lib/customiser/settings.php:1074
 msgid "Change the title of the Members page"
 msgstr ""
 
@@ -1054,219 +852,176 @@ msgid "This is your Group Introduction text."
 msgstr ""
 
 #: lib/customiser/settings.php:1122
-#: release/wefoster/lib/customiser/settings.php:1086
 msgid "Directory Display"
 msgstr ""
 
 #: lib/customiser/settings.php:1123
-#: release/wefoster/lib/customiser/settings.php:1087
 msgid "Choose how you want your directory to look"
 msgstr ""
 
 #: lib/customiser/settings.php:1128
-#: release/wefoster/lib/customiser/settings.php:1092
 msgid "10 Members"
 msgstr ""
 
 #: lib/customiser/settings.php:1129
-#: release/wefoster/lib/customiser/settings.php:1093
 msgid "20 Members"
 msgstr ""
 
 #: lib/customiser/settings.php:1130
-#: release/wefoster/lib/customiser/settings.php:1094
 msgid "30 Members"
 msgstr ""
 
 #: lib/customiser/settings.php:1131
-#: release/wefoster/lib/customiser/settings.php:1095
 msgid "40 Members"
 msgstr ""
 
 #: lib/customiser/settings.php:1132
-#: release/wefoster/lib/customiser/settings.php:1096
 msgid "50 Members"
 msgstr ""
 
 #: lib/customiser/settings.php:1133
-#: release/wefoster/lib/customiser/settings.php:1097
 msgid "60 Members"
 msgstr ""
 
 #: lib/customiser/settings.php:1134
-#: release/wefoster/lib/customiser/settings.php:1098
 msgid "70 Members"
 msgstr ""
 
 #: lib/customiser/settings.php:1135
-#: release/wefoster/lib/customiser/settings.php:1099
 msgid "80 Members"
 msgstr ""
 
 #: lib/customiser/settings.php:1136
-#: release/wefoster/lib/customiser/settings.php:1100
 msgid "90 Members"
 msgstr ""
 
 #: lib/customiser/settings.php:1137
-#: release/wefoster/lib/customiser/settings.php:1101
 msgid "100 Members"
 msgstr ""
 
 #: lib/customiser/settings.php:1148
-#: release/wefoster/lib/customiser/settings.php:1115
 msgid "Change the title of the Groups page"
 msgstr ""
 
 #: lib/customiser/settings.php:1157
-#: release/wefoster/lib/customiser/settings.php:1125
 msgid "Groups Per Page"
 msgstr ""
 
 #: lib/customiser/settings.php:1158
-#: release/wefoster/lib/customiser/settings.php:1126
 msgid "How many Groups do you want to display per page?"
 msgstr ""
 
 #: lib/customiser/settings.php:1163
-#: release/wefoster/lib/customiser/settings.php:1131
 msgid "10 Groups"
 msgstr ""
 
 #: lib/customiser/settings.php:1164
-#: release/wefoster/lib/customiser/settings.php:1132
 msgid "20 Groups"
 msgstr ""
 
 #: lib/customiser/settings.php:1165
-#: release/wefoster/lib/customiser/settings.php:1133
 msgid "30 Groups"
 msgstr ""
 
 #: lib/customiser/settings.php:1166
-#: release/wefoster/lib/customiser/settings.php:1134
 msgid "40 Groups"
 msgstr ""
 
 #: lib/customiser/settings.php:1167
-#: release/wefoster/lib/customiser/settings.php:1135
 msgid "50 Groups"
 msgstr ""
 
 #: lib/customiser/settings.php:1168
-#: release/wefoster/lib/customiser/settings.php:1136
 msgid "60 Groups"
 msgstr ""
 
 #: lib/customiser/settings.php:1169
-#: release/wefoster/lib/customiser/settings.php:1137
 msgid "70 Groups"
 msgstr ""
 
 #: lib/customiser/settings.php:1170
-#: release/wefoster/lib/customiser/settings.php:1138
 msgid "80 Groups"
 msgstr ""
 
 #: lib/customiser/settings.php:1171
-#: release/wefoster/lib/customiser/settings.php:1139
 msgid "90 Groups"
 msgstr ""
 
 #: lib/customiser/settings.php:1172
-#: release/wefoster/lib/customiser/settings.php:1140
 msgid "100 Groups"
 msgstr ""
 
 #: lib/customiser/settings.php:1182
-#: release/wefoster/lib/customiser/settings.php:1151
 msgid "Entries Per Page"
 msgstr ""
 
 #: lib/customiser/settings.php:1183
-#: release/wefoster/lib/customiser/settings.php:1152
 msgid "How many Activity entries do you want to display by default?"
 msgstr ""
 
 #: lib/customiser/settings.php:1188
-#: release/wefoster/lib/customiser/settings.php:1157
 msgid "10 Entries"
 msgstr ""
 
 #: lib/customiser/settings.php:1189
-#: release/wefoster/lib/customiser/settings.php:1158
 msgid "20 Entries"
 msgstr ""
 
 #: lib/customiser/settings.php:1190
-#: release/wefoster/lib/customiser/settings.php:1159
 msgid "30 Entries"
 msgstr ""
 
 #: lib/customiser/settings.php:1191
-#: release/wefoster/lib/customiser/settings.php:1160
 msgid "40 Entries"
 msgstr ""
 
 #: lib/customiser/settings.php:1192
-#: release/wefoster/lib/customiser/settings.php:1161
 msgid "50 Entries"
 msgstr ""
 
 #: lib/customiser/settings.php:1193
-#: release/wefoster/lib/customiser/settings.php:1162
 msgid "60 Entries"
 msgstr ""
 
 #: lib/customiser/settings.php:1194
-#: release/wefoster/lib/customiser/settings.php:1163
 msgid "70 Entries"
 msgstr ""
 
 #: lib/customiser/settings.php:1195
-#: release/wefoster/lib/customiser/settings.php:1164
 msgid "80 Entries"
 msgstr ""
 
 #: lib/customiser/settings.php:1196
-#: release/wefoster/lib/customiser/settings.php:1165
 msgid "90 Entries"
 msgstr ""
 
 #: lib/customiser/settings.php:1197
-#: release/wefoster/lib/customiser/settings.php:1166
 msgid "100 Entries"
 msgstr ""
 
 #: lib/customiser/settings.php:1205
-#: release/wefoster/lib/customiser/settings.php:1174
 msgid "Change the title of the Activity page"
 msgstr ""
 
 #: lib/customiser/settings.php:1218
-#: release/wefoster/lib/customiser/settings.php:1192
 msgid ""
 "Do you want to set custom image sizes for your posts, pages and full width "
 "template pages?"
 msgstr ""
 
 #: lib/customiser/settings.php:1232
-#: release/wefoster/lib/customiser/settings.php:1206
 msgid "Posts/Pages Image Width"
 msgstr ""
 
 #: lib/customiser/settings.php:1253
-#: release/wefoster/lib/customiser/settings.php:1227
 msgid "Posts/Pages Image Height"
 msgstr ""
 
 #: lib/customiser/settings.php:1275
-#: release/wefoster/lib/customiser/settings.php:1250
 msgid "Full Width Page Image Width"
 msgstr ""
 
 #: lib/customiser/settings.php:1297
-#: release/wefoster/lib/customiser/settings.php:1272
 msgid "Full Width Pages Image Height"
 msgstr ""
 
@@ -1292,597 +1047,208 @@ msgid ""
 "via the WordPress customizer."
 msgstr ""
 
-#: lib/setup/activation.php:127 release/wefoster/lib/setup/activation.php:131
-#: release/wefoster/searchform.php:16 searchform.php:16
-msgid "Search"
+#: lib/setup/activation.php:108
+msgid ""
+"<p>You can use this widget to welcome new and returning visitors! Maybe "
+"tell them something about your community and why they should become a "
+"member? You can edit the text in this widget by visiting Appearance > "
+"Widgets in your WordPress Admin area.</p>\n"
+"\t\t\t<p>\n"
+"\t\t\t<a class=\"btn btn-primary\" href=\"%s\"><i class=\"fa "
+"user-plus\"></i> Join us</a> or <a class=\"btn btn-default\" href=\"%s\"><i "
+"class=\"fa fa-sign-in\"></i> Login</a></p>"
 msgstr ""
 
-#: lib/setup/activation.php:143 release/wefoster/lib/setup/activation.php:147
+#: lib/setup/activation.php:112
+msgid ""
+"<p>You can use this widget to welcome new and returning visitors! Maybe "
+"tell them something about your site? Activate BuddyPress and the rest of "
+"your widgets will be populated as well! You can edit the text in this "
+"widget by visiting Appearance > Widgets in your WordPress Admin area.</p>\n"
+"\t\t\t<p>\n"
+"\t\t\t<a class=\"btn btn-primary\" href=\"%s\">Read More About Us</a></p>"
+msgstr ""
+
+#: lib/setup/activation.php:121
+msgid "Become a Member"
+msgstr ""
+
+#: lib/setup/activation.php:132
+msgid "Welcome to our Community"
+msgstr ""
+
+#: lib/setup/activation.php:144
+msgid ""
+"<h2 class=\"box-light padding-full box-full margin-vertical-full "
+"text-align-center\">What is happening  in our community?</h2>"
+msgstr ""
+
+#: lib/setup/activation.php:160 lib/setup/activation.php:378
+msgid "Recently Active Members"
+msgstr ""
+
+#: lib/setup/activation.php:173 lib/setup/activation.php:391
+msgid "Groups"
+msgstr ""
+
+#: lib/setup/activation.php:188
+msgid "Members"
+msgstr ""
+
+#: lib/setup/activation.php:202 lib/setup/activation.php:253
+#: lib/setup/activation.php:284
 msgid "Recent Blog Posts"
 msgstr ""
 
-#: lib/setup/activation.php:154 release/wefoster/lib/setup/activation.php:158
+#: lib/setup/activation.php:212
+msgid ""
+"<h2 class=\"box-light padding-full box-full margin-vertical-full "
+"text-align-center\">Check out our most recent content</h2>"
+msgstr ""
+
+#: lib/setup/activation.php:231 lib/setup/activation.php:295
 msgid "Pages"
 msgstr ""
 
-#: lib/setup/activation.php:165 release/wefoster/lib/setup/activation.php:169
+#: lib/setup/activation.php:268 searchform.php:16
+msgid "Search"
+msgstr ""
+
+#: lib/setup/activation.php:306
 msgid "Contact Us"
 msgstr ""
 
-#: lib/setup/activation.php:166 release/wefoster/lib/setup/activation.php:170
+#: lib/setup/activation.php:307
 msgid ""
 "You can put your contact information in this widget or some information "
 "about your community. Footer content shows on every page of your site, so "
 "use this space wisely."
 msgstr ""
 
-#: lib/setup/activation.php:177 release/wefoster/lib/setup/activation.php:181
+#: lib/setup/activation.php:318
 msgid "About"
 msgstr ""
 
-#: lib/setup/activation.php:178 release/wefoster/lib/setup/activation.php:182
+#: lib/setup/activation.php:319
 msgid ""
 "What is the most important thing you want people to know about your site "
 "when their first visit? Tell them about your mission and add a link to your "
 "about page."
 msgstr ""
 
-#: lib/setup/activation.php:189 release/wefoster/lib/setup/activation.php:193
+#: lib/setup/activation.php:330
 msgid "Social Links"
 msgstr ""
 
-#: lib/setup/activation.php:190 release/wefoster/lib/setup/activation.php:194
+#: lib/setup/activation.php:331
 msgid ""
 "This could be a good place to ask people to connect with your brand on "
 "others social media platforms. Share some links and increase your exposure."
 msgstr ""
 
-#: lib/setup/activation.php:201 release/wefoster/lib/setup/activation.php:205
+#: lib/setup/activation.php:342
 msgid "Recent Posts"
 msgstr ""
 
-#: lib/setup/activation.php:202 release/wefoster/lib/setup/activation.php:206
+#: lib/setup/activation.php:343
 msgid ""
 "This would be a great place to show the most recent articles from your "
 "blog. The Recent Posts widget does exactly this."
 msgstr ""
 
-#: lib/setup/activation.php:213 lib/setup/activation.php:225
-#: release/wefoster/lib/setup/activation.php:217
-#: release/wefoster/lib/setup/activation.php:229
+#: lib/setup/activation.php:357 lib/setup/activation.php:369
 msgid "Who's Online"
 msgstr ""
 
-#: lib/setup/activation.php:234 release/wefoster/lib/setup/activation.php:238
-msgid "Recently Active Members"
-msgstr ""
-
-#: lib/setup/activation.php:247 release/wefoster/lib/setup/activation.php:251
-msgid "Groups"
-msgstr ""
-
-#: lib/setup/activation.php:262 release/wefoster/lib/setup/activation.php:266
+#: lib/setup/activation.php:406
 msgid "Topic View List"
 msgstr ""
 
-#: lib/setup/activation.php:270 release/wefoster/lib/setup/activation.php:274
+#: lib/setup/activation.php:414
 msgid "Recent Topics"
 msgstr ""
 
-#: lib/setup/activation.php:279 release/wefoster/lib/setup/activation.php:283
+#: lib/setup/activation.php:423
 msgid "Recent Replies"
 msgstr ""
 
-#: lib/setup/helpers.php:124 release/wefoster/lib/setup/helpers.php:128
+#: lib/setup/helpers.php:124
 msgid "Latest Posts"
 msgstr ""
 
-#: lib/setup/helpers.php:133 release/wefoster/lib/setup/helpers.php:137
+#: lib/setup/helpers.php:133
 msgid "Daily Archives: %s"
 msgstr ""
 
-#: lib/setup/helpers.php:135 release/wefoster/lib/setup/helpers.php:139
+#: lib/setup/helpers.php:135
 msgid "Monthly Archives: %s"
 msgstr ""
 
-#: lib/setup/helpers.php:137 release/wefoster/lib/setup/helpers.php:141
+#: lib/setup/helpers.php:137
 msgid "Yearly Archives: %s"
 msgstr ""
 
-#: lib/setup/helpers.php:140 release/wefoster/lib/setup/helpers.php:144
+#: lib/setup/helpers.php:140
 msgid "Author Archives: %s"
 msgstr ""
 
-#: lib/setup/helpers.php:145 release/wefoster/lib/setup/helpers.php:149
+#: lib/setup/helpers.php:145
 msgid "Search Results for %s"
 msgstr ""
 
-#: lib/setup/helpers.php:147 release/wefoster/lib/setup/helpers.php:151
+#: lib/setup/helpers.php:147
 msgid "Not Found"
 msgstr ""
 
-#: lib/setup/init.php:124 release/wefoster/lib/setup/init.php:114
+#: lib/setup/init.php:124
 msgid "Name"
 msgstr ""
 
-#: lib/setup/init.php:126 release/wefoster/lib/setup/init.php:116
+#: lib/setup/init.php:126
 msgid "Email"
 msgstr ""
 
-#: lib/setup/init.php:128 release/wefoster/lib/setup/init.php:118
+#: lib/setup/init.php:128
 msgid "Website"
 msgstr ""
 
-#: lib/setup/menus.php:18 release/wefoster/lib/setup/menus.php:19
+#: lib/setup/menus.php:17
 msgid "Primary Navigation"
 msgstr ""
 
-#: lib/setup/menus.php:25 release/wefoster/lib/setup/menus.php:26
+#: lib/setup/menus.php:21
 msgid "Secondary Navigation"
 msgstr ""
 
-#: release/wefoster/buddypress/activity/activity-dropdown.php:4
-msgid "Show:"
-msgstr ""
-
-#: release/wefoster/buddypress/activity/activity-dropdown.php:6
-msgid "&mdash; Everything &mdash;"
-msgstr ""
-
-#: release/wefoster/buddypress/activity/activity-tabs.php:6
-msgid "View Profile."
-msgstr ""
-
-#: release/wefoster/buddypress/activity/activity-tabs.php:14
-msgid "Activity Filters"
-msgstr ""
-
-#: release/wefoster/buddypress/activity/activity-tabs.php:19
-msgid "The public activity for everyone on this site."
-msgstr ""
-
-#: release/wefoster/buddypress/activity/activity-tabs.php:19
-msgid "All Members <span>%s</span>"
-msgstr ""
-
-#: release/wefoster/buddypress/activity/activity-tabs.php:29
-msgid "The activity of my friends only."
-msgstr ""
-
-#: release/wefoster/buddypress/activity/activity-tabs.php:29
-msgid "My Friends <span>%s</span>"
-msgstr ""
-
-#: release/wefoster/buddypress/activity/activity-tabs.php:41
-msgid "The activity of groups I am a member of."
-msgstr ""
-
-#: release/wefoster/buddypress/activity/activity-tabs.php:41
-#: release/wefoster/buddypress/groups/index.php:46
-msgid "My Groups <span>%s</span>"
-msgstr ""
-
-#: release/wefoster/buddypress/activity/activity-tabs.php:51
-msgid "The activity I've marked as a favorite."
-msgstr ""
-
-#: release/wefoster/buddypress/activity/activity-tabs.php:51
-msgid "My Favorites <span>%s</span>"
-msgstr ""
-
-#: release/wefoster/buddypress/activity/activity-tabs.php:59
-msgid "Activity that I have been mentioned in."
-msgstr ""
-
-#: release/wefoster/buddypress/activity/activity-tabs.php:59
-msgid "Mentions"
-msgstr ""
-
-#: release/wefoster/buddypress/activity/post-form.php:17
-msgid "What's new in %s, %s?"
-msgstr ""
-
-#: release/wefoster/buddypress/activity/post-form.php:19
-msgid "What's new, %s?"
-msgstr ""
-
-#: release/wefoster/buddypress/activity/post-form.php:29
-msgid "Post Update"
-msgstr ""
-
-#: release/wefoster/buddypress/activity/post-form.php:36
-msgid "Post in"
-msgstr ""
-
-#: release/wefoster/buddypress/activity/post-form.php:39
-msgid "My Profile"
-msgstr ""
-
-#: release/wefoster/buddypress/groups/index.php:43
-msgid "All Groups <span>%s</span>"
-msgstr ""
-
-#: release/wefoster/buddypress/groups/index.php:74
-msgid "Order By:"
-msgstr ""
-
-#: release/wefoster/buddypress/groups/index.php:77
-msgid "Last Active"
-msgstr ""
-
-#: release/wefoster/buddypress/groups/index.php:78
-msgid "Most Members"
-msgstr ""
-
-#: release/wefoster/buddypress/groups/index.php:79
-msgid "Newly Created"
-msgstr ""
-
-#: release/wefoster/buddypress/groups/index.php:80
-msgid "Alphabetical"
-msgstr ""
-
-#: release/wefoster/buddypress/groups/single/group-header.php:9
-msgid "active %s"
-msgstr ""
-
-#: release/wefoster/buddypress/groups/single/group-header.php:37
-msgid "Group Admins"
-msgstr ""
-
-#: release/wefoster/buddypress/groups/single/group-header.php:46
-msgid "Group Mods"
-msgstr ""
-
-#: release/wefoster/lib/buddypress/bp-general.php:116
-msgid "No new notifications."
-msgstr ""
-
-#: release/wefoster/lib/vendor/WPThumb/wpthumb.crop-from-position.php:54
-msgid "Crop Position"
-msgstr ""
-
-#: release/wefoster/lib/vendor/WPThumb/wpthumb.php:739
-msgid "WPThumb has detected a problem."
-msgstr ""
-
-#: release/wefoster/lib/vendor/WPThumb/wpthumb.php:739
-msgid "The directory <code>%s</code> is not writable."
-msgstr ""
-
-#: release/wefoster/lib/vendor/WPThumb/wpthumb.watermark.php:192
-msgid "Watermark"
-msgstr ""
-
-#: release/wefoster/lib/vendor/kirki/includes/class-kirki-toolkit.php:53
-msgid "Background Image"
-msgstr ""
-
-#: release/wefoster/lib/vendor/kirki/includes/class-kirki-toolkit.php:54
-msgid "No Repeat"
-msgstr ""
-
-#: release/wefoster/lib/vendor/kirki/includes/class-kirki-toolkit.php:55
-msgid "Repeat All"
-msgstr ""
-
-#: release/wefoster/lib/vendor/kirki/includes/class-kirki-toolkit.php:56
-msgid "Repeat Horizontally"
-msgstr ""
-
-#: release/wefoster/lib/vendor/kirki/includes/class-kirki-toolkit.php:57
-msgid "Repeat Vertically"
-msgstr ""
-
-#: release/wefoster/lib/vendor/kirki/includes/class-kirki-toolkit.php:58
-msgid "Inherit"
-msgstr ""
-
-#: release/wefoster/lib/vendor/kirki/includes/class-kirki-toolkit.php:59
-msgid "Background Repeat"
-msgstr ""
-
-#: release/wefoster/lib/vendor/kirki/includes/class-kirki-toolkit.php:60
-msgid "Cover"
-msgstr ""
-
-#: release/wefoster/lib/vendor/kirki/includes/class-kirki-toolkit.php:61
-msgid "Contain"
-msgstr ""
-
-#: release/wefoster/lib/vendor/kirki/includes/class-kirki-toolkit.php:62
-msgid "Background Size"
-msgstr ""
-
-#: release/wefoster/lib/vendor/kirki/includes/class-kirki-toolkit.php:63
-msgid "Fixed"
-msgstr ""
-
-#: release/wefoster/lib/vendor/kirki/includes/class-kirki-toolkit.php:64
-msgid "Scroll"
-msgstr ""
-
-#: release/wefoster/lib/vendor/kirki/includes/class-kirki-toolkit.php:65
-msgid "Background Attachment"
-msgstr ""
-
-#: release/wefoster/lib/vendor/kirki/includes/class-kirki-toolkit.php:66
-msgid "Left Top"
-msgstr ""
-
-#: release/wefoster/lib/vendor/kirki/includes/class-kirki-toolkit.php:67
-msgid "Left Center"
-msgstr ""
-
-#: release/wefoster/lib/vendor/kirki/includes/class-kirki-toolkit.php:68
-msgid "Left Bottom"
-msgstr ""
-
-#: release/wefoster/lib/vendor/kirki/includes/class-kirki-toolkit.php:69
-msgid "Right Top"
-msgstr ""
-
-#: release/wefoster/lib/vendor/kirki/includes/class-kirki-toolkit.php:70
-msgid "Right Center"
-msgstr ""
-
-#: release/wefoster/lib/vendor/kirki/includes/class-kirki-toolkit.php:71
-msgid "Right Bottom"
-msgstr ""
-
-#: release/wefoster/lib/vendor/kirki/includes/class-kirki-toolkit.php:72
-msgid "Center Top"
-msgstr ""
-
-#: release/wefoster/lib/vendor/kirki/includes/class-kirki-toolkit.php:73
-msgid "Center Center"
-msgstr ""
-
-#: release/wefoster/lib/vendor/kirki/includes/class-kirki-toolkit.php:74
-msgid "Center Bottom"
-msgstr ""
-
-#: release/wefoster/lib/vendor/kirki/includes/class-kirki-toolkit.php:76
-msgid "Background Opacity"
-msgstr ""
-
-#: release/wefoster/lib/vendor/kirki/includes/class-kirki-toolkit.php:77
-msgid "ON"
-msgstr ""
-
-#: release/wefoster/lib/vendor/kirki/includes/class-kirki-toolkit.php:78
-msgid "OFF"
-msgstr ""
-
-#: release/wefoster/lib/vendor/kirki/includes/class-kirki-toolkit.php:79
-msgid "All"
-msgstr ""
-
-#: release/wefoster/lib/vendor/kirki/includes/class-kirki-toolkit.php:80
-msgid "Cyrillic"
-msgstr ""
-
-#: release/wefoster/lib/vendor/kirki/includes/class-kirki-toolkit.php:81
-msgid "Cyrillic Extended"
-msgstr ""
-
-#: release/wefoster/lib/vendor/kirki/includes/class-kirki-toolkit.php:82
-msgid "Devanagari"
-msgstr ""
-
-#: release/wefoster/lib/vendor/kirki/includes/class-kirki-toolkit.php:83
-msgid "Greek"
-msgstr ""
-
-#: release/wefoster/lib/vendor/kirki/includes/class-kirki-toolkit.php:84
-msgid "Greek Extended"
-msgstr ""
-
-#: release/wefoster/lib/vendor/kirki/includes/class-kirki-toolkit.php:85
-msgid "Khmer"
-msgstr ""
-
-#: release/wefoster/lib/vendor/kirki/includes/class-kirki-toolkit.php:86
-msgid "Latin"
-msgstr ""
-
-#: release/wefoster/lib/vendor/kirki/includes/class-kirki-toolkit.php:87
-msgid "Latin Extended"
-msgstr ""
-
-#: release/wefoster/lib/vendor/kirki/includes/class-kirki-toolkit.php:88
-msgid "Vietnamese"
-msgstr ""
-
-#: release/wefoster/lib/vendor/kirki/includes/class-kirki-toolkit.php:89
-msgid "Hebrew"
-msgstr ""
-
-#: release/wefoster/lib/vendor/kirki/includes/class-kirki-toolkit.php:90
-msgid "Arabic"
-msgstr ""
-
-#: release/wefoster/lib/vendor/kirki/includes/class-kirki-toolkit.php:91
-msgid "Bengali"
-msgstr ""
-
-#: release/wefoster/lib/vendor/kirki/includes/class-kirki-toolkit.php:92
-msgid "Gujarati"
-msgstr ""
-
-#: release/wefoster/lib/vendor/kirki/includes/class-kirki-toolkit.php:93
-msgid "Tamil"
-msgstr ""
-
-#: release/wefoster/lib/vendor/kirki/includes/class-kirki-toolkit.php:94
-msgid "Telugu"
-msgstr ""
-
-#: release/wefoster/lib/vendor/kirki/includes/class-kirki-toolkit.php:95
-msgid "Thai"
-msgstr ""
-
-#: release/wefoster/lib/vendor/kirki/includes/class-kirki-toolkit.php:99
-msgid "Font Family"
-msgstr ""
-
-#: release/wefoster/lib/vendor/kirki/includes/class-kirki-toolkit.php:100
-msgid "Font Size"
-msgstr ""
-
-#: release/wefoster/lib/vendor/kirki/includes/class-kirki-toolkit.php:101
-msgid "Font Weight"
-msgstr ""
-
-#: release/wefoster/lib/vendor/kirki/includes/class-kirki-toolkit.php:102
-msgid "Line Height"
-msgstr ""
-
-#: release/wefoster/lib/vendor/kirki/includes/class-kirki-toolkit.php:103
-msgid "Letter Spacing"
-msgstr ""
-
-#: release/wefoster/lib/vendor/kirki/includes/class-kirki-toolkit.php:104
-msgid "Top"
-msgstr ""
-
-#: release/wefoster/lib/vendor/kirki/includes/class-kirki-toolkit.php:105
-msgid "Bottom"
-msgstr ""
-
-#: release/wefoster/lib/vendor/kirki/includes/controls/class-kirki-controls-repeater-control.php:34
-msgid "Add new row"
-msgstr ""
-
-#: release/wefoster/searchform.php:19 searchform.php:19
+#: searchform.php:19
 msgid "Search for:"
 msgstr ""
 
-#: release/wefoster/stylekits/boxed/settings.php:14
-#: release/wefoster/stylekits/full-width/settings.php:14
-#: release/wefoster/stylekits/minimal/settings.php:14
 #: stylekits/boxed/settings.php:14 stylekits/full-width/settings.php:14
 #: stylekits/minimal/settings.php:14
 msgid "Color Scheme"
 msgstr ""
 
-#: release/wefoster/stylekits/boxed/settings.php:19
-#: release/wefoster/stylekits/full-width/settings.php:19
-#: release/wefoster/stylekits/minimal/settings.php:19
 #: stylekits/boxed/settings.php:19 stylekits/full-width/settings.php:19
 #: stylekits/minimal/settings.php:19
 msgid "Blue"
 msgstr ""
 
-#: release/wefoster/stylekits/boxed/settings.php:20
-#: release/wefoster/stylekits/full-width/settings.php:20
-#: release/wefoster/stylekits/minimal/settings.php:20
 #: stylekits/boxed/settings.php:20 stylekits/full-width/settings.php:20
 #: stylekits/minimal/settings.php:20
 msgid "Green"
 msgstr ""
 
-#: release/wefoster/stylekits/boxed/settings.php:21
 #: stylekits/boxed/settings.php:21 stylekits/full-width/settings.php:21
 msgid "Black"
 msgstr ""
 
-#: release/wefoster/stylekits/boxed/settings.php:22
 #: stylekits/boxed/settings.php:22 stylekits/full-width/settings.php:22
 msgid "Purple"
 msgstr ""
 
-#: release/wefoster/stylekits/boxed/settings.php:23
 #: stylekits/boxed/settings.php:23 stylekits/full-width/settings.php:23
 msgid "Red"
-msgstr ""
-
-#: release/wefoster/templates/header/mobile-navigation-left.php:7
-#: templates/header/mobile-navigation-left.php:7
-msgid "Toggle Sidebar"
-msgstr ""
-
-#: release/wefoster/templates/header/mobile-navigation-right.php:6
-#: templates/header/mobile-navigation-right.php:6
-msgid "Toggle Navigation"
-msgstr ""
-
-#: release/wefoster/templates/loops/content-single.php:29
-#: templates/loops/content-single.php:19
-msgid "Pages:"
-msgstr ""
-
-#: release/wefoster/templates/loops/content-single.php:35
-#: release/wefoster/templates/parts/comments.php:69
-#: templates/loops/content-single.php:25 templates/parts/comments.php:69
-msgid "Comments are closed."
-msgstr ""
-
-#: release/wefoster/templates/parts/author-box.php:11
-#: templates/parts/author-box.php:11
-msgid "View all posts by %s"
-msgstr ""
-
-#: release/wefoster/templates/parts/comments.php:39
-#: release/wefoster/templates/parts/comments.php:53
-#: templates/parts/comments.php:39 templates/parts/comments.php:53
-msgid "Comment navigation"
-msgstr ""
-
-#: release/wefoster/templates/parts/comments.php:42
-#: templates/parts/comments.php:42
-msgid "&larr; Older Comments"
-msgstr ""
-
-#: release/wefoster/templates/parts/comments.php:43
-#: templates/parts/comments.php:43
-msgid "Newer Comments &rarr"
-msgstr ""
-
-#: release/wefoster/templates/parts/comments.php:56
-#: templates/parts/comments.php:56
-msgid "Older Comments"
-msgstr ""
-
-#: release/wefoster/templates/parts/comments.php:57
-#: templates/parts/comments.php:57
-msgid "Newer Comments"
-msgstr ""
-
-#: release/wefoster/templates/parts/entry-meta.php:22
-#: templates/parts/entry-meta.php:22
-msgid "No Comments"
-msgstr ""
-
-#: release/wefoster/templates/parts/entry-meta.php:23
-#: templates/parts/entry-meta.php:23
-msgid "1 Comment"
-msgstr ""
-
-#: release/wefoster/templates/parts/entry-meta.php:24
-#: templates/parts/entry-meta.php:24
-msgid "% Comments"
-msgstr ""
-
-#: release/wefoster/templates/parts/entry-tags.php:6
-#: templates/parts/entry-tags.php:6
-#. translators: used between list items, there is a space after the comma
-msgid ", "
-msgstr ""
-
-#: release/wefoster/templates/parts/entry-tags.php:8
-#: templates/parts/entry-tags.php:8
-msgid "Tagged %1$s"
-msgstr ""
-
-#: release/wefoster/templates/parts/page-header.php:4
-#: templates/parts/page-header.php:6
-msgid "<i class=\"fa fa-pencil edit-link\"></i>"
-msgstr ""
-
-#: release/wefoster/templates/parts/single-comment.php:19
-#: templates/parts/single-comment.php:19
-msgid "Your comment is awaiting moderation."
 msgstr ""
 
 #: stylekits/full-width/settings.php:37
@@ -1891,6 +1257,75 @@ msgstr ""
 
 #: stylekits/full-width/settings.php:42
 msgid "Full Width"
+msgstr ""
+
+#: templates/header/mobile-navigation-left.php:7
+msgid "Toggle Sidebar"
+msgstr ""
+
+#: templates/header/mobile-navigation-right.php:6
+msgid "Toggle Navigation"
+msgstr ""
+
+#: templates/loops/content-single.php:19
+msgid "Pages:"
+msgstr ""
+
+#: templates/loops/content-single.php:25 templates/parts/comments.php:69
+msgid "Comments are closed."
+msgstr ""
+
+#: templates/parts/author-box.php:11
+msgid "View all posts by %s"
+msgstr ""
+
+#: templates/parts/comments.php:39 templates/parts/comments.php:53
+msgid "Comment navigation"
+msgstr ""
+
+#: templates/parts/comments.php:42
+msgid "&larr; Older Comments"
+msgstr ""
+
+#: templates/parts/comments.php:43
+msgid "Newer Comments &rarr"
+msgstr ""
+
+#: templates/parts/comments.php:56
+msgid "Older Comments"
+msgstr ""
+
+#: templates/parts/comments.php:57
+msgid "Newer Comments"
+msgstr ""
+
+#: templates/parts/entry-meta.php:22
+msgid "No Comments"
+msgstr ""
+
+#: templates/parts/entry-meta.php:23
+msgid "1 Comment"
+msgstr ""
+
+#: templates/parts/entry-meta.php:24
+msgid "% Comments"
+msgstr ""
+
+#: templates/parts/entry-tags.php:6
+#. translators: used between list items, there is a space after the comma
+msgid ", "
+msgstr ""
+
+#: templates/parts/entry-tags.php:8
+msgid "Tagged %1$s"
+msgstr ""
+
+#: templates/parts/page-header.php:6
+msgid "<i class=\"fa fa-pencil edit-link\"></i>"
+msgstr ""
+
+#: templates/parts/single-comment.php:19
+msgid "Your comment is awaiting moderation."
 msgstr ""
 
 #. Author URI of the plugin/theme
@@ -1917,59 +1352,36 @@ msgstr ""
 msgid "Sidebar Left Page"
 msgstr ""
 
-#: lib/setup/activation.php:299 release/wefoster/lib/setup/activation.php:304
+#: lib/setup/activation.php:450 lib/setup/activation.php:480
 msgctxt "the link in the header navigation bar"
 msgid "Home"
 msgstr ""
 
-#: lib/setup/activation.php:304 release/wefoster/lib/setup/activation.php:309
+#: lib/setup/activation.php:455
 msgctxt "the link in the header navigation bar"
 msgid "Members"
 msgstr ""
 
-#: lib/setup/activation.php:309 release/wefoster/lib/setup/activation.php:314
+#: lib/setup/activation.php:460
 msgctxt "the link in the header navigation bar"
 msgid "Groups"
 msgstr ""
 
-#: lib/setup/activation.php:314 release/wefoster/lib/setup/activation.php:319
+#: lib/setup/activation.php:465
 msgctxt "the link in the header navigation bar"
 msgid "Sites"
 msgstr ""
 
-#: lib/setup/activation.php:319 release/wefoster/lib/setup/activation.php:324
+#: lib/setup/activation.php:470
 msgctxt "the link in the header navigation bar"
 msgid "Activity"
 msgstr ""
 
-#: lib/setup/init.php:144 release/wefoster/lib/setup/init.php:134
+#: lib/setup/init.php:144
 msgctxt "noun"
 msgid "Comment"
 msgstr ""
 
-#: release/wefoster/buddypress/activity/activity-tabs.php:59
-msgctxt "Number of new activity mentions"
-msgid "%s new"
-msgid_plural "%s new"
-msgstr[0] ""
-msgstr[1] ""
-
-#: release/wefoster/lib/vendor/kirki/includes/class-kirki-toolkit.php:96
-msgctxt "font style"
-msgid "Serif"
-msgstr ""
-
-#: release/wefoster/lib/vendor/kirki/includes/class-kirki-toolkit.php:97
-msgctxt "font style"
-msgid "Sans Serif"
-msgstr ""
-
-#: release/wefoster/lib/vendor/kirki/includes/class-kirki-toolkit.php:98
-msgctxt "font style"
-msgid "Monospace"
-msgstr ""
-
-#: release/wefoster/templates/parts/comments.php:29
 #: templates/parts/comments.php:29
 msgctxt "comments title"
 msgid "One thought on &ldquo;%2$s&rdquo;"
