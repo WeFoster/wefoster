@@ -55,9 +55,8 @@ if ( WEFOSTER_AUTO_SETUP == 'true'  ) {
  */
 function wff_theme_auto_create_home_page() {
 
-	$is_root_blog = function_exists( 'bp_is_root_blog' ) ? bp_is_root_blog() : is_main_site();
-	// if we're not on the root blog, do not auto create the homepage
-	if ( ! $is_root_blog ) {
+	// if we're not on the root blog , do not auto create the homepage
+	if ( !is_main_site() ) {
 		return;
 	}
 	// get frontpage ID
@@ -118,6 +117,164 @@ function wff_theme_auto_create_home_page() {
 	 * @since 1.0
 	 */
 function wf_theme_populate_sidebars() {
+
+	// Homepage Top Right
+	if ( ! WeFoster_Widget_Setter::is_sidebar_populated( 'homepage-top-right' ) ) {
+		if ( function_exists('bp_is_active') ) {
+			$welcome_text = sprintf( __( '<p>You can use this widget to welcome new and returning visitors! Maybe tell them something about your community and why they should become a member? You can edit the text in this widget by visiting Appearance > Widgets in your WordPress Admin area.</p>
+			<p>
+			<a class="btn btn-primary" href="%s"><i class="fa user-plus"></i> Join us</a> or <a class="btn btn-default" href="%s"><i class="fa fa-sign-in"></i> Login</a></p>', 'wefoster' ), bp_get_root_domain() . '/' . bp_get_signup_slug() . '/', wp_login_url() );
+		} else {
+			$welcome_text = sprintf( __( '<p>You can use this widget to welcome new and returning visitors! Maybe tell them something about your site? Activate BuddyPress and the rest of your widgets will be populated as well! You can edit the text in this widget by visiting Appearance > Widgets in your WordPress Admin area.</p>
+			<p>
+			<a class="btn btn-primary" href="%s">Read More About Us</a></p>', 'wefoster' ), get_site_url() . '/about-us' );
+		}
+
+		WeFoster_Widget_Setter::set_widget( array(
+			'id_base'    => 'text',
+			'sidebar_id' => 'homepage-top-right',
+			'settings'   => array(
+				'title' => __( 'Become a Member', 'wefoster' ),
+				'text'  => $welcome_text,
+				'filter' => false,
+			),
+		) );
+		// Pull up a random member to populate
+		$welcome_image = '<img src="https://cdn.wefoster.co/default/default-header.jpg" />';
+		WeFoster_Widget_Setter::set_widget( array(
+			'id_base'    => 'text',
+			'sidebar_id' => 'homepage-top-left',
+			'settings'   => array(
+				'title' => __( 'Welcome to our Community', 'wefoster' ),
+				'text'  => $welcome_image,
+				'filter' => false,
+			),
+		) );
+	} // End homepage-top-widget
+	// Homepage Center Widget
+
+if ( class_exists( 'BuddyPress' ) ) {
+
+	if ( ! WeFoster_Widget_Setter::is_sidebar_populated( 'homepage-center-widget' ) ) {
+
+		$center_text = sprintf( __( '<h2 class="box-brand-primary padding-full box-full margin-vertical-full text-align-center">Recent activity in our community</h2>', 'wefoster') );
+
+		WeFoster_Widget_Setter::set_widget( array(
+			'id_base'    => 'text',
+			'sidebar_id' => 'homepage-center-widget',
+			'settings'   => array(
+				'title' => '',
+				'text'  => $center_text,
+				'filter' => false,
+			),
+		) );
+
+		WeFoster_Widget_Setter::set_widget( array(
+			'id_base'    => 'bp_core_recently_active_widget',
+			'sidebar_id' => 'homepage-center-widget',
+			'settings'   => array(
+				'title' => __( 'Recently Active Members', 'wefoster' ),
+				'max_members' => 15,
+				'filter' => false,
+			),
+		) );
+	} // End homepage-center-widget
+	// Homepage Left
+	if ( ! WeFoster_Widget_Setter::is_sidebar_populated( 'homepage-left' ) ) {
+		if ( bp_is_active( 'groups' ) ) {
+			WeFoster_Widget_Setter::set_widget( array(
+				'id_base'    => 'bp_groups_widget',
+				'sidebar_id' => 'homepage-left',
+				'settings'   => array(
+					'title' => __( 'Groups', 'wefoster' ),
+					'max_groups'  => 5,
+					'link_title' => 1,
+					'group_default' => 'newest',
+					'filter' => false,
+				),
+			) );
+		}
+	} // End homepage-left
+	// Homepage Middle
+	if ( ! WeFoster_Widget_Setter::is_sidebar_populated( 'homepage-middle' ) ) {
+		WeFoster_Widget_Setter::set_widget( array(
+			'id_base'    => 'bp_core_members_widget',
+			'sidebar_id' => 'homepage-middle',
+			'settings'   => array(
+				'title' => __( 'Members', 'wefoster' ),
+				'max_members' => 5,
+				'link_title' => 1,
+				'member_default' => 'newest',
+				'filter' => false,
+			),
+		) );
+	} // End homepage-middle
+	// Homepage Right
+	if ( ! WeFoster_Widget_Setter::is_sidebar_populated( 'homepage-right' ) ) {
+			WeFoster_Widget_Setter::set_widget( array(
+				'id_base'    => 'recent-posts',
+				'sidebar_id' => 'homepage-right',
+				'settings'   => array(
+					'title' => __( 'Recent Blog Posts', 'wefoster' ),
+					'filter' => false,
+					'number' => '15'
+				),
+			) );
+	} // End homepage-right
+
+} else {
+
+	if ( ! WeFoster_Widget_Setter::is_sidebar_populated( 'homepage-center-widget' ) ) {
+		$center_text = sprintf( __( '<h2 class="box-brand-primary padding-full box-full margin-vertical-full text-align-center">Check out our most recent content</h2>', 'wefoster') );
+
+		WeFoster_Widget_Setter::set_widget( array(
+			'id_base'    => 'text',
+			'sidebar_id' => 'homepage-center-widget',
+			'settings'   => array(
+				'title' => '',
+				'text'  => $center_text,
+				'filter' => false,
+			),
+		) );
+	} // End homepage-center-widget
+
+	// Homepage Left
+	if ( ! WeFoster_Widget_Setter::is_sidebar_populated( 'homepage-left' ) ) {
+			WeFoster_Widget_Setter::set_widget( array(
+				'id_base'    => 'pages',
+				'sidebar_id' => 'homepage-left',
+				'settings'   => array(
+				'title' => __( 'Pages', 'wefoster' ),
+				'filter' => false,
+				),
+			) );
+	} // End homepage-left
+	// Homepage Middle
+	if ( ! WeFoster_Widget_Setter::is_sidebar_populated( 'homepage-middle' ) ) {
+		WeFoster_Widget_Setter::set_widget( array(
+			'id_base'    => 'archives',
+			'sidebar_id' => 'homepage-middle',
+			'settings'   => array(
+				'title' => __( 'Archives', 'wefoster' ),
+				'filter' => false,
+			),
+		) );
+	} // End homepage-middle
+	// Homepage Right
+	if ( ! WeFoster_Widget_Setter::is_sidebar_populated( 'homepage-right' ) ) {
+			WeFoster_Widget_Setter::set_widget( array(
+				'id_base'    => 'recent-posts',
+				'sidebar_id' => 'homepage-right',
+				'settings'   => array(
+					'title' => __( 'Recent Blog Posts', 'wefoster' ),
+					'filter' => false,
+				),
+			) );
+	} // End homepage-right
+
+}
+
+
 	// Blog Sidebar
 	if ( ! WeFoster_Widget_Setter::is_sidebar_populated( 'blog-sidebar' ) ) {
 		WeFoster_Widget_Setter::set_widget( array(
@@ -204,6 +361,9 @@ function wf_theme_populate_sidebars() {
 			),
 		) );
 	} // End footer-right
+
+if ( class_exists( 'BuddyPress' ) ) {
+
 	// Activity Sidebar
 	if ( ! WeFoster_Widget_Setter::is_sidebar_populated( 'activity-sidebar' ) ) {
 		WeFoster_Widget_Setter::set_widget( array(
@@ -283,6 +443,9 @@ function wf_theme_populate_sidebars() {
 			) );
 		}
 	} // End forums-sidebar
+
+}
+
 }
 
 
