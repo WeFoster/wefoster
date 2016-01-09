@@ -23,25 +23,9 @@ if ( WEFOSTER_AUTO_SETUP == 'true'  ) {
 		// auto populate menu
 		wf_theme_add_default_menu();
 
-		// automatically assign the menu
-		function wp_menu_id_by_name( $name ) {
+		$locations = get_theme_mod('nav_menu_locations');
+		set_theme_mod( 'nav_menu_locations', 'primary_navigation' );
 
-			$menus = get_terms( 'nav_menu' );
-
-			foreach ( $menus as $menu ) {
-				if ( $name === 'Primary Navigation' ) {
-					return $menu->term_id;
-				}
-			}
-
-			// Set the menu to primary menu location
-			$locations = get_theme_mod( 'nav_menu_locations' );
-			$locations['primary_navigation'] = $menu->term_id;
-
-			if ( get_terms( 'nav_menu' ) == 0 ) {
-				set_theme_mod( 'nav_menu_locations', $locations );
-			}
-		}
 	}
 	// Only assign when the theme is activated.
 	add_action( 'after_switch_theme', 'wf_theme_magic_setup' );
@@ -455,6 +439,10 @@ if ( class_exists( 'BuddyPress' ) ) {
 	 * This function is fired on 'get_header' on the frontend.
 	 */
 function wf_theme_add_default_menu() {
+	global $blog_id;
+
+	if ( function_exists( 'bp_core_get_directory_pages' ) && BP_ROOT_BLOG == $blog_id  )
+	{
 
 	// setup pages
 	$pages = array(
@@ -484,6 +472,18 @@ function wf_theme_add_default_menu() {
 		'bp_directory' => 'activity',
 	),
 	);
+
+	} else {
+		// setup pages
+		$pages = array(
+		array(
+			'title'        => _x( 'Home', 'the link in the header navigation bar', 'wefoster' ),
+			'position'     => 0,
+			'url'          => home_url( '/' ),
+		)
+		);
+	}
+
 	// register our default sub-menu
 	wf_register_default_menu( array(
 		'menu_name'  => 'Primary Navigation',
@@ -518,11 +518,7 @@ function wf_register_default_menu( $args = array() ) {
 	if ( ! is_array( $args['pages'] ) ) {
 		return false; }
 	// check BP reqs and if our custom default menu already exists
-	if (
-	function_exists( 'bp_core_get_directory_pages' ) &&
-	BP_ROOT_BLOG == $blog_id &&
-	! is_nav_menu( $args['menu_name'] )
-	) {
+	if ( ! is_nav_menu( $args['menu_name'] ) ) {
 		// menu doesn't exist, so create it
 		$menu_id = wp_create_nav_menu( $args['menu_name'] );
 		// get bp pages

@@ -8,7 +8,6 @@
 					 wp_nav_menu(array(
 							 'theme_location' => 'primary_navigation',
 							 'menu' => 'Primary Navigation',
-							 'fallback_cb'    => 'primary_navigation',
 							 'menu_class' => 'nav navbar-nav navbar-primary',
 							 'container' => false
 				 ));
