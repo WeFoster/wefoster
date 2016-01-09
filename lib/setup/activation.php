@@ -20,8 +20,10 @@ if ( WEFOSTER_AUTO_SETUP == 'true'  ) {
 		// auto sidebar population
 		wf_theme_populate_sidebars();
 
+		global $blog_id;
+
 		//Set up BuddyPress Menu
-		if ( class_exists( 'BuddyPress' ) ) {
+		if ( class_exists( 'BuddyPress' ) && BP_ROOT_BLOG == $blog_id  ) {
 				// auto populate menu
 				wf_theme_add_default_menu();
 

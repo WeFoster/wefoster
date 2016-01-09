@@ -162,3 +162,29 @@ function wff_wp_nav_menu_objects( $sorted_menu_items, $args ) {
 	return $sorted_menu_items;
 }
 add_filter( 'wp_nav_menu_objects','wff_wp_nav_menu_objects',10,2 );
+
+function wf_menu_fallback( $args ) {
+		if ( current_user_can( 'manage_options' ) ) {
+			extract( $args );
+			$fb_output = null;
+			if ( $container ) {
+				$fb_output = '<' . $container;
+				if ( $container_id )
+					$fb_output .= ' id="' . $container_id . '"';
+				if ( $container_class )
+					$fb_output .= ' class="' . $container_class . '"';
+				$fb_output .= '>';
+			}
+			$fb_output .= '<ul';
+			if ( $menu_id )
+				$fb_output .= ' id="' . $menu_id . '"';
+			if ( $menu_class )
+				$fb_output .= ' class="' . $menu_class . '"';
+			$fb_output .= '>';
+			$fb_output .= '<li><a href="' . admin_url( 'nav-menus.php' ) . '"><i class="fa fa-exclamation-circle"></i> No Menu Set. Click Here to add one.</a></li>';
+			$fb_output .= '</ul>';
+			if ( $container )
+				$fb_output .= '</' . $container . '>';
+			echo $fb_output;
+		}
+	}
