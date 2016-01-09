@@ -20,11 +20,14 @@ if ( WEFOSTER_AUTO_SETUP == 'true'  ) {
 		// auto sidebar population
 		wf_theme_populate_sidebars();
 
-		// auto populate menu
-		wf_theme_add_default_menu();
+		//Set up BuddyPress Menu
+		if ( class_exists( 'BuddyPress' ) ) {
+				// auto populate menu
+				wf_theme_add_default_menu();
 
-		$locations = get_theme_mod('nav_menu_locations');
-		set_theme_mod( 'nav_menu_locations', 'primary_navigation' );
+				$locations = get_theme_mod('nav_menu_locations');
+				set_theme_mod( 'nav_menu_locations', 'primary_navigation' );
+		}
 
 	}
 	// Only assign when the theme is activated.
