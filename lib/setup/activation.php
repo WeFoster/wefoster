@@ -157,7 +157,7 @@ if ( class_exists( 'BuddyPress' ) ) {
 
 	if ( ! WeFoster_Widget_Setter::is_sidebar_populated( 'homepage-center-widget' ) ) {
 
-		$center_text = sprintf( __( '<h2 class="box-brand-primary padding-full box-full margin-vertical-full text-align-center">Recent activity in our community</h2>', 'wefoster') );
+		$center_text = sprintf( __( '<h2 class="box-light padding-full box-full margin-vertical-full text-align-center">Recent activity in our community</h2>', 'wefoster') );
 
 		WeFoster_Widget_Setter::set_widget( array(
 			'id_base'    => 'text',
@@ -174,7 +174,7 @@ if ( class_exists( 'BuddyPress' ) ) {
 			'sidebar_id' => 'homepage-center-widget',
 			'settings'   => array(
 				'title' => __( 'Recently Active Members', 'wefoster' ),
-				'max_members' => 15,
+				'max_members' => 22,
 				'filter' => false,
 			),
 		) );
@@ -225,7 +225,7 @@ if ( class_exists( 'BuddyPress' ) ) {
 } else {
 
 	if ( ! WeFoster_Widget_Setter::is_sidebar_populated( 'homepage-center-widget' ) ) {
-		$center_text = sprintf( __( '<h2 class="box-brand-primary padding-full box-full margin-vertical-full text-align-center">Check out our most recent content</h2>', 'wefoster') );
+		$center_text = sprintf( __( '<h2 class="box-light padding-full box-full margin-vertical-full text-align-center">Check out our most recent content</h2>', 'wefoster') );
 
 		WeFoster_Widget_Setter::set_widget( array(
 			'id_base'    => 'text',
