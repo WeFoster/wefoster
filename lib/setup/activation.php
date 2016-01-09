@@ -141,7 +141,7 @@ if ( class_exists( 'BuddyPress' ) ) {
 
 	if ( ! WeFoster_Widget_Setter::is_sidebar_populated( 'homepage-center-widget' ) ) {
 
-		$center_text = sprintf( __( '<h2 class="box-light padding-full box-full margin-vertical-full text-align-center">Recent activity in our community</h2>', 'wefoster') );
+		$center_text = sprintf( __( '<h2 class="box-light padding-full box-full margin-vertical-full text-align-center">What is happening  in our community?</h2>', 'wefoster') );
 
 		WeFoster_Widget_Setter::set_widget( array(
 			'id_base'    => 'text',
