@@ -2,9 +2,9 @@
 # This file is distributed under the GNU General Public License v2 or later.
 msgid ""
 msgstr ""
-"Project-Id-Version: WeFoster 1.0\n"
+"Project-Id-Version: WeFoster 1.1.2\n"
 "Report-Msgid-Bugs-To: https://github.com/WeFoster/wefoster/\n"
-"POT-Creation-Date: 2016-01-09 16:25:32+00:00\n"
+"POT-Creation-Date: 2016-01-10 11:50:50+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -278,8 +278,8 @@ msgstr ""
 msgid "Change the Featured Image Dimensions"
 msgstr ""
 
-#: lib/customiser/sections.php:118 lib/setup/activation.php:242
-#: lib/setup/activation.php:276
+#: lib/customiser/sections.php:118 lib/setup/activation.php:247
+#: lib/setup/activation.php:281
 msgid "Archives"
 msgstr ""
 
@@ -1047,7 +1047,7 @@ msgid ""
 "via the WordPress customizer."
 msgstr ""
 
-#: lib/setup/activation.php:108
+#: lib/setup/activation.php:113
 msgid ""
 "<p>You can use this widget to welcome new and returning visitors! Maybe "
 "tell them something about your community and why they should become a "
@@ -1059,7 +1059,7 @@ msgid ""
 "class=\"fa fa-sign-in\"></i> Login</a></p>"
 msgstr ""
 
-#: lib/setup/activation.php:112
+#: lib/setup/activation.php:117
 msgid ""
 "<p>You can use this widget to welcome new and returning visitors! Maybe "
 "tell them something about your site? Activate BuddyPress and the rest of "
@@ -1069,106 +1069,106 @@ msgid ""
 "\t\t\t<a class=\"btn btn-primary\" href=\"%s\">Read More About Us</a></p>"
 msgstr ""
 
-#: lib/setup/activation.php:121
+#: lib/setup/activation.php:126
 msgid "Become a Member"
 msgstr ""
 
-#: lib/setup/activation.php:132
+#: lib/setup/activation.php:137
 msgid "Welcome to our Community"
 msgstr ""
 
-#: lib/setup/activation.php:144
+#: lib/setup/activation.php:149
 msgid ""
 "<h2 class=\"box-light padding-full box-full margin-vertical-full "
 "text-align-center\">What is happening  in our community?</h2>"
 msgstr ""
 
-#: lib/setup/activation.php:160 lib/setup/activation.php:378
+#: lib/setup/activation.php:165 lib/setup/activation.php:383
 msgid "Recently Active Members"
 msgstr ""
 
-#: lib/setup/activation.php:173 lib/setup/activation.php:391
+#: lib/setup/activation.php:178 lib/setup/activation.php:396
 msgid "Groups"
 msgstr ""
 
-#: lib/setup/activation.php:188
+#: lib/setup/activation.php:193
 msgid "Members"
 msgstr ""
 
-#: lib/setup/activation.php:202 lib/setup/activation.php:253
-#: lib/setup/activation.php:284
+#: lib/setup/activation.php:207 lib/setup/activation.php:258
+#: lib/setup/activation.php:289
 msgid "Recent Blog Posts"
 msgstr ""
 
-#: lib/setup/activation.php:212
+#: lib/setup/activation.php:217
 msgid ""
 "<h2 class=\"box-light padding-full box-full margin-vertical-full "
 "text-align-center\">Check out our most recent content</h2>"
 msgstr ""
 
-#: lib/setup/activation.php:231 lib/setup/activation.php:295
+#: lib/setup/activation.php:236 lib/setup/activation.php:300
 msgid "Pages"
 msgstr ""
 
-#: lib/setup/activation.php:268 searchform.php:16
+#: lib/setup/activation.php:273 searchform.php:16
 msgid "Search"
 msgstr ""
 
-#: lib/setup/activation.php:306
+#: lib/setup/activation.php:311
 msgid "Contact Us"
 msgstr ""
 
-#: lib/setup/activation.php:307
+#: lib/setup/activation.php:312
 msgid ""
 "You can put your contact information in this widget or some information "
 "about your community. Footer content shows on every page of your site, so "
 "use this space wisely."
 msgstr ""
 
-#: lib/setup/activation.php:318
+#: lib/setup/activation.php:323
 msgid "About"
 msgstr ""
 
-#: lib/setup/activation.php:319
+#: lib/setup/activation.php:324
 msgid ""
 "What is the most important thing you want people to know about your site "
 "when their first visit? Tell them about your mission and add a link to your "
 "about page."
 msgstr ""
 
-#: lib/setup/activation.php:330
+#: lib/setup/activation.php:335
 msgid "Social Links"
 msgstr ""
 
-#: lib/setup/activation.php:331
+#: lib/setup/activation.php:336
 msgid ""
 "This could be a good place to ask people to connect with your brand on "
 "others social media platforms. Share some links and increase your exposure."
 msgstr ""
 
-#: lib/setup/activation.php:342
+#: lib/setup/activation.php:347
 msgid "Recent Posts"
 msgstr ""
 
-#: lib/setup/activation.php:343
+#: lib/setup/activation.php:348
 msgid ""
 "This would be a great place to show the most recent articles from your "
 "blog. The Recent Posts widget does exactly this."
 msgstr ""
 
-#: lib/setup/activation.php:357 lib/setup/activation.php:369
+#: lib/setup/activation.php:362 lib/setup/activation.php:374
 msgid "Who's Online"
 msgstr ""
 
-#: lib/setup/activation.php:406
+#: lib/setup/activation.php:411
 msgid "Topic View List"
 msgstr ""
 
-#: lib/setup/activation.php:414
+#: lib/setup/activation.php:419
 msgid "Recent Topics"
 msgstr ""
 
-#: lib/setup/activation.php:423
+#: lib/setup/activation.php:428
 msgid "Recent Replies"
 msgstr ""
 
@@ -1328,16 +1328,20 @@ msgstr ""
 msgid "Your comment is awaiting moderation."
 msgstr ""
 
-#. Author URI of the plugin/theme
+#. Theme URI of the plugin/theme
 msgid "https://wefoster.co"
 msgstr ""
 
 #. Description of the plugin/theme
-msgid "Built Better Communities"
+msgid "Build Better Communities"
 msgstr ""
 
 #. Author of the plugin/theme
 msgid "The WeFoster Team"
+msgstr ""
+
+#. Author URI of the plugin/theme
+msgid "https://wefoster.co/profiles/bowefrankema/"
 msgstr ""
 
 #. Template Name of the plugin/theme
@@ -1352,27 +1356,27 @@ msgstr ""
 msgid "Sidebar Left Page"
 msgstr ""
 
-#: lib/setup/activation.php:450 lib/setup/activation.php:480
+#: lib/setup/activation.php:455 lib/setup/activation.php:485
 msgctxt "the link in the header navigation bar"
 msgid "Home"
 msgstr ""
 
-#: lib/setup/activation.php:455
+#: lib/setup/activation.php:460
 msgctxt "the link in the header navigation bar"
 msgid "Members"
 msgstr ""
 
-#: lib/setup/activation.php:460
+#: lib/setup/activation.php:465
 msgctxt "the link in the header navigation bar"
 msgid "Groups"
 msgstr ""
 
-#: lib/setup/activation.php:465
+#: lib/setup/activation.php:470
 msgctxt "the link in the header navigation bar"
 msgid "Sites"
 msgstr ""
 
-#: lib/setup/activation.php:470
+#: lib/setup/activation.php:475
 msgctxt "the link in the header navigation bar"
 msgid "Activity"
 msgstr ""
