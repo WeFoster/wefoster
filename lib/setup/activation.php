@@ -110,9 +110,10 @@ function wf_theme_populate_sidebars() {
 	// Homepage Top Right
 	if ( ! WeFoster_Widget_Setter::is_sidebar_populated( 'homepage-top-right' ) ) {
 		if ( function_exists('bp_is_active') ) {
-			$welcome_text = sprintf( __( '<p>You can use this widget to welcome new and returning visitors! Maybe tell them something about your community and why they should become a member? You can edit the text in this widget by visiting Appearance > Widgets in your WordPress Admin area.</p>
+			$welcome_text = sprintf( __( '<p>You can use this widget to welcome new and returning visitors! Maybe tell them something about your community and why they should become a member?</p>
+			<p>You can edit the text in this widget by visiting Appearance > Widgets in your WordPress Admin area.</p>
 			<p>
-			<a class="btn btn-primary" href="%s"><i class="fa user-plus"></i> Join us</a> or <a class="btn btn-default" href="%s"><i class="fa fa-sign-in"></i> Login</a></p>', 'wefoster' ), bp_get_root_domain() . '/' . bp_get_signup_slug() . '/', wp_login_url() );
+			<a class="btn btn-primary" href="%s"><i class="fa fa-user-plus"></i> Join us</a> or <a class="btn btn-default" href="%s"><i class="fa fa-sign-in"></i> Login</a></p>', 'wefoster' ), bp_get_root_domain() . '/' . bp_get_signup_slug() . '/', wp_login_url() );
 		} else {
 			$welcome_text = sprintf( __( '<p>You can use this widget to welcome new and returning visitors! Maybe tell them something about your site? Activate BuddyPress and the rest of your widgets will be populated as well! You can edit the text in this widget by visiting Appearance > Widgets in your WordPress Admin area.</p>
 			<p>
