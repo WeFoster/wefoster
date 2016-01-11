@@ -129,7 +129,7 @@ function wf_theme_populate_sidebars() {
 			),
 		) );
 		// Pull up a random member to populate
-		$welcome_image = '<img src="https://cdn.wefoster.co/default/default-header.jpg" />';
+		$welcome_image = '<img src="https://cdn.wefoster.co/default/default-header.jpg" class="box-brand-primary padding-small">';
 		WeFoster_Widget_Setter::set_widget( array(
 			'id_base'    => 'text',
 			'sidebar_id' => 'homepage-top-left',
