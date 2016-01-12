@@ -9,7 +9,7 @@
 
 ## Description ##
 
-Thousands of site owners & developers are using the WeFoster theme to built better..
+Thousands of site owners & developers are using the WeFoster theme to build better..
 
 - Membership Sites
 - Academic Commons / Learning Management Systems.
@@ -38,7 +38,7 @@ When our team sat down to create a new theme written from the ground up with Bud
 
 [See the Full Feature List](http://try.wefoster.co/default)
 
-** Built Better Communities on WeFoster.co**
+** Build Better Communities on WeFoster.co**
 
 Join our community of BuddyPress site owners and developers on [WeFoster.co](https://wefoster.co) and read our extensive documentation, get support and download WeFoster theme extensions and plugins.
 

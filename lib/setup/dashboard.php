@@ -33,7 +33,7 @@ function wff_welcome_screen_do_activation_redirect() {
   }
 
   // Delete the redirect transient
-  delete_transient( '_wf_welcome_screen_activation_redirect' );
+  delete_transient( '_wff_welcome_screen_activation_redirect' );
 
   // Bail if activating from network, or bulk
   if ( is_network_admin() || isset( $_GET['activate-multi'] ) ) {
