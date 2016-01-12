@@ -14,6 +14,7 @@ function wff_scripts() {
 	wp_deregister_style( 'bp-parent-css' );
 	wp_deregister_style( 'bp-legacy-css' );
 
+
 	// Enqueue our Main Stylesheet.
 	wp_enqueue_style( 'wff_main', $path . '/css/main.css', false, '6ee17105aaae3sffd20bb56ee840e0cabcd' );
 

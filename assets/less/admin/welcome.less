@@ -1,0 +1,70 @@
+.wf-welcome-header {
+  background-color: @brand-primary;
+  background: url( 'http://cdn.wefoster.co/dashboard/background.png' ) no-repeat;
+  background-size: cover;
+  background-position: bottom 0 right 0;
+  color: #fff;
+  margin: -20px 0 -20px -20px;
+  min-height: 250px;
+  overflow: hidden;
+  padding: 40px;
+  position: relative;
+  margin-bottom: 40px;
+  
+  h1 {
+    color: @white;
+  }
+}
+
+.screenshot .img-responsive {
+  border: 1px solid @brand-primary;
+  border-bottom: 0;
+  left: 15px;
+  margin-bottom: -44px;
+  margin-top: 2px;
+  max-width: 100%;
+  position: relative;
+}
+
+#wf-welcome-tabs {
+  bottom: 0;
+  font-size: 132%;
+  padding: 0;
+  position: absolute;
+  width: 94%;
+  border-bottom: 0;
+  
+  li {
+    text-align: center;
+    
+    a {
+      background: rgba(0, 0, 0, 0.22) none repeat scroll 0 0;
+      border: 1px solid #494d54;
+      color: #ffffff;
+      margin-right: 10px;
+      padding: 15px 30px;
+    }
+
+    &.active a {
+      font-weight: bold;
+      background: @white;
+      color: #222;
+    }
+
+    &.wefoster-plus-tab {
+      margin-right: 26px;
+      width: 26%;
+      
+      a {
+        background: #5BC0DE;
+        font-weight: bold;
+      }
+
+      &.active a {
+        background: @brand-secondary;
+        font-weight: bold;
+        color: @white;
+      }
+    }
+  }
+}

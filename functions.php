@@ -55,6 +55,7 @@ require_once WEFOSTER_THEME_DIR . '/lib/setup/scripts.php';          // Scripts 
 require_once WEFOSTER_THEME_DIR . '/lib/setup/menus.php';            // BP Menu Walker
 require_once WEFOSTER_THEME_DIR . '/lib/setup/sidebars.php';         // BP Sidebars
 require_once WEFOSTER_THEME_DIR . '/lib/setup/activation.php';       // Automagically set up widgets and homepage
+require_once WEFOSTER_THEME_DIR . '/lib/setup/dashboard.php';          // Helper functions
 require_once WEFOSTER_THEME_DIR . '/lib/setup/shortcodes.php';             // Initial theme setup
 require_once WEFOSTER_THEME_DIR . '/lib/setup/helpers.php';          // Helper functions
 
