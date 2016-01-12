@@ -14,15 +14,24 @@
   h1 {
     color: @white;
   }
+
+  p {
+    color: #c9c5c5;
+    font-size: 110%;
+    line-height: 165%;
+    margin-top: 30px;
+  }
 }
 
 .screenshot .img-responsive {
-  border: 1px solid @brand-primary;
-  border-bottom: 0;
+  background: #323437 none repeat scroll 0 0;
+  border: 1px solid #4d4c4c;
+  border-radius: 6px 6px 0 0;
   left: 15px;
   margin-bottom: -44px;
   margin-top: 2px;
   max-width: 100%;
+  padding: 3px 3px 0;
   position: relative;
 }
 
@@ -46,7 +55,7 @@
     }
 
     &.active a {
-      font-weight: bold;
+      font-weight: normal;
       background: @white;
       color: #222;
     }
@@ -58,6 +67,7 @@
       a {
         background: #5BC0DE;
         font-weight: bold;
+        border: 0;
       }
 
       &.active a {

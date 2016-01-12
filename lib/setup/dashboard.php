@@ -22,13 +22,13 @@ add_action( 'admin_enqueue_scripts', 'wff_enqueue_admin_scripts' );
 
 
 function wff_welcome_screen_activate() {
-  set_transient( '_wf_welcome_screen_activation_redirect', true, 30 );
+  set_transient( '_wff_welcome_screen_activation_redirect', true, 30 );
 }
 add_action( 'after_switch_theme', 'wff_welcome_screen_activate' );
 
 function wff_welcome_screen_do_activation_redirect() {
   // Bail if no activation redirect
-    if ( ! get_transient( '_wf_welcome_screen_activation_redirect' ) ) {
+    if ( ! get_transient( '_wff_welcome_screen_activation_redirect' ) ) {
     return;
   }
 

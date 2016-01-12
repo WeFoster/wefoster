@@ -6814,13 +6814,21 @@ _:-ms-fullscreen,
 .wf-welcome-header h1 {
   color: #ffffff;
 }
+.wf-welcome-header p {
+  color: #c9c5c5;
+  font-size: 110%;
+  line-height: 165%;
+  margin-top: 30px;
+}
 .screenshot .img-responsive {
-  border: 1px solid #454a54;
-  border-bottom: 0;
+  background: #323437 none repeat scroll 0 0;
+  border: 1px solid #4d4c4c;
+  border-radius: 6px 6px 0 0;
   left: 15px;
   margin-bottom: -44px;
   margin-top: 2px;
   max-width: 100%;
+  padding: 3px 3px 0;
   position: relative;
 }
 #wf-welcome-tabs {
@@ -6842,7 +6850,7 @@ _:-ms-fullscreen,
   padding: 15px 30px;
 }
 #wf-welcome-tabs li.active a {
-  font-weight: bold;
+  font-weight: normal;
   background: #ffffff;
   color: #222;
 }
@@ -6853,6 +6861,7 @@ _:-ms-fullscreen,
 #wf-welcome-tabs li.wefoster-plus-tab a {
   background: #5BC0DE;
   font-weight: bold;
+  border: 0;
 }
 #wf-welcome-tabs li.wefoster-plus-tab.active a {
   background: #28a587;
