@@ -3,7 +3,6 @@
   top: 50%;
   transform: translateY(-50%);
 }
-
 //
 //Branding Classes
 //
@@ -13,6 +12,10 @@
   border-top: @box-light-border-top;
   border-bottom: @box-light-border-bottom;
   
+  svg {
+    background: @box-light-background;
+  }
+
   a,
   a:hover {
     color: contrast(@box-light-background, @text-color, @white);
@@ -42,6 +45,10 @@
     color: contrast(@brand-secondary, @text-color, @white);
   }
 
+  svg {
+    background: @brand-secondary;
+  }
+
   img {
     background: darken(@brand-secondary, 3%) !important;
     border-color: lighten(@brand-secondary, 2%) !important;
@@ -61,6 +68,10 @@
   color: contrast(@brand-primary, @text-color, @white);
   border-color: darken(@brand-primary, 4%) !important;
   
+  svg {
+    background: @brand-primary;
+  }
+
   a,
   a:hover {
     color: contrast(@brand-primary, @text-color, @white);
@@ -85,6 +96,10 @@
   color: contrast(@brand-complimentary, @text-color, @white);
   border-color: darken(@brand-complimentary, 4%) !important;
   
+  svg {
+    background: @brand-complimentary;
+  }
+
   a,
   a:hover {
     color: contrast(@brand-complimentary, @text-color, @white);
@@ -103,7 +118,6 @@
     background: lighten(@brand-complimentary, 3%) !important;
   }
 }
-
 // Mixins
 .responsive(@maxWidth; @rules) {
   @media only screen and (max-width: @maxWidth) {

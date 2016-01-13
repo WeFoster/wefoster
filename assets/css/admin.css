@@ -6294,6 +6294,9 @@ _:-ms-fullscreen,
   border-top: 1px solid #f2f2f2;
   border-bottom: 1px solid #f0f0f0;
 }
+.box-light svg {
+  background: #fafafa;
+}
 .box-light a,
 .box-light a:hover {
   color: #343434;
@@ -6317,6 +6320,9 @@ _:-ms-fullscreen,
 .box-brand-secondary a:hover {
   color: #ffffff;
 }
+.box-brand-secondary svg {
+  background: #28a587;
+}
 .box-brand-secondary img {
   background: #25997d !important;
   border-color: #2aad8e !important;
@@ -6331,6 +6337,9 @@ _:-ms-fullscreen,
   background: #454a54;
   color: #ffffff;
   border-color: #3c4049 !important;
+}
+.box-brand-primary svg {
+  background: #454a54;
 }
 .box-brand-primary a,
 .box-brand-primary a:hover {
@@ -6350,6 +6359,9 @@ _:-ms-fullscreen,
   background: #3abb9a;
   color: #ffffff;
   border-color: #35ab8d !important;
+}
+.box-brand-complimentary svg {
+  background: #3abb9a;
 }
 .box-brand-complimentary a,
 .box-brand-complimentary a:hover {
@@ -6902,6 +6914,21 @@ _:-ms-fullscreen,
   padding-bottom: 12px;
   padding-top: 12px;
   width: 46%;
+}
+.media-container svg {
+  height: auto;
+  margin: -30px -35px -35px;
+  padding: 33px;
+  width: 100%;
+}
+.media-container svg g {
+  fill: tranparent;
+  stroke: #FFF;
+  stroke-width: 1.5px;
+}
+.about-wrap.wefoster-welcome {
+  max-width: 100%;
+  width: auto;
 }
 .appearance_page_wefoster-welcome a {
   border-bottom: 0;
