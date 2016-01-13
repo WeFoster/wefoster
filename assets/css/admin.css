@@ -6903,11 +6903,11 @@ _:-ms-fullscreen,
   padding-top: 12px;
   width: 46%;
 }
-.dashboard_page_wefoster-welcome a {
+.appearance_page_wefoster-welcome a {
   border-bottom: 0;
   text-decoration: none;
 }
-.dashboard_page_wefoster-welcome .update-nag {
+.appearance_page_wefoster-welcome .update-nag {
   display: none;
 }
 

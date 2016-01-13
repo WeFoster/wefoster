@@ -5,7 +5,7 @@
 function wf_admin_welcome_css() {
 
 	$screen = get_current_screen();
-	if (is_object($screen) && $screen->id == 'dashboard_page_wefoster-welcome') {
+	if (is_object($screen) && $screen->id == 'appearance_page_wefoster-welcome') {
 
 		// Register path
 		$path = get_template_directory_uri() . '/assets';
@@ -42,21 +42,23 @@ function wff_welcome_screen_do_activation_redirect() {
   }
 
   // Redirect to WeFoster Welcome Page
-  wp_safe_redirect( add_query_arg( array( 'page' => 'wefoster-welcome' ), admin_url( 'index.php' ) ) );
+  wp_safe_redirect( add_query_arg( array( 'page' => 'wefoster-welcome' ), admin_url( 'themes.php' ) ) );
 
 }
 add_action( 'admin_init', 'wff_welcome_screen_do_activation_redirect' );
 
-add_action('admin_menu', 'wff_welcome_screen_pages');
+
 function wff_welcome_screen_pages() {
-  add_dashboard_page(
-    'Thank you for using the WeFoster Theme',
-    'Thank you for using the WeFoster Theme',
-    'read',
-    'wefoster-welcome',
-    'wff_welcome_wefoster_content'
-  );
+	add_submenu_page(
+				'themes.php',
+				__( 'Getting Started', 'wefoster' ),
+				__( 'Getting Started', 'buddypress' ),
+				'manage_options',
+				'wefoster-welcome',
+				'wff_welcome_wefoster_content'
+			);
 }
+add_action('admin_menu', 'wff_welcome_screen_pages');
 
 function wff_welcome_wefoster_content() {
 	require_once WEFOSTER_THEME_DIR . '/lib/setup/dashboard-templates/index.php';
@@ -65,7 +67,7 @@ function wff_welcome_wefoster_content() {
 function wff_welcome_screen_remove_menus() {
     remove_submenu_page( 'index.php', 'wefoster-welcome' );
 }
-add_action( 'admin_head', 'wff_welcome_screen_remove_menus' );
+//add_action( 'admin_head', 'wff_welcome_screen_remove_menus' );
 
 // Grab the latest posts from our community via a REST API or transient.
 function wff_get_community_posts() {
