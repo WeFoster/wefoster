@@ -1,5 +1,3 @@
-<h2>Four steps to launching your succesful community!</h2>
-
 <div class="feature-section two-col">
   <div class="col">
     <div class="media-container">

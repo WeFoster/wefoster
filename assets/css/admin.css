@@ -6800,7 +6800,8 @@ _:-ms-fullscreen,
 }
 .wf-welcome-header {
   background-color: #454a54;
-  background: url('http://cdn.wefoster.co/dashboard/background.png') no-repeat;
+  background-image: url('http://cdn.wefoster.co/dashboard/background.png');
+  background-repeat: no-repeat;
   background-size: cover;
   background-position: bottom 0 right 0;
   color: #fff;
@@ -6854,19 +6855,53 @@ _:-ms-fullscreen,
   background: #ffffff;
   color: #222;
 }
-#wf-welcome-tabs li.wefoster-plus-tab {
-  margin-right: 26px;
-  width: 26%;
-}
 #wf-welcome-tabs li.wefoster-plus-tab a {
   background: #5BC0DE;
   font-weight: bold;
-  border: 0;
 }
 #wf-welcome-tabs li.wefoster-plus-tab.active a {
   background: #28a587;
   font-weight: bold;
   color: #ffffff;
+}
+.wf-grid {
+  padding: 0;
+  margin: 0;
+}
+.wf-inner-grid {
+  background: #fff none repeat scroll 0 0;
+  border: 1px solid #ddd;
+  border-radius: 3px;
+  padding: 15px;
+}
+.wf-admin-intro {
+  font-size: 105%;
+  font-style: italic;
+  margin-top: -40px;
+}
+.wf-admin-box {
+  line-height: 147%;
+  margin-bottom: 30px;
+  padding: 30px 20px;
+  background: #fff none repeat scroll 0 0;
+  border-bottom: 4px solid #ededed;
+}
+.wf-admin-box.wf-plus {
+  background: #28a587;
+  color: #ffffff;
+}
+.wf-doc-list {
+  list-style: none;
+  margin: 0;
+  overflow: hidden;
+}
+.wf-doc-list li {
+  border-bottom: 1px solid #f7f7f7;
+  float: left;
+  margin-right: 40px;
+  padding-bottom: 12px;
+  padding-top: 12px;
+  width: 46%;
 }
 .dashboard_page_wefoster-welcome a {
   border-bottom: 0;

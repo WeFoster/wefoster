@@ -1,4 +1,6 @@
-<h2>Take Your Community To The Next Level</h2>
+<div class="wf-admin-intro wf-admin-box wf-plus">
+	Staying up to date about community news, plugin & theme updates and articles/tutorials to improve your site is always a smart idea. There are countless blogs dedicated to writing about WordPress and BuddyPress, and as a site owner it’s important to know about what’s happening in the (developer) community.
+</div>
 
 <div class="feature-section two-col">
 			<div class="col">
