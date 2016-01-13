@@ -7,7 +7,7 @@
 <ul class="wf-doc-list wf-admin-box">
   <?php
   // Grab Some Recent Posts
-  $posts = wff_get_developer_docs();
+  $posts = wff_get_theme_docs();
 
   if( empty( $posts ) ) {
       return;
@@ -28,7 +28,7 @@
 <ul class="wf-doc-list wf-admin-box">
 <?php
 // Grab Some Recent Posts
-$posts = wff_get_theme_docs();
+$posts = wff_get_developer_docs();
 
 if( empty( $posts ) ) {
     return;
