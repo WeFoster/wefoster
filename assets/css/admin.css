@@ -6876,6 +6876,17 @@ _:-ms-fullscreen,
   font-weight: bold;
   color: #ffffff;
 }
+.wf-getting-started h3 {
+  font-weight: 900;
+}
+.wf-getting-started span {
+  color: #767676;
+  font-weight: 500;
+}
+.wf-getting-started .col-sm-9 p {
+  font-size: 16px;
+  font-weight: 200;
+}
 .wf-grid {
   padding: 0;
   margin: 0;
@@ -6916,9 +6927,9 @@ _:-ms-fullscreen,
   width: 46%;
 }
 .media-container svg {
-  height: auto;
+  height: 200px;
   margin: -30px -35px -35px;
-  padding: 33px;
+  padding: 15px 30px;
   width: 100%;
 }
 .media-container svg g {
@@ -6929,6 +6940,9 @@ _:-ms-fullscreen,
 .about-wrap.wefoster-welcome {
   max-width: 100%;
   width: auto;
+}
+.about-wrap.wefoster-welcome h3 {
+  margin-top: 0;
 }
 .appearance_page_wefoster-welcome a {
   border-bottom: 0;

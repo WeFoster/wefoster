@@ -29,7 +29,7 @@
 
   <!-- Tab panes -->
   <div class="tab-content">
-    <div role="tabpanel" class="tab-pane active" id="whats-new">
+    <div role="tabpanel" class="tab-pane active wf-getting-started" id="whats-new">
 			<?php get_template_part( 'lib/setup/dashboard-templates/get-started' );?>
 		</div>
     <div role="tabpanel" class="tab-pane" id="credits">
