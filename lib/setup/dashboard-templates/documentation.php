@@ -5,31 +5,22 @@
 <h2 class="box-light padding-half margin-bottom-none">Site Owner Documentation</h2>
 
 <ul class="wf-doc-list wf-admin-box">
-<?php
-// Grab Some Recent Posts
-$response = wp_remote_get('https://documentation.wefoster.co/wp-json/wp/v2/wpkb-article?filter[taxonomy]=wpkb-category&filter[term]=wefoster-theme');
+  <?php
+  // Grab Some Recent Posts
+  $posts = wff_get_developer_docs();
 
-if ( is_wp_error( $response ) ) {
-	return;
-}
-	$posts = json_decode( wp_remote_retrieve_body( $response ) );
-
-if ( empty( $posts ) ) {
-	return;
-}
-
-if ( ! empty( $posts ) ) {
-
-	foreach ( $posts as $post ) {
-		?>
-		<li class="wf-doc">
-				<a target="_blank" href="<?php echo $post->link; ?>">
-						<i class="fa fa-file-text-o"></i> <?php echo $post->title->rendered; ?>
-				</a>
-		</li>
-		<?php }
-}
-?>
+  if( empty( $posts ) ) {
+      return;
+  }
+  foreach ( $posts as $post ) {
+  		?>
+  		<li class="wf-doc">
+  				<a target="_blank" href="<?php echo $post->link; ?>">
+  						<i class="fa fa-file-text-o"></i> <?php echo $post->title->rendered; ?>
+  				</a>
+  		</li>
+  <?php }
+  ?>
 </ul>
 
 <h2 class="box-light padding-half margin-bottom-none">Developer Docs</h2>
@@ -37,20 +28,12 @@ if ( ! empty( $posts ) ) {
 <ul class="wf-doc-list wf-admin-box">
 <?php
 // Grab Some Recent Posts
-$response = wp_remote_get('https://documentation.wefoster.co/wp-json/wp/v2/wpkb-article?filter[taxonomy]=wpkb-category&filter[term]=developers');
+$posts = wff_get_theme_docs();
 
-if ( is_wp_error( $response ) ) {
-	return;
+if( empty( $posts ) ) {
+    return;
 }
-	$posts = json_decode( wp_remote_retrieve_body( $response ) );
-
-if ( empty( $posts ) ) {
-	return;
-}
-
-if ( ! empty( $posts ) ) {
-
-	foreach ( $posts as $post ) {
+foreach ( $posts as $post ) {
 		?>
 		<li class="wf-doc">
 				<a target="_blank" href="<?php echo $post->link; ?>">
@@ -58,6 +41,5 @@ if ( ! empty( $posts ) ) {
 				</a>
 		</li>
 		<?php }
-}
 ?>
 </ul>

@@ -7,21 +7,12 @@
 <div class="community-news wf-grid">
 	<?php
   // Grab Some Recent Posts
-	$response = wp_remote_get( 'https://wefoster.co/wp-json/wp/v2/posts/?filter[orderby]=date&per_page=6' );
+	$posts = wff_get_community_posts();
 
-	if ( is_wp_error( $response ) ) {
-		return;
+	if( empty( $posts ) ) {
+			return;
 	}
-		$posts = json_decode( wp_remote_retrieve_body( $response ) );
-
-		// echo '<pre>' . print_r($posts) . '</pre>';
-	if ( empty( $posts ) ) {
-		return;
-	}
-
-	if ( ! empty( $posts ) ) {
-
-		foreach ( $posts as $post ) {
+	foreach ( $posts as $post ) {
 			?>
 			<div class="wf-post-content wf-grid__col-4">
 				<div class="wf-inner-grid wf-admin-box">
@@ -45,6 +36,5 @@
 				</div>
 			</div>
 			<?php }
-	}
 	?>
 </div>
