@@ -25,7 +25,7 @@
 
 </div>
 
-<div class="wrap about-wrap wefoster-welcome">
+<div class="wrap about-wrap wefoster-welcome container-fluid">
 
   <!-- Tab panes -->
   <div class="tab-content">

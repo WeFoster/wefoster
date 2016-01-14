@@ -16,6 +16,8 @@
 }
 
 .wf-admin-box {
+  margin-left: 0;
+  margin-right: 0;
   line-height: 147%;
   margin-bottom: 30px;
   padding: 30px 20px;
@@ -31,6 +33,23 @@
   &.wf-plus {
     background: @brand-secondary;
     color: @white;
+  }
+
+  .nav {
+    position: absolute;
+    font-size: 95%;
+    
+    li {
+      padding-left: 0;
+      
+      a {
+        padding-left: 0;
+      }
+    }
+
+    li a:hover {
+      background: transparent;
+    }
   }
 }
 
@@ -51,7 +70,7 @@
 
 .media-container svg,
 .media-container img {
-  height: 200px;
+  height: 100%;
   margin: -30px -35px -35px;
   padding: 15px 30px;
   width: 100%;

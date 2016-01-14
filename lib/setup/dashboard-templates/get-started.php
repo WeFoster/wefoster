@@ -45,8 +45,8 @@
   </div>
   <div class="col-sm-9">
     <h3><span>Step 1 -</span> Set up your theme!</h3>
-    <p>We have written an extensive getting started guide that walks you through setting up the theme in a snap. Everything from setting up Menus, using the 70+ Customiser options and much more!</p>
-    <p>        <a href="https://documentation.wefoster.co/kb/wefoster-theme-documentation/" target="_blank">Read our Documentation</a></p>
+    <p>The WeFoster Theme automatically sets up some default widgets and your homepage so you can hit the ground running. We have written an extensive getting started guide that walks you through setting up your community in a snap. Everything from setting up Menus, using the 70+ Customiser options and much more!</p>
+    <p><a href="https://documentation.wefoster.co/kb/wefoster-theme-documentation/" target="_blank">Read our Documentation</a></p>
   </div>
 </div>
 
@@ -74,8 +74,8 @@
   </div>
   <div class="col-sm-9">
     <h3><span>Step 2 -</span> Join the WeFoster Community</h3>
-    <p>Launching a social network ain't easy, but we're here to help! Join our community of BuddyPress developers and site owners to learn everything there is to know about building succesful communities!</p>
-    <p><a target="_blank" href="https://documentation.wefoster.co/kb/wefoster-theme-documentation/">Read our Documentation</a></p>
+    <p>Launching a succesfull social network ain't easy, but we're here to help! Join our community of BuddyPress developers and site owners to learn everything there is to know about building succesful communities! By creating your profile you can connect to other site owners with similar goals..  </p>
+    <p><a target="_blank" href="https://wefoster.co/create-your-account/">Create Your WeFoster Account</a></p>
   </div>
 </div>
 
@@ -101,8 +101,15 @@
   </div>
   <div class="col-sm-9">
     <h3><span>Step 3 -</span> Foster Your Community</h3>
-    <p>If you’re reading this, you are interested in building a community powered by WordPress and BuddyPress for your business, non-profit, cause or academic community. Whether you are still in the planning stages or are already a BuddyPress & WordPress expert, we've got plenty of resources on how to build better communities for your audience. </p>
-    <p><a target="_blank" href="https://documentation.wefoster.co/kb/wefoster-theme-documentation/">Read our Documentation</a></p>
+    <p>Whether you are still in the planning stages or are already a BuddyPress & WordPress expert, we've got plenty of resources on how to build better communities for your audience. Simply follow the links below and you'll be an expert in no-time!</p>
+    <p>
+        <ul class="nav nav-pills">
+        <li role="presentation"><a href="https://wefoster.co/buddypress-news/"><i class="fa fa-newspaper-o"></i> Newsfeed</a></li>
+        <li target="_blank" role="presentation"><a href="https://wefoster.co/community-questions/"><i class="fa fa-comments"></i> Question & Answers</a></li>
+        <li target="_blank" role="presentation"><a href="https://wefoster.co/buddypress-communities/"><i class="fa fa-users"></i> Communities</a></li>
+        <li role="presentation"><a href="https://wefoster.co/blog/"><i class="fa fa-book"></i> Articles</a></li>
+        </ul>
+    </p>
   </div>
 </div>
 
@@ -146,8 +153,21 @@
     </div>
   </div>
   <div class="col-sm-9">
-    <h3><span>Step 4 -</span> Get Inspired </h3>
-    <p>With great power comes great responsibility; there are countless options and decisions you have to make whilst building your community. Our Site Showcases are the perfect place for you to see what others are doing with BuddyPress. </p>
-    <p><a target="_blank" href="https://s.w.org/images/core/4.4/responsive-devices-fullsize-2x.png">Read our Documentation</a></p>
+    <h3><span>Step 4 -</span> Take it the the next level </h3>
+    <p>With great power comes great responsibility; there are countless options and decisions you have to make whilst building your community. What plugins should I use? How do I grow my community? Where do I find a custom developer? The links below will help you answer those questions</p>
+    <p>
+      <ul class="nav nav-pills">
+      <li role="presentation"><a href="https://wefoster.co/buddypress-developer/"><i class="fa fa-code"></i> Finding a BuddyPress Developer</a></li>
+      <li target="_blank" role="presentation"><a href="http://development.wefoster.co/buddypress-plugins/"><i class="fa fa-list-alt"></i> BuddyPress Plugin Repository</a></li>
+      <li target="_blank" role="presentation"><a href="https://wefoster.co/community/community-building/"></i> <i class="fa fa-leaf"></i> Community Building</a></li>
+      </ul>
+    </p>
   </div>
+</div>
+
+<h2 class="box-light padding-half margin-bottom-none">All done!</h2>
+<div class="wf-admin-box">
+<p>
+	Want to stay up to date about everything that is happening in the world of BuddyPress? Our community newsletter is sent out bi-weekly and contains a carefully curated collection of news, articles and resources that are useful for those who are building their communities using WordPress and BuddyPress.
+</p>
 </div>

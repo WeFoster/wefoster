@@ -6930,6 +6930,8 @@ _:-ms-fullscreen,
   margin-top: -40px;
 }
 .wf-admin-box {
+  margin-left: 0;
+  margin-right: 0;
   line-height: 147%;
   margin-bottom: 30px;
   padding: 30px 20px;
@@ -6944,6 +6946,19 @@ _:-ms-fullscreen,
 .wf-admin-box.wf-plus {
   background: #28a587;
   color: #ffffff;
+}
+.wf-admin-box .nav {
+  position: absolute;
+  font-size: 95%;
+}
+.wf-admin-box .nav li {
+  padding-left: 0;
+}
+.wf-admin-box .nav li a {
+  padding-left: 0;
+}
+.wf-admin-box .nav li a:hover {
+  background: transparent;
 }
 .wf-doc-list {
   list-style: none;
@@ -6960,7 +6975,7 @@ _:-ms-fullscreen,
 }
 .media-container svg,
 .media-container img {
-  height: 200px;
+  height: 100%;
   margin: -30px -35px -35px;
   padding: 15px 30px;
   width: 100%;
