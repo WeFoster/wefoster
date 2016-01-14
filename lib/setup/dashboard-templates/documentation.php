@@ -1,5 +1,5 @@
 <div class="wf-admin-intro wf-admin-box">
-  Below you'll find all the available documentation for the WeFoster theme for both site owners and developers. Please let us know if you get stuck or would like to learn more about using the theme.
+  Below you'll find all the available documentation for the WeFoster theme, for both site owners and developers. Please let us know if you get stuck or would like to learn more about using the theme.
 </div>
 
 <h2 class="box-light padding-half margin-bottom-none">Site Owner Documentation</h2>
@@ -23,7 +23,7 @@
   ?>
 </ul>
 
-<h2 class="box-light padding-half margin-bottom-none">Developer Docs</h2>
+<h2 class="box-light padding-half margin-bottom-none">Developer Documentation</h2>
 
 <ul class="wf-doc-list wf-admin-box">
 <?php
