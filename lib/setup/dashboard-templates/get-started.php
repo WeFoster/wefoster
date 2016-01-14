@@ -165,9 +165,8 @@
   </div>
 </div>
 
-<h2 class="box-light padding-half margin-bottom-none">All done!</h2>
-<div class="wf-admin-box">
+<div class="wf-admin-box wf-congrats">
 <p>
-	Want to stay up to date about everything that is happening in the world of BuddyPress? Our community newsletter is sent out bi-weekly and contains a carefully curated collection of news, articles and resources that are useful for those who are building their communities using WordPress and BuddyPress.
+  You're all set to build an amazing community! Congratulations and see on you on <a href="https://wefoster.co">WeFoster.co!</a>
 </p>
 </div>
