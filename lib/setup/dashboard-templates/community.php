@@ -1,22 +1,18 @@
 <div class="wf-admin-intro wf-admin-box">
-	Staying up to date about community news, plugin & theme updates and articles/tutorials to improve your site is always a smart idea. There are countless blogs dedicated to writing about WordPress and BuddyPress, and as a site owner it’s important to know about what’s happening in the (developer) community.
-</div>
-
-<h2 class="box-light padding-half margin-bottom-none">WeFoster Community Newsletter</h2>
-<div class="wf-admin-box">
-<p>
 	Want to stay up to date about everything that is happening in the world of BuddyPress? Our community newsletter is sent out bi-weekly and contains a carefully curated collection of news, articles and resources that are useful for those who are building their communities using WordPress and BuddyPress.
-</p>
-	<div id="mc_embed_signup">
+
+	<div id="mc_embed_signup" class="margin-top-half">
 			<form action="//wefoster.us11.list-manage.com/subscribe/post?u=5eae74b046d61832422e97744&amp;id=ed2ab6113d" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
 					<div class="form-group">
-							<label for="mce-EMAIL">Subscribe to the BuddyPress Newsletter</label>
+							<label for="mce-EMAIL">Subscribe to the WeFoster Community  Newsletter</label>
 							<input type="email" value="" name="EMAIL" class="email form-control" id="mce-EMAIL" placeholder="email address" required style="width: 300px;">
 					</div>
 					<input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="btn btn-primary">
 			</form>
 	</div>
+
 </div>
+
 
 <h2 class="padding-half margin-bottom-none">From our community..</h2>
 

@@ -19,7 +19,7 @@
     <li role="presentation" class="active"><a href="#whats-new" aria-controls="home" role="tab" data-toggle="tab"><i class="fa fa-rocket"></i> Get Started</a></li>
     <li role="presentation"><a href="#community" aria-controls="settings" role="tab" data-toggle="tab"><i class="fa fa-leaf"></i> Community</a></li>
     <!-- <li role="presentation"><a href="#credits" aria-controls="profile" role="tab" data-toggle="tab"><i class="fa fa-heart"></i> What's New</a></li> -->
-    <li role="presentation"><a href="#documentation" aria-controls="messages" role="tab" data-toggle="tab"><i class="fa fa-file-text-o"></i> Documentation</a></li>
+    <li role="presentation"><a href="#wf-documentation" aria-controls="messages" role="tab" data-toggle="tab"><i class="fa fa-file-text-o"></i> Documentation</a></li>
     <li class="wefoster-plus-tab" role="presentation"><a href="#wefoster-plus" aria-controls="settings" role="tab" data-toggle="tab"><i class="fa fa-leaf"></i> WeFoster Plus</a></li>
   </ul>
 
@@ -35,7 +35,7 @@
     <div role="tabpanel" class="tab-pane" id="credits">
     	<?php get_template_part( 'lib/setup/dashboard-templates/credits' );?>
     </div>
-    <div role="tabpanel" class="tab-pane" id="documentation">
+    <div role="tabpanel" class="tab-pane" id="wf-documentation">
     	<?php get_template_part( 'lib/setup/dashboard-templates/documentation' );?>
     </div>
     <div role="tabpanel" class="tab-pane" id="community">
