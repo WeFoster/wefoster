@@ -6883,9 +6883,37 @@ _:-ms-fullscreen,
   color: #767676;
   font-weight: 500;
 }
-.wf-getting-started .col-sm-9 p {
+.wf-getting-started p {
   font-size: 16px;
   font-weight: 200;
+}
+.wf-admin-box.wf-no-buddypress {
+  background: #BE3631;
+  color: #EEE;
+  border: 4px solid #A3322E;
+  border-bottom: 5px solid #BC3735;
+}
+.wf-admin-box.wf-no-buddypress a {
+  background: #ad2a2a none repeat scroll 0 0;
+  border: 1px solid #922727;
+  border-radius: 4px;
+  color: #fff;
+  display: inline-block;
+  font-weight: bold;
+  padding: 10px 20px;
+  font-size: 90%;
+}
+.wf-admin-box.wf-no-buddypress a:hover {
+  background: #454a54;
+}
+.wf-admin-box.wf-no-buddypress img {
+  background: #bc3735 none repeat scroll 0 0;
+  border: 5px solid #be3631;
+  height: auto;
+  width: auto;
+}
+.wf-admin-box.wf-no-buddypress span {
+  color: #EFEFEF;
 }
 .wf-grid {
   padding: 0;
@@ -6909,6 +6937,11 @@ _:-ms-fullscreen,
   background: #fff none repeat scroll 0 0;
   border-bottom: 4px solid #ededed;
 }
+.wf-admin-box a {
+  display: block;
+  margin-top: 15px;
+  font-weight: 700;
+}
 .wf-admin-box.wf-plus {
   background: #28a587;
   color: #ffffff;
@@ -6926,14 +6959,16 @@ _:-ms-fullscreen,
   padding-top: 12px;
   width: 46%;
 }
-.media-container svg {
+.media-container svg,
+.media-container img {
   height: 200px;
   margin: -30px -35px -35px;
   padding: 15px 30px;
   width: 100%;
   border: 5px solid;
 }
-.media-container svg g {
+.media-container svg g,
+.media-container img g {
   fill: tranparent;
   stroke: #FFF;
   stroke-width: 1.5px;

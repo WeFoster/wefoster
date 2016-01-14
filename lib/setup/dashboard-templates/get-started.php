@@ -1,3 +1,28 @@
+<?php if ( ! class_exists( 'BuddyPress' )): ?>
+
+  <div class="row wf-admin-box wf-no-buddypress">
+    <div class="col-sm-3">
+      <div class="media-container">
+<img src="https://cdn.wefoster.co/dashboard/bp-logo.png" alt="">
+      </div>
+    </div>
+    <div class="col-sm-9">
+      <h3>It seems BuddyPress is not installed </h3>
+      <p>The WeFoster Theme can be use as a regular WordPress theme without a problem, but it was developed from the ground up with BuddyPress in mind! We recommend that you install and activate BuddyPress first to unlock all of the powerful features that come with it!</p>
+      <p>
+        <?php
+        $plugin_name = 'BuddyPress';
+        $install_link = '<a href="' . esc_url( network_admin_url('plugin-install.php?tab=plugin-information&plugin=' . $plugin_name . '&TB_iframe=true&width=900&height=600' ) ) . '" class="thickbox"><span class="dashicons dashicons-admin-plugins"></span> Install ' . $plugin_name . ' Now</a>';
+         ?>
+        <?php echo $install_link; ?>
+      </p>
+    </div>
+  </div>
+
+<?php endif; ?>
+
+
+
 <div class="row wf-admin-box">
   <div class="col-sm-3">
     <div class="media-container">

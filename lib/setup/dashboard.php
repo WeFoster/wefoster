@@ -16,10 +16,36 @@ function wf_admin_welcome_css() {
 
 		wp_enqueue_script( 'wff_scripts_admin' );
 
+		wp_enqueue_style('thickbox');
+		wp_enqueue_script('thickbox');  
+
 	}
 
 }
 add_action( 'admin_enqueue_scripts', 'wf_admin_welcome_css' );
+
+
+/**
+ * Register menus
+ *
+ * @package Infinity
+ * @subpackage base
+ */
+function wff_install_buddypress()
+{
+	$action = 'install-plugin';
+	$slug = 'buddypress';
+	wp_nonce_url(
+			add_query_arg(
+					array(
+							'action' => $action,
+							'plugin' => $slug
+					),
+					admin_url( 'update.php' )
+			),
+			$action.'_'.$slug
+	);
+}
 
 //
 function wff_welcome_screen_activate() {
