@@ -74,7 +74,7 @@
   </div>
   <div class="col-sm-9">
     <h3><span>Step 2 -</span> Join the WeFoster Community</h3>
-    <p>Launching a succesfull social network ain't easy, but we're here to help! Join our community of BuddyPress developers and site owners to learn everything there is to know about building succesful communities! By creating your profile you can connect to other site owners with similar goals..  </p>
+    <p>Launching a succesfull social network ain't easy, but we're here to help! Join our community of BuddyPress developers and site owners to learn everything there is to know about building succesful communities! By creating your profile you can connect to other site owners with similar goals. </p>
     <p><a target="_blank" href="https://wefoster.co/create-your-account/">Create Your WeFoster Account</a></p>
   </div>
 </div>
@@ -100,7 +100,7 @@
     </div>
   </div>
   <div class="col-sm-9">
-    <h3><span>Step 3 -</span> Foster Your Community</h3>
+    <h3><span>Step 3 -</span>Foster Your Community</h3>
     <p>Whether you are still in the planning stages or are already a BuddyPress & WordPress expert, we've got plenty of resources on how to build better communities for your audience. Simply follow the links below and you'll be an expert in no-time!</p>
     <p>
         <ul class="nav nav-pills">
@@ -154,7 +154,7 @@
   </div>
   <div class="col-sm-9">
     <h3><span>Step 4 -</span> Take it the the next level </h3>
-    <p>With great power comes great responsibility; there are countless options and decisions you have to make whilst building your community. What plugins should I use? How do I grow my community? Where do I find a custom developer? The links below will help you answer those questions</p>
+    <p>With great power comes great responsibility; there are countless options and decisions you have to make whilst building your community. What plugins should I use? How do I grow my community? Where do I find a custom developer? The links below will help you answer those questions.</p>
     <p>
       <ul class="nav nav-pills">
       <li role="presentation"><a href="https://wefoster.co/buddypress-developer/"><i class="fa fa-code"></i> Finding a BuddyPress Developer</a></li>
