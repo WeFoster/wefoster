@@ -2,43 +2,55 @@
 // Layout Variables
 // -----------------------------------------------------
 @container-width: 1170px;
+//
 //Prefix our Flexbox Grid
+//
 @reflex-prefix: wf-;
 @reflex-grid-spacing: @padding-half;
-//Make sure these always add up to 100%
-@sidebar-width: 25%;
-@content-width: 75%;
+//
 //Padding
+//
 @padding-full: 30px;
 @padding-half: ( @padding-full / 2 );
 @padding-double: (@padding-full * 2 );
 @padding-one-half: (@padding-full * 1.5 );
+//
 //Margin
+//
 @margin-full: @padding-full;
 @margin-half: ( @margin-full / 2 );
 @margin-double: (@margin-full * 2 );
 @margin-one-half: (@margin-full * 1.5 );
+//
 //Global Styling
+//
 @body-bg: darken(@white, 6%);
 @font-family-base: "Helvetica Neue", Helvetica, Arial, sans-serif;
 @font-size-base: 16px;
 @headings-font-family: inherit;
 @font-line-height: 160%;
+//
 //Layout
+//
 @main-bg: @white;
 @main-border: 0;
 @sidebar-bg: transparent;
 @sidebar-border: 0;
 @inner-sidebar-bg: @white;
 @inner-sidebar-border: 0;
+//
 //Responsive Grid changes.
+//
 @grid-float-breakpoint-max: 769px;
 @screen-sm: 769px;
 @screen-tablet: 769px;
 @container-tablet: (100% - 3);
+//
 //logo-height
+//
 @logo-height: 30px;
 @logo-position: -4px;
+//
 // Typography
 // -------------------------
 @font-size-h1: floor((@font-size-base * 2.6)); // ~36px
@@ -48,21 +60,28 @@
 @font-size-h5: @font-size-base;
 @font-size-h6: ceil((@font-size-base * 0.85)); // ~12px
 @font-header-weight: 200;
+//
 // Page Headers
+//
 @page-header-background: @white;
 @page-header-border-bottom: 1px solid darken(@page-header-background, 2%);
 @page-header-color: @text-color;
 @page-header-link-color: inherit;
 @page-header-link-color-hover: inherit;
+//
 //Archive/Loop Headers
+//
 @loop-header-background: @page-header-background;
 @loop-header-color: @page-header-color;
 @loop-header-link-color: @page-header-link-color;
 @loop-header-link-color-hover: @page-header-link-color-hover;
+//
 //Widgets
+//
 @widget-header-background: @page-header-background;
 @widget-header-color: @text-color;
 @widget-header-font-family: @font-family-base;
+//
 // CSS3 Magic
 // --------------------------------------------------
 @global-border-radius: 4px;
@@ -80,18 +99,24 @@
 @color-base: #555;
 @widget-bg: @white;
 @white: #fff;
+@text-color: #343434;
+//
 // Grays
+//
 @gray-darker: lighten(@text-color, 5%);
 @gray-dark: lighten(@text-color, 15%);
 @gray: lighten(@text-color, 26%);
 @gray-light: lighten(@text-color, 35%);
 @gray-lighter: lighten(@text-color, 50%);
 @inverse: white;
+//
 // Scaffolding
 // -------------------------
 @text-color: #343434;
 @header-color: @white;
+//
 //Navigation
+//
 @navigation-font-family: @font-family-base;
 @navbar-padding: 0;
 @navbar-margin: 0 0 @margin-full 0;
@@ -100,7 +125,9 @@
 @navbar-default-color: @text-color;
 @navbar-default-bg: @white;
 @navbar-default-border: darken(@navbar-default-bg, 6.5%);
+//
 // Navbar links
+//
 @navbar-padding-vertical: (@padding-half * 1.25 );
 @navbar-default-link-color: @brand-primary;
 @navbar-default-link-hover-color: @white;
@@ -109,7 +136,9 @@
 @navbar-default-link-active-bg: @brand-primary;
 @navbar-default-link-disabled-color: #ccc;
 @navbar-default-link-disabled-bg: transparent;
+//
 //Navbar Inverse
+//
 @navbar-inverse-bg: @brand-primary;
 @navbar-inverse-link-hover-bg: darken(@brand-primary, 10%);
 @navbar-inverse-link-color: darken(white, 10%);
@@ -121,7 +150,9 @@
 @line-height-computed: floor((@font-size-base * @line-height-base)); // ~20px
 //** Global color for active items (e.g., navs or dropdowns).
 @component-active-color: #999;
+//
 //Comments
+//
 @comment-bg: darken(@white, 2%);
 @comment-border-bottom: 1px solid darken(@comment-bg, 2%);
 @comment-border-top: 1px solid darken(@comment-bg, 3%);
@@ -135,7 +166,9 @@
 @comment-avatar-height: 45px;
 @comment-avatar-height-nested: 30px;
 @comment-avatar-width-nested: 30px;
+//
 // Post Meta
+//
 @post-meta-background: @brand-primary;
 @post-meta-font-size: @font-size-small;
 @post-meta-border-bottom: 1px solid #ddefff;
@@ -147,23 +180,30 @@
 // Components
 // --------------------------------------------------
 //Buttons
+//
 @btn-font-weight: bold;
 @btn-padding: 8px 10px;
 @btn-size: 100%;
 @btn-small-size: 80%;
 @btn-radius: 4px;
+//
 //Change Bootstrap Colors
+//
 @btn-primary-bg: @brand-secondary;
 @btn-success-bg: darken(@brand-complimentary, 5%);
 @input-group-addon-bg: @box-light-background;
+//
 //Avatars
+//
 @medium-avatar-size: 50px;
 @small-avatar-size: ( @medium-avatar-size / 2 );
 @large-avatar-size: ( @medium-avatar-size * 1.5);
 @extra-large-avatar-size: ( @medium-avatar-size * 2 );
 @xxl-avatar-size: ( @medium-avatar-size * 3 );
 @big-avatar-size: inherit;
+//
 //Other Avatar Variables
+//
 @big-avatar-radius: 0;
 @big-avatar-border: 0;
 @big-avatar-padding: 0;
@@ -179,7 +219,9 @@
 @small-avatar-padding: 0;
 @small-avatar-bg: none;
 @small-avatar-shadow: none;
+//
 //Alerts
+//
 @alert-success-bg: #efc;
 @alert-success-color: #250;
 @alert-error-bg: #faa;
@@ -187,7 +229,9 @@
 @alert-message-bg: #fdc;
 @alert-message-color: darken(@alert-message-bg, 30%);
 @alert-font-weight: normal;
+//
 //Forms
+//
 @form-bg: @white;
 @form-color: @text-color;
 @form-padding: 3px 8px;
@@ -204,27 +248,33 @@
 @form-label-font-size: 90%;
 @form-label-transform: none;
 @form-label-margin: 15px 0 5px 0;
+//
 //Icons
+//
 @icon-font-family: "FontAwesome";
 @icon-size: inherit;
 @icon-color: inherit;
 @icon-padding-right: 7px;
 @icon-shadow: none;
+//
 // Listings
+//
 @listing-bg: @white;
 @listing-margin: 0 -@margin-full;
 @listing-padding: @padding-full;
 @listing-border-bottom: 1px solid darken(@listing-bg, 2%);
 @listing-border-top: 1px solid darken(@listing-bg, 1%);
 @listing-box-shadow: none;
-// Listings
-@listing-widget-bg: @white;
+// Listing Widgets
+@listing-widget-bg: @listing-bg;
 @listing-widget-margin: @listing-margin;
 @listing-widget-padding: @listing-padding;
 @listing-widget-border-bottom: 1px solid darken(@listing-widget-bg, 2%);
 @listing-widget-border-top: 1px solid darken(@listing-widget-bg, 1%);
 @listing-widget-box-shadow: none;
+//
 // Item List Tabs
+//
 @item-tabs-wrap-bg: @white;
 @item-tabs-wrap-border-top: 0;
 @item-tabs-wrap-border-bottom: 0;
@@ -243,7 +293,9 @@
 @item-tabs-margin: 0 -@margin-full @margin-full -@margin-full;
 @item-tabs-padding: @padding-half;
 @item-tabs-shadow: none;
+//
 // Sub Item Tabs
+//
 @sub-item-tabs-wrap-bg: @item-tabs-wrap-bg;
 @sub-item-tabs-wrap-border-top: 0;
 @sub-item-tabs-wrap-border-bottom: 0;
@@ -255,7 +307,9 @@
 @sub-item-tabs-active-color: @gray-lighter;
 @sub-item-tabs-hover-color: @brand-secondary;
 @sub-item-tabs-border-radius: 6px;
+//
 // Vertical List Tabs
+//
 @vert-tabs-wrap-bg: @item-tabs-wrap-bg;
 @vert-tabs-bg: @item-tabs-wrap-bg;
 @vert-tabs-hover-bg: @brand-primary;
@@ -275,11 +329,14 @@
 @vert-tabs-margin: 0 -@margin-full;
 @vert-tabs-padding: 0 @padding-full;
 @vert-tabs-shadow: none;
+//
 // Sidebar Headers
+//
 @header-avatar-bg: @brand-primary;
 @header-border-radius: inherit;
 //
 // ACTIVITY COMPONENT
+//
 //
 //Activity Update
 @activity-filter-background: @page-header-background;
@@ -290,7 +347,9 @@
 @whats-new-font-weight: bold;
 @whats-new-border-top: 1px solid darken(@page-header-background, 3%);
 @whats-new-border-bottom: 1px solid darken(@page-header-background, 5%);
+//
 //Activity Update
+//
 @activity-inner-bg: darken(@listing-bg, 2%);
 @activity-inner-margin: 10px 10px 5px 0;
 @activity-inner-padding: @padding-half;
@@ -299,7 +358,9 @@
 @activity-inner-border: none;
 @activity-inner-border-color: #ddd;
 @activity-inner-box-shadow: none;
+//
 //Activity Header
+//
 @activity-header-bg: @white;
 @activity-header-margin: 0 -@margin-full;
 @activity-header-padding: @padding-full;
@@ -307,7 +368,9 @@
 @activity-header-font-size: 85%;
 @activity-header-line-height: 220%;
 @activity-header-font-weight: 500;
+//
 //Activity Inner
+//
 @activity-inner-bg: darken(@listing-bg, 2%);
 @activity-inner-margin: 10px 10px 5px 0;
 @activity-inner-padding: @padding-half;
@@ -316,7 +379,9 @@
 @activity-inner-border: none;
 @activity-inner-border-color: #ddd;
 @activity-inner-box-shadow: none;
+//
 //Activity Comments
+//
 @activity-comment-bg: @activity-inner-bg;
 @activity-comment-border-bottom: 1px solid darken(@activity-comment-bg, 4%);
 @activity-comment-border-top: 1px solid darken(@activity-comment-bg, 3%);

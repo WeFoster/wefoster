@@ -4,15 +4,13 @@
  */
 // First load Bootstrap + vendor css
 @import "../vendor/bootstrap-less/less/variables.less";
-@import "../vendor/bootstrap-less/less/mixins.less";
-@import "../vendor/bootstrap-less/less/buttons.less";
-
-@import "../vendor/bootstrap-less/less/alerts.less";
+@import (reference) "../vendor/bootstrap-less/less/mixins.less";
+@import (reference) "../vendor/bootstrap-less/less/buttons.less";
+@import (reference) "../vendor/bootstrap-less/less/alerts.less";
 // Variables that can be customised through child themes
 //Load BuddyPress LESS
 //Global
 @import "buddypress/directories.less";
-
 @import "buddypress/responsive.less";
 // Activity
 @import "buddypress/activity/activity-update.less";

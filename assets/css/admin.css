@@ -6276,8 +6276,8 @@ _:-ms-fullscreen,
 }
 @font-face {
   font-family: 'FontAwesome';
-  src: url("../vendor/fontawesome/fonts/fontawesome-webfont.eot?v=4.3.0");
-  src: url("../vendor/fontawesome/fonts/fontawesome-webfont.eot?#iefix&v=4.3.0") format('embedded-opentype'), url("../vendor/fontawesome/fonts/fontawesome-webfont.woff?v=4.3.0") format('woff'), url("../fonts/fontawesome-webfont.ttf?v=4.3.0") format('truetype'), url("../vendor/fontawesome/fonts/fontawesome-webfont.svg?v=4.3.0#fontawesomeregular") format('svg');
+  src: url(../vendor/fontawesome/fonts/fontawesome-webfont.eot?v=@{fa-version});
+  src: url(../vendor/fontawesome/fonts/fontawesome-webfont.eot?#iefix&v=@{fa-version}) format('embedded-opentype'), url(../vendor/fontawesome/fonts/fontawesome-webfont.woff?v=@{fa-version}) format('woff'), url(../fonts/fontawesome-webfont.ttf?v=@{fa-version}) format('truetype'), url(../vendor/fontawesome/fonts/fontawesome-webfont.svg?v=@{fa-version}#fontawesomeregular) format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -6809,6 +6809,36 @@ _:-ms-fullscreen,
 }
 .vertical-align-item {
   max-width: 100%;
+}
+.avatar-s img.avatar,
+.avatar-s {
+  height: 25px !important;
+  width: 25px !important;
+}
+.avatar-m img.avatar,
+.avatar-m {
+  height: 50px !important;
+  width: 50px !important;
+}
+.avatar-l img.avatar,
+.avatar-l {
+  height: 75px !important;
+  width: 75px !important;
+}
+.avatar-xl img.avatar,
+.avatar-xl {
+  height: 100px !important;
+  width: 100px !important;
+}
+.avatar-xxl img.avatar,
+.avatar-xxl {
+  height: 150px !important;
+  width: 150px !important;
+}
+.avatar-full img.avatar,
+.avatar-full {
+  height: inherit !important;
+  width: inherit !important;
 }
 .wf-welcome-header {
   background-color: #454a54;

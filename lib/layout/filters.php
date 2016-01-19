@@ -189,6 +189,18 @@ if ( WEFOSTER_SELECT_BOXES == 'wefoster-bootstrap-select') {
   }
 }
 
+
+if ( ! function_exists ( 'wff_enable_font_awesome' ) ) {
+  function wff_enable_font_awesome( $classes ) {
+  	// add a body class
+  	$classes[] = apply_filters( 'wff_font_awesome', 'wf-icon-' . WEFOSTER_ICON_FONT . ' ' );
+  	// return the $classes array
+  	return $classes;
+  }
+  add_filter( 'body_class', 'wff_enable_font_awesome' );
+}
+
+
 /**
  * Add a body class to enable Bootstrap Tooltip functionality.
  *

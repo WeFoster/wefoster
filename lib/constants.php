@@ -134,6 +134,11 @@ if ( !defined( 'WEFOSTER_HEADER_HIDE' ) ) {
 // The most obvious example would be get_stylesheet_directory_uri or your plugin folder.
 // Note: We would not recommend to overwrite CSS/JS files. Use wp_dequeue for that.
 
+if ( !defined( 'WEFOSTER_FONTS' ) ) {
+	define('WEFOSTER_ICON_FONT', 'font-awesome' );
+}
+
+
 if ( !defined( 'WEFOSTER_ASSETS_URL' ) ) {
 	define('WEFOSTER_ASSETS_URL', get_template_directory_uri() );
 }
