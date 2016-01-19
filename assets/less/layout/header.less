@@ -34,19 +34,30 @@
 .wefoster-framework .header-boxed {
   margin: @margin-half auto 0;
 }
-
 //Full Header
 .full-header-wrap {
   height: 260px;
   position: relative;
-  z-index: 0;
+  z-index: 20;
   background-repeat: no-repeat;
   background-size: cover;
   background: @white;
+  order: 10;
+}
+
+.main {
+  order: 1;
+}
+
+.site-description-wrap {
+  height: 100%;
+}
+
+.inside-menu {
+  margin-left: auto;
 }
 
 .site-description {
-  .vertical-center();
   font-size: @font-size-h2;
   color: @text-color;
   
@@ -57,7 +68,6 @@
     opacity: 0.5;
   }
 }
-
 /* Small Devices, Tablets */
 @media only screen and (max-width : 768px) {
   .full-header-wrap {

@@ -50,6 +50,7 @@ if ( ! function_exists( 'wff_primary_navigation_location' ) ) {
 		get_template_part( 'templates/header/primary-navigation' );
 	}
 	add_action( 'before_header_navigation', 'wff_primary_navigation_location' );
+	add_action( 'after_site_description', 'wff_primary_navigation_location' );
 }
 
 	/*

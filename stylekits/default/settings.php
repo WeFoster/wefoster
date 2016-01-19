@@ -156,7 +156,7 @@ Kirki::add_field( 'wefoster_plus', array(
       'priority'  => 30,
   		'choices'     => array(
   			'blue' => __( 'Blue', 'wefoster' ),
-  			'green' => __( 'Green', 'wefoster' ),
+  			'accessible' => __( 'Accessibility Friendly', 'wefoster' ),
   			'black' => __( 'Black', 'wefoster' ),
   			'purple' => __( 'Purple', 'wefoster' ),
   			'red' => __( 'Red', 'wefoster' ),
@@ -164,4 +164,16 @@ Kirki::add_field( 'wefoster_plus', array(
   ) );
 }
 add_filter('kirki/fields', 'default_stylekit_settings');
+
+$color = get_theme_mod( 'stylekit_color_scheme', 'default' );
+
+if ( $color == 'accessible' ) {
+  // Set the Default Font size.
+  define('WEFOSTER_FONT_SIZE', '18px');
+  //
+  // //Roboto for Readability
+  define('WEFOSTER_FONT_FAMILY', 'Roboto');
+  define('WEFOSTER_NAVIGATION_FONT_FAMILY', 'Roboto');
+  define('WEFOSTER_HEADINGS_FONT_FAMILY', 'Roboto');
+}
 ?>

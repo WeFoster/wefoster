@@ -1,17 +1,9 @@
 <?php
-////////////////
-// Layout Default
-///////////////
-
-//define('WEFOSTER_LAYOUT_PRESET', 'full');
-//define('WEFOSTER_HEADER', 'boxed');
-//define('WEFOSTER_HEADER_STYLE', 'navbar-inverse');
-//define('WEFOSTER_LAYOUT_PRESET ==_CLASS', 'container');
-//define('WEFOSTER_MAIN_CLASS', 'col-sm-6');
-//define('WEFOSTER_SIDEBAR_CLASS', 'col-sm-6');
-//define('WEFOSTER_SIDEBAR_POSITION', 'wefoster-sidebar-left');
-
-////////////////
-// Default Logos
-///////////////
+// // Set the Default Font size.
+// define('WEFOSTER_FONT_SIZE', '18px');
+//
+// //Roboto for Readability
+// define('WEFOSTER_FONT_FAMILY', 'Roboto');
+// define('WEFOSTER_NAVIGATION_FONT_FAMILY', 'Roboto');
+// define('WEFOSTER_HEADINGS_FONT_FAMILY', 'Roboto');
 ?>

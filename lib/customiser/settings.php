@@ -430,8 +430,9 @@ function wf_plus_register_settings($fields)
 		    'default' => WEFOSTER_LAYOUT_FULL_PRIMARY_MENU_POSITION,
 		    'priority' => 2,
 		    'choices' => array(
-		        'above' => __('Above Header', 'wefoster'),
-		        'below' => __('Below Header', 'wefoster'),
+		        'above' => __('Above your header', 'wefoster'),
+						'inside' => __('Inside your Header', 'wefoster'),
+		        'below' => __('Below your header', 'wefoster'),
 		        'default' => __('Default', 'wefoster')
 		    ),
 		    'required' => array(

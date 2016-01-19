@@ -30,7 +30,7 @@ function wefoster_stylekits() {
 	if ( ! defined( 'WEFOSTER_PLUS_PLUGIN_DIR' ) ) {
 			$stylekits = array(
 				'default'        => 'Default Styling',
-				'boxed'        => 'Boxed',
+				'accessible'        => 'Accessible',
 				'minimal'        => 'Minimal',
 				'full-width'        => 'Full Width',
 			);
