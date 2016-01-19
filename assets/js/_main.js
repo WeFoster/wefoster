@@ -40,7 +40,6 @@
           "offset": 50
         });
 
-
         //See if a user has a filter enabled
         $('#activity-filter-by,#activity-filter-select').on('change', function() {
           if (this.value === '-1' || this.value === 0) {

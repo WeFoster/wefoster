@@ -28,7 +28,6 @@ if ( ! function_exists( 'wff_default_avatar' ) ) {
     */
 if ( ! function_exists( 'wff_load_full_header_template' ) ) {
 	function wff_load_full_header_template() {
-
 		get_template_part( 'templates/header/'.wff_get_header_type() );
 	}
 
@@ -53,11 +52,11 @@ if ( ! function_exists( 'wff_primary_navigation_location' ) ) {
 
 	if ( $header_settings == 'inside' ) {
 		add_action( 'after_site_description', 'wff_primary_navigation_location' );
+		add_action( 'before_header_navigation', 'wff_primary_navigation_location' );
 	} else {
 		add_action( 'before_header_navigation', 'wff_primary_navigation_location' );
 	}
 }
-
 /*
 * Display our Logo
 */

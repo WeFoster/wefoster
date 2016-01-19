@@ -1,29 +1,31 @@
-@media screen and (max-width: @grid-float-breakpoint-max) {
+@media screen and (min-width: @grid-float-breakpoint-max) {
+  .wf-inside-navigation-menu .navbar-container {
+    visibility: hidden;
+    display: none;
+  }
+}
 
+@media screen and (max-width: @grid-float-breakpoint-max) {
   //This hides the ugly responsive WP admin bar on mobile.
   html.fontface {
     margin-top: 0 !important;
   }
 
-
   body.admin-bar-showing .navbar-fixed-top {
     top: 0;
   }
-
 
   html.fontface #wpadminbar {
     height: 0 !important;
     display: none;
   }
 }
-
 //Hide some elements by default on bigger screens
 .mobile-avatar,
 .bp-user-navigation-widget,
 .mobile-notifications {
   display: none;
 }
-
 ///Show them on responsive view
 @media screen and (max-width: @grid-float-breakpoint-max) {
   .mobile-avatar,
@@ -32,30 +34,30 @@
     display: block;
   }
 }
-
 //Fix sidebar padding
 @media only screen and (min-device-width : @grid-float-breakpoint-max) and (max-device-width : 1024px) and (orientation : landscape) {
   .sidebar {
     padding-left: 0 !important;
   }
 
-
   .container {
     width: 98%;
   }
 }
-
 //Tablet Responsiveness
 @media screen and (max-width: @grid-float-breakpoint-max) {
   .navbar-default .navbar-toggle {
     z-index: 10000;
   }
 
+  .wf-inside-navigation-menu .navbar-container {
+    visibility: inherit !important;
+    display: block !important;
+  }
 
   .navbar-nav {
     margin: 0;
   }
-
 
   .navbar-default .navbar-collapse {
     background: @navbar-default-bg;
@@ -63,13 +65,11 @@
     border-bottom: darken(@navbar-default-bg, 3%);
   }
 
-
   .navbar-inverse .navbar-collapse {
     background: @navbar-inverse-bg;
     padding-bottom: @padding-half;
     border-bottom: lighten(@navbar-inverse-bg, 3%);
   }
-
 
   .navbar .navbar-brand {
     position: absolute;
@@ -77,7 +77,6 @@
     text-align: center;
     background-color: transparent;
     top: -7px;
-
     
     img {
       height: 30px;
@@ -88,34 +87,28 @@
     }
   }
 
-
   .content {
     padding-left: @padding-half;
     padding-right: @padding-half;
   }
-
 
   .inner-sidebar {
     padding-left: 0;
     padding-right: 0;
   }
 
-
   .postthumb,
   .full-header-wrap {
     height: 200px !important;
   }
 
-
   .profile-header {
     position: relative;
   }
 
-
   .mobile-notifications {
     display: none;
   }
-
 
   .wefoster-framework #dropdown-filter {
     border-radius: 0;
@@ -125,12 +118,10 @@
     position: inherit;
   }
 
-
   .mobile-avatar {
     bottom: 0;
     position: absolute;
     z-index: 20;
-
     
     img.avatar {
       border-radius: 4px;
@@ -142,12 +133,10 @@
     }
   }
 
-
   .groups .page-header h1 a,
   .bp-user .page-header h1 a {
     padding-left: 140px;
   }
-
 
   .wefoster-framework #dropdown-filter {
     margin: 0 -30px;
@@ -155,12 +144,10 @@
     text-align: center;
   }
 
-
   .navbar-collapse #bp-user-navigation,
   .tooltip {
     display: none !important;
   }
-
 
   .navbar-toggle img.avatar {
     border-radius: 4px 0 0 4px;
@@ -174,7 +161,6 @@
     width: 33px;
   }
 
-
   .mobile-notifications {
     border-radius: 10px;
     display: block;
@@ -183,13 +169,11 @@
     position: relative;
     top: 9px;
     z-index: 1000;
-
     
     > li {
       a {
         color: @navbar-inverse-link-color;
       }
-
 
       i {
         opacity: 0.6;
@@ -203,13 +187,11 @@ position: relative;
       list-style: none outside none;
     }
 
-
     #notification-counter {
       padding: 1px 6px;
       font-size: 80%;
     }
   }
-
 
   .inner-sidebar {
     .bp-user-navigation-widget {
@@ -221,7 +203,6 @@ position: relative;
       margin-top: -10px;
     }
 
-
     &.mobile {
       border-radius: 0;
       margin-top: -10px;
@@ -230,10 +211,8 @@ position: relative;
       z-index: 100;
     }
 
-
     #bp-user-navigation {
       background: transparent;
-
       
       &.navbar-nav li a {
         color: @white;
@@ -244,15 +223,12 @@ position: relative;
         }
       }
 
-
       label {
         color: @gray;
       }
 
-
       #bp-profile-menu {
         background: @brand-primary;
-
         
         > a {
           border-radius: 0;
@@ -263,7 +239,6 @@ position: relative;
           padding: @padding-half;
           border-bottom: 1px solid lighten(@brand-primary, 3%);
         }
-
 
         a {
           margin-left: -@margin-half;
@@ -287,12 +262,10 @@ position: relative;
           color: #fff;
         }
 
-
         .collapsible li a {
           background: darken(@brand-primary, 10%);
         }
       }
-
 
       .avatar {
         background: #222 none repeat scroll 0 0;
@@ -308,13 +281,11 @@ position: relative;
         width: 32px;
       }
 
-
       #bp-adminbar-notifications-menu {
         display: none;
       }
     }
   }
-
 
   .navbar-brand {
     position: absolute;
@@ -325,7 +296,6 @@ position: relative;
     margin: auto;
   }
 
-
   .navbar-toggle-left {
     float: left;
     margin-left: @margin-half;
@@ -333,26 +303,21 @@ position: relative;
     padding: 3px 9px 1px;
   }
 
-
   .navbar-toggle {
     z-index: 1000;
   }
 
-
   .navbar-toggle {
     border: 0;
-
     
     .fa {
       font-size: 160%;
     }
   }
 
-
   .navbar-inverse .fa {
     color: @white;
   }
-
 
   .main .navbar-toggle {
     background: none repeat scroll 0 0 rgba(34, 30, 30, 0.9);
@@ -365,14 +330,12 @@ position: relative;
     font-size: 85%;
     letter-spacing: 0.5px;
     border-radius: 0 0 6px 0;
-
     
     i {
       font-size: 100%;
       margin-right: 5px;
     }
   }
-
 
   .fa-chevron-circle-right.rotate {
     /*transform*/
@@ -389,12 +352,10 @@ position: relative;
     transition: transform 150ms ease;
   }
 
-
   .off-canvas-sidebar-open {
     overflow-y: scroll;
     overflow-x: hidden;
   }
-
 
   .row-offcanvas {
     /* force hardware acceleration */
@@ -405,46 +366,37 @@ position: relative;
     transition: all 0.2s ease-out 0s;
   }
 
-
   .row-offcanvas-right {
     right: 0;
   }
-
 
   .row-offcanvas-left {
     left: 0;
   }
 
-
   .row-offcanvas-right .sidebar-offcanvas {
     right: -55%;
   }
-
 
   .row-offcanvas-left .sidebar-offcanvas {
     left: -55%;
   }
 
-
   .row-offcanvas-right.active {
     right: 55%;
-
     
     .inner-sidebar {
       margin-right: @margin-half;
     }
   }
 
-
   .row-offcanvas-left.active {
     left: 55%;
-
     
     .inner-sidebar {
       margin-left: @margin-half;
     }
   }
-
 
   .sidebar-offcanvas {
     position: absolute;
@@ -453,47 +405,38 @@ position: relative;
   }
 }
 
-
 .bp-cover-image-wrap {
   height: 100% !important;
 }
-
 
 @media (max-width: 568px) {
   .postthumb {
     height: 160px !important;
   }
 
-
   .row-offcanvas-right .sidebar-offcanvas {
     right: -90%;
   }
-
 
   .row-offcanvas-left .sidebar-offcanvas {
     left: -90%;
   }
 
-
   .row-offcanvas-right.active {
     right: 90%;
-
     
     .inner-sidebar {
       margin-right: @margin-half;
     }
   }
 
-
   .row-offcanvas-left.active {
     left: 90%;
-
     
     .inner-sidebar {
       margin-left: @margin-half;
     }
   }
-
 
   .sidebar-offcanvas {
     position: absolute;
@@ -502,29 +445,24 @@ position: relative;
   }
 }
 
-
 @media only screen and (min-device-width : 320px) and (max-device-width : 568px) {
   body {
     background: #fff;
   }
-
 
   .content {
     padding-left: 0;
     padding-right: 0;
   }
 
-
   .inner-sidebar {
     padding-left: @padding-half;
     padding-right: 0;
   }
 
-
   ul.item-list li {
     padding: @padding-half;
   }
-
 
   #dropdown-filter {
     font-size: 115% !important;
@@ -536,17 +474,14 @@ position: relative;
     padding-left: @padding-half !important;
   }
 
-
   .mobile-avatar {
     bottom: -40px;
-
     
     img.avatar {
       height: 60px;
       width: 60px;
     }
   }
-
 
   .bp-user .container .content .main .page-header h1,
   .groups .container .content .main .page-header h1 {
@@ -557,7 +492,6 @@ position: relative;
     position: relative;
     padding-top: 5px;
     padding-bottom: 5px;
-
     
     a {
       color: @text-color;

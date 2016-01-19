@@ -319,18 +319,6 @@ if ( WEFOSTER_LAYOUT_CLASS == 'container'  ) {
 }
 
 /**
- * Add Boxed Header Filter
- *
- * @since 1.0.0
- *
- */
-function wff_boxed_header() {
-  echo apply_filters( 'wff_boxed_header_class', '' );
-}
-add_action( 'class_header','wff_boxed_header' );
-
-
-/**
  * Is the header set to boxed? Add our extra classes
  *
  * @since 1.0.0
@@ -406,6 +394,24 @@ function wff_add_category_body_class( $classes ) {
 	return $classes;
 }
 add_filter( 'body_class', 'wff_add_category_body_class' );
+
+/**
+ * Add Body Class when the Inside Menu is used.
+ *
+ * @since 1.0.0
+ *
+ */
+function wff_inside_menu_navigation_body_class( $classes ) {
+
+  $header_settings = get_theme_mod( 'wf_plus_header_menu_position' );
+
+	if ( $header_settings == 'inside' ) {
+		  $classes[] = 'wf-inside-navigation-menu';
+	}
+	// return the $classes array
+	return $classes;
+}
+add_filter( 'body_class', 'wff_inside_menu_navigation_body_class' );
 
 /**
  * Add filterable class to post author box.
