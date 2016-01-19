@@ -282,6 +282,9 @@ function wff_get_site_logo() {
   elseif ( WEFOSTER_LOGO_TYPE == 'text' ){
     $logo = get_bloginfo('name');
   }
+  elseif ( WEFOSTER_LOGO_TYPE == 'text-description' ){
+    $logo = get_bloginfo('name') . '<span>' . get_bloginfo('description') . '</span>';
+  }
 	else {
 		$logo = '<img src="' . WEFOSTER_DEFAULT_LOGO . '">';
 	}

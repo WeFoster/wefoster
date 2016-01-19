@@ -6,8 +6,6 @@
 
         <div class="site-description">
           <?php do_action('inside_site_description'); ?>
-          <?php echo get_bloginfo('name'); ?>
-          <span><?php echo get_bloginfo('description'); ?></span>
         </div>
 
         <div class="inside-menu">

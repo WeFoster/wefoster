@@ -210,7 +210,8 @@ function wf_plus_logo_css() {
 ?>
 
 	<?php if ( get_theme_mod('wf_plus_logo_type') == 'custom-logo') : ?>
-			.wefoster-framework .navbar .navbar-brand img {
+			.wefoster-framework .navbar .navbar-brand img,
+			.wefoster-framework .site-description img {
 				<?php if (	$logo_position != 'default' ) : ?>
 				top: <?php echo $logo_position ?>px;
 				<?php endif; ?>

@@ -278,6 +278,10 @@ function wefoster_plus_custom_logo() {
 	  $logo = '<img src="' . WEFOSTER_DEFAULT_LOGO . '">';
 	}
 
+	if ( $logo_type== 'text-description' ) {
+    $logo = get_bloginfo('name') . '<span>' . get_bloginfo('description') . '</span>';
+  }
+
 	if ( $logo_type == 'text' ) {
       $logo = get_bloginfo('name');
   }

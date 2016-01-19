@@ -46,11 +46,36 @@ if ( ! function_exists( 'wff_load_full_header_template' ) ) {
  */
 if ( ! function_exists( 'wff_primary_navigation_location' ) ) {
 	function wff_primary_navigation_location() {
-
 		get_template_part( 'templates/header/primary-navigation' );
 	}
-	add_action( 'before_header_navigation', 'wff_primary_navigation_location' );
-	add_action( 'after_site_description', 'wff_primary_navigation_location' );
+
+	$header_settings = get_theme_mod( 'wf_plus_header_menu_position' );
+
+	if ( $header_settings == 'inside' ) {
+		add_action( 'after_site_description', 'wff_primary_navigation_location' );
+	} else {
+		add_action( 'before_header_navigation', 'wff_primary_navigation_location' );
+	}
+}
+
+/*
+* Display our Logo
+*/
+if ( ! function_exists( 'wff_branding' ) ) {
+	function wff_branding() {
+			if (empty($logo)) {
+				$logo = WEFOSTER_DEFAULT_LOGO;
+			}
+			echo apply_filters( 'wff_logo', $logo );
+	}
+
+	$header_settings = get_theme_mod( 'wf_plus_header_menu_position' );
+
+	if ( $header_settings == 'inside' ) {
+		add_action( 'inside_site_description', 'wff_branding' );
+	} else {
+		add_action( 'inside_branding', 'wff_branding' );
+	}
 }
 
 	/*

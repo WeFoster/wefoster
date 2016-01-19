@@ -309,6 +309,7 @@ function wf_plus_register_settings($fields)
 		        'full-inverse' => __('Full Logo Inversed', 'wefoster'),
 		        'full-regular' => __('Full Logo Regular', 'wefoster'),
 		        'text' => __('Text', 'wefoster'),
+      			'text-description' => __('Text and Description', 'wefoster'),
 		        'hide' => __('Hide Logo', 'wefoster'),
 		        'default' => __('Default', 'wefoster')
 		    )
