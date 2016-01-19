@@ -133,4 +133,29 @@ p {
     letter-spacing: inherit !important;
     word-spacing: inherit !important;
   }
+
+  .item-list li.hidden {
+    display: block !important;
+    visibility: inherit !important;
+  }
+
+  .popover {
+    font-family: inherit;
+    min-width: 400px;
+    width: 400px;
+    padding: @padding-half;
+    border-bottom: 4px solid @brand-secondary;
+    
+    .popover-description {
+      font-size: 90%;
+      color: @gray-light;
+    }
+
+    .popover-meta {
+      font-size: 65%;
+      margin-bottom: 15px;
+      padding: 5px 8px;
+      background: darken(@white, 3%);
+    }
+  }
 }

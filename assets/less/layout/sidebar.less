@@ -22,21 +22,27 @@
         color: @widget-header-color;
       }
     }
-    
 
     &:last-child {
       border-radius: 0 0 @global-border-radius @global-border-radius;
     }
-    
 
     &:first-child {
       border-radius: @global-border-radius @global-border-radius 0 0;
+      
       h4 {
         border-radius: @global-border-radius @global-border-radius 0 0;
         margin-top: -@margin-full;
       }
     }
-    
+
+    ul {
+      padding: 0;
+      
+      li {
+        list-style: inside;
+      }
+    }
 
     img {
       display: block;

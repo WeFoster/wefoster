@@ -39,6 +39,22 @@ function wf_theme_customizer_stylesheet() {
 }
 add_action( 'customize_controls_print_styles', 'wf_theme_customizer_stylesheet' );
 
+
+/**
+ * This function adds some styles to the WordPress Customizer
+ */
+function my_customizer_styles() { ?>
+    <style>
+		.kirki-customizer-loading-wrapper {
+		  background-image: inherit !important;
+			display: none !important;
+		}
+    </style>
+    <?php
+
+}
+add_action( 'customize_controls_print_styles', 'my_customizer_styles', 999 );
+
 /**
  * Display upgrade notice on customizer page
  *
