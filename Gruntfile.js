@@ -28,6 +28,9 @@ module.exports = function(grunt) {
           'assets/css/main.css': [
             'assets/less/main.less'
           ],
+          'assets/css/font-awesome.css': [
+            'assets/less/font-awesome.less'
+          ],
           'assets/css/buddypress.css': [
             'assets/less/buddypress.less'
           ],
@@ -217,6 +220,8 @@ module.exports = function(grunt) {
         cssHandle: 'wff_main',
         css: 'assets/css/buddypress.css',
         cssHandle: 'wff_buddypress',
+        css: 'assets/css/font-awesome.css',
+        cssHandle: 'wff_font_awesome',
         js: 'assets/js/scripts.min.js',
         jsHandle: 'wff_scripts'
       },
