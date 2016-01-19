@@ -10,6 +10,7 @@
   position: relative;
   z-index: 1;
   margin-bottom: (-@margin-full - 1.5);
+  
   .avatar {
     float: left;
     height: auto;
@@ -18,13 +19,10 @@
   }
 }
 
-
 div.vertical-list-tabs {
-  
   &#vertical-activity-tabs h4 {
     margin-bottom: 0;
   }
-  
 margin-left: 0;
   margin-right: 0;
   padding-bottom: 0 !important;
@@ -34,7 +32,6 @@ margin-left: 0;
   .sidebar-nav {
     margin-top: -@margin-full;
   }
-  
 
   ul li {
     float: none;
@@ -42,6 +39,7 @@ margin-left: 0;
     padding: @vert-tabs-padding;
     border-bottom: 0;
     border-top: 0;
+    list-style: none;
     
     &.selected,
     &.current {
@@ -51,17 +49,14 @@ margin-left: 0;
         border-bottom: @vert-tabs-active-border-bottom;
       }
     }
-    
 
     a:hover {
       border-color: @brand-secondary;
     }
-    
 
     li:last-child a {
       border-bottom: 2px solid darken(@brand-secondary, 5%);
     }
-    
 
     a {
       background: @vert-tabs-bg;
@@ -72,21 +67,18 @@ margin-left: 0;
       border-top: @vert-tabs-border-top;
       color: darken(@widget-bg, 40%);
     }
-    
 
     a:hover {
       background: @vert-tabs-hover-bg;
       color: @vert-tabs-hover-color;
       padding-left: @padding-full !important;
-      padding-right: @padding-full !important;
+      padding-right: @padding-full;
       
       span {
         background: darken(@vert-tabs-hover-bg, 8%);
         border: 1px solid darken(@vert-tabs-hover-bg, 5%);
       }
     }
-    
-
     // Activity Stream Tabs
     &.loading {
       -webkit-transition: all 0.3s ease;
@@ -95,19 +87,17 @@ margin-left: 0;
       -o-transition: all 0.3s ease;
       transition: all 0.3s ease;
     }
-    
-
     // Activity Stream Tabs
     &.loading a {
       color: darken(@white, 5%);
       padding-left: @padding-full + 19px !important;
-      padding-right: @padding-full !important;
+      padding-right: @padding-full;
       position: relative;
+      
       &:hover {
         padding-left: @padding-full + 19px !important;
       }
     }
-    
 
     &.loading a:before {
       position: absolute !important;
@@ -121,61 +111,51 @@ margin-left: 0;
       -o-animation: spin 1.5s infinite linear;
       animation: spin 1.5s infinite linear;
     }
-    
 
     @-moz-keyframes spin {
       0% {
         -moz-transform: rotate(0deg);
       }
-      
 
       100% {
         -moz-transform: rotate(359deg);
       }
     }
-    
 
     @-webkit-keyframes spin {
       0% {
         -webkit-transform: rotate(0deg);
       }
-      
 
       100% {
         -webkit-transform: rotate(359deg);
       }
     }
-    
 
     @-o-keyframes spin {
       0% {
         -o-transform: rotate(0deg);
       }
-      
 
       100% {
         -o-transform: rotate(359deg);
       }
     }
-    
 
     @-ms-keyframes spin {
       0% {
         -ms-transform: rotate(0deg);
       }
-      
 
       100% {
         -ms-transform: rotate(359deg);
       }
     }
-    
 
     @keyframes spin {
       0% {
         transform: rotate(0deg);
       }
-      
 
       100% {
         transform: rotate(359deg);
@@ -184,12 +164,10 @@ margin-left: 0;
   }
 }
 
-
 #buddypress {
   .item-list-tabs {
     position: relative;
   }
-  
 
   .item-list-tabs > ul:after {
     content: ".";
@@ -200,14 +178,12 @@ margin-left: 0;
   }
 }
 
-
 #subnav li.last {
   text-shadow: none;
   
   a {
     padding: 3px 20px;
   }
-  
 
   span {
     background: none;

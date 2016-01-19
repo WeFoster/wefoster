@@ -15,7 +15,10 @@
       do_action('before_single_content');
     ?>
 
-    <?php get_template_part('templates/loops/content', 'single'); ?>
+    <?php while (have_posts()) : the_post(); ?>
+      <?php get_template_part('templates/loops/content', 'single'); ?>
+    <?php endwhile; ?>
+    
     <?php do_action('after_single_content'); ?>
 
 </div><!-- /.main -->

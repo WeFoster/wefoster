@@ -32,7 +32,9 @@
 
 
     <?php do_action('before_content'); ?>
+    <?php while (have_posts()) : the_post(); ?>
         <?php get_template_part('templates/loops/content', get_post_format()); ?>
+    <?php endwhile; ?>
     <?php do_action('after_content'); ?>
 
 

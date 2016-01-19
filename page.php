@@ -17,7 +17,9 @@
         do_action('before_page_content');
         ?>
 
+        <?php while (have_posts()) : the_post(); ?>
         <?php get_template_part('templates/loops/content', 'page'); ?>
+        <?php endwhile; ?>
 
         <?php do_action('close_page_content'); ?>
     </div><!-- /.main -->

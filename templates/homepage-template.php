@@ -80,5 +80,4 @@
 do_action( 'after_homepage' );
 ?>
 
-
 <?php get_template_part('footer'); ?>
