@@ -270,6 +270,13 @@ if ( !defined( 'WEFOSTER_CUSTOMIZER_VALUES' ) ) {
 ///////////////     BUDDYPRESS 				///////////////
 /////////////// 											///////////////
 
+//By default BuddyPress CSS is only loaded on the main site in a Multisite installation.
+// If you want you can enable the stylesheet to be loaded on every page
+if ( !defined( 'WEFOSTER_MS_LOAD_BUDDYPRESS_STYLES' ) ) {
+		// options are 'on' or 'off'
+		define('WEFOSTER_LOAD_BUDDYPRESS_STYLES', 'off');
+}
+
 //The Default Position of our BP Navigation Menu
 if ( !defined( 'WEFOSTER_BP_NAVBAR_POSITION_CLASS' ) ) {
 		// 'navbar-left' or 'navbar-right' or 'navbar-center'

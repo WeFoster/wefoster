@@ -19,8 +19,11 @@ function wff_scripts() {
 	wp_enqueue_style( 'wff_main', $path . '/css/main.css', false, '6ee17105aaae3sffd20bb56ee840e0cabcd' );
 
 	// Load our BuddyPress Stylesheet based on being active (on root or multiblog)
-	if ( class_exists( 'BuddyPress' ) && bp_is_root_blog() || class_exists( 'BuddyPress' ) && defined( 'BP_ENABLE_MULTIBLOG' )   ) {
-		wp_enqueue_style( 'wff_buddypress', $path . '/css/buddypress.css', false, '9ad14980d2d75af2ed431fe686bad3f0' );
+	if (
+			class_exists( 'BuddyPress' ) && bp_is_root_blog() ||
+			class_exists( 'BuddyPress' ) && defined( 'BP_ENABLE_MULTIBLOG' ) ||
+			WEFOSTER_MS_LOAD_BUDDYPRESS_STYLES == 'on' ) {
+			wp_enqueue_style( 'wff_buddypress', $path . '/css/buddypress.css', false, '9ad14980d2d75af2ed431fe686bad3f0' );
 	}
 
 	if ( WEFOSTER_ICON_FONT == 'font-awesome' ) {
