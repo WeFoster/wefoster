@@ -347,7 +347,7 @@ function wf_plus_register_settings($fields)
 		    'transport' => 'postMessage',
 		    'js_vars' => array(
 		        array(
-		            'element' => '.wefoster-framework .navbar .navbar-brand img',
+		            'element' => '.wefoster-framework .navbar .navbar-brand img, .wefoster-framework .site-description img',
 		            'property' => 'height',
 		            'function' => 'css',
 		            'units' => 'px'
@@ -356,9 +356,14 @@ function wf_plus_register_settings($fields)
 		    'required' => array(
 		        array(
 		            'setting' => 'wf_plus_logo_type',
-		            'operator' => '=',
-		            'value' => 'custom-logo'
-		        )
+		            'operator' => '!=',
+		            'value' => 'text'
+		        ),
+						array(
+								'setting' => 'wf_plus_logo_type',
+								'operator' => '!=',
+								'value' => 'text-description'
+						)
 		    )
 		));
 
@@ -375,12 +380,17 @@ function wf_plus_register_settings($fields)
 		        'max' => 100,
 		        'step' => 1
 		    ),
-		    'required' => array(
+				'required' => array(
 		        array(
 		            'setting' => 'wf_plus_logo_type',
-		            'operator' => '=',
-		            'value' => 'custom-logo'
-		        )
+		            'operator' => '!=',
+		            'value' => 'text'
+		        ),
+						array(
+								'setting' => 'wf_plus_logo_type',
+								'operator' => '!=',
+								'value' => 'text-description'
+						)
 		    )
 		));
 

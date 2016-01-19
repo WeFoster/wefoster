@@ -15,14 +15,14 @@ if ( bp_is_user() ) {
 
   // is our profile? Show Change Button
   if ( bp_is_my_profile() ) {
-    $action = '<div class="cover-photo-action site-description my-profile">' . sprintf( __( "<a href='%s'><i class='fa fa-camera-retro'></i>  Change Cover Photo</a>", 'wefoster' ), bp_loggedin_user_domain() . $bp->profile->slug . 'profile/change-cover-image/' ) . '</div>';
+    $action = '<div class="cover-photo-action vertical-center site-description my-profile">' . sprintf( __( "<a href='%s'><i class='fa fa-camera-retro'></i>  Change Cover Photo</a>", 'wefoster' ), bp_loggedin_user_domain() . $bp->profile->slug . 'profile/change-cover-image/' ) . '</div>';
   }
 
   //No photo set? Show default + message
   if ( empty($cover_image_url)) {
     $cover_image_url = WEFOSTER_DEFAULT_MEMBER_COVER_PHOTO;
     if ( bp_is_my_profile() ) {
-      $action = '<div class="cover-photo-action site-description">' . sprintf( __( "<a href='%s'><i class='fa fa-camera-retro'></i>  Upload Your Cover Photo</a>", 'wefoster' ), bp_loggedin_user_domain() . $bp->profile->slug . 'profile/change-cover-image/' ) . '</div>';
+      $action = '<div class="cover-photo-action vertical-center site-description site-description">' . sprintf( __( "<a href='%s'><i class='fa fa-camera-retro'></i>  Upload Your Cover Photo</a>", 'wefoster' ), bp_loggedin_user_domain() . $bp->profile->slug . 'profile/change-cover-image/' ) . '</div>';
     }
 }
 
@@ -38,7 +38,7 @@ if ( bp_is_user() ) {
     // is the current user a Group Admin? Allow the user to change.
     if ( groups_is_user_admin( bp_loggedin_user_id(), bp_get_current_group_id()  ) ) {
 
-      $action = '<div class="cover-photo-action site-description my-profile">' . sprintf( __( "<a href='%s'><i class='fa fa-camera-retro'></i>  Change Cover Photo</a>", 'wefoster' ), bp_get_group_permalink(buddypress()->groups->current_group ) . 'admin/group-cover-image/' ) . '</div>';
+      $action = '<div class="cover-photo-action vertical-center site-description my-profile">' . sprintf( __( "<a href='%s'><i class='fa fa-camera-retro'></i>  Change Cover Photo</a>", 'wefoster' ), bp_get_group_permalink(buddypress()->groups->current_group ) . 'admin/group-cover-image/' ) . '</div>';
 
     }
 
@@ -47,7 +47,7 @@ if ( bp_is_user() ) {
       $cover_image_url = WEFOSTER_DEFAULT_GROUP_COVER_PHOTO;
       if ( groups_is_user_admin( bp_loggedin_user_id(), bp_get_current_group_id()  ) ) {
 
-      $action = '<div class="cover-photo-action site-description">' . sprintf( __( "<a href='%s'><i class='fa fa-camera-retro'></i>  Upload a Group Cover Photo</a>", 'wefoster' ), bp_get_group_permalink(buddypress()->groups->current_group ) . 'admin/group-cover-image/' ) . '</div>';
+      $action = '<div class="cover-photo-action vertical-center site-description">' . sprintf( __( "<a href='%s'><i class='fa fa-camera-retro'></i>  Upload a Group Cover Photo</a>", 'wefoster' ), bp_get_group_permalink(buddypress()->groups->current_group ) . 'admin/group-cover-image/' ) . '</div>';
 
     }
   }
