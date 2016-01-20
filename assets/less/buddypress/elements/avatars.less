@@ -14,7 +14,6 @@
 // @small-avatar-border:
 // @small-avatar-padding:
 // @small-avatar-background:
-
 .item-list img.avatar {
   display: block;
   max-width: 100%;
@@ -22,6 +21,7 @@
   width: @medium-avatar-size;
   box-shadow: @medium-avatar-shadow;
 }
+
 #item-header-avatar .avatar {
   border-radius: @big-avatar-radius;
   padding: @big-avatar-padding;
@@ -29,6 +29,7 @@
   box-shadow: @big-avatar-shadow;
   width: 100%;
 }
+
 .thread-avatar img {
   width: @medium-avatar-size;
   height: @medium-avatar-size;
@@ -44,11 +45,10 @@ div#item-header ul.avatars img.avatar {
 
 #bp-user-navigation {
   .avatar {
-    background: @white;
     border-radius: @small-avatar-size;
     height: @small-avatar-size;
     margin-top: -12px;
-    padding: @medium-avatar-padding;
+    padding: 0;
     position: relative;
     top: 4px;
     width: @small-avatar-size;
@@ -89,12 +89,14 @@ div#item-header ul.avatars img.avatar {
       margin-right: 10px;
     }
   }
+
   div.item-avatar {
     img {
       height: @medium-avatar-size;
       margin: 1px;
       width: @medium-avatar-size;
     }
+
     img.avatar {
       float: left;
       margin: 0 10px @padding-half 0;
@@ -116,7 +118,7 @@ div#item-header ul.avatars img.avatar {
 div.ac-reply-avatar {
   float: left;
   width: @medium-avatar-size;
-
+  
   img.avatar {
     display: block !important;
   }
@@ -128,6 +130,7 @@ div.ac-reply-avatar {
 
 #avatar-crop-pane {
   border-radius: @big-avatar-radius;
+  
   img.avatar {
     border-radius: 0 !important;
   }

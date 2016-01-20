@@ -13,15 +13,15 @@ body {
 .login #backtoblog a:hover,
 .login #nav a:hover,
 .login h1 a:hover {
-  color: #3abb9a;
+  color: #FEB43E;
 }
 .wp-core-ui .button-primary {
-  background: #3abb9a;
-  border: 1px solid #38b394;
+  background: #FEB43E;
+  border: 1px solid #feb034;
 }
 .wp-core-ui .button-primary:hover {
-  background: #309c80;
-  border: 1px solid #2e947a;
+  background: #fea415;
+  border: 1px solid #fea00b;
 }
 #loginform {
   background: #fff;

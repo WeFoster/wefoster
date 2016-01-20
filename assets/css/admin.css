@@ -2195,8 +2195,8 @@ fieldset[disabled] .btn-primary.active {
 }
 .btn-success {
   color: #ffffff;
-  background-color: #34a88a;
-  border-color: #2e947a;
+  background-color: #239076;
+  border-color: #1e7c65;
 }
 .btn-success:hover,
 .btn-success:focus,
@@ -2205,8 +2205,8 @@ fieldset[disabled] .btn-primary.active {
 .btn-success.active,
 .open > .dropdown-toggle.btn-success {
   color: #ffffff;
-  background-color: #28816a;
-  border-color: #1f6553;
+  background-color: #196755;
+  border-color: #124b3d;
 }
 .btn-success:active,
 .btn-success.active,
@@ -2231,11 +2231,11 @@ fieldset[disabled] .btn-success:active,
 .btn-success.disabled.active,
 .btn-success[disabled].active,
 fieldset[disabled] .btn-success.active {
-  background-color: #34a88a;
-  border-color: #2e947a;
+  background-color: #239076;
+  border-color: #1e7c65;
 }
 .btn-success .badge {
-  color: #34a88a;
+  color: #239076;
   background-color: #ffffff;
 }
 .btn-info {
@@ -6356,26 +6356,26 @@ _:-ms-fullscreen,
   background: #4c515c !important;
 }
 .box-brand-complimentary {
-  background: #3abb9a;
-  color: #ffffff;
-  border-color: #35ab8d !important;
+  background: #feb43e;
+  color: #343434;
+  border-color: #feac2a !important;
 }
 .box-brand-complimentary svg {
-  background: #3abb9a;
+  background: #feb43e;
 }
 .box-brand-complimentary a,
 .box-brand-complimentary a:hover {
-  color: #ffffff;
+  color: #343434;
 }
 .box-brand-complimentary img {
-  background: #36af90 !important;
-  border-color: #3dc3a0 !important;
+  background: #feae2f !important;
+  border-color: #feb848 !important;
 }
 .box-brand-complimentary.darken {
-  background: #36af90 !important;
+  background: #feae2f !important;
 }
 .box-brand-complimentary.lighten {
-  background: #40c4a2 !important;
+  background: #feba4d !important;
 }
 .box-intro {
   font-style: italic;
