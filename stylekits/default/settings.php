@@ -152,9 +152,10 @@ Kirki::add_field( 'wefoster_plus', array(
       'settings'  => 'stylekit_color_scheme',
       'label'     => __( 'Color Scheme', 'translation_domain' ),
       'section'   => 'wf_plus_stylekit_section',
-      'default'   => 'blue',
+      'default'   => 'default',
       'priority'  => 30,
   		'choices'     => array(
+  			'default' => __( 'Default', 'wefoster' ),
   			'blue' => __( 'Blue', 'wefoster' ),
   			'accessible' => __( 'Accessibility Friendly', 'wefoster' ),
   			'black' => __( 'Black', 'wefoster' ),

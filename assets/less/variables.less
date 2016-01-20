@@ -10,7 +10,7 @@
 //
 //Padding
 //
-@padding-full: 30px;
+@padding-full: 40px;
 @padding-half: ( @padding-full / 2 );
 @padding-double: (@padding-full * 2 );
 @padding-one-half: (@padding-full * 1.5 );
@@ -34,10 +34,12 @@
 //
 @main-bg: @white;
 @main-border: 0;
+@main-padding: @padding-full;
 @sidebar-bg: transparent;
 @sidebar-border: 0;
 @inner-sidebar-bg: @white;
 @inner-sidebar-border: 0;
+@sidebar-padding: @padding-full;
 //
 //Responsive Grid changes.
 //
@@ -78,6 +80,7 @@
 //
 //Widgets
 //
+@widget-padding: @padding-full;
 @widget-header-background: @page-header-background;
 @widget-header-color: @text-color;
 @widget-header-font-family: @font-family-base;
@@ -334,6 +337,8 @@
 //
 @header-avatar-bg: @brand-primary;
 @header-border-radius: inherit;
+//Widgets
+@bp-widget-padding: @padding-full;
 //
 // ACTIVITY COMPONENT
 //
@@ -398,7 +403,7 @@
 @post-meta-border-bottom: 1px solid darken(@post-meta-bg, 4%);
 @post-meta-border-top: 1px solid darken(@post-meta-bg, 3%);
 @post-meta-padding: (@padding-half * 0.66) @padding-full;
-@post-meta-margin: -30px -30px 30px;
+@post-meta-margin: -@margin-full -@margin-full @margin-full;
 @post-meta-font-size: 90%;
 @post-meta-color: inherit;
 @post-meta-box-shadow: none;

@@ -5,7 +5,9 @@
     <div class="site-description-wrap wf-grid wf-grid--align-center">
 
         <div class="site-description">
+          <a href="<?php echo get_home_url()?>">
           <?php do_action('inside_site_description'); ?>
+          </a>
         </div>
 
         <div class="inside-menu">

@@ -5,7 +5,6 @@
   font-family: @navigation-font-family;
   
   .navbar-brand {
-    
     //color: #fff;
     //font-weight: bold;
     position: relative;
@@ -18,10 +17,32 @@
       top: @logo-position;
     }
   }
-
   //Remove smart menu markup
   .dropdown-toggle .sub-arrow {
     visibility: hidden !important;
+  }
+}
+// Make some small changed on the inside menu
+.inside-menu {
+  margin-left: auto;
+}
+
+.navbar-collapse {
+  position: relative;
+}
+
+.navbar {
+  border-radius: 0;
+  margin-bottom: @margin-full;
+}
+
+.container.boxed-header {
+  margin-top: @margin-full;
+  padding-left: 0;
+  padding-right: 0;
+  
+  #bp-user-navigation {
+    margin-right: -@margin-full;
   }
 }
 

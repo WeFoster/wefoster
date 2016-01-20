@@ -29,7 +29,6 @@
   .bbp-template-notice .bbp-author-avatar,
   .bbp-template-notice,
   + .bbp-pagination {
-    
     //display: none;
   }
 
@@ -75,7 +74,7 @@
   .bbp-topic-permalink {
     font-weight: 600;
   }
-  font-size: @font-size-base;
+font-size: @font-size-base;
   overflow: inherit;
   
   > h3 {
@@ -89,7 +88,6 @@
     z-index: 0;
     margin-bottom: @padding-full;
   }
-
   //Input Fields
   fieldset.bbp-form p,
   fieldset.bbp-form textarea,
@@ -237,7 +235,7 @@
     float: left;
     font-size: 80%;
     margin-bottom: 15px;
-    margin-top: -30px;
+    margin-top: -@margin-full;
     padding-top: 8px;
     position: relative;
     z-index: 10;
@@ -267,14 +265,13 @@
     left: 0;
     position: absolute;
     right: 0;
-    top: -30px;
+    top: -@margin-full;
     
     a,
     span {
       color: @text-color;
     }
   }
-
   //Custom Layout for WeFoster.co
   .bbp-reply-author {
     font-family: @headings-font-family;
@@ -282,7 +279,6 @@
     background: darken(@white, 5%);
     border-radius: 2px;
     padding: @padding-half;
-    
     //border: 1px solid darken(@white, 7%);
     a {
       font-size: 90%;
@@ -298,7 +294,6 @@
   div.bbp-reply-header {
     border: 0;
   }
-
   //New Topic Forms
   fieldset.bbp-form {
     #whats-new-form();
@@ -307,7 +302,7 @@
     legend {
       border-bottom: 0 none;
       margin-top: 0;
-      padding: 30px 5px;
+      padding: @padding-full 5px;
       position: relative;
       top: 45px;
     }
@@ -320,14 +315,14 @@
   }
 
   div.bbp-submit-wrapper {
-    margin-top: -30px;
+    margin-top: -@margin-full;
     padding-bottom: 0;
   }
 
   #bbp_topic_submit,
   #bbp_reply_submit {
     position: relative;
-    top: -30px;
+    top: -@margin-full;
     font-size: 130%;
     padding: 8px 12px;
   }
@@ -335,7 +330,6 @@
   .bbp-topics .bbp-header {
     position: inherit !important;
   }
-
   //End BBPress Wrap
 }
 
@@ -367,11 +361,11 @@
       border-radius: 0;
       font-size: 105%;
       margin-bottom: -@margin-full !important;
-      margin-left: -@margin-full !important;
-      margin-right: -@margin-full !important;
+      margin-left: -@margin-full;
+      margin-right: -@margin-full;
       overflow: inherit;
       padding: @padding-one-half @padding-full !important;
-      top: -30px;
+      top: -@margin-full;
       
       .bbp-reply-author {
         background: @brand-complimentary;
@@ -408,15 +402,14 @@
 
   .bbp-search-form {
     position: absolute;
-    top: 15px;
-    right: 30px;
+    top: @margin-full;
+    right: @margin-full;
   }
 
   .bbp-header {
     position: inherit !important;
   }
 }
-
 //Responsive Tweaks.
 @media screen and (max-width: @grid-float-breakpoint-max) {
   .wefoster-framework #bbpress-forums ul.bbp-lead-topic,

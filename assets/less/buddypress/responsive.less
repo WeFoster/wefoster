@@ -43,7 +43,6 @@
     top: @margin-full;
   }
 }
-
 /*--------------------------------------------------------------
 4.1 - Smartphones - landscape
 --------------------------------------------------------------*/
@@ -82,7 +81,6 @@
     }
   }
 }
-
 /*--------------------------------------------------------------
 4.2 - Smartphones - portrait
 --------------------------------------------------------------*/
@@ -144,7 +142,6 @@
     text-align: left;
   }
 }
-
 /*--------------------------------------------------------------
 4.2 - Smartphones - smaller screen sizes
 --------------------------------------------------------------*/
@@ -184,7 +181,6 @@
     margin-left: 45px;
   }
 }
-
 /*! Hiding stuff that is not crucial for mobile experience
 But greatly improves the layout */
 @media only screen and (max-width: @grid-float-breakpoint-max) {
@@ -195,7 +191,7 @@ But greatly improves the layout */
   .bp-user {
     .postthumb {
       position: relative;
-      top: -30px;
+      top: -@margin-full;
       margin-bottom: 0 !important;
     }
   }
