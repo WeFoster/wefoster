@@ -87,3 +87,7 @@ function wefoster_plus_background_pictures() {
 function do_not_filter_anything( $value ) {
 	return $value;
 }
+
+function wf_plus_navigation_css_selectors() {
+  return '.wefoster-framework .navbar-nav li a,.wefoster-framework .item-list-tabs li a,.wefoster-framework .item-title a,.wefoster-framework .post-meta,.widget h4,.post-entry-bottom,#subnav,.dropdown-menu,.item-options,#item-header-content,#item-actions h3,.btn,.button,input[type=submit],#whats-new-post-in-box,.pag-count,.activity-greeting,.bottom-links,.generic-button,.meta,.activity-header,.acomment-meta,.acomment-options,label,#message-recipients,.message-metadata,.thread-info a,.thread-options a,.thread-star a,.thread-from, thead tr th,.media-heading,.load-more,.show-all,#user-sidebar-menu,#activity-filter-notice,.navigation-font';
+}

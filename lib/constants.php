@@ -219,12 +219,12 @@ if ( !defined( 'WEFOSTER_FONT_FAMILY' ) ) {
 
 if ( !defined( 'WEFOSTER_HEADINGS_FONT_FAMILY' ) ) {
 	// Choose a default Font that is present on Google Fonts.
-	define('WEFOSTER_HEADINGS_FONT_FAMILY', 'Lato');
+	define('WEFOSTER_HEADINGS_FONT_FAMILY', 'Varela Round');
 }
 
 if ( !defined( 'WEFOSTER_NAVIGATION_FONT_FAMILY' ) ) {
 	// Choose a default Font that is present on Google Fonts.
-	define('WEFOSTER_NAVIGATION_FONT_FAMILY', 'Lato');
+	define('WEFOSTER_NAVIGATION_FONT_FAMILY', 'Varela Round');
 }
 
 if ( !defined( 'WEFOSTER_FONT_SIZE' ) ) {

@@ -19,7 +19,6 @@ a span.time-since {
 
 a.bp-primary-action:hover span,
 #reply-title small a:hover span {
-  
   //background: #555;
   //color: @white;
 }
@@ -31,6 +30,15 @@ div.activity-content div.activity-inner {
   margin-left: 0;
   padding: @activity-inner-padding;
   color: @activity-inner-color;
+  
+  .embed-responsive {
+    margin-top: @margin-half;
+    
+    iframe {
+      padding: 2px;
+      background: @brand-complimentary;
+    }
+  }
 }
 
 a.activity-time-since:hover {
@@ -75,7 +83,6 @@ ul.item-list.activity-list {
 
     .activity-header {
       img.avatar {
-        
         //display: none !important;
       }
     }
