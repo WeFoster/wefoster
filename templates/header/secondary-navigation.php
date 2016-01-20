@@ -1,4 +1,7 @@
-<?php do_action('before_secondary_header_navigation'); ?>
+<?php
+if ( has_nav_menu( 'secondary_navigation' ) ) {
+do_action('before_secondary_header_navigation');
+?>
 <div class="secondary-nav-wrap <?php do_action('class_container'); do_action('class_container_navbar'); ?>">
 <nav class="collapse navbar-collapse <?php do_action('class_navbar'); ?>" role="navigation">
 		 <?php do_action('open_header_navigation_secondary'); ?>
@@ -14,4 +17,7 @@
 
 </nav>
 </div>
-<?php do_action('after_secondary_header_navigation'); ?>
+<?php
+}
+do_action('after_secondary_header_navigation');
+?>

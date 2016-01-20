@@ -16,11 +16,7 @@ if ( ! function_exists( 'wff_setup_menu' ) ) {
 		// Register wp_nav_menu() menus (http://codex.wordpress.org/Function_Reference/register_nav_menus)
    register_nav_menu( 'primary_navigation', __( 'Primary Navigation', 'wefoster' ) );
 
-		// Register a second navigation menu for our full header layout
-		if ( WEFOSTER_LAYOUT_PRESET == 'full' || get_theme_mod( 'wf_layout_type' ) == 'full' ) {
-   		register_nav_menu( 'secondary_navigation', __( 'Secondary Navigation', 'wefoster' ) );
-		}
-
+   register_nav_menu( 'secondary_navigation', __( 'Secondary Navigation', 'wefoster' ) );
 	}
 	add_action( 'after_setup_theme', 'wff_setup_menu' );
 }

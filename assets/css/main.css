@@ -6519,6 +6519,11 @@ p {
   color: #ffffff;
   background-color: #2e3138;
 }
+.secondary-nav-wrap li a {
+  font-size: 95%;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
 /* ==========================================================================
    Sidebar
    ========================================================================== */
@@ -6873,8 +6878,8 @@ body.wefoster-navbar-fixed-top {
     display: inline;
   }
   .content {
-    padding-left: 17.5px;
-    padding-right: 17.5px;
+    padding-left: 0;
+    padding-right: 0;
   }
   .inner-sidebar {
     padding-left: 0;
@@ -6993,14 +6998,15 @@ body.wefoster-navbar-fixed-top {
   .inner-sidebar #bp-user-navigation #bp-profile-menu {
     background: #454a54;
   }
+  .inner-sidebar #bp-user-navigation #bp-profile-menu li {
+    list-style: none;
+  }
   .inner-sidebar #bp-user-navigation #bp-profile-menu > a {
     border-radius: 0;
     background: #454a54;
     margin-left: -17.5px;
     margin-right: -17.5px;
     margin-bottom: -9px;
-    padding: 17.5px;
-    border-bottom: 1px solid #4c515c;
   }
   .inner-sidebar #bp-user-navigation #bp-profile-menu a {
     margin-left: -17.5px;
@@ -7008,8 +7014,7 @@ body.wefoster-navbar-fixed-top {
     background: #454a54;
     color: #fff;
     line-height: 160%;
-    padding-left: 17.5px;
-    padding-right: 17.5px;
+    padding: 17.5px;
   }
   .inner-sidebar #bp-user-navigation #bp-profile-menu a:hover {
     background: #17191c;
@@ -7127,7 +7132,7 @@ body.wefoster-navbar-fixed-top {
     left: 55%;
   }
   .row-offcanvas-left.active .inner-sidebar {
-    margin-left: 17.5px;
+    margin-left: 0 !important;
   }
   .sidebar-offcanvas {
     position: absolute;
@@ -7152,13 +7157,13 @@ body.wefoster-navbar-fixed-top {
     right: 90%;
   }
   .row-offcanvas-right.active .inner-sidebar {
-    margin-right: 17.5px;
+    margin-right: 0;
   }
   .row-offcanvas-left.active {
     left: 90%;
   }
   .row-offcanvas-left.active .inner-sidebar {
-    margin-left: 17.5px;
+    margin-left: 0;
   }
   .sidebar-offcanvas {
     position: absolute;
@@ -7175,7 +7180,7 @@ body.wefoster-navbar-fixed-top {
     padding-right: 0;
   }
   .inner-sidebar {
-    padding-left: 17.5px;
+    padding-left: 0;
     padding-right: 0;
   }
   ul.item-list li {

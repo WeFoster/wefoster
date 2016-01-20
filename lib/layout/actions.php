@@ -77,17 +77,16 @@ if ( ! function_exists( 'wff_branding' ) ) {
 	}
 }
 
-	/*
+/*
 * Hook the secondary navigation into our full header template.
 *
 * @since 1.0.0
 */
 if ( ! function_exists( 'wff_secondary_navigation_location' ) ) {
 	function wff_secondary_navigation_location() {
-
 		get_template_part( 'templates/header/secondary-navigation' );
 	}
-	add_action( 'after_full_header', 'wff_secondary_navigation_location' );
+		add_action( 'after_full_header', 'wff_secondary_navigation_location' );
 }
 
 	/*

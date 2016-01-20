@@ -214,7 +214,7 @@ function wf_plus_logo_css() {
 			$logo_height = get_theme_mod( 'wf_plus_custom_logo_height', '30' );
 		}
 ?>
-
+@media screen and (min-width: 768px) {
 			.wefoster-framework .navbar .navbar-brand img,
 			.wefoster-framework .site-description img {
 				<?php if (	$logo_position != 'default' ) : ?>
@@ -224,8 +224,7 @@ function wf_plus_logo_css() {
 						height: <?php echo $logo_height ?>px;
 				<?php endif; ?>
 	}
-
-
+}
   <?php
 }
 add_action( 'wefoster_inline_css', 'wf_plus_logo_css' );
