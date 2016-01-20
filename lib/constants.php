@@ -87,7 +87,7 @@ if ( !defined( 'WEFOSTER_FOOTER_CLASS' ) ) {
 
 if ( !defined( 'WEFOSTER_LAYOUT_PRESET' ) ) {
 		// 'minimal' or 'full'
-		define('WEFOSTER_LAYOUT_PRESET', 'minimal');
+		define('WEFOSTER_LAYOUT_PRESET', 'full');
 }
 
 
@@ -98,8 +98,8 @@ if ( !defined( 'WEFOSTER_LAYOUT_PRESET' ) ) {
 
 // Where do you want to primary menu to show? This only applies to the Full Layout
 if ( !defined( 'WEFOSTER_LAYOUT_FULL_PRIMARY_MENU_POSITION' ) ) {
-		// choose between 'above-header' or 'below-header'.
-		define('WEFOSTER_LAYOUT_FULL_PRIMARY_MENU_POSITION', 'above');
+		// choose between 'above' or 'below' or 'inside'.
+		define('WEFOSTER_LAYOUT_FULL_PRIMARY_MENU_POSITION', 'inside');
 }
 
 // Show site description and title? This only applies to the Full Layout.
@@ -146,7 +146,7 @@ if ( !defined( 'WEFOSTER_ASSETS_URL' ) ) {
 //This is the default logo used in the header.
 // Need just one logo sitewide? This is the way to go.
 if ( !defined( 'WEFOSTER_DEFAULT_LOGO' ) ) {
-		define('WEFOSTER_DEFAULT_LOGO', WEFOSTER_ASSETS_URL . '/assets/img/logos/minimal-regular-inverse.png' );
+		define('WEFOSTER_DEFAULT_LOGO', WEFOSTER_ASSETS_URL . '/assets/img/logos/inverse-full.png' );
 }
 
 if ( !defined( 'WEFOSTER_DEFAULT_MOBILE_LOGO' ) ) {
@@ -248,7 +248,7 @@ if ( !defined( 'WEFOSTER_HEADER_BACKGROUND' ) ) {
 	//Local
 	//define('WEFOSTER_HEADER_BACKGROUND', get_stylesheet_directory_uri . '/assets/img/bg.jpg' );
 	//External
-	define('WEFOSTER_HEADER_BACKGROUND', '');
+	define('WEFOSTER_HEADER_BACKGROUND', 'https://cdn.wefoster.co/backgrounds/into-the-wild.jpeg');
 }
 
 

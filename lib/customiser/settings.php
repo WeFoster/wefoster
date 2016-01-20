@@ -338,7 +338,7 @@ function wf_plus_register_settings($fields)
 		    'description' => __('Set the height of your logo', 'wefoster'),
 		    'section' => 'wf_plus_logo_section',
 		    'priority' => 10,
-		    'default' => 50,
+		    'default' => 30,
 		    'choices' => array(
 		        'min' => 30,
 		        'max' => 300,
@@ -374,7 +374,7 @@ function wf_plus_register_settings($fields)
 		    'description' => __('Set the position of your logo', 'wefoster'),
 		    'section' => 'wf_plus_logo_section',
 		    'priority' => 10,
-		    'default' => 20,
+		    'default' => -4,
 		    'choices' => array(
 		        'min' => -100,
 		        'max' => 100,
@@ -553,7 +553,7 @@ function wf_plus_register_settings($fields)
       'label' => __('The height of your header', 'wefoster'),
       'description' => __('Change the height of your header.', 'wefoster'),
       'section' => 'wf_plus_header_section',
-      'default' => '200',
+      'default' => '100',
       'priority' => 10,
       'choices' => array(
           'min' => 50,
@@ -858,7 +858,7 @@ function wf_plus_register_settings($fields)
       'label' => __('Image Opacity', 'wefoster'),
       'description' => __('Change the opacity of your image.', 'wefoster'),
       'section' => 'wf_plus_header_section',
-      'default' => '1',
+      'default' => '0.2',
       'transport' => 'postMessage',
       'priority' => 10,
       'choices' => array(

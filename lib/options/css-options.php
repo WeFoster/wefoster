@@ -164,7 +164,7 @@ function wf_plus_header_background_effects() {
 	}
 	$header_image_background_position = get_theme_mod( 'header_image_background_position');
 	$header_blur = get_theme_mod( 'wf_header_background_image_blur', 'inherit' );
-	$header_opacity = get_theme_mod( 'wf_header_background_image_opacity', '1' );
+	$header_opacity = get_theme_mod( 'wf_header_background_image_opacity', '0.2' );
 ?>
 
 .wefoster-plus-header-overlay {
@@ -190,7 +190,7 @@ add_action( 'wefoster_inline_css', 'wf_plus_header_background_effects' );
  */
 function wf_plus_header_div() {
 	$header_image_type = get_theme_mod( 'wf_header_background_type', 'upload' );
-	$color = get_theme_mod( 'wf_header_background_image_color', 'default' );
+	$color = get_theme_mod( 'wf_header_background_image_color', 'color' );
 ?>
 	<div class="wefoster-plus-header-overlay <?php echo $header_image_type ?> <?php echo $color ?>"></div>
   <?php
@@ -205,10 +205,15 @@ add_action( 'open_full_header', 'wf_plus_header_div', 1 );
  *
  */
 function wf_plus_logo_css() {
-		$logo_position = get_theme_mod( 'wf_plus_custom_logo_position', 'default' );
-		$logo_height = get_theme_mod( 'wf_plus_custom_logo_height', 'default' );
+		$header_settings = get_theme_mod( 'wf_plus_header_menu_position', 'inside' );
+		if ( $header_settings == 'inside' ) {
+			$logo_position = get_theme_mod( 'wf_plus_custom_logo_position', '0' );
+			$logo_height = get_theme_mod( 'wf_plus_custom_logo_height', '40' );
+		} else {
+			$logo_position = get_theme_mod( 'wf_plus_custom_logo_position', '-4' );
+			$logo_height = get_theme_mod( 'wf_plus_custom_logo_height', '30' );
+		}
 ?>
-
 
 			.wefoster-framework .navbar .navbar-brand img,
 			.wefoster-framework .site-description img {

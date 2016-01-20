@@ -403,7 +403,7 @@ add_filter( 'body_class', 'wff_add_category_body_class' );
  */
 function wff_inside_menu_navigation_body_class( $classes ) {
 
-  $header_settings = get_theme_mod( 'wf_plus_header_menu_position' );
+	$header_settings = get_theme_mod( 'wf_plus_header_menu_position', 'inside' );
 
 	if ( $header_settings == 'inside' ) {
 		  $classes[] = 'wf-inside-navigation-menu';

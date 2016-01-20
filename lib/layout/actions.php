@@ -48,7 +48,7 @@ if ( ! function_exists( 'wff_primary_navigation_location' ) ) {
 		get_template_part( 'templates/header/primary-navigation' );
 	}
 
-	$header_settings = get_theme_mod( 'wf_plus_header_menu_position' );
+	$header_settings = get_theme_mod( 'wf_plus_header_menu_position', 'inside' );
 
 	if ( $header_settings == 'inside' ) {
 		add_action( 'after_site_description', 'wff_primary_navigation_location' );
@@ -68,7 +68,7 @@ if ( ! function_exists( 'wff_branding' ) ) {
 			echo apply_filters( 'wff_logo', $logo );
 	}
 
-	$header_settings = get_theme_mod( 'wf_plus_header_menu_position' );
+	$header_settings = get_theme_mod( 'wf_plus_header_menu_position', 'inside' );
 
 	if ( $header_settings == 'inside' ) {
 		add_action( 'inside_site_description', 'wff_branding' );
