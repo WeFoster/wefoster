@@ -655,8 +655,8 @@ pre code {
 .container {
   margin-right: auto;
   margin-left: auto;
-  padding-left: 15px;
-  padding-right: 15px;
+  padding-left: 17.5px;
+  padding-right: 17.5px;
 }
 @media (min-width: 769px) {
   .container {
@@ -665,29 +665,29 @@ pre code {
 }
 @media (min-width: 992px) {
   .container {
-    width: 970px;
+    width: 975px;
   }
 }
 @media (min-width: 1200px) {
   .container {
-    width: 1170px;
+    width: 1175px;
   }
 }
 .container-fluid {
   margin-right: auto;
   margin-left: auto;
-  padding-left: 15px;
-  padding-right: 15px;
+  padding-left: 17.5px;
+  padding-right: 17.5px;
 }
 .row {
-  margin-left: -15px;
-  margin-right: -15px;
+  margin-left: -17.5px;
+  margin-right: -17.5px;
 }
 .col-xs-1, .col-sm-1, .col-md-1, .col-lg-1, .col-xs-2, .col-sm-2, .col-md-2, .col-lg-2, .col-xs-3, .col-sm-3, .col-md-3, .col-lg-3, .col-xs-4, .col-sm-4, .col-md-4, .col-lg-4, .col-xs-5, .col-sm-5, .col-md-5, .col-lg-5, .col-xs-6, .col-sm-6, .col-md-6, .col-lg-6, .col-xs-7, .col-sm-7, .col-md-7, .col-lg-7, .col-xs-8, .col-sm-8, .col-md-8, .col-lg-8, .col-xs-9, .col-sm-9, .col-md-9, .col-lg-9, .col-xs-10, .col-sm-10, .col-md-10, .col-lg-10, .col-xs-11, .col-sm-11, .col-md-11, .col-lg-11, .col-xs-12, .col-sm-12, .col-md-12, .col-lg-12 {
   position: relative;
   min-height: 1px;
-  padding-left: 15px;
-  padding-right: 15px;
+  padding-left: 17.5px;
+  padding-right: 17.5px;
 }
 .col-xs-1, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9, .col-xs-10, .col-xs-11, .col-xs-12 {
   float: left;
@@ -2028,8 +2028,8 @@ select[multiple].form-group-lg .form-control {
   min-height: 29px;
 }
 .form-horizontal .form-group {
-  margin-left: -15px;
-  margin-right: -15px;
+  margin-left: -17.5px;
+  margin-right: -17.5px;
 }
 @media (min-width: 769px) {
   .form-horizontal .control-label {
@@ -2039,7 +2039,7 @@ select[multiple].form-group-lg .form-control {
   }
 }
 .form-horizontal .has-feedback .form-control-feedback {
-  right: 15px;
+  right: 17.5px;
 }
 @media (min-width: 769px) {
   .form-horizontal .form-group-lg .control-label {
@@ -2645,8 +2645,8 @@ input[type="button"].btn-block {
 }
 .navbar-collapse {
   overflow-x: visible;
-  padding-right: 15px;
-  padding-left: 15px;
+  padding-right: 17px;
+  padding-left: 17px;
   border-top: 1px solid transparent;
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1);
   -webkit-overflow-scrolling: touch;
@@ -2690,8 +2690,8 @@ input[type="button"].btn-block {
 .container-fluid > .navbar-header,
 .container > .navbar-collapse,
 .container-fluid > .navbar-collapse {
-  margin-right: -15px;
-  margin-left: -15px;
+  margin-right: -17px;
+  margin-left: -17px;
 }
 @media (min-width: 769px) {
   .container > .navbar-header,
@@ -2735,7 +2735,7 @@ input[type="button"].btn-block {
 }
 .navbar-brand {
   float: left;
-  padding: 21.875px 15px;
+  padding: 21.875px 17px;
   font-size: 20px;
   line-height: 22px;
   height: 50px;
@@ -2750,13 +2750,13 @@ input[type="button"].btn-block {
 @media (min-width: 769px) {
   .navbar > .container .navbar-brand,
   .navbar > .container-fluid .navbar-brand {
-    margin-left: -15px;
+    margin-left: -17px;
   }
 }
 .navbar-toggle {
   position: relative;
   float: right;
-  margin-right: 15px;
+  margin-right: 17px;
   padding: 9px 10px;
   margin-top: 8px;
   margin-bottom: 8px;
@@ -2783,7 +2783,7 @@ input[type="button"].btn-block {
   }
 }
 .navbar-nav {
-  margin: 10.9375px -15px;
+  margin: 10.9375px -17px;
 }
 .navbar-nav > li > a {
   padding-top: 10px;
@@ -2826,9 +2826,9 @@ input[type="button"].btn-block {
   }
 }
 .navbar-form {
-  margin-left: -15px;
-  margin-right: -15px;
-  padding: 10px 15px;
+  margin-left: -17px;
+  margin-right: -17px;
+  padding: 10px 17px;
   border-top: 1px solid transparent;
   border-bottom: 1px solid transparent;
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 0 rgba(255, 255, 255, 0.1);
@@ -2935,8 +2935,8 @@ input[type="button"].btn-block {
 @media (min-width: 769px) {
   .navbar-text {
     float: left;
-    margin-left: 15px;
-    margin-right: 15px;
+    margin-left: 17px;
+    margin-right: 17px;
   }
 }
 @media (min-width: 769px) {
@@ -2947,7 +2947,7 @@ input[type="button"].btn-block {
   .navbar-right {
     float: right !important;
     float: right;
-    margin-right: -15px;
+    margin-right: -17px;
   }
   .navbar-right ~ .navbar-right {
     margin-right: 0;

@@ -68,7 +68,6 @@ Kirki::add_field( 'wefoster_plus', array(
         'settings' => array(
           'header_image_background_position' => '44',
           'wf_header_background_height' => '180',
-          'wf_header_background_color' => '#545454',
           'wf_header_background_image_color' => 'greyscale',
           'wf_header_background_image_opacity' => '0.2',
           'wf_plus_header_fixed' => 'navbar-fixed-static',
@@ -89,7 +88,6 @@ Kirki::add_field( 'wefoster_plus', array(
       '4' => array(
         'label'    => esc_attr__( 'Fixed Width with Full Header', 'kirki-demo' ),
         'settings' => array(
-          'wf_header_background_color' => '#FFF',
           'wf_header_background_image_color' => 'color',
           'wf_header_background_image_opacity' => '1',
           'wf_header_background_type' => 'picture',

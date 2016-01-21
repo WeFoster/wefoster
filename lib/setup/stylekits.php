@@ -5,10 +5,12 @@ $stylekit = get_theme_mod( 'wf_stylekit', 'default' );
 // No option set? Set default
 if ( empty( $stylekit ) ) { $stylekit = 'default'; }
 
+//Define our Stylekit directory so it can be changed if needed.
 if ( ! defined( 'WEFOSTER_PLUS_STYLEKIT_DIR' ) ) {
 	define( 'WEFOSTER_PLUS_STYLEKIT_DIR', WEFOSTER_THEME_DIR . '/stylekits' . '/' . $stylekit );
 }
 
+//Define Stylekit name,
 if ( ! defined( 'WEFOSTER_PLUS_STYLEKIT_NAME' ) ) {
 		define( 'WEFOSTER_PLUS_STYLEKIT_NAME', $stylekit );
 }
@@ -29,10 +31,7 @@ function wefoster_stylekits() {
 
 	if ( ! defined( 'WEFOSTER_PLUS_PLUGIN_DIR' ) ) {
 			$stylekits = array(
-				'default'        => 'Default Styling',
-				'accessible'        => 'Accessible',
-				'minimal'        => 'Minimal',
-				'full-width'        => 'Full Width',
+				'default'        => 'Classic',
 			);
 
 			return $stylekits;

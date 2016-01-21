@@ -553,7 +553,7 @@ function wf_plus_register_settings($fields)
       'label' => __('The height of your header', 'wefoster'),
       'description' => __('Change the height of your header.', 'wefoster'),
       'section' => 'wf_plus_header_section',
-      'default' => '100',
+      'default' => WEFOSTER_HEADER_HEIGHT,
       'priority' => 10,
       'choices' => array(
           'min' => 50,
@@ -822,36 +822,36 @@ function wf_plus_register_settings($fields)
           )
       )
   ));
-  Kirki::add_field('wefoster_plus', array(
-      'type' => 'color',
-      'setting' => 'wf_header_background_color',
-      'label' => __('Background Color', 'wefoster'),
-      'description' => __('Set a background color.', 'wefoster'),
-      'section' => 'wf_plus_header_section',
-      'default' => '#454A54',
-      'priority' => 10,
-      'output' => array(
-          array(
-              'element' => '.full-header-wrap',
-              'property' => 'background-color'
-          )
-      ),
-      'transport' => 'postMessage',
-      'js_vars' => array(
-          array(
-              'element' => '.full-header-wrap',
-              'function' => 'css',
-              'property' => 'background-color'
-          )
-      ),
-      'required' => array(
-          array(
-              'setting' => 'wf_layout_type',
-              'operator' => '=',
-              'value' => 'full'
-          )
-      )
-  ));
+  // Kirki::add_field('wefoster_plus', array(
+  //     'type' => 'color',
+  //     'setting' => 'wf_header_background_color',
+  //     'label' => __('Background Color', 'wefoster'),
+  //     'description' => __('Set a background color.', 'wefoster'),
+  //     'section' => 'wf_plus_header_section',
+  //     'default' => '#454A54',
+  //     'priority' => 10,
+  //     'output' => array(
+  //         array(
+  //             'element' => '.full-header-wrap',
+  //             'property' => 'background-color'
+  //         )
+  //     ),
+  //     'transport' => 'postMessage',
+  //     'js_vars' => array(
+  //         array(
+  //             'element' => '.full-header-wrap',
+  //             'function' => 'css',
+  //             'property' => 'background-color'
+  //         )
+  //     ),
+  //     'required' => array(
+  //         array(
+  //             'setting' => 'wf_layout_type',
+  //             'operator' => '=',
+  //             'value' => 'full'
+  //         )
+  //     )
+  // ));
   Kirki::add_field('wefoster_plus', array(
       'type' => 'slider',
       'settings' => 'wf_header_background_image_opacity',

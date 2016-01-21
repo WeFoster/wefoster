@@ -20,19 +20,31 @@
 
 	<div id="top-homepage">
 
-		<div class="column col-sm-7">
-			<?php
-			dynamic_sidebar( 'Homepage Top Left' );
-			?>
-		</div>
+			<?php if ( is_active_sidebar( 'homepage-top-center' ) ) { ?>
+					<div class="column col-sm-12">
+						<?php
+						dynamic_sidebar( 'Homepage Top Center' );
+						?>
+					</div>
+			<?php } ?>
 
-		<div id="homepage-sidebar-right" class="col-sm-5">
-			<div id="homepage-sidebar">
+			<div class="clearfix"></div>
+
+			<?php if ( is_active_sidebar( 'homepage-top-left' ) ) { ?>
+			<div class="column col-sm-7">
 				<?php
-				dynamic_sidebar( 'Homepage Top Right' );
+				dynamic_sidebar( 'Homepage Top Left' );
 				?>
 			</div>
-		</div>
+
+			<div id="homepage-sidebar-right" class="col-sm-5">
+				<div id="homepage-sidebar">
+					<?php
+					dynamic_sidebar( 'Homepage Top Right' );
+					?>
+				</div>
+			</div>
+			<?php } ?>
 
 	</div>
 
@@ -45,8 +57,7 @@
 				<?php
 				dynamic_sidebar( 'Homepage Center Widget' );
 				?>
-			</div>
-
+	</div>
 	<div class="clearfix"></div>
 	<?php } ?>
 

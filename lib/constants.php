@@ -32,6 +32,11 @@ if ( !defined( 'WEFOSTER_HEADER_STYLE' ) ) {
 		define('WEFOSTER_HEADER_STYLE', 'navbar-inverse');
 }
 
+if ( !defined( 'WEFOSTER_HEADER_HEIGHT' ) ) {
+		// The default height of the full header
+		define('WEFOSTER_HEADER_HEIGHT', 120);
+}
+
 // Our Content Wrapper Class.
 if ( !defined( 'WEFOSTER_CONTENT_WRAPPER_CLASS' ) ) {
 	// Choose any Bootstrap column class
@@ -219,7 +224,7 @@ if ( !defined( 'WEFOSTER_FONT_FAMILY' ) ) {
 
 if ( !defined( 'WEFOSTER_HEADINGS_FONT_FAMILY' ) ) {
 	// Choose a default Font that is present on Google Fonts.
-	define('WEFOSTER_HEADINGS_FONT_FAMILY', 'Roboto');
+	define('WEFOSTER_HEADINGS_FONT_FAMILY', 'Montserrat');
 }
 
 if ( !defined( 'WEFOSTER_NAVIGATION_FONT_FAMILY' ) ) {
