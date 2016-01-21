@@ -97,8 +97,8 @@
 @brand-primary: #454a54;
 @brand-secondary: #28a587;
 @brand-complimentary: #FEB43E;
-@link-color: @brand-secondary;
-@link-hover-color: @link-color;
+@link-color: @brand-primary;
+@link-hover-color: @brand-secondary;
 @link-opacity: 0.8;
 @color-base: #555;
 @widget-bg: @white;
@@ -133,9 +133,9 @@
 // Navbar links
 //
 @navbar-padding-vertical: (@padding-half * 1.25 );
-@navbar-default-link-color: @brand-primary;
+@navbar-default-link-color: @text-color;
 @navbar-default-link-hover-color: @white;
-@navbar-default-link-hover-bg: @brand-primary;
+@navbar-default-link-hover-bg: @navbar-default-link-active-bg;
 @navbar-default-link-active-color: @white;
 @navbar-default-link-active-bg: @brand-primary;
 @navbar-default-link-disabled-color: #ccc;
@@ -194,7 +194,7 @@
 //Change Bootstrap Colors
 //
 @btn-primary-bg: @brand-secondary;
-@btn-success-bg: darken(@brand-secondary, 5%);
+@btn-success-bg: @brand-secondary;
 @input-group-addon-bg: @box-light-background;
 //
 //Avatars
@@ -287,8 +287,8 @@
 @item-tabs-border-top: 1px solid darken(@item-tabs-wrap-bg, 6%);
 @item-tabs-border-bottom: 1px solid darken(@item-tabs-wrap-bg, 4%);
 @item-tabs-color: @text-color;
-@item-tabs-hover-color: @brand-primary;
-@item-tabs-active-bg: @brand-primary;
+@item-tabs-hover-color: @brand-secondary;
+@item-tabs-active-bg: @item-tabs-hover-color;
 @item-tabs-active-color: @white;
 @item-tabs-active-span-bg: lighten(@item-tabs-active-bg, 15%);
 @item-tabs-active-span-color: @white;
@@ -304,28 +304,28 @@
 @sub-item-tabs-wrap-border-top: 0;
 @sub-item-tabs-wrap-border-bottom: 0;
 @sub-item-tabs-bg: lighten(@sub-item-tabs-wrap-bg, 1.5%);
-@sub-item-tabs-hover-bg: @brand-primary;
+@sub-item-tabs-hover-bg: @item-tabs-active-bg;
 @sub-item-tabs-border-bottom: 1px solid darken(@sub-item-tabs-wrap-bg, 4%);
 @sub-item-tabs-border-top: 1px solid darken(@sub-item-tabs-wrap-bg, 3%);
 @sub-item-tabs-color: @gray-lighter;
 @sub-item-tabs-active-color: @gray-lighter;
-@sub-item-tabs-hover-color: @brand-secondary;
+@sub-item-tabs-hover-color: @sub-item-tabs-hover-bg;
 @sub-item-tabs-border-radius: 6px;
 //
 // Vertical List Tabs
 //
 @vert-tabs-wrap-bg: @item-tabs-wrap-bg;
 @vert-tabs-bg: @item-tabs-wrap-bg;
-@vert-tabs-hover-bg: @brand-primary;
+@vert-tabs-hover-bg: @item-tabs-hover-color;
 @vert-tabs-box-shadow: none;
 @vert-tabs-border-bottom: 0 solid darken(@vert-tabs-bg, 3%);
 @vert-tabs-border-top: 0 solid darken(@vert-tabs-bg, 1%);
 @vert-tabs-color: @text-color;
 @vert-tabs-hover-color: @white;
-@vert-tabs-active-bg: @brand-primary;
+@vert-tabs-active-bg: @vert-tabs-hover-bg;
 @vert-tabs-active-color: @white;
-@vert-tabs-active-span-bg: darken(@item-tabs-active-bg, 5%);
-@vert-tabs-active-span-color: darken(@item-tabs-active-bg, 2%);
+@vert-tabs-active-span-bg: darken(@vert-tabs-active-bg, 5%);
+@vert-tabs-active-span-color: darken(@vert-tabs-active-bg, 2%);
 @vert-tabs-active-border-bottom: 0;
 @vert-tabs-active-border-top: 0;
 @vert-tabs-active-font-weight: inherit;
@@ -336,7 +336,7 @@
 //
 // Sidebar Headers
 //
-@header-avatar-bg: @brand-primary;
+@header-avatar-bg: @brand-secondary;
 @header-border-radius: inherit;
 //Widgets
 @widget-padding: (@padding-full * 0.75 ) (@padding-full * 0.5 );
