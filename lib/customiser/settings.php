@@ -1393,17 +1393,33 @@ function wf_plus_register_settings($fields)
 			)
 	));
 
-	//
-	// Layout
-	//
+	Kirki::add_field('', array(
+			'type' => 'custom',
+			'settings' => 'wf_hero_message',
+			'label' => __('Instructions', 'wefoster'),
+			'description' => __('', 'wefoster'),
+			'section' => 'wf_plus_hero_section',
+			'default' => '<div style="padding: 0px;background-color: #EFEFEF; border-radius: 2px;">
+			<div>
+				You can add/edit the content and page title inside this Hero Header from your WordPress Admin.
+				<br>
+				<br>
+				Go to <code>Pages > Homepage</code> and change the content just like you would write a post or page.
+				<br>
+				<br>
+				You can use shortcodes, custom HTML, icons and even add images.
+			</div>
+		</div>',
+			'priority' => 2
+	));
+
 	Kirki::add_field('wefoster_plus', array(
 			'type' => 'radio',
 			'settings' => 'wf_hero_header_style',
-			'label' => __('Show Hero Header', 'wefoster'),
-			'description' => __('Do you want to show the Hero Header?', 'wefoster'),
+			'label' => __('Hero Style', 'wefoster'),
 			'section' => 'wf_plus_hero_section',
 			'default' => 'box-brand-primary',
-			'priority' => 1,
+			'priority' => 10,
 			'choices' => array(
 					'box-brand-primary' => __('Primary Branding Colors', 'wefoster'),
 					'box-brand-secondary' => __('Secondary Branding Colors', 'wefoster'),

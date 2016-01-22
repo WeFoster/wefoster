@@ -238,9 +238,9 @@ function wff_base_sidebars()
 function wff_homepage_widgets()
 {
 	register_sidebar( array(
-		'name' => 'Homepage Top Center',
-		'id' => 'homepage-top-center',
-		'description' => "The Top Center Widget",
+		'name' => 'Hero Header Right',
+		'id' => 'hero-right',
+		'description' => "The widget area inside your Homepage Hero Header",
 		'before_widget' => '<div id="%1$s" class="widget %2$s">',
 		'after_widget' => '</div>',
 		'before_title' => '<h4>',

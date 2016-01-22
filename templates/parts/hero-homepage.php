@@ -36,6 +36,12 @@ if (get_theme_mod('wf_hero_background_type') == 'upload') {
                     ?>
             </div>
 
+            <div class="wf-hero-widgets col-sm-5">
+              <?php
+              dynamic_sidebar( 'Hero Header Right' );
+              ?>
+            </div>
+
     </div>
   </div>
 </div>
