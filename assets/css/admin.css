@@ -6543,7 +6543,7 @@ _:-ms-fullscreen,
 }
 .font-icon {
   color: inherit;
-  font-family: "FontAwesome";
+  font-family: 'FontAwesome';
   font-size: inherit;
   font-weight: normal;
   padding-right: 7px;

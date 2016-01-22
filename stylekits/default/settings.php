@@ -153,7 +153,7 @@ Kirki::add_field( 'wefoster_plus', array(
       'default'   => 'default',
       'priority'  => 30,
   		'choices'     => array(
-  			'default' => __( 'Default', 'wefoster' ),
+  			'default' => __( 'Green', 'wefoster' ),
   			'blue' => __( 'Blue', 'wefoster' ),
   			'accessible' => __( 'Accessibility Friendly', 'wefoster' ),
   			'black' => __( 'Black', 'wefoster' ),
