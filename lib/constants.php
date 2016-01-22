@@ -34,7 +34,7 @@ if ( !defined( 'WEFOSTER_HEADER_STYLE' ) ) {
 
 if ( !defined( 'WEFOSTER_HEADER_HEIGHT' ) ) {
 		// The default height of the full header
-		define('WEFOSTER_HEADER_HEIGHT', 120);
+		define('WEFOSTER_HEADER_HEIGHT', 110);
 }
 
 // Our Content Wrapper Class.
@@ -254,6 +254,10 @@ if ( !defined( 'WEFOSTER_HEADER_BACKGROUND' ) ) {
 	//define('WEFOSTER_HEADER_BACKGROUND', get_stylesheet_directory_uri . '/assets/img/bg.jpg' );
 	//External
 	define('WEFOSTER_HEADER_BACKGROUND', 'https://cdn.wefoster.co/backgrounds/into-the-wild.jpeg');
+}
+
+if ( !defined( 'WEFOSTER_HERO_BACKGROUND' ) ) {
+	define('WEFOSTER_HERO_BACKGROUND', 'https://cdn.wefoster.co/backgrounds/into-the-wild.jpeg');
 }
 
 

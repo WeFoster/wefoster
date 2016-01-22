@@ -55,7 +55,7 @@ function wff_theme_auto_create_home_page() {
 		// set our flag to create a page to true by default
 		$create_page = true;
 		// grab current auto-created home page id
-		$home_page_id = get_option( '_wff_theme_auto_create_home_page' );
+		$home_page_id = get_option( '_wf_theme_auto_create_home_page' );
 		// we have a page ID, but does it still exist?
 		if ( is_numeric( $home_page_id ) ) {
 			// page exists, so set $create_page flag to false
@@ -68,14 +68,15 @@ function wff_theme_auto_create_home_page() {
 			// create the new page
 			$home_page_id = wp_insert_post( array(
 				'post_type'   => 'page',
-				'post_title'  => 'Home Page',
-				'post_status' => 'publish',
+				'post_title'  => 'Welcome to ' . get_bloginfo() .'',
+				'post_status' => 'publish'
 			) );
+
 			// set the new page as the frontpage and use our homepage template
 			update_post_meta( $home_page_id, '_wp_page_template', 'templates/homepage-template.php' );
 			update_option( 'show_on_front', 'page' );
 			update_option( 'page_on_front', $home_page_id );
-			update_option( '_wff_theme_auto_create_home_page', $home_page_id );
+			update_option( '_wf_theme_auto_create_home_page', $home_page_id );
 		}
 		// check if front page still exists
 	} else {
@@ -85,14 +86,14 @@ function wff_theme_auto_create_home_page() {
 		if ( is_404() && get_post( $front_page ) === null ) {
 			// front page no longer exists so purge the following options
 			delete_option( 'page_on_front' );
-			delete_option( '_wff_theme_auto_create_home_page' );
+			delete_option( '_wf_theme_auto_create_home_page' );
 			// redirect back to homepage
 			wp_redirect( get_home_url() );
 			die();
 		}
 	}
 }
-	add_action( 'wp', 'wff_theme_auto_create_home_page' );
+add_action( 'wp', 'wff_theme_auto_create_home_page' );
 
 	/**
 	 * Populates sidebars throughout the theme on activation
@@ -107,64 +108,18 @@ function wff_theme_auto_create_home_page() {
 	 */
 function wf_theme_populate_sidebars() {
 
-	// Homepage Top Right
-	if ( ! WeFoster_Widget_Setter::is_sidebar_populated( 'homepage-top-right' ) ) {
-		if ( function_exists('bp_is_active') ) {
-			$welcome_text = sprintf( __( '<p>You can use this widget to welcome new and returning visitors! Maybe tell them something about your community and why they should become a member?</p>
-			<p>You can edit the text in this widget by visiting Appearance > Widgets in your WordPress Admin area.</p>
-			<p>
-			<a class="btn btn-primary" href="%s"><i class="fa fa-user-plus"></i> Join us</a> or <a class="btn btn-default" href="%s"><i class="fa fa-sign-in"></i> Login</a></p>', 'wefoster' ), bp_get_root_domain() . '/' . bp_get_signup_slug() . '/', wp_login_url() );
-		} else {
-			$welcome_text = sprintf( __( '<p>You can use this widget to welcome new and returning visitors! Maybe tell them something about your site? Activate BuddyPress and the rest of your widgets will be populated as well! You can edit the text in this widget by visiting Appearance > Widgets in your WordPress Admin area.</p>
-			<p>
-			<a class="btn btn-primary" href="%s">Read More About Us</a></p>', 'wefoster' ), get_site_url() . '/about-us' );
-		}
-
-		WeFoster_Widget_Setter::set_widget( array(
-			'id_base'    => 'text',
-			'sidebar_id' => 'homepage-top-right',
-			'settings'   => array(
-				'title' => __( 'Become a Member', 'wefoster' ),
-				'text'  => $welcome_text,
-				'filter' => false,
-			),
-		) );
-		// Pull up a random member to populate
-		$welcome_image = '<img src="https://cdn.wefoster.co/default/default-header.jpg" class="box-brand-primary padding-small">';
-		WeFoster_Widget_Setter::set_widget( array(
-			'id_base'    => 'text',
-			'sidebar_id' => 'homepage-top-left',
-			'settings'   => array(
-				'title' => __( 'Welcome to our Community', 'wefoster' ),
-				'text'  => $welcome_image,
-				'filter' => false,
-			),
-		) );
-	} // End homepage-top-widget
-	// Homepage Center Widget
-
 if ( class_exists( 'BuddyPress' ) ) {
 
 	if ( ! WeFoster_Widget_Setter::is_sidebar_populated( 'homepage-center-widget' ) ) {
 
-		$center_text = sprintf( __( '<h2 class="box-light padding-full box-full margin-vertical-full text-align-center">What is happening  in our community?</h2>', 'wefoster') );
+		$center_text = sprintf( __( '<h2 class="box-light padding-full box-full margin-bottom-half text-align-center">What is happening  in our community?</h2>', 'wefoster') );
 
 		WeFoster_Widget_Setter::set_widget( array(
 			'id_base'    => 'text',
-			'sidebar_id' => 'homepage-center-widget',
+			'sidebar_id' => 'homepage-top-center',
 			'settings'   => array(
 				'title' => '',
 				'text'  => $center_text,
-				'filter' => false,
-			),
-		) );
-
-		WeFoster_Widget_Setter::set_widget( array(
-			'id_base'    => 'bp_core_recently_active_widget',
-			'sidebar_id' => 'homepage-center-widget',
-			'settings'   => array(
-				'title' => __( 'Recently Active Members', 'wefoster' ),
-				'max_members' => 22,
 				'filter' => false,
 			),
 		) );
@@ -215,7 +170,7 @@ if ( class_exists( 'BuddyPress' ) ) {
 } else {
 
 	if ( ! WeFoster_Widget_Setter::is_sidebar_populated( 'homepage-center-widget' ) ) {
-		$center_text = sprintf( __( '<h2 class="box-light padding-full box-full margin-vertical-full text-align-center">Check out our most recent content</h2>', 'wefoster') );
+		$center_text = sprintf( __( '<h2 class="box-light padding-full box-full margin-bottom-half text-align-center">Check out our most recent content</h2>', 'wefoster') );
 
 		WeFoster_Widget_Setter::set_widget( array(
 			'id_base'    => 'text',
@@ -568,5 +523,24 @@ function wf_register_default_menu( $args = array() ) {
 			set_theme_mod( 'nav_menu_locations', $locations );
 		}
 		return true;
+	}
+}
+
+/**
+ * Default Welcome Text on the Hero Homepage
+ *
+ */
+function wff_homepage_welcome_text()
+{
+	if ( function_exists('bp_is_active') ) {
+		printf( __( '<p>You can use this space to welcome new and returning visitors! Maybe tell them something about your community and why they should become a member? What is the most important thing you want people to know about your site when they first visit? This is the place to do it!</p>
+		<p>You can edit the text in this header by editing your Homepage template in the WordPress Admin.</p>
+		<p>
+		<a class="btn btn-success btn-lg" href="%s"><i class="fa fa-user-plus"></i> Create Your Account</a></p>', 'wefoster' ), bp_get_root_domain() . '/' . bp_get_signup_slug() . '/', wp_login_url() );
+	} else {
+		printf( __( '<p>You can use this space to welcome new and returning visitors! Maybe tell them something about your community and why they should become a member? What is the most important thing you want people to know about your site when they first visit? This is the place to do it!</p>
+		<p>You can edit the text in this header by editing your Homepage template in the WordPress Admin.</p>
+		<p>
+		<a class="btn btn-primary btn-success" href="%s">Read More About Us</a></p>', 'wefoster' ), get_site_url() . '/about-us' );
 	}
 }

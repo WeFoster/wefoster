@@ -26,6 +26,9 @@ function wf_plus_body_background_div() {
 		//Is a default picture set? Set it as default
 		if ( defined('WEFOSTER_BODY_BACKGROUND') ) {
 			$bg_picture = get_theme_mod( 'wf_body_background_picture', WEFOSTER_BODY_BACKGROUND );
+
+			//Nothing set? Add an 1px image.
+			if ( empty( $bg_picture ) ) $bg_picture = 'data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACAD';
 		}
 		//Nothing? Set as none.
 		else {
@@ -50,8 +53,6 @@ function wf_plus_body_background_div() {
 	}
 	//Do not output an image when it's set to none.
 	$bg_picture = get_theme_mod( 'wf_body_background_picture', 'none' );
-
-
 
 	// Enable the image effects for pictures and uploads, but not for textures
 	if ( $bg_image_type != 'none' ) {
