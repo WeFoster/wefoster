@@ -44,6 +44,15 @@ function wf_plus_register_panels( $wp_customize ) {
  //More code to come
 
  /**
+ * Add Homepage Panel
+ */
+ $wp_customize->add_panel( 'wf_plus_homepage_panel', array(
+  'priority'    => 10,
+  'title'       => __( 'Homepage', 'wefoster' ),
+  'description' => __( 'Change how your homepage looks', 'wefoster' ),
+ ) );
+
+ /**
  * Add BuddyPress Panel
  */
  $wp_customize->add_panel( 'wf_plus_wordpress_panel', array(

@@ -89,6 +89,21 @@ if ( ! function_exists( 'wff_secondary_navigation_location' ) ) {
 		add_action( 'after_full_header', 'wff_secondary_navigation_location' );
 }
 
+/*
+* Add the Hero Header to our Homepage.
+*
+* @since 1.0.0
+*/
+if ( ! function_exists( 'wff_homepage_hero' ) ) {
+	function wff_homepage_hero() {
+	//Load our Homepage Hero Header
+	if ( get_theme_mod( 'wf_hero_header', 'yes' ) == 'yes' && is_page_template( 'templates/homepage-template.php' ) ) :
+			get_template_part( 'templates/parts/hero-homepage' );
+	endif;
+	}
+	add_action( 'before_container', 'wff_homepage_hero' );
+}
+
 	/*
  * Hook the Page Titles into our pages and posts.
  *

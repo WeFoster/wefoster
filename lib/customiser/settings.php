@@ -1374,5 +1374,115 @@ function wf_plus_register_settings($fields)
 	    'default' => 50,
   ));
 
+	/// Homepage Settings
+
+	//
+	// Layout
+	//
+	Kirki::add_field('wefoster_plus', array(
+			'type' => 'radio',
+			'settings' => 'wf_hero_header',
+			'label' => __('Show Hero Header', 'wefoster'),
+			'description' => __('Do you want to show the Hero Header?', 'wefoster'),
+			'section' => 'wf_plus_hero_section',
+			'default' => 'yes',
+			'priority' => 1,
+			'choices' => array(
+					'yes' => __('Yes', 'wefoster'),
+					'no' => __('No', 'wefoster')
+			)
+	));
+
+	//
+	// Layout
+	//
+	Kirki::add_field('wefoster_plus', array(
+			'type' => 'radio',
+			'settings' => 'wf_hero_header_style',
+			'label' => __('Show Hero Header', 'wefoster'),
+			'description' => __('Do you want to show the Hero Header?', 'wefoster'),
+			'section' => 'wf_plus_hero_section',
+			'default' => 'box-brand-primary',
+			'priority' => 1,
+			'choices' => array(
+					'box-brand-primary' => __('Primary Branding Colors', 'wefoster'),
+					'box-brand-secondary' => __('Secondary Branding Colors', 'wefoster'),
+					'box-brand-complimentary' => __('Complimentary Branding Colors', 'wefoster'),
+					'box-light' => __('Light Colors', 'wefoster'),
+			)
+	));
+
+	Kirki::add_field('wefoster_plus', array(
+      'type' => 'radio',
+      'settings' => 'wf_hero_background_type',
+      'label' => __('Hero Background Image', 'kirki'),
+      'description' => __('A beautiful background image or pattern does wonders for the look of your site. You can select one of our carefully picked photos or textures, or upload your own.', 'wefoster'),
+      'section' => 'wf_plus_hero_section',
+      'default' => 'picture',
+      'priority' => 10,
+      'choices' => array(
+          'upload' => __('Upload a background', 'kirki'),
+          'picture' => __('Choose a Background Photo', 'kirki')
+      ),
+  ));
+  Kirki::add_field('wefoster_plus', array(
+      'type' => 'select',
+      'settings' => 'wf_hero_background_picture',
+      'label' => __('Choose a background picture', 'kirki'),
+      'description' => __('All pictures are handpicked from Unsplash.com and come with a unlimited license. This means they can be used for personal or commercial use.', 'wefoster'),
+      'section' => 'wf_plus_hero_section',
+      'default' => WEFOSTER_HERO_BACKGROUND,
+      'priority' => 10,
+      //'transport' => 'postMessage',
+      'choices' => wefoster_plus_background_pictures(),
+      'required' => array(
+          array(
+              'setting' => 'wf_hero_background_type',
+              'operator' => '=',
+              'value' => 'picture'
+          ),
+      )
+  ));
+  Kirki::add_field('wefoster_plus', array(
+      'type' => 'image',
+      'settings' => 'wf_hero_background_image',
+      'label' => __('Upload a background image', 'wefoster'),
+      'section' => 'wf_plus_hero_section',
+      'priority' => 10,
+      'required' => array(
+          array(
+              'setting' => 'wf_hero_background_type',
+              'operator' => '!=',
+              'value' => 'picture'
+          )
+			)
+  ));
+  Kirki::add_field('wefoster_plus', array(
+      'type' => 'radio',
+      'settings' => 'wf_hero_background_image_color',
+      'label' => __('Image Effect', 'wefoster'),
+      'description' => __('Apply an image effect to your background. Note: Some of these effects will not work on Internet Explorer. In these cases the image will be shown without the effect.', 'wefoster'),
+      'section' => 'wf_plus_hero_section',
+      'default' => 'color',
+      //'transport' => 'postMessage',
+      'priority' => 10,
+      'choices' => wefoster_plus_image_effects(),
+  ));
+  Kirki::add_field('wefoster_plus', array(
+      'type' => 'slider',
+      'settings' => 'wf_hero_background_image_opacity',
+      'label' => __('Image Opacity', 'wefoster'),
+      'description' => __('Change the opacity of your image.', 'wefoster'),
+      'section' => 'wf_plus_hero_section',
+      'default' => '0.2',
+      //'transport' => 'postMessage',
+      'priority' => 10,
+      'choices' => array(
+          'min' => 0,
+          'max' => 1,
+          'step' => 0.1
+      )
+  ));
+
 }
 add_filter('kirki/fields', 'wf_plus_register_settings');
