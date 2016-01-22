@@ -2,17 +2,15 @@
   .item-list-tabs {
     position: relative;
   }
-  
 
   .item-list-tabs ul:after {
-    content: ".";
+    content: '.';
     display: block;
     height: 0;
     clear: both;
     visibility: hidden;
   }
 }
-
 
 div.item-list-tabs {
   background: @item-tabs-bg;
@@ -22,25 +20,28 @@ div.item-list-tabs {
   border-bottom: @item-tabs-border-bottom;
   border-top: @item-tabs-border-top;
   clear: both;
+  
   ul {
     margin: 0;
     padding: 0;
+    
     li {
       float: left;
       margin: 0;
       list-style: none;
+      
       a {
         display: block;
         padding: @item-tabs-padding;
         text-decoration: none;
         color: @item-tabs-color;
         transition: none;
+        
         &:hover {
           color: lighten(@item-tabs-color, 2%);
         }
       }
     }
-    
 
     li.selected a,
     li.current a,
@@ -55,13 +56,11 @@ div.item-list-tabs {
         background: @item-tabs-active-span-bg;
         border: 1px solid darken(@item-tabs-active-span-bg, 3%);
       }
-      
 
       &:before {
         opacity: 0.8;
       }
     }
-    
 
     span {
       background: darken(@item-tabs-bg, 1%);
@@ -71,7 +70,6 @@ div.item-list-tabs {
       font-weight: @item-tabs-active-font-weight;
       padding: 3px 6px;
     }
-    
 
     li.last {
       position: absolute;
@@ -82,27 +80,22 @@ div.item-list-tabs {
       .bootstrap-select span {
         font-size: 85% !important;
       }
-      
 
       select {
         max-width: 175px;
       }
-      
 
       ul {
         overflow: hidden !important;
       }
-      
 
       .dropdown-menu li {
         float: none;
       }
-      
 
       a:before {
-        content: "";
+        content: '';
       }
-      
 
       label {
         margin-right: 8px;
@@ -112,14 +105,12 @@ div.item-list-tabs {
   }
 }
 
-
 .groups.single-item,
 .bp-user {
   div.item-list-tabs ul li.last {
     top: (@item-tabs-padding - 2 );
   }
 }
-
 
 #group-create-nav,
 #blog-create-nav,
@@ -132,18 +123,16 @@ div.item-list-tabs {
   }
 }
 
-
 .main .item-list-tabs {
   li:first-child a {
     padding-left: 0;
   }
-  
 
-  li.selected:first-child a {
+  li.selected:first-child a,
+  li.current:first-child a {
     padding-left: @padding-half;
   }
 }
-
 
 #subnav.item-list-tabs {
   background: @sub-item-tabs-bg;
@@ -154,19 +143,15 @@ div.item-list-tabs {
   border-bottom: @sub-item-tabs-border-bottom;
 }
 
-
 .group-create {
-  
   #group-create-tabs {
     margin-bottom: 0;
     position: relative;
   }
-  
 
   .item-list-tabs li:first-child a {
     padding-left: @item-tabs-padding;
   }
-  
 
   div.item-list-tabs ul span {
     border: inherit;

@@ -29,7 +29,7 @@ if ( !defined( 'WEFOSTER_HEADER' ) ) {
 // Header Style: Show a regular or inversed color header?
 if ( !defined( 'WEFOSTER_HEADER_STYLE' ) ) {
 		// 'navbar-inverse' or 'navbar-regular'
-		define('WEFOSTER_HEADER_STYLE', 'navbar-inverse');
+		define('WEFOSTER_HEADER_STYLE', 'navbar-regular');
 }
 
 if ( !defined( 'WEFOSTER_HEADER_HEIGHT' ) ) {
@@ -104,7 +104,7 @@ if ( !defined( 'WEFOSTER_LAYOUT_PRESET' ) ) {
 // Where do you want to primary menu to show? This only applies to the Full Layout
 if ( !defined( 'WEFOSTER_LAYOUT_FULL_PRIMARY_MENU_POSITION' ) ) {
 		// choose between 'above' or 'below' or 'inside'.
-		define('WEFOSTER_LAYOUT_FULL_PRIMARY_MENU_POSITION', 'inside');
+		define('WEFOSTER_LAYOUT_FULL_PRIMARY_MENU_POSITION', 'below');
 }
 
 // Show site description and title? This only applies to the Full Layout.
@@ -151,7 +151,7 @@ if ( !defined( 'WEFOSTER_ASSETS_URL' ) ) {
 //This is the default logo used in the header.
 // Need just one logo sitewide? This is the way to go.
 if ( !defined( 'WEFOSTER_DEFAULT_LOGO' ) ) {
-		define('WEFOSTER_DEFAULT_LOGO', WEFOSTER_ASSETS_URL . '/assets/img/logos/inverse-full.png' );
+		define('WEFOSTER_DEFAULT_LOGO', WEFOSTER_ASSETS_URL . '/assets/img/logos/regular-full.png' );
 }
 
 if ( !defined( 'WEFOSTER_DEFAULT_MOBILE_LOGO' ) ) {
@@ -253,11 +253,11 @@ if ( !defined( 'WEFOSTER_HEADER_BACKGROUND' ) ) {
 	//Local
 	//define('WEFOSTER_HEADER_BACKGROUND', get_stylesheet_directory_uri . '/assets/img/bg.jpg' );
 	//External
-	define('WEFOSTER_HEADER_BACKGROUND', 'https://cdn.wefoster.co/backgrounds/into-the-wild.jpeg');
+	//define('WEFOSTER_HEADER_BACKGROUND', 'https://cdn.wefoster.co/backgrounds/into-the-wild.jpeg');
 }
 
 if ( !defined( 'WEFOSTER_HERO_BACKGROUND' ) ) {
-	define('WEFOSTER_HERO_BACKGROUND', 'https://cdn.wefoster.co/backgrounds/into-the-wild.jpeg');
+	define('WEFOSTER_HERO_BACKGROUND', 'https://static.pexels.com/photos/7097/people-coffee-tea-meeting.jpg');
 }
 
 

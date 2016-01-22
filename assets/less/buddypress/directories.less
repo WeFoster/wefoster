@@ -179,9 +179,9 @@ div.pagination {
   display: block;
   float: left;
   width: 100%;
-  top: (-@margin-full * 1.5 );
   padding: 10px 0;
   width: 100%;
+  margin-top: -@margin-full;
   
   .pag-count {
     font-size: 90%;
@@ -196,6 +196,11 @@ div.pagination {
       font-weight: bold;
     }
   }
+}
+
+.directory div.pagination {
+  top: (-@margin-full * 1.5 );
+  margin-top: 0;
 }
 
 .messages div.pagination,

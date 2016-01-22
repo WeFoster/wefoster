@@ -404,8 +404,11 @@ add_filter( 'body_class', 'wff_add_category_body_class' );
 function wff_inside_menu_navigation_body_class( $classes ) {
 
 	$header_settings = get_theme_mod( 'wf_plus_header_menu_position', 'inside' );
+  $layout_type = get_theme_mod( 'wf_layout_type', WEFOSTER_LAYOUT_PRESET );
 
-	if ( $header_settings == 'inside' ) {
+	if (
+    $header_settings == 'inside' && $layout_type == 'full'
+  ) {
 		  $classes[] = 'wf-inside-navigation-menu';
 	}
 	// return the $classes array

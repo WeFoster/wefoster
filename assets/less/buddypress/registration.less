@@ -1,3 +1,36 @@
 #signup_form {
   margin-top: @margin-half;
+  
+  h4 {
+    margin-bottom: @margin-half;
+  }
+
+  .editfield {
+    margin: inherit;
+    padding: inherit;
+  }
+}
+
+#pass-strength-result {
+  text-align: center;
+  width: 150px;
+  .alert();
+  padding: @padding-small-vertical;
+}
+
+#pass-strength-result.error,
+#pass-strength-result.bad {
+  .alert-danger();
+}
+
+#pass-strength-result.good {
+  .alert-success();
+}
+
+#pass-strength-result.short {
+  .alert-danger();
+}
+
+#pass-strength-result.strong {
+  .alert-success();
 }
