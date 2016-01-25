@@ -28,7 +28,7 @@ function wf_plus_body_background_div() {
 			$bg_picture = get_theme_mod( 'wf_body_background_picture', WEFOSTER_BODY_BACKGROUND );
 
 			//Nothing set? Add an 1px image.
-			if ( empty( $bg_picture ) ) $bg_picture = 'data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACAD';
+			if ( empty( $bg_picture ) ) $bg_picture = 'data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7';
 		}
 		//Nothing? Set as none.
 		else {
