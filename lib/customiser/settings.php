@@ -26,7 +26,7 @@ function wf_plus_register_settings($fields)
 		    'settings' => 'wf_stylekit_message',
 		    'label' => __('Instructions', 'wefoster'),
 		    'description' => __('', 'wefoster'),
-		    'section' => 'wf_plus_stylekit_section',
+		    'panel' => 'wf_plus_stylekit_panel',
 		    'default' => '<div style="padding: 15px;background-color: #EFEFEF; border-radius: 2px;">
 		  	<ol>
 					<li>Select a Stylekit</li>
@@ -112,7 +112,7 @@ function wf_plus_register_settings($fields)
 		));
 
 		Kirki::add_field('wefoster_plus', array(
-		    'type' => 'radio',
+		    'type' => 'select',
 		    'settings' => 'wf_body_background_image_color',
 		    'label' => __('Image Effect', 'wefoster'),
 		    'description' => __('Apply an image effect to your header. Note: Some of these effects will not work on Internet Explorer. In these cases the image will be shown without the effect.', 'wefoster'),
@@ -805,7 +805,7 @@ function wf_plus_register_settings($fields)
       )
   ));
   Kirki::add_field('wefoster_plus', array(
-      'type' => 'radio',
+      'type' => 'select',
       'settings' => 'wf_header_background_image_color',
       'label' => __('Image Effect', 'wefoster'),
       'description' => __('Apply an image effect to your background. Note: Some of these effects will not work on Internet Explorer. In these cases the image will be shown without the effect.', 'wefoster'),
@@ -1077,7 +1077,7 @@ function wf_plus_register_settings($fields)
       ));
 
       Kirki::add_field('wefoster_plus', array(
-          'type' => 'radio',
+          'type' => 'select',
           'settings' => 'wf_plus_bp_cover_photo_effect',
           'label' => __('Image Effects', 'wefoster'),
           'description' => __('Apply an image effect to your featured images. Note: Some of these effects will not work on Internet Explorer. In these cases the image will be shown without the effect.', 'wefoster'),
@@ -1353,7 +1353,7 @@ function wf_plus_register_settings($fields)
   ));
 
   Kirki::add_field('wefoster_plus', array(
-      'type' => 'radio',
+      'type' => 'select',
       'settings' => 'wf_plus_featured_image_effect',
       'label' => __('Image Effects', 'wefoster'),
       'description' => __('Apply an image effect to your featured images. Note: Some of these effects will not work on Internet Explorer. In these cases the image will be shown without the effect.', 'wefoster'),
@@ -1474,7 +1474,7 @@ function wf_plus_register_settings($fields)
 			)
   ));
   Kirki::add_field('wefoster_plus', array(
-      'type' => 'radio',
+      'type' => 'select',
       'settings' => 'wf_hero_background_image_color',
       'label' => __('Image Effect', 'wefoster'),
       'description' => __('Apply an image effect to your background. Note: Some of these effects will not work on Internet Explorer. In these cases the image will be shown without the effect.', 'wefoster'),
