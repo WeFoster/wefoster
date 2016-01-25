@@ -11,7 +11,7 @@ function wf_plus_register_panels( $wp_customize ) {
   */
   $wp_customize->add_panel( 'wf_plus_stylekit_panel', array(
    'priority'    => 10,
-   'title'       => __( 'Stylekit', 'superminimal' ),
+   'title'       => __( 'Stylekits', 'superminimal' ),
    'description' => __( 'Awesome pre-made layouts', 'wefoster' ),
   ) );
 

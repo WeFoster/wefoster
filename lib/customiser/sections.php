@@ -8,7 +8,8 @@ function wff_register_sections( $wp_customize ) {
 	$wp_customize->add_section( 'wf_plus_stylekit_section', array(
 		'title'       => __( 'Choose Stylekits', 'wefoster' ),
 		'priority'    => 1,
-		'description' => __( 'Change the way your site header looks', 'wefoster' ),
+		'description' => __( 'Carefully crafted designs for your community.', 'wefoster' ),
+		'panel'       => 'wf_plus_stylekit_panel',
 	) );
 
 	$wp_customize->add_section( 'wf_plus_body_section', array(
