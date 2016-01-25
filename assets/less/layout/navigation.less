@@ -90,10 +90,21 @@
   }
 }
 //Secondary Navigation {
-.secondary-nav-wrap {
-  li a {
-    font-size: 95%;
-    padding-top: 15px;
-    padding-bottom: 15px;
+@media screen and (min-width: @grid-float-breakpoint-max) {
+  .secondary-nav-wrap {
+    padding-left: 0;
+    padding-right: 0;
+    
+    .navbar-collapse,
+    .container {
+      padding-left: 0;
+      padding-right: 0;
+    }
+
+    li a {
+      font-size: 95%;
+      padding-top: 15px;
+      padding-bottom: 15px;
+    }
   }
 }
