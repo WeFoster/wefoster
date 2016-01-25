@@ -330,11 +330,11 @@ if ( !defined( 'WEFOSTER_DEFAULT_GROUP_AVATAR' ) ) {
 
 // By default these will be based on your Post Thumbnails settings.
 if ( !defined( 'WEFOSTER_DEFAULT_BP_COVER_WIDTH' ) ) {
-	define( 'WEFOSTER_DEFAULT_BP_COVER_WIDTH', WEFOSTER_POST_THUMBNAIL_WIDTH );
+	define( 'WEFOSTER_DEFAULT_BP_COVER_WIDTH', 1600 );
 }
 
 if ( !defined( 'WEFOSTER_DEFAULT_BP_COVER_HEIGHT' ) ) {
-	define( 'WEFOSTER_DEFAULT_BP_COVER_HEIGHT', WEFOSTER_POST_THUMBNAIL_HEIGHT );
+	define( 'WEFOSTER_DEFAULT_BP_COVER_HEIGHT', 350 );
 }
 
 

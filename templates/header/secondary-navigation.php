@@ -2,9 +2,9 @@
 if ( has_nav_menu( 'secondary_navigation' ) ) {
 do_action('before_secondary_header_navigation');
 ?>
-<div class="secondary-nav-wrap container-fluid <?php do_action('class_container_secondary_navbar'); ?> box-brand-secondary">
+<div class="secondary-nav-wrap navbar-collapse container-fluid <?php do_action('class_container_secondary_navbar'); ?> box-light" role="navigation">
 <div class="container">
-		<nav class="collapse navbar-collapse <?php do_action('class_navbar'); ?>" role="navigation">
+		<nav class="collapse navbar navbar-collapse <?php do_action('class_navbar'); ?>" role="navigation">
 				 <?php do_action('open_header_navigation_secondary'); ?>
 		          <?php
 		              wp_nav_menu(array(

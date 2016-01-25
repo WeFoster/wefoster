@@ -8,13 +8,11 @@
 					 wp_nav_menu(array(
 							 'theme_location' => 'primary_navigation',
 							 'menu' => 'Primary Navigation',
-							 	 'fallback_cb'    => 'wf_menu_fallback',
+							 	'fallback_cb'    => 'wf_menu_fallback',
 							 'menu_class' => 'nav navbar-nav navbar-primary',
 							 'container' => false
 				 ));
 			 ?>
 			 </div>
-
-          <?php do_action('close_primary_navigation'); ?>
-
+      <?php do_action('close_primary_navigation'); ?>
 </nav>

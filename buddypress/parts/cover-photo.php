@@ -65,11 +65,10 @@ if ( $option == 'custom' ) {
 };
 
 $src = wpthumb( $cover_image_url, 'width=' . $settings['width'] .'&height=' . $settings['height'] . '&crop=true');
-
 ?>
 
 
-<div style="height:<?php echo $settings['height'] ?>px;" class="bp-cover-photo negative-row no-padding postthumb">
+<div style="height:<?php echo $settings['height'] ?>px;" class="bp-cover-photo postthumb bp-cover-photo box-vertical-full margin-bottom-none margin-left-none margin-right-none">
 
   <?php echo $action;?>
 
@@ -78,9 +77,7 @@ $src = wpthumb( $cover_image_url, 'width=' . $settings['width'] .'&height=' . $s
     <div class="<?php do_action('cover_photo_class'); ?> bp-cover-image-wrap"
         style="background-image: url(<?php echo $src; ?> );"
       >
-
         <?php do_action('inside_bp_cover_photo'); ?>
-
     </div>
 
   <?php do_action('close_bp_cover_photo'); ?>

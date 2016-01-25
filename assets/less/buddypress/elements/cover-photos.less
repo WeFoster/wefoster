@@ -1,5 +1,6 @@
 .bp-cover-photo {
   background: @brand-primary;
+  position: relative;
 }
 
 .bp-cover-image-wrap {
@@ -10,7 +11,6 @@
   background-size: cover;
   background-position: center;
 }
-
 //Action for Cover Photos
 .cover-photo-action {
   display: inline-block;
@@ -36,5 +36,47 @@
     color: @white;
     padding: @padding-half;
     font-size: 60%;
+  }
+}
+//Content Inside Cover Photo.
+.bp-cover-photo-content {
+  bottom: 0;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  right: 0;
+  
+  .sidebar {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background: transparent;
+    
+    #item-header-avatar {
+      margin: 0;
+      
+      img {
+        width: 100%;
+        height: auto;
+        background: tranparent;
+        box-shadow: 0 1px 3px rgba(0,0,0,0.3);
+      }
+    }
+  }
+
+  .inner-cover-photo {
+    height: 100%;
+    
+    .page-header.buddypress-component-title {
+      background: rgba(69, 73, 84, 0.92) none repeat scroll 0 0;
+      border-bottom: 0 none;
+      bottom: 0;
+      position: absolute;
+      width: 103%;
+      
+      h1 {
+        color: @white;
+      }
+    }
   }
 }

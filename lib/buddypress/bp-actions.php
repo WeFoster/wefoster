@@ -62,7 +62,7 @@ if ( ! function_exists( 'wff_theme_cover_photos' ) ) {
 			}
 	endif;
 	}
-	add_action( 'open_bp_page_content', 'wff_theme_cover_photos' );
+	add_action( 'before_container', 'wff_theme_cover_photos' );
 }
 
 
@@ -81,7 +81,6 @@ if ( ! function_exists( 'wff_theme_group_navigation' ) ) {
 	add_action( 'open_sidebar', 'wff_theme_group_navigation' );
 }
 
-
 /**
  * Add Member Navigation to Member Pages
  */
@@ -99,6 +98,21 @@ if ( ! function_exists( 'wff_theme_member_navigation' ) ) {
 	}
 	add_action( 'open_sidebar', 'wff_theme_member_navigation' );
 }
+
+
+/**
+ * Add Member Navigation to Member Pages
+ */
+if ( ! function_exists( 'wff_cover_photo_content' ) ) {
+	function wff_cover_photo_content() {
+
+		if ( bp_is_user() ) :
+				get_template_part( 'buddypress/parts/cover-photo-members' );
+	  endif;
+	}
+	add_action( 'close_bp_cover_photo', 'wff_cover_photo_content' );
+}
+
 
 if ( ! function_exists( 'wff_theme_mobile_member_navigation' ) ) {
 	function wff_theme_mobile_member_navigation() {

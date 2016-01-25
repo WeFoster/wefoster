@@ -76,6 +76,7 @@ function wff_bp_is_active_body_class( $classes ) {
 	return $classes;
 }
 
+
 // Apply a filter only when a condition is met.
 // https://codex.wordpress.org/Conditional_Tags
 function wf_change_bp_register_page_width() {
