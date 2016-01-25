@@ -27,6 +27,9 @@
        </div>
    </div>
 
-  <?php do_action('close_header'); ?>
+  <?php
+  // This load the full header
+  do_action('close_header');
+  ?>
 </header>
 <?php do_action('after_header'); ?>
