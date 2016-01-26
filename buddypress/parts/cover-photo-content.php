@@ -15,7 +15,7 @@ if ( $option == 'custom' ) {
   </div>
 
   <div class="sidebar <?php do_action('class_sidebar'); ?>">
-        <div style="height:<?php echo $settings['height'] ?>px;">
+        <div class="avatar-height-wrapper" style="height:<?php echo $settings['height'] ?>px;">
           <?php if ( bp_is_user() ) {
               get_template_part('buddypress/members/profile-photo');
             } else {

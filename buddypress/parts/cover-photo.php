@@ -68,7 +68,7 @@ $src = wpthumb( $cover_image_url, 'width=' . $settings['width'] .'&height=' . $s
 ?>
 
 
-<div style="height:<?php echo $settings['height'] ?>px;" class="bp-cover-photo postthumb bp-cover-photo box-vertical-full margin-bottom-none margin-left-none margin-right-none">
+<div style="height:<?php echo $settings['height'] ?>px;" class="bp-cover-photo box-vertical-full margin-bottom-none margin-left-none margin-right-none">
 
   <?php echo $action;?>
 

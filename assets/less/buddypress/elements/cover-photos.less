@@ -22,8 +22,8 @@
   
   &.my-profile {
     right: 0;
-    text-align: right;
-    top: 5px;
+    text-align: left;
+    top: @padding-half;
     transform: none;
     
     a {
@@ -46,6 +46,12 @@
   left: 0;
   right: 0;
   
+  .wf-member-action-button {
+    width: 25%;
+    position: absolute;
+    right: 0;
+  }
+
   .sidebar {
     position: absolute;
     bottom: 0;
@@ -66,11 +72,12 @@
       
       img {
         bottom: 0;
-        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+        box-shadow: 0 1px 3px rgba(0,0,0,0.3);
         height: auto;
         max-height: 100%;
-        max-width: 94%;
+        max-width: 100%;
         position: absolute;
+        padding-left: 17px;
       }
     }
   }
@@ -95,5 +102,7 @@
 .container-fluid.bp-cover-photo-content {
   .sidebar #item-header-avatar img {
     max-width: 90%;
+    padding-left: 0;
+    padding-right: 0;
   }
 }

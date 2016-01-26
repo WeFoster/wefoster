@@ -184,15 +184,33 @@
 /*! Hiding stuff that is not crucial for mobile experience
 But greatly improves the layout */
 @media only screen and (max-width: @grid-float-breakpoint-max) {
-  .bp-title-button {
+  .bp-title-button,
+  .bp-cover-photo-content .activity,
+  .bp-cover-photo-content .user-nicename,
+  .cover-photo-action a {
     display: none;
   }
 
-  .bp-user {
-    .postthumb {
-      position: relative;
-      top: -@margin-full;
-      margin-bottom: 0 !important;
+  .bp-cover-photo-content .sidebar {
+    position: absolute;
+    top: 1px;
+    right: 0;
+    width: 40%;
+    height: 100%;
+    bottom: 0;
+  }
+
+  .bp-cover-photo-content .inner-cover-photo .page-header.buddypress-component-title {
+    border-bottom: 0 none;
+    bottom: 0;
+    position: absolute;
+    margin: auto;
+    left: -20px;
+    right: -20px;
+    
+    h1 {
+      width: 58%;
+      display: inline-block !important;
     }
   }
 

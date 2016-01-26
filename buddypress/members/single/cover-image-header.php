@@ -13,6 +13,7 @@
 
 
 <div id="item-header-content">
+	
 
 	<?php do_action( 'bp_before_member_header_meta' ); ?>
 
@@ -31,8 +32,6 @@
 		<?php endif; ?>
 
 		<div id="item-buttons">
-
-
 
 		</div><!-- #item-buttons -->
 

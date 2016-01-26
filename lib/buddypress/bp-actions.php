@@ -118,6 +118,37 @@ if ( ! function_exists( 'wff_theme_group_photo' ) ) {
 }
 
 /**
+ * Add Member Photo to Member Pages
+ */
+if ( ! function_exists( 'wff_theme_member_photo' ) ) {
+	function wff_theme_member_photo() {
+
+		if ( bp_is_user() ) :
+
+			get_template_part( 'buddypress/members/profile-photo' );
+
+	  endif;
+	}
+	add_action( 'before_bp_profile_sidebar_navigation', 'wff_theme_member_photo' );
+}
+
+/**
+ * Add Member Photo to Member Pages
+ */
+if ( ! function_exists( 'wff_theme_member_actions' ) ) {
+	function wff_theme_member_actions() {
+
+		if ( bp_is_user() ) :
+
+			get_template_part( 'buddypress/members/profile-actions' );
+
+	  endif;
+	}
+	add_action( 'before_bp_profile_sidebar_navigation', 'wff_theme_member_actions',1 );
+}
+
+
+/**
  * Add Member Navigation to Member Pages
  */
 if ( ! function_exists( 'wff_theme_member_navigation' ) ) {
@@ -134,22 +165,6 @@ if ( ! function_exists( 'wff_theme_member_navigation' ) ) {
 	}
 	add_action( 'open_sidebar', 'wff_theme_member_navigation' );
 }
-
-/**
- * Add Member Photo to Member Pages
- */
-if ( ! function_exists( 'wff_theme_member_photo' ) ) {
-	function wff_theme_member_photo() {
-
-		if ( bp_is_user() ) :
-
-			get_template_part( 'buddypress/members/profile-photo' );
-
-	  endif;
-	}
-	add_action( 'before_bp_profile_sidebar_navigation', 'wff_theme_member_photo' );
-}
-
 /**
  * Add our avatar/title to the cover photo template (only if enabled)
  */
@@ -225,4 +240,34 @@ function wff_buddypress_cover_photo_layout() {
 
 	}
 	add_action('template_redirect','wff_buddypress_cover_photo_layout', 11);
+}
+
+if ( ! function_exists( 'wff_buddypress_cover_photo_css' ) ) {
+function wff_buddypress_cover_photo_css() {
+
+	//Check for the default image sizes.
+	$option = get_theme_mod( 'wf_plus_bp_cover_photo_default_sizes' );
+
+	if ( $option == 'custom' ) {
+	  $settings['height'] = get_theme_mod ('wf_plus_bp_cover_photo_height') * 0.7;
+	} else {
+	  $settings['height'] = WEFOSTER_DEFAULT_BP_COVER_HEIGHT * 0.7;
+	};
+		// First check the layout being used.
+		if ( WEFOSTER_BUDDYPRESS_COVER_PHOTO_LAYOUT == 'full'  ) {
+			//Only apply on Group & Member Pages
+			if ( bp_is_user() || bp_is_group() ) {
+				echo '<style>
+					@media (max-width:768px) {
+						.wefoster-framework .bp-cover-photo,
+						.avatar-height-wrapper {
+							height: ' . $settings['height'] . 'px !important;
+						}
+					}
+				</style>';
+			}
+		}
+
+	}
+	add_action('wp_head','wff_buddypress_cover_photo_css', 11);
 }
