@@ -11,7 +11,7 @@ if ( $option == 'custom' ) {
 <div class="<?php do_action('class_content_wrapper');?> bp-cover-photo-content">
 
   <div class="inner-cover-photo <?php do_action('class_main'); ?>">
-      <?php do_action('bp_inside_cover_content'); ?>
+      <?php get_template_part('buddypress/page-header');?>
   </div>
 
   <div class="sidebar <?php do_action('class_sidebar'); ?>">

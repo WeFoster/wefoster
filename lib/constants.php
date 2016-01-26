@@ -348,6 +348,12 @@ if ( !defined( 'WEFOSTER_DEFAULT_MEMBER_COVER_PHOTO' ) ) {
 	define ( 'WEFOSTER_DEFAULT_MEMBER_COVER_PHOTO', WEFOSTER_DEFAULT_GROUP_COVER_PHOTO );
 }
 
+//Choose the Cover Photo layout you'd like to use.
+if ( !defined( 'WEFOSTER_BUDDYPRESS_COVER_PHOTO_LAYOUT' ) ) {
+	//Options: 'full' and 'off'
+	define ( 'WEFOSTER_BUDDYPRESS_COVER_PHOTO_LAYOUT', 'full' );
+}
+
 /////////////// 											///////////////
 ///////////////     DEVELOPERS 				///////////////
 /////////////// 											///////////////

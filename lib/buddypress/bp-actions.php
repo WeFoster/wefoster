@@ -23,7 +23,7 @@ if ( ! function_exists( 'wff_theme_activity_tabs' ) ) {
 if ( ! function_exists( 'wff_group_creation_button' ) ) {
 	function wff_group_creation_button() {
 
-		if ( bp_is_groups_component() && bp_is_directory() ) :  ?>
+		if ( bp_is_groups_component() && bp_is_directory() && is_user_logged_in() && bp_user_can_create_groups() ) :  ?>
 
 		  <div class="btn btn-primary create-group-button hidden-xs">
 			<i class="fa fa-user-plus"></i> <?php bp_group_create_button(); ?>
@@ -37,7 +37,7 @@ if ( ! function_exists( 'wff_group_creation_button' ) ) {
 if ( ! function_exists( 'wff_blog_creation_button' ) ) {
 	function wff_blog_creation_button() {
 
-		if ( bp_is_blogs_component() && bp_is_directory() ) :  ?>
+		if ( bp_is_blogs_component() && bp_is_directory() && user_is_logged_in() ) :  ?>
 
 		  <div class="btn btn-primary create-group-button hidden-xs">
 			<i class="fa fa-desktop"></i> <?php bp_blog_create_button(); ?>
@@ -206,4 +206,23 @@ if ( ! function_exists( 'wff_theme_user_mobile_navigation' ) ) {
     <?php
 	}
 	add_action( 'open_mobile_sidebar', 'wff_theme_user_mobile_navigation', 1 );
+}
+
+/**
+ * This function checks the currently active Cover Photo layout and removes some template parts if needed.
+ */
+if ( ! function_exists( 'wff_buddypress_cover_photo_layout' ) ) {
+function wff_buddypress_cover_photo_layout() {
+		// First check the layout being used.
+		if ( WEFOSTER_BUDDYPRESS_COVER_PHOTO_LAYOUT == 'full'  ) {
+			//Only apply on Group & Member Pages
+			if ( bp_is_user() || bp_is_group() ) {
+				remove_action( 'open_bp_page_content', 'wff_bp_page_header' );
+				remove_action( 'before_bp_group_navigation', 'wff_theme_group_photo', 1 );
+				remove_action( 'before_bp_profile_sidebar_navigation', 'wff_theme_member_photo' );
+			}
+		}
+
+	}
+	add_action('template_redirect','wff_buddypress_cover_photo_layout', 11);
 }
