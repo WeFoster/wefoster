@@ -334,7 +334,7 @@ if ( !defined( 'WEFOSTER_DEFAULT_BP_COVER_WIDTH' ) ) {
 }
 
 if ( !defined( 'WEFOSTER_DEFAULT_BP_COVER_HEIGHT' ) ) {
-	define( 'WEFOSTER_DEFAULT_BP_COVER_HEIGHT', 350 );
+	define( 'WEFOSTER_DEFAULT_BP_COVER_HEIGHT', 380 );
 }
 
 

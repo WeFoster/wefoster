@@ -16,11 +16,12 @@
 
     <div id="main-content" class="main <?php do_action('class_main'); ?>" role="main">
 
-        <?php do_action('open_bp_page_content'); ?>
+        <?php
+        //This action is used to load the Page Header for BuddyPress
+        do_action('open_bp_page_content');
+        ?>
 
         <?php do_action('before_bp_page_header'); ?>
-
-        <?php get_template_part('buddypress/page', 'header'); ?>
 
         <?php do_action('after_bp_page_header'); ?>
 

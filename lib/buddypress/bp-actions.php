@@ -48,6 +48,18 @@ if ( ! function_exists( 'wff_blog_creation_button' ) ) {
 	add_action( 'close_bp_page_header', 'wff_blog_creation_button' );
 }
 
+/*
+* Hook the BuddyPress Page Titles into our pages and posts.
+*
+* @since 1.0.0
+*/
+if ( ! function_exists( 'wff_bp_page_header' ) ) {
+function wff_bp_page_header() {
+	get_template_part( 'buddypress/page-header' );
+}
+	add_action( 'open_bp_page_content', 'wff_bp_page_header' );
+}
+
 
 if ( ! function_exists( 'wff_theme_cover_photos' ) ) {
 	/**
@@ -65,7 +77,18 @@ if ( ! function_exists( 'wff_theme_cover_photos' ) ) {
 	add_action( 'before_container', 'wff_theme_cover_photos' );
 }
 
+/**
+ * Add Full Width Cover Photo Template
+ */
+if ( ! function_exists( 'wff_cover_photo_member_content' ) ) {
+	function wff_cover_photo_member_content() {
 
+		if ( bp_is_user() || bp_is_group() ) :
+				get_template_part( 'buddypress/parts/cover-photo-content' );
+	  endif;
+	}
+	add_action( 'close_bp_cover_photo', 'wff_cover_photo_member_content' );
+}
 
 if ( ! function_exists( 'wff_theme_group_navigation' ) ) {
 	/**
@@ -79,6 +102,19 @@ if ( ! function_exists( 'wff_theme_group_navigation' ) ) {
 	  endif;
 	}
 	add_action( 'open_sidebar', 'wff_theme_group_navigation' );
+}
+
+if ( ! function_exists( 'wff_theme_group_photo' ) ) {
+	/**
+	 * This Loads the Group Photo.
+	 */
+	function wff_theme_group_photo() {
+
+		if ( bp_is_group() ) :
+			get_template_part( 'buddypress/groups/group-photo' );
+	  endif;
+	}
+	add_action( 'before_bp_group_navigation', 'wff_theme_group_photo', 1 );
 }
 
 /**
@@ -99,18 +135,32 @@ if ( ! function_exists( 'wff_theme_member_navigation' ) ) {
 	add_action( 'open_sidebar', 'wff_theme_member_navigation' );
 }
 
+/**
+ * Add Member Photo to Member Pages
+ */
+if ( ! function_exists( 'wff_theme_member_photo' ) ) {
+	function wff_theme_member_photo() {
+
+		if ( bp_is_user() ) :
+
+			get_template_part( 'buddypress/members/profile-photo' );
+
+	  endif;
+	}
+	add_action( 'before_bp_profile_sidebar_navigation', 'wff_theme_member_photo' );
+}
 
 /**
- * Add Member Navigation to Member Pages
+ * Add our avatar/title to the cover photo template (only if enabled)
  */
-if ( ! function_exists( 'wff_cover_photo_content' ) ) {
+if ( ! function_exists( 'wff_cover_photo_member_content' ) ) {
 	function wff_cover_photo_content() {
 
 		if ( bp_is_user() ) :
 				get_template_part( 'buddypress/parts/cover-photo-members' );
 	  endif;
 	}
-	add_action( 'close_bp_cover_photo', 'wff_cover_photo_content' );
+	add_action( 'close_bp_cover_photo', 'wff_cover_photo_member_content' );
 }
 
 

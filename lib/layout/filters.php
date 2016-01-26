@@ -200,6 +200,16 @@ if ( ! function_exists ( 'wff_enable_font_awesome' ) ) {
   add_filter( 'body_class', 'wff_enable_font_awesome' );
 }
 
+if ( ! function_exists ( 'wff_layout_type_class' ) ) {
+  function wff_layout_type_class( $classes ) {
+  	// add a body class
+  	$classes[] = 'wefoster-layout-' . get_theme_mod('wf_layout_class', WEFOSTER_LAYOUT_CLASS );
+  	// return the $classes array
+  	return $classes;
+  }
+  add_filter( 'body_class', 'wff_layout_type_class' );
+}
+
 
 /**
  * Add a body class to enable Bootstrap Tooltip functionality.
