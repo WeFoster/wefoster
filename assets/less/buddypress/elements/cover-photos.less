@@ -51,15 +51,19 @@
     bottom: 0;
     right: 0;
     background: transparent;
+    margin: 0;
+    padding: 0;
     
     #item-header-avatar {
       margin: 0;
       
       img {
-        width: 100%;
+        bottom: 0;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
         height: auto;
-        background: tranparent;
-        box-shadow: 0 1px 3px rgba(0,0,0,0.3);
+        max-height: 100%;
+        max-width: 94%;
+        position: absolute;
       }
     }
   }
@@ -68,15 +72,21 @@
     height: 100%;
     
     .page-header.buddypress-component-title {
-      background: rgba(69, 73, 84, 0.92) none repeat scroll 0 0;
+      background: fade(@brand-primary, 90%);
       border-bottom: 0 none;
       bottom: 0;
       position: absolute;
-      width: 103%;
+      margin: auto;
       
       h1 {
         color: @white;
       }
     }
+  }
+}
+//Make small changes for fluid layouts
+.container-fluid.bp-cover-photo-content {
+  .sidebar #item-header-avatar img {
+    max-width: 90%;
   }
 }

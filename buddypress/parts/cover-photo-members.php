@@ -1,5 +1,15 @@
-<div class="container bp-cover-photo-content">
-  <div class="inner-cover-photo col-sm-9">
+<?php
+if ( $option == 'custom' ) {
+  $settings['width']  = get_theme_mod ('wf_plus_bp_cover_photo_width') - 30;
+  $settings['height'] = get_theme_mod ('wf_plus_bp_cover_photo_height') - 30;
+} else {
+  $settings['width']  = WEFOSTER_DEFAULT_BP_COVER_WIDTH - 30;
+  $settings['height'] = WEFOSTER_DEFAULT_BP_COVER_HEIGHT - 30;
+};
+?>
+
+<div class="<?php do_action('class_content_wrapper');?> bp-cover-photo-content">
+  <div class="inner-cover-photo <?php do_action('class_main'); ?>">
     <div class="page-header buddypress-component-title">
 
 
@@ -15,8 +25,8 @@
     </div>
   </div>
 
-  <div class="sidebar col-sm-3">
-    <div id="item-header-avatar">
+  <div class="sidebar <?php do_action('class_sidebar'); ?>">
+    <div id="item-header-avatar" style="height:<?php echo $settings['height'] ?>px;">
         <?php
         $userLink = bp_get_loggedin_user_link();
         if ( bp_is_my_profile() ): ?>
