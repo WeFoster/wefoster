@@ -99,10 +99,17 @@
   }
 }
 //Make small changes for fluid layouts
-.container-fluid.bp-cover-photo-content {
-  .sidebar #item-header-avatar img {
-    max-width: 90%;
+.wefoster-layout-container {
+  .bp-cover-photo-content .sidebar #item-header-avatar img {
+    max-width: 94%;
     padding-left: 0;
-    padding-right: 0;
+    /* padding-right: 0; */
+    float: right;
+    right: 0;
+  }
+
+  .inner-cover-photo {
+    padding: 0;
+    margin-left: -@margin-half;
   }
 }

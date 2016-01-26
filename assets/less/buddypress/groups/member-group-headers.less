@@ -18,7 +18,6 @@
     }
   }
 }
-
 //BuddyPress Group Admin
 .group-admin,
 .my-account {
@@ -33,12 +32,10 @@
   #subnav.item-list-tabs {
     margin-bottom: @margin-full;
   }
-
   //Fix table layout on profile
   &.settings.notifications th.title {
     width: 100%;
   }
-
   //Change title for visibility settings
   &.settings {
     th.title {
@@ -46,14 +43,12 @@
     }
   }
 }
-
 // BUDDYPRESS PROFILES
 div#item-header {
-  margin-top: 0;
+  margin-top: -@margin-full;
   margin-bottom: @margin-full;
   
   #item-buttons {
-    padding-left: @padding-full;
     padding: 0.1px 10px;
   }
 
@@ -100,7 +95,7 @@ div#item-header {
   div#item-header-content {
     background: darken(@page-header-background, 1.5%);
     margin: 0 -@margin-full @margin-full;
-    padding: 5px @padding-full;
+    padding: @padding-small @padding-full;
   }
 
   img.avatar {
