@@ -47,6 +47,8 @@ function wff_scripts() {
 	//Sidr
 	wp_register_script( 'touchswipe_js', '//cdn.jsdelivr.net/jquery.touchswipe/1.6.15/jquery.touchSwipe.min.js', array(), null, false );
 	wp_register_script( 'sidr_js', '//cdn.jsdelivr.net/jquery.sidr/2.1.0/jquery.sidr.min.js', array(), null, false );
+
+	wp_register_script( 'perfect_scrollbar', 'https://cdnjs.cloudflare.com/ajax/libs/jquery.perfect-scrollbar/0.6.10/js/perfect-scrollbar.jquery.js', array(), null, false );
 	// Enqueue Font Awesome
 
 	// Custom Scripts
@@ -55,6 +57,7 @@ function wff_scripts() {
 	wp_enqueue_script( 'modernizr' );
 	wp_enqueue_script( 'touchswipe_js' );
 	wp_enqueue_script( 'sidr_js' );
+	wp_enqueue_script( 'perfect_scrollbar' );
 	wp_enqueue_script( 'jquery' );
 	wp_enqueue_script( 'wff_scripts' );
 

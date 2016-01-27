@@ -2,6 +2,9 @@
 	<?php do_action('before_sidebar'); ?>
 		<div class="inner-sidebar <?php do_action('class_inner_sidebar'); ?>">
 
+			<a id="close-buddypress-mobile-sidebar" class="close-panel-button" href="#">
+				<i class="fa fa-times-circle"></i> Close menu
+			</a>
 
 			<?php
 			//This action is used to load the profile avatar.
@@ -12,7 +15,6 @@
 						<?php bp_loggedin_user_avatar( 'width=' . bp_core_avatar_thumb_width() . '&height=' . bp_core_avatar_thumb_height() ); ?>
 							 <?php $userLink = bp_get_loggedin_user_link();?>
 							 <?php echo bp_core_get_user_displayname( bp_loggedin_user_id() );?><br>
-							<a class="no-ajax" href="<?php echo $userLink; ?>"><?php _e('View Profile.', 'wefoster'); ?>	</a>
 			</div>
 
 			<div id="buddypress-sidebar-navigation">

@@ -1,14 +1,13 @@
 <?php
 // This is the navigation top right on mobile. It shows our navigation menus on tab/click
 ?>
-
-<a id="mobile-primary-navigation-menu" href="#mobile-primary-navigation-menu">
-<button type="button" class="navbar-toggle">
-  <span class="sr-only"><?php _e('Toggle Navigation', 'wefoster'); ?></span>
-  <span class="icon-bar"></span>
-  <span class="icon-bar"></span>
-  <span class="icon-bar"></span>
-</button>
+<a id="mobile-primary-navigation-menu-trigger" href="#mobile-primary-navigation">
+  <button type="button" class="navbar-toggle">
+    <span class="sr-only"><?php _e('Toggle Navigation', 'wefoster'); ?></span>
+    <span class="icon-bar"></span>
+    <span class="icon-bar"></span>
+    <span class="icon-bar"></span>
+  </button>
 </a>
 
 

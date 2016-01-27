@@ -15,6 +15,7 @@ if ( ! function_exists( 'wff_theme_activity_tabs' ) ) {
 	  endif;
 	}
 	add_action( 'open_sidebar', 'wff_theme_activity_tabs' );
+	add_action( 'open_mobile_sidebar', 'wff_theme_activity_tabs',1 );
 }
 
 /**
@@ -115,6 +116,7 @@ if ( ! function_exists( 'wff_theme_group_photo' ) ) {
 	  endif;
 	}
 	add_action( 'before_bp_group_navigation', 'wff_theme_group_photo', 1 );
+	add_action( 'open_mobile_sidebar', 'wff_theme_group_photo', 1 );
 }
 
 /**
@@ -130,6 +132,7 @@ if ( ! function_exists( 'wff_theme_member_photo' ) ) {
 	  endif;
 	}
 	add_action( 'before_bp_profile_sidebar_navigation', 'wff_theme_member_photo' );
+	add_action( 'open_mobile_sidebar', 'wff_theme_member_photo', 1 );
 }
 
 /**
@@ -164,6 +167,7 @@ if ( ! function_exists( 'wff_theme_member_navigation' ) ) {
 	  endif;
 	}
 	add_action( 'open_sidebar', 'wff_theme_member_navigation' );
+	add_action( 'open_mobile_sidebar', 'wff_theme_member_navigation' );
 }
 /**
  * Add our avatar/title to the cover photo template (only if enabled)
@@ -203,24 +207,6 @@ if ( ! function_exists( 'wff_theme_user_navigation' ) ) {
 		get_template_part( 'buddypress/navigation-menu' );
 	}
 	add_action( 'close_primary_navigation', 'wff_theme_user_navigation' );
-}
-
-/**
- * Add User Navigation/Notifications menus to Sidebar for mobile
- */
-if ( ! function_exists( 'wff_theme_user_mobile_navigation' ) ) {
-	/**
-	 * Add User Navigation/Notifications menus to Sidebar for mobile
-	 */
-	function wff_theme_user_mobile_navigation() {
-	?>
-    <div class="widget bp-user-navigation-widget sidebar-member-nav">
-		<?php get_template_part( 'buddypress/navigation-menu' ); ?>
-      <div style="clear:both;"></div>
-    </div>
-    <?php
-	}
-	add_action( 'open_mobile_sidebar', 'wff_theme_user_mobile_navigation', 1 );
 }
 
 /**

@@ -90,10 +90,13 @@
         //Sidr JS Setup
 
         //Our Navigation Menus
-        $('#mobile-primary-navigation-menu').sidr({
+        $('#mobile-primary-navigation-menu-trigger').sidr({
           name: 'mobile-primary-navigation',
-          source: '#menu-primary-navigation',
           side: 'right'
+        });
+
+        $('#close-mobile-primary-navigation').click(function() {
+          $.sidr('close', 'mobile-primary-navigation');
         });
 
         //Our Sidebar
@@ -103,6 +106,10 @@
           speed: 200
         });
 
+        $('#close-mobile-sidebar').click(function() {
+          $.sidr('close', 'mobile-sidebar');
+        });
+
         //Our BuddyPress Navigation
         $('#buddypress-mobile-navigation-trigger').sidr({
           name: 'buddypress-mobile-sidebar',
@@ -110,14 +117,17 @@
           speed: 200
         });
 
+        $('#close-buddypress-mobile-sidebar').click(function() {
+          $.sidr('close', 'buddypress-mobile-sidebar');
+        });
+
         $('.bp-sidebar-navigation').smartmenus({
           subIndicatorsText: '<i class="fa fa-chevron-down"></i>',
         });
 
+        //Add a styelized scrollbar on mobile
+        $('#buddypress-mobile-sidebar,#mobile-sidebar,#mobile-primary-navigation').perfectScrollbar(); // Initialize
 
-        $(window).resize(function() {
-          $.sidr('close', 'mobile-primary-navigation');
-        });
         // Add Button Bootstrap Styles
         jQuery('.widget_bps_widget submit,.bbp-submit-wrapper button,.join-group').addClass('btn btn-success');
         jQuery('.create-blog .main submit').addClass('btn btn-lg btn-success');
