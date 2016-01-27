@@ -43,5 +43,3 @@
     <?php do_action('before_content'); ?>
 
     <div id="site-content" class="content row row-offcanvas row-offcanvas-left <?php do_action('class_content'); ?>">
-
-<?php get_template_part('templates/sidebar/mobile-sidebar'); ?>

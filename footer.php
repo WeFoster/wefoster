@@ -63,6 +63,9 @@
 
   </footer>
 
+  <?php get_template_part('templates/sidebar/mobile-sidebar'); ?>
+  <?php get_template_part('templates/sidebar/buddypress-mobile-sidebar'); ?>
+
   <!-- layout wrapper -->
   </div>
   <?php do_action('after_footer'); ?>

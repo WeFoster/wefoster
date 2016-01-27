@@ -1,0 +1,62 @@
+.sidr {
+  background: @white;
+  border-radius: 0;
+  display: block;
+  position: fixed;
+  top: 0;
+  height: 100%;
+  z-index: 999999;
+  width: @offcanvas-width;
+  overflow-x: hidden;
+  overflow-y: auto;
+  
+  &.right {
+    left: auto;
+    right: -@offcanvas-width;
+  }
+
+  &.left {
+    left: -@offcanvas-width;
+    right: auto;
+  }
+
+  .inner-sidebar {
+    margin-top: @margin-full;
+  }
+}
+//BuddyPress
+.sidr {
+  #user-sidebar-menu {
+    margin-bottom: 0;
+    background: #EFEFEF;
+    margin-top: -35px;
+  }
+
+  #buddypress-sidebar-navigation {
+    ul li {
+      border-bottom: 1px solid darken(@white, 4%);
+      
+      ul li {
+        border-bottom: 0;
+      }
+    }
+
+    span.sub-arrow {
+      position: absolute;
+      right: 15px;
+    }
+
+    .sub-menu {
+      display: none;
+      background: darken(@white, 5%);
+      
+      &.sm-nowrap {
+        margin: 0 !important;
+        
+        li {
+          font-size: 90%;
+        }
+      }
+    }
+  }
+}

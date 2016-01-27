@@ -175,3 +175,57 @@ function wff_bp_navigation_menu() {
 	echo '<li' . $alt . '><a id="bp-admin-logout" class="logout" href="' . wp_logout_url( home_url() ) . '">' . __( 'Log Out', 'buddypress' ) . '</a></li>';
 	echo '</ul>';
 }
+
+/**
+ * Roll our our Bootstrap powered BuddyPress navigation
+ *
+ * @since 1.0
+ */
+function wff_bp_sidebar_navigation_menu() {
+	global $bp;
+
+	if ( ! $bp->bp_nav || ! is_user_logged_in() ) {
+		return false; }
+
+	echo '<ul class="bp-sidebar-navigation sm sm-vertical">';
+
+	// Loop through each navigation item
+	$counter = 0;
+	foreach ( (array) $bp->bp_nav as $nav_item ) {
+		$alt = ( 0 == $counter % 2 ) ? ' class="alt"' : '';
+
+		if ( -1 == $nav_item['position'] ) {
+			continue; }
+
+		echo '<li' . $alt . '>';
+		echo '<a id="user-' . $nav_item['css_id'] . '" href="' . $nav_item['link'] . '">' . $nav_item['name'] . '</a>';
+
+		if ( isset( $bp->bp_options_nav[ $nav_item['slug'] ] ) && is_array( $bp->bp_options_nav[ $nav_item['slug'] ] ) ) {
+			echo '<ul class="sub-menu">';
+			$sub_counter = 0;
+
+			foreach ( (array) $bp->bp_options_nav[ $nav_item['slug'] ] as $subnav_item ) {
+				$link = $subnav_item['link'];
+				$name = $subnav_item['name'];
+
+				if ( bp_displayed_user_domain() ) {
+					$link = str_replace( bp_displayed_user_domain(), bp_loggedin_user_domain(), $subnav_item['link'] ); }
+
+				if ( isset( $bp->displayed_user->userdata->user_login ) ) {
+					$name = str_replace( $bp->displayed_user->userdata->user_login, $bp->loggedin_user->userdata->user_login, $subnav_item['name'] ); }
+
+				$alt = ( 0 == $sub_counter % 2 ) ? ' class="alt"' : '';
+				echo '<li' . $alt . '><a id="user-' . $subnav_item['css_id'] . '" href="' . $link . '">' . $name . '</a></li>';
+				$sub_counter++;
+			}
+			echo '</ul>';
+		}
+
+		echo '</li>';
+
+		$counter++;
+	}
+	$alt = ( 0 == $counter % 2 ) ? ' class="alt"' : '';
+	echo '<li' . $alt . '><a id="bp-admin-logout" class="logout" href="' . wp_logout_url( home_url() ) . '">' . __( 'Log Out', 'buddypress' ) . '</a></li>';
+	echo '</ul>';
+}

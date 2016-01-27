@@ -257,7 +257,7 @@ position: relative;
         }
 
         & a span:after {
-          content: "\f078";
+          content: '\f078';
           font-family: @icon-font-family;
           float: right;
           color: #fff;
@@ -337,73 +337,6 @@ position: relative;
       margin-right: 5px;
     }
   }
-
-  .fa-chevron-circle-right.rotate {
-    /*transform*/
-    -webkit-transform: translateZ(0);
-    -webkit-transform: rotate( -180deg );
-    -moz-transform: rotate( -180deg );
-    -ms-transform: rotate( -180deg );
-    -o-transform: rotate( -180deg );
-    transform: rotate( -180deg );
-    /*transition*/
-    -webkit-transition: transform 150ms ease;
-    -moz-transition: transform 150ms ease;
-    -o-transition: transform 150ms ease;
-    transition: transform 150ms ease;
-  }
-
-  .off-canvas-sidebar-open {
-    overflow-y: scroll;
-    overflow-x: hidden;
-  }
-
-  .row-offcanvas {
-    /* force hardware acceleration */
-    -webkit-transform: translateZ(0);
-    transform: translate3d(0,0,0);
-    -webkit-transform: translate3d(0,0,0);
-    position: relative;
-    transition: all 0.2s ease-out 0s;
-  }
-
-  .row-offcanvas-right {
-    right: 0;
-  }
-
-  .row-offcanvas-left {
-    left: 0;
-  }
-
-  .row-offcanvas-right .sidebar-offcanvas {
-    right: -55%;
-  }
-
-  .row-offcanvas-left .sidebar-offcanvas {
-    left: -55%;
-  }
-
-  .row-offcanvas-right.active {
-    right: 55%;
-    
-    .inner-sidebar {
-      margin-right: @margin-half;
-    }
-  }
-
-  .row-offcanvas-left.active {
-    left: 55%;
-    
-    .inner-sidebar {
-      margin-left: 0 !important;
-    }
-  }
-
-  .sidebar-offcanvas {
-    position: absolute;
-    top: 0;
-    width: 55%;
-  }
 }
 
 .bp-cover-image-wrap {
@@ -413,36 +346,6 @@ position: relative;
 @media (max-width: 568px) {
   .postthumb {
     height: 160px !important;
-  }
-
-  .row-offcanvas-right .sidebar-offcanvas {
-    right: -90%;
-  }
-
-  .row-offcanvas-left .sidebar-offcanvas {
-    left: -90%;
-  }
-
-  .row-offcanvas-right.active {
-    right: 90%;
-    
-    .inner-sidebar {
-      margin-right: 0;
-    }
-  }
-
-  .row-offcanvas-left.active {
-    left: 90%;
-    
-    .inner-sidebar {
-      margin-left: 0;
-    }
-  }
-
-  .sidebar-offcanvas {
-    position: absolute;
-    top: 0;
-    width: 90%;
   }
 }
 

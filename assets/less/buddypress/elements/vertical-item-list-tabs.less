@@ -50,6 +50,13 @@ margin-left: 0;
       }
     }
 
+    a.highlighted {
+      background: @vert-tabs-active-bg;
+      border-top: @vert-tabs-active-border-top;
+      border-bottom: @vert-tabs-active-border-bottom;
+      color: @vert-tabs-hover-color;
+    }
+
     a:hover {
       border-color: @brand-secondary;
     }
@@ -102,7 +109,7 @@ margin-left: 0;
     &.loading a:before {
       position: absolute !important;
       left: @margin-full;
-      content: "\f110" !important;
+      content: '\f110' !important;
       padding: 0 !important;
       top: 20px;
       color: @white;
@@ -170,7 +177,7 @@ margin-left: 0;
   }
 
   .item-list-tabs > ul:after {
-    content: ".";
+    content: '.';
     display: block;
     height: 0;
     clear: both;

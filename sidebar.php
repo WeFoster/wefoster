@@ -1,7 +1,5 @@
 <?php
 /**
-* This file is only here to comply with the WP.org theme guidelines. Not cool.
-*
 * @since 1.0
 * @package WeFoster Framework
 */

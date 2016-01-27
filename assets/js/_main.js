@@ -87,20 +87,37 @@
           },
         });
 
-        //Offcanvas
-        jQuery('[data-toggle=offcanvas]').click(function() {
-          jQuery('.row-offcanvas').toggleClass('active');
-          jQuery('.fa-chevron-circle-right').toggleClass('rotate');
-          jQuery('body').toggleClass('off-canvas-sidebar-open');
+        //Sidr JS Setup
+
+        //Our Navigation Menus
+        $('#mobile-primary-navigation-menu').sidr({
+          name: 'mobile-primary-navigation',
+          source: '#menu-primary-navigation',
+          side: 'right'
         });
 
-        //Close off canvas navigation when user clicks activity tab
-        jQuery('.sidebar-offcanvas div.vertical-list-tabs ul li a').click(function() {
-          jQuery('.row-offcanvas').delay(600).queue(function() {
-            jQuery(this).toggleClass('active').clearQueue();
-          });
+        //Our Sidebar
+        $('#mobile-sidebar-navigation-trigger').sidr({
+          name: 'mobile-sidebar',
+          timing: 'ease-in-out',
+          speed: 200
         });
 
+        //Our BuddyPress Navigation
+        $('#buddypress-mobile-navigation-trigger').sidr({
+          name: 'buddypress-mobile-sidebar',
+          timing: 'ease-in-out',
+          speed: 200
+        });
+
+        $('.bp-sidebar-navigation').smartmenus({
+          subIndicatorsText: '<i class="fa fa-chevron-down"></i>',
+        });
+
+
+        $(window).resize(function() {
+          $.sidr('close', 'mobile-primary-navigation');
+        });
         // Add Button Bootstrap Styles
         jQuery('.widget_bps_widget submit,.bbp-submit-wrapper button,.join-group').addClass('btn btn-success');
         jQuery('.create-blog .main submit').addClass('btn btn-lg btn-success');
