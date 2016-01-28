@@ -40,7 +40,7 @@ if ( ! function_exists( 'wff_load_full_header_template' ) ) {
 	}
 }
 
-	/*
+/*
  * Hook the primary navigation into our minimal and full header template.
  */
 if ( ! function_exists( 'wff_primary_navigation_location' ) ) {
@@ -52,11 +52,23 @@ if ( ! function_exists( 'wff_primary_navigation_location' ) ) {
 
 	if ( $header_settings == 'inside' ) {
 		add_action( 'after_site_description', 'wff_primary_navigation_location' );
-		add_action( 'before_header_navigation', 'wff_primary_navigation_location' );
 	} else {
 		add_action( 'before_header_navigation', 'wff_primary_navigation_location' );
 	}
 }
+
+/*
+* Hook the secondary navigation into our full header template.
+*
+* @since 1.0.0
+*/
+if ( ! function_exists( 'wff_secondary_navigation_location' ) ) {
+	function wff_secondary_navigation_location() {
+		get_template_part( 'templates/header/secondary-navigation' );
+	}
+	add_action( 'open_mobile_sidebar', 'wff_theme_member_actions', 1 );
+}
+
 /*
 * Display our Logo
 */
@@ -75,18 +87,6 @@ if ( ! function_exists( 'wff_branding' ) ) {
 	} else {
 		add_action( 'inside_branding', 'wff_branding' );
 	}
-}
-
-/*
-* Hook the secondary navigation into our full header template.
-*
-* @since 1.0.0
-*/
-if ( ! function_exists( 'wff_secondary_navigation_location' ) ) {
-	function wff_secondary_navigation_location() {
-		get_template_part( 'templates/header/secondary-navigation' );
-	}
-		add_action( 'before_full_header', 'wff_secondary_navigation_location' );
 }
 
 /*
@@ -111,10 +111,9 @@ if ( ! function_exists( 'wff_homepage_hero' ) ) {
  */
 if ( ! function_exists( 'wff_page_header' ) ) {
 	function wff_page_header() {
-
 		get_template_part( 'templates/parts/page-header' );
 	}
-	add_action( 'open_page_content', 'wff_page_header' );
+	add_action( 'before_page_content', 'wff_page_header' );
 }
 
 if ( ! function_exists( 'wff_post_header' ) ) {
@@ -204,6 +203,20 @@ if ( ! function_exists( 'wff_author_box_location' ) ) {
 		get_template_part( 'templates/parts/author-box' );
 	}
 	add_action( 'after_entry_content', 'wff_author_box_location' );
+}
+
+
+// Mobile Templates.
+if ( ! function_exists( 'wff_mobile_sidebars' ) ) {
+	/**
+	 * Load our Mobile Navigation on Handhelds.
+	 */
+	function wff_mobile_sidebars() {
+		if ( is_handheld()  ) :
+  			get_template_part('templates/sidebar/mobile-navigation');
+	  endif;
+	}
+	add_action( 'after_footer', 'wff_mobile_sidebars' );
 }
 
 /*

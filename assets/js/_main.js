@@ -87,7 +87,13 @@
           },
         });
 
+        //
         //Sidr JS Setup
+        ///
+
+        $(".navbar-toggle").on("click", function() {
+          $(this).toggleClass("closed");
+        });
 
         //Our Navigation Menus
         $('#mobile-primary-navigation-menu-trigger').sidr({
@@ -101,7 +107,7 @@
 
         //Our Sidebar
         $('#mobile-sidebar-navigation-trigger').sidr({
-          name: 'mobile-sidebar',
+          name: 'buddypress-mobile-sidebar',
           timing: 'ease-in-out',
           speed: 200
         });
@@ -206,7 +212,6 @@
             });
           }
         }
-
 
       }
     },

@@ -24,6 +24,12 @@ if ( !defined( 'WEFOSTER_CUSTOMIZER_URL' ) ) {
 	define( 'WEFOSTER_CUSTOMIZER_URL', get_template_directory_uri() );
 }
 
+// Our Mobile Devices Class that helps with loading responsive template parts and assets.
+// We include this class because wp_is_mobile is unreliable in some cases.
+if( ! function_exists ( 'is_iphone' ) ){
+    require_once WEFOSTER_THEME_DIR .  '/lib/vendor/Mobile-Detect/conditionals.php' ;
+}
+
 /**
  * Set up Kirki
  *
@@ -100,9 +106,5 @@ if ( class_exists( 'BuddyPress' ) ) {
 // Our Thumbnail Class.
 if( !class_exists( 'WP_Thumb' ) ){
     require_once WEFOSTER_THEME_DIR .  '/lib/vendor/WPThumb/wpthumb.php' ;
-}
-// Our Mobile Devices Class that helps with loading responsive template parts and CSS
-if( ! function_exists ( 'is_iphone' ) ){
-    require_once WEFOSTER_THEME_DIR .  '/lib/vendor/Mobile-Detect/conditionals.php' ;
 }
 ?>
