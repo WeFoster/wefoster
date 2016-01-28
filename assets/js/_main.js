@@ -120,7 +120,8 @@
         $('#buddypress-mobile-sidebar-trigger').sidr({
           name: 'buddypress-mobile-sidebar',
           timing: 'ease-in-out',
-          speed: 200
+          speed: 200,
+          side: 'right'
         });
 
         $('#close-buddypress-mobile-sidebar').click(function() {

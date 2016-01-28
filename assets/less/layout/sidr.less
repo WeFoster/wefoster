@@ -23,17 +23,20 @@
   }
 
   .inner-sidebar {
-    margin-top: @margin-full;
+    margin-top: 0;
   }
 
   .close-panel-button {
     font-size: 85%;
     font-weight: bold;
-    padding: 12px 15px;
-    position: absolute;
-    right: 0;
-    top: 0;
+    padding: 13px 0;
     z-index: 10000;
+    display: block;
+    background: @brand-primary;
+    font-weight: bold;
+    text-align: center;
+    text-transform: uppercase;
+    color: @white;
   }
 }
 //BuddyPress
@@ -41,7 +44,7 @@
   #user-sidebar-menu {
     margin-bottom: 0;
     background: #EFEFEF;
-    margin-top: -35px;
+    margin-top: 0;
   }
 
   #buddypress-sidebar-navigation {
@@ -142,6 +145,15 @@
 
   .navbar-collapse .navbar-nav.navbar-right:last-child {
     margin-right: 0;
+  }
+}
+
+.mobile-content-trigger {
+  background: @brand-primary;
+  padding: @padding-half;
+  
+  a {
+    color: @white;
   }
 }
 /* perfect-scrollbar v0.6.10 */

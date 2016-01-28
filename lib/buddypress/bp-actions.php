@@ -139,9 +139,8 @@ if ( ! function_exists( 'wff_theme_member_actions' ) ) {
 	function wff_theme_member_actions() {
 
 		if ( bp_is_user() ) :
-
+ 			bp_has_members();
 			get_template_part( 'buddypress/members/profile-actions' );
-
 	  endif;
 	}
 	add_action( 'before_bp_profile_sidebar_navigation', 'wff_theme_member_actions',1 );
@@ -175,22 +174,6 @@ if ( ! function_exists( 'wff_cover_photo_member_content' ) ) {
 	}
 	add_action( 'close_bp_cover_photo', 'wff_cover_photo_member_content' );
 }
-
-
-if ( ! function_exists( 'wff_theme_mobile_member_navigation' ) ) {
-	function wff_theme_mobile_member_navigation() {
-
-		if ( bp_is_user() && is_handheld() && ! bp_is_my_profile() && ! is_tablet() ) : ?>
-
-			<div class="mobile-profile-header">
-				<?php get_template_part( 'buddypress/members/profile-header' ); ?>
-			</div>
-
-		<?php endif;
-	}
-	//add_action( 'bp_before_member_header', 'wff_theme_mobile_member_navigation' );
-}
-
 
 if ( ! function_exists( 'wff_theme_user_navigation' ) ) {
 	/**
@@ -259,12 +242,19 @@ function wff_buddypress_cover_photo_css() {
 if ( ! function_exists( 'wff_bp_add_mobile_template_parts' ) ) {
 function wff_bp_add_mobile_template_parts() {
 
-			if ( ! is_handheld() ) {
+			if ( is_handheld() || WEFOSTER_MOBILE_OPTIMISATION == 'off'  ) {
+				//Add Actions
 				add_action( 'open_bp_mobile_sidebar', 'wff_theme_group_navigation' );
 				add_action( 'open_bp_mobile_sidebar', 'wff_theme_activity_tabs',1 );
 		 		add_action( 'open_bp_mobile_sidebar', 'wff_theme_group_photo', 1 );
 				add_action( 'open_bp_mobile_sidebar', 'wff_theme_member_navigation' );
-				add_action( 'open_bp_mobile_sidebar', 'wff_theme_member_actions', 1 );
+				add_action( 'open_bp_mobile_sidebar', 'wff_theme_member_photo',1 );
+				//Remove Actions on Desktop
+				remove_action( 'open_sidebar', 'wff_theme_activity_tabs' );
+				remove_action( 'open_sidebar', 'wff_theme_group_navigation' );
+		 		remove_action( 'before_bp_group_navigation', 'wff_theme_group_photo', 1 );
+				remove_action( 'open_sidebar', 'wff_theme_member_navigation' );
+				remove_action( 'before_bp_profile_sidebar_navigation', 'wff_theme_member_photo' );
 			}
 	}
 	add_action('template_redirect','wff_bp_add_mobile_template_parts', 1);
@@ -275,7 +265,7 @@ if ( ! function_exists( 'wff_bp_mobile_sidebar' ) ) {
 	 * Load our BuddyPress Navigation on Mobile
 	 */
 	function wff_bp_mobile_sidebar() {
-		if ( ! is_handheld()  ) :
+		if ( is_handheld() || WEFOSTER_MOBILE_OPTIMISATION == 'off' ) :
 			//Our User Navigation
 			get_template_part( 'templates/sidebar/buddypress-mobile-user-navigation' );
 			//Our Member/Group Navigation
@@ -290,13 +280,13 @@ if ( ! function_exists( 'wff_bp_mobile_sidebar' ) ) {
  * Profile / Group Sidebar Triggers
  *
  */
-function bp_mobile_sidebar_triggers() { ?>
+function bp_mobile_sidebar_triggers() {
+if ( is_handheld() || WEFOSTER_MOBILE_OPTIMISATION == 'off' ) :
+?>
 
 	<div class="mobile-content-trigger">
-		<a id="buddypress-mobile-sidebar-trigger" href="#buddypress-mobile-sidebar">
-	    BUDDYPRESS MOBILE SIDEBAR
-	  </a>
 	</div>
 <?
+endif;
 }
 add_action( 'before_content','bp_mobile_sidebar_triggers' );

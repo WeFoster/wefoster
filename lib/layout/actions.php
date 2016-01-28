@@ -214,7 +214,9 @@ if ( ! function_exists( 'wff_mobile_sidebars' ) ) {
 	function wff_mobile_sidebars() {
   	get_template_part('templates/sidebar/mobile-navigation');
 	}
-	add_action( 'after_footer', 'wff_mobile_sidebars' );
+	if ( is_handheld() || WEFOSTER_MOBILE_OPTIMISATION == 'off' ) {
+		add_action( 'after_footer', 'wff_mobile_sidebars' );
+	}
 }
 
 /*

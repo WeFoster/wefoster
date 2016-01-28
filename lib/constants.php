@@ -370,3 +370,10 @@ if ( !defined( 'WEFOSTER_DEVELOPER' ) ) {
 if ( !defined( 'WEFOSTER_AUTO_SETUP' ) ) {
 	define('WEFOSTER_AUTO_SETUP', 'true' );
 }
+
+// By default we are conditionally loading template parts and assets based on whether we are on
+// a mobile device. You can choose to disable this debugging or if you run into problems with mobile detection.
+if ( !defined( 'WEFOSTER_MOBILE_OPTIMISATION' ) ) {
+	//Options: 'on' or 'off'
+	define('WEFOSTER_MOBILE_OPTIMISATION', 'off' );
+}

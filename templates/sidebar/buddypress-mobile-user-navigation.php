@@ -6,11 +6,6 @@
 				<i class="fa fa-times-circle"></i> Close menu
 			</a>
 
-			<?php
-			//This action is used to load the profile avatar.
-			do_action('before_bp_profile_sidebar_navigation');
-			?>
-
 			<div id="user-sidebar-menu" class="widget">
 						<?php bp_loggedin_user_avatar( 'width=' . bp_core_avatar_thumb_width() . '&height=' . bp_core_avatar_thumb_height() ); ?>
 							 <?php $userLink = bp_get_loggedin_user_link();?>

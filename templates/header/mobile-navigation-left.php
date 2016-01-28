@@ -4,13 +4,18 @@
 ?>
 
 <a id="buddypress-mobile-user-navigation-trigger" href="#buddypress-mobile-user-navigation">
-  <button type="button" class="navbar-toggle navbar-toggle-left">
-    <span class="sr-only"><?php _e('Toggle Sidebar', 'wefoster'); ?>  </span>
-        <?php if ( class_exists( 'BuddyPress' ) && is_user_logged_in() ): ?>
-          <?php bp_loggedin_user_avatar( 'width=' . bp_core_avatar_thumb_width() . '&height=' . bp_core_avatar_thumb_height() ); ?>
-        <?php endif; ?>
-      <i class="fa fa-chevron-circle-right"></i>
+  <button type="button" class="navbar-toggle navbar-toggle-left bp-navbar-toggle">
+    <span class="sr-only"><?php _e('Toggle Sidebar', 'wefoster'); ?> </span>
+        <span class="icon-bar top-bar"></span>
+        <span class="icon-bar middle-bar"></span>
+        <span class="icon-bar bottom-bar"></span>
   </button>
+
+  <?php if ( class_exists( 'BuddyPress' ) && is_user_logged_in() ): ?>
+    <div class="bp-nav-avatar">
+    <?php bp_loggedin_user_avatar( 'width=' . bp_core_avatar_thumb_width() . '&height=' . bp_core_avatar_thumb_height() ); ?>
+    </div>
+  <?php endif; ?>
 </a>
 
 <?php if ( class_exists( 'BuddyPress' ) && is_user_logged_in() ): ?>
