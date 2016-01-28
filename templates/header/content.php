@@ -3,10 +3,6 @@
 
   <?php do_action('open_header'); ?>
 
-  <a id="mobile-sidebar-navigation-trigger" href="#mobile-sidebar">
-    MOBILE SIDEBAR
-  </a>
-
   <div class="<?php do_action('class_container'); do_action('class_container_navbar'); ?> navbar-container">
       <div class="row navigation-wrap">
             <div class="navbar-header <?php do_action('class_navbar_header'); ?>">

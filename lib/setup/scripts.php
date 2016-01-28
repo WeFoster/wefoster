@@ -60,6 +60,7 @@ function wff_scripts() {
 		wp_enqueue_script( 'sidr_js' );
 		wp_enqueue_script( 'perfect_scrollbar' );
 	}
+	
 	wp_enqueue_script( 'jquery' );
 	wp_enqueue_script( 'wff_scripts' );
 

@@ -3,7 +3,7 @@
 // When BuddyPress is active it show the avatar and notifications as well.
 ?>
 
-<a id="buddypress-mobile-navigation-trigger" href="#buddypress-mobile-sidebar">
+<a id="buddypress-mobile-user-navigation-trigger" href="#buddypress-mobile-user-navigation">
   <button type="button" class="navbar-toggle navbar-toggle-left">
     <span class="sr-only"><?php _e('Toggle Sidebar', 'wefoster'); ?>  </span>
         <?php if ( class_exists( 'BuddyPress' ) && is_user_logged_in() ): ?>

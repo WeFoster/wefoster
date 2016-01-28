@@ -212,9 +212,7 @@ if ( ! function_exists( 'wff_mobile_sidebars' ) ) {
 	 * Load our Mobile Navigation on Handhelds.
 	 */
 	function wff_mobile_sidebars() {
-		if ( is_handheld()  ) :
-  			get_template_part('templates/sidebar/mobile-navigation');
-	  endif;
+  	get_template_part('templates/sidebar/mobile-navigation');
 	}
 	add_action( 'after_footer', 'wff_mobile_sidebars' );
 }

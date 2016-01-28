@@ -105,19 +105,19 @@
           $.sidr('close', 'mobile-primary-navigation');
         });
 
-        //Our Sidebar
-        $('#mobile-sidebar-navigation-trigger').sidr({
-          name: 'buddypress-mobile-sidebar',
+        //Our BuddyPress Mobile Sidebar
+        $('#buddypress-mobile-user-navigation-trigger').sidr({
+          name: 'buddypress-mobile-user-navigation',
           timing: 'ease-in-out',
           speed: 200
         });
 
-        $('#close-mobile-sidebar').click(function() {
-          $.sidr('close', 'mobile-sidebar');
+        $('#close-buddypress-mobile-user-navigation').click(function() {
+          $.sidr('close', 'buddypress-mobile-user-navigation');
         });
 
         //Our BuddyPress Navigation
-        $('#buddypress-mobile-navigation-trigger').sidr({
+        $('#buddypress-mobile-sidebar-trigger').sidr({
           name: 'buddypress-mobile-sidebar',
           timing: 'ease-in-out',
           speed: 200
@@ -132,7 +132,7 @@
         });
 
         //Add a styelized scrollbar on mobile
-        $('#buddypress-mobile-sidebar,#mobile-sidebar,#mobile-primary-navigation').perfectScrollbar(); // Initialize
+        $('#buddypress-mobile-sidebar,#buddypress-mobile-user-navigation,#mobile-primary-navigation').perfectScrollbar(); // Initialize
 
         // Add Button Bootstrap Styles
         jQuery('.widget_bps_widget submit,.bbp-submit-wrapper button,.join-group').addClass('btn btn-success');

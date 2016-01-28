@@ -15,10 +15,6 @@ if ( ! function_exists( 'wff_theme_activity_tabs' ) ) {
 	  endif;
 	}
 	add_action( 'open_sidebar', 'wff_theme_activity_tabs' );
-
-	if ( is_handheld() ) {
-		add_action( 'open_mobile_sidebar', 'wff_theme_activity_tabs',1 );
-	}
 }
 
 /**
@@ -106,10 +102,6 @@ if ( ! function_exists( 'wff_theme_group_navigation' ) ) {
 	  endif;
 	}
 	add_action( 'open_sidebar', 'wff_theme_group_navigation' );
-
-	if ( is_handheld() ) {
-			add_action( 'open_mobile_sidebar', 'wff_theme_group_navigation' );
-	}
 }
 
 if ( ! function_exists( 'wff_theme_group_photo' ) ) {
@@ -123,10 +115,6 @@ if ( ! function_exists( 'wff_theme_group_photo' ) ) {
 	  endif;
 	}
 	add_action( 'before_bp_group_navigation', 'wff_theme_group_photo', 1 );
-
-	if ( is_handheld() ) {
-		 add_action( 'open_mobile_sidebar', 'wff_theme_group_photo', 1 );
-	}
 }
 
 /**
@@ -142,10 +130,6 @@ if ( ! function_exists( 'wff_theme_member_photo' ) ) {
 	  endif;
 	}
 	add_action( 'before_bp_profile_sidebar_navigation', 'wff_theme_member_photo' );
-
-	if ( is_handheld() ) {
-		add_action( 'open_mobile_sidebar', 'before_bp_profile_sidebar_navigation', 1 );
-	}
 }
 
 /**
@@ -161,11 +145,6 @@ if ( ! function_exists( 'wff_theme_member_actions' ) ) {
 	  endif;
 	}
 	add_action( 'before_bp_profile_sidebar_navigation', 'wff_theme_member_actions',1 );
-
-	if ( is_handheld() ) {
-		add_action( 'open_mobile_sidebar', 'wff_theme_member_actions', 1 );
-	}
-
 }
 
 
@@ -177,18 +156,12 @@ if ( ! function_exists( 'wff_theme_member_navigation' ) ) {
 
 		if ( bp_is_user() ) :
 
-			if ( ! is_handheld() || is_tablet() ) {
-				get_template_part( 'buddypress/members/profile-header' );
-			}
+			get_template_part( 'buddypress/members/profile-header' );
 			get_template_part( 'buddypress/members/sidebar-navigation' );
 
 	  endif;
 	}
 	add_action( 'open_sidebar', 'wff_theme_member_navigation' );
-
-	if ( is_handheld() ) {
-		add_action( 'open_mobile_sidebar', 'wff_theme_member_navigation' );
-	}
 }
 /**
  * Add our avatar/title to the cover photo template (only if enabled)
@@ -279,19 +252,51 @@ function wff_buddypress_cover_photo_css() {
 	add_action('wp_head','wff_buddypress_cover_photo_css', 11);
 }
 
-// Mobile Templates.
+
+/**
+ * This function checks if we are on a mobile device. If so it adds some template parts.
+ */
+if ( ! function_exists( 'wff_bp_add_mobile_template_parts' ) ) {
+function wff_bp_add_mobile_template_parts() {
+
+			if ( ! is_handheld() ) {
+				add_action( 'open_bp_mobile_sidebar', 'wff_theme_group_navigation' );
+				add_action( 'open_bp_mobile_sidebar', 'wff_theme_activity_tabs',1 );
+		 		add_action( 'open_bp_mobile_sidebar', 'wff_theme_group_photo', 1 );
+				add_action( 'open_bp_mobile_sidebar', 'wff_theme_member_navigation' );
+				add_action( 'open_bp_mobile_sidebar', 'wff_theme_member_actions', 1 );
+			}
+	}
+	add_action('template_redirect','wff_bp_add_mobile_template_parts', 1);
+}
+
 if ( ! function_exists( 'wff_bp_mobile_sidebar' ) ) {
 	/**
 	 * Load our BuddyPress Navigation on Mobile
 	 */
 	function wff_bp_mobile_sidebar() {
-		if ( is_handheld()  ) :
+		if ( ! is_handheld()  ) :
 			//Our User Navigation
 			get_template_part( 'templates/sidebar/buddypress-mobile-user-navigation' );
-
 			//Our Member/Group Navigation
 			get_template_part('templates/sidebar/buddypress-mobile-sidebar');
 	  endif;
 	}
 	add_action( 'after_footer', 'wff_bp_mobile_sidebar' );
 }
+
+
+/**
+ * Profile / Group Sidebar Triggers
+ *
+ */
+function bp_mobile_sidebar_triggers() { ?>
+
+	<div class="mobile-content-trigger">
+		<a id="buddypress-mobile-sidebar-trigger" href="#buddypress-mobile-sidebar">
+	    BUDDYPRESS MOBILE SIDEBAR
+	  </a>
+	</div>
+<?
+}
+add_action( 'before_content','bp_mobile_sidebar_triggers' );
