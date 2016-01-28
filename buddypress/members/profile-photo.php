@@ -9,5 +9,6 @@
     <?php endif; ?>
 
     <?php bp_displayed_user_avatar( 'type=full' ); ?>
+
   </div>
 </div>

@@ -87,54 +87,6 @@
           },
         });
 
-        //
-        //Sidr JS Setup
-        ///
-
-        $(".navbar-toggle").on("click", function() {
-          $(this).toggleClass("closed");
-        });
-
-        //Our Navigation Menus
-        $('#mobile-primary-navigation-menu-trigger').sidr({
-          name: 'mobile-primary-navigation',
-          side: 'right'
-        });
-
-        $('#close-mobile-primary-navigation').click(function() {
-          $.sidr('close', 'mobile-primary-navigation');
-        });
-
-        //Our BuddyPress Mobile Sidebar
-        $('#buddypress-mobile-user-navigation-trigger').sidr({
-          name: 'buddypress-mobile-user-navigation',
-          timing: 'ease-in-out',
-          speed: 200
-        });
-
-        $('#close-buddypress-mobile-user-navigation').click(function() {
-          $.sidr('close', 'buddypress-mobile-user-navigation');
-        });
-
-        //Our BuddyPress Navigation
-        $('#buddypress-mobile-sidebar-trigger').sidr({
-          name: 'buddypress-mobile-sidebar',
-          timing: 'ease-in-out',
-          speed: 200,
-          side: 'right'
-        });
-
-        $('#close-buddypress-mobile-sidebar').click(function() {
-          $.sidr('close', 'buddypress-mobile-sidebar');
-        });
-
-        $('.bp-sidebar-navigation').smartmenus({
-          subIndicatorsText: '<i class="fa fa-chevron-down"></i>',
-        });
-
-        //Add a styelized scrollbar on mobile
-        $('#buddypress-mobile-sidebar,#buddypress-mobile-user-navigation,#mobile-primary-navigation').perfectScrollbar(); // Initialize
-
         // Add Button Bootstrap Styles
         jQuery('.widget_bps_widget submit,.bbp-submit-wrapper button,.join-group').addClass('btn btn-success');
         jQuery('.create-blog .main submit').addClass('btn btn-lg btn-success');
@@ -217,8 +169,54 @@
       }
     },
     // Home page
-    home: {
+    wefosterismobile: {
       init: function() {
+        //
+        //Sidr JS Setup
+        ///
+        $(".navbar-toggle").on("click", function() {
+          $(this).toggleClass("closed");
+        });
+
+        //Our Navigation Menus
+        $('#mobile-primary-navigation-menu-trigger').sidr({
+          name: 'mobile-primary-navigation',
+          side: 'right'
+        });
+
+        $('#close-mobile-primary-navigation').click(function() {
+          $.sidr('close', 'mobile-primary-navigation');
+        });
+
+        //Our BuddyPress Mobile Sidebar
+        $('#buddypress-mobile-user-navigation-trigger').sidr({
+          name: 'buddypress-mobile-user-navigation',
+          timing: 'ease-in-out',
+          speed: 200
+        });
+
+        $('#close-buddypress-mobile-user-navigation').click(function() {
+          $.sidr('close', 'buddypress-mobile-user-navigation');
+        });
+
+        //Our BuddyPress Navigation
+        $('#buddypress-mobile-sidebar-trigger').sidr({
+          name: 'buddypress-mobile-sidebar',
+          timing: 'ease-in-out',
+          speed: 200,
+          side: 'right'
+        });
+
+        $('#close-buddypress-mobile-sidebar').click(function() {
+          $.sidr('close', 'buddypress-mobile-sidebar');
+        });
+
+        $('.bp-sidebar-navigation').smartmenus({
+          subIndicatorsText: '<i class="fa fa-chevron-down"></i>',
+        });
+
+        //Add a styelized scrollbar on mobile
+        $('#buddypress-mobile-sidebar,#buddypress-mobile-user-navigation,#mobile-primary-navigation').perfectScrollbar(); // Initialize
 
       }
     },

@@ -113,3 +113,13 @@
     margin-left: -@margin-half;
   }
 }
+///Show them on responsive view
+@media screen and (max-width: @grid-float-breakpoint-max) {
+  .bp-cover-photo-content .sidebar #item-header-avatar img {
+    bottom: @padding-half;
+    height: auto !important;
+    max-width: 95%;
+    right: 20px !important;
+    width: 200px !important;
+  }
+}

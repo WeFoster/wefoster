@@ -329,6 +329,28 @@ if ( WEFOSTER_LAYOUT_CLASS == 'container'  ) {
 }
 
 /**
+ * Add special "admin bar is showing" body class
+ *
+ * @since 1.0.0
+ *
+ */
+function wff_mobile_body_class( $classes )
+{
+
+  if ( is_handheld() || WEFOSTER_MOBILE_OPTIMISATION == 'off' ) {
+    $classes[] = 'wefosterismobile';
+  } else {
+    $classes[] = 'wefosterisdesktop';
+  }
+
+	// return it!
+	return $classes;
+}
+add_filter( 'body_class', 'wff_mobile_body_class' );
+
+
+
+/**
  * Is the header set to boxed? Add our extra classes
  *
  * @since 1.0.0
