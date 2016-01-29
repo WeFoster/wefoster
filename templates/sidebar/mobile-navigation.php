@@ -1,4 +1,4 @@
-<div id="mobile-primary-navigation" class="sidebar">
+<div id="mobile-primary-navigation" class="sidebar js-flash">
 	<?php do_action('before_mobile_sidebar'); ?>
 
 		<div class="inner-sidebar <?php do_action('class_inner_sidebar'); ?> inner-sidebar-mobile">

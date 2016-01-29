@@ -1,26 +1,5 @@
-@media screen and (min-width: @grid-float-breakpoint-max) {
-  .wf-inside-navigation-menu .navbar-container {
-    visibility: hidden;
-    display: none;
-  }
-}
-
-@media screen and (max-width: @grid-float-breakpoint-max) {
-  //This hides the ugly responsive WP admin bar on mobile.
-  html.fontface {
-    margin-top: 0 !important;
-  }
-
-  body.admin-bar-showing .navbar-fixed-top {
-    top: 0;
-  }
-
-  html.fontface #wpadminbar {
-    height: 0 !important;
-    display: none;
-  }
-}
 //Hide some elements by default on bigger screens
+
 .mobile-avatar,
 .bp-user-navigation-widget,
 .mobile-notifications {
@@ -33,6 +12,19 @@
   .mobile-notifications {
     display: block;
   }
+  //This hides the ugly responsive WP admin bar on mobile.
+  html.fontface {
+    margin-top: 0 !important;
+    
+    #wpadminbar {
+      height: 0 !important;
+      display: none;
+    }
+  }
+
+  body.admin-bar-showing .navbar-fixed-top {
+    top: 0;
+  }
 }
 //Fix sidebar padding
 @media only screen and (min-device-width : @grid-float-breakpoint-max) and (max-device-width : 1024px) and (orientation : landscape) {
@@ -44,10 +36,23 @@
     width: 98%;
   }
 }
-//Tablet Responsiveness
+//Hide our responsive wrapper on desktop layout.
+// This is only used when the menu layout is set to 'inside'
+@media screen and (min-width: @grid-float-breakpoint-max) {
+  .wf-inside-navigation-menu .navbar-container {
+    visibility: hidden;
+    display: none;
+  }
+}
+
 @media screen and (max-width: @grid-float-breakpoint-max) {
-  .navbar-default .navbar-toggle {
+  .navbar-default .navbar-toggle,
+  .navigation-trigger {
     z-index: 10000;
+    
+    &.right button {
+      padding-left: 30px;
+    }
   }
 
   .wf-inside-navigation-menu .navbar-container {
@@ -73,10 +78,11 @@
 
   .navbar .navbar-brand {
     position: absolute;
-    display: block;
+    display: inline-table;
     text-align: center;
     background-color: transparent;
     top: -7px;
+    z-index: 0;
     
     img {
       height: 30px;

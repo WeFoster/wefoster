@@ -1,4 +1,4 @@
-<div id="buddypress-mobile-sidebar" class="sidebar">
+<div id="buddypress-mobile-sidebar" class="sidebar js-flash">
 
 	<?php do_action('before_bp_mobile_sidebar'); ?>
 		<div class="inner-sidebar <?php do_action('class_inner_sidebar'); ?> inner-sidebar-mobile">

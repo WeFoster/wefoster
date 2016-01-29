@@ -91,6 +91,10 @@
         jQuery('.widget_bps_widget submit,.bbp-submit-wrapper button,.join-group').addClass('btn btn-success');
         jQuery('.create-blog .main submit').addClass('btn btn-lg btn-success');
 
+        //Add Bootstrap Class to Registration Form.
+        jQuery('.buddypress.registration .register-section').addClass('col-sm-6');
+        jQuery('.buddypress.registration .profile-details-section').addClass('col-sm-6');
+
         //Add inverse dropdown class if navbar-inverse is used
         jQuery('.navbar-inverse .dropdown-menu').addClass('inverse-dropdown');
 
@@ -171,6 +175,12 @@
     // Home page
     wefosterismobile: {
       init: function() {
+
+        //Hide Unstyled Flash
+        $('#mobile-primary-navigation').removeClass('js-flash');
+        $('#buddypress-mobile-user-navigation').removeClass('js-flash');
+        $('#buddypress-mobile-sidebar').removeClass('js-flash');
+
         //
         //Sidr JS Setup
         ///
