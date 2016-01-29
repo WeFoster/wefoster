@@ -7,6 +7,13 @@
 					<i class="fa fa-times-circle"></i> Close menu
 				</a>
 
+				<div id="user-sidebar-menu" class="widget">
+							<?php bp_displayed_user_avatar( 'width=' . bp_core_avatar_thumb_width() . '&height=' . bp_core_avatar_thumb_height() ); ?>
+								 <?php $userLink = bp_get_displayed_user_link();?>
+								 <strong><?php echo bp_core_get_user_displayname( bp_displayed_user_id() );?></strong>
+								 <br>
+				</div>
+
 				<?php do_action( 'open_bp_mobile_sidebar' ); ?>
 				<?php do_action( 'close_mobile_sidebar' ); ?>
 

@@ -246,9 +246,9 @@ function wff_bp_add_mobile_template_parts() {
 				//Add Actions
 				add_action( 'open_bp_mobile_sidebar', 'wff_theme_group_navigation' );
 				add_action( 'open_bp_mobile_sidebar', 'wff_theme_activity_tabs',1 );
-		 		add_action( 'open_bp_mobile_sidebar', 'wff_theme_group_photo', 1 );
+		 		//add_action( 'open_bp_mobile_sidebar', 'wff_theme_group_photo', 1 );
 				add_action( 'open_bp_mobile_sidebar', 'wff_theme_member_navigation' );
-				add_action( 'open_bp_mobile_sidebar', 'wff_theme_member_photo',1 );
+				//add_action( 'open_bp_mobile_sidebar', 'wff_theme_member_photo',1 );
 				//Remove Actions on Desktop
 				remove_action( 'open_sidebar', 'wff_theme_activity_tabs' );
 				remove_action( 'open_sidebar', 'wff_theme_group_navigation' );
@@ -286,14 +286,14 @@ if ( is_handheld() || WEFOSTER_MOBILE_OPTIMISATION == 'off' ) :
 	<div class="mobile-content-trigger">
 			<?php if ( bp_is_groups_component() && bp_is_group() ): ?>
 			<a id="buddypress-mobile-sidebar-trigger" href="#buddypress-mobile-sidebar">
-					Group Navigation
+					<i class="fa fa-group"></i>
 				<svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 50 50">
 				    <path d="M25,2C12.318,2,2,12.318,2,25c0,12.683,10.318,23,23,23c12.683,0,23-10.317,23-23C48,12.318,37.683,2,25,2z M35,32H15 c-0.552,0-1-0.447-1-1s0.448-1,1-1h20c0.553,0,1,0.447,1,1S35.553,32,35,32z M35,26H15c-0.552,0-1-0.448-1-1s0.448-1,1-1h20 c0.553,0,1,0.448,1,1S35.553,26,35,26z M35,20H15c-0.552,0-1-0.448-1-1s0.448-1,1-1h20c0.553,0,1,0.448,1,1S35.553,20,35,20z"></path>
 				</svg>
 		  </a>
 			<?php elseif ( bp_is_user() && ! bp_is_my_profile()  ) : ?>
 				<a id="buddypress-mobile-sidebar-trigger" href="#buddypress-mobile-sidebar">
-					<?php echo bp_get_displayed_user_fullname();?>
+					<i class="fa fa-user"></i>
 					<svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 50 50">
 							<path d="M25,2C12.318,2,2,12.318,2,25c0,12.683,10.318,23,23,23c12.683,0,23-10.317,23-23C48,12.318,37.683,2,25,2z M35,32H15 c-0.552,0-1-0.447-1-1s0.448-1,1-1h20c0.553,0,1,0.447,1,1S35.553,32,35,32z M35,26H15c-0.552,0-1-0.448-1-1s0.448-1,1-1h20 c0.553,0,1,0.448,1,1S35.553,26,35,26z M35,20H15c-0.552,0-1-0.448-1-1s0.448-1,1-1h20c0.553,0,1,0.448,1,1S35.553,20,35,20z"></path>
 					</svg>
