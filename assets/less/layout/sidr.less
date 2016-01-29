@@ -1,3 +1,9 @@
+//Change our Body Styling on Open Sidebar
+
+.layout-wrapper.sidr-active-body {
+  opacity: 0.6;
+}
+
 .sidr {
   background: @white;
   border-radius: 0;
@@ -10,16 +16,22 @@
   overflow-x: hidden;
   overflow-y: auto;
   
+  &.sidr-active {
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16),0 3px 6px rgba(0,0,0,0.18);
+  }
+
+  &.sidr-no-transform {
+    display: none !important;
+  }
+
   &.right {
     left: auto;
     right: -@offcanvas-width;
-    border-left: 2px solid darken(@white, 10%);
   }
 
   &.left {
     left: -@offcanvas-width;
     right: auto;
-    border-right: 2px solid darken(@white, 10%);
   }
 
   .inner-sidebar {
@@ -145,6 +157,30 @@
 
   .navbar-collapse .navbar-nav.navbar-right:last-child {
     margin-right: 0;
+  }
+}
+
+@media screen and (max-width: @grid-float-breakpoint-max) {
+  .sidr.right {
+    width: 55%;
+    right: -55%;
+  }
+
+  .sidr.left {
+    width: 55%;
+    left: -55%;
+  }
+}
+
+@media screen and (max-width: 568px) {
+  .sidr.right {
+    width: 85%;
+    right: -85%;
+  }
+
+  .sidr.left {
+    width: 85%;
+    left: -85%;
   }
 }
 /* perfect-scrollbar v0.6.10 */

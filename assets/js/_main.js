@@ -181,17 +181,12 @@
         $('#buddypress-mobile-user-navigation').removeClass('js-flash');
         $('#buddypress-mobile-sidebar').removeClass('js-flash');
 
-        //
-        //Sidr JS Setup
-        ///
-        $(".navbar-toggle").on("click", function() {
-          $(this).toggleClass("closed");
-        });
-
         //Our Navigation Menus
         $('#mobile-primary-navigation-menu-trigger').sidr({
           name: 'mobile-primary-navigation',
-          side: 'right'
+          side: 'right',
+          timing: 'ease-in-out',
+          speed: 300
         });
 
         $('#close-mobile-primary-navigation').click(function() {
@@ -202,7 +197,7 @@
         $('#buddypress-mobile-user-navigation-trigger').sidr({
           name: 'buddypress-mobile-user-navigation',
           timing: 'ease-in-out',
-          speed: 200
+          speed: 300
         });
 
         $('#close-buddypress-mobile-user-navigation').click(function() {
@@ -213,7 +208,7 @@
         $('#buddypress-mobile-sidebar-trigger').sidr({
           name: 'buddypress-mobile-sidebar',
           timing: 'ease-in-out',
-          speed: 200,
+          speed: 300,
           side: 'right'
         });
 
@@ -221,6 +216,25 @@
           $.sidr('close', 'buddypress-mobile-sidebar');
         });
 
+        //
+        //Show & Hide our Sidr with clicks.
+        ///
+        $(".navigation-trigger, .close-panel-button, #buddypress-mobile-sidebar-trigger").on("click", function() {
+          $(this).toggleClass("closed");
+          $('.sidr').toggleClass('sidr-active');
+          $('.sidr').removeClass('sidr-no-transform');
+          $('.layout-wrapper').toggleClass('sidr-active-body');
+        });
+
+        //Hide Menus on Resize
+        $( window ).resize(function () {
+          $.sidr('close', 'buddypress-mobile-user-navigation');
+          $.sidr('close', 'mobile-primary-navigation');
+          $.sidr('close', 'buddypress-mobile-sidebar');
+          $('.layout-wrapper').removeClass('sidr-active-body');
+          $('.sidr').addClass('sidr-no-transform');
+        });
+        //Smart Menu Tweaks
         $('.bp-sidebar-navigation').smartmenus({
           subIndicatorsText: '<i class="fa fa-chevron-down"></i>',
         });
