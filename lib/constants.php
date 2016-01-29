@@ -257,7 +257,7 @@ if ( !defined( 'WEFOSTER_HEADER_BACKGROUND' ) ) {
 }
 
 if ( !defined( 'WEFOSTER_HERO_BACKGROUND' ) ) {
-	define('WEFOSTER_HERO_BACKGROUND', 'https://static.pexels.com/photos/7097/people-coffee-tea-meeting.jpg');
+	define('WEFOSTER_HERO_BACKGROUND', WEFOSTER_ASSETS_URL . '/assets/img/hero-background.jpg' );
 }
 
 
