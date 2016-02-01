@@ -104,7 +104,7 @@ if ( !defined( 'WEFOSTER_LAYOUT_PRESET' ) ) {
 // Where do you want to primary menu to show? This only applies to the Full Layout
 if ( !defined( 'WEFOSTER_LAYOUT_FULL_PRIMARY_MENU_POSITION' ) ) {
 		// choose between 'above' or 'below' or 'inside'.
-		define('WEFOSTER_LAYOUT_FULL_PRIMARY_MENU_POSITION', 'below');
+		define('WEFOSTER_LAYOUT_FULL_PRIMARY_MENU_POSITION', 'inside');
 }
 
 // Show site description and title? This only applies to the Full Layout.
