@@ -107,6 +107,11 @@ if ( !defined( 'WEFOSTER_LAYOUT_FULL_PRIMARY_MENU_POSITION' ) ) {
 		define('WEFOSTER_LAYOUT_FULL_PRIMARY_MENU_POSITION', 'inside');
 }
 
+if ( !defined( 'WEFOSTER_LAYOUT_FULL_SECONDARY_MENU_POSITION' ) ) {
+		// choose between 'above' or 'below' or 'inside'.
+		define('WEFOSTER_LAYOUT_FULL_SECONDARY_MENU_POSITION', 'above');
+}
+
 // Show site description and title? This only applies to the Full Layout.
 if ( !defined( 'WEFOSTER_SHOW_SITE_TITLE_DESCRIPTION' ) ) {
 	define('WEFOSTER_SHOW_SITE_TITLE_DESCRIPTION', 'title-description');

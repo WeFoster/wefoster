@@ -455,6 +455,34 @@ function wf_plus_register_settings($fields)
 		    )
 		));
 
+		Kirki::add_field('wefoster_plus', array(
+		    'section' => 'wf_plus_header_section',
+		    'type' => 'radio',
+		    'settings' => 'wf_plus_secondary_menu_position',
+		    'label' => __('Secondary Navigation Position', 'wefoster'),
+		    'description' => __('Where do you want to show your secondary navigation menu?', 'wefoster'),
+		    'default' => WEFOSTER_LAYOUT_FULL_SECONDARY_MENU_POSITION,
+		    'priority' => 2,
+		    'choices' => array(
+		        'above' => __('Above your header', 'wefoster'),
+		        'below' => __('Below your header', 'wefoster'),
+		        'default' => __('Default', 'wefoster')
+		    ),
+		    'required' => array(
+		        array(
+		            'setting' => 'wf_layout_type',
+		            'operator' => '=',
+		            'value' => 'full'
+		        ),
+						array(
+								'setting' => 'wf_plus_header_menu_position',
+								'operator' => '=',
+								'value' => 'inside'
+						)
+		    )
+		));
+
+
   Kirki::add_field('wefoster_plus', array(
       'section' => 'wf_plus_header_section',
       'type' => 'radio',

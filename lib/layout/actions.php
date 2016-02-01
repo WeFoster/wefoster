@@ -46,22 +46,30 @@ if ( ! function_exists( 'wff_primary_navigation_location' ) ) {
 }
 
 /*
-* Hook the secondary navigation into our full header template.
+* Hook the secondary navigation into our full header template. The position changes based on
 *
 * @since 1.0.0
 */
 if ( ! function_exists( 'wff_secondary_navigation_location' ) ) {
+
 	function wff_secondary_navigation_location() {
 		get_template_part( 'templates/header/secondary-navigation' );
 	}
 
-	$header_settings = get_theme_mod( 'wf_plus_header_menu_position', 'inside' );
+	$header_settings = get_theme_mod( 'wf_plus_header_menu_position', 'below' );
+	$secondary_menu_position = get_theme_mod( 'wf_plus_secondary_menu_position', WEFOSTER_LAYOUT_FULL_SECONDARY_MENU_POSITION );
 
 	if ( $header_settings == 'above' ) {
 		add_action( 'after_full_header', 'wff_secondary_navigation_location', 1 );
 	}
 	if ( $header_settings == 'below' ) {
 		add_action( 'open_header', 'wff_secondary_navigation_location', 1 );
+	}
+	if ( $header_settings == 'inside' && $secondary_menu_position == 'above'  ) {
+		add_action( 'open_header', 'wff_secondary_navigation_location', 1 );
+	}
+	if ( $header_settings == 'inside' && $secondary_menu_position == 'below'  ) {
+		add_action( 'after_full_header', 'wff_secondary_navigation_location', 1 );
 	}
 }
 
