@@ -10,14 +10,10 @@ function wefoster_plus_change_layout_type() {
 	$option = get_theme_mod( 'wf_layout_type', 'default' );
 
 	if ( $option == 'default' ) {
-
 			$value = WEFOSTER_LAYOUT_PRESET;
-
 	} else {
-
 			//Use our set option
 			$value = $option;
-
 	}
 
 	return $value;
@@ -247,7 +243,7 @@ add_filter( 'wff_footer_class', 'wefoster_plus_change_footer_class' );
  */
 function wefoster_plus_change_footer_widgets() {
 
-	$option = get_theme_mod( 'wf_plus_footer_widgets', 'default' );
+	$option = get_theme_mod( 'wf_plus_footer_widgets', WEFOSTER_FOOTER_WIDGETS );
 
 	if ( $option == 'default' ) {
 			$widgets = WEFOSTER_FOOTER_WIDGETS;

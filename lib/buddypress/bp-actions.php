@@ -3,6 +3,18 @@
  * This file loads some custom BuddyPress templates in our sidebar
  */
 
+ /**
+  * Change Default Avatar.
+  *
+  * @since 1.0.0
+  */
+ if ( ! function_exists( 'wff_default_avatar' ) ) {
+ 	function wff_default_avatar() {
+
+ 		define( 'BP_AVATAR_DEFAULT', WEFOSTER_ASSETS_URL.'/assets/img/avatar-member.jpg' );
+ 	}
+ 	add_action( 'bp_init', 'wff_default_avatar' );
+ }
 
 if ( ! function_exists( 'wff_theme_activity_tabs' ) ) {
 	/**

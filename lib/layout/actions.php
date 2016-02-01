@@ -8,24 +8,11 @@
  * Read our developer docs at https://wefoster.co/documentation.
  */
 
-/**
- * Change Default Avatar.
- *
- * @since 1.0.0
- */
-if ( ! function_exists( 'wff_default_avatar' ) ) {
-	function wff_default_avatar() {
-
-		define( 'BP_AVATAR_DEFAULT', WEFOSTER_ASSETS_URL.'/assets/img/avatar-member.jpg' );
-	}
-	add_action( 'bp_init', 'wff_default_avatar' );
-}
-
-	/*
-    * Load our Header Type. This can be filtered if needed. See filters.php
-    *
-    * @since 1.0.0
-    */
+/*
+* Load our Header Type. This can be filtered if needed. See filters.php
+*
+* @since 1.0.0
+*/
 if ( ! function_exists( 'wff_load_full_header_template' ) ) {
 	function wff_load_full_header_template() {
 		get_template_part( 'templates/header/'.wff_get_header_type() );
@@ -55,6 +42,7 @@ if ( ! function_exists( 'wff_primary_navigation_location' ) ) {
 	} else {
 		add_action( 'before_header_navigation', 'wff_primary_navigation_location' );
 	}
+
 }
 
 /*
@@ -66,7 +54,15 @@ if ( ! function_exists( 'wff_secondary_navigation_location' ) ) {
 	function wff_secondary_navigation_location() {
 		get_template_part( 'templates/header/secondary-navigation' );
 	}
-	add_action( 'after_full_header', 'wff_secondary_navigation_location', 1 );
+
+	$header_settings = get_theme_mod( 'wf_plus_header_menu_position', 'inside' );
+
+	if ( $header_settings == 'above' ) {
+		add_action( 'after_full_header', 'wff_secondary_navigation_location', 1 );
+	}
+	if ( $header_settings == 'below' ) {
+		add_action( 'open_header', 'wff_secondary_navigation_location', 1 );
+	}
 }
 
 /*
