@@ -18,7 +18,7 @@ $stylekit = get_theme_mod( 'wf_stylekit', 'default' );
 function default_stylekit_settings($fields) {
 Kirki::add_field( 'wefoster_plus', array(
     'type'      => 'preset',
-    'settings'  => 'preset_demo',
+    'settings'  => 'wff_layout_preset',
     'label'     => __( 'Pre-made Layouts', 'translation_domain' ),
     'description' => __('Get started quickly by choosing a pre-made layout below. These layouts simply serve as a starting point and can be completely customised to your liking via the options under "Appearance inside this customiser."', 'wefoster'),
     'section'   => 'wf_plus_stylekit_section',
@@ -34,6 +34,7 @@ Kirki::add_field( 'wefoster_plus', array(
       '1' => array(
         'label'    => esc_attr__( 'Fluid Width with Full Header', 'kirki-demo' ),
         'settings' => array(
+          'wf_plus_header_menu_position' => 'above',
           'wf_header_background_image_color' => 'greyscale',
           'wf_header_background_image_opacity' => '0.2',
           'wf_header_background_picture' => 'https://cdn.wefoster.co/backgrounds/notebook-luis-llerena.jpeg',
@@ -52,6 +53,7 @@ Kirki::add_field( 'wefoster_plus', array(
       '2' => array(
         'label'    => esc_attr__( 'Fluid Width with Minimal Header', 'kirki-demo' ),
         'settings' => array(
+          'wf_plus_header_menu_position' => 'above',
           'wf_plus_header_fixed' => 'navbar-fixed-top',
           'wf_plus_header_headroom' => 'navbar-headroom',
           'wf_layout_type' => 'minimal',
@@ -66,6 +68,7 @@ Kirki::add_field( 'wefoster_plus', array(
       '3' => array(
         'label'    => esc_attr__( 'Fluid Width with Inversed Full Header', 'kirki-demo' ),
         'settings' => array(
+          'wf_plus_header_menu_position' => 'above',
           'header_image_background_position' => '44',
           'wf_header_background_height' => '180',
           'wf_header_background_image_color' => 'greyscale',
@@ -88,6 +91,7 @@ Kirki::add_field( 'wefoster_plus', array(
       '4' => array(
         'label'    => esc_attr__( 'Fixed Width with Full Header', 'kirki-demo' ),
         'settings' => array(
+          'wf_plus_header_menu_position' => 'above',
           'wf_header_background_image_color' => 'color',
           'wf_header_background_image_opacity' => '1',
           'wf_header_background_type' => 'picture',
