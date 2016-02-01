@@ -34,7 +34,7 @@ Kirki::add_field( 'wefoster_plus', array(
       '1' => array(
         'label'    => esc_attr__( 'Fluid Width with Full Header', 'kirki-demo' ),
         'settings' => array(
-          'wf_plus_header_menu_position' => 'above',
+          'wf_plus_header_menu_position' => 'below',
           'wf_header_background_image_color' => 'greyscale',
           'wf_header_background_image_opacity' => '0.2',
           'wf_header_background_picture' => 'https://cdn.wefoster.co/backgrounds/notebook-luis-llerena.jpeg',
@@ -91,7 +91,7 @@ Kirki::add_field( 'wefoster_plus', array(
       '4' => array(
         'label'    => esc_attr__( 'Fixed Width with Full Header', 'kirki-demo' ),
         'settings' => array(
-          'wf_plus_header_menu_position' => 'above',
+          'wf_plus_header_menu_position' => 'below',
           'wf_header_background_image_color' => 'color',
           'wf_header_background_image_opacity' => '1',
           'wf_header_background_type' => 'picture',

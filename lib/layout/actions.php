@@ -66,7 +66,7 @@ if ( ! function_exists( 'wff_secondary_navigation_location' ) ) {
 	function wff_secondary_navigation_location() {
 		get_template_part( 'templates/header/secondary-navigation' );
 	}
-	add_action( 'open_mobile_sidebar', 'wff_theme_member_actions', 1 );
+	add_action( 'after_full_header', 'wff_secondary_navigation_location', 1 );
 }
 
 /*
