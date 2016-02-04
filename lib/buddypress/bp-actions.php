@@ -49,7 +49,7 @@ if ( ! function_exists( 'wff_group_creation_button' ) ) {
 if ( ! function_exists( 'wff_blog_creation_button' ) ) {
 	function wff_blog_creation_button() {
 
-		if ( bp_is_blogs_component() && bp_is_directory() && user_is_logged_in() ) :  ?>
+		if ( bp_is_blogs_component() && bp_is_directory() && is_user_logged_in() ) :  ?>
 
 		  <div class="btn btn-primary create-group-button hidden-xs">
 			<i class="fa fa-desktop"></i> <?php bp_blog_create_button(); ?>
@@ -95,7 +95,7 @@ if ( ! function_exists( 'wff_theme_cover_photos' ) ) {
 if ( ! function_exists( 'wff_cover_photo_member_content' ) ) {
 	function wff_cover_photo_member_content() {
 
-		if ( bp_is_user() || bp_is_group() ) :
+		if ( function_exists('bp_disable_cover_image_uploads') && bp_is_user() || bp_is_group() ) :
 				get_template_part( 'buddypress/parts/cover-photo-content' );
 	  endif;
 	}
