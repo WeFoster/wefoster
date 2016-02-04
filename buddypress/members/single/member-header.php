@@ -11,15 +11,6 @@
 
 <?php do_action( 'bp_before_member_header' ); ?>
 
-<?php
-$member_cover_image_url = bp_attachments_get_attachment( 'url', array(
-	'object_dir' => 'members',
-	'item_id'    => bp_displayed_user_id(),
-	) );
-	$src = wpthumb( $image, 'width=' . $width .'&height=' . $height . '&crop=true');
- ?>
-
-<img src="<?php echo $src;?>" alt="">
 
 <div id="item-header-content">
 

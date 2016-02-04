@@ -81,7 +81,7 @@ if ( ! function_exists( 'wff_theme_cover_photos' ) ) {
 
 		if ( bp_is_user() || bp_is_group() ) :
 
-			if ( bp_disable_cover_image_uploads() == false && ! bp_is_group_create()  ) {
+			if ( function_exists('bp_disable_cover_image_uploads') && bp_disable_cover_image_uploads() == false && ! bp_is_group_create()  ) {
 				get_template_part( 'buddypress/parts/cover-photo' );
 			}
 	endif;
