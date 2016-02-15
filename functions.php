@@ -26,7 +26,7 @@ if ( !defined( 'WEFOSTER_CUSTOMIZER_URL' ) ) {
 
 // Our Mobile Devices Class that helps with loading responsive template parts and assets.
 // We include this class because wp_is_mobile is unreliable in some cases.
-if( ! function_exists ( 'is_iphone' ) ){
+if( ! function_exists ( 'is_handheld' ) ){
     require_once WEFOSTER_THEME_DIR .  '/lib/vendor/Mobile-Detect/conditionals.php' ;
 }
 
