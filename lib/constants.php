@@ -380,5 +380,5 @@ if ( !defined( 'WEFOSTER_AUTO_SETUP' ) ) {
 // a mobile device. You can choose to disable this debugging or if you run into problems with mobile detection.
 if ( !defined( 'WEFOSTER_MOBILE_OPTIMISATION' ) ) {
 	//Options: 'on' or 'off'
-	define('WEFOSTER_MOBILE_OPTIMISATION', 'off' );
+	define('WEFOSTER_MOBILE_OPTIMISATION', 'on' );
 }
