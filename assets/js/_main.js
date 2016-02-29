@@ -24,6 +24,8 @@
 
         $('.bp-suggestions').autogrow();
 
+        $('[data-toggle="tooltip"]').tooltip();
+
         //Hide Unstyled Flash
         $('#quick-menu-wrap').removeClass('js-flash');
         $('#dropdown-filter').removeClass('js-flash');

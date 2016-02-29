@@ -6,7 +6,7 @@
  */
 function wff_register_sections( $wp_customize ) {
 	$wp_customize->add_section( 'wf_plus_stylekit_section', array(
-		'title'       => __( 'Choose Stylekits', 'wefoster' ),
+		'title'       => __( 'Choose Design', 'wefoster' ),
 		'priority'    => 1,
 		'description' => __( 'Carefully crafted designs for your community.', 'wefoster' ),
 		'panel'       => 'wf_plus_stylekit_panel',
