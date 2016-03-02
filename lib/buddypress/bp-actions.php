@@ -313,7 +313,7 @@ if ( is_handheld() || WEFOSTER_MOBILE_OPTIMISATION == 'off' ) :
 			<?php endif; ?>
 	</div>
 
-<?
+<?php
 endif;
 }
 add_action( 'after_footer','bp_mobile_sidebar_triggers',-999 );
