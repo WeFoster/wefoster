@@ -1276,6 +1276,24 @@ function wf_plus_register_settings($fields)
           'priority' => 1
       ));
 
+			//
+			// Sidebar
+			//
+			Kirki::add_field('wefoster_plus', array(
+			    'type' => 'radio-image',
+			    'settings' => 'wf_plus_activity_sidebar_position',
+			    'label' => __('Activity Sidebar Position', 'wefoster'),
+			    'description' => __('Where do you want to show the sidebar?', 'wefoster'),
+			    'section' => 'wf_plus_activity_section',
+			    'default' => WEFOSTER_ACTIVITY_SIDEBAR_POSITION,
+			    'priority' => 10,
+			    'choices' => array(
+			        'wefoster-sidebar-left' => WEFOSTER_THEME_URL . '/lib/customiser/assets/img/sidebar-left.png',
+			        'wefoster-sidebar-right' => WEFOSTER_THEME_URL . '/lib/customiser/assets/img/sidebar-right.png',
+			        'default' => WEFOSTER_THEME_URL . '/lib/customiser/assets/img/default.png'
+			    )
+			));
+
   }
 
   // Posts and Pages (WordPress)

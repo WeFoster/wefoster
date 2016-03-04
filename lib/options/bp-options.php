@@ -261,3 +261,29 @@ function wefoster_plus_change_bp_navbar_class_position() {
 
 }
 add_filter( 'wff_bp_navbar_position_class', 'wefoster_plus_change_bp_navbar_class_position' );
+
+/**
+ * Check theme options for sidebar position
+ *
+ * @since 1.0.0
+ *
+ */
+function wefoster_plus_change_activity_sidebar_class() {
+
+    if ( !bp_is_user() && bp_is_current_component( 'activity' ) ) {
+
+  		$option = get_theme_mod( 'wf_plus_activity_sidebar_position', 'default' );
+
+  		if ( $option == 'default' ) {
+  				$classes = WEFOSTER_ACTIVITY_SIDEBAR_POSITION;
+  		}
+  		else {
+  	    $classes = $option;
+  		}
+
+  		return $classes;
+
+    }
+
+}
+add_filter( 'wff_bp_activity_sidebar_position', 'wefoster_plus_change_activity_sidebar_class' );

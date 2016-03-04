@@ -297,6 +297,13 @@ if ( !defined( 'WEFOSTER_BP_NAVBAR_POSITION_CLASS' ) ) {
 		define('WEFOSTER_BP_NAVBAR_POSITION_CLASS', 'navbar-right');
 }
 
+//The Default Position of our BP Navigation Menu
+if ( !defined( 'WEFOSTER_ACTIVITY_SIDEBAR_POSITION' ) ) {
+		// 'navbar-left' or 'navbar-right' or 'navbar-center'
+		define('WEFOSTER_ACTIVITY_SIDEBAR_POSITION', WEFOSTER_SIDEBAR_POSITION);
+}
+
+
 
 // Change Default Avatar Size
 if ( !defined( 'BP_AVATAR_THUMB_WIDTH' ) ) {
