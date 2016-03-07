@@ -287,3 +287,55 @@ function wefoster_plus_change_activity_sidebar_class() {
 
 }
 add_filter( 'wff_bp_activity_sidebar_position', 'wefoster_plus_change_activity_sidebar_class' );
+
+/**
+ * Check theme options for sidebar position
+ *
+ * @since 1.0.0
+ *
+ */
+function wefoster_plus_change_member_sidebar_class() {
+
+    if ( !bp_is_user() && bp_is_current_component( 'members' ) ) {
+
+  		$option = get_theme_mod( 'wf_plus_member_sidebar_position', 'default' );
+
+  		if ( $option == 'default' ) {
+  				$classes = WEFOSTER_MEMBER_SIDEBAR_POSITION;
+  		}
+  		else {
+  	    $classes = $option;
+  		}
+
+  		return $classes;
+
+    }
+
+}
+add_filter( 'wff_bp_member_sidebar_position', 'wefoster_plus_change_member_sidebar_class' );
+
+/**
+ * Check theme options for sidebar position
+ *
+ * @since 1.0.0
+ *
+ */
+function wefoster_plus_change_group_sidebar_class() {
+
+    if ( !bp_is_user() && bp_is_current_component( 'groups' ) ) {
+
+  		$option = get_theme_mod( 'wf_plus_group_sidebar_position', 'default' );
+
+  		if ( $option == 'default' ) {
+  				$classes = WEFOSTER_GROUP_SIDEBAR_POSITION;
+  		}
+  		else {
+  	    $classes = $option;
+  		}
+
+  		return $classes;
+
+    }
+
+}
+add_filter( 'wff_bp_group_sidebar_position', 'wefoster_plus_change_group_sidebar_class' );

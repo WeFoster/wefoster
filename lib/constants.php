@@ -303,6 +303,19 @@ if ( !defined( 'WEFOSTER_ACTIVITY_SIDEBAR_POSITION' ) ) {
 		define('WEFOSTER_ACTIVITY_SIDEBAR_POSITION', WEFOSTER_SIDEBAR_POSITION);
 }
 
+//The Default Position of our BP Navigation Menu
+if ( !defined( 'WEFOSTER_GROUP_SIDEBAR_POSITION' ) ) {
+		// 'navbar-left' or 'navbar-right' or 'navbar-center'
+		define('WEFOSTER_GROUP_SIDEBAR_POSITION', WEFOSTER_SIDEBAR_POSITION);
+}
+
+
+//The Default Position of our BP Navigation Menu
+if ( !defined( 'WEFOSTER_MEMBER_SIDEBAR_POSITION' ) ) {
+		// 'navbar-left' or 'navbar-right' or 'navbar-center'
+		define('WEFOSTER_MEMBER_SIDEBAR_POSITION', WEFOSTER_SIDEBAR_POSITION);
+}
+
 
 
 // Change Default Avatar Size
@@ -387,5 +400,5 @@ if ( !defined( 'WEFOSTER_AUTO_SETUP' ) ) {
 // a mobile device. You can choose to disable this debugging or if you run into problems with mobile detection.
 if ( !defined( 'WEFOSTER_MOBILE_OPTIMISATION' ) ) {
 	//Options: 'on' or 'off'
-	define('WEFOSTER_MOBILE_OPTIMISATION', 'on' );
+	define('WEFOSTER_MOBILE_OPTIMISATION', 'off' );
 }

@@ -1173,6 +1173,22 @@ function wf_plus_register_settings($fields)
           'default' => __('This is your Member Introduction text.', 'wefoster')
       ));
 
+			Kirki::add_field('wefoster_plus', array(
+			    'type' => 'radio-image',
+			    'settings' => 'wf_plus_member_sidebar_position',
+			    'label' => __('Group Sidebar Position', 'wefoster'),
+			    'description' => __('Where do you want to show the sidebar?', 'wefoster'),
+			    'section' => 'wf_plus_members_section',
+			    'default' => WEFOSTER_MEMBER_SIDEBAR_POSITION,
+			    'priority' => 10,
+			    'choices' => array(
+			        'wefoster-sidebar-left' => WEFOSTER_THEME_URL . '/lib/customiser/assets/img/sidebar-left.png',
+			        'wefoster-sidebar-right' => WEFOSTER_THEME_URL . '/lib/customiser/assets/img/sidebar-right.png',
+			        'default' => WEFOSTER_THEME_URL . '/lib/customiser/assets/img/default.png'
+			    )
+			));
+
+
       Kirki::add_field('wefoster_plus', array(
           'section' => 'wf_plus_groups_section',
           'type' => 'editor',
@@ -1240,6 +1256,21 @@ function wf_plus_register_settings($fields)
               '100' => __('100 Groups', 'wefoster')
           )
       ));
+
+			Kirki::add_field('wefoster_plus', array(
+			    'type' => 'radio-image',
+			    'settings' => 'wf_plus_group_sidebar_position',
+			    'label' => __('Group Sidebar Position', 'wefoster'),
+			    'description' => __('Where do you want to show the sidebar?', 'wefoster'),
+			    'section' => 'wf_plus_groups_section',
+			    'default' => WEFOSTER_GROUP_SIDEBAR_POSITION,
+			    'priority' => 10,
+			    'choices' => array(
+			        'wefoster-sidebar-left' => WEFOSTER_THEME_URL . '/lib/customiser/assets/img/sidebar-left.png',
+			        'wefoster-sidebar-right' => WEFOSTER_THEME_URL . '/lib/customiser/assets/img/sidebar-right.png',
+			        'default' => WEFOSTER_THEME_URL . '/lib/customiser/assets/img/default.png'
+			    )
+			));
 
       //
       // Activity

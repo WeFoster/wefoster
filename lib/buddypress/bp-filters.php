@@ -128,3 +128,35 @@ if ( ! function_exists ( 'wff_bp_activity_sidebar_position' ) ) {
    }
    add_filter( 'body_class', 'wff_bp_activity_sidebar_position',999 );
  }
+
+ /**
+  * Add a body class to change the sidebar
+  *
+  * @since 1.0.0
+  *
+  */
+ if ( ! function_exists ( 'wff_bp_member_sidebar_position' ) ) {
+    function wff_bp_member_sidebar_position( $classes ) {
+    	// add a body class
+    	$classes[] = apply_filters( 'wff_bp_member_sidebar_position', ' ' . WEFOSTER_MEMBER_SIDEBAR_POSITION . ' ' );
+    	// return the $classes array
+    	return $classes;
+    }
+    add_filter( 'body_class', 'wff_bp_member_sidebar_position',999 );
+  }
+
+	/**
+	 * Add a body class to change the sidebar
+	 *
+	 * @since 1.0.0
+	 *
+	 */
+	if ( ! function_exists ( 'wff_bp_group_sidebar_position' ) ) {
+		 function wff_bp_group_sidebar_position( $classes ) {
+			 // add a body class
+			 $classes[] = apply_filters( 'wff_bp_group_sidebar_position', ' ' . WEFOSTER_GROUP_SIDEBAR_POSITION . ' ' );
+			 // return the $classes array
+			 return $classes;
+		 }
+		 add_filter( 'body_class', 'wff_bp_group_sidebar_position',999 );
+	 }
