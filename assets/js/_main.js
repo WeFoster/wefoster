@@ -153,7 +153,7 @@
         //Add them to BuddyPress Stream
         $(document).ajaxSuccess(function(response) {
 
-          setup_videos();
+          //setup_videos();
           setTimeout(setup_videos, 205);
 
         });

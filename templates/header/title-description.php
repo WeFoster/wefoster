@@ -1,4 +1,5 @@
 <div class="<?php do_action('class_container');?> site-description-wrap">
+    <?php do_action('open_site_description'); ?>
     <div class="site-description-wrap wf-grid wf-grid--align-center">
         <div class="site-description">
           <a href="<?php echo get_home_url()?>">
@@ -10,4 +11,5 @@
             <?php do_action('after_site_description'); ?>
         </div>
     </div>
+      <?php do_action('close_site_description'); ?>
 </div>

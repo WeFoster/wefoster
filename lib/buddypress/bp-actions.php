@@ -262,11 +262,11 @@ function wff_bp_add_mobile_template_parts() {
 				add_action( 'open_bp_mobile_sidebar', 'wff_theme_member_navigation' );
 				//add_action( 'open_bp_mobile_sidebar', 'wff_theme_member_photo',1 );
 				//Remove Actions on Desktop
-				remove_action( 'open_sidebar', 'wff_theme_activity_tabs' );
-				remove_action( 'open_sidebar', 'wff_theme_group_navigation' );
-		 		remove_action( 'before_bp_group_navigation', 'wff_theme_group_photo', 1 );
-				remove_action( 'open_sidebar', 'wff_theme_member_navigation' );
-				remove_action( 'before_bp_profile_sidebar_navigation', 'wff_theme_member_photo' );
+				//remove_action( 'open_sidebar', 'wff_theme_activity_tabs' );
+				//remove_action( 'open_sidebar', 'wff_theme_group_navigation' );
+		 		//remove_action( 'before_bp_group_navigation', 'wff_theme_group_photo', 1 );
+				//remove_action( 'open_sidebar', 'wff_theme_member_navigation' );
+				//remove_action( 'before_bp_profile_sidebar_navigation', 'wff_theme_member_photo' );
 			}
 	}
 	add_action('template_redirect','wff_bp_add_mobile_template_parts', 1);
@@ -295,7 +295,7 @@ if ( ! function_exists( 'wff_bp_mobile_sidebar' ) ) {
 function bp_mobile_sidebar_triggers() {
 if ( is_handheld() || WEFOSTER_MOBILE_OPTIMISATION == 'off' ) :
 ?>
-	<div class="mobile-content-trigger">
+	<div class="mobile-content-trigger hidden-lg hidden-md">
 			<?php if ( bp_is_groups_component() && bp_is_group() ): ?>
 			<a id="buddypress-mobile-sidebar-trigger" href="#buddypress-mobile-sidebar">
 					<i class="fa fa-group"></i>

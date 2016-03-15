@@ -1,5 +1,5 @@
 <?php if ( is_user_logged_in() ) : ?>
-		<div id="user-sidebar-menu" class="widget">
+		<div id="user-sidebar-menu" class="widget hidden-sm">
 					<?php bp_loggedin_user_avatar( 'width=' . bp_core_avatar_thumb_width() . '&height=' . bp_core_avatar_thumb_height() ); ?>
 						 <?php $userLink = bp_get_loggedin_user_link();?>
 						 <?php echo bp_core_get_user_displayname( bp_loggedin_user_id() );?><br>

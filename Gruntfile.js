@@ -87,6 +87,22 @@ module.exports = function(grunt) {
           sourceMapFilename: 'assets/css/buddypress.css.map',
           sourceMapRootpath: '/wp-content/themes/wefoster/'
         }
+      },
+      //Compress+ Source Map BuddyPress
+      fontawesome: {
+        files: {
+          'assets/css/font-awesome.css': [
+            'assets/less/font-awesome.less'
+          ],
+        },
+        options: {
+          compress: true,
+          yuicompress: true,
+          optimization: 2,
+          sourceMap: true,
+          sourceMapFilename: 'assets/css/fontawesome.css.map',
+          sourceMapRootpath: '/wp-content/themes/wefoster/'
+        }
       }
     },
     // Minify JS and compile into scripts
@@ -138,7 +154,7 @@ module.exports = function(grunt) {
           'assets/less/**/**/**/*.less',
           'lib/customiser/assets/less/customizer.less'
         ],
-        tasks: ['less:main', ['less:buddypress'],
+        tasks: ['less:main', ['less:buddypress'],['less:fontawesome'],
           ['less:other'], 'version'
         ]
       },
