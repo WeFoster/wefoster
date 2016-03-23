@@ -267,7 +267,7 @@ add_filter( 'wf_footer_type', 'wefoster_plus_change_footer_widgets' );
 function wefoster_plus_custom_logo() {
 
 	//Retrieve our option
-	$logo_type = get_theme_mod( 'wf_plus_logo_type', 'default' );
+	$logo_type = get_theme_mod( 'wf_plus_logo_type', WEFOSTER_LOGO_TYPE );
 
 
 	if ( $logo_type == 0 || $content_option == 'default' ) {

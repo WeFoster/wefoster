@@ -166,7 +166,7 @@ if ( !defined( 'WEFOSTER_DEFAULT_MOBILE_LOGO' ) ) {
 // Show a logo by default? Or use text+description? See lib/customiser/settings.php at wf_plus_logo_type
 if ( !defined( 'WEFOSTER_LOGO_TYPE' ) ) {
 		// 'full' or 'minimal'
-		define('WEFOSTER_LOGO_TYPE', 'text');
+		define('WEFOSTER_LOGO_TYPE', 'text-description');
 }
 
 // The regular full sized logo.
