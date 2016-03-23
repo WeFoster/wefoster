@@ -1545,7 +1545,7 @@ function wf_plus_register_settings($fields)
       'label' => __('Image Opacity', 'wefoster'),
       'description' => __('Change the opacity of your image.', 'wefoster'),
       'section' => 'wf_plus_hero_section',
-      'default' => '0.2',
+      'default' => '0.5',
       //'transport' => 'postMessage',
       'priority' => 10,
       'choices' => array(

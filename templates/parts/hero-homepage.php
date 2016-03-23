@@ -2,7 +2,7 @@
 //Assign our Fields
 $title = get_the_title();
 $effect = get_theme_mod('wf_hero_background_image_color');
-$opacity = get_theme_mod('wf_hero_background_image_opacity', '0.2');
+$opacity = get_theme_mod('wf_hero_background_image_opacity', '0.5');
 $style = get_theme_mod('wf_hero_header_style', 'box-brand-primary');
 
 $post = $wp_query->post;
