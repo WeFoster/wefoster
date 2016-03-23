@@ -4,7 +4,7 @@
       <h2>Thank you for choosing the WeFoster Theme!</h2>
 
       <p>
-        This page serves as getting started guide for quickly getting up and running with your community. Whether you're new to BuddyPress & WordPress or already an expert, we're here to help you build better communities!
+        This page serves as a getting started guide for quickly getting up and running with your community. Whether you're new to BuddyPress & WordPress or already an expert, we're here to help you build better communities!
       </p>
   </div>
 
@@ -61,15 +61,15 @@
         <div class="col">
           <h4>Are your a Developer?</h4>
           <p>
-            We're always looking for developers to help our clients and customers build better communities! If you are interested in developing new BuddyPress products with us, or taking on custom development projects for our customers, get in touch with us via our <a href="https://wefoster.co/contact/">contact form.</a>
+            Add yourself to the <a href="https://wefoster.co/profile/type/developers">BuddyPress Developers directory</a>! Take on custom development projects for our community of users, or get in touch with us via our <a href="https://wefoster.co/contact/">contact form.</a>
           </p>
         </div>
         <div class="col">
           <h4>Our Most Popular Resources</h4>
-          <ul id="menu-footer-menu" class="menu"><li class="menu-buddypress-developers"><a title="BuddyPress Developers" href="http://wefoster.co/buddypress-developer/">BuddyPress Developers</a></li>
+          <ul id="menu-footer-menu" class="menu">
             <li class="menu-buddypress-hosting"><a href="http://wefoster.co/buddypress-hosting/">BuddyPress Hosting Guide</a></li>
-            <li class="menu-premium-buddypress-themes"><a href="http://wefoster.co/products/premium/buddypress-themes/">Premium BuddyPress Themes</a></li>
-            <li class="menu-premium-buddypress-plugins"><a href="http://wefoster.co/products/premium/buddypress-plugins/">Premium BuddyPress Plugins</a></li>
+            <li class="menu-premium-buddypress-themes"><a href="http://wefoster.co/buddypress-themes/">BuddyPress Themes</a></li>
+            <li class="menu-premium-buddypress-plugins"><a href="http://wefoster.co/buddypress-plugins/">BuddyPress Plugins</a></li>
             <li class="menu-buddypress-community-newsletter"><a href="http://wefoster.co/buddypress-newsletter/">BuddyPress Community Newsletter</a></li>
           </ul>
           <p></p>

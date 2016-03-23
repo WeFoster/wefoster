@@ -14,19 +14,23 @@ function kirki_update_url( $config ) {
 add_filter( 'kirki/config', 'kirki_update_url' );
 
 /**
- * Configuration for Kirki
+ * Configuration sample for the Kirki Customizer.
+ * The function's argument is an array of existing config values
+ * The function returns the array with the addition of our own arguments
+ * and then that result is used in the kirki/config filter
  *
- * @since 1.0
+ * @param $config the configuration array
+ *
+ * @return array
  */
 function wf_theme_customizer_tweaks( $config ) {
-
-	$config['description']  = __( 'WeFoster', 'wefoster' );
-	$config['width']        = '23%';
-
-	return $config;
-
+	return wp_parse_args( array(
+		'description'  => esc_attr__( 'Build Better Communities', 'kirki' ),
+		'width' => '25%'
+	), $config );
 }
 add_filter( 'kirki/config', 'wf_theme_customizer_tweaks' );
+
 
 /**
  * Enqueue a custom stylesheet for our customizer.

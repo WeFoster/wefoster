@@ -222,9 +222,18 @@ if ( !defined( 'WEFOSTER_POST_THUMBNAIL_HEIGHT_FULL' ) ) {
 ///////////////     CUSTOMIZER  			///////////////
 /////////////// 											///////////////
 
+if ( !defined( 'WEFOSTER_FONT_SIZE' ) ) {
+	// Set the Default Font size.
+	define('WEFOSTER_FONT_SIZE', '16px');
+}
+
 if ( !defined( 'WEFOSTER_FONT_FAMILY' ) ) {
 	// Choose a default Font that is present on Google Fonts.
 	define('WEFOSTER_FONT_FAMILY', 'Lato');
+}
+if ( !defined( 'WEFOSTER_FONT_WEIGHT' ) ) {
+	// Choose a default Font Weight
+	define('WEFOSTER_FONT_WEIGHT', '400');
 }
 
 if ( !defined( 'WEFOSTER_HEADINGS_FONT_FAMILY' ) ) {
@@ -232,14 +241,19 @@ if ( !defined( 'WEFOSTER_HEADINGS_FONT_FAMILY' ) ) {
 	define('WEFOSTER_HEADINGS_FONT_FAMILY', 'Montserrat');
 }
 
+if ( !defined( 'WEFOSTER_HEADINGS_FONT_WEIGHT' ) ) {
+	// Choose a default Font Weight
+	define('WEFOSTER_HEADINGS_FONT_WEIGHT', '400');
+}
+
 if ( !defined( 'WEFOSTER_NAVIGATION_FONT_FAMILY' ) ) {
 	// Choose a default Font that is present on Google Fonts.
 	define('WEFOSTER_NAVIGATION_FONT_FAMILY', 'Montserrat');
 }
 
-if ( !defined( 'WEFOSTER_FONT_SIZE' ) ) {
-	// Set the Default Font size.
-	define('WEFOSTER_FONT_SIZE', '16px');
+if ( !defined( 'WEFOSTER_NAVIGATION_FONT_WEIGHT' ) ) {
+	// Choose a default Font Weight
+	define('WEFOSTER_NAVIGATION_FONT_WEIGHT', '400');
 }
 
 
@@ -256,7 +270,7 @@ if ( !defined( 'WEFOSTER_BODY_BACKGROUND' ) ) {
 
 if ( !defined( 'WEFOSTER_HEADER_BACKGROUND' ) ) {
 	//Local
-	//define('WEFOSTER_HEADER_BACKGROUND', get_stylesheet_directory_uri . '/assets/img/bg.jpg' );
+	define('WEFOSTER_HEADER_BACKGROUND', get_stylesheet_directory_uri . '/assets/img/bg.jpg' );
 	//External
 	//define('WEFOSTER_HEADER_BACKGROUND', 'https://cdn.wefoster.co/backgrounds/into-the-wild.jpeg');
 }

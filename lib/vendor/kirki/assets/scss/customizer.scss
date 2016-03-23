@@ -1,9 +1,13 @@
 @import "global.scss";
 
+@import "panels/expanded";
+
+@import "sections/expanded";
+@import "sections/hover";
+
 @import "controls/checkbox";
 @import "controls/code";
-@import "controls/color";
-@import "controls/color-alpha";
+@import "controls/dashicons";
 @import "controls/dimension";
 @import "controls/number";
 @import "controls/palette";
@@ -16,6 +20,6 @@
 @import "controls/sortable";
 @import "controls/spacing";
 @import "controls/switch";
-@import "controls/textarea";
+@import "controls/generic";
 @import "controls/toggle";
 @import "controls/typography";

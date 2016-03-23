@@ -983,65 +983,44 @@ function wf_plus_register_settings($fields)
       )
   ));
 
-  Kirki::add_field('kirki_demo', array(
-      'type' => 'typography',
-      'settings' => 'base_typography_font_family',
-      'label' => __('Typography Control', 'kirki'),
-      'description' => 'Customize the font style...',
-      'section' => 'wf_plus_typography_body_section',
-      'default' => array(
-          'font-style' => array(
-              'bold',
-              'italic'
-          ),
-          'font-family' => WEFOSTER_FONT_FAMILY,
-          'font-size' => WEFOSTER_FONT_SIZE,
-          'font-weight' => 'inherit',
-          'letter-spacing' => 'inherit'
-      ),
-      'priority' => 10,
-      'choices' => array(
-          'font-style' => false,
-          'font-family' => true,
-          'font-size' => false,
-          'font-weight' => true,
-          'line-height' => false,
-          'letter-spacing' => false
-      ),
-      'output' => array(
-          array(
-              'element' => 'body.wefoster-framework'
-          )
-      )
-  ));
 
-	Kirki::add_field( 'kirki_demo', array(
-	  'type'        => 'typography',
-	  'settings'  => 'heading_typography_navigation_font_style',
-	  'label'    => __( 'Navigation Font Style', 'wefoster' ),
-	  'description' => 'Customize the font style...',
-	  'section'  => 'wf_plus_typography_navigation_section',
-	  'default'     => array(
-	    'font-family'    => WEFOSTER_NAVIGATION_FONT_FAMILY,
-	    'font-weight'    => 'inherit',
-	    'letter-spacing' => 'inherit',
-	  ),
-	  'priority'    => 10,
-	  'choices'     => array(
-	    'font-style'     => false,
-	    'font-family'    => true,
-	    'font-size'      => false,
-	    'font-weight'    => true,
-	    'line-height'    => false,
-	    'letter-spacing' => true,
-	  ),
-	  'output' => array(
-	    array(
-	      'property'    => 'font-family',
-	      'element' => wf_plus_navigation_css_selectors(),
-	    ),
-	  ),
+	Kirki::add_field( 'wefoster_plus', array(
+		'type'        => 'typography',
+		'settings'    => 'base_typography_font_family',
+    'description' => 'Customize the font style...',
+		'label'       => esc_attr__( 'Control Label', 'kirki' ),
+		'section'     => 'wf_plus_typography_body_section',
+		'default'     => array(
+			'font-family'    => WEFOSTER_FONT_FAMILY,
+			'variant'        => WEFOSTER_FONT_WEIGHT
+		),
+		'priority'    => 10,
+		'output'      => array(
+			array(
+      'element' => 'body.wefoster-framework'
+			),
+		),
 	) );
+
+	Kirki::add_field( 'wefoster_plus', array(
+		'type'        => 'typography',
+		'settings'    => 'heading_typography_navigation_font_style',
+    'description' => 'Customize the font style...',
+		'label'       => esc_attr__( 'Font Family', 'kirki' ),
+		'section'     => 'wf_plus_typography_body_section',
+		'default'     => array(
+			'font-family'    => WEFOSTER_NAVIGATION_FONT_FAMILY,
+			'variant'        => WEFOSTER_NAVIGATION_FONT_WEIGHT
+		),
+		'priority'    => 10,
+		'output'      => array(
+			array(
+	      'element' => wf_plus_navigation_css_selectors(),
+			),
+		),
+	) );
+
+
 
   //
   // BuddyPress General

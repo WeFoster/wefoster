@@ -8,7 +8,7 @@
     </div>
     <div class="col-sm-9">
       <h3>It seems BuddyPress is not installed </h3>
-      <p>The WeFoster Theme can be use as a regular WordPress theme without a problem, but it was developed from the ground up with BuddyPress in mind! We recommend that you install and activate BuddyPress first to unlock all of the powerful features that come with it!</p>
+      <p>The WeFoster Theme can be used as a regular WordPress theme, but it was developed from the ground up with BuddyPress in mind! We recommend that you install and activate BuddyPress first to unlock all of the powerful features that come with it!</p>
       <p>
         <?php
         $plugin_name = 'BuddyPress';
