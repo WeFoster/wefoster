@@ -17,9 +17,14 @@ add_action('login_enqueue_scripts', 'wff_login_style');
  *
  */
 function wff_login_logo() {
+	$logo_type = get_theme_mod( 'wf_plus_logo_type', 'default' );
   echo '<style type="text/css">
     h1 a {
-      background-image: url(' . WEFOSTER_DEFAULT_LOGO . ') !important;
+      background-image: url(' . WEFOSTER_FULL_LOGO_INVERSE . ') !important;
+      background-size: 119%;
+      display: inline-block !important;
+      width: 300px !important;
+      background-size: 99% !important;
     }
   </style>';
 }

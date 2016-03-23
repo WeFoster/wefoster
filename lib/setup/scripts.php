@@ -14,7 +14,6 @@ function wff_scripts() {
 	wp_deregister_style( 'bp-parent-css' );
 	wp_deregister_style( 'bp-legacy-css' );
 
-
 	// Enqueue our Main Stylesheet.
 	wp_enqueue_style( 'wff_main', $path . '/css/main.css', false, '6ee17105aaae3sffd20bb56ee840e0cabcd' );
 
@@ -54,6 +53,7 @@ function wff_scripts() {
 	wp_register_script( 'wff_scripts', $path . '/js/scripts.min.js', array(), '2592531929b0a0de360daca45107315b', true );
 	wp_enqueue_script( 'modernizr' );
 
+	//Developer: See lib/constants.php to enable mobile optimisation. This is currently experimentatal.
 	if ( is_handheld() || WEFOSTER_MOBILE_OPTIMISATION == 'off'  ) {
 		//Only load our scripts on mobile
 		wp_enqueue_script( 'touchswipe_js' );

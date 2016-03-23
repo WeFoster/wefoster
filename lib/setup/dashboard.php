@@ -17,7 +17,7 @@ function wf_admin_welcome_css() {
 		wp_enqueue_script( 'wff_scripts_admin' );
 
 		wp_enqueue_style('thickbox');
-		wp_enqueue_script('thickbox');  
+		wp_enqueue_script('thickbox');
 
 	}
 
@@ -26,10 +26,7 @@ add_action( 'admin_enqueue_scripts', 'wf_admin_welcome_css' );
 
 
 /**
- * Register menus
- *
- * @package Infinity
- * @subpackage base
+ * Install BuddyPress Link
  */
 function wff_install_buddypress()
 {
@@ -75,10 +72,9 @@ add_action( 'admin_init', 'wff_welcome_screen_do_activation_redirect' );
 
 
 function wff_welcome_screen_pages() {
-	add_submenu_page(
-				'themes.php',
+	add_theme_page(
 				__( 'Getting Started', 'wefoster' ),
-				__( 'Getting Started', 'buddypress' ),
+				__( 'Getting Started', 'wefoster' ),
 				'manage_options',
 				'wefoster-welcome',
 				'wff_welcome_wefoster_content'

@@ -70,7 +70,7 @@ function wf_plus_register_settings($fields)
 		    'choices' => array(
 		        'upload' => __('Upload your own image', 'kirki'),
 		        'picture' => __('Choose a background image', 'kirki'),
-		        'none' => __('No Background Image', 'kirki')
+		        'none' => __('Choose color or pattern', 'kirki')
 		    )
 		));
 
@@ -1007,7 +1007,7 @@ function wf_plus_register_settings($fields)
 		'settings'    => 'heading_typography_navigation_font_style',
     'description' => 'Customize the font style...',
 		'label'       => esc_attr__( 'Font Family', 'kirki' ),
-		'section'     => 'wf_plus_typography_body_section',
+		'section'     => 'wf_plus_typography_navigation_section',
 		'default'     => array(
 			'font-family'    => WEFOSTER_NAVIGATION_FONT_FAMILY,
 			'variant'        => WEFOSTER_NAVIGATION_FONT_WEIGHT
@@ -1019,7 +1019,6 @@ function wf_plus_register_settings($fields)
 			),
 		),
 	) );
-
 
 
   //

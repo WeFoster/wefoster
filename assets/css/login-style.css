@@ -8,23 +8,17 @@ body {
 .login #backtoblog a,
 .login #nav a,
 .login h1 a {
-  color: #fff;
+  color: #ffffff;
 }
 .login #backtoblog a:hover,
 .login #nav a:hover,
 .login h1 a:hover {
-  color: #FEB43E;
-}
-.wp-core-ui .button-primary {
-  background: #FEB43E;
-  border: 1px solid #feb034;
-}
-.wp-core-ui .button-primary:hover {
-  background: #fea415;
-  border: 1px solid #fea00b;
+  color: #feb43e;
 }
 #loginform {
-  background: #fff;
+  background: #ffffff;
   border: 6px solid #505662;
   border-radius: 2px;
 }
+
+/*# sourceMappingURL=login-style.css.map */

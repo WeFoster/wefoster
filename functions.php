@@ -37,7 +37,6 @@ if( ! function_exists ( 'is_handheld' ) ){
  *
  */
 if ( !defined( 'WEFOSTER_PLUS_PLUGIN_DIR' ) ) {
-
 	require( WEFOSTER_CUSTOMIZER_DIR . '/lib/vendor/kirki/kirki.php' );
 
 	Kirki::add_config( 'wefoster_plus', array(
@@ -52,8 +51,8 @@ if ( !defined( 'WEFOSTER_PLUS_PLUGIN_DIR' ) ) {
  * @since 1.0.0
  *
  */
-require_once WEFOSTER_THEME_DIR . '/lib/setup/stylekits.php';         // Set up our constants.
-require WEFOSTER_THEME_DIR . '/lib/constants.php';         // Set up our constants.
+require_once WEFOSTER_THEME_DIR . '/lib/setup/stylekits.php';        // Set up our stylekits.
+require WEFOSTER_THEME_DIR . '/lib/constants.php';         					 // Set up our constants.
 
 //Setting up the theme
 require_once WEFOSTER_THEME_DIR . '/lib/setup/init.php';             // Initial theme setup
@@ -61,8 +60,7 @@ require_once WEFOSTER_THEME_DIR . '/lib/setup/scripts.php';          // Scripts 
 require_once WEFOSTER_THEME_DIR . '/lib/setup/menus.php';            // BP Menu Walker
 require_once WEFOSTER_THEME_DIR . '/lib/setup/sidebars.php';         // BP Sidebars
 require_once WEFOSTER_THEME_DIR . '/lib/setup/activation.php';       // Automagically set up widgets and homepage
-require_once WEFOSTER_THEME_DIR . '/lib/setup/dashboard.php';          // Helper functions
-require_once WEFOSTER_THEME_DIR . '/lib/setup/shortcodes.php';             // Initial theme setup
+require_once WEFOSTER_THEME_DIR . '/lib/setup/dashboard.php';        // Welcome Dashboard + Documentation
 require_once WEFOSTER_THEME_DIR . '/lib/setup/helpers.php';          // Helper functions
 
 //Our Customiser Options
@@ -87,7 +85,7 @@ if ( WEFOSTER_CUSTOMIZER_VALUES == 'true') {
 
 //Our layout actions, filters. a lot of these contain our constants.
 require_once WEFOSTER_THEME_DIR . '/lib/layout/filters.php';           // Set up our filters.
-require_once WEFOSTER_THEME_DIR . '/lib/layout/custom-login.php';      			// Make the login pretty.
+require_once WEFOSTER_THEME_DIR . '/lib/layout/custom-login.php';      // Make the login pretty.
 require_once WEFOSTER_THEME_DIR . '/lib/layout/actions.php';           // Set up our actions.
 
 /**

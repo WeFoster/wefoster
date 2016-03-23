@@ -51,15 +51,9 @@ Join our community of BuddyPress site owners and developers on [WeFoster.co](htt
 
 == Theme Customization ==
 
-All theme customization options are located at "Appearance > Customize > Theme Options".
+All theme customization options are located at "Appearance > Customize".
 
-Theme Options tabs:
 
-* Style: Change the sitewide main color.
-* Home: Upload the main home page background image, add a title to the home page featured posts section, and select the post's category.
-* Header: Upload a logo and set a header color.
-* Blog: Enter blog page title and subtitle.
-* Footer: Enter footer copyright text.
 
 == Navigation ==
 
