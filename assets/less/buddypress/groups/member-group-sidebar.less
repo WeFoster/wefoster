@@ -78,7 +78,8 @@
   a.leave-group,
   a.remove {
     //display: none;
-    .button-variant(@btn-danger-color; @btn-danger-bg; @btn-danger-border);
+    background: @btn-danger-bg;
+    color: @btn-danger-color;
 
     &:before {
       content: '\f00d';
@@ -87,7 +88,8 @@
 
   .friendship-button a,
   .join-group {
-    .button-variant(@btn-success-color; @btn-success-bg; @btn-success-border);
+    background: @btn-success-bg;
+    color: @btn-success-color;
 
     &:before {
       content: '\f0fe';
@@ -96,7 +98,8 @@
     &.leave-group,
     &.pending_friend,
     &.remove {
-      .button-variant(@btn-danger-color; @btn-danger-bg; @btn-danger-border);
+      background: @btn-danger-bg;
+      color: @btn-danger-color;
 
       &:before {
         content: '\f00d';

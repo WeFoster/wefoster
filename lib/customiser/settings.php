@@ -300,7 +300,7 @@ function wf_plus_register_settings($fields)
 		    'settings' => 'wf_plus_logo_type',
 		    'label' => __('Logo Type', 'wefoster'),
 		    'description' => __('What type of logo do you like to display?', 'wefoster'),
-		    'default' => WEFOSTER_DEFAULT_LOGO,
+		    'default' => WEFOSTER_LOGO_TYPE,
 		    'priority' => 10,
 		    'choices' => array(
 		        'custom-logo' => __('Upload a Logo', 'wefoster'),

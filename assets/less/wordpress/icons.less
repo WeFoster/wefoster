@@ -1,14 +1,14 @@
 // Variables
 /* Using some fancy CSS magic to add our icons */
-.post-meta-data *:before,
-.entry-title:before,
 #author-description h3:before,
-.page-header h1 span:before,
-.btn.dropdown-toggle:before,
-.comment-reply-link:before,
 #comments time a:before,
+.btn.dropdown-toggle:before,
 .comment-edit-link:before,
-.navbar li a:before{
+.comment-reply-link:before,
+.entry-title:before,
+.navbar li a:before,
+.page-header h1 span:before,
+.post-meta-data *:before {
   color: @icon-color;
   font-family: @icon-font-family;
   font-size: @icon-size;
@@ -19,53 +19,50 @@
   box-shadow: @icon-shadow;
   line-height: 100%;
 }
-
 /* ================ */
 /* ! Post Formats   */
 /* ================ */
 .format-video .entry-title:before {
-  content: "\f03d";
+  content: '\f03d';
 }
 
 .format-link .entry-title:before {
-  content: "\f02e";
+  content: '\f02e';
 }
 
 .format-gallery .entry-title:before {
-  content: "\f083";
+  content: '\f083';
 }
 
 .format-image .entry-title:before {
-  content: "\f03e";
+  content: '\f03e';
 }
 
 .format-audio .entry-title:before {
-  content: "\f028";
+  content: '\f028';
 }
 
 .format-chat .post-title:before {
-  content: "\f086";
+  content: '\f086';
 }
 
 .format-status .post-title:before {
-  content: "\f0eb";
+  content: '\f0eb';
 }
 
 .format-quote .post-title:before {
-  content: "\f10e";
+  content: '\f10e';
 }
-
-
 //comment
 .comment-reply-link:before {
-  content: "\f112";
+  content: '\f112';
 }
 
 #comments time a:before {
-  content: "\f017";
+  content: '\f017';
   right: -4px;
 }
 
 #comments .comment-edit-link:before {
-  content: "\f040";
+  content: '\f040';
 }

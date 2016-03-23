@@ -163,8 +163,7 @@ if ( !defined( 'WEFOSTER_DEFAULT_MOBILE_LOGO' ) ) {
 		define('WEFOSTER_DEFAULT_MOBILE_LOGO', WEFOSTER_ASSETS_URL . '/assets/img/logos/minimal-regular-inverse.png' );
 }
 
-// We use the constants above to figure out if we should show an inverted or regular logo. The constant below allows
-// you to choose which logo type should be displayed by if you have created both minimal and full size logos.
+// Show a logo by default? Or use text+description? See lib/customiser/settings.php at wf_plus_logo_type
 if ( !defined( 'WEFOSTER_LOGO_TYPE' ) ) {
 		// 'full' or 'minimal'
 		define('WEFOSTER_LOGO_TYPE', 'text');
@@ -200,7 +199,6 @@ if ( !defined( 'WEFOSTER_TOOLTIPS' ) ) {
 		define('WEFOSTER_TOOLTIPS', 'wefoster-bootstrap-tooltips' );
 }
 
-
 //Post Thumbnail Sizes
 if ( !defined( 'WEFOSTER_POST_THUMBNAIL_WIDTH' ) ) {
 	define( 'WEFOSTER_POST_THUMBNAIL_WIDTH', 880 );
@@ -219,7 +217,7 @@ if ( !defined( 'WEFOSTER_POST_THUMBNAIL_HEIGHT_FULL' ) ) {
 }
 
 /////////////// 											///////////////
-///////////////     CUSTOMIZER  			///////////////
+///////////////     TYPOGRAPHY  			///////////////
 /////////////// 											///////////////
 
 if ( !defined( 'WEFOSTER_FONT_SIZE' ) ) {
@@ -279,7 +277,6 @@ if ( !defined( 'WEFOSTER_HERO_BACKGROUND' ) ) {
 	define('WEFOSTER_HERO_BACKGROUND', WEFOSTER_ASSETS_URL . '/assets/img/hero-background.jpg' );
 }
 
-
 // Don't want your clients to mess up your expertly designed layout?
 // You can disable the Customizer settings completely by setting the constant below to false.
 if ( !defined( 'WEFOSTER_CUSTOMIZER_SETTINGS' ) ) {
@@ -291,7 +288,6 @@ if ( !defined( 'WEFOSTER_CUSTOMIZER_SETTINGS' ) ) {
 if ( !defined( 'WEFOSTER_CUSTOMIZER_VALUES' ) ) {
 	define('WEFOSTER_CUSTOMIZER_VALUES', 'true' );
 }
-
 
 
 /////////////// 											///////////////

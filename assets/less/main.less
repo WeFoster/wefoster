@@ -1,11 +1,16 @@
 /*!
- * We Foster Framework LESS
- Version: 1.1.2
+ * WeFoster Base LESS
+ * Version: 1.1.4
+ * Notes: This a compliled CSS file. Want to make changes? Read this: https://documentation.wefoster.co/kb/using-less-and-grunt-to-generate-custom-stylesheets/
  */
-// First load Bootstrap and all our 3rd Party vendors.
+/*!
+  * First load Bootstrap and all our 3rd Party vendors.
+*/
 @import "vendor.less";
-//Layout
 @import "layout/scaffolding.less";
+/*!
+  * Layout
+*/
 @import "layout/header.less";
 @import "layout/navigation.less";
 @import "layout/sidebar.less";
@@ -14,21 +19,39 @@
 @import "layout/customiser-options.less";
 @import "layout/hero.less";
 @import "layout/animations.less";
-//Responsive
+/*!
+  * Responsive Design
+*/
 @import "layout/responsive.less";
 @import "layout/sidr.less";
-//WordPress
+/*!
+  * Single Articles
+*/
 @import "wordpress/single.less";
-@import "wordpress/archives.less";
 @import "wordpress/comments.less";
-@import "wordpress/wp-scaffolding.less";
+/*!
+  * Pages & Archives
+*/
 @import "wordpress/page.less";
+@import "wordpress/archives.less";
+/*!
+  * Scaffolding for WP
+*/
+@import "wordpress/wp-scaffolding.less";
+/*!
+  * Template Parts
+*/
 @import "wordpress/parts.less";
-@import "wordpress/icons.less";
+/*!
+  * Homepage Template
+*/
 @import "templates/homepage.less";
-//Load BuddyPress Widgets because they can appear everywhere.
+/*!
+  * Include BuddyPress Widgets in Base since they can appear anywhere.
+*/
 @import "buddypress/elements/widgets.less";
-//Utility classes that can be used by developers.
+/*!
+  * Utility Mixins for Child Themes + Extensions
+*/
 @import "mixins/mixins.less";
-// Variables that can be customised through child themes
 @import "variables.less";

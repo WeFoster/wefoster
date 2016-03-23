@@ -1,3 +1,20 @@
 // Load Font Awesome
+//Bootstrap Variables and Mixins
+@import "../vendor/bootstrap-less/less/variables.less";
+@import "variables.less";
 @import "../vendor/fontawesome/less/font-awesome.less";
 @import "font-face.less";
+
+.font-icon {
+  color: @icon-color;
+  font-family: @icon-font-family;
+  font-size: @icon-size;
+  font-weight: normal;
+  padding-right: @icon-padding-right;
+  position: relative;
+  text-transform: none;
+  box-shadow: @icon-shadow;
+  line-height: 100%;
+}
+@import "wordpress/icons.less";
+@import "buddypress/elements/icons.less";
