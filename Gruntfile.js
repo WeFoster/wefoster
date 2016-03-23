@@ -285,7 +285,7 @@ module.exports = function(grunt) {
 
   grunt.registerTask('build', [
     'makepot',
-    'less',
+    //'less',
     //'glotpress_download',
     'copy',
     'compress',
