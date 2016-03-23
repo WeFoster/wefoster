@@ -135,8 +135,9 @@ if ( ! function_exists( 'wff_post_header' ) ) {
  */
 if ( ! function_exists( 'wff_post_thumbnail_location' ) ) {
 	function wff_post_thumbnail_location() {
-
-		get_template_part( 'templates/parts/post-thumbnail' );
+		if ( is_single() || is_page() ) {
+			get_template_part( 'templates/parts/post-thumbnail' );
+		}
 	}
 	add_action( 'before_entry_content', 'wff_post_thumbnail_location', 1 );
 	add_action( 'before_page_content', 'wff_post_thumbnail_location', 1 );

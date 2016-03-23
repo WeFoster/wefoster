@@ -10,6 +10,8 @@ if ( $option == 'custom' ) {
 
 <div class="<?php do_action('class_content_wrapper');?> bp-cover-photo-content">
 
+  <?php do_action('open_bp_cover_photo_content'); ?>
+
   <div class="inner-cover-photo <?php do_action('class_main'); ?>">
       <?php get_template_part('buddypress/page-header');?>
   </div>
@@ -24,5 +26,7 @@ if ( $option == 'custom' ) {
           ?>
         </div>
   </div>
+
+  <?php do_action('close_bp_cover_photo_content'); ?>
 
 </div>

@@ -30,16 +30,6 @@
 
 	<?php else: ?>
 
-		<?php if ( get_option( 'users_can_register' ) ): ?>
-			<li class="menu-register">
-
-				<a href="<?php echo bp_get_signup_page()?>">
-					<i class="fa fa-user"></i> <?php _e('Register', 'wefoster'); ?>
-				</a>
-
-			</li>
- 		<?php endif; ?>
-
 		<li class="dropdown menu-groups">
 
 			<a href="/menu/" data-target="#" data-toggle="dropdown" class="dropdown-toggle">
@@ -58,6 +48,16 @@
 					</li>
 				</ul>
 		</li>
+
+		<?php if ( get_option( 'users_can_register' ) ): ?>
+			<li class="menu-register">
+
+				<a href="<?php echo bp_get_signup_page()?>">
+					<i class="fa fa-user"></i> <?php _e('Register', 'wefoster'); ?>
+				</a>
+
+			</li>
+		<?php endif; ?>
 
 	<?php endif; ?>
 	<?php do_action('close_bp_navigation_menu'); ?>

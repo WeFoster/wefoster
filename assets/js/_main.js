@@ -24,6 +24,8 @@
 
         $('.bp-suggestions').autogrow();
 
+        $('[data-toggle="tooltip"]').tooltip();
+
         //Hide Unstyled Flash
         $('#quick-menu-wrap').removeClass('js-flash');
         $('#dropdown-filter').removeClass('js-flash');
@@ -151,7 +153,7 @@
         //Add them to BuddyPress Stream
         $(document).ajaxSuccess(function(response) {
 
-          setup_videos();
+          //setup_videos();
           setTimeout(setup_videos, 205);
 
         });

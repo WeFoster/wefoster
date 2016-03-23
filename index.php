@@ -31,11 +31,11 @@
     <?php endif; ?>
 
 
-    <?php do_action('before_content'); ?>
+    <?php do_action('before_loop_content'); ?>
     <?php while (have_posts()) : the_post(); ?>
-        <?php get_template_part('templates/loops/content', get_post_format()); ?>
+        <?php get_template_part('templates/loops/content', get_post_type()); ?>
     <?php endwhile; ?>
-    <?php do_action('after_content'); ?>
+    <?php do_action('after_loop_content'); ?>
 
 
     <?php if ($wp_query->max_num_pages > 1) : ?>

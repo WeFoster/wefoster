@@ -128,7 +128,6 @@ function wff_navbar_position() {
 add_action( 'class_primary_menu','wff_navbar_position' );
 
 
-if ( WEFOSTER_LAYOUT_PRESET == 'minimal'  ) {
   /**
    * Use our constants to see if we should stick to the top.
    *
@@ -169,7 +168,6 @@ if ( WEFOSTER_LAYOUT_PRESET == 'minimal'  ) {
       }
       add_filter( 'body_class', 'wff_navbar_fixed_body_class' );
     }
-}
 
 /**
  * Add a body class to enable Bootstrap Select functionality (for pretty select boxes on desktop)
