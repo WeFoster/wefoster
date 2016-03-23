@@ -1,0 +1,36 @@
+<h1 id="jquery-plugin-autogrow-textarea">jQuery Plugin - AutoGrow Textarea</h1>
+<p>===================================</p>
+<h2 id="description">Description</h2>
+<p>This plugin allows a textarea field to grow vertically with its content. To achieve that, a div element is created with exactly the same styles as the textarea and it is placed after it, but hidden. This div is then used as a mirror of the textarea. This is, each time the user types something, the textarea content is passed to the mirror element and it is then used to calculate the textarea height.</p>
+<h2 id="test-it-">Test it!</h2>
+<p>Check the <a href="http://bensampaio.github.io/jquery.autogrow">plugin page</a> if you want to check how it works first.</p>
+<h2 id="installation">Installation</h2>
+<p>Install using bower by running the following command:</p>
+<p><code>$ bower install jquery-autogrow-textarea --save</code></p>
+<p>Or, just clone it.</p>
+<h2 id="usage">Usage</h2>
+<p>Include the CSS file on the head of your page by adding the following:</p>
+<pre><code class="lang-html">&lt;link type=&quot;text/css&quot; href=&quot;/path/to/bower/jquery-autogrow-textarea/dist/jquery.autogrow.min.css&quot; rel=&quot;stylesheet&quot;&gt;
+</code></pre>
+<p>Alternatively, you can also add the content of this file to your own CSS files.</p>
+<p>Include the minified JS file on the head or body of your page by adding the folllowing:</p>
+<pre><code class="lang-html">&lt;script type=&quot;text/javascript&quot; src=&quot;/path/to/bower/jquery-autogrow-textarea/dist/jquery.autogrow.min.js&quot;&gt;&lt;/script&gt;
+</code></pre>
+<p>Make sure the script is loaded after jQuery.</p>
+<p>Initialize it as follows:</p>
+<pre><code class="lang-javascript">$(&#39;textarea&#39;).autogrow()
+</code></pre>
+<h2 id="options">Options</h2>
+<p>You can also initialize it with the following options:</p>
+<ul>
+<li>id: the id attribute to add to the mirror element;</li>
+<li>classes: the classes to add to the mirror element;</li>
+</ul>
+<p>Example:</p>
+<pre><code class="lang-javascript">$(&#39;textarea&#39;).autogrow({ id : &#39;my-textarea-mirror&#39;, classes : &#39;special-textarea-mirror&#39; })
+</code></pre>
+<p><strong>Note</strong>: If there is more then one element on the jQuery collection a index will be appended to the id attribute.</p>
+<h2 id="events">Events</h2>
+<p>If your textarea styles change you can trigger the &#39;autogrow.resize&#39; event to correct the mirror styles as follows:</p>
+<pre><code class="lang-javascript">$(&#39;textarea&#39;).trigger(&#39;autogrow.resize&#39;)
+</code></pre>

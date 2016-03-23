@@ -1,0 +1,92 @@
+<h2 id="changelog">Changelog</h2>
+<h5 id="v-3-0-15-2016-1-26">v.3.0.15 - 2016-1-26</h5>
+<ul>
+<li>Used newer Event constructor, when available. Fixes #280.</li>
+</ul>
+<h5 id="v-3-0-14-2015-11-11">v.3.0.14 - 2015-11-11</h5>
+<ul>
+<li>Fixed memory leak on destroy. Merged #271, fixes #270.</li>
+<li>Fixed bug in old versions of Firefox (1-5), fixes #246.</li>
+</ul>
+<h5 id="v-3-0-13-2015-09-26">v.3.0.13 - 2015-09-26</h5>
+<ul>
+<li>Fixed scroll-bar jumpiness in iOS. Merged #261, fixes #207.</li>
+<li>Fixed reflowing of initial text in Chrome and Safari.</li>
+</ul>
+<h5 id="v-3-0-12-2015-09-14">v.3.0.12 - 2015-09-14</h5>
+<ul>
+<li>Merged changes were discarded when building new dist files.  Merged #255, Fixes #257 for real this time.</li>
+</ul>
+<h5 id="v-3-0-11-2015-09-14">v.3.0.11 - 2015-09-14</h5>
+<ul>
+<li>Fixed regression from 3.0.10 that caused an error with ES5 browsers.  Merged #255, Fixes #257.</li>
+</ul>
+<h5 id="v-3-0-10-2015-09-10">v.3.0.10 - 2015-09-10</h5>
+<ul>
+<li>Removed data attribute as a way of tracking which elements autosize has been assigned to. fixes #254, fixes #200.</li>
+</ul>
+<h5 id="v-3-0-9-2015-09-02">v.3.0.9 - 2015-09-02</h5>
+<ul>
+<li>Fixed issue with assigning autosize to detached nodes. Merged #253, Fixes #234.</li>
+</ul>
+<h5 id="v-3-0-8-2015-06-29">v.3.0.8 - 2015-06-29</h5>
+<ul>
+<li>Fixed the <code>autosize:resized</code> event not being triggered when the overflow changes. Fixes #244.</li>
+</ul>
+<h5 id="v-3-0-7-2015-06-29">v.3.0.7 - 2015-06-29</h5>
+<ul>
+<li>Fixed jumpy behavior in Windows 8.1 mobile. Fixes #239.</li>
+</ul>
+<h5 id="v-3-0-6-2015-05-19">v.3.0.6 - 2015-05-19</h5>
+<ul>
+<li>Renamed &#39;dest&#39; folder to &#39;dist&#39; to follow common conventions.</li>
+</ul>
+<h5 id="v-3-0-5-2015-05-18">v.3.0.5 - 2015-05-18</h5>
+<ul>
+<li>Do nothing in Node.js environment.</li>
+</ul>
+<h5 id="v-3-0-4-2015-05-05">v.3.0.4 - 2015-05-05</h5>
+<ul>
+<li>Added options object for indicating if the script should set the overflowX and overflowY.  The default behavior lets the script control the overflows, which will normalize the appearance between browsers.  Fixes #220.</li>
+</ul>
+<h5 id="v-3-0-3-2015-04-23">v.3.0.3 - 2015-04-23</h5>
+<ul>
+<li>Avoided adjusting the height for hidden textarea elements.  Fixes #155.</li>
+</ul>
+<h5 id="v-3-0-2-2015-04-23">v.3.0.2 - 2015-04-23</h5>
+<ul>
+<li>Reworked to respect max-height of any unit-type.  Fixes #191.</li>
+</ul>
+<h5 id="v-3-0-1-2015-04-23">v.3.0.1 - 2015-04-23</h5>
+<ul>
+<li>Fixed the destroy event so that it removes its own event handler. Fixes #218.</li>
+</ul>
+<h5 id="v-3-0-0-2015-04-15">v.3.0.0 - 2015-04-15</h5>
+<ul>
+<li><p>Added new methods for updating and destroying:</p>
+<ul>
+<li>autosize.update(elements)</li>
+<li>autosize.destroy(elements)</li>
+</ul>
+</li>
+<li><p>Renamed custom events as to not use jQuery&#39;s custom events namespace:</p>
+<ul>
+<li>autosize.resized renamed to autosize:resized</li>
+<li>autosize.update renamed to autosize:update</li>
+<li>autosize.destroy renamed to autosize:destroy</li>
+</ul>
+</li>
+</ul>
+<h5 id="v-2-0-1-2015-04-15">v.2.0.1 - 2015-04-15</h5>
+<ul>
+<li>Version bump for NPM publishing purposes</li>
+</ul>
+<h5 id="v-2-0-0-2015-02-25">v.2.0.0 - 2015-02-25</h5>
+<ul>
+<li>Smaller, simplier code-base</li>
+<li>New API.  Example usage: <code>autosize(document.querySelectorAll(textarea));</code></li>
+<li>Dropped jQuery dependency</li>
+<li>Dropped IE7-IE8 support</li>
+<li>Dropped optional parameters</li>
+<li>Closes #98, closes #106, closes #123, fixes #129, fixes #132, fixes #139, closes #140, closes #166, closes #168, closes #192, closes #193, closes #197</li>
+</ul>

@@ -1,0 +1,46 @@
+<h2 id="summary">Summary</h2>
+<p>Autosize is a small, stand-alone script to automatically adjust textarea height to fit text.</p>
+<h4 id="demo">Demo</h4>
+<p>Full documentation and a demo can be found at <a href="http://jacklmoore.com/autosize">jacklmoore.com/autosize</a></p>
+<h4 id="install-via-npm">Install via NPM</h4>
+<pre><code class="lang-bash">npm install autosize
+</code></pre>
+<h4 id="browser-compatibility">Browser compatibility</h4>
+<table>
+<thead>
+<tr>
+<th>Chrome</th>
+<th>Firefox</th>
+<th>IE</th>
+<th>Safari</th>
+<th>iOS Safari</th>
+<th>Android</th>
+<th>Opera Mini</th>
+<th>Windows Phone IE</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>yes</td>
+<td>yes</td>
+<td>9</td>
+<td>yes</td>
+<td>yes</td>
+<td>4</td>
+<td>?</td>
+<td>8.1</td>
+</tr>
+</tbody>
+</table>
+<h4 id="usage">Usage</h4>
+<p>The autosize function accepts a single textarea element, or an array or array-like object (such as a NodeList or jQuery collection) of textarea elements.</p>
+<pre><code class="lang-javascript">// from a NodeList
+autosize(document.querySelectorAll(&#39;textarea&#39;));
+
+// from a single Node
+autosize(document.querySelector(&#39;textarea&#39;));
+
+// from a jQuery collection
+autosize($(&#39;textarea&#39;));
+</code></pre>
+<p>Released under the <a href="http://www.opensource.org/licenses/mit-license.php">MIT License</a></p>

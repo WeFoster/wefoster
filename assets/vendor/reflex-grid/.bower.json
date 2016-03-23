@@ -1,6 +1,6 @@
 {
   "name": "reflex-grid",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "homepage": "https://github.com/leejordan/reflex/docs/",
   "authors": [
     "Lee Jordan <ldjordan@gmail.com>"
@@ -23,14 +23,13 @@
     "test",
     "tests"
   ],
-  "_release": "1.0.8",
+  "_release": "1.0.9",
   "_resolution": {
     "type": "version",
-    "tag": "1.0.8",
-    "commit": "98dd41d3f8563c3f89ea2a9a565320f3d7cf4dee"
+    "tag": "1.0.9",
+    "commit": "8a8e29390df1396ff65109ee307c23f1a84e7dec"
   },
   "_source": "git://github.com/leejordan/reflex.git",
   "_target": "~1.0.8",
-  "_originalSource": "reflex-grid",
-  "_direct": true
+  "_originalSource": "reflex-grid"
 }

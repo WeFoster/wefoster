@@ -1,0 +1,24 @@
+/*!
+ * This stylesheet is only loaded on the login pages.
+ Version: 1.1.2
+ */
+body {
+  background: #454a54;
+}
+.login #backtoblog a,
+.login #nav a,
+.login h1 a {
+  color: #ffffff;
+}
+.login #backtoblog a:hover,
+.login #nav a:hover,
+.login h1 a:hover {
+  color: #feb43e;
+}
+#loginform {
+  background: #ffffff;
+  border: 6px solid #505662;
+  border-radius: 2px;
+}
+
+/*# sourceMappingURL=login-style.css.map */

@@ -1,5 +1,6 @@
 //Fix padding for admin bar
 //Headroom Plugin
+
 .headroom {
   transition: transform 300ms linear;
 }
@@ -16,6 +17,7 @@
   margin: @margin-half auto 0;
 }
 //Full Header
+
 .full-header-wrap {
   height: 110px;
   position: relative;
@@ -24,6 +26,10 @@
   background-size: cover;
   order: 10;
   border-bottom: 1px solid darken(@white, 4%);
+}
+
+.navbar-inverse .full-header-wrap {
+  border-bottom: 1px solid darken(@navbar-inverse-bg, 4%);
 }
 
 .main {
@@ -37,9 +43,9 @@
 }
 
 .site-description {
-  font-size: @font-size-h2;
+  font-size: @font-size-h3;
   color: @text-color;
-  
+
   img {
     height: 50px;
     width: auto;
@@ -48,8 +54,14 @@
   span {
     display: block;
     font-size: 60%;
-    margin-top: 10px;
+    margin-top: 4px;
     opacity: 0.5;
+  }
+}
+
+.navbar-inverse {
+  .site-description a {
+    color: #FFF;
   }
 }
 /* Small Devices, Tablets */

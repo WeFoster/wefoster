@@ -188,7 +188,7 @@
           name: 'mobile-primary-navigation',
           side: 'right',
           timing: 'ease-in-out',
-          speed: 300
+          speed: 200
         });
 
         $('#close-mobile-primary-navigation').click(function() {
@@ -199,7 +199,7 @@
         $('#buddypress-mobile-user-navigation-trigger').sidr({
           name: 'buddypress-mobile-user-navigation',
           timing: 'ease-in-out',
-          speed: 300
+          speed: 200
         });
 
         $('#close-buddypress-mobile-user-navigation').click(function() {
@@ -210,7 +210,7 @@
         $('#buddypress-mobile-sidebar-trigger').sidr({
           name: 'buddypress-mobile-sidebar',
           timing: 'ease-in-out',
-          speed: 300,
+          speed: 200,
           side: 'right'
         });
 

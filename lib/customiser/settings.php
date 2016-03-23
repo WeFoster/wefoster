@@ -682,7 +682,7 @@ function wf_plus_register_settings($fields)
           'max' => 50,
           'step' => 1
       ),
-      'default' => 32,
+      'default' => 28,
       'js_vars' => array(
           array(
               'element' => '.site-description, .site-description',

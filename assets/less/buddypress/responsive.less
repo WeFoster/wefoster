@@ -1,6 +1,6 @@
 @media screen and (max-width: @grid-float-breakpoint-max) {
-  .directory.members .main div.item-list-tabs ul li.last,
-  .directory.blogs .main div.item-list-tabs ul li.last {
+  .directory.blogs .main div.item-list-tabs ul li.last,
+  .directory.members .main div.item-list-tabs ul li.last {
     position: inherit;
     right: 15px;
     top: -48.5px;
@@ -12,9 +12,9 @@
     position: inherit;
   }
 
+  .directory.blogs .main .item-list,
   .directory.groups .main .item-list,
-  .directory.members .main .item-list,
-  .directory.blogs .main .item-list {
+  .directory.members .main .item-list {
     position: inherit;
     top: @margin-full;
   }
@@ -26,7 +26,6 @@
   clip: rect(1px, 1px, 1px, 1px);
   position: absolute;
 }
-
 @media only screen and (max-width: 480px ) {
   a.bp-title-button {
     margin-left: 10px;
@@ -35,7 +34,7 @@
   div.dir-search {
     float: right;
     text-align: right;
-    
+
     input[type="text"] {
       margin-bottom: 1em;
       width: 50%;
@@ -146,23 +145,25 @@
   div.dir-search {
     float: left;
     margin: 0;
-    
+
     input[type="text"] {
       width: 50%;
     }
   }
 
-  ul.item-list li div.action,
-  li div.item {
+  li div.item,
+  ul.item-list li div.action {
     margin-left: 45px;
   }
 }
 /*! Hiding stuff that is not crucial for mobile experience
 But greatly improves the layout */
 @media only screen and (max-width: @grid-float-breakpoint-max) {
-  .bp-title-button,
+  #site-content #user-sidebar-menu,
+  #site-content #vertical-activity-tabs,
   .bp-cover-photo-content .activity,
   .bp-cover-photo-content .user-nicename,
+  .bp-title-button,
   .cover-photo-action a {
     display: none;
   }
@@ -183,7 +184,7 @@ But greatly improves the layout */
     margin: auto;
     left: -20px;
     right: -20px;
-    
+
     h1 {
       width: 58%;
       display: inline-block !important;
@@ -209,7 +210,7 @@ But greatly improves the layout */
 #buddypress .mobile-profile-header {
   margin: 0 -@margin-full;
   overflow: hidden;
-  
+
   img.avatar {
     float: left;
     margin: 0;

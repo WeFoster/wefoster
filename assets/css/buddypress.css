@@ -249,8 +249,8 @@ div.pagination .pagination-links a {
   * Responsive Design
 */
 @media screen and (max-width: 1024px) {
-  .directory.members .main div.item-list-tabs ul li.last,
-  .directory.blogs .main div.item-list-tabs ul li.last {
+  .directory.blogs .main div.item-list-tabs ul li.last,
+  .directory.members .main div.item-list-tabs ul li.last {
     position: inherit;
     right: 15px;
     top: -48.5px;
@@ -260,9 +260,9 @@ div.pagination .pagination-links a {
   div.pagination {
     position: inherit;
   }
+  .directory.blogs .main .item-list,
   .directory.groups .main .item-list,
-  .directory.members .main .item-list,
-  .directory.blogs .main .item-list {
+  .directory.members .main .item-list {
     position: inherit;
     top: 35px;
   }
@@ -361,17 +361,19 @@ div.pagination .pagination-links a {
   div.dir-search input[type="text"] {
     width: 50%;
   }
-  ul.item-list li div.action,
-  li div.item {
+  li div.item,
+  ul.item-list li div.action {
     margin-left: 45px;
   }
 }
 /*! Hiding stuff that is not crucial for mobile experience
 But greatly improves the layout */
 @media only screen and (max-width: 1024px) {
-  .bp-title-button,
+  #site-content #user-sidebar-menu,
+  #site-content #vertical-activity-tabs,
   .bp-cover-photo-content .activity,
   .bp-cover-photo-content .user-nicename,
+  .bp-title-button,
   .cover-photo-action a {
     display: none;
   }
@@ -519,8 +521,8 @@ body.no-js #whats-new-options {
 .directory.activity .main {
   background: transparent;
 }
-a.activity-time-since,
-a span.time-since {
+a span.time-since,
+a.activity-time-since {
   color: #b3b3b3;
   text-decoration: none;
   font-size: 14px;
@@ -530,9 +532,9 @@ a span.time-since {
   margin: 10px 10px 5px 0;
   overflow: hidden;
 }
+.acomment-meta a,
 .activity-header a,
-.comment-meta a,
-.acomment-meta a {
+.comment-meta a {
   text-decoration: none;
 }
 div.activity-content div.activity-inner {
@@ -554,8 +556,8 @@ a.activity-time-since:hover {
   color: #8d8d8d;
   text-decoration: underline;
 }
-.activity-permalink .activity-list li.mini .activity-avatar img.avatar,
-.activity-permalink .activity-list li.mini .activity-avatar img.FB_profile_pic {
+.activity-permalink .activity-list li.mini .activity-avatar img.FB_profile_pic,
+.activity-permalink .activity-list li.mini .activity-avatar img.avatar {
   height: auto;
   margin-left: 0;
   width: auto;
@@ -584,7 +586,7 @@ ul.item-list.activity-list li {
   margin: 0 10px 5px 0;
 }
 .activity-list .activity-avatar {
-  margin-top: -2px;
+  margin-top: -9px;
   position: absolute;
   width: 50px;
 }
@@ -654,8 +656,8 @@ ul.activity-list.mini li {
   word-wrap: break-word;
   margin-bottom: 0;
 }
-.activity-list li.mini .activity-avatar img.avatar,
-.activity-list li.mini .activity-avatar img.FB_profile_pic {
+.activity-list li.mini .activity-avatar img.FB_profile_pic,
+.activity-list li.mini .activity-avatar img.avatar {
   height: 20px;
   margin-left: 35px;
   width: 20px;
@@ -1462,7 +1464,7 @@ a.bp-title-button .badge {
   background-color: #333333;
 }
 a.bp-title-button {
-  background: #28a587;
+  background: #289ea5;
   color: #fff !important;
   font-size: 40%;
   position: relative;
@@ -1470,8 +1472,8 @@ a.bp-title-button {
 }
 input[type=submit] {
   color: #ffffff;
-  background-color: #28a587;
-  border-color: #239076;
+  background-color: #289ea5;
+  border-color: #238a90;
 }
 input[type=submit]:hover,
 input[type=submit]:focus,
@@ -1480,8 +1482,8 @@ input[type=submit]:active,
 input[type=submit].active,
 .open > .dropdown-toggleinput[type=submit] {
   color: #ffffff;
-  background-color: #1e7c65;
-  border-color: #175f4e;
+  background-color: #1e777c;
+  border-color: #175b5f;
 }
 input[type=submit]:active,
 input[type=submit].active,
@@ -1506,11 +1508,11 @@ fieldset[disabled] input[type=submit]:active,
 input[type=submit].disabled.active,
 input[type=submit][disabled].active,
 fieldset[disabled] input[type=submit].active {
-  background-color: #28a587;
-  border-color: #239076;
+  background-color: #289ea5;
+  border-color: #238a90;
 }
 input[type=submit] .badge {
-  color: #28a587;
+  color: #289ea5;
   background-color: #ffffff;
 }
 a.bp-primary-action,
@@ -1537,8 +1539,8 @@ input[type=submit] {
   -ms-user-select: none;
   user-select: none;
   color: #ffffff;
-  background-color: #28a587;
-  border-color: #239076;
+  background-color: #289ea5;
+  border-color: #238a90;
 }
 a.bp-primary-action:focus,
 #reply-title small a:focus,
@@ -1638,8 +1640,8 @@ input[type=submit].active,
 .open > .dropdown-toggle#upload,
 .open > .dropdown-toggleinput[type=submit] {
   color: #ffffff;
-  background-color: #1e7c65;
-  border-color: #175f4e;
+  background-color: #1e777c;
+  border-color: #175b5f;
 }
 a.bp-primary-action:active,
 #reply-title small a:active,
@@ -1727,14 +1729,14 @@ fieldset[disabled] a.bp-primary-action.active,
 fieldset[disabled] #reply-title small a.active,
 fieldset[disabled] #upload.active,
 fieldset[disabled] input[type=submit].active {
-  background-color: #28a587;
-  border-color: #239076;
+  background-color: #289ea5;
+  border-color: #238a90;
 }
 a.bp-primary-action .badge,
 #reply-title small a .badge,
 #upload .badge,
 input[type=submit] .badge {
-  color: #28a587;
+  color: #289ea5;
   background-color: #ffffff;
 }
 #item-buttons .generic-button {
@@ -1839,8 +1841,8 @@ span.highlight {
 }
 a.bp-title-button {
   color: #ffffff;
-  background-color: #28a587;
-  border-color: #239076;
+  background-color: #289ea5;
+  border-color: #238a90;
 }
 a.bp-title-button:hover,
 a.bp-title-button:focus,
@@ -1849,8 +1851,8 @@ a.bp-title-button:active,
 a.bp-title-button.active,
 .open > .dropdown-togglea.bp-title-button {
   color: #ffffff;
-  background-color: #1e7c65;
-  border-color: #175f4e;
+  background-color: #1e777c;
+  border-color: #175b5f;
 }
 a.bp-title-button:active,
 a.bp-title-button.active,
@@ -1875,11 +1877,11 @@ fieldset[disabled] a.bp-title-button:active,
 a.bp-title-button.disabled.active,
 a.bp-title-button[disabled].active,
 fieldset[disabled] a.bp-title-button.active {
-  background-color: #28a587;
-  border-color: #239076;
+  background-color: #289ea5;
+  border-color: #238a90;
 }
 a.bp-title-button .badge {
-  color: #28a587;
+  color: #289ea5;
   background-color: #ffffff;
 }
 .dir-search input[type=submit] {
@@ -2697,7 +2699,7 @@ div#item-meta {
 .wf-member-action-button .friendship-button a,
 .wf-group-action-button .join-group,
 .wf-member-action-button .join-group {
-  background: #28a587;
+  background: #289ea5;
   color: #ffffff;
 }
 .wf-group-action-button .friendship-button a:before,

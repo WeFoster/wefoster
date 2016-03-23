@@ -2,8 +2,8 @@
   background: transparent;
 }
 
-a.activity-time-since,
-a span.time-since {
+a span.time-since,
+a.activity-time-since {
   color: @gray-lighter;
   text-decoration: none;
   font-size: @font-size-small;
@@ -15,14 +15,14 @@ a span.time-since {
   overflow: hidden;
 }
 
+.acomment-meta a,
 .activity-header a,
-.comment-meta a,
-.acomment-meta a {
+.comment-meta a {
   text-decoration: none;
 }
 
-a.bp-primary-action:hover span,
-#reply-title small a:hover span {
+#reply-title small a:hover span,
+a.bp-primary-action:hover span {
   //background: #555;
   //color: @white;
 }
@@ -34,10 +34,10 @@ div.activity-content div.activity-inner {
   margin-left: 0;
   padding: @activity-inner-padding;
   color: @activity-inner-color;
-  
+
   .embed-responsive {
     margin-top: @margin-half;
-    
+
     iframe {
       padding: 2px;
       background: @brand-complimentary;
@@ -50,8 +50,8 @@ a.activity-time-since:hover {
   text-decoration: underline;
 }
 
-.activity-permalink .activity-list li.mini .activity-avatar img.avatar,
-.activity-permalink .activity-list li.mini .activity-avatar img.FB_profile_pic {
+.activity-permalink .activity-list li.mini .activity-avatar img.FB_profile_pic,
+.activity-permalink .activity-list li.mini .activity-avatar img.avatar {
   height: auto;
   margin-left: 0;
   width: auto;
@@ -76,7 +76,7 @@ ul.item-list.activity-list {
     background: @brand-secondary;
     display: block;
     color: @white;
-    
+
     &:hover {
       opacity: 0.7;
     }
@@ -97,7 +97,7 @@ ul.item-list.activity-list {
   }
 
   .activity-avatar {
-    margin-top: -2px;
+    margin-top: -9px;
     position: absolute;
     width: @medium-avatar-size;
   }
@@ -106,7 +106,7 @@ ul.item-list.activity-list {
     .activity-inreplyto {
       color: @gray-light;
       font-size: 90%;
-      
+
       & > p {
         margin: 0;
         display: inline;
@@ -120,14 +120,14 @@ ul.item-list.activity-list {
     position: relative;
     overflow: hidden;
     min-height: 64px;
-    
+
     .activity-avatar .avatar {
       display: none;
     }
 
     .activity-header {
       margin: 0;
-      
+
       p {
         margin-bottom: -@padding-half;
         margin-top: -@padding-half;
@@ -180,8 +180,8 @@ ul.activity-list.mini {
   }
 }
 
-.activity-list li.mini .activity-avatar img.avatar,
-.activity-list li.mini .activity-avatar img.FB_profile_pic {
+.activity-list li.mini .activity-avatar img.FB_profile_pic,
+.activity-list li.mini .activity-avatar img.avatar {
   height: 20px;
   margin-left: @margin-full;
   width: 20px;
@@ -217,7 +217,7 @@ body.activity-permalink .activity-content blockquote {
   border-radius: 4px;
   margin-bottom: @margin-half;
   margin-top: @margin-half;
-  
+
   .btn-primary {
     background: transparent;
     color: inherit;

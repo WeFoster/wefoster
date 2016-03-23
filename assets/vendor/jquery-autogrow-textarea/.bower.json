@@ -1,10 +1,10 @@
 {
   "name": "jquery-autogrow-textarea",
-  "version": "1.0.3",
+  "version": "1.0.5",
   "description": "",
   "main": "jquery.autogrow.js",
   "dependencies": {
-    "jquery": "2.*"
+    "jquery": "^2.0.0"
   },
   "keywords": [
     "textarea",
@@ -24,14 +24,13 @@
   ],
   "license": "MIT",
   "homepage": "https://github.com/bensampaio/jquery.autogrow",
-  "_release": "1.0.3",
+  "_release": "1.0.5",
   "_resolution": {
     "type": "version",
-    "tag": "1.0.3",
-    "commit": "c90d77dc1a765c5facf1ee627d479d3605a7d327"
+    "tag": "1.0.5",
+    "commit": "c8cfebc0b329488bf1d0e940a635fcdc382f5ce7"
   },
   "_source": "git://github.com/bensampaio/jquery.autogrow.git",
   "_target": "~1.0.3",
-  "_originalSource": "jquery-autogrow-textarea",
-  "_direct": true
+  "_originalSource": "jquery-autogrow-textarea"
 }

@@ -2,45 +2,45 @@
 
 .wf-icon-font-awesome {
   /* Using some fancy CSS magic to add our icons */
-  .item-list-tabs * a:before,
+  #author-description h3:before,
+  #avatar-upload #upload:before,
+  #bbpress-forums .bbp-forums-list li a:before,
+  #bbpress-forums > h3:after,
+  #bp-adminbar-notifications-menu > a:before,
+  #category-title:before,
+  #category-title:before,
+  #comments time a:before,
   #item-buttons * a:before,
-  .sidebar-activity-tabs * a:before,
-  .button:before,
   #message p:before,
   #subnav *:before,
-  #category-title:before,
   #tag-title:before,
-  span.post-tags:before,
-  .generic-button a:before,
-  #category-title:before,
   #tag-title:before,
-  span.post-tags:before,
-  .post-meta-data *:before,
-  .entry-title:before,
-  #author-description h3:before,
-  .single_add_to_cart_button:before,
-  .load-more a:before,
-  #bbpress-forums .bbp-forums-list li a:before,
-  .favorite-toggle:before,
-  .subscription-toggle:before,
-  .single-topic h1:before,
-  .group-forum-topic #bbpress-forums h3:before,
-  .btn:before,
-  li#activity-filter-select label:before,
-  #avatar-upload #upload:before,
-  .page-header h1 span:before,
-  .btn.dropdown-toggle:before,
-  #bp-adminbar-notifications-menu > a:before,
-  .comment-reply-link:before,
-  #comments time a:before,
-  .comment-edit-link:before,
   .about-menu li a:before,
-  .second-active a:after,
   .acomment-reply:before,
   .bp-secondary-action:before,
+  .btn.dropdown-toggle:before,
+  .btn:before,
+  .button:before,
+  .comment-edit-link:before,
+  .comment-reply-link:before,
+  .entry-title:before,
+  .favorite-toggle:before,
+  .generic-button a:before,
+  .group-forum-topic #bbpress-forums h3:before,
+  .item-list-tabs * a:before,
+  .load-more a:before,
   .navbar li a:before,
+  .page-header h1 span:before,
+  .post-meta-data *:before,
+  .second-active a:after,
+  .sidebar-activity-tabs * a:before,
+  .single-topic h1:before,
+  .single_add_to_cart_button:before,
   .sticky .entry-title:after,
-  #bbpress-forums > h3:after {
+  .subscription-toggle:before,
+  li#activity-filter-select label:before,
+  span.post-tags:before,
+  span.post-tags:before {
     .font-icon();
   }
   //
@@ -81,8 +81,8 @@
     //content: "\f059";
   }
   /* Some Small Padding tweaks to make the icons look sweet */
-  div#item-header div.generic-button,
-  div#item-header a.button {
+  div#item-header a.button,
+  div#item-header div.generic-button {
     padding: 0 8px;
   }
 
@@ -112,8 +112,8 @@
     content: '\f08a';
   }
 
-  li#activity-favorites a:before,
-  .button.unfav:before {
+  .button.unfav:before,
+  li#activity-favorites a:before {
     content: '\f004';
   }
 
@@ -122,18 +122,18 @@
     content: '\f007';
   }
 
-  li#activity-groups a:before,
-  .widget_bp_groups_widget {
+  .widget_bp_groups_widget,
+  li#activity-groups a:before {
     content: '\f1cd';
   }
 
-  li#activity-links a:before,
-  #nav-links:before {
+  #nav-links:before,
+  li#activity-links a:before {
     content: '\f0c1';
   }
 
   li#activity-mentions a:before {
-    content: '\f06e';
+    content: '\f27b';
   }
 
   li#activity-following a,
@@ -149,10 +149,10 @@
     content: '\f06a';
   }
 
+  .acomment-delete:before,
   .delete-activity:before,
   .generic-button.is_friend a:before,
-  .generic-button.pending_friend a:before,
-  .acomment-delete:before {
+  .generic-button.pending_friend a:before {
     content: '\f014';
   }
 
@@ -195,8 +195,8 @@
     content: '\f03e';
   }
 
-  li#nav-docs-groups-li a:before,
-  #user-docs:before {
+  #user-docs:before,
+  li#nav-docs-groups-li a:before {
     content: '\f0f6';
   }
 
@@ -247,9 +247,9 @@
     content: '\f0a2';
   }
 
-  #user-messages:before,
   #nav-invite-anyone:before,
-  #user-invite-anyone:before {
+  #user-invite-anyone:before,
+  #user-messages:before {
     content: '\f0e0';
   }
 
@@ -266,13 +266,13 @@
     content: '\f022';
   }
 
-  a.send-message:before,
-  #nav-invite-anyone:before {
+  #nav-invite-anyone:before,
+  a.send-message:before {
     content: '\f003';
   }
 
-  a.friendship-button:before,
-  .groups #item-buttons .group-button a:before {
+  .groups #item-buttons .group-button a:before,
+  a.friendship-button:before {
     content: '\f0fe';
   }
 
