@@ -7922,63 +7922,6 @@ body.wefoster-navbar-fixed-top {
   position: relative;
   top: -2px;
 }
-/* Using some fancy CSS magic to add our icons */
-#author-description h3:before,
-#comments time a:before,
-.btn.dropdown-toggle:before,
-.comment-edit-link:before,
-.comment-reply-link:before,
-.entry-title:before,
-.navbar li a:before,
-.page-header h1 span:before,
-.post-meta-data *:before {
-  color: inherit;
-  font-family: 'FontAwesome';
-  font-size: inherit;
-  font-weight: normal;
-  padding-right: 7px;
-  position: relative;
-  text-transform: none;
-  box-shadow: none;
-  line-height: 100%;
-}
-/* ================ */
-/* ! Post Formats   */
-/* ================ */
-.format-video .entry-title:before {
-  content: '\f03d';
-}
-.format-link .entry-title:before {
-  content: '\f02e';
-}
-.format-gallery .entry-title:before {
-  content: '\f083';
-}
-.format-image .entry-title:before {
-  content: '\f03e';
-}
-.format-audio .entry-title:before {
-  content: '\f028';
-}
-.format-chat .post-title:before {
-  content: '\f086';
-}
-.format-status .post-title:before {
-  content: '\f0eb';
-}
-.format-quote .post-title:before {
-  content: '\f10e';
-}
-.comment-reply-link:before {
-  content: '\f112';
-}
-#comments time a:before {
-  content: '\f017';
-  right: -4px;
-}
-#comments .comment-edit-link:before {
-  content: '\f040';
-}
 /*!
   * Homepage Template
 */
