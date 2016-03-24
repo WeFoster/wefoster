@@ -42,6 +42,7 @@ if ( ! class_exists( 'Kirki_Customizer_Scripts_Tooltips' ) ) {
 		 * Once created, the script is added to the $tooltip_script property.
 		 *
 		 * @param array the field definition
+		 *
 		 * @return void
 		 */
 		public static function generate_script( $args = array() ) {

@@ -24,25 +24,25 @@ if ( ! class_exists( 'Kirki_Controls_Custom_Control' ) ) {
 
 		protected function content_template() { ?>
 			<# if ( data.tooltip ) { #>
-				<a href="#" class="tooltip hint--left" data-hint="{{ data.tooltip }}"><span class='dashicons dashicons-info'></span></a>
+			<a href="#" class="tooltip hint--left" data-hint="{{ data.tooltip }}"><span class='dashicons dashicons-info'></span></a>
 			<# } #>
 			<label>
 				<# if ( data.label ) { #>
 					<span class="customize-control-title">{{{ data.label }}}</span>
-				<# } #>
-				<# if ( data.description ) { #>
-					<span class="description customize-control-description">{{{ data.description }}}</span>
-				<# } #>
-				<?php
-					/**
-					 * The value is defined by the developer in the field configuration as 'default'.
-					 * There is no user input on this field, it's a raw HTML/JS field and we do not sanitize it.
-					 * Do not be alarmed, this is not a security issue.
-					 * In order for someone to be able to change this they would have to have access to your filesystem.
-					 * If that happens, they can change whatever they want anyways. This field is not a concern.
-					 */
-				?>
-				{{{ data.value }}}
+					<# } #>
+						<# if ( data.description ) { #>
+							<span class="description customize-control-description">{{{ data.description }}}</span>
+							<# } #>
+								<?php
+								/**
+								 * The value is defined by the developer in the field configuration as 'default'.
+								 * There is no user input on this field, it's a raw HTML/JS field and we do not sanitize it.
+								 * Do not be alarmed, this is not a security issue.
+								 * In order for someone to be able to change this they would have to have access to your filesystem.
+								 * If that happens, they can change whatever they want anyways. This field is not a concern.
+								 */
+								?>
+								{{{ data.value }}}
 			</label>
 			<?php
 

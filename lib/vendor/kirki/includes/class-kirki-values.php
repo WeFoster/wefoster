@@ -138,7 +138,7 @@ if ( ! class_exists( 'Kirki_Values' ) ) {
 				$value = get_theme_mod( $field['settings'], $field['default'] );
 			} else if ( isset( $field['option_type'] ) && 'option' == $field['option_type'] ) {
 				if ( isset( $field['option_name'] ) && '' != $field['option_name'] ) {
-					$all_values = get_option( $field['option_name'], array() );
+					$all_values     = get_option( $field['option_name'], array() );
 					$sub_setting_id = str_replace( array( ']', $field['option_name'] . '[' ), '', $field['settings'] );
 					if ( isset( $all_values[ $sub_setting_id ] ) ) {
 						$value = $all_values[ $sub_setting_id ];

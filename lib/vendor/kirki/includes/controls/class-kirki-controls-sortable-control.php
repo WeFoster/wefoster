@@ -33,13 +33,18 @@ if ( ! class_exists( 'Kirki_Controls_Sortable_Control' ) ) {
 		 */
 		public function customize_sanitize( $value ) {
 			$value = maybe_unserialize( $value );
+
 			return $value;
 		}
 
 		public function enqueue() {
 			wp_enqueue_script( 'jquery-ui-core' );
 			wp_enqueue_script( 'jquery-ui-sortable' );
-			Kirki_Styles_Customizer::enqueue_customizer_control_script( 'kirki-sortable', 'controls/sortable', array( 'jquery', 'jquery-ui-core', 'jquery-ui-sortable' ) );
+			Kirki_Styles_Customizer::enqueue_customizer_control_script( 'kirki-sortable', 'controls/sortable', array(
+				'jquery',
+				'jquery-ui-core',
+				'jquery-ui-sortable'
+			) );
 		}
 
 		public function to_json() {
@@ -72,7 +77,7 @@ if ( ! class_exists( 'Kirki_Controls_Sortable_Control' ) ) {
 			<# if ( ! data.choicesLength ) return; #>
 
 			<# if ( data.tooltip ) { #>
-				<a href="#" class="tooltip hint--left" data-hint="{{ data.tooltip }}"><span class='dashicons dashicons-info'></span></a>
+			<a href="#" class="tooltip hint--left" data-hint="{{ data.tooltip }}"><span class='dashicons dashicons-info'></span></a>
 			<# } #>
 
 			<label class='kirki-sortable'>
@@ -91,18 +96,18 @@ if ( ! class_exists( 'Kirki_Controls_Sortable_Control' ) ) {
 								<i class="dashicons dashicons-visibility visibility"></i>
 								{{{ data.choices[ data.filteredValues[i] ] }}}
 							</li>
-						<# } #>
-					<# } #>
+							<# } #>
+								<# } #>
 
-					<# for ( i in data.invisibleKeys ) { #>
-						<# if ( data.invisibleKeys.hasOwnProperty( i ) ) { #>
-							<li class='kirki-sortable-item invisible' data-value='{{ data.invisibleKeys[i] }}'>
-								<i class='dashicons dashicons-menu'></i>
-								<i class="dashicons dashicons-visibility visibility"></i>
-								{{{ data.choices[ data.invisibleKeys[i] ] }}}
-							</li>
-						<# } #>
-					<# } #>
+									<# for ( i in data.invisibleKeys ) { #>
+										<# if ( data.invisibleKeys.hasOwnProperty( i ) ) { #>
+											<li class='kirki-sortable-item invisible' data-value='{{ data.invisibleKeys[i] }}'>
+												<i class='dashicons dashicons-menu'></i>
+												<i class="dashicons dashicons-visibility visibility"></i>
+												{{{ data.choices[ data.invisibleKeys[i] ] }}}
+											</li>
+											<# } #>
+												<# } #>
 				</ul>
 
 				<div style='clear: both'></div>

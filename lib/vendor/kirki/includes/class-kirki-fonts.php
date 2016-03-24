@@ -10,7 +10,8 @@ if ( ! class_exists( 'Kirki_Fonts' ) ) {
 
 		public static $google_fonts = null;
 
-		private function __construct() {}
+		private function __construct() {
+		}
 
 		/**
 		 * Get the one, true instance of this class.
@@ -22,6 +23,7 @@ if ( ! class_exists( 'Kirki_Fonts' ) ) {
 			if ( null === self::$instance ) {
 				self::$instance = new self();
 			}
+
 			return self::$instance;
 		}
 
@@ -42,18 +44,19 @@ if ( ! class_exists( 'Kirki_Fonts' ) ) {
 		 *
 		 * @return array    Standard websafe fonts.
 		 */
-		 public static function get_standard_fonts() {
+		public static function get_standard_fonts() {
 			$i18n = Kirki_l10n::get_strings();
+
 			return apply_filters( 'kirki/fonts/standard_fonts', array(
-				'serif'     => array(
+				'serif'      => array(
 					'label' => $i18n['serif'],
 					'stack' => 'Georgia,Times,"Times New Roman",serif',
 				),
 				'sans-serif' => array(
-					'label'  => $i18n['sans-serif'],
-					'stack'  => 'Helvetica,Arial,sans-serif',
+					'label' => $i18n['sans-serif'],
+					'stack' => 'Helvetica,Arial,sans-serif',
 				),
-				'monospace' => array(
+				'monospace'  => array(
 					'label' => $i18n['monospace'],
 					'stack' => 'Monaco,"Lucida Sans Typewriter","Lucida Typewriter","Courier New",Courier,monospace',
 				),
@@ -73,6 +76,7 @@ if ( ! class_exists( 'Kirki_Fonts' ) ) {
 				'handwriting' => '"Comic Sans MS", cursive, sans-serif',
 				'monospace'   => '"Lucida Console", Monaco, monospace',
 			);
+
 			return apply_filters( 'kirki/fonts/backup_fonts', $backup_fonts );
 		}
 
@@ -112,10 +116,12 @@ if ( ! class_exists( 'Kirki_Fonts' ) ) {
 		 * dummy function to avoid issues with backwards-compatibility.
 		 * This is not functional, but it will prevent PHP Fatal errors.
 		 */
-		public static function get_google_font_uri() {}
+		public static function get_google_font_uri() {
+		}
 
 		public static function get_google_font_subsets() {
 			$i18n = Kirki_l10n::get_strings();
+
 			return array(
 				// 'all'          => $i18n['all'],
 				'cyrillic'     => $i18n['cyrillic'],
@@ -139,6 +145,7 @@ if ( ! class_exists( 'Kirki_Fonts' ) ) {
 
 		public static function get_all_variants() {
 			$i18n = Kirki_l10n::get_strings();
+
 			return array(
 				'100'       => $i18n['ultra-light'],
 				'100italic' => $i18n['ultra-light-italic'],
@@ -169,11 +176,12 @@ if ( ! class_exists( 'Kirki_Fonts' ) ) {
 		}
 
 		public static function get_font_choices() {
-			$fonts = self::get_all_fonts();
+			$fonts       = self::get_all_fonts();
 			$fonts_array = array();
 			foreach ( $fonts as $key => $args ) {
 				$fonts_array[ $key ] = $key;
 			}
+
 			return $fonts_array;
 		}
 

@@ -138,12 +138,13 @@ function wff_register_sections( $wp_customize ) {
 	) );
 
 	// Typography
-  $wp_customize->add_section( 'wf_plus_typography_navigation_section', array(
-    'title'       => __( 'Navigation', 'kirki' ),
-    'priority'    => 10,
-    'panel'       => 'wf_plus_typography_panel',
-    'description' => __( 'Change the Navigation Font Settings', 'kirki' ),
-  ) );
+	$wp_customize->add_section( 'wf_plus_typography_navigation_section', array(
+		'title'       => __( 'Navigation', 'kirki' ),
+		'priority'    => 10,
+		'panel'       => 'wf_plus_typography_panel',
+		'description' => __( 'Change the Navigation Font Settings', 'kirki' ),
+	) );
 
 }
+
 add_action( 'customize_register', 'wff_register_sections', 1000 );

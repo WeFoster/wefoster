@@ -27,25 +27,28 @@ if ( ! class_exists( 'Kirki_Controls_Palette_Control' ) ) {
 		protected function content_template() { ?>
 			<# if ( data.tooltip ) { #>
 				<a href="#" class="tooltip hint--left" data-hint="{{ data.tooltip }}"><span class='dashicons dashicons-info'></span></a>
-			<# } #>
-			<# if ( ! data.choices ) { return; } #>
+				<# } #>
+					<# if ( ! data.choices ) { return; } #>
 			<span class="customize-control-title">
 				{{ data.label }}
 			</span>
-			<# if ( data.description ) { #>
-				<span class="description customize-control-description">{{ data.description }}</span>
-			<# } #>
-			<div id="input_{{ data.id }}" class="buttonset">
-				<# for ( key in data.choices ) { #>
-					<input type="radio" value="{{ key }}" name="_customize-palette-{{ data.id }}" id="{{ data.id }}{{ key }}" {{{ data.link }}}<# if ( data.value == key ) { #> checked<# } #>>
-						<label for="{{ data.id }}{{ key }}">
-							<# for ( color in data.choices[ key ] ) { #>
-								<span style='background: {{ data.choices[ key ][ color ] }}'>{{ data.choices[ key ][ color ] }}</span>
+						<# if ( data.description ) { #>
+							<span class="description customize-control-description">{{ data.description }}</span>
 							<# } #>
-						</label>
-					</input>
-				<# } #>
-			</div>
+								<div id="input_{{ data.id }}" class="buttonset">
+									<# for ( key in data.choices ) { #>
+										<input type="radio" value="{{ key }}" name="_customize-palette-{{ data.id }}" id="{{ data.id }}{{ key }}" {{{ data.link
+										       }}}
+										<# if ( data.value == key ) { #> checked
+											<# } #>>
+												<label for="{{ data.id }}{{ key }}">
+													<# for ( color in data.choices[ key ] ) { #>
+														<span style='background: {{ data.choices[ key ][ color ] }}'>{{ data.choices[ key ][ color ] }}</span>
+														<# } #>
+												</label>
+												</input>
+												<# } #>
+								</div>
 			<?php
 		}
 	}

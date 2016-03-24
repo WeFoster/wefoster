@@ -3,7 +3,9 @@
 $stylekit = get_theme_mod( 'wf_stylekit', 'default' );
 
 // No option set? Set default
-if ( empty( $stylekit ) ) { $stylekit = 'default'; }
+if ( empty( $stylekit ) ) {
+	$stylekit = 'default';
+}
 
 //Define our Stylekit directory so it can be changed if needed.
 if ( ! defined( 'WEFOSTER_PLUS_STYLEKIT_DIR' ) ) {
@@ -12,7 +14,7 @@ if ( ! defined( 'WEFOSTER_PLUS_STYLEKIT_DIR' ) ) {
 
 //Define Stylekit name,
 if ( ! defined( 'WEFOSTER_PLUS_STYLEKIT_NAME' ) ) {
-		define( 'WEFOSTER_PLUS_STYLEKIT_NAME', $stylekit );
+	define( 'WEFOSTER_PLUS_STYLEKIT_NAME', $stylekit );
 }
 
 // Load the right Stylekit based on choice of the user
@@ -30,15 +32,16 @@ if ( file_exists( $file ) ) {
 function wefoster_stylekits() {
 
 	if ( ! defined( 'WEFOSTER_PLUS_PLUGIN_DIR' ) ) {
-			$stylekits = array(
-				'default'        => 'Classic',
-			);
+		$stylekits = array(
+			'default' => 'Classic',
+		);
 
-			return $stylekits;
+		return $stylekits;
 
 	} else {
 		// Load the fonts from WeFoster Plus
 		return wefoster_stylekits_plus();
 	}
 }
+
 ?>

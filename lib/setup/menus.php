@@ -14,10 +14,11 @@
 if ( ! function_exists( 'wff_setup_menu' ) ) {
 	function wff_setup_menu() {
 		// Register wp_nav_menu() menus (http://codex.wordpress.org/Function_Reference/register_nav_menus)
-   register_nav_menu( 'primary_navigation', __( 'Primary Navigation', 'wefoster' ) );
+		register_nav_menu( 'primary_navigation', __( 'Primary Navigation', 'wefoster' ) );
 
-   register_nav_menu( 'secondary_navigation', __( 'Secondary Navigation', 'wefoster' ) );
+		register_nav_menu( 'secondary_navigation', __( 'Secondary Navigation', 'wefoster' ) );
 	}
+
 	add_action( 'after_setup_theme', 'wff_setup_menu' );
 }
 
@@ -46,7 +47,7 @@ class wff_Nav_Walker extends Walker_Nav_Menu {
 		$item_html = '';
 		parent::start_el( $item_html, $item, $depth, $args );
 
-		if ( $item->is_dropdown && ($depth === 0) ) {
+		if ( $item->is_dropdown && ( $depth === 0 ) ) {
 			$item_html = str_replace( '<a', '<a class="dropdown-toggle" data-toggle="dropdown" data-target="#"', $item_html );
 			$item_html = str_replace( '</a>', ' <b class="caret"></b></a>', $item_html );
 		} elseif ( stristr( $item_html, 'li class="divider' ) ) {
@@ -60,7 +61,7 @@ class wff_Nav_Walker extends Walker_Nav_Menu {
 	}
 
 	function display_element( $element, &$children_elements, $max_depth, $depth = 0, $args, &$output ) {
-		$element->is_dropdown = (( ! empty( $children_elements[ $element->ID ] ) && (($depth + 1) < $max_depth || ($max_depth === 0))));
+		$element->is_dropdown = ( ( ! empty( $children_elements[ $element->ID ] ) && ( ( $depth + 1 ) < $max_depth || ( $max_depth === 0 ) ) ) );
 
 		if ( $element->is_dropdown ) {
 			$element->classes[] = 'dropdown';
@@ -76,7 +77,7 @@ class wff_Nav_Walker extends Walker_Nav_Menu {
  * Return 'menu-slug' for nav menu classes
  */
 function wff_nav_menu_css_class( $classes, $item ) {
-	$slug = sanitize_title( $item->title );
+	$slug    = sanitize_title( $item->title );
 	$classes = preg_replace( '/(current(-menu-|[-_]page[-_])(item|parent|ancestor))/', 'active', $classes );
 	$classes = preg_replace( '/^((menu|page)[-_\w+]+)+/', '', $classes );
 
@@ -86,6 +87,7 @@ function wff_nav_menu_css_class( $classes, $item ) {
 
 	return array_filter( $classes, 'is_element_empty' );
 }
+
 add_filter( 'nav_menu_css_class', 'wff_nav_menu_css_class', 100, 2 );
 add_filter( 'nav_menu_item_id', '__return_null' );
 
@@ -97,6 +99,7 @@ function add_filters( $tags, $function ) {
 
 function is_element_empty( $element ) {
 	$element = trim( $element );
+
 	return empty( $element ) ? false : true;
 }
 
@@ -121,6 +124,7 @@ function wff_nav_menu_args( $args = '' ) {
 
 	return array_merge( $args, $wff_nav_menu_args );
 }
+
 add_filter( 'wp_nav_menu_args', 'wff_nav_menu_args' );
 
 /**
@@ -155,32 +159,39 @@ function wff_wp_nav_menu_objects( $sorted_menu_items, $args ) {
 			}
 		}
 	}
+
 	return $sorted_menu_items;
 }
-add_filter( 'wp_nav_menu_objects','wff_wp_nav_menu_objects',10,2 );
+
+add_filter( 'wp_nav_menu_objects', 'wff_wp_nav_menu_objects', 10, 2 );
 
 function wf_menu_fallback( $args ) {
-		if ( current_user_can( 'manage_options' ) ) {
-			extract( $args );
-			$fb_output = null;
-			if ( $container ) {
-				$fb_output = '<' . $container;
-				if ( $container_id )
-					$fb_output .= ' id="' . $container_id . '"';
-				if ( $container_class )
-					$fb_output .= ' class="' . $container_class . '"';
-				$fb_output .= '>';
+	if ( current_user_can( 'manage_options' ) ) {
+		extract( $args );
+		$fb_output = null;
+		if ( $container ) {
+			$fb_output = '<' . $container;
+			if ( $container_id ) {
+				$fb_output .= ' id="' . $container_id . '"';
 			}
-			$fb_output .= '<ul';
-			if ( $menu_id )
-				$fb_output .= ' id="' . $menu_id . '"';
-			if ( $menu_class )
-				$fb_output .= ' class="' . $menu_class . '"';
+			if ( $container_class ) {
+				$fb_output .= ' class="' . $container_class . '"';
+			}
 			$fb_output .= '>';
-			$fb_output .= '<li><a href="' . admin_url( 'nav-menus.php' ) . '"><i class="fa fa-exclamation-circle"></i> No Menu Set. Click Here to add one.</a></li>';
-			$fb_output .= '</ul>';
-			if ( $container )
-				$fb_output .= '</' . $container . '>';
-			echo $fb_output;
 		}
+		$fb_output .= '<ul';
+		if ( $menu_id ) {
+			$fb_output .= ' id="' . $menu_id . '"';
+		}
+		if ( $menu_class ) {
+			$fb_output .= ' class="' . $menu_class . '"';
+		}
+		$fb_output .= '>';
+		$fb_output .= '<li><a href="' . admin_url( 'nav-menus.php' ) . '"><i class="fa fa-exclamation-circle"></i> No Menu Set. Click Here to add one.</a></li>';
+		$fb_output .= '</ul>';
+		if ( $container ) {
+			$fb_output .= '</' . $container . '>';
+		}
+		echo $fb_output;
 	}
+}

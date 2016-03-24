@@ -22,17 +22,19 @@ if ( ! class_exists( 'Kirki_Controls_Toggle_Control' ) ) {
 		protected function content_template() { ?>
 			<# if ( data.tooltip ) { #>
 				<a href="#" class="tooltip hint--left" data-hint="{{ data.tooltip }}"><span class='dashicons dashicons-info'></span></a>
-			<# } #>
-			<label for="toggle_{{ data.id }}">
+				<# } #>
+					<label for="toggle_{{ data.id }}">
 				<span class="customize-control-title">
 					{{{ data.label }}}
 				</span>
-				<# if ( data.description ) { #>
-					<span class="description customize-control-description">{{{ data.description }}}</span>
-				<# } #>
-				<input name="toggle_{{ data.id }}" id="toggle_{{ data.id }}" type="checkbox" value="{{ data.value }}" {{{ data.link }}}<# if ( '1' == data.value ) { #> checked<# } #> hidden />
-				<span  class="switch"></span>
-			</label>
+						<# if ( data.description ) { #>
+							<span class="description customize-control-description">{{{ data.description }}}</span>
+							<# } #>
+								<input name="toggle_{{ data.id }}" id="toggle_{{ data.id }}" type="checkbox" value="{{ data.value }}" {{{ data.link }}}
+								<# if ( '1' == data.value ) { #> checked
+									<# } #> hidden />
+										<span class="switch"></span>
+					</label>
 			<?php
 		}
 	}

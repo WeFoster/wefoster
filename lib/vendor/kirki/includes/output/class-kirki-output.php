@@ -30,6 +30,7 @@ class Kirki_Output {
 	 * The class constructor
 	 *
 	 * @access public
+	 *
 	 * @param $config_id    string
 	 * @param $output       array
 	 * @param $value        string|array
@@ -58,8 +59,10 @@ class Kirki_Output {
 			if ( ! is_callable( $output['sanitize_callback'] ) ) {
 				return $value;
 			}
+
 			return call_user_func( $output['sanitize_callback'], $this->value );
 		}
+
 		return $value;
 	}
 
@@ -104,6 +107,7 @@ class Kirki_Output {
 	 * Parses an output and creates the styles array for it
 	 *
 	 * @access protected
+	 *
 	 * @param $output array
 	 * @param $value  string
 	 *
@@ -114,9 +118,9 @@ class Kirki_Output {
 			return;
 		}
 		$output['media_query'] = ( isset( $output['media_query'] ) ) ? $output['media_query'] : 'global';
-		$output['prefix']      = ( isset( $output['prefix'] ) )      ? $output['prefix']      : '';
-		$output['units']       = ( isset( $output['units'] ) )       ? $output['units']       : '';
-		$output['suffix']      = ( isset( $output['suffix'] ) )      ? $output['suffix']      : '';
+		$output['prefix']      = ( isset( $output['prefix'] ) ) ? $output['prefix'] : '';
+		$output['units']       = ( isset( $output['units'] ) ) ? $output['units'] : '';
+		$output['suffix']      = ( isset( $output['suffix'] ) ) ? $output['suffix'] : '';
 
 		$this->styles[ $output['media_query'] ][ $output['element'] ][ $output['property'] ] = $output['prefix'] . $value . $output['units'] . $output['suffix'];
 	}
@@ -126,6 +130,7 @@ class Kirki_Output {
 	 * We need to tweak the value to make everything works as expected.
 	 *
 	 * @access protected
+	 *
 	 * @param $property  string  the CSS property
 	 * @param $value     string  the value
 	 *
@@ -139,9 +144,11 @@ class Kirki_Output {
 		) );
 		if ( array_key_exists( $property, $properties ) ) {
 			$classname = $properties[ $property ];
-			$obj = new $classname( $property, $value );
+			$obj       = new $classname( $property, $value );
+
 			return $obj->get_value();
 		}
+
 		return $value;
 	}
 
@@ -149,6 +156,7 @@ class Kirki_Output {
 	 * Returns the value
 	 *
 	 * @access protected
+	 *
 	 * @param string|array
 	 *
 	 * @return string|array
@@ -157,6 +165,7 @@ class Kirki_Output {
 		if ( isset( $output['property'] ) ) {
 			return $this->process_property_value( $output['property'], $value );
 		}
+
 		return $value;
 	}
 

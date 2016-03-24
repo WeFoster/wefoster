@@ -6,7 +6,8 @@ if ( ! class_exists( 'Kirki_Active_Callback' ) ) {
 		/**
 		 * Figure out whether the current object should be displayed or not.
 		 *
-		 * @param $object 	the current field
+		 * @param $object    the current field
+		 *
 		 * @return boolean
 		 */
 		public static function evaluate( $object ) {
@@ -78,6 +79,7 @@ if ( ! class_exists( 'Kirki_Active_Callback' ) ) {
 		 * @param mixed $value1 the 1st value in the comparison
 		 * @param mixed $value2 the 2nd value in the comparison
 		 * @param string $operator the operator we'll use for the comparison.
+		 *
 		 * @return boolean whether the comparison has succeded (true) or failed (false).
 		 */
 		public static function compare( $value1, $value2, $operator ) {

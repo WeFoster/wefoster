@@ -13,11 +13,12 @@ add_filter( 'bp_get_group_create_nav_item', '__return_false' );
  */
 function wff_bp_cover_image_sizes( $settings = array() ) {
 
-	  $settings['width']  = 2000;
-	  $settings['height'] = 2000;
+	$settings['width']  = 2000;
+	$settings['height'] = 2000;
 
 	return $settings;
 }
+
 add_filter( 'bp_before_xprofile_cover_image_settings_parse_args', 'wff_bp_cover_image_sizes', 10, 1 );
 add_filter( 'bp_before_groups_cover_image_settings_parse_args', 'wff_bp_cover_image_sizes', 10, 1 );
 
@@ -28,8 +29,10 @@ add_filter( 'bp_before_groups_cover_image_settings_parse_args', 'wff_bp_cover_im
  */
 function wff_bp_group_cover_image_default( $settings = array() ) {
 	$settings['default_cover'] = WEFOSTER_DEFAULT_GROUP_COVER_PHOTO;
+
 	return $settings;
 }
+
 add_filter( 'bp_before_groups_cover_image_settings_parse_args', 'wff_bp_group_cover_image_default', 10, 1 );
 
 /**
@@ -39,8 +42,10 @@ add_filter( 'bp_before_groups_cover_image_settings_parse_args', 'wff_bp_group_co
  */
 function wff_bp_member_cover_image_default( $settings = array() ) {
 	$settings['default_cover'] = WEFOSTER_DEFAULT_MEMBER_COVER_PHOTO;
+
 	return $settings;
 }
+
 add_filter( 'bp_before_xprofile_cover_image_settings_parse_args', 'wff_bp_member_cover_image_default', 10, 1 );
 
 /**
@@ -51,18 +56,19 @@ add_filter( 'bp_before_xprofile_cover_image_settings_parse_args', 'wff_bp_member
 if ( ! function_exists( 'wff_default_group_avatar' ) ) {
 	function wff_default_group_avatar( $avatar ) {
 		global $bp, $groups_template;
-		if ( strpos( $avatar,'group-avatars' ) ) {
+		if ( strpos( $avatar, 'group-avatars' ) ) {
 			return $avatar;
 		} else {
-			$custom_avatar = get_template_directory_uri() .'/assets/img/avatar-group.jpg';
+			$custom_avatar = get_template_directory_uri() . '/assets/img/avatar-group.jpg';
 
 			if ( $bp->current_action == '' ) {
-				return '<img width="'.BP_AVATAR_THUMB_WIDTH.'" height="'.BP_AVATAR_THUMB_HEIGHT.'" src="'.$custom_avatar.'" class="avatar" alt="' . esc_attr( $groups_template->group->name ) . '" />';
+				return '<img width="' . BP_AVATAR_THUMB_WIDTH . '" height="' . BP_AVATAR_THUMB_HEIGHT . '" src="' . $custom_avatar . '" class="avatar" alt="' . esc_attr( $groups_template->group->name ) . '" />';
 			} else {
-				return '<img width="'.BP_AVATAR_FULL_WIDTH.'" height="'.BP_AVATAR_FULL_HEIGHT.'" src="'.$custom_avatar.'" class="avatar" alt="' . esc_attr( $groups_template->group->name ) . '" />';
+				return '<img width="' . BP_AVATAR_FULL_WIDTH . '" height="' . BP_AVATAR_FULL_HEIGHT . '" src="' . $custom_avatar . '" class="avatar" alt="' . esc_attr( $groups_template->group->name ) . '" />';
 			}
 		}
 	}
+
 	add_filter( 'bp_get_group_avatar', 'wff_default_group_avatar', 1 );
 	add_filter( 'bp_get_new_group_avatar', 'wff_default_group_avatar', 1 );
 }
@@ -72,6 +78,7 @@ add_filter( 'body_class', 'wff_bp_is_active_body_class' );
 function wff_bp_is_active_body_class( $classes ) {
 	// add 'class-name' to the $classes array
 	$classes[] = 'buddypress-active';
+
 	// return the $classes array
 	return $classes;
 }
@@ -85,21 +92,26 @@ function wf_change_bp_register_page_width() {
 		function wf_profile_main_filter() {
 			// Change our class for .main
 			$class = 'col-sm-12';
+
 			// Return it
 			return $class;
 		}
+
 		// Add the filter.
 		add_filter( 'wff_main_class', 'wf_profile_main_filter' );
 		function wf_profile_sidebar_filter() {
 			// Change our class for the sidebar
 			$class = 'hidden';
+
 			// Return it
 			return $class;
 		}
+
 		// Add the filter.
 		add_filter( 'wff_sidebar_class', 'wf_profile_sidebar_filter' );
 	}
 }
+
 // Hook our function at the right place.
 add_action( 'init', 'wf_change_bp_register_page_width' );
 
@@ -111,7 +123,8 @@ add_action( 'init', 'wf_change_bp_register_page_width' );
 function wff_bp_navbar_position() {
 	echo apply_filters( 'wff_bp_navbar_position_class', ' ' . WEFOSTER_BP_NAVBAR_POSITION_CLASS . ' ' );
 }
-add_action( 'class_bp_menu','wff_bp_navbar_position' );
+
+add_action( 'class_bp_menu', 'wff_bp_navbar_position' );
 
 /**
  * Add a body class to change the sidebar
@@ -119,44 +132,50 @@ add_action( 'class_bp_menu','wff_bp_navbar_position' );
  * @since 1.0.0
  *
  */
-if ( ! function_exists ( 'wff_bp_activity_sidebar_position' ) ) {
-   function wff_bp_activity_sidebar_position( $classes ) {
-   	// add a body class
-   	$classes[] = apply_filters( 'wff_bp_activity_sidebar_position', ' ' . WEFOSTER_ACTIVITY_SIDEBAR_POSITION . ' ' );
-   	// return the $classes array
-   	return $classes;
-   }
-   add_filter( 'body_class', 'wff_bp_activity_sidebar_position',999 );
- }
+if ( ! function_exists( 'wff_bp_activity_sidebar_position' ) ) {
+	function wff_bp_activity_sidebar_position( $classes ) {
+		// add a body class
+		$classes[] = apply_filters( 'wff_bp_activity_sidebar_position', ' ' . WEFOSTER_ACTIVITY_SIDEBAR_POSITION . ' ' );
 
- /**
-  * Add a body class to change the sidebar
-  *
-  * @since 1.0.0
-  *
-  */
- if ( ! function_exists ( 'wff_bp_member_sidebar_position' ) ) {
-    function wff_bp_member_sidebar_position( $classes ) {
-    	// add a body class
-    	$classes[] = apply_filters( 'wff_bp_member_sidebar_position', ' ' . WEFOSTER_MEMBER_SIDEBAR_POSITION . ' ' );
-    	// return the $classes array
-    	return $classes;
-    }
-    add_filter( 'body_class', 'wff_bp_member_sidebar_position',999 );
-  }
+		// return the $classes array
+		return $classes;
+	}
 
-	/**
-	 * Add a body class to change the sidebar
-	 *
-	 * @since 1.0.0
-	 *
-	 */
-	if ( ! function_exists ( 'wff_bp_group_sidebar_position' ) ) {
-		 function wff_bp_group_sidebar_position( $classes ) {
-			 // add a body class
-			 $classes[] = apply_filters( 'wff_bp_group_sidebar_position', ' ' . WEFOSTER_GROUP_SIDEBAR_POSITION . ' ' );
-			 // return the $classes array
-			 return $classes;
-		 }
-		 add_filter( 'body_class', 'wff_bp_group_sidebar_position',999 );
-	 }
+	add_filter( 'body_class', 'wff_bp_activity_sidebar_position', 999 );
+}
+
+/**
+ * Add a body class to change the sidebar
+ *
+ * @since 1.0.0
+ *
+ */
+if ( ! function_exists( 'wff_bp_member_sidebar_position' ) ) {
+	function wff_bp_member_sidebar_position( $classes ) {
+		// add a body class
+		$classes[] = apply_filters( 'wff_bp_member_sidebar_position', ' ' . WEFOSTER_MEMBER_SIDEBAR_POSITION . ' ' );
+
+		// return the $classes array
+		return $classes;
+	}
+
+	add_filter( 'body_class', 'wff_bp_member_sidebar_position', 999 );
+}
+
+/**
+ * Add a body class to change the sidebar
+ *
+ * @since 1.0.0
+ *
+ */
+if ( ! function_exists( 'wff_bp_group_sidebar_position' ) ) {
+	function wff_bp_group_sidebar_position( $classes ) {
+		// add a body class
+		$classes[] = apply_filters( 'wff_bp_group_sidebar_position', ' ' . WEFOSTER_GROUP_SIDEBAR_POSITION . ' ' );
+
+		// return the $classes array
+		return $classes;
+	}
+
+	add_filter( 'body_class', 'wff_bp_group_sidebar_position', 999 );
+}

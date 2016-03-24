@@ -22,23 +22,27 @@ if ( ! class_exists( 'Kirki_Controls_Generic_Control' ) ) {
 		protected function content_template() { ?>
 			<# if ( data.tooltip ) { #>
 				<a href="#" class="tooltip hint--left" data-hint="{{ data.tooltip }}"><span class='dashicons dashicons-info'></span></a>
-			<# } #>
-			<label>
-				<# if ( data.label ) { #>
-					<span class="customize-control-title">{{{ data.label }}}</span>
 				<# } #>
-				<# if ( data.description ) { #>
-					<span class="description customize-control-description">{{{ data.description }}}</span>
-				<# } #>
-				<div class="customize-control-content">
-					<# if ( 'textarea' == data.choices['element'] ) { #>
-						<textarea {{{ data.link }}} <# for ( key in data.choices ) { #> {{ key }}="{{ data.choices[ key ] }}"<# } #>>{{ data.value }}</textarea>
-					<# } else { #>
-						<# var element = ( data.choices['element'] ) ? data.choices['element'] : 'input'; #>
-						<{{ element }} value="{{ data.value }}" {{{ data.link }}} <# for ( key in data.choices ) { #> {{ key }}="{{ data.choices[ key ] }}"<# } #> />
-					<# } #>
-				</div>
-			</label>
+					<label>
+						<# if ( data.label ) { #>
+							<span class="customize-control-title">{{{ data.label }}}</span>
+							<# } #>
+								<# if ( data.description ) { #>
+									<span class="description customize-control-description">{{{ data.description }}}</span>
+									<# } #>
+										<div class="customize-control-content">
+											<# if ( 'textarea' == data.choices['element'] ) { #>
+												<textarea {{{ data.link }}}
+												<# for ( key in data.choices ) { #> {{ key }}="{{ data.choices[ key ] }}"
+													<# } #>>{{ data.value }}</textarea>
+														<# } else { #>
+															<# var element = ( data.choices['element'] ) ? data.choices['element'] : 'input'; #>
+																<{{ element }} value="{{ data.value }}" {{{ data.link }}}
+																<# for ( key in data.choices ) { #> {{ key }}="{{ data.choices[ key ] }}"
+																	<# } #> />
+																		<# } #>
+										</div>
+					</label>
 			<?php
 		}
 

@@ -27,7 +27,7 @@ if ( ! class_exists( 'Kirki_Settings_Repeater_Setting' ) ) {
 		public function value() {
 			$value = parent::value();
 			if ( ! is_array( $value ) ) {
-						$value = array();
+				$value = array();
 			}
 
 			return $value;

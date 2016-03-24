@@ -33,16 +33,18 @@ if ( ! class_exists( 'Kirki_Customizer_Scripts_Loading' ) ) {
 					-webkit-transition: none;
 					transition: none;
 				}
+
 				body.wp-customizer-unloading * {
 					pointer-events: none !important;
 				}
+
 				.kirki-customizer-loading-wrapper {
 					width: 100%;
 					height: 100%;
 					position: fixed;
 					top: 0;
 					left: 0;
-					background: rgba(255,255,255,0.83);
+					background: rgba(255, 255, 255, 0.83);
 					z-index: 999999;
 					display: none;
 					opacity: 0;
@@ -52,10 +54,12 @@ if ( ! class_exists( 'Kirki_Customizer_Scripts_Loading' ) ) {
 					background-repeat: no-repeat;
 					background-position: center center;
 				}
+
 				body.wp-customizer-unloading .kirki-customizer-loading-wrapper {
 					display: block;
 					opacity: 1;
 				}
+
 				.kirki-customizer-loading-wrapper .kirki-customizer-loading {
 					position: absolute;
 					width: 60px;
@@ -63,18 +67,22 @@ if ( ! class_exists( 'Kirki_Customizer_Scripts_Loading' ) ) {
 					top: 50%;
 					left: 50%;
 					margin: -30px;
-					background-color: rgba(0,0,0,.83);
+					background-color: rgba(0, 0, 0, .83);
 					border-radius: 100%;
 					-webkit-animation: sk-scaleout 1.0s infinite ease-in-out;
 					animation: sk-scaleout 1.0s infinite ease-in-out;
 				}
+
 				@-webkit-keyframes sk-scaleout {
-					0% { -webkit-transform: scale(0) }
+					0% {
+						-webkit-transform: scale(0)
+					}
 					100% {
 						-webkit-transform: scale(1.0);
 						opacity: 0;
 					}
 				}
+
 				@keyframes sk-scaleout {
 					0% {
 						-webkit-transform: scale(0);

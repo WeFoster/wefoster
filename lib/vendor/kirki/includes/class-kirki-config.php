@@ -65,8 +65,8 @@ if ( ! class_exists( 'Kirki_Config' ) ) {
 		 *
 		 * @access private
 		 *
-		 * @param string    $id     @see Kirki_Config::get_instance()
-		 * @param array     $args   @see Kirki_Config::get_instance()
+		 * @param string $id @see Kirki_Config::get_instance()
+		 * @param array $args @see Kirki_Config::get_instance()
 		 */
 		private function __construct( $id = 'global', $args = array() ) {
 
@@ -99,19 +99,20 @@ if ( ! class_exists( 'Kirki_Config' ) ) {
 		 *
 		 * @static
 		 * @access public
-		 * @param string    $id     Config ID
-		 * @param array     $args   {
+		 *
+		 * @param string $id Config ID
+		 * @param array $args {
 		 *    Optional. Arguments to override config defaults.
 		 *
-		 *    @type string      $capability       @see https://codex.wordpress.org/Roles_and_Capabilities
-		 *    @type string      $option_type      theme_mod or option.
-		 *    @type string      $option_name      If we want to used serialized options,
+		 * @type string $capability @see https://codex.wordpress.org/Roles_and_Capabilities
+		 * @type string $option_type theme_mod or option.
+		 * @type string $option_name If we want to used serialized options,
 		 *                                        this is where we'll be adding the option name.
 		 *                                        All fields using this config will be items in that array.
-		 *    @type array       $compiler         Not yet fully implemented
-		 *    @type bool        $disable_output   If set to true, no CSS will be generated
+		 * @type array $compiler Not yet fully implemented
+		 * @type bool $disable_output If set to true, no CSS will be generated
 		 *                                        from fields using this configuration.
-		 *    @type string      $postMessage
+		 * @type string $postMessage
 		 * }
 		 *
 		 * @return Kirki_Config
@@ -125,10 +126,10 @@ if ( ! class_exists( 'Kirki_Config' ) ) {
 			if ( ! isset( self::$instances[ $id_md5 ] ) ) {
 				self::$instances[ $id_md5 ] = new self( $id, $args );
 			}
+
 			return self::$instances[ $id_md5 ];
 
 		}
-
 
 
 		/**

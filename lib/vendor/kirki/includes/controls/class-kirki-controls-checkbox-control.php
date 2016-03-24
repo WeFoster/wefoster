@@ -23,14 +23,16 @@ if ( ! class_exists( 'Kirki_Controls_Checkbox_Control' ) ) {
 		protected function content_template() { ?>
 			<# if ( data.tooltip ) { #>
 				<a href="#" class="tooltip hint--left" data-hint="{{ data.tooltip }}"><span class='dashicons dashicons-info'></span></a>
-			<# } #>
-			<label>
-				<input type="checkbox" value="{{ data.value }}" {{{ data.link }}}<# if ( data.value !== false ) { #> checked<# } #> />
-				{{ data.label }}
-				<# if ( data.description ) { #>
-					<span class="description customize-control-description">{{{ data.description }}}</span>
 				<# } #>
-			</label>
+					<label>
+						<input type="checkbox" value="{{ data.value }}" {{{ data.link }}}
+						<# if ( data.value !== false ) { #> checked
+							<# } #> />
+								{{ data.label }}
+								<# if ( data.description ) { #>
+									<span class="description customize-control-description">{{{ data.description }}}</span>
+									<# } #>
+					</label>
 			<?php
 		}
 

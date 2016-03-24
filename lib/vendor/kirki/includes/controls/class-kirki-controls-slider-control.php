@@ -31,27 +31,29 @@ if ( ! class_exists( 'Kirki_Controls_Slider_Control' ) ) {
 		protected function content_template() { ?>
 			<# if ( data.tooltip ) { #>
 				<a href="#" class="tooltip hint--left" data-hint="{{ data.tooltip }}"><span class='dashicons dashicons-info'></span></a>
-			<# } #>
-			<label>
-				<# if ( data.label ) { #>
-					<span class="customize-control-title">{{{ data.label }}}</span>
 				<# } #>
-				<# if ( data.description ) { #>
-					<span class="description customize-control-description">{{{ data.description }}}</span>
-				<# } #>
-				<div class="wrapper">
-					<input type="range" min="{{ data.choices['min'] }}" max="{{ data.choices['max'] }}" step="{{ data.choices['step'] }}" value="{{ data.value }}" {{{ data.link }}} data-reset_value="{{ data.default }}" />
-					<div class="kirki_range_value">
-						<span class="value">{{ data.value }}</span>
-						<# if ( data.choices['suffix'] ) { #>
-							{{ data.choices['suffix'] }}
-						<# } #>
-					</div>
-					<div class="kirki-slider-reset">
-						<span class="dashicons dashicons-image-rotate"></span>
-					</div>
-				</div>
-			</label>
+					<label>
+						<# if ( data.label ) { #>
+							<span class="customize-control-title">{{{ data.label }}}</span>
+							<# } #>
+								<# if ( data.description ) { #>
+									<span class="description customize-control-description">{{{ data.description }}}</span>
+									<# } #>
+										<div class="wrapper">
+											<input type="range" min="{{ data.choices['min'] }}" max="{{ data.choices['max'] }}"
+											       step="{{ data.choices['step'] }}" value="{{ data.value }}" {{{ data.link }}}
+											       data-reset_value="{{ data.default }}"/>
+											<div class="kirki_range_value">
+												<span class="value">{{ data.value }}</span>
+												<# if ( data.choices['suffix'] ) { #>
+													{{ data.choices['suffix'] }}
+													<# } #>
+											</div>
+											<div class="kirki-slider-reset">
+												<span class="dashicons dashicons-image-rotate"></span>
+											</div>
+										</div>
+					</label>
 			<?php
 
 		}

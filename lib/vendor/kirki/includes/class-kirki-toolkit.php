@@ -43,6 +43,7 @@ if ( ! class_exists( 'Kirki_Toolkit' ) ) {
 			if ( null == self::$instance ) {
 				self::$instance = new self();
 			}
+
 			return self::$instance;
 		}
 
@@ -60,10 +61,12 @@ if ( ! class_exists( 'Kirki_Toolkit' ) ) {
 		 * Take a path and return it clean
 		 *
 		 * @param string $path
+		 *
 		 * @return string
 		 */
 		public static function clean_file_path( $path ) {
 			$path = wp_normalize_path( $path );
+
 			return rtrim( $path, '/' );
 		}
 
@@ -71,11 +74,13 @@ if ( ! class_exists( 'Kirki_Toolkit' ) ) {
 		 * Determine if we're on a parent theme
 		 *
 		 * @param $file string
+		 *
 		 * @return bool
 		 */
 		public static function is_parent_theme( $file ) {
 			$file = self::clean_file_path( $file );
 			$dir  = self::clean_file_path( get_template_directory() );
+
 			return ( false !== strpos( $file, $dir ) );
 		}
 
@@ -83,11 +88,13 @@ if ( ! class_exists( 'Kirki_Toolkit' ) ) {
 		 * Determine if we're on a child theme.
 		 *
 		 * @param $file string
+		 *
 		 * @return bool
 		 */
 		public static function is_child_theme( $file ) {
 			$file = self::clean_file_path( $file );
 			$dir  = self::clean_file_path( get_stylesheet_directory() );
+
 			return ( false !== strpos( $file, $dir ) );
 		}
 
@@ -101,6 +108,7 @@ if ( ! class_exists( 'Kirki_Toolkit' ) ) {
 			if ( false !== strpos( self::clean_file_path( __FILE__ ), self::clean_file_path( get_template_directory_uri() ) ) ) {
 				return false;
 			}
+
 			return ( false !== strpos( self::clean_file_path( __FILE__ ), self::clean_file_path( WP_CONTENT_DIR . '/themes/' ) ) );
 		}
 
@@ -108,6 +116,7 @@ if ( ! class_exists( 'Kirki_Toolkit' ) ) {
 		 * Determine if we're on a theme
 		 *
 		 * @param $file string
+		 *
 		 * @return bool
 		 */
 		public static function is_theme( $file ) {

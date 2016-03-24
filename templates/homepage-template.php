@@ -1,16 +1,16 @@
 <?php
 /**
-* Template Name: Homepage Template
-*
-* @author Bowe Frankema <bowe@wefoster.co>
-* @link http://wefoster.co
-* @copyright Copyright (C) 2010-2011 Bowe Frankema
-* @license http://www.gnu.org/licenses/gpl.html GPLv2 or later
-* @since 1.0
-*/
+ * Template Name: Homepage Template
+ *
+ * @author Bowe Frankema <bowe@wefoster.co>
+ * @link http://wefoster.co
+ * @copyright Copyright (C) 2010-2011 Bowe Frankema
+ * @license http://www.gnu.org/licenses/gpl.html GPLv2 or later
+ * @since 1.0
+ */
 ?>
 
-<?php get_template_part('header'); ?>
+<?php get_template_part( 'header' ); ?>
 
 <?php do_action( 'before_homepage' ); ?>
 
@@ -20,17 +20,17 @@
 
 	<div id="top-homepage">
 
-			<?php if ( is_active_sidebar( 'homepage-top-center' ) ) { ?>
-					<div class="column col-sm-12">
-						<?php
-						dynamic_sidebar( 'Homepage Top Center' );
-						?>
-					</div>
-			<?php } ?>
+		<?php if ( is_active_sidebar( 'homepage-top-center' ) ) { ?>
+			<div class="column col-sm-12">
+				<?php
+				dynamic_sidebar( 'Homepage Top Center' );
+				?>
+			</div>
+		<?php } ?>
 
-			<div class="clearfix"></div>
+		<div class="clearfix"></div>
 
-			<?php if ( is_active_sidebar( 'homepage-top-left' ) ) { ?>
+		<?php if ( is_active_sidebar( 'homepage-top-left' ) ) { ?>
 			<div class="column col-sm-7">
 				<?php
 				dynamic_sidebar( 'Homepage Top Left' );
@@ -44,7 +44,7 @@
 					?>
 				</div>
 			</div>
-			<?php } ?>
+		<?php } ?>
 
 	</div>
 
@@ -53,12 +53,12 @@
 	<?php do_action( 'before_homepage_middle' ); ?>
 
 	<?php if ( is_active_sidebar( 'homepage-center-widget' ) ) { ?>
-			<div id="center-homepage-widget" class="col-sm-12">
-				<?php
-				dynamic_sidebar( 'Homepage Center Widget' );
-				?>
-	</div>
-	<div class="clearfix"></div>
+		<div id="center-homepage-widget" class="col-sm-12">
+			<?php
+			dynamic_sidebar( 'Homepage Center Widget' );
+			?>
+		</div>
+		<div class="clearfix"></div>
 	<?php } ?>
 
 	<?php do_action( 'after_homepage_middle' ); ?>
@@ -91,4 +91,4 @@
 do_action( 'after_homepage' );
 ?>
 
-<?php get_template_part('footer'); ?>
+<?php get_template_part( 'footer' ); ?>

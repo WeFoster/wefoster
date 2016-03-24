@@ -50,8 +50,8 @@ if ( ! class_exists( 'Kirki_Controls_Repeater_Control' ) ) {
 		public function to_json() {
 			parent::to_json();
 
-			$fields = $this->fields;
-			$i18n   = Kirki_l10n::get_strings();
+			$fields                      = $this->fields;
+			$i18n                        = Kirki_l10n::get_strings();
 			$default_image_button_labels = array(
 				'default'     => $i18n['add-image'],
 				'remove'      => $i18n['remove'],
@@ -111,147 +111,169 @@ if ( ! class_exists( 'Kirki_Controls_Repeater_Control' ) ) {
 				<# var field; var index = data['index']; #>
 
 
-				<li class="repeater-row" data-row="{{{ index }}}">
+					<li class="repeater-row" data-row="{{{ index }}}">
 
-					<div class="repeater-row-header">
-						<span class="repeater-row-number"></span>
-						<span class="repeater-row-remove"><i class="dashicons dashicons-no-alt repeater-remove"></i></span>
-						<span class="repeater-row-minimize"><i class="dashicons dashicons-arrow-up repeater-minimize"></i></span>
-						<span class="repeater-row-move"><i class="dashicons dashicons-sort repeater-move"></i></span>
-					</div>
-
-					<# for ( i in data ) { #>
-						<# if ( ! data.hasOwnProperty( i ) ) continue; #>
-						<# field = data[i]; #>
-						<# if ( ! field.type ) continue; #>
-
-						<div class="repeater-field repeater-field-{{{ field.type }}}">
-
-							<# if ( field.type === 'text' ) { #>
-
-								<label>
-									<# if ( field.label ) { #>
-										<span class="customize-control-title">{{ field.label }}</span>
-									<# } #>
-									<# if ( field.description ) { #>
-										<span class="description customize-control-description">{{ field.description }}</span>
-									<# } #>
-									<input type="text" name="" value="{{{ field.default }}}" data-field="{{{ field.id }}}">
-								</label>
-
-							<# } else if ( field.type === 'checkbox' ) { #>
-
-								<label>
-									<input type="checkbox" value="true" data-field="{{{ field.id }}}" <# if ( field.default ) { #> checked="checked" <# } #> />
-									<# if ( field.description ) { #>
-										{{ field.description }}
-									<# } #>
-								</label>
-
-							<# } else if ( field.type === 'select' ) { #>
-
-								<label>
-									<# if ( field.label ) { #>
-										<span class="customize-control-title">{{ field.label }}</span>
-									<# } #>
-									<# if ( field.description ) { #>
-										<span class="description customize-control-description">{{ field.description }}</span>
-									<# } #>
-									<select data-field="{{{ field.id }}}">
-										<# for ( i in field.choices ) { #>
-											<# if ( field.choices.hasOwnProperty( i ) ) { #>
-												<option value="{{{ i }}}" <# if ( field.default == i ) { #> selected="selected" <# } #>>{{ field.choices[i] }}</option>
-											<# } #>
-										<# } #>
-									</select>
-								</label>
-
-							<# } else if ( field.type === 'radio' ) { #>
-
-								<label>
-									<# if ( field.label ) { #>
-										<span class="customize-control-title">{{ field.label }}</span>
-									<# } #>
-									<# if ( field.description ) { #>
-										<span class="description customize-control-description">{{ field.description }}</span>
-									<# } #>
-
-									<# for ( i in field.choices ) { #>
-										<# if ( field.choices.hasOwnProperty( i ) ) { #>
-											<label>
-												<input type="radio" name="{{{ field.id }}}" data-field="{{{ field.id }}}" value="{{{ i }}}" <# if ( field.default == i ) { #> checked="checked" <# } #>> {{ field.choices[i] }} <br/>
-											</label>
-										<# } #>
-									<# } #>
-								</label>
-
-							<# } else if ( field.type == 'radio-image' ) { #>
-
-								<label>
-									<# if ( field.label ) { #>
-										<span class="customize-control-title">{{ field.label }}</span>
-									<# } #>
-									<# if ( field.description ) { #>
-										<span class="description customize-control-description">{{ field.description }}</span>
-									<# } #>
-
-									<# for ( i in field.choices ) { #>
-										<# if ( field.choices.hasOwnProperty( i ) ) { #>
-											<input type="radio" id="{{{ field.id }}}_{{ index }}_{{{ i }}}" name="{{{ field.id }}}{{ index }}" data-field="{{{ field.id }}}" value="{{{ i }}}" <# if ( field.default == i ) { #> checked="checked" <# } #>>
-												<label for="{{{ field.id }}}_{{ index }}_{{{ i }}}">
-													<img src="{{ field.choices[i] }}">
-												</label>
-											</input>
-										<# } #>
-									<# } #>
-								</label>
-
-							<# } else if ( field.type == 'textarea' ) { #>
-
-								<# if ( field.label ) { #>
-									<span class="customize-control-title">{{ field.label }}</span>
-								<# } #>
-								<# if ( field.description ) { #>
-									<span class="description customize-control-description">{{ field.description }}</span>
-								<# } #>
-								<textarea rows="5" data-field="{{{ field.id }}}">{{ field.default }}</textarea>
-
-							<# } else if ( field.type === 'image' ) { #>
-
-								<label>
-									<# if ( field.label ) { #>
-										<span class="customize-control-title">{{ field.label }}</span>
-									<# } #>
-									<# if ( field.description ) { #>
-										<span class="description customize-control-description">{{ field.description }}</span>
-									<# } #>
-								</label>
-
-								<figure class="kirki-image-attachment" data-placeholder="{{ field.buttonLabels.placeholder }}" >
-									<# if ( field.default ) { #>
-										<img src="{{{ field.default }}}">
-									<# } else { #>
-										{{ field.buttonLabels.placeholder }}
-									<# } #>
-								</figure>
-
-								<div class="actions">
-									<button type="button" class="button remove-button<# if ( ! field.default ) { #> hidden<# } #>">{{ field.buttonLabels.remove }}</button>
-									<button type="button" class="button upload-button" data-label="{{{ field.buttonLabels.default }}}" data-alt-label="{{{ field.buttonLabels.change }}}" >
-										<# if ( field.default ) { #>
-											{{ field.buttonLabels.change }}
-										<# } else { #>
-											{{ field.buttonLabels.default }}
-										<# } #>
-									</button>
-									<input type="hidden" class="hidden-field" value="{{{ field.default }}}" data-field="{{{ field.id }}}" >
-								</div>
-
-							<# } #>
-
+						<div class="repeater-row-header">
+							<span class="repeater-row-number"></span>
+							<span class="repeater-row-remove"><i class="dashicons dashicons-no-alt repeater-remove"></i></span>
+							<span class="repeater-row-minimize"><i class="dashicons dashicons-arrow-up repeater-minimize"></i></span>
+							<span class="repeater-row-move"><i class="dashicons dashicons-sort repeater-move"></i></span>
 						</div>
-					<# } #>
-				</li>
+
+						<# for ( i in data ) { #>
+							<# if ( ! data.hasOwnProperty( i ) ) continue; #>
+								<# field = data[i]; #>
+									<# if ( ! field.type ) continue; #>
+
+										<div class="repeater-field repeater-field-{{{ field.type }}}">
+
+											<# if ( field.type === 'text' ) { #>
+
+												<label>
+													<# if ( field.label ) { #>
+														<span class="customize-control-title">{{ field.label }}</span>
+														<# } #>
+															<# if ( field.description ) { #>
+																<span class="description customize-control-description">{{ field.description }}</span>
+																<# } #>
+																	<input type="text" name="" value="{{{ field.default }}}" data-field="{{{ field.id }}}">
+												</label>
+
+												<# } else if ( field.type === 'checkbox' ) { #>
+
+													<label>
+														<input type="checkbox" value="true" data-field="{{{ field.id }}}"
+														<# if ( field.default ) { #> checked="checked"
+															<# } #> />
+																<# if ( field.description ) { #>
+																	{{ field.description }}
+																	<# } #>
+													</label>
+
+													<# } else if ( field.type === 'select' ) { #>
+
+														<label>
+															<# if ( field.label ) { #>
+																<span class="customize-control-title">{{ field.label }}</span>
+																<# } #>
+																	<# if ( field.description ) { #>
+																		<span class="description customize-control-description">{{ field.description }}</span>
+																		<# } #>
+																			<select data-field="{{{ field.id }}}">
+																				<# for ( i in field.choices ) { #>
+																					<# if ( field.choices.hasOwnProperty( i ) ) { #>
+																						<option value="{{{ i }}}"
+																						<# if ( field.default == i ) { #> selected="selected"
+																							<# } #>>{{ field.choices[i] }}</option>
+																								<# } #>
+																									<# } #>
+																			</select>
+														</label>
+
+														<# } else if ( field.type === 'radio' ) { #>
+
+															<label>
+																<# if ( field.label ) { #>
+																	<span class="customize-control-title">{{ field.label }}</span>
+																	<# } #>
+																		<# if ( field.description ) { #>
+																			<span
+																				class="description customize-control-description">{{ field.description }}</span>
+																			<# } #>
+
+																				<# for ( i in field.choices ) { #>
+																					<# if ( field.choices.hasOwnProperty( i ) ) { #>
+																						<label>
+																							<input type="radio" name="{{{ field.id }}}"
+																							       data-field="{{{ field.id }}}" value="{{{ i }}}"
+																							<# if ( field.default == i ) { #> checked="checked"
+																								<# } #>> {{ field.choices[i] }} <br/>
+																						</label>
+																						<# } #>
+																							<# } #>
+															</label>
+
+															<# } else if ( field.type == 'radio-image' ) { #>
+
+																<label>
+																	<# if ( field.label ) { #>
+																		<span class="customize-control-title">{{ field.label }}</span>
+																		<# } #>
+																			<# if ( field.description ) { #>
+																				<span
+																					class="description customize-control-description">{{ field.description }}</span>
+																				<# } #>
+
+																					<# for ( i in field.choices ) { #>
+																						<# if ( field.choices.hasOwnProperty( i ) ) { #>
+																							<input type="radio" id="{{{ field.id }}}_{{ index }}_{{{ i }}}"
+																							       name="{{{ field.id }}}{{ index }}"
+																							       data-field="{{{ field.id }}}" value="{{{ i }}}"
+																							<# if ( field.default == i ) { #> checked="checked"
+																								<# } #>>
+																									<label for="{{{ field.id }}}_{{ index }}_{{{ i }}}">
+																										<img src="{{ field.choices[i] }}">
+																									</label>
+																									</input>
+																									<# } #>
+																										<# } #>
+																</label>
+
+																<# } else if ( field.type == 'textarea' ) { #>
+
+																	<# if ( field.label ) { #>
+																		<span class="customize-control-title">{{ field.label }}</span>
+																		<# } #>
+																			<# if ( field.description ) { #>
+																				<span
+																					class="description customize-control-description">{{ field.description }}</span>
+																				<# } #>
+																					<textarea rows="5"
+																					          data-field="{{{ field.id }}}">{{ field.default }}</textarea>
+
+																					<# } else if ( field.type === 'image' ) { #>
+
+																						<label>
+																							<# if ( field.label ) { #>
+																								<span class="customize-control-title">{{ field.label }}</span>
+																								<# } #>
+																									<# if ( field.description ) { #>
+																										<span class="description customize-control-description">{{ field.description }}</span>
+																										<# } #>
+																						</label>
+
+																						<figure class="kirki-image-attachment"
+																						        data-placeholder="{{ field.buttonLabels.placeholder }}">
+																							<# if ( field.default ) { #>
+																								<img src="{{{ field.default }}}">
+																								<# } else { #>
+																									{{ field.buttonLabels.placeholder }}
+																									<# } #>
+																						</figure>
+
+																						<div class="actions">
+																							<button type="button"
+																							        class="button remove-button<# if ( ! field.default ) { #> hidden<# } #>">
+																								{{ field.buttonLabels.remove }}
+																							</button>
+																							<button type="button" class="button upload-button"
+																							        data-label="{{{ field.buttonLabels.default }}}"
+																							        data-alt-label="{{{ field.buttonLabels.change }}}">
+																								<# if ( field.default ) { #>
+																									{{ field.buttonLabels.change }}
+																									<# } else { #>
+																										{{ field.buttonLabels.default }}
+																										<# } #>
+																							</button>
+																							<input type="hidden" class="hidden-field"
+																							       value="{{{ field.default }}}" data-field="{{{ field.id }}}">
+																						</div>
+
+																						<# } #>
+
+										</div>
+										<# } #>
+					</li>
 			</script>
 			<?php
 		}

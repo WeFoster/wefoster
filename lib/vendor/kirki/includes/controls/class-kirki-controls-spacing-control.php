@@ -42,28 +42,28 @@ if ( ! class_exists( 'Kirki_Controls_Spacing_Control' ) ) {
 		protected function content_template() { ?>
 			<# if ( data.tooltip ) { #>
 				<a href="#" class="tooltip hint--left" data-hint="{{ data.tooltip }}"><span class='dashicons dashicons-info'></span></a>
-			<# } #>
-			<label>
-				<# if ( data.label ) { #>
-					<span class="customize-control-title">{{{ data.label }}}</span>
 				<# } #>
-				<# if ( data.description ) { #>
-					<span class="description customize-control-description">{{{ data.description }}}</span>
-				<# } #>
-				<div class="wrapper">
-					<div class="control">
-						<# for ( choiceKey in data.default ) { #>
-							<div class="{{ choiceKey }}">
-								<h5>{{ data.i18n[ choiceKey ] }}</h5>
-								<div class="{{ choiceKey }} input-wrapper">
-									<input type="text" value="{{ data.value[ choiceKey ] }}"/>
-									<span class="invalid-value">{{ data.i18n['invalid-value'] }}</span>
-								</div>
-							</div>
-						<# } #>
-					</div>
-				</div>
-			</label>
+					<label>
+						<# if ( data.label ) { #>
+							<span class="customize-control-title">{{{ data.label }}}</span>
+							<# } #>
+								<# if ( data.description ) { #>
+									<span class="description customize-control-description">{{{ data.description }}}</span>
+									<# } #>
+										<div class="wrapper">
+											<div class="control">
+												<# for ( choiceKey in data.default ) { #>
+													<div class="{{ choiceKey }}">
+														<h5>{{ data.i18n[ choiceKey ] }}</h5>
+														<div class="{{ choiceKey }} input-wrapper">
+															<input type="text" value="{{ data.value[ choiceKey ] }}"/>
+															<span class="invalid-value">{{ data.i18n['invalid-value'] }}</span>
+														</div>
+													</div>
+													<# } #>
+											</div>
+										</div>
+					</label>
 			<?php
 		}
 

@@ -66,16 +66,38 @@ if ( ! class_exists( 'Kirki_Controls_Code_Control' ) ) {
 			 * as well as dependencies for XML, JS, CSS languages.
 			 */
 			if ( in_array( $language, array( 'html', 'htmlmixed' ) ) ) {
-				wp_enqueue_script( 'codemirror-multiplex', trailingslashit( Kirki::$url ) . 'assets/js/vendor/codemirror/addon/mode/multiplex.js', array( 'jquery', 'codemirror' ) );
-				wp_enqueue_script( 'codemirror-language-xml', trailingslashit( Kirki::$url ) . 'assets/js/vendor/codemirror/mode/xml/xml.js', array( 'jquery', 'codemirror' ) );
-				wp_enqueue_script( 'codemirror-language-javascript', trailingslashit( Kirki::$url ) . 'assets/js/vendor/codemirror/mode/javascript/javascript.js', array( 'jquery', 'codemirror' ) );
-				wp_enqueue_script( 'codemirror-language-css', trailingslashit( Kirki::$url ) . 'assets/js/vendor/codemirror/mode/css/css.js', array( 'jquery', 'codemirror' ) );
-				wp_enqueue_script( 'codemirror-language-htmlmixed', trailingslashit( Kirki::$url ) . 'assets/js/vendor/codemirror/mode/htmlmixed/htmlmixed.js', array( 'jquery', 'codemirror', 'codemirror-multiplex', 'codemirror-language-xml', 'codemirror-language-javascript', 'codemirror-language-css' ) );
+				wp_enqueue_script( 'codemirror-multiplex', trailingslashit( Kirki::$url ) . 'assets/js/vendor/codemirror/addon/mode/multiplex.js', array(
+					'jquery',
+					'codemirror'
+				) );
+				wp_enqueue_script( 'codemirror-language-xml', trailingslashit( Kirki::$url ) . 'assets/js/vendor/codemirror/mode/xml/xml.js', array(
+					'jquery',
+					'codemirror'
+				) );
+				wp_enqueue_script( 'codemirror-language-javascript', trailingslashit( Kirki::$url ) . 'assets/js/vendor/codemirror/mode/javascript/javascript.js', array(
+					'jquery',
+					'codemirror'
+				) );
+				wp_enqueue_script( 'codemirror-language-css', trailingslashit( Kirki::$url ) . 'assets/js/vendor/codemirror/mode/css/css.js', array(
+					'jquery',
+					'codemirror'
+				) );
+				wp_enqueue_script( 'codemirror-language-htmlmixed', trailingslashit( Kirki::$url ) . 'assets/js/vendor/codemirror/mode/htmlmixed/htmlmixed.js', array(
+					'jquery',
+					'codemirror',
+					'codemirror-multiplex',
+					'codemirror-language-xml',
+					'codemirror-language-javascript',
+					'codemirror-language-css'
+				) );
 			} else {
 				/**
 				 * Add language script
 				 */
-				wp_enqueue_script( 'codemirror-language-' . $language, trailingslashit( Kirki::$url ) . 'assets/js/vendor/codemirror/mode/' . $language . '/' . $language . '.js', array( 'jquery', 'codemirror' ) );
+				wp_enqueue_script( 'codemirror-language-' . $language, trailingslashit( Kirki::$url ) . 'assets/js/vendor/codemirror/mode/' . $language . '/' . $language . '.js', array(
+					'jquery',
+					'codemirror'
+				) );
 			}
 			/**
 			 * Add theme styles
@@ -86,16 +108,16 @@ if ( ! class_exists( 'Kirki_Controls_Code_Control' ) ) {
 		protected function content_template() { ?>
 			<# if ( data.tooltip ) { #>
 				<a href="#" class="tooltip hint--left" data-hint="{{ data.tooltip }}"><span class='dashicons dashicons-info'></span></a>
-			<# } #>
-			<label>
-				<# if ( data.label ) { #>
-					<span class="customize-control-title">{{{ data.label }}}</span>
 				<# } #>
-				<# if ( data.description ) { #>
-					<span class="description customize-control-description">{{{ data.description }}}</span>
-				<# } #>
-				<textarea id="kirki-codemirror-editor-{{ data.id }}">{{{ data.value }}}</textarea>
-			</label>
+					<label>
+						<# if ( data.label ) { #>
+							<span class="customize-control-title">{{{ data.label }}}</span>
+							<# } #>
+								<# if ( data.description ) { #>
+									<span class="description customize-control-description">{{{ data.description }}}</span>
+									<# } #>
+										<textarea id="kirki-codemirror-editor-{{ data.id }}">{{{ data.value }}}</textarea>
+					</label>
 			<?php
 		}
 

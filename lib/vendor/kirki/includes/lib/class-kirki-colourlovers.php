@@ -21,7 +21,8 @@ if ( ! class_exists( 'Kirki_Colourlovers' ) ) {
 		/**
 		 * Returns an array properly formatted for use by the Kirki_Palette control.
 		 *
-		 * @param 	$palettes_nr	int		the number of palettes we want to get
+		 * @param    $palettes_nr    int        the number of palettes we want to get
+		 *
 		 * @return array
 		 */
 		public static function get_palettes( $palettes_nr = 5 ) {
@@ -35,7 +36,7 @@ if ( ! class_exists( 'Kirki_Colourlovers' ) ) {
 				foreach ( $palette as $key => $value ) {
 					$palettes[ $i ][ $key ] = Kirki_Color::sanitize_hex( $value );
 				}
-				$i++;
+				$i ++;
 			}
 
 			return $palettes;

@@ -32,6 +32,7 @@ include_once( dirname( __FILE__ ) . DIRECTORY_SEPARATOR . 'autoloader.php' );
 if ( ! function_exists( 'Kirki' ) ) {
 	function Kirki() {
 		$kirki = Kirki_Toolkit::get_instance();
+
 		return $kirki;
 	}
 }

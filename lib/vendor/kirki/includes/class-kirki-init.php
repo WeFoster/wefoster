@@ -23,16 +23,14 @@ if ( ! class_exists( 'Kirki_Init' ) ) {
 			 */
 			if ( Kirki_Toolkit::is_parent_theme( __FILE__ ) ) {
 				$relative_url = str_replace( Kirki_Toolkit::clean_file_path( get_template_directory() ), '', dirname( dirname( __FILE__ ) ) );
-				Kirki::$url = trailingslashit( get_template_directory_uri() . $relative_url );
-			}
-			/**
+				Kirki::$url   = trailingslashit( get_template_directory_uri() . $relative_url );
+			} /**
 			 * Are we on a child theme?
 			 */
 			elseif ( Kirki_Toolkit::is_child_theme( __FILE__ ) ) {
 				$relative_url = str_replace( Kirki_Toolkit::clean_file_path( get_stylesheet_directory() ), '', dirname( dirname( __FILE__ ) ) );
-				Kirki::$url = trailingslashit( get_stylesheet_directory_uri() . $relative_url );
-			}
-			/**
+				Kirki::$url   = trailingslashit( get_stylesheet_directory_uri() . $relative_url );
+			} /**
 			 * Fallback to plugin
 			 */
 			else {
@@ -93,7 +91,7 @@ if ( ! class_exists( 'Kirki_Init' ) ) {
 		/**
 		 * register our panels to the WordPress Customizer
 		 *
-		 * @var	object	The WordPress Customizer object
+		 * @var    object    The WordPress Customizer object
 		 * @return  void
 		 */
 		public function add_panels() {
@@ -107,7 +105,7 @@ if ( ! class_exists( 'Kirki_Init' ) ) {
 		/**
 		 * register our sections to the WordPress Customizer
 		 *
-		 * @var	object	The WordPress Customizer object
+		 * @var    object    The WordPress Customizer object
 		 * @return  void
 		 */
 		public function add_sections() {
@@ -121,7 +119,7 @@ if ( ! class_exists( 'Kirki_Init' ) ) {
 		/**
 		 * Create the settings and controls from the $fields array and register them.
 		 *
-		 * @var	object	The WordPress Customizer object
+		 * @var    object    The WordPress Customizer object
 		 * @return  void
 		 */
 		public function add_fields() {
@@ -157,7 +155,7 @@ if ( ! class_exists( 'Kirki_Init' ) ) {
 		/**
 		 * Build the variables.
 		 *
-		 * @return array 	('variable-name' => value)
+		 * @return array    ('variable-name' => value)
 		 */
 		public function get_variables() {
 
@@ -207,6 +205,7 @@ if ( ! class_exists( 'Kirki_Init' ) ) {
 				}
 
 			}
+
 			/**
 			 * Pass the variables through a filter ('kirki/variable')
 			 * and return the array of variables

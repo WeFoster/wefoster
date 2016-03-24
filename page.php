@@ -1,30 +1,33 @@
 <?php
 /**
-* This is the template that is used to display single Pages
-*
-* @since 1.0
-* @package WeFoster Framework
-*/
+ * This is the template that is used to display single Pages
+ *
+ * @since 1.0
+ * @package WeFoster Framework
+ */
 ?>
 
-<?php get_template_part('header'); ?>
+<?php get_template_part( 'header' ); ?>
 
-   <?php do_action('before_page'); ?>
+<?php do_action( 'before_page' ); ?>
 
-    <div id="main-content" class="main <?php do_action('class_main'); ?>" role="main">
-        <?php
-        //Use to Load to Page Title. see lib/actions.php
-        do_action('before_page_content');
-        ?>
+<div id="main-content" class="main <?php do_action( 'class_main' ); ?>" role="main">
+	<?php
+	//Use to Load to Page Title. see lib/actions.php
+	do_action( 'before_page_content' );
+	?>
 
-        <?php while (have_posts()) : the_post(); ?>
-        <?php get_template_part('templates/loops/content', 'page'); ?>
-        <?php endwhile; ?>
+	<?php while ( have_posts() ) : the_post(); ?>
 
-        <?php do_action('close_page_content'); ?>
-    </div><!-- /.main -->
+		<?php get_template_part( 'templates/loops/content', 'page' ); ?>
 
-   <?php do_action('after_page'); ?>
+	<?php endwhile; ?>
 
-<?php get_template_part('sidebar'); ?>
-<?php get_template_part('footer'); ?>
+	<?php do_action( 'close_page_content' ); ?>
+
+</div><!-- /.main -->
+
+<?php do_action( 'after_page' ); ?>
+
+<?php get_template_part( 'sidebar' ); ?>
+<?php get_template_part( 'footer' ); ?>

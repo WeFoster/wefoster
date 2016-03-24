@@ -12,7 +12,7 @@ class Kirki_Output_Control_Spacing extends Kirki_Output {
 			} else {
 				$property = $output['property'] . '-' . $key;
 			}
-			$output['media_query'] = ( isset( $output['media_query'] ) ) ? $output['media_query'] : 'global';
+			$output['media_query']                                                     = ( isset( $output['media_query'] ) ) ? $output['media_query'] : 'global';
 			$this->styles[ $output['media_query'] ][ $output['element'] ][ $property ] = $sub_value;
 		}
 

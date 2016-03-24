@@ -46,8 +46,8 @@ class WP_Thumb_Background_Fill {
 	/**
 	 * Background fill an image using the provided color
 	 *
-	 * @param int   $width  The desired width of the new image
-	 * @param int   $height The desired height of the new image
+	 * @param int $width The desired width of the new image
+	 * @param int $height The desired height of the new image
 	 * @param Array $colors The desired pad colors in RGB format, array should be array( 'top' => '', 'right' => '', 'bottom' => '', 'left' => '' );
 	 */
 	private function fill_color( array $colors ) {
@@ -57,7 +57,7 @@ class WP_Thumb_Background_Fill {
 		$size = array( 'width' => $this->args['width'], 'height' => $this->args['height'] );
 
 		$offsetLeft = ( $size['width'] - $current_size['width'] ) / 2;
-		$offsetTop = ( $size['height'] - $current_size['height'] ) / 2;
+		$offsetTop  = ( $size['height'] - $current_size['height'] ) / 2;
 
 		$new_image = imagecreatetruecolor( $size['width'], $size['height'] );
 
@@ -112,14 +112,14 @@ class WP_Thumb_Background_Fill {
 		);
 
 		$colors = array();
-		$color = 0;
+		$color  = 0;
 
 		foreach ( $coords as $coord ) {
 			$rgb = imagecolorat( $this->editor->get_image(), $coord[0], $coord[1] );
-			$c = imagecolorsforindex( $this->editor->get_image(), $rgb );
+			$c   = imagecolorsforindex( $this->editor->get_image(), $rgb );
 
 			$colors[] = $c['red'] + $c['green'] + $c['blue'] + $c['alpha'];
-			$color = str_pad( $c['red'], 3, '0', STR_PAD_LEFT ) . str_pad( $c['green'], 3, '0', STR_PAD_LEFT ) . str_pad( $c['blue'], 3, '0', STR_PAD_LEFT ) . str_pad( $c['alpha'], 3, '0', STR_PAD_LEFT );
+			$color    = str_pad( $c['red'], 3, '0', STR_PAD_LEFT ) . str_pad( $c['green'], 3, '0', STR_PAD_LEFT ) . str_pad( $c['blue'], 3, '0', STR_PAD_LEFT ) . str_pad( $c['alpha'], 3, '0', STR_PAD_LEFT );
 		}
 
 		if ( max( $colors ) > min( $colors ) + 15 ) {
@@ -143,4 +143,5 @@ function wpthumb_background_fill( $editor, $args ) {
 
 	return $editor;
 }
+
 add_filter( 'wpthumb_image_post', 'wpthumb_background_fill', 10, 2 );

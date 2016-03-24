@@ -26,28 +26,30 @@ if ( ! class_exists( 'Kirki_Controls_MultiCheck_Control' ) ) {
 
 			<# if ( ! data.choices ) { return; } #>
 
-			<# if ( data.tooltip ) { #>
-				<a href="#" class="tooltip hint--left" data-hint="{{ data.tooltip }}"><span class='dashicons dashicons-info'></span></a>
-			<# } #>
+				<# if ( data.tooltip ) { #>
+					<a href="#" class="tooltip hint--left" data-hint="{{ data.tooltip }}"><span class='dashicons dashicons-info'></span></a>
+					<# } #>
 
-			<# if ( data.label ) { #>
-				<span class="customize-control-title">{{ data.label }}</span>
-			<# } #>
+						<# if ( data.label ) { #>
+							<span class="customize-control-title">{{ data.label }}</span>
+							<# } #>
 
-			<# if ( data.description ) { #>
-				<span class="description customize-control-description">{{{ data.description }}}</span>
-			<# } #>
+								<# if ( data.description ) { #>
+									<span class="description customize-control-description">{{{ data.description }}}</span>
+									<# } #>
 
-			<ul>
-				<# for ( key in data.choices ) { #>
-					<li>
-						<label>
-							<input type="checkbox" value="{{ key }}"<# if ( _.contains( data.value, key ) ) { #> checked<# } #> />
-							{{ data.choices[ key ] }}
-						</label>
-					</li>
-				<# } #>
-			</ul>
+										<ul>
+											<# for ( key in data.choices ) { #>
+												<li>
+													<label>
+														<input type="checkbox" value="{{ key }}"
+														<# if ( _.contains( data.value, key ) ) { #> checked
+															<# } #> />
+																{{ data.choices[ key ] }}
+													</label>
+												</li>
+												<# } #>
+										</ul>
 		<?php }
 	}
 }

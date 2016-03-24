@@ -34,15 +34,15 @@ if ( ! class_exists( 'Kirki_Controls_Editor_Control' ) ) {
 					<span class="description customize-control-description"><?php echo $this->description; ?></span>
 				<?php endif; ?>
 				<?php
-					$settings = array(
-						'textarea_name' => $this->id,
-						'teeny'         => true,
-					);
-					add_filter( 'the_editor', array( $this, 'filter_editor_setting_link' ) );
-					wp_editor( html_entity_decode( wp_kses_post( $this->value() ) ), $this->id, $settings );
+				$settings = array(
+					'textarea_name' => $this->id,
+					'teeny'         => true,
+				);
+				add_filter( 'the_editor', array( $this, 'filter_editor_setting_link' ) );
+				wp_editor( html_entity_decode( wp_kses_post( $this->value() ) ), $this->id, $settings );
 
-					do_action( 'admin_footer' );
-					do_action( 'admin_print_footer_scripts' );
+				do_action( 'admin_footer' );
+				do_action( 'admin_print_footer_scripts' );
 				?>
 			</label>
 			<?php

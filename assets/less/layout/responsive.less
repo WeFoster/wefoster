@@ -5,6 +5,7 @@
 .mobile-notifications {
   display: none;
 }
+
 ///Show them on responsive view
 @media screen and (max-width: @grid-float-breakpoint-max) {
   .mobile-avatar,
@@ -12,10 +13,11 @@
   .mobile-notifications {
     display: block;
   }
+
   //This hides the ugly responsive WP admin bar on mobile.
   html.fontface {
     margin-top: 0 !important;
-    
+
     #wpadminbar {
       height: 0 !important;
       display: none;
@@ -26,8 +28,9 @@
     top: 0;
   }
 }
+
 //Fix sidebar padding
-@media only screen and (min-device-width : @grid-float-breakpoint-max) and (max-device-width : 1024px) and (orientation : landscape) {
+@media only screen and (min-device-width: @grid-float-breakpoint-max) and (max-device-width: 1024px) and (orientation: landscape) {
   .sidebar {
     padding-left: 0 !important;
   }
@@ -36,6 +39,7 @@
     width: 98%;
   }
 }
+
 //Hide our responsive wrapper on desktop layout.
 // This is only used when the menu layout is set to 'inside'
 @media screen and (min-width: @grid-float-breakpoint-max) {
@@ -49,7 +53,7 @@
   .navbar-default .navbar-toggle,
   .navigation-trigger {
     z-index: 10000;
-    
+
     &.right button {
       padding-left: 30px;
     }
@@ -83,7 +87,7 @@
     background-color: transparent;
     top: -7px;
     z-index: 0;
-    
+
     img {
       height: 30px;
       width: auto;
@@ -138,7 +142,7 @@
     bottom: 0;
     position: absolute;
     z-index: 20;
-    
+
     img.avatar {
       border-radius: 4px;
       bottom: 10px;
@@ -187,7 +191,7 @@
 
   .navbar-toggle {
     border: 0;
-    
+
     .fa {
       font-size: 160%;
     }
@@ -208,7 +212,7 @@
     font-size: 85%;
     letter-spacing: 0.5px;
     border-radius: 0 0 6px 0;
-    
+
     i {
       font-size: 100%;
       margin-right: 5px;
@@ -226,7 +230,7 @@
   }
 }
 
-@media only screen and (min-device-width : 320px) and (max-device-width : 568px) {
+@media only screen and (min-device-width: 320px) and (max-device-width: 568px) {
   body {
     background: #fff;
   }
@@ -257,7 +261,7 @@
 
   .mobile-avatar {
     bottom: -40px;
-    
+
     img.avatar {
       height: 60px;
       width: 60px;
@@ -273,7 +277,7 @@
     position: relative;
     padding-top: 5px;
     padding-bottom: 5px;
-    
+
     a {
       color: @text-color;
       font-size: 80%;

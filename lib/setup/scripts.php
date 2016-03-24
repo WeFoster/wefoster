@@ -19,16 +19,17 @@ function wff_scripts() {
 
 	// Load our BuddyPress Stylesheet based on being active (on root or multiblog)
 	if (
-			class_exists( 'BuddyPress' ) && bp_is_root_blog() ||
-			class_exists( 'BuddyPress' ) && defined( 'BP_ENABLE_MULTIBLOG' ) ||
-			WEFOSTER_MS_LOAD_BUDDYPRESS_STYLES == 'on' ) {
-			wp_enqueue_style( 'wff_buddypress', $path . '/css/buddypress.css', false, '9ad14980d2d75af2ed431fe686bad3f0' );
+		class_exists( 'BuddyPress' ) && bp_is_root_blog() ||
+		class_exists( 'BuddyPress' ) && defined( 'BP_ENABLE_MULTIBLOG' ) ||
+		WEFOSTER_MS_LOAD_BUDDYPRESS_STYLES == 'on'
+	) {
+		wp_enqueue_style( 'wff_buddypress', $path . '/css/buddypress.css', false, '9ad14980d2d75af2ed431fe686bad3f0' );
 	}
 
 	if ( WEFOSTER_ICON_FONT == 'font-awesome' ) {
 		// Enqueue Font Awesome
 		wp_enqueue_style( 'wff_font_awesome', $path . '/css/font-awesome.css', false, '6ee17105aaae3sffd20bb56ee840e0cabcd' );
-  }
+	}
 
 	if ( is_single() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
@@ -54,7 +55,7 @@ function wff_scripts() {
 	wp_enqueue_script( 'modernizr' );
 
 	//Developer: See lib/constants.php to enable mobile optimisation. This is currently experimentatal.
-	if ( is_handheld() || WEFOSTER_MOBILE_OPTIMISATION == 'off'  ) {
+	if ( is_handheld() || WEFOSTER_MOBILE_OPTIMISATION == 'off' ) {
 		//Only load our scripts on mobile
 		wp_enqueue_script( 'touchswipe_js' );
 		wp_enqueue_script( 'sidr_js' );
@@ -65,4 +66,5 @@ function wff_scripts() {
 	wp_enqueue_script( 'wff_scripts' );
 
 }
+
 add_action( 'wp_enqueue_scripts', 'wff_scripts', 100 );

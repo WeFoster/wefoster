@@ -22,19 +22,19 @@ if ( ! class_exists( 'Kirki_Controls_Dimension_Control' ) ) {
 		protected function content_template() { ?>
 			<# if ( data.tooltip ) { #>
 				<a href="#" class="tooltip hint--left" data-hint="{{ data.tooltip }}"><span class='dashicons dashicons-info'></span></a>
-			<# } #>
-			<label class="customizer-text">
-				<# if ( data.label ) { #>
-					<span class="customize-control-title">{{{ data.label }}}</span>
 				<# } #>
-				<# if ( data.description ) { #>
-					<span class="description customize-control-description">{{{ data.description }}}</span>
-				<# } #>
-				<div class="input-wrapper">
-					<input type="text" value="{{ data.value }}"/>
-					<span class="invalid-value">{{ data.i18n['invalid-value'] }}</span>
-				</div>
-			</label>
+					<label class="customizer-text">
+						<# if ( data.label ) { #>
+							<span class="customize-control-title">{{{ data.label }}}</span>
+							<# } #>
+								<# if ( data.description ) { #>
+									<span class="description customize-control-description">{{{ data.description }}}</span>
+									<# } #>
+										<div class="input-wrapper">
+											<input type="text" value="{{ data.value }}"/>
+											<span class="invalid-value">{{ data.i18n['invalid-value'] }}</span>
+										</div>
+					</label>
 			<?php
 		}
 

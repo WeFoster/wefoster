@@ -151,6 +151,7 @@ if ( ! class_exists( 'Kirki_Field' ) ) {
 		 * Then it adds the field to Kirki::$fields
 		 *
 		 * @access public
+		 *
 		 * @param $config_id    string    The ID of the config we want to use.
 		 *                                Defaults to "global".
 		 *                                Configs are handled by the Kirki_Config class.
@@ -170,7 +171,7 @@ if ( ! class_exists( 'Kirki_Field' ) ) {
 			// In case the user only provides 1 argument,
 			// assume that the provided argument is $args and set $config_id = 'global'
 			if ( is_array( $config_id ) && empty( $args ) ) {
-				$args = $config_id;
+				$args               = $config_id;
 				$this->kirki_config = 'global';
 			}
 			$this->kirki_config = trim( esc_attr( $config_id ) );
@@ -363,7 +364,7 @@ if ( ! class_exists( 'Kirki_Field' ) ) {
 				$settings[ sanitize_key( $setting_key ) ] = esc_attr( $setting_value );
 				// If we're using serialized options then we need to spice this up
 				if ( 'option' == $this->option_type && '' != $this->option_name && ( false === strpos( $setting_key, '[' ) ) ) {
-					$settings[ sanitize_key( $setting_key ) ] = esc_attr( $this->option_name ) . '[' . esc_attr( $setting_value ).']';
+					$settings[ sanitize_key( $setting_key ) ] = esc_attr( $this->option_name ) . '[' . esc_attr( $setting_value ) . ']';
 				}
 			}
 			$this->settings = $settings;
@@ -382,6 +383,7 @@ if ( ! class_exists( 'Kirki_Field' ) ) {
 
 			if ( '' != $this->tooltip ) {
 				$this->tooltip = wp_strip_all_tags( $this->tooltip );
+
 				return;
 			}
 
@@ -398,6 +400,7 @@ if ( ! class_exists( 'Kirki_Field' ) ) {
 
 			if ( ! empty( $this->required ) ) {
 				$this->active_callback = array( 'Kirki_Active_Callback', 'evaluate' );
+
 				return;
 			}
 			// No need to proceed any further if we're using the default value
@@ -446,11 +449,11 @@ if ( ! class_exists( 'Kirki_Field' ) ) {
 				case 'color-alpha':
 				case 'color_alpha':
 					// Just making sure that common typos will still work.
-					$this->type = 'color-alpha';
+					$this->type             = 'color-alpha';
 					$this->choices['alpha'] = true;
 					break;
 				case 'color':
-					$this->type = 'color-alpha';
+					$this->type             = 'color-alpha';
 					$this->choices['alpha'] = false;
 					// If a default value of rgba() is defined for a color control then we need to enable the alpha channel.
 					if ( false !== strpos( $this->default, 'rgba' ) ) {
@@ -892,6 +895,7 @@ if ( ! class_exists( 'Kirki_Field' ) ) {
 				$this->tooltip = wp_strip_all_tags( $this->help );
 				// $help has been deprecated
 				$this->help = '';
+
 				return;
 			}
 

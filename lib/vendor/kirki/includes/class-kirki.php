@@ -31,10 +31,10 @@ if ( ! class_exists( 'Kirki' ) ) {
 		/**
 		 * Get the value of an option from the db.
 		 *
-		 * @var 	string	the ID of the configuration corresponding to this field
-		 * @var		string	the field_id (defined as 'settings' in the field arguments)
+		 * @var    string    the ID of the configuration corresponding to this field
+		 * @var        string    the field_id (defined as 'settings' in the field arguments)
 		 *
-		 * @return 	mixed 	the saved value of the field.
+		 * @return    mixed    the saved value of the field.
 		 *
 		 */
 		public static function get_option( $config_id = '', $field_id = '' ) {
@@ -44,21 +44,22 @@ if ( ! class_exists( 'Kirki' ) ) {
 		/**
 		 * Sets the configuration options.
 		 *
-		 * @var		string		the configuration ID.
-		 * @var		array		the configuration options.
+		 * @var        string        the configuration ID.
+		 * @var        array        the configuration options.
+		 *
 		 * @param string $config_id
 		 */
 		public static function add_config( $config_id, $args = array() ) {
-			$config = Kirki_Config::get_instance( $config_id, $args );
-			$config_args = $config->get_config();
+			$config                             = Kirki_Config::get_instance( $config_id, $args );
+			$config_args                        = $config->get_config();
 			self::$config[ $config_args['id'] ] = $config_args;
 		}
 
 		/**
 		 * Create a new panel
 		 *
-		 * @var		string		the ID for this panel
-		 * @var		array		the panel arguments
+		 * @var        string        the ID for this panel
+		 * @var        array        the panel arguments
 		 */
 		public static function add_panel( $id = '', $args = array() ) {
 
@@ -77,8 +78,9 @@ if ( ! class_exists( 'Kirki' ) ) {
 		/**
 		 * Create a new section
 		 *
-		 * @var		string		the ID for this section
-		 * @var		array		the section arguments
+		 * @var        string        the ID for this section
+		 * @var        array        the section arguments
+		 *
 		 * @param string $id
 		 */
 		public static function add_section( $id, $args ) {
@@ -99,8 +101,8 @@ if ( ! class_exists( 'Kirki' ) ) {
 		/**
 		 * Create a new field
 		 *
-		 * @var		string		the configuration ID for this field
-		 * @var		array		the field arguments
+		 * @var        string        the configuration ID for this field
+		 * @var        array        the field arguments
 		 */
 		public static function add_field( $config_id, $args ) {
 			new Kirki_Field( $config_id, $args );

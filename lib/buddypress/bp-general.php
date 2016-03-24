@@ -14,9 +14,11 @@ if ( ! function_exists( 'wff_base_wordpress_page' ) ) {
 			// *append* class to the array
 			$classes[] = 'wordpress-page';
 		}
+
 		// return it!
 		return $classes;
 	}
+
 	add_filter( 'body_class', 'wff_base_wordpress_page' );
 }
 
@@ -33,6 +35,7 @@ if ( ! function_exists( 'wff_base_wordpress_page' ) ) {
 function wff_add_bp_head() {
 	do_action( 'bp_head' );
 }
+
 add_action( 'wp_head', 'wff_add_bp_head' );
 
 
@@ -89,8 +92,8 @@ function wff_bp_notifications_menu() {
 	_e( '', 'buddypress' );
 
 	if ( $notification_count = bp_notifications_get_unread_notification_count( bp_loggedin_user_id() ) ) : ?>
-        <span id="notification-counter"><?php echo bp_core_number_format( $notification_count ); ?></span>
-    <?php
+		<span id="notification-counter"><?php echo bp_core_number_format( $notification_count ); ?></span>
+		<?php
 	endif;
 
 	echo '</a>';
@@ -98,22 +101,22 @@ function wff_bp_notifications_menu() {
 
 	if ( $notifications = bp_notifications_get_notifications_for_user( bp_loggedin_user_id() ) ) {
 		$counter = 0;
-		for ( $i = 0, $count = count( $notifications ); $i < $count; ++$i ) {
+		for ( $i = 0, $count = count( $notifications ); $i < $count; ++ $i ) {
 			$alt = ( 0 == $counter % 2 ) ? ' class="alt"' : ''; ?>
 
-            <li<?php echo $alt ?>><?php echo $notifications[ $i ] ?></li>
+			<li<?php echo $alt ?>><?php echo $notifications[ $i ] ?></li>
 
-            <?php $counter++;
+			<?php $counter ++;
 		}
 	} else { ?>
 
-        <li>
-					<a href="<?php echo esc_url( bp_loggedin_user_domain() ); ?>">
-						<?php _e( 'No new notifications.', 'buddypress' ); ?>
-					</a>
-				</li>
+		<li>
+			<a href="<?php echo esc_url( bp_loggedin_user_domain() ); ?>">
+				<?php _e( 'No new notifications.', 'buddypress' ); ?>
+			</a>
+		</li>
 
-    <?php
+		<?php
 	}
 
 	echo '</ul>';
@@ -129,7 +132,8 @@ function wff_bp_navigation_menu() {
 	global $bp;
 
 	if ( ! $bp->bp_nav || ! is_user_logged_in() ) {
-		return false; }
+		return false;
+	}
 
 	echo '<ul class="dropdown-menu">';
 
@@ -138,8 +142,9 @@ function wff_bp_navigation_menu() {
 	foreach ( (array) $bp->bp_nav as $nav_item ) {
 		$alt = ( 0 == $counter % 2 ) ? ' class="alt"' : '';
 
-		if ( -1 == $nav_item['position'] ) {
-			continue; }
+		if ( - 1 == $nav_item['position'] ) {
+			continue;
+		}
 
 		echo '<li' . $alt . '>';
 		echo '<a id="bp-admin-' . $nav_item['css_id'] . '" href="' . $nav_item['link'] . '">' . $nav_item['name'] . '</a>';
@@ -153,21 +158,23 @@ function wff_bp_navigation_menu() {
 				$name = $subnav_item['name'];
 
 				if ( bp_displayed_user_domain() ) {
-					$link = str_replace( bp_displayed_user_domain(), bp_loggedin_user_domain(), $subnav_item['link'] ); }
+					$link = str_replace( bp_displayed_user_domain(), bp_loggedin_user_domain(), $subnav_item['link'] );
+				}
 
 				if ( isset( $bp->displayed_user->userdata->user_login ) ) {
-					$name = str_replace( $bp->displayed_user->userdata->user_login, $bp->loggedin_user->userdata->user_login, $subnav_item['name'] ); }
+					$name = str_replace( $bp->displayed_user->userdata->user_login, $bp->loggedin_user->userdata->user_login, $subnav_item['name'] );
+				}
 
 				$alt = ( 0 == $sub_counter % 2 ) ? ' class="alt"' : '';
 				echo '<li' . $alt . '><a id="bp-admin-' . $subnav_item['css_id'] . '" href="' . $link . '">' . $name . '</a></li>';
-				$sub_counter++;
+				$sub_counter ++;
 			}
 			echo '</ul>';
 		}
 
 		echo '</li>';
 
-		$counter++;
+		$counter ++;
 	}
 
 	$alt = ( 0 == $counter % 2 ) ? ' class="alt"' : '';
@@ -185,7 +192,8 @@ function wff_bp_sidebar_navigation_menu() {
 	global $bp;
 
 	if ( ! $bp->bp_nav || ! is_user_logged_in() ) {
-		return false; }
+		return false;
+	}
 
 	echo '<ul class="bp-sidebar-navigation sm sm-vertical">';
 
@@ -194,8 +202,9 @@ function wff_bp_sidebar_navigation_menu() {
 	foreach ( (array) $bp->bp_nav as $nav_item ) {
 		$alt = ( 0 == $counter % 2 ) ? ' class="alt"' : '';
 
-		if ( -1 == $nav_item['position'] ) {
-			continue; }
+		if ( - 1 == $nav_item['position'] ) {
+			continue;
+		}
 
 		echo '<li' . $alt . '>';
 		echo '<a id="user-' . $nav_item['css_id'] . '" href="' . $nav_item['link'] . '">' . $nav_item['name'] . '</a>';
@@ -209,21 +218,23 @@ function wff_bp_sidebar_navigation_menu() {
 				$name = $subnav_item['name'];
 
 				if ( bp_displayed_user_domain() ) {
-					$link = str_replace( bp_displayed_user_domain(), bp_loggedin_user_domain(), $subnav_item['link'] ); }
+					$link = str_replace( bp_displayed_user_domain(), bp_loggedin_user_domain(), $subnav_item['link'] );
+				}
 
 				if ( isset( $bp->displayed_user->userdata->user_login ) ) {
-					$name = str_replace( $bp->displayed_user->userdata->user_login, $bp->loggedin_user->userdata->user_login, $subnav_item['name'] ); }
+					$name = str_replace( $bp->displayed_user->userdata->user_login, $bp->loggedin_user->userdata->user_login, $subnav_item['name'] );
+				}
 
 				$alt = ( 0 == $sub_counter % 2 ) ? ' class="alt"' : '';
 				echo '<li' . $alt . '><a id="user-' . $subnav_item['css_id'] . '" href="' . $link . '">' . $name . '</a></li>';
-				$sub_counter++;
+				$sub_counter ++;
 			}
 			echo '</ul>';
 		}
 
 		echo '</li>';
 
-		$counter++;
+		$counter ++;
 	}
 	$alt = ( 0 == $counter % 2 ) ? ' class="alt"' : '';
 	echo '<li' . $alt . '><a id="bp-admin-logout" class="logout" href="' . wp_logout_url( home_url() ) . '">' . __( 'Log Out', 'buddypress' ) . '</a></li>';

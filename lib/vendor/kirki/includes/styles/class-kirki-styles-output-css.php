@@ -55,16 +55,17 @@ if ( ! class_exists( 'Kirki_Styles_Output_CSS' ) ) {
 			if ( null === self::$instance ) {
 				self::$instance = new Kirki_Styles_Output_CSS();
 			}
+
 			return self::$instance;
 		}
 
 		/**
 		 * get the CSS for a field
 		 *
-		 * @var 	string		the setting ID.
-		 * @var 	string		theme_mod / option
-		 * @var 	array 		an array of arrays of the output arguments.
-		 * @var 	mixed		a callable function.
+		 * @var    string        the setting ID.
+		 * @var    string        theme_mod / option
+		 * @var    array        an array of arrays of the output arguments.
+		 * @var    mixed        a callable function.
 		 *
 		 * @return array
 		 */
@@ -92,7 +93,7 @@ if ( ! class_exists( 'Kirki_Styles_Output_CSS' ) ) {
 			/**
 			 * Find the class that will handle the outpout for this field
 			 */
-			$classname = 'Kirki_Output';
+			$classname            = 'Kirki_Output';
 			$field_output_classes = apply_filters( 'kirki/' . $field['kirki_config'] . '/output/control-classnames', array(
 				'spacing'    => 'Kirki_Output_Control_Spacing',
 				'typography' => 'Kirki_Output_Control_Typography',
@@ -101,6 +102,7 @@ if ( ! class_exists( 'Kirki_Styles_Output_CSS' ) ) {
 				$classname = $field_output_classes[ self::$field_type ];
 			}
 			$obj = new $classname( $field['kirki_config'], self::$output, self::$value );
+
 			return $obj->get_styles();
 
 		}
@@ -109,7 +111,8 @@ if ( ! class_exists( 'Kirki_Styles_Output_CSS' ) ) {
 		 * Gets the array of generated styles and creates the minimized, inline CSS
 		 *
 		 * @param array
-		 * @return string	the generated CSS.
+		 *
+		 * @return string    the generated CSS.
 		 */
 		public static function styles_parse( $css = array() ) {
 
@@ -124,14 +127,15 @@ if ( ! class_exists( 'Kirki_Styles_Output_CSS' ) ) {
 				$final_css .= ( 'global' != $media_query ) ? $media_query . '{' : '';
 				foreach ( $styles as $style => $style_array ) {
 					$final_css .= $style . '{';
-						foreach ( $style_array as $property => $value ) {
-							$value = ( is_string( $value ) ) ? $value : '';
-							$final_css .= $property . ':' . $value . ';';
-						}
+					foreach ( $style_array as $property => $value ) {
+						$value = ( is_string( $value ) ) ? $value : '';
+						$final_css .= $property . ':' . $value . ';';
+					}
 					$final_css .= '}';
 				}
 				$final_css .= ( 'global' != $media_query ) ? '}' : '';
 			}
+
 			return $final_css;
 		}
 
@@ -139,6 +143,7 @@ if ( ! class_exists( 'Kirki_Styles_Output_CSS' ) ) {
 		 * Add prefixes if necessary.
 		 *
 		 * @param  $css array
+		 *
 		 * @return  array
 		 */
 		public static function add_prefixes( $css ) {
@@ -151,15 +156,16 @@ if ( ! class_exists( 'Kirki_Styles_Output_CSS' ) ) {
 							 * Add -webkit-* and -mod-*
 							 */
 							if ( is_string( $property ) && in_array( $property, array(
-								'border-radius',
-								'box-shadow',
-								'box-sizing',
-								'text-shadow',
-								'transform',
-								'background-size',
-								'transition',
-								'transition-property',
-							) ) ) {
+									'border-radius',
+									'box-shadow',
+									'box-sizing',
+									'text-shadow',
+									'transform',
+									'background-size',
+									'transition',
+									'transition-property',
+								) )
+							) {
 								$css[ $media_query ][ $element ][ '-webkit-' . $property ] = $value;
 								$css[ $media_query ][ $element ][ '-moz-' . $property ]    = $value;
 							}
@@ -167,11 +173,12 @@ if ( ! class_exists( 'Kirki_Styles_Output_CSS' ) ) {
 							 * Add -ms-* and -o-*
 							 */
 							if ( is_string( $property ) && in_array( $property, array(
-								'transform',
-								'background-size',
-								'transition',
-								'transition-property',
-							) ) ) {
+									'transform',
+									'background-size',
+									'transition',
+									'transition-property',
+								) )
+							) {
 								$css[ $media_query ][ $element ][ '-ms-' . $property ] = $value;
 								$css[ $media_query ][ $element ][ '-o-' . $property ]  = $value;
 							}

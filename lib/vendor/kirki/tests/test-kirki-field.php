@@ -1,7 +1,9 @@
 <?php
 
 class Test_Kirki_Field extends WP_UnitTestCase {
-	function test() {$this->assertTrue(true);}
+	function test() {
+		$this->assertTrue( true );
+	}
 
 	// public $wp_customize;
 

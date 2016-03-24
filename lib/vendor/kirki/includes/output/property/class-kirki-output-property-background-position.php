@@ -32,6 +32,7 @@ class Kirki_Output_Property_Background_Position extends Kirki_Output_Property {
 				$y = Kirki_Sanitize_Values::css_dimension( $y );
 			}
 			$this->value = $x . ' ' . $y;
+
 			return;
 		}
 		$x = 'center';

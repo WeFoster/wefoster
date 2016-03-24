@@ -22,7 +22,7 @@
 	<div class="activity" role="main">
 
 		<?php //if ( wp_is_mobile() ) : ?>
-			<?php get_template_part( 'buddypress/parts/activity-dropdown' ); ?>
+		<?php get_template_part( 'buddypress/parts/activity-dropdown' ); ?>
 		<?php //endif; ?>
 
 		<?php bp_get_template_part( 'activity/activity-loop' ); ?>

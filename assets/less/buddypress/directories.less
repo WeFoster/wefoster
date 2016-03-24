@@ -13,7 +13,7 @@
   margin-left: 4px;
   position: relative;
   top: -5px;
-  
+
   a {
     color: @white;
   }
@@ -48,7 +48,7 @@ ul.item-list {
   margin: 0;
   padding: 0;
   position: relative;
-  
+
   li {
     background: @listing-bg;
     border-bottom: @listing-border-bottom;
@@ -59,7 +59,7 @@ ul.item-list {
     position: relative;
     list-style: none;
     box-shadow: @listing-box-shadow;
-    
+
     h5 {
       span.small {
         float: right;
@@ -102,7 +102,7 @@ ul.item-list {
       top: @margin-full;
       text-align: right;
       right: @margin-full;
-      
+
       div.generic-button a {
         border: medium none;
         display: block;
@@ -139,7 +139,7 @@ div.dir-search {
   right: @padding-half;
   top: (@padding-half);
   z-index: 10;
-  
+
   input {
     font-size: @font-size-small;
   }
@@ -152,7 +152,7 @@ div.dir-search {
 
 .directory.groups,
 .directory.members,
- {
+{
   ul.item-list li .action {
     .opacity-hide();
   }
@@ -160,7 +160,9 @@ div.dir-search {
   ul.item-list li:hover div.action {
     .opacity-show();
   }
-.responsive(@grid-float-breakpoint-max, { ul.item-list li .action { .opacity-show(); } });
+  .responsive(@grid-float-breakpoint-max, { ul.item-list li .action {
+    .opacity-show();
+  } });
 }
 
 noscript {
@@ -182,7 +184,7 @@ div.pagination {
   padding: 10px 0;
   width: 100%;
   margin-top: -@margin-full;
-  
+
   .pag-count {
     font-size: 90%;
     float: left;
@@ -191,7 +193,7 @@ div.pagination {
   .pagination-links {
     float: right;
     margin-right: 10px;
-    
+
     a:hover {
       font-weight: bold;
     }
@@ -257,7 +259,7 @@ div.pagination .pagination-links a {
     .item-list {
       position: relative;
       top: (-@margin-full * 1.5);
-      
+
       li:first-child {
         border-top: none;
       }

@@ -7,6 +7,7 @@ if ( ! class_exists( 'Kirki_Explode_Background_Field' ) ) {
 		 * Takes a single field with type = background and explodes it to multiple controls.
 		 *
 		 * @param array
+		 *
 		 * @return null|array
 		 */
 		public static function explode( $field ) {
@@ -54,7 +55,7 @@ if ( ! class_exists( 'Kirki_Explode_Background_Field' ) ) {
 						$sanitize_callback = array( 'Kirki_Sanitize_Values', 'color' );
 						break;
 					case 'image':
-						$type = 'image';
+						$type              = 'image';
 						$sanitize_callback = 'esc_url_raw';
 						break;
 					case 'attach':
@@ -111,7 +112,7 @@ if ( ! class_exists( 'Kirki_Explode_Background_Field' ) ) {
 						),
 					) : array(),
 				) );
-				$i++;
+				$i ++;
 			}
 
 			return $fields;
@@ -121,7 +122,8 @@ if ( ! class_exists( 'Kirki_Explode_Background_Field' ) ) {
 		/**
 		 * Parse all fields and add the new background fields
 		 *
-		 * @param 	array
+		 * @param    array
+		 *
 		 * @return  array
 		 */
 		public static function process_fields( $fields ) {
@@ -150,24 +152,24 @@ if ( ! class_exists( 'Kirki_Explode_Background_Field' ) ) {
 			$i18n = Kirki_l10n::get_strings();
 
 			return array(
-				'repeat'        => array(
+				'repeat'   => array(
 					'no-repeat' => $i18n['no-repeat'],
 					'repeat'    => $i18n['repeat-all'],
 					'repeat-x'  => $i18n['repeat-x'],
 					'repeat-y'  => $i18n['repeat-y'],
 					'inherit'   => $i18n['inherit'],
 				),
-				'size'        => array(
+				'size'     => array(
 					'inherit' => $i18n['inherit'],
 					'cover'   => $i18n['cover'],
 					'contain' => $i18n['contain'],
 				),
-				'attach'      => array(
+				'attach'   => array(
 					'inherit' => $i18n['inherit'],
 					'fixed'   => $i18n['fixed'],
 					'scroll'  => $i18n['scroll'],
 				),
-				'position'          => array(
+				'position' => array(
 					'left-top'      => $i18n['left-top'],
 					'left-center'   => $i18n['left-center'],
 					'left-bottom'   => $i18n['left-bottom'],

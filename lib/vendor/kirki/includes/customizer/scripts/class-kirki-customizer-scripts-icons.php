@@ -41,6 +41,7 @@ if ( ! class_exists( 'Kirki_Customizer_Scripts_Icons' ) ) {
 		 * Once created, the script is added to the $icons_script property.
 		 *
 		 * @param array the field definition
+		 *
 		 * @return void
 		 */
 		public static function generate_script( $args = array() ) {

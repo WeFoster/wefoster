@@ -26,6 +26,7 @@ if ( ! class_exists( 'Kirki_Sanitize_Values' ) ) {
 		 * as a boolean value, either TRUE or FALSE.
 		 *
 		 * @param bool|string $checked Whether the checkbox is checked.
+		 *
 		 * @return bool Whether the checkbox is checked.
 		 */
 		public static function checkbox( $checked ) {
@@ -53,8 +54,9 @@ if ( ! class_exists( 'Kirki_Sanitize_Values' ) ) {
 		 * @see absint() https://developer.wordpress.org/reference/functions/absint/
 		 * @see get_post_status() https://developer.wordpress.org/reference/functions/get_post_status/
 		 *
-		 * @param int                  $page_id    Page ID.
+		 * @param int $page_id Page ID.
 		 * @param WP_Customize_Setting $setting Setting instance.
+		 *
 		 * @return int|string Page ID if the page is published; otherwise, the setting default.
 		 */
 		public static function dropdown_pages( $page_id, $setting ) {
@@ -133,7 +135,7 @@ if ( ! class_exists( 'Kirki_Sanitize_Values' ) ) {
 					'telugu',
 					'thai',
 				);
-				$subsets_ok = array();
+				$subsets_ok    = array();
 				if ( is_array( $value['subset'] ) ) {
 					foreach ( $value['subset'] as $subset ) {
 						if ( in_array( $subset, $valid_subsets ) ) {
@@ -163,7 +165,7 @@ if ( ! class_exists( 'Kirki_Sanitize_Values' ) ) {
 			}
 			// Sanitize the color
 			if ( isset( $value['color'] ) && ! empty( $value['color'] ) ) {
-				$color = ariColor::newColor( $value['color'] );
+				$color          = ariColor::newColor( $value['color'] );
 				$value['color'] = $color->toCSS( 'hex' );
 			}
 
@@ -193,7 +195,7 @@ if ( ! class_exists( 'Kirki_Sanitize_Values' ) ) {
 				return 'auto';
 			}
 			// Return empty if there are no numbers in the value.
-			if ( ! preg_match( '#[0-9]#' , $value ) ) {
+			if ( ! preg_match( '#[0-9]#', $value ) ) {
 				return '';
 			}
 			// The raw value without the units
@@ -206,6 +208,7 @@ if ( ! class_exists( 'Kirki_Sanitize_Values' ) ) {
 					$unit_used = $unit;
 				}
 			}
+
 			return $raw_value . $unit_used;
 		}
 
@@ -240,6 +243,7 @@ if ( ! class_exists( 'Kirki_Sanitize_Values' ) ) {
 		 */
 		public static function rgba( $value ) {
 			$color = ariColor::newColor( $value );
+
 			return $color->toCSS( 'rgba' );
 		}
 
@@ -260,6 +264,7 @@ if ( ! class_exists( 'Kirki_Sanitize_Values' ) ) {
 			}
 			// Instantiate the object
 			$color = ariColor::newColor( $value );
+
 			// Return a CSS value, using the auto-detected mode
 			return $color->toCSS( $color->mode );
 		}
@@ -270,6 +275,7 @@ if ( ! class_exists( 'Kirki_Sanitize_Values' ) ) {
 		public static function multicheck( $values ) {
 
 			$multi_values = ( ! is_array( $values ) ) ? explode( ',', $values ) : $values;
+
 			return ( ! empty( $multi_values ) ) ? array_map( 'sanitize_text_field', $multi_values ) : array();
 
 		}

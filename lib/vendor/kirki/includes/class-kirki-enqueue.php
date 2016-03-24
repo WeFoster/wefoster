@@ -111,15 +111,16 @@ if ( ! class_exists( 'Kirki_Enqueue' ) ) {
 				}
 
 				$google_fonts_final[] = array(
-					'family'       => $family,
-					'label'        => $label,
-					'variants'     => $available_variants,
-					'subsets'      => $available_subsets,
+					'family'   => $family,
+					'label'    => $label,
+					'variants' => $available_variants,
+					'subsets'  => $available_subsets,
 				);
 			}
 			$final = array_merge( $standard_fonts_final, $google_fonts_final );
 			wp_localize_script( 'kirki-customizer-js', 'kirkiAllFonts', $final );
 		}
+
 		public function branding() {
 
 			$config = apply_filters( 'kirki/config', array() );
@@ -144,7 +145,7 @@ if ( ! class_exists( 'Kirki_Enqueue' ) ) {
 		public function postmessage() {
 			wp_enqueue_script( 'kirki_auto_postmessage', trailingslashit( Kirki::$url ) . 'assets/js/kirki-postmessage.js', array( 'customize-preview' ), time(), true );
 			$js_vars_fields = array();
-			$fields = Kirki::$fields;
+			$fields         = Kirki::$fields;
 			foreach ( $fields as $field ) {
 				if ( isset( $field['transport'] ) && 'postMessage' == $field['transport'] && isset( $field['js_vars'] ) && ! empty( $field['js_vars'] ) && is_array( $field['js_vars'] ) && isset( $field['settings'] ) ) {
 					$js_vars_fields[ $field['settings'] ] = $field['js_vars'];

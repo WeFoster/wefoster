@@ -11,6 +11,7 @@
   background-size: cover;
   background-position: center;
 }
+
 //Action for Cover Photos
 .cover-photo-action {
   display: inline-block;
@@ -19,13 +20,13 @@
   text-align: center;
   width: 100%;
   z-index: 100;
-  
+
   &.my-profile {
     right: 0;
     text-align: left;
     top: @padding-half;
     transform: none;
-    
+
     a {
       font-size: 45%;
     }
@@ -41,6 +42,7 @@
     font-size: 20px;
   }
 }
+
 //Content Inside Cover Photo.
 .bp-cover-photo-content {
   bottom: 0;
@@ -48,7 +50,7 @@
   position: absolute;
   left: 0;
   right: 0;
-  
+
   .wf-member-action-button {
     width: 25%;
     position: absolute;
@@ -62,7 +64,7 @@
     background: transparent;
     margin: 0;
     padding: 0;
-    
+
     .widget {
       background: inherit;
       padding: 0;
@@ -73,10 +75,10 @@
     #item-header-avatar {
       margin: 0;
       position: inherit;
-      
+
       img {
         bottom: 0;
-        box-shadow: 0 1px 3px rgba(0,0,0,0.3);
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
         height: auto;
         max-height: 100%;
         max-width: 90%;
@@ -88,20 +90,21 @@
 
   .inner-cover-photo {
     height: 100%;
-    
+
     .page-header.buddypress-component-title {
       background: fade(@brand-primary, 90%);
       border-bottom: 0 none;
       bottom: 0;
       position: absolute;
       margin: auto;
-      
+
       h1 {
         color: @white;
       }
     }
   }
 }
+
 //Make small changes for fluid layouts
 .wefoster-layout-container {
   .bp-cover-photo-content .sidebar #item-header-avatar img {
@@ -117,6 +120,7 @@
     margin-left: -@margin-half;
   }
 }
+
 ///Show them on responsive view
 @media screen and (max-width: @grid-float-breakpoint-max) {
   .bp-cover-photo-content .sidebar #item-header-avatar img {

@@ -22,7 +22,7 @@ class Kirki_Panels_Expanded_Panel extends WP_Customize_Panel {
 				<div class="description customize-panel-description">
 					{{{ data.description }}}
 				</div>
-			<# } #>
+				<# } #>
 		</li>
 		<?php
 	}

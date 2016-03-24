@@ -3,6 +3,7 @@
   top: 50%;
   transform: translateY(-50%);
 }
+
 //
 //Branding Classes
 //
@@ -11,7 +12,7 @@
   color: @box-light-color;
   border-top: @box-light-border-top;
   border-bottom: @box-light-border-bottom;
-  
+
   svg {
     background: @box-light-background;
   }
@@ -43,7 +44,7 @@
   background: @brand-secondary;
   color: contrast(@brand-secondary, @text-color, @white);
   border-color: darken(@brand-secondary, 4%) !important;
-  
+
   a,
   a:hover {
     color: contrast(@brand-secondary, @text-color, @white);
@@ -71,7 +72,7 @@
   background: @brand-primary;
   color: contrast(@brand-primary, @text-color, @white);
   border-color: darken(@brand-primary, 4%) !important;
-  
+
   svg {
     background: @brand-primary;
   }
@@ -99,7 +100,7 @@
   background: @brand-complimentary;
   color: contrast(@brand-complimentary, @text-color, @white);
   border-color: darken(@brand-complimentary, 4%) !important;
-  
+
   svg {
     background: @brand-complimentary;
   }
@@ -122,6 +123,7 @@
     background: lighten(@brand-complimentary, 3%) !important;
   }
 }
+
 // Mixins
 .responsive(@maxWidth; @rules) {
   @media only screen and (max-width: @maxWidth) {

@@ -8,64 +8,64 @@
  *
  * @package WeFoster Framework
  */
- ?>
+?>
 </div><!-- /.content -->
 </div><!-- /.wrap -->
 
-<?php do_action('before_footer'); ?>
+<?php do_action( 'before_footer' ); ?>
 
-  <footer class="content-info <?php do_action('class_footer'); ?>" role="contentinfo">
-
-
-    <div class="<?php do_action('class_container'); do_action('class_container_footer'); ?>">
-
-      <?php do_action('open_footer'); ?>
-
-      <div class="row">
-
-        <?php get_template_part( 'templates/footer/' . wff_get_footer_type() ); ?>
-
-        <div class="col-sm-12 bottom-links text-center">
-
-          <?php if ( get_theme_mod('wf_plus_footer_text', 'default') == 'default'  ): ?>
-
-            <?php printf( __( "Powered by WordPress. Theme developed by %s",'wefoster' ), '<a href="http://wefoster.co">WeFoster</a>' );?>
-
-          <?php else: ?>
-
-            <?php $footer_copyright = get_theme_mod( 'wf_plus_footer_text' ) ?>
-
-            <?php // Data validation: Allow anchor and strong tags
-              echo wp_kses( $footer_copyright,
-                array(
-                    'strong' => array(),
-                    'a' => array(
-                    'href' => true,
-                    'rel' => true,
-                    'rev' => true,
-                    'name' => true,
-                    'target' => true,
-                  )
-                )
-                );
-            ?>
+<footer class="content-info <?php do_action( 'class_footer' ); ?>" role="contentinfo">
 
 
-          <?php endif; ?>
+	<div class="<?php do_action( 'class_container' );
+	do_action( 'class_container_footer' ); ?>">
 
-        </div>
+		<?php do_action( 'open_footer' ); ?>
+
+		<div class="row">
+
+			<?php get_template_part( 'templates/footer/' . wff_get_footer_type() ); ?>
+
+			<div class="col-sm-12 bottom-links text-center">
+
+				<?php if ( get_theme_mod( 'wf_plus_footer_text', 'default' ) == 'default' ): ?>
+
+					<?php printf( __( "Powered by WordPress. Theme developed by %s", 'wefoster' ), '<a href="http://wefoster.co">WeFoster</a>' ); ?>
+
+				<?php else: ?>
+
+					<?php $footer_copyright = get_theme_mod( 'wf_plus_footer_text' ) ?>
+
+					<?php // Data validation: Allow anchor and strong tags
+					echo wp_kses( $footer_copyright,
+					              array(
+						              'strong' => array(),
+						              'a'      => array(
+							              'href'   => true,
+							              'rel'    => true,
+							              'rev'    => true,
+							              'name'   => true,
+							              'target' => true,
+						              )
+					              )
+					);
+					?>
 
 
+				<?php endif; ?>
 
-        <?php do_action('close_footer'); ?>
+			</div>
 
-      </div>
 
-  </footer>
+			<?php do_action( 'close_footer' ); ?>
 
-  <!-- layout wrapper -->
-  </div>
-  <?php do_action('after_footer'); ?>
-  <?php wp_footer(); ?>
+		</div>
+
+</footer>
+
+<!-- layout wrapper -->
+</div>
+<?php do_action( 'after_footer' ); ?>
+<?php wp_footer(); ?>
 </body>
 </html>

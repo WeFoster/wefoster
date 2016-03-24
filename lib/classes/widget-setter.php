@@ -1,17 +1,17 @@
 <?php
+
 /**
  * Utility class for dealing with sidebar widgets
  * Props to Marshall Sorenson, Boone Gorges and the rest of the CBOX Team.
  * https://github.com/cuny-academic-commons/cbox-theme
  * @since 1.0.0
  */
-
 class WeFoster_Widget_Setter {
 	public static function set_widget( $args ) {
-		$r = wp_parse_args( $args, array(
-			'id_base' => '',
+		$r          = wp_parse_args( $args, array(
+			'id_base'    => '',
 			'sidebar_id' => '',
-			'settings' => array(),
+			'settings'   => array(),
 		) );
 		$id_base    = $r['id_base'];
 		$sidebar_id = $r['sidebar_id'];
@@ -25,9 +25,9 @@ class WeFoster_Widget_Setter {
 			return new WP_Error( 'sidebar_does_not_exist', 'Sidebar does not exist' );
 		}
 		$sidebars = wp_get_sidebars_widgets();
-		$sidebar = (array) $sidebars[ $sidebar_id ];
+		$sidebar  = (array) $sidebars[ $sidebar_id ];
 		// Multi-widgets can only be detected by looking at their settings
-		$option_name  = 'widget_' . $id_base;
+		$option_name = 'widget_' . $id_base;
 		// Don't let it get pulled from the cache
 		wp_cache_delete( $option_name, 'options' );
 		$all_settings = get_option( $option_name );
@@ -53,14 +53,15 @@ class WeFoster_Widget_Setter {
 		$widget_id = $id_base . '-' . $multi_number;
 		$sidebar[] = $widget_id;
 		// Because of the way WP_Widget::update_callback() works, gotta fake the $_POST
-		$_POST['widget-' . $id_base] = $all_settings;
+		$_POST[ 'widget-' . $id_base ] = $all_settings;
 		global $wp_registered_widget_updates, $wp_registered_widget_controls;
 		foreach ( (array) $wp_registered_widget_updates as $name => $control ) {
 			if ( $name == $id_base ) {
-				if ( !is_callable( $control['callback'] ) )
+				if ( ! is_callable( $control['callback'] ) ) {
 					continue;
+				}
 				ob_start();
-					call_user_func_array( $control['callback'], $control['params'] );
+				call_user_func_array( $control['callback'], $control['params'] );
 				ob_end_clean();
 				break;
 			}
@@ -69,13 +70,16 @@ class WeFoster_Widget_Setter {
 		wp_set_sidebars_widgets( $sidebars );
 		update_option( $option_name, $all_settings );
 	}
+
 	/**
 	 * Checks to see whether a sidebar is already populated
 	 */
 	public static function is_sidebar_populated( $sidebar_id ) {
 		$sidebars = wp_get_sidebars_widgets();
+
 		return ! empty( $sidebars[ $sidebar_id ] );
 	}
+
 	/**
 	 * Moves all active widgets from a given sidebar into the inactive array
 	 */
@@ -90,10 +94,12 @@ class WeFoster_Widget_Setter {
 		$sidebars[ $sidebar_id ] = array();
 		wp_set_sidebars_widgets( $sidebars );
 	}
+
 	/**
 	 * Check to see whether a widget has been registered
 	 *
 	 * @param string $id_base
+	 *
 	 * @return bool
 	 */
 	public static function widget_exists( $id_base ) {
@@ -103,6 +109,7 @@ class WeFoster_Widget_Setter {
 				return true;
 			}
 		}
+
 		return false;
 	}
 }

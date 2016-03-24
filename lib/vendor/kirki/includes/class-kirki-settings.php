@@ -21,6 +21,7 @@ if ( ! class_exists( 'Kirki_Settings' ) ) {
 		 * Class constructor.
 		 *
 		 * @access public
+		 *
 		 * @param $args    array    the field definition as sanitized in Kirki_Field
 		 */
 		public function __construct( $args = array() ) {
@@ -46,6 +47,7 @@ if ( ! class_exists( 'Kirki_Settings' ) ) {
 		 * If not an array, then it just calls add_setting
 		 *
 		 * @access private
+		 *
 		 * @param $args    array    the field definition as sanitized in Kirki_Field
 		 */
 		final private function add_settings( $args = array() ) {
@@ -64,7 +66,7 @@ if ( ! class_exists( 'Kirki_Settings' ) ) {
 					$args['default'] = array();
 				}
 				foreach ( $args['settings'] as $key => $value ) {
-					$default   = ( isset( $defaults[ $key ] ) ) ? $defaults[ $key ] : '';
+					$default = ( isset( $defaults[ $key ] ) ) ? $defaults[ $key ] : '';
 					$this->add_setting( $classname, $value, $default, $args['option_type'], $args['capability'], $args['transport'], $args['sanitize_callback'] );
 				}
 			}
@@ -75,6 +77,7 @@ if ( ! class_exists( 'Kirki_Settings' ) ) {
 		 * This is where we're finally adding the setting to the Customizer.
 		 *
 		 * @access private
+		 *
 		 * @param $classname            string          the name of the class that will be used to create this setting.
 		 *                                              We're getting this from $this->setting_types
 		 * @param $setting              string          the setting-name

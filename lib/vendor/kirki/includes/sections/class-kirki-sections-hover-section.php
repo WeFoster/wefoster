@@ -28,7 +28,7 @@ class Kirki_Sections_Hover_Section extends WP_Customize_Section {
 						<div class="description customize-section-description">
 							{{{ data.description }}}
 						</div>
-					<# } #>
+						<# } #>
 				</li>
 			</ul>
 		</li>

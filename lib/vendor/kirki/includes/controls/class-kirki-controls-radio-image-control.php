@@ -26,25 +26,28 @@ if ( ! class_exists( 'Kirki_Controls_Radio_Image_Control' ) ) {
 		protected function content_template() { ?>
 			<# if ( data.tooltip ) { #>
 				<a href="#" class="tooltip hint--left" data-hint="{{ data.tooltip }}"><span class='dashicons dashicons-info'></span></a>
-			<# } #>
-			<label class="customizer-text">
-				<# if ( data.label ) { #>
-					<span class="customize-control-title">{{{ data.label }}}</span>
 				<# } #>
-				<# if ( data.description ) { #>
-					<span class="description customize-control-description">{{{ data.description }}}</span>
-				<# } #>
-			</label>
-			<div id="input_{{ data.id }}" class="image">
-				<# for ( key in data.choices ) { #>
-					<input class="image-select" type="radio" value="{{ key }}" name="_customize-radio-{{ data.id }}" id="{{ data.id }}{{ key }}" {{{ data.link }}}<# if ( data.value === key ) { #> checked="checked"<# } #>>
-						<label for="{{ data.id }}{{ key }}">
-							<img src="{{ data.choices[ key ] }}">
-							<span class="image-clickable"></span>
-						</label>
-					</input>
-				<# } #>
-			</div>
+					<label class="customizer-text">
+						<# if ( data.label ) { #>
+							<span class="customize-control-title">{{{ data.label }}}</span>
+							<# } #>
+								<# if ( data.description ) { #>
+									<span class="description customize-control-description">{{{ data.description }}}</span>
+									<# } #>
+					</label>
+					<div id="input_{{ data.id }}" class="image">
+						<# for ( key in data.choices ) { #>
+							<input class="image-select" type="radio" value="{{ key }}" name="_customize-radio-{{ data.id }}" id="{{ data.id }}{{ key }}" {{{
+							       data.link }}}
+							<# if ( data.value === key ) { #> checked="checked"
+								<# } #>>
+									<label for="{{ data.id }}{{ key }}">
+										<img src="{{ data.choices[ key ] }}">
+										<span class="image-clickable"></span>
+									</label>
+									</input>
+									<# } #>
+					</div>
 			<?php
 		}
 

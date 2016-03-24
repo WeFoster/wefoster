@@ -11,12 +11,13 @@
  */
 function wf_theme_customizer_tweaks( $config ) {
 	return wp_parse_args( array(
-		'description'  => esc_attr__( 'Build Better Communities', 'kirki' ),
-		'width' => '40%',
-		'url_path' =>  WEFOSTER_CUSTOMIZER_URL . '/lib/vendor/kirki/'
-	), $config );
+		                      'description' => esc_attr__( 'Build Better Communities', 'kirki' ),
+		                      'width'       => '40%',
+		                      'url_path'    => WEFOSTER_CUSTOMIZER_URL . '/lib/vendor/kirki/'
+	                      ), $config );
 }
-add_filter( 'kirki/config', 'wf_theme_customizer_tweaks',11 );
+
+add_filter( 'kirki/config', 'wf_theme_customizer_tweaks', 11 );
 
 
 /**
@@ -28,6 +29,7 @@ function wf_theme_customizer_stylesheet() {
 	wp_register_style( 'wf-theme-customizer-css', WEFOSTER_CUSTOMIZER_URL . '/lib/customiser/assets/css/customizer.css', null, null, 'all' );
 	wp_enqueue_style( 'wf-theme-customizer-css' );
 }
+
 add_action( 'customize_controls_print_styles', 'wf_theme_customizer_stylesheet' );
 
 
@@ -35,15 +37,16 @@ add_action( 'customize_controls_print_styles', 'wf_theme_customizer_stylesheet' 
  * This function adds some styles to the WordPress Customizer
  */
 function my_customizer_styles() { ?>
-    <style>
+	<style>
 		.kirki-customizer-loading-wrapper {
-		  background-image: inherit !important;
+			background-image: inherit !important;
 			display: none !important;
 		}
-    </style>
-    <?php
+	</style>
+	<?php
 
 }
+
 add_action( 'customize_controls_print_styles', 'my_customizer_styles', 999 );
 
 /**
@@ -52,24 +55,25 @@ add_action( 'customize_controls_print_styles', 'my_customizer_styles', 999 );
  * @since 1.0
  */
 function wf_plus_upgrade_notice() {
-		// Enqueue the script
-		wp_enqueue_script(
-			'wefoster-customizer-custom',
-			WEFOSTER_CUSTOMIZER_URL . '/lib/customiser/assets/js/custom.js',
-			array(), '1.0.0',
-			true
-		);
+	// Enqueue the script
+	wp_enqueue_script(
+		'wefoster-customizer-custom',
+		WEFOSTER_CUSTOMIZER_URL . '/lib/customiser/assets/js/custom.js',
+		array(), '1.0.0',
+		true
+	);
 
-		// Localize the script
-		wp_localize_script(
-			'wefoster-customizer-custom',
-			'prefixL10n',
-			array(
-				'prefixURL'	=> esc_url( 'https://wefoster.co/products/wefoster-plus' ),
-				'prefixLabel'	=> __( 'Upgrade to WeFoster +', 'wefoster' ),
-			)
-		);
+	// Localize the script
+	wp_localize_script(
+		'wefoster-customizer-custom',
+		'prefixL10n',
+		array(
+			'prefixURL'   => esc_url( 'https://wefoster.co/products/wefoster-plus' ),
+			'prefixLabel' => __( 'Upgrade to WeFoster +', 'wefoster' ),
+		)
+	);
 
 }
+
 add_action( 'customize_controls_enqueue_scripts', 'wf_plus_upgrade_notice' );
 ?>

@@ -29,21 +29,23 @@ if ( ! class_exists( 'Kirki_Controls_Preset_Control' ) ) {
 		protected function content_template() { ?>
 
 			<# if ( ! data.choices ) return; #>
-			<label>
-				<# if ( data.label ) { #>
-					<span class="customize-control-title">{{ data.label }}</span>
-				<# } #>
-				<# if ( data.description ) { #>
-					<span class="description customize-control-description">{{{ data.description }}}</span>
-				<# } #>
-				<select {{{ data.link }}} data-multiple="1">
-					<# for ( key in data.choices ) { #>
-						<option value="{{ key }}"<# if ( key === data.value ) { #>selected<# } #>>
-							{{ data.choices[ key ]['label'] }}
-						</option>
-					<# } #>
-				</select>
-			</label>
+				<label>
+					<# if ( data.label ) { #>
+						<span class="customize-control-title">{{ data.label }}</span>
+						<# } #>
+							<# if ( data.description ) { #>
+								<span class="description customize-control-description">{{{ data.description }}}</span>
+								<# } #>
+									<select {{{ data.link }}} data-multiple="1">
+										<# for ( key in data.choices ) { #>
+											<option value="{{ key }}"
+											<# if ( key === data.value ) { #>selected
+												<# } #>>
+													{{ data.choices[ key ]['label'] }}
+													</option>
+													<# } #>
+									</select>
+				</label>
 			<?php
 		}
 	}

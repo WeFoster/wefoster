@@ -5,17 +5,17 @@
  *
  * @since 1.0
  */
-function wff_base_widgets_setup()
-{
+function wff_base_widgets_setup() {
 	// sidebars enabled?
-		// yep, register base sidebars
-		wff_base_register_sidebars();
-		// BuddyPress sidebars enabled?
-		if ( function_exists( 'bp_is_member' ) ) {
+	// yep, register base sidebars
+	wff_base_register_sidebars();
+	// BuddyPress sidebars enabled?
+	if ( function_exists( 'bp_is_member' ) ) {
 		// yep, register BP sidebars
 		wff_base_register_bp_sidebars();
-		}
+	}
 }
+
 add_action( 'widgets_init', 'wff_base_widgets_setup' );
 
 /**
@@ -23,17 +23,16 @@ add_action( 'widgets_init', 'wff_base_widgets_setup' );
  *
  * @since 1.0
  */
-function wff_base_register_sidebar( $id, $name, $desc )
-{
+function wff_base_register_sidebar( $id, $name, $desc ) {
 	register_sidebar( array(
-		'id' => $id,
-		'name' => $name,
-		'description' => $desc,
-		'before_widget' => '<article id="%1$s" class="widget %2$s">',
-		'after_widget' => '</article>',
-		'before_title' => '<h4>',
-		'after_title' => '</h4>'
-	));
+		                  'id'            => $id,
+		                  'name'          => $name,
+		                  'description'   => $desc,
+		                  'before_widget' => '<article id="%1$s" class="widget %2$s">',
+		                  'after_widget'  => '</article>',
+		                  'before_title'  => '<h4>',
+		                  'after_title'   => '</h4>'
+	                  ) );
 }
 
 /**
@@ -41,8 +40,7 @@ function wff_base_register_sidebar( $id, $name, $desc )
  *
  * @since 1.0
  */
-function wff_base_register_sidebars()
-{
+function wff_base_register_sidebars() {
 	// Global
 	wff_base_register_sidebar(
 		'sitewide-sidebar',
@@ -99,8 +97,7 @@ function wff_base_register_sidebars()
  *
  * @since 1.0
  */
-function wff_base_register_bp_sidebars()
-{
+function wff_base_register_bp_sidebars() {
 	// activity sidebar
 	wff_base_register_sidebar(
 		'activity-sidebar',
@@ -138,18 +135,18 @@ function wff_base_register_bp_sidebars()
  *
  * @since 1.0
  */
-function wff_base_sidebar( $index, $admin_text )
-{
+function wff_base_sidebar( $index, $admin_text ) {
 	// check if its active
 	if ( is_active_sidebar( $index ) ) {
 		// yep spit it out
 		dynamic_sidebar( $index );
+
 		// sidebar was loaded
 		return true;
-	// can current user monkey with widgets?
+		// can current user monkey with widgets?
 	} elseif ( current_user_can( 'edit_theme_options' ) ) {
 		// yep, spit out a nice link ?>
-	<?php
+		<?php
 	}
 
 	// sidebar not loaded
@@ -161,39 +158,38 @@ function wff_base_sidebar( $index, $admin_text )
  *
  * @since 1.0
  */
-function wff_base_sidebars()
-{
+function wff_base_sidebars() {
 
-		// show global sidebar (always try to load this one)
-		wff_base_sidebar( 'sitewide-sidebar', 'Sitewide Sidebar' );
+	// show global sidebar (always try to load this one)
+	wff_base_sidebar( 'sitewide-sidebar', 'Sitewide Sidebar' );
 
-		if ( function_exists( 'bp_is_member' ) ) {
+	if ( function_exists( 'bp_is_member' ) ) {
 		// any profile page, or any members component page?
 		if ( bp_is_user() || bp_is_current_component( 'members' ) ) {
 
 			// show member sidebar
 			return wff_base_sidebar( 'member-sidebar', 'BP Member Sidebar' );
 
-		// any groups component page, except member groups?
-		} elseif ( !bp_is_user() && bp_is_current_component( 'groups' ) ) {
+			// any groups component page, except member groups?
+		} elseif ( ! bp_is_user() && bp_is_current_component( 'groups' ) ) {
 
 			// show groups sidebar
 			return wff_base_sidebar( 'groups-sidebar', 'BP Group Sidebar' );
 
-		// any forums component page, except profile pages?
-		} elseif ( !bp_is_user() && bp_is_current_component( 'forums' ) ) {
+			// any forums component page, except profile pages?
+		} elseif ( ! bp_is_user() && bp_is_current_component( 'forums' ) ) {
 
 			// show forums sidebar
 			return wff_base_sidebar( 'forums-sidebar', 'BP Forums Sidebar' );
 
-		// any blogs component page, except member blogs?
-		} elseif ( !bp_is_user() && bp_is_current_component( 'blogs' )) {
+			// any blogs component page, except member blogs?
+		} elseif ( ! bp_is_user() && bp_is_current_component( 'blogs' ) ) {
 
 			// show blogs sidebar
 			return wff_base_sidebar( 'blogs-sidebar', 'BP Blogs Sidebar' );
 
-		// any activity component page, except member activity?
-		} elseif ( !bp_is_user() && bp_is_current_component( 'activity' ) ) {
+			// any activity component page, except member activity?
+		} elseif ( ! bp_is_user() && bp_is_current_component( 'activity' ) ) {
 
 			// show activity sidebar
 			return wff_base_sidebar( 'activity-sidebar', 'Activity Sidebar' );
@@ -213,13 +209,13 @@ function wff_base_sidebars()
 		// show forums sidebar
 		return wff_base_sidebar( 'forums-sidebar', 'Forums Sidebar' );
 
-	// any other page?
+		// any other page?
 	} elseif ( is_page() ) {
 
 		// show page sidebar
 		return wff_base_sidebar( 'page-sidebar', 'Page Sidebar' );
 
-	// assume its the "blog" (posts)
+		// assume its the "blog" (posts)
 	} else {
 
 		// show blog sidebar
@@ -235,87 +231,87 @@ function wff_base_sidebars()
 /**
  * Register more sidebars
  */
-function wff_homepage_widgets()
-{
+function wff_homepage_widgets() {
 	register_sidebar( array(
-		'name' => 'Hero Header Right',
-		'id' => 'hero-right',
-		'description' => "The widget area inside your Homepage Hero Header",
-		'before_widget' => '<div id="%1$s" class="widget %2$s">',
-		'after_widget' => '</div>',
-		'before_title' => '<h4>',
-		'after_title' => '</h4>'
-	));
+		                  'name'          => 'Hero Header Right',
+		                  'id'            => 'hero-right',
+		                  'description'   => "The widget area inside your Homepage Hero Header",
+		                  'before_widget' => '<div id="%1$s" class="widget %2$s">',
+		                  'after_widget'  => '</div>',
+		                  'before_title'  => '<h4>',
+		                  'after_title'   => '</h4>'
+	                  ) );
 
 	register_sidebar( array(
-		'name' => 'Homepage Top Center',
-		'id' => 'homepage-top-center',
-		'description' => "The Top Center Widget",
-		'before_widget' => '<div id="%1$s" class="widget %2$s">',
-		'after_widget' => '</div>',
-		'before_title' => '<h4>',
-		'after_title' => '</h4>'
-	));
+		                  'name'          => 'Homepage Top Center',
+		                  'id'            => 'homepage-top-center',
+		                  'description'   => "The Top Center Widget",
+		                  'before_widget' => '<div id="%1$s" class="widget %2$s">',
+		                  'after_widget'  => '</div>',
+		                  'before_title'  => '<h4>',
+		                  'after_title'   => '</h4>'
+	                  ) );
 
 	register_sidebar( array(
-		'name' => 'Homepage Top Left',
-		'id' => 'homepage-top-left',
-		'description' => "The Top Left Widget",
-		'before_widget' => '<div id="%1$s" class="widget %2$s">',
-		'after_widget' => '</div>',
-		'before_title' => '<h4>',
-		'after_title' => '</h4>'
-	));
+		                  'name'          => 'Homepage Top Left',
+		                  'id'            => 'homepage-top-left',
+		                  'description'   => "The Top Left Widget",
+		                  'before_widget' => '<div id="%1$s" class="widget %2$s">',
+		                  'after_widget'  => '</div>',
+		                  'before_title'  => '<h4>',
+		                  'after_title'   => '</h4>'
+	                  ) );
 
 	register_sidebar( array(
-		'name' => 'Homepage Top Right',
-		'id' => 'homepage-top-right',
-		'description' => "The Top Right Widget next to the Slider",
-		'before_widget' => '<div id="%1$s" class="widget %2$s">',
-		'after_widget' => '</div>',
-		'before_title' => '<h4>',
-		'after_title' => '</h4>'
-	));
+		                  'name'          => 'Homepage Top Right',
+		                  'id'            => 'homepage-top-right',
+		                  'description'   => "The Top Right Widget next to the Slider",
+		                  'before_widget' => '<div id="%1$s" class="widget %2$s">',
+		                  'after_widget'  => '</div>',
+		                  'before_title'  => '<h4>',
+		                  'after_title'   => '</h4>'
+	                  ) );
 
 	register_sidebar( array(
-		'name' => 'Homepage Center Widget',
-		'id' => 'homepage-center-widget',
-		'description' => "The Full Width Center Widget on the Homepage",
-		'before_widget' => '<div id="%1$s" class="widget %2$s">',
-		'after_widget' => '</div>',
-		'before_title' => '<h4>',
-		'after_title' => '</h4>'
-	));
+		                  'name'          => 'Homepage Center Widget',
+		                  'id'            => 'homepage-center-widget',
+		                  'description'   => "The Full Width Center Widget on the Homepage",
+		                  'before_widget' => '<div id="%1$s" class="widget %2$s">',
+		                  'after_widget'  => '</div>',
+		                  'before_title'  => '<h4>',
+		                  'after_title'   => '</h4>'
+	                  ) );
 
 	register_sidebar( array(
-		'name' => 'Homepage Left',
-		'id' => 'homepage-left',
-		'description' => "The Left Widget on the Homepage",
-		'before_widget' => '<div id="%1$s" class="widget %2$s">',
-		'after_widget' => '</div>',
-		'before_title' => '<h4>',
-		'after_title' => '</h4>'
-	));
+		                  'name'          => 'Homepage Left',
+		                  'id'            => 'homepage-left',
+		                  'description'   => "The Left Widget on the Homepage",
+		                  'before_widget' => '<div id="%1$s" class="widget %2$s">',
+		                  'after_widget'  => '</div>',
+		                  'before_title'  => '<h4>',
+		                  'after_title'   => '</h4>'
+	                  ) );
 
 	register_sidebar( array(
-		'name' => 'Homepage Middle',
-		'id' => 'homepage-middle',
-		'description' => "The Middle Widget on the Homepage",
-		'before_widget' => '<div id="%1$s" class="widget %2$s">',
-		'after_widget' => '</div>',
-		'before_title' => '<h4>',
-		'after_title' => '</h4>'
-	));
+		                  'name'          => 'Homepage Middle',
+		                  'id'            => 'homepage-middle',
+		                  'description'   => "The Middle Widget on the Homepage",
+		                  'before_widget' => '<div id="%1$s" class="widget %2$s">',
+		                  'after_widget'  => '</div>',
+		                  'before_title'  => '<h4>',
+		                  'after_title'   => '</h4>'
+	                  ) );
 
 	register_sidebar( array(
-		'name' => 'Homepage Right',
-		'id' => 'homepage-right',
-		'description' => "The right Widget on the Homepage",
-		'before_widget' => '<div id="%1$s" class="widget %2$s">',
-		'after_widget' => '</div>',
-		'before_title' => '<h4>',
-		'after_title' => '</h4>'
-	));
+		                  'name'          => 'Homepage Right',
+		                  'id'            => 'homepage-right',
+		                  'description'   => "The right Widget on the Homepage",
+		                  'before_widget' => '<div id="%1$s" class="widget %2$s">',
+		                  'after_widget'  => '</div>',
+		                  'before_title'  => '<h4>',
+		                  'after_title'   => '</h4>'
+	                  ) );
 
 }
+
 add_action( 'widgets_init', 'wff_homepage_widgets' );
