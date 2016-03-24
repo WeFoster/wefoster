@@ -88,18 +88,14 @@ if ( !defined( 'WEFOSTER_FOOTER_CLASS' ) ) {
 /////////////// 										  ///////////////
 
 // Based on your project needs you can choose a layout starting point.
-// These
-
 if ( !defined( 'WEFOSTER_LAYOUT_PRESET' ) ) {
 		// 'minimal' or 'full'
 		define('WEFOSTER_LAYOUT_PRESET', 'full');
 }
 
-
 /////////////// 											///////////////
 /////////////// MAIN LAYOUT ONLY 			///////////////
 /////////////// 											///////////////
-
 
 // Where do you want to primary menu to show? This only applies to the Full Layout
 if ( !defined( 'WEFOSTER_LAYOUT_FULL_PRIMARY_MENU_POSITION' ) ) {
@@ -143,11 +139,6 @@ if ( !defined( 'WEFOSTER_HEADER_HIDE' ) ) {
 // Path: You can easily overwrite the default images by telling WeFoster to look for them in a different place.
 // The most obvious example would be get_stylesheet_directory_uri or your plugin folder.
 // Note: We would not recommend to overwrite CSS/JS files. Use wp_dequeue for that.
-
-if ( !defined( 'WEFOSTER_FONTS' ) ) {
-	define('WEFOSTER_ICON_FONT', 'font-awesome' );
-}
-
 
 if ( !defined( 'WEFOSTER_ASSETS_URL' ) ) {
 	define('WEFOSTER_ASSETS_URL', get_template_directory_uri() );
@@ -254,9 +245,14 @@ if ( !defined( 'WEFOSTER_NAVIGATION_FONT_WEIGHT' ) ) {
 	define('WEFOSTER_NAVIGATION_FONT_WEIGHT', '400');
 }
 
+//Enable Font Awesome?
+if ( !defined( 'WEFOSTER_FONTS' ) ) {
+	define('WEFOSTER_ICON_FONT', 'font-awesome' );
+}
+
 
 // Choose a default image for your backgrounds.
-// If the image is found it will be resized, saved cached locally. Note: Ideal width is between 1300/1600px;
+// If the image is found it will be resized, saved and cached locally. Note: Ideal width is between 1300/1600px;
 // Keep the value empty to use the default
 
 if ( !defined( 'WEFOSTER_BODY_BACKGROUND' ) ) {
@@ -307,25 +303,24 @@ if ( !defined( 'WEFOSTER_BP_NAVBAR_POSITION_CLASS' ) ) {
 		define('WEFOSTER_BP_NAVBAR_POSITION_CLASS', 'navbar-right');
 }
 
-//The Default Position of our BP Navigation Menu
+//The Default Position of the Sidebar on the Actity Page
 if ( !defined( 'WEFOSTER_ACTIVITY_SIDEBAR_POSITION' ) ) {
 		// 'navbar-left' or 'navbar-right' or 'navbar-center'
 		define('WEFOSTER_ACTIVITY_SIDEBAR_POSITION', WEFOSTER_SIDEBAR_POSITION);
 }
 
-//The Default Position of our BP Navigation Menu
+//The Default Position of the Sidebar on the Groups Page
 if ( !defined( 'WEFOSTER_GROUP_SIDEBAR_POSITION' ) ) {
 		// 'navbar-left' or 'navbar-right' or 'navbar-center'
 		define('WEFOSTER_GROUP_SIDEBAR_POSITION', WEFOSTER_SIDEBAR_POSITION);
 }
 
 
-//The Default Position of our BP Navigation Menu
+//The Default Position of the Sidebar on the Members Page
 if ( !defined( 'WEFOSTER_MEMBER_SIDEBAR_POSITION' ) ) {
 		// 'navbar-left' or 'navbar-right' or 'navbar-center'
 		define('WEFOSTER_MEMBER_SIDEBAR_POSITION', WEFOSTER_SIDEBAR_POSITION);
 }
-
 
 
 // Change Default Avatar Size
@@ -352,7 +347,6 @@ if ( !defined( 'BP_AVATAR_ORIGINAL_MAX_WIDTH' ) ) {
 if ( !defined( 'BP_AVATAR_ORIGINAL_MAX_FILESIZE' ) ) {
 	define ( 'BP_AVATAR_ORIGINAL_MAX_FILESIZE', 5120000 );
 }
-
 
 if ( !defined( 'WEFOSTER_DEFAULT_GROUP_AVATAR' ) ) {
 	define ( 'WEFOSTER_DEFAULT_GROUP_AVATAR', WEFOSTER_ASSETS_URL . '/assets/img/avatar-group.jpg' );

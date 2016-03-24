@@ -1,3 +1,7 @@
+.wp-full-overlay-sidebar {
+  width: 22%;
+  max-width: 360px;
+}
 #customize-theme-controls {
   /*   Sections   */
   /* Sections */
@@ -11,8 +15,8 @@
   margin: 0 -12px -30px;
   padding: 12px;
 }
-#customize-theme-controls li.customize-control a.tooltip.feature-description,
-#customize-theme-controls .accordion-section a.tooltip.feature-description {
+#customize-theme-controls .accordion-section a.tooltip.feature-description,
+#customize-theme-controls li.customize-control a.tooltip.feature-description {
   background: none repeat scroll 0 0 #4ec2ac;
   border-radius: 2px;
   bottom: 0;
@@ -101,8 +105,8 @@
   position: relative;
   top: 4px;
 }
-#customize-theme-controls #accordion-section-wf_plus_stylekit_section .panel-title:before,
-#customize-theme-controls #accordion-section-wf_plus_stylekit_section > h3:before {
+#customize-theme-controls #accordion-section-wf_plus_stylekit_section > h3:before,
+#customize-theme-controls #accordion-section-wf_plus_stylekit_section .panel-title:before {
   content: '\f100';
 }
 #customize-theme-controls #accordion-panel-wf_plus_stylekit_panel {
@@ -113,52 +117,52 @@ margin-top: -15px; */
   background: #46ba9d;
   color: #fff;
 }
-#customize-theme-controls #accordion-panel-wf_plus_stylekit_panel .panel-title:before,
-#customize-theme-controls #accordion-panel-wf_plus_stylekit_panel > h3:before {
+#customize-theme-controls #accordion-panel-wf_plus_stylekit_panel > h3:before,
+#customize-theme-controls #accordion-panel-wf_plus_stylekit_panel .panel-title:before {
   content: '\f115';
   opacity: 1;
 }
 #customize-theme-controls #accordion-panel-wf_plus_stylekit_panel .accordion-section-title:after {
   opacity: 1;
 }
-#customize-theme-controls #accordion-section-cei-section .panel-title:before,
-#customize-theme-controls #accordion-section-cei-section > h3:before {
+#customize-theme-controls #accordion-section-cei-section > h3:before,
+#customize-theme-controls #accordion-section-cei-section .panel-title:before {
   content: '\f316';
   opacity: 1;
 }
 #customize-theme-controls #accordion-section-cei-section .accordion-section-title:after {
   opacity: 1;
 }
-#customize-theme-controls #accordion-panel-wf_plus_appearance_panel .panel-title:before,
-#customize-theme-controls #accordion-panel-wf_plus_appearance_panel > h3:before {
+#customize-theme-controls #accordion-panel-wf_plus_appearance_panel > h3:before,
+#customize-theme-controls #accordion-panel-wf_plus_appearance_panel .panel-title:before {
   content: '\f135';
 }
-#customize-theme-controls #accordion-panel-wf_plus_typography_panel .panel-title:before,
-#customize-theme-controls #accordion-panel-wf_plus_typography_panel > h3:before {
+#customize-theme-controls #accordion-panel-wf_plus_typography_panel > h3:before,
+#customize-theme-controls #accordion-panel-wf_plus_typography_panel .panel-title:before {
   content: '\f205';
 }
-#customize-theme-controls #accordion-panel-wf_plus_wordpress_panel .panel-title:before,
-#customize-theme-controls #accordion-panel-wf_plus_wordpress_panel > h3:before {
+#customize-theme-controls #accordion-panel-wf_plus_wordpress_panel > h3:before,
+#customize-theme-controls #accordion-panel-wf_plus_wordpress_panel .panel-title:before {
   content: '\f120';
 }
-#customize-theme-controls #accordion-panel-wf_plus_buddypress_panel .panel-title:before,
-#customize-theme-controls #accordion-panel-wf_plus_buddypress_panel > h3:before {
+#customize-theme-controls #accordion-panel-wf_plus_buddypress_panel > h3:before,
+#customize-theme-controls #accordion-panel-wf_plus_buddypress_panel .panel-title:before {
   content: '\f448';
 }
-#customize-theme-controls #accordion-section-wf_plus_bp_general_section .panel-title:before,
-#customize-theme-controls #accordion-section-wf_plus_bp_general_section > h3:before {
+#customize-theme-controls #accordion-section-wf_plus_bp_general_section > h3:before,
+#customize-theme-controls #accordion-section-wf_plus_bp_general_section .panel-title:before {
   content: '\f108';
 }
-#customize-theme-controls #accordion-section-wf_plus_members_section .panel-title:before,
-#customize-theme-controls #accordion-section-wf_plus_members_section > h3:before {
+#customize-theme-controls #accordion-section-wf_plus_members_section > h3:before,
+#customize-theme-controls #accordion-section-wf_plus_members_section .panel-title:before {
   content: '\f110';
 }
-#customize-theme-controls #accordion-section-wf_plus_activity_section .panel-title:before,
-#customize-theme-controls #accordion-section-wf_plus_activity_section > h3:before {
+#customize-theme-controls #accordion-section-wf_plus_activity_section > h3:before,
+#customize-theme-controls #accordion-section-wf_plus_activity_section .panel-title:before {
   content: '\f452';
 }
-#customize-theme-controls #accordion-section-wf_plus_groups_section .panel-title:before,
-#customize-theme-controls #accordion-section-wf_plus_groups_section > h3:before {
+#customize-theme-controls #accordion-section-wf_plus_groups_section > h3:before,
+#customize-theme-controls #accordion-section-wf_plus_groups_section .panel-title:before {
   content: '\f307';
 }
 #customize-theme-controls .customize-control-title {
@@ -179,15 +183,27 @@ margin-top: -15px; */
   right: 0 !important;
   top: 22px !important;
 }
-#customize-theme-controls #customize-control-wf_plus_default_member_avatar img,
-#customize-theme-controls #customize-control-wf_plus_default_group_avatar img {
+#customize-theme-controls #customize-control-wf_plus_default_group_avatar img,
+#customize-theme-controls #customize-control-wf_plus_default_member_avatar img {
   height: 120px;
   width: 120px;
 }
-#customize-theme-controls #input_wf_plus_content_width.image label img,
-#customize-theme-controls #input_wf_plus_sidebar_position.image label img,
-#customize-theme-controls #input_wf_plus_single_members_sidebar.image label img,
-#customize-theme-controls #input_wf_plus_single_groups_sidebar.image label img {
+#customize-theme-controls #input_wf_plus_activity_sidebar_position.image label,
+#customize-theme-controls #input_wf_plus_content_width.image label,
+#customize-theme-controls #input_wf_plus_groups_sidebar_position.image label,
+#customize-theme-controls #input_wf_plus_members_sidebar_position.image label,
+#customize-theme-controls #input_wf_plus_sidebar_position.image label,
+#customize-theme-controls #input_wf_plus_single_groups_sidebar.image label,
+#customize-theme-controls #input_wf_plus_single_members_sidebar.image label {
+  display: inline;
+}
+#customize-theme-controls #input_wf_plus_activity_sidebar_position.image img,
+#customize-theme-controls #input_wf_plus_content_width.image img,
+#customize-theme-controls #input_wf_plus_groups_sidebar_position.image img,
+#customize-theme-controls #input_wf_plus_members_sidebar_position.image img,
+#customize-theme-controls #input_wf_plus_sidebar_position.image img,
+#customize-theme-controls #input_wf_plus_single_groups_sidebar.image img,
+#customize-theme-controls #input_wf_plus_single_members_sidebar.image img {
   border: 2px solid #eee;
   display: inline-block;
   margin-right: 5px;
@@ -204,15 +220,15 @@ margin-top: -15px; */
 }
 #customize-theme-controls #customize-control-base_typography_font_family .customize-control-title,
 #customize-theme-controls #customize-control-heading_typography_h1_font_style .customize-control-title,
-#customize-theme-controls #customize-control-heading_typography_h3_font_style .customize-control-title,
 #customize-theme-controls #customize-control-heading_typography_h2_font_style .customize-control-title,
+#customize-theme-controls #customize-control-heading_typography_h3_font_style .customize-control-title,
 #customize-theme-controls #customize-control-heading_typography_navigation_font_style .customize-control-title {
   display: none !important;
 }
 #customize-theme-controls #customize-control-base_typography_font_family .description,
 #customize-theme-controls #customize-control-heading_typography_h1_font_style .description,
-#customize-theme-controls #customize-control-heading_typography_h3_font_style .description,
 #customize-theme-controls #customize-control-heading_typography_h2_font_style .description,
+#customize-theme-controls #customize-control-heading_typography_h3_font_style .description,
 #customize-theme-controls #customize-control-heading_typography_navigation_font_style .description {
   margin-top: 10px;
   margin-bottom: 0;

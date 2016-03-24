@@ -1,3 +1,8 @@
+.wp-full-overlay-sidebar {
+  width: 22%;
+  max-width: 360px;
+}
+
 #customize-theme-controls {
   .needs_save_text {
     background: none repeat scroll 0 0 #efefef;
@@ -9,8 +14,8 @@
     padding: 12px;
   }
 
-  li.customize-control a.tooltip.feature-description,
-  .accordion-section a.tooltip.feature-description {
+  .accordion-section a.tooltip.feature-description,
+  li.customize-control a.tooltip.feature-description {
     background: none repeat scroll 0 0 #4ec2ac;
     border-radius: 2px;
     bottom: 0;
@@ -93,7 +98,7 @@
     vertical-align: top;
     width: 20px;
     opacity: 0.6;
-    
+
     &:hover {
       opacity: 1.0;
     }
@@ -107,8 +112,8 @@
   }
 
   #accordion-section-wf_plus_stylekit_section {
-    .panel-title:before,
-    > h3:before {
+     > h3:before,
+    .panel-title:before {
       content: '\f100';
     }
   }
@@ -123,8 +128,8 @@ margin-top: -15px; */
   }
 
   #accordion-panel-wf_plus_stylekit_panel {
-    .panel-title:before,
-    > h3:before {
+     > h3:before,
+    .panel-title:before {
       content: '\f115';
       opacity: 1;
     }
@@ -135,8 +140,8 @@ margin-top: -15px; */
   }
 
   #accordion-section-cei-section {
-    .panel-title:before,
-    > h3:before {
+     > h3:before,
+    .panel-title:before {
       content: '\f316';
       opacity: 1;
     }
@@ -147,57 +152,57 @@ margin-top: -15px; */
   }
 
   #accordion-panel-wf_plus_appearance_panel {
-    .panel-title:before,
-    > h3:before {
+     > h3:before,
+    .panel-title:before {
       content: '\f135';
     }
   }
 
   #accordion-panel-wf_plus_typography_panel {
-    .panel-title:before,
-    > h3:before {
+     > h3:before,
+    .panel-title:before {
       content: '\f205';
     }
   }
 
   #accordion-panel-wf_plus_wordpress_panel {
-    .panel-title:before,
-    > h3:before {
+     > h3:before,
+    .panel-title:before {
       content: '\f120';
     }
   }
 
   #accordion-panel-wf_plus_buddypress_panel {
-    .panel-title:before,
-    > h3:before {
+     > h3:before,
+    .panel-title:before {
       content: '\f448';
     }
   }
 
   #accordion-section-wf_plus_bp_general_section {
-    .panel-title:before,
-    > h3:before {
+     > h3:before,
+    .panel-title:before {
       content: '\f108';
     }
   }
 
   #accordion-section-wf_plus_members_section {
-    .panel-title:before,
-    > h3:before {
+     > h3:before,
+    .panel-title:before {
       content: '\f110';
     }
   }
 
   #accordion-section-wf_plus_activity_section {
-    .panel-title:before,
-    > h3:before {
+     > h3:before,
+    .panel-title:before {
       content: '\f452';
     }
   }
 
   #accordion-section-wf_plus_groups_section {
-    .panel-title:before,
-    > h3:before {
+     > h3:before,
+    .panel-title:before {
       content: '\f307';
     }
   }
@@ -222,26 +227,35 @@ margin-top: -15px; */
     top: 22px !important;
   }
 
-  #customize-control-wf_plus_default_member_avatar,
-  #customize-control-wf_plus_default_group_avatar {
+  #customize-control-wf_plus_default_group_avatar,
+  #customize-control-wf_plus_default_member_avatar {
     img {
       height: 120px;
       width: 120px;
     }
   }
 
-  #input_wf_plus_content_width.image label img,
-  #input_wf_plus_sidebar_position.image label img,
-  #input_wf_plus_single_members_sidebar.image label img,
-  #input_wf_plus_single_groups_sidebar.image label img {
-    border: 2px solid #eee;
-    display: inline-block;
-    margin-right: 5px;
-    margin-bottom: 5px;
-    float: left;
-    width: 20%;
-    margin-right: 10px;
-    padding: 8px;
+  #input_wf_plus_activity_sidebar_position.image,
+  #input_wf_plus_content_width.image,
+  #input_wf_plus_groups_sidebar_position.image,
+  #input_wf_plus_members_sidebar_position.image,
+  #input_wf_plus_sidebar_position.image,
+  #input_wf_plus_single_groups_sidebar.image,
+  #input_wf_plus_single_members_sidebar.image {
+    label {
+      display: inline;
+    }
+
+    img {
+      border: 2px solid #eee;
+      display: inline-block;
+      margin-right: 5px;
+      margin-bottom: 5px;
+      float: left;
+      width: 20%;
+      margin-right: 10px;
+      padding: 8px;
+    }
   }
   //Selection
   .customize-control-slider input[type="text"] {
@@ -252,8 +266,8 @@ margin-top: -15px; */
   //Typography Settings
   #customize-control-base_typography_font_family,
   #customize-control-heading_typography_h1_font_style,
-  #customize-control-heading_typography_h3_font_style,
   #customize-control-heading_typography_h2_font_style,
+  #customize-control-heading_typography_h3_font_style,
   #customize-control-heading_typography_navigation_font_style {
     .customize-control-title {
       display: none !important;

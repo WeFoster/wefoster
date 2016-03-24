@@ -1,19 +1,5 @@
 <?php
 /**
- * Change the URL that will be used by Kirki
- * to load its assets in the customizer.
- *
- * @since 1.0
- */
-function kirki_update_url( $config ) {
-
-	 $config['url_path'] = WEFOSTER_CUSTOMIZER_URL . '/lib/vendor/kirki/';
-	 return $config;
-
-}
-add_filter( 'kirki/config', 'kirki_update_url' );
-
-/**
  * Configuration sample for the Kirki Customizer.
  * The function's argument is an array of existing config values
  * The function returns the array with the addition of our own arguments
@@ -26,10 +12,11 @@ add_filter( 'kirki/config', 'kirki_update_url' );
 function wf_theme_customizer_tweaks( $config ) {
 	return wp_parse_args( array(
 		'description'  => esc_attr__( 'Build Better Communities', 'kirki' ),
-		'width' => '25%'
+		'width' => '40%',
+		'url_path' =>  WEFOSTER_CUSTOMIZER_URL . '/lib/vendor/kirki/'
 	), $config );
 }
-add_filter( 'kirki/config', 'wf_theme_customizer_tweaks' );
+add_filter( 'kirki/config', 'wf_theme_customizer_tweaks',11 );
 
 
 /**
