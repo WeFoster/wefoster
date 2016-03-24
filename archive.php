@@ -12,10 +12,15 @@
 
 <div id="main-content" class="main <?php do_action('class_main'); ?>" role="main">
 
-    <?php
-    //Use to Load to Post Title, Page Titles & Archive Titles. see lib/layout/actions.php
-    do_action('before_page_content');
-    ?>
+  <header>
+    <div class="page-header <?php do_action('page_header_class'); ?>">
+      <?php
+      do_action('open_archive_header');
+        the_archive_title( '<h1>', '</h1>' );
+      do_action('close_archive_header');
+      ?>
+    </div>
+  </header>
 
     <?php do_action('before_loop'); ?>
 
