@@ -1,7 +1,7 @@
 <?php
 /**
  *
- * The index.php file serves as the fall back template and default homepage for our theme.
+ * The archive file serves as the template for category/tag/taxonomy archives.
  *
  * @since 1.0
  * @package WeFoster Framework
