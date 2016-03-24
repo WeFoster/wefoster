@@ -257,14 +257,14 @@ if ( !defined( 'WEFOSTER_FONTS' ) ) {
 
 if ( !defined( 'WEFOSTER_BODY_BACKGROUND' ) ) {
 	//Local
-	//define('WEFOSTER_BODY_BACKGROUND', get_stylesheet_directory_uri . '/assets/img/bg.jpg' );
+	//define('WEFOSTER_BODY_BACKGROUND', WEFOSTER_ASSETS_URL . '/assets/img/bg.jpg' );
 	//External
 	define('WEFOSTER_BODY_BACKGROUND', '');
 }
 
 if ( !defined( 'WEFOSTER_HEADER_BACKGROUND' ) ) {
 	//Local
-	define('WEFOSTER_HEADER_BACKGROUND', get_stylesheet_directory_uri . '/assets/img/bg.jpg' );
+	define('WEFOSTER_HEADER_BACKGROUND', WEFOSTER_ASSETS_URL . '/assets/img/bg.jpg' );
 	//External
 	//define('WEFOSTER_HEADER_BACKGROUND', 'https://cdn.wefoster.co/backgrounds/into-the-wild.jpeg');
 }
