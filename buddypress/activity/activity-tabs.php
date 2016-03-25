@@ -13,7 +13,7 @@
 		<h4><?php _e( 'Activity Filters', 'wefoster' ); ?></h4>
 	<?php endif; ?>
 	<ul>
-		<?php do_action( 'bp_before_activity_type_tab_all' ); ?>
+		<?php do_action( 'wf_bp_before_activity_type_tab_all' ); ?>
 
 		<li class="selected" id="activity-all"><a href="<?php bp_activity_directory_permalink(); ?>"
 		                                          title="<?php esc_attr_e( 'The public activity for everyone on this site.', 'buddypress' ); ?>"><?php printf( __( 'All Members <span>%s</span>', 'buddypress' ), bp_get_total_member_count() ); ?></a>
@@ -21,7 +21,7 @@
 
 		<?php if ( is_user_logged_in() ) : ?>
 
-			<?php do_action( 'bp_before_activity_type_tab_friends' ); ?>
+			<?php do_action( 'wf_bp_before_activity_type_tab_friends' ); ?>
 
 			<?php if ( bp_is_active( 'friends' ) ) : ?>
 
@@ -35,7 +35,7 @@
 
 			<?php endif; ?>
 
-			<?php do_action( 'bp_before_activity_type_tab_groups' ); ?>
+			<?php do_action( 'wf_bp_before_activity_type_tab_groups' ); ?>
 
 			<?php if ( bp_is_active( 'groups' ) ) : ?>
 
@@ -49,7 +49,7 @@
 
 			<?php endif; ?>
 
-			<?php do_action( 'bp_before_activity_type_tab_favorites' ); ?>
+			<?php do_action( 'wf_bp_before_activity_type_tab_favorites' ); ?>
 
 			<?php if ( bp_get_total_favorite_count_for_user( bp_loggedin_user_id() ) ) : ?>
 
@@ -61,7 +61,7 @@
 
 			<?php if ( bp_activity_do_mentions() ) : ?>
 
-				<?php do_action( 'bp_before_activity_type_tab_mentions' ); ?>
+				<?php do_action( 'wf_bp_before_activity_type_tab_mentions' ); ?>
 
 				<li id="activity-mentions"><a href="<?php echo bp_loggedin_user_domain() . bp_get_activity_slug() . '/mentions/'; ?>"
 				                              title="<?php esc_attr_e( 'Activity that I have been mentioned in.', 'buddypress' ); ?>"><?php _e( 'Mentions', 'buddypress' ); ?><?php if ( bp_get_total_mention_count_for_user( bp_loggedin_user_id() ) ) : ?>
@@ -73,7 +73,7 @@
 
 		<?php endif; ?>
 
-		<?php do_action( 'bp_activity_type_tabs' ); ?>
+		<?php do_action( 'wf_bp_activity_type_tabs' ); ?>
 
 	</ul>
 

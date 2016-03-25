@@ -23,7 +23,7 @@ if ( get_theme_mod( 'wf_hero_background_type', 'picture' ) == 'upload' ) {
 	<div class="wf-hero-background <?php echo $effect; ?>" style="background-image: url(<?php echo $image; ?>); opacity: <?php echo $opacity; ?>;">
 	</div>
 	<div class="wf-hero-content wf-grid wf-grid--align-center padding-full">
-		<div class="padding-left-none <?php do_action( 'class_content_wrapper' ); ?>">
+		<div class="padding-left-none <?php do_action( 'wf_class_content_wrapper' ); ?>">
 
 			<h1 class="wf-hero-title margin-top-none padding-top-none">
 				<?php echo $title; ?>

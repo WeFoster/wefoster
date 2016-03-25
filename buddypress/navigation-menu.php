@@ -1,9 +1,9 @@
-<?php do_action( 'before_bp_navigation_menu' ); ?>
+<?php do_action( 'wf_before_bp_navigation_menu' ); ?>
 <?php if ( function_exists( 'bp_is_member' ) ): ?>
 
-	<ul id="bp-user-navigation" class="nav navbar-nav <?php do_action( 'class_bp_menu' ); ?>">
+	<ul id="bp-user-navigation" class="nav navbar-nav <?php do_action( 'wf_class_bp_menu' ); ?>">
 
-		<?php do_action( 'open_bp_navigation_menu' ); ?>
+		<?php do_action( 'wf_open_bp_navigation_menu' ); ?>
 		<?php if ( is_user_logged_in() ): ?>
 
 			<?php wff_bp_notifications_menu(); ?>
@@ -27,7 +27,7 @@
 
 			</li>
 
-			<?php do_action( 'inside_logged_in_menu' ); ?>
+			<?php do_action( 'wf_inside_logged_in_menu' ); ?>
 
 		<?php else: ?>
 
@@ -44,7 +44,7 @@
 							<?php wp_login_form(); ?>
 						</div>
 
-						<?php do_action( 'inside_logged_out_menu' ); ?>
+						<?php do_action( 'wf_inside_logged_out_menu' ); ?>
 
 					</li>
 				</ul>
@@ -61,7 +61,7 @@
 			<?php endif; ?>
 
 		<?php endif; ?>
-		<?php do_action( 'close_bp_navigation_menu' ); ?>
+		<?php do_action( 'wf_close_bp_navigation_menu' ); ?>
 
 	</ul>
 

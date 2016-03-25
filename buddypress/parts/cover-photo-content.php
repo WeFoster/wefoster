@@ -8,15 +8,15 @@ if ( $option == 'custom' ) {
 };
 ?>
 
-<div class="<?php do_action( 'class_content_wrapper' ); ?> bp-cover-photo-content">
+<div class="<?php do_action( 'wf_class_content_wrapper' ); ?> bp-cover-photo-content">
 
-	<?php do_action( 'open_bp_cover_photo_content' ); ?>
+	<?php do_action( 'wf_open_bp_cover_photo_content' ); ?>
 
-	<div class="inner-cover-photo <?php do_action( 'class_main' ); ?>">
+	<div class="inner-cover-photo <?php do_action( 'wf_class_main' ); ?>">
 		<?php get_template_part( 'buddypress/page-header' ); ?>
 	</div>
 
-	<div class="sidebar <?php do_action( 'class_sidebar' ); ?>">
+	<div class="sidebar <?php do_action( 'wf_class_sidebar' ); ?>">
 		<div class="avatar-height-wrapper" style="height:<?php echo $settings['height'] ?>px;">
 			<?php if ( bp_is_user() ) {
 				get_template_part( 'buddypress/members/profile-photo' );
@@ -27,6 +27,6 @@ if ( $option == 'custom' ) {
 		</div>
 	</div>
 
-	<?php do_action( 'close_bp_cover_photo_content' ); ?>
+	<?php do_action( 'wf_close_bp_cover_photo_content' ); ?>
 
 </div>

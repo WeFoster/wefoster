@@ -1,6 +1,6 @@
 <div id="buddypress-mobile-user-navigation" class="sidebar js-flash">
-	<?php do_action( 'before_sidebar' ); ?>
-	<div class="inner-sidebar <?php do_action( 'class_inner_sidebar' ); ?>">
+	<?php do_action( 'wf_before_sidebar' ); ?>
+	<div class="inner-sidebar <?php do_action( 'wf_class_inner_sidebar' ); ?>">
 
 		<a id="close-buddypress-mobile-user-navigation" class="close-panel-button" href="#">
 			<i class="fa fa-times-circle"></i> Close menu
@@ -28,7 +28,7 @@
 
 				<h4><i class="fa fa-sign-in"></i><?php _e( 'Log In', 'wefoster' ); ?></h4>
 				<?php wp_login_form(); ?>
-				<?php do_action( 'inside_logged_out_menu' ); ?>
+				<?php do_action( 'wf_inside_logged_out_menu' ); ?>
 
 				<hr>
 				<?php if ( get_option( 'users_can_register' ) ): ?>
@@ -41,5 +41,5 @@
 		<?php endif; ?>
 
 	</div>
-	<?php do_action( 'after_sidebar' ); ?>
+	<?php do_action( 'wf_after_sidebar' ); ?>
 </div>

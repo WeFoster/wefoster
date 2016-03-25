@@ -1,5 +1,5 @@
 <?php if ( get_the_author_meta( 'description' ) ): ?>
-	<div class="author-bio <?php do_action( 'author_bio_class' ); ?>">
+	<div class="author-bio <?php do_action( 'wf_author_bio_class' ); ?>">
 		<?php
 		do_action( 'open_author_box' );
 		?>

@@ -11,6 +11,6 @@
 <div class="visible-md-block visible-lg-block">
 	<a class="navbar-brand" title="<?php echo get_bloginfo( 'name' ); ?> | <?php echo get_bloginfo( 'description' ); ?> "
 	   href="<?php echo esc_url( home_url( '/' ) ); ?>">
-		<?php do_action( 'inside_branding' ); ?>
+		<?php do_action( 'wf_inside_branding' ); ?>
 	</a>
 </div>

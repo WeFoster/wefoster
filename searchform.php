@@ -6,10 +6,10 @@
  * @package WeFoster Framework
  */
 ?>
-<?php do_action( 'before_search_form' ); ?>
+<?php do_action( 'wf_before_search_form' ); ?>
 <form role="search" method="get" class="search-form form-inline" action="<?php echo home_url( '/' ); ?>">
 
-	<?php do_action( 'open_search_form' ); ?>
+	<?php do_action( 'wf_open_search_form' ); ?>
 
 	<div class="input-group">
 
@@ -32,6 +32,6 @@
 
 	</div>
 
-	<?php do_action( 'close_search_form' ); ?>
+	<?php do_action( 'wf_close_search_form' ); ?>
 </form>
-<?php do_action( 'after_search_form' ); ?>
+<?php do_action( 'wf_after_search_form' ); ?>

@@ -12,15 +12,15 @@
 </div><!-- /.content -->
 </div><!-- /.wrap -->
 
-<?php do_action( 'before_footer' ); ?>
+<?php do_action( 'wf_before_footer' ); ?>
 
-<footer class="content-info <?php do_action( 'class_footer' ); ?>" role="contentinfo">
+<footer class="content-info <?php do_action( 'wf_class_footer' ); ?>" role="contentinfo">
 
 
-	<div class="<?php do_action( 'class_container' );
+	<div class="<?php do_action( 'wf_class_container' );
 	do_action( 'class_container_footer' ); ?>">
 
-		<?php do_action( 'open_footer' ); ?>
+		<?php do_action( 'wf_open_footer' ); ?>
 
 		<div class="row">
 
@@ -57,7 +57,7 @@
 			</div>
 
 
-			<?php do_action( 'close_footer' ); ?>
+			<?php do_action( 'wf_close_footer' ); ?>
 
 		</div>
 
@@ -65,7 +65,7 @@
 
 <!-- layout wrapper -->
 </div>
-<?php do_action( 'after_footer' ); ?>
+<?php do_action( 'wf_after_footer' ); ?>
 <?php wp_footer(); ?>
 </body>
 </html>

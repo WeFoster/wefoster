@@ -1,7 +1,7 @@
 <div id="mobile-primary-navigation" class="sidebar js-flash">
-	<?php do_action( 'before_mobile_sidebar' ); ?>
+	<?php do_action( 'wf_before_mobile_sidebar' ); ?>
 
-	<div class="inner-sidebar <?php do_action( 'class_inner_sidebar' ); ?> inner-sidebar-mobile">
+	<div class="inner-sidebar <?php do_action( 'wf_class_inner_sidebar' ); ?> inner-sidebar-mobile">
 
 		<a id="close-mobile-primary-navigation" class="close-panel-button" href="#">
 			<i class="fa fa-times-circle"></i> Close menu
@@ -34,5 +34,5 @@
 
 
 	</div>
-	<?php do_action( 'after_mobile_sidebar' ); ?>
+	<?php do_action( 'wf_after_mobile_sidebar' ); ?>
 </div>

@@ -10,10 +10,10 @@
 
 <?php get_template_part( 'header' ); ?>
 
-<div id="main-content" class="main <?php do_action( 'class_main' ); ?>" role="main">
+<div id="main-content" class="main <?php do_action( 'wf_class_main' ); ?>" role="main">
 
 	<header>
-		<div class="page-header <?php do_action( 'page_header_class' ); ?>">
+		<div class="page-header <?php do_action( 'wf_page_header_class' ); ?>">
 			<?php
 			do_action( 'open_archive_header' );
 			the_archive_title( '<h1>', '</h1>' );
@@ -22,7 +22,7 @@
 		</div>
 	</header>
 
-	<?php do_action( 'before_loop' ); ?>
+	<?php do_action( 'wf_before_loop' ); ?>
 
 	<?php if ( ! have_posts() ) : ?>
 		<div class="alert alert-warning">
@@ -36,11 +36,11 @@
 	<?php endif; ?>
 
 
-	<?php do_action( 'before_loop_content' ); ?>
+	<?php do_action( 'wf_before_loop_content' ); ?>
 	<?php while ( have_posts() ) : the_post(); ?>
 		<?php get_template_part( 'templates/loops/content', get_post_type() ); ?>
 	<?php endwhile; ?>
-	<?php do_action( 'after_loop_content' ); ?>
+	<?php do_action( 'wf_after_loop_content' ); ?>
 
 
 	<?php if ( $wp_query->max_num_pages > 1 ) : ?>
@@ -54,7 +54,7 @@
 		</nav>
 	<?php endif; ?>
 
-	<?php do_action( 'after_loop' ); ?>
+	<?php do_action( 'wf_after_loop' ); ?>
 
 </div><!-- /.main -->
 

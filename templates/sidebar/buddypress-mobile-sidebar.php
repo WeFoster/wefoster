@@ -1,7 +1,7 @@
 <div id="buddypress-mobile-sidebar" class="sidebar js-flash">
 
-	<?php do_action( 'before_bp_mobile_sidebar' ); ?>
-	<div class="inner-sidebar <?php do_action( 'class_inner_sidebar' ); ?> inner-sidebar-mobile">
+	<?php do_action( 'wf_before_bp_mobile_sidebar' ); ?>
+	<div class="inner-sidebar <?php do_action( 'wf_class_inner_sidebar' ); ?> inner-sidebar-mobile">
 
 
 		<a id="close-buddypress-mobile-sidebar" class="close-panel-button" href="#">
@@ -17,9 +17,9 @@
 			</div>
 		<?php endif; ?>
 
-		<?php do_action( 'open_bp_mobile_sidebar' ); ?>
-		<?php do_action( 'close_mobile_sidebar' ); ?>
+		<?php do_action( 'wf_open_bp_mobile_sidebar' ); ?>
+		<?php do_action( 'wf_close_mobile_sidebar' ); ?>
 
 	</div>
-	<?php do_action( 'after_bp_mobile_sidebar' ); ?>
+	<?php do_action( 'wf_after_bp_mobile_sidebar' ); ?>
 </div>

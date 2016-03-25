@@ -7,7 +7,7 @@
  */
 function wf_plus_css_output() {
 	?>
-	<style type="text/css"><?php do_action( 'wefoster_inline_css' ); ?></style><?php
+	<style type="text/css"><?php do_action( 'wf_inline_css' ); ?></style><?php
 }
 
 add_action( 'wp_head', 'wf_plus_css_output', 1 );
@@ -70,7 +70,7 @@ function wf_plus_body_background_div() {
 	<?php
 }
 
-add_action( 'open_body', 'wf_plus_body_background_div' );
+add_action( 'wf_open_body', 'wf_plus_body_background_div' );
 
 /**
  * Output Background Texture
@@ -95,7 +95,7 @@ function wf_plus_body_background_texture() {
 	<?php
 }
 
-add_action( 'wefoster_inline_css', 'wf_plus_body_background_texture' );
+add_action( 'wf_inline_css', 'wf_plus_body_background_texture' );
 
 /**
  * Output Body ackground Effects
@@ -137,7 +137,7 @@ function wf_plus_body_background_effects() {
 	}
 }
 
-add_action( 'wefoster_inline_css', 'wf_plus_body_background_effects' );
+add_action( 'wf_inline_css', 'wf_plus_body_background_effects' );
 
 
 /**
@@ -188,7 +188,7 @@ function wf_plus_header_background_effects() {
 	<?php
 }
 
-add_action( 'wefoster_inline_css', 'wf_plus_header_background_effects' );
+add_action( 'wf_inline_css', 'wf_plus_header_background_effects' );
 
 /**
  * Add an extra div for our header image or texture
@@ -204,7 +204,7 @@ function wf_plus_header_div() {
 	<?php
 }
 
-add_action( 'open_full_header', 'wf_plus_header_div', 1 );
+add_action( 'wf_open_full_header', 'wf_plus_header_div', 1 );
 
 
 /**
@@ -237,4 +237,4 @@ function wf_plus_logo_css() {
 	<?php
 }
 
-add_action( 'wefoster_inline_css', 'wf_plus_logo_css' );
+add_action( 'wf_inline_css', 'wf_plus_logo_css' );

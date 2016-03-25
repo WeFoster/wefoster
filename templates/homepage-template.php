@@ -12,11 +12,11 @@
 
 <?php get_template_part( 'header' ); ?>
 
-<?php do_action( 'before_homepage' ); ?>
+<?php do_action( 'wf_before_homepage' ); ?>
 
 <div id="main-content" class="main col-sm-12" role="main">
 
-	<?php do_action( 'open_homepage' ); ?>
+	<?php do_action( 'wf_open_homepage' ); ?>
 
 	<div id="top-homepage">
 
@@ -50,7 +50,7 @@
 
 	<div class="clearfix"></div>
 
-	<?php do_action( 'before_homepage_middle' ); ?>
+	<?php do_action( 'wf_before_homepage_middle' ); ?>
 
 	<?php if ( is_active_sidebar( 'homepage-center-widget' ) ) { ?>
 		<div id="center-homepage-widget" class="col-sm-12">
@@ -61,7 +61,7 @@
 		<div class="clearfix"></div>
 	<?php } ?>
 
-	<?php do_action( 'after_homepage_middle' ); ?>
+	<?php do_action( 'wf_after_homepage_middle' ); ?>
 
 	<div class="homepage-center-widgets">
 		<div id="homepage-widget-left" class="col-sm-4">
@@ -83,7 +83,7 @@
 		</div>
 	</div>
 
-	<?php do_action( 'close_homepage' ); ?>
+	<?php do_action( 'wf_close_homepage' ); ?>
 
 </div><!-- /.main -->
 

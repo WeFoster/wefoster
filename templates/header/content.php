@@ -1,12 +1,12 @@
-<?php do_action( 'before_header' ); ?>
-<header class="navbar navbar-default <?php do_action( 'class_header' ); ?>" role="banner">
+<?php do_action( 'wf_before_header' ); ?>
+<header class="navbar navbar-default <?php do_action( 'wf_class_header' ); ?>" role="banner">
 
-	<?php do_action( 'open_header' ); ?>
+	<?php do_action( 'wf_open_header' ); ?>
 
-	<div class="<?php do_action( 'class_container' );
+	<div class="<?php do_action( 'wf_class_container' );
 	do_action( 'class_container_navbar' ); ?> navbar-container">
 		<div class="row navigation-wrap">
-			<div class="navbar-header <?php do_action( 'class_navbar_header' ); ?>">
+			<div class="navbar-header <?php do_action( 'wf_class_navbar_header' ); ?>">
 				<?php
 				//Load Mobile Navigation (Show Sidebar & BuddyPress Navigation)
 				get_template_part( 'templates/header/mobile-navigation-left' );
@@ -33,4 +33,4 @@
 	do_action( 'close_header' );
 	?>
 </header>
-<?php do_action( 'after_header' ); ?>
+<?php do_action( 'wf_after_header' ); ?>

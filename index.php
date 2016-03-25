@@ -10,14 +10,14 @@
 
 <?php get_template_part( 'header' ); ?>
 
-<div id="main-content" class="main <?php do_action( 'class_main' ); ?>" role="main">
+<div id="main-content" class="main <?php do_action( 'wf_class_main' ); ?>" role="main">
 
 	<?php
 	//Use to Load to Post Title, Page Titles & Archive Titles. see lib/layout/actions.php
 	do_action( 'before_page_content' );
 	?>
 
-	<?php do_action( 'before_loop' ); ?>
+	<?php do_action( 'wf_before_loop' ); ?>
 
 	<?php if ( ! have_posts() ) : ?>
 
@@ -32,7 +32,7 @@
 	<?php endif; ?>
 
 
-	<?php do_action( 'before_loop_content' ); ?>
+	<?php do_action( 'wf_before_loop_content' ); ?>
 
 	<?php while ( have_posts() ) : the_post(); ?>
 
@@ -40,7 +40,7 @@
 
 	<?php endwhile; ?>
 
-	<?php do_action( 'after_loop_content' ); ?>
+	<?php do_action( 'wf_after_loop_content' ); ?>
 
 	<?php if ( $wp_query->max_num_pages > 1 ) : ?>
 
@@ -55,7 +55,7 @@
 
 	<?php endif; ?>
 
-	<?php do_action( 'after_loop' ); ?>
+	<?php do_action( 'wf_after_loop' ); ?>
 
 </div><!-- /.main -->
 

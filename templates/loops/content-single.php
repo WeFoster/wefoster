@@ -5,12 +5,12 @@
 	do_action( 'before_entry_content' );
 	?>
 
-	<div class="entry-content <?php do_action( 'entry_content_class' ); ?>">
-		<?php do_action( 'open_entry_content' ); ?>
+	<div class="entry-content <?php do_action( 'wf_entry_content_class' ); ?>">
+		<?php do_action( 'wf_open_entry_content' ); ?>
 		<?php the_content(); ?>
-		<?php do_action( 'close_entry_content' ); ?>
+		<?php do_action( 'wf_close_entry_content' ); ?>
 	</div>
-	<?php do_action( 'after_entry_content' ); ?>
+	<?php do_action( 'wf_after_entry_content' ); ?>
 
 
 	<footer>

@@ -1,6 +1,6 @@
 <ul id="dropdown-filter" class="js-flash">
 
-	<?php do_action( 'bp_activity_syndication_options' ); ?>
+	<?php do_action( 'wf_bp_activity_syndication_options' ); ?>
 
 	<li id="activity-filter-select" class="last">
 
@@ -11,7 +11,7 @@
 
 			<?php bp_activity_show_filters(); ?>
 
-			<?php do_action( 'bp_activity_filter_options' ); ?>
+			<?php do_action( 'wf_bp_activity_filter_options' ); ?>
 
 		</select>
 		

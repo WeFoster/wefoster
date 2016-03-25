@@ -320,7 +320,7 @@ function wefoster_plus_hide_logo_desktop() {
 	}
 }
 
-add_action( 'class_navbar_header', 'wefoster_plus_hide_logo_desktop' );
+add_action( 'wf_class_navbar_header', 'wefoster_plus_hide_logo_desktop' );
 
 /**
  * Check theme options for custom mobile logo. Overwrite the default logo if set.

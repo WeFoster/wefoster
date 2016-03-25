@@ -82,13 +82,13 @@ $src = wpthumb( $cover_image_url, 'width=' . $settings['width'] . '&height=' . $
 
 	<?php echo $action; ?>
 
-	<?php do_action( 'open_bp_cover_photo' ); ?>
+	<?php do_action( 'wf_open_bp_cover_photo' ); ?>
 
-	<div class="<?php do_action( 'cover_photo_class' ); ?> bp-cover-image-wrap"
+	<div class="<?php do_action( 'wf_cover_photo_class' ); ?> bp-cover-image-wrap"
 	     style="background-image: url(<?php echo $src; ?> );"
 	>
-		<?php do_action( 'inside_bp_cover_photo' ); ?>
+		<?php do_action( 'wf_inside_bp_cover_photo' ); ?>
 	</div>
 
-	<?php do_action( 'close_bp_cover_photo' ); ?>
+	<?php do_action( 'wf_close_bp_cover_photo' ); ?>
 </div>

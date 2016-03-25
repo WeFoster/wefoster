@@ -59,7 +59,7 @@ function wff_container_class() {
 	echo apply_filters( 'wff_container_class', ' ' . WEFOSTER_LAYOUT_CLASS );
 }
 
-add_action( 'class_container', 'wff_container_class' );
+add_action( 'wf_class_container', 'wff_container_class' );
 
 /**
  * Add our Bootstrap grid classes for our .main div
@@ -68,7 +68,7 @@ function wff_content_wrapper_class() {
 	echo apply_filters( 'wff_content_wrapper_class', ' ' . WEFOSTER_CONTENT_WRAPPER_CLASS );
 }
 
-add_action( 'class_content_wrapper', 'wff_content_wrapper_class' );
+add_action( 'wf_class_content_wrapper', 'wff_content_wrapper_class' );
 
 
 /**
@@ -81,7 +81,7 @@ function wff_main_class() {
 	echo apply_filters( 'wff_main_class', ' ' . WEFOSTER_MAIN_CLASS );
 }
 
-add_action( 'class_main', 'wff_main_class' );
+add_action( 'wf_class_main', 'wff_main_class' );
 
 
 /**
@@ -94,7 +94,7 @@ function wff_sidebar_class() {
 	echo apply_filters( 'wff_sidebar_class', ' ' . WEFOSTER_SIDEBAR_CLASS );
 }
 
-add_action( 'class_sidebar', 'wff_sidebar_class' );
+add_action( 'wf_class_sidebar', 'wff_sidebar_class' );
 
 
 /**
@@ -107,7 +107,7 @@ function wff_footer_class() {
 	echo apply_filters( 'wff_footer_class', ' ' . WEFOSTER_FOOTER_CLASS );
 }
 
-add_action( 'class_footer', 'wff_footer_class' );
+add_action( 'wf_class_footer', 'wff_footer_class' );
 
 
 /**
@@ -120,7 +120,7 @@ function wff_navbar_inverse() {
 	echo apply_filters( 'wff_navbar_inverse_class', ' ' . WEFOSTER_HEADER_STYLE . ' ' );
 }
 
-add_action( 'class_header', 'wff_navbar_inverse' );
+add_action( 'wf_class_header', 'wff_navbar_inverse' );
 
 /**
  * Allow developers and theme options to set the navbar menu position
@@ -132,7 +132,7 @@ function wff_navbar_position() {
 	echo apply_filters( 'wff_navbar_position_class', ' ' . WEFOSTER_NAVBAR_POSITION_CLASS . ' ' );
 }
 
-add_action( 'class_primary_menu', 'wff_navbar_position' );
+add_action( 'wf_class_primary_menu', 'wff_navbar_position' );
 
 
 /**
@@ -145,7 +145,7 @@ function wff_navbar_fixed_top() {
 	echo apply_filters( 'wff_navbar_fixed_class', ' ' . WEFOSTER_HEADER_STICKY . ' ' );
 }
 
-add_action( 'class_header', 'wff_navbar_fixed_top' );
+add_action( 'wf_class_header', 'wff_navbar_fixed_top' );
 
 /**
  * Should we hide on scroll?
@@ -157,7 +157,7 @@ function wff_navbar_headroom() {
 	echo apply_filters( 'wff_navbar_headroom_class', ' ' . WEFOSTER_HEADER_HIDE . ' ' );
 }
 
-add_action( 'class_header', 'wff_navbar_headroom' );
+add_action( 'wf_class_header', 'wff_navbar_headroom' );
 
 
 /**
@@ -327,7 +327,7 @@ function wff_full_header() {
 	echo apply_filters( 'wff_full_header_class', 'hello' );
 }
 
-add_action( 'full_header_class', 'wff_full_header' );
+add_action( 'wf_full_header_class', 'wff_full_header' );
 
 // Is the header set to boxed? Add our extea
 if ( WEFOSTER_LAYOUT_CLASS == 'container' ) {
@@ -478,7 +478,7 @@ function wff_author_bio() {
 	echo apply_filters( 'wff_author_bio_class', 'box-light margin-vertical-full' );
 }
 
-add_action( 'author_bio_class', 'wff_author_bio' );
+add_action( 'wf_author_bio_class', 'wff_author_bio' );
 
 /**
  * Add filterable class to post entry meta.
@@ -490,4 +490,4 @@ function wff_post_meta() {
 	echo apply_filters( 'wff_post_meta_class', 'box-light' );
 }
 
-add_action( 'post_meta_class', 'wff_post_meta' );
+add_action( 'wf_post_meta_class', 'wff_post_meta' );

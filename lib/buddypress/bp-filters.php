@@ -124,7 +124,7 @@ function wff_bp_navbar_position() {
 	echo apply_filters( 'wff_bp_navbar_position_class', ' ' . WEFOSTER_BP_NAVBAR_POSITION_CLASS . ' ' );
 }
 
-add_action( 'class_bp_menu', 'wff_bp_navbar_position' );
+add_action( 'wf_class_bp_menu', 'wff_bp_navbar_position' );
 
 /**
  * Add a body class to change the sidebar

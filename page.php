@@ -9,9 +9,9 @@
 
 <?php get_template_part( 'header' ); ?>
 
-<?php do_action( 'before_page' ); ?>
+<?php do_action( 'wf_before_page' ); ?>
 
-<div id="main-content" class="main <?php do_action( 'class_main' ); ?>" role="main">
+<div id="main-content" class="main <?php do_action( 'wf_class_main' ); ?>" role="main">
 	<?php
 	//Use to Load to Page Title. see lib/actions.php
 	do_action( 'before_page_content' );
@@ -23,11 +23,11 @@
 
 	<?php endwhile; ?>
 
-	<?php do_action( 'close_page_content' ); ?>
+	<?php do_action( 'wf_close_page_content' ); ?>
 
 </div><!-- /.main -->
 
-<?php do_action( 'after_page' ); ?>
+<?php do_action( 'wf_after_page' ); ?>
 
 <?php get_template_part( 'sidebar' ); ?>
 <?php get_template_part( 'footer' ); ?>

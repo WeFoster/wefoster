@@ -25,7 +25,7 @@ if ( has_post_thumbnail() ) {
 	$src = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'width=' . $width . '&height=' . $height . '&crop=true' )
 	?>
 
-	<div class="negative-row no-padding postthumb <?php do_action( 'postthumb_class' ); ?>"
+	<div class="negative-row no-padding postthumb <?php do_action( 'wf_postthumb_class' ); ?>"
 	     style="height:<?php echo $height ?>px; background-image: url(<?php echo $src[0]; ?> );"
 	>
 

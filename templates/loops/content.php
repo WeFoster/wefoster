@@ -1,4 +1,4 @@
-<div class="post-loop <?php do_action( 'post_loop_class' ); ?>">
+<div class="post-loop <?php do_action( 'wf_post_loop_class' ); ?>">
 	<article <?php post_class(); ?>>
 
 		<header>

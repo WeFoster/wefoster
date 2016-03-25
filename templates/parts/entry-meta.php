@@ -1,5 +1,5 @@
-<div class="post-meta <?php do_action( 'post_meta_class' ); ?>">
-	<?php do_action( 'open_post_meta' ); ?>
+<div class="post-meta <?php do_action( 'wf_post_meta_class' ); ?>">
+	<?php do_action( 'wf_open_post_meta' ); ?>
 	<span>
 		<time class="published" datetime="<?php echo get_the_time( 'c' ); ?>"><i class="fa fa-clock-o"></i> <?php echo get_the_date(); ?></time>
 	</span>
@@ -27,5 +27,5 @@
 			?>
 	</span>
 	<?php endif; ?>
-	<?php do_action( 'close_post_meta' ); ?>
+	<?php do_action( 'wf_close_post_meta' ); ?>
 </div>

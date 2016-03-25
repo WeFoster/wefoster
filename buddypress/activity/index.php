@@ -1,4 +1,4 @@
-<?php do_action( 'bp_before_directory_activity' ); ?>
+<?php do_action( 'wf_bp_before_directory_activity' ); ?>
 
 <div id="buddypress">
 
@@ -6,7 +6,7 @@
 		<?php get_template_part( 'buddypress/activity/activity-dropdown' ); ?>
 	<?php endif; ?>
 
-	<?php do_action( 'bp_before_directory_activity_content' ); ?>
+	<?php do_action( 'wf_bp_before_directory_activity_content' ); ?>
 
 	<?php if ( is_user_logged_in() ) : ?>
 
@@ -14,10 +14,10 @@
 
 	<?php endif; ?>
 
-	<?php do_action( 'template_notices' ); ?>
+	<?php do_action( 'wf_template_notices' ); ?>
 
 
-	<?php do_action( 'bp_before_directory_activity_list' ); ?>
+	<?php do_action( 'wf_bp_before_directory_activity_list' ); ?>
 
 	<div class="activity" role="main">
 
@@ -29,12 +29,12 @@
 
 	</div><!-- .activity -->
 
-	<?php do_action( 'bp_after_directory_activity_list' ); ?>
+	<?php do_action( 'wf_bp_after_directory_activity_list' ); ?>
 
-	<?php do_action( 'bp_directory_activity_content' ); ?>
+	<?php do_action( 'wf_bp_directory_activity_content' ); ?>
 
-	<?php do_action( 'bp_after_directory_activity_content' ); ?>
+	<?php do_action( 'wf_bp_after_directory_activity_content' ); ?>
 
-	<?php do_action( 'bp_after_directory_activity' ); ?>
+	<?php do_action( 'wf_bp_after_directory_activity' ); ?>
 
 </div>
