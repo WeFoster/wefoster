@@ -1890,6 +1890,102 @@ a.bp-title-button .badge {
   color: #289ea5;
   background-color: #ffffff;
 }
+.ac-reply-cancel {
+  display: inline-block;
+  margin-bottom: 0;
+  font-weight: bold;
+  text-align: center;
+  vertical-align: middle;
+  -ms-touch-action: manipulation;
+      touch-action: manipulation;
+  cursor: pointer;
+  background-image: none;
+  border: 1px solid transparent;
+  white-space: nowrap;
+  padding: 6px 12px;
+  font-size: 16px;
+  line-height: 1.42857143;
+  border-radius: 4px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  color: #ffffff;
+  background-color: #d9534f;
+  border-color: #d43f3a;
+  margin-top: 5px;
+}
+.ac-reply-cancel:focus,
+.ac-reply-cancel:active:focus,
+.ac-reply-cancel.active:focus,
+.ac-reply-cancel.focus,
+.ac-reply-cancel:active.focus,
+.ac-reply-cancel.active.focus {
+  outline: thin dotted;
+  outline: 5px auto -webkit-focus-ring-color;
+  outline-offset: -2px;
+}
+.ac-reply-cancel:hover,
+.ac-reply-cancel:focus,
+.ac-reply-cancel.focus {
+  color: #333333;
+  text-decoration: none;
+}
+.ac-reply-cancel:active,
+.ac-reply-cancel.active {
+  outline: 0;
+  background-image: none;
+  box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+}
+.ac-reply-cancel.disabled,
+.ac-reply-cancel[disabled],
+fieldset[disabled] .ac-reply-cancel {
+  cursor: not-allowed;
+  pointer-events: none;
+  opacity: 0.65;
+  filter: alpha(opacity=65);
+  box-shadow: none;
+}
+.ac-reply-cancel:hover,
+.ac-reply-cancel:focus,
+.ac-reply-cancel.focus,
+.ac-reply-cancel:active,
+.ac-reply-cancel.active,
+.open > .dropdown-toggle.ac-reply-cancel {
+  color: #ffffff;
+  background-color: #c9302c;
+  border-color: #ac2925;
+}
+.ac-reply-cancel:active,
+.ac-reply-cancel.active,
+.open > .dropdown-toggle.ac-reply-cancel {
+  background-image: none;
+}
+.ac-reply-cancel.disabled,
+.ac-reply-cancel[disabled],
+fieldset[disabled] .ac-reply-cancel,
+.ac-reply-cancel.disabled:hover,
+.ac-reply-cancel[disabled]:hover,
+fieldset[disabled] .ac-reply-cancel:hover,
+.ac-reply-cancel.disabled:focus,
+.ac-reply-cancel[disabled]:focus,
+fieldset[disabled] .ac-reply-cancel:focus,
+.ac-reply-cancel.disabled.focus,
+.ac-reply-cancel[disabled].focus,
+fieldset[disabled] .ac-reply-cancel.focus,
+.ac-reply-cancel.disabled:active,
+.ac-reply-cancel[disabled]:active,
+fieldset[disabled] .ac-reply-cancel:active,
+.ac-reply-cancel.disabled.active,
+.ac-reply-cancel[disabled].active,
+fieldset[disabled] .ac-reply-cancel.active {
+  background-color: #d9534f;
+  border-color: #d43f3a;
+}
+.ac-reply-cancel .badge {
+  color: #d9534f;
+  background-color: #ffffff;
+}
 .dir-search input[type=submit] {
   color: #333333;
   background-color: #ffffff;

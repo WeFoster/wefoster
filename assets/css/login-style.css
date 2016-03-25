@@ -8,17 +8,15 @@ body {
 .login #backtoblog a,
 .login #nav a,
 .login h1 a {
-  color: #ffffff;
+  color: #fff;
 }
 .login #backtoblog a:hover,
 .login #nav a:hover,
 .login h1 a:hover {
-  color: #feb43e;
+  color: #FEB43E;
 }
 #loginform {
-  background: #ffffff;
+  background: #fff;
   border: 6px solid #505662;
   border-radius: 2px;
 }
-
-/*# sourceMappingURL=login-style.css.map */
