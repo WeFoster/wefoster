@@ -13,14 +13,13 @@ p {
   margin-bottom: @margin-half;
 }
 
-.navbar a:hover,
-.item-list-tabs a:hover,
-.button:hover,
 .button a:hover,
-.item-avatar a:hover {
+.button:hover,
+.item-avatar a:hover,
+.item-list-tabs a:hover,
+.navbar a:hover {
   opacity: 1;
 }
-
 //Content
 .content {
   img {
@@ -48,7 +47,6 @@ p {
 .visible {
   display: block !important;
 }
-
 //Bootstrap overwrites
 .wefoster-framework {
   .dropdown-menu > li > a {
@@ -77,8 +75,8 @@ p {
   }
 
   .dropdown-menu {
-    input[type=text],
-    input[type=password] {
+    input[type=password],
+    input[type=text] {
       font-size: 90%;
       font-weight: 700;
       max-width: 80%;
@@ -102,6 +100,8 @@ p {
 
   .bootstrap-select > .dropdown-toggle {
     width: auto !important;
+    border: 0;
+    background: transparent;
   }
 
   .bootstrap-select:not([class*="col-"]):not([class*="form-control"]):not(.input-group-btn) {
@@ -118,12 +118,12 @@ p {
     }
   }
 
-  .table > thead > tr > th,
+  .table > tbody > tr > td,
   .table > tbody > tr > th,
+  .table > tfoot > tr > td,
   .table > tfoot > tr > th,
   .table > thead > tr > td,
-  .table > tbody > tr > td,
-  .table > tfoot > tr > td {
+  .table > thead > tr > th {
     vertical-align: inherit;
   }
   //Font Awesome Fix
