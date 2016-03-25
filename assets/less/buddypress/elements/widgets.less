@@ -50,3 +50,26 @@
     margin: -@margin-full -@margin-full 0;
   }
 }
+//Style the widgets when place in the footer
+
+footer {
+  .widget.buddypress {
+    ul li {
+      background: transparent;
+      margin: 0;
+      padding: @padding-half 0;
+      border-top: 0;
+      border-bottom: 1px solid darken(@navbar-default-bg, 2%);
+    }
+  }
+
+  &.footer-inverse .widget.buddypress {
+    ul li {
+      border-bottom: 1px solid lighten(@navbar-inverse-bg, 2%);
+    }
+
+    div.item-options a {
+      color: darken(@white, 30%);
+    }
+  }
+}

@@ -8012,6 +8012,19 @@ body.wefoster-navbar-fixed-top {
   padding: 8px 35px;
   margin: -35px -35px 0;
 }
+footer .widget.buddypress ul li {
+  background: transparent;
+  margin: 0;
+  padding: 17.5px 0;
+  border-top: 0;
+  border-bottom: 1px solid #fafafa;
+}
+footer.footer-inverse .widget.buddypress ul li {
+  border-bottom: 1px solid #4a4f5a;
+}
+footer.footer-inverse .widget.buddypress div.item-options a {
+  color: #b3b3b3;
+}
 /*!
   * Utility Mixins for Child Themes + Extensions
 */
