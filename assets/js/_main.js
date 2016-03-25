@@ -89,6 +89,12 @@
           },
         });
 
+        jQuery(".dir-search input[type='text']").focusin(function() {
+            jQuery(".dir-search input[type='submit']").show(400);
+        }).focusout(function () {
+            jQuery(".dir-search input[type='submit']").hide(400);
+        });
+
         // Add Button Bootstrap Styles
         jQuery('.widget_bps_widget submit,.bbp-submit-wrapper button,.join-group').addClass('btn btn-success');
         jQuery('.create-blog .main submit').addClass('btn btn-lg btn-success');

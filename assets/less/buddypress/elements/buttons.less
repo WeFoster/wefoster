@@ -1,9 +1,9 @@
-button,
+a.bp-title-button,
 a.button,
+button,
 input[type=button],
 input[type=reset],
-ul.button-nav li a,
-a.bp-title-button {
+ul.button-nav li a {
   .btn();
   .btn-default();
 }
@@ -20,11 +20,10 @@ input[type=submit] {
   .btn-primary();
 }
 
-a.bp-primary-action,
 #reply-title small a,
 #upload,
-input[type=submit],
-{
+a.bp-primary-action,
+input[type=submit] {
   .btn();
   .btn-success();
 }
@@ -32,6 +31,7 @@ input[type=submit],
 #item-buttons {
   .generic-button {
     display: inline;
+
     a {
       background: none;
       border: 0;
@@ -60,8 +60,8 @@ input[type=submit],
   }
 }
 
-a.bp-primary-action,
-#reply-title small a {
+#reply-title small a,
+a.bp-primary-action {
   font-size: 80%;
   margin-right: 5px;
   text-decoration: none;
@@ -92,5 +92,7 @@ a.bp-title-button {
 
 .dir-search input[type=submit] {
   .button-variant(@btn-default-color; @btn-default-bg; @btn-default-border);
-  background: #f9f9f9;
+  background: transparent;
+  border: 0;
+  display: none;
 }

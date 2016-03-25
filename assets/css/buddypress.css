@@ -9,6 +9,248 @@
 /*!
   * BuddyPress Directories
 */
+.buddypress-component-title h1 {
+  display: inline;
+}
+#item-meta.directory-intro {
+  padding-bottom: 0;
+}
+.create-group-button {
+  display: inline;
+  font-size: 75%;
+  font-weight: bold;
+  margin-left: 4px;
+  position: relative;
+  top: -5px;
+}
+.create-group-button a {
+  color: #ffffff;
+}
+.item-list li div.item-title,
+ul.item-list li h4 {
+  font-weight: normal;
+  margin: 0;
+}
+span.activity {
+  display: inline-block;
+  font-size: 70%;
+}
+body.activity-permalink ul.item-list,
+body.activity-permalink ul.item-list li.activity-item {
+  border: none;
+}
+#admins-list li,
+#members-list li,
+#mods-list li {
+  overflow: auto;
+  list-style: none;
+}
+ul.item-list {
+  list-style: none;
+  clear: both;
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+ul.item-list li {
+  background: #ffffff;
+  border-bottom: 1px solid #fafafa;
+  border-top: 1px solid #fcfcfc;
+  list-style: none outside none;
+  margin: 0 -35px;
+  padding: 35px;
+  position: relative;
+  list-style: none;
+  box-shadow: none;
+}
+ul.item-list li h5 span.small {
+  float: right;
+  font-size: 80%;
+  font-weight: normal;
+}
+ul.item-list li .item {
+  margin-left: 65px;
+}
+ul.item-list li div.item-desc {
+  color: #8d8d8d;
+  font-size: 90%;
+  width: 70%;
+  margin-top: 10px;
+}
+ul.item-list li div.meta {
+  color: #8d8d8d;
+  font-size: 80%;
+  margin-top: 10px;
+}
+ul.item-list li img.avatar {
+  float: left;
+  margin: 0 10px 0 0;
+}
+ul.item-list li div.item-title span {
+  color: #a7a7a7;
+  font-size: 80%;
+}
+ul.item-list li div.action {
+  position: absolute;
+  top: 35px;
+  text-align: right;
+  right: 35px;
+}
+ul.item-list li div.action div.generic-button a {
+  border: medium none;
+  display: block;
+  font-size: 90%;
+  margin-bottom: 3px;
+  padding: 5px 6px;
+}
+.item-body {
+  margin: 20px 0;
+}
+ul.single-line li {
+  border: none;
+}
+.dir-form {
+  clear: both;
+}
+div.dir-search {
+  position: absolute;
+  right: 17.5px;
+  top: 17.5px;
+  z-index: 10;
+}
+div.dir-search input {
+  font-size: 14px;
+}
+div.dir-search .form-control {
+  display: inline-block;
+  font-size: 14px;
+}
+.directory.groups ul.item-list li .action,
+.directory.members ul.item-list li .action {
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
+  filter: alpha(opacity=50);
+  opacity: 0.0;
+  height: 0;
+}
+.directory.groups ul.item-list li:hover div.action,
+.directory.members ul.item-list li:hover div.action {
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+  filter: alpha(opacity=100);
+  -webkit-transition-property: opacity;
+  transition-property: opacity;
+  -webkit-transition-duration: 0.6s;
+  transition-duration: 0.6s;
+  opacity: 1;
+}
+@media only screen and (max-width: 1024px) {
+  .directory.groups ul.item-list li .action,
+  .directory.members ul.item-list li .action {
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+    filter: alpha(opacity=100);
+    -webkit-transition-property: opacity;
+    transition-property: opacity;
+    -webkit-transition-duration: 0.6s;
+    transition-duration: 0.6s;
+    opacity: 1;
+  }
+}
+@media only screen and (max-width: 1024px) {
+  .directory.groups ul.item-list li .action,
+  .directory.members ul.item-list li .action {
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+    filter: alpha(opacity=100);
+    -webkit-transition-property: opacity;
+    transition-property: opacity;
+    -webkit-transition-duration: 0.6s;
+    transition-duration: 0.6s;
+    opacity: 1;
+  }
+}
+noscript div.pagination {
+  margin-bottom: 17.5px;
+}
+div.pagination {
+  background: transparent;
+  border: none;
+  color: #8d8d8d;
+  font-size: 90%;
+  margin: 0;
+  position: relative;
+  display: block;
+  float: left;
+  padding: 10px 0;
+  width: 100%;
+  margin-top: -35px;
+}
+div.pagination .pag-count {
+  font-size: 90%;
+  float: left;
+}
+div.pagination .pagination-links {
+  float: right;
+  margin-right: 10px;
+}
+div.pagination .pagination-links a:hover {
+  font-weight: bold;
+}
+.directory #pag-top.pagination {
+  top: -52.5px;
+  margin-top: 0;
+}
+.directory #pag-bottom.pagination {
+  margin-top: 35px;
+}
+.messages div.pagination,
+.notifications div.pagination {
+  float: none;
+  display: inline-block;
+}
+#nav-above {
+  display: none;
+}
+div.pagination .pagination-links a,
+div.pagination .pagination-links span {
+  font-size: 85%;
+  padding: 2px 5px;
+}
+span.page-numbers.current {
+  font-weight: 500;
+  background: #28a587;
+  color: #ffffff;
+  border-radius: 2px;
+}
+.paged #nav-above {
+  display: block;
+}
+.groups-members-search label {
+  position: relative;
+  top: 7px;
+  margin: 0;
+}
+.groups-members-search #groups_search_submit,
+.groups-members-search #members_search_submit {
+  position: relative;
+  top: -6px;
+}
+.directory.blogs .main div.item-list-tabs ul li.last,
+.directory.groups .main div.item-list-tabs ul li.last,
+.directory.members .main div.item-list-tabs ul li.last {
+  position: absolute;
+  right: 15px;
+  top: -48.5px;
+  font-size: 14px;
+}
+.directory.blogs .main .item-list,
+.directory.groups .main .item-list,
+.directory.members .main .item-list {
+  position: relative;
+  top: -52.5px;
+}
+.directory.blogs .main .item-list li:first-child,
+.directory.groups .main .item-list li:first-child,
+.directory.members .main .item-list li:first-child {
+  border-top: none;
+}
 /*!
   * Responsive Design
 */
@@ -917,12 +1159,12 @@ div.ac-reply-avatar img.avatar {
 #avatar-crop-pane img.avatar {
   border-radius: 0 !important;
 }
-button,
+a.bp-title-button,
 a.button,
+button,
 input[type=button],
 input[type=reset],
-ul.button-nav li a,
-a.bp-title-button {
+ul.button-nav li a {
   display: inline-block;
   margin-bottom: 0;
   font-weight: bold;
@@ -946,284 +1188,284 @@ a.bp-title-button {
   background-color: #ffffff;
   border-color: #cccccc;
 }
-button:focus,
+a.bp-title-button:focus,
 a.button:focus,
+button:focus,
 input[type=button]:focus,
 input[type=reset]:focus,
 ul.button-nav li a:focus,
-a.bp-title-button:focus,
-button:active:focus,
+a.bp-title-button:active:focus,
 a.button:active:focus,
+button:active:focus,
 input[type=button]:active:focus,
 input[type=reset]:active:focus,
 ul.button-nav li a:active:focus,
-a.bp-title-button:active:focus,
-button.active:focus,
+a.bp-title-button.active:focus,
 a.button.active:focus,
+button.active:focus,
 input[type=button].active:focus,
 input[type=reset].active:focus,
 ul.button-nav li a.active:focus,
-a.bp-title-button.active:focus,
-button.focus,
+a.bp-title-button.focus,
 a.button.focus,
+button.focus,
 input[type=button].focus,
 input[type=reset].focus,
 ul.button-nav li a.focus,
-a.bp-title-button.focus,
-button:active.focus,
+a.bp-title-button:active.focus,
 a.button:active.focus,
+button:active.focus,
 input[type=button]:active.focus,
 input[type=reset]:active.focus,
 ul.button-nav li a:active.focus,
-a.bp-title-button:active.focus,
-button.active.focus,
+a.bp-title-button.active.focus,
 a.button.active.focus,
+button.active.focus,
 input[type=button].active.focus,
 input[type=reset].active.focus,
-ul.button-nav li a.active.focus,
-a.bp-title-button.active.focus {
+ul.button-nav li a.active.focus {
   outline: thin dotted;
   outline: 5px auto -webkit-focus-ring-color;
   outline-offset: -2px;
 }
-button:hover,
+a.bp-title-button:hover,
 a.button:hover,
+button:hover,
 input[type=button]:hover,
 input[type=reset]:hover,
 ul.button-nav li a:hover,
-a.bp-title-button:hover,
-button:focus,
+a.bp-title-button:focus,
 a.button:focus,
+button:focus,
 input[type=button]:focus,
 input[type=reset]:focus,
 ul.button-nav li a:focus,
-a.bp-title-button:focus,
-button.focus,
+a.bp-title-button.focus,
 a.button.focus,
+button.focus,
 input[type=button].focus,
 input[type=reset].focus,
-ul.button-nav li a.focus,
-a.bp-title-button.focus {
+ul.button-nav li a.focus {
   color: #333333;
   text-decoration: none;
 }
-button:active,
+a.bp-title-button:active,
 a.button:active,
+button:active,
 input[type=button]:active,
 input[type=reset]:active,
 ul.button-nav li a:active,
-a.bp-title-button:active,
-button.active,
+a.bp-title-button.active,
 a.button.active,
+button.active,
 input[type=button].active,
 input[type=reset].active,
-ul.button-nav li a.active,
-a.bp-title-button.active {
+ul.button-nav li a.active {
   outline: 0;
   background-image: none;
   box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
 }
-button.disabled,
+a.bp-title-button.disabled,
 a.button.disabled,
+button.disabled,
 input[type=button].disabled,
 input[type=reset].disabled,
 ul.button-nav li a.disabled,
-a.bp-title-button.disabled,
-button[disabled],
+a.bp-title-button[disabled],
 a.button[disabled],
+button[disabled],
 input[type=button][disabled],
 input[type=reset][disabled],
 ul.button-nav li a[disabled],
-a.bp-title-button[disabled],
-fieldset[disabled] button,
+fieldset[disabled] a.bp-title-button,
 fieldset[disabled] a.button,
+fieldset[disabled] button,
 fieldset[disabled] input[type=button],
 fieldset[disabled] input[type=reset],
-fieldset[disabled] ul.button-nav li a,
-fieldset[disabled] a.bp-title-button {
+fieldset[disabled] ul.button-nav li a {
   cursor: not-allowed;
   pointer-events: none;
   opacity: 0.65;
   filter: alpha(opacity=65);
   box-shadow: none;
 }
-button:hover,
+a.bp-title-button:hover,
 a.button:hover,
+button:hover,
 input[type=button]:hover,
 input[type=reset]:hover,
 ul.button-nav li a:hover,
-a.bp-title-button:hover,
-button:focus,
+a.bp-title-button:focus,
 a.button:focus,
+button:focus,
 input[type=button]:focus,
 input[type=reset]:focus,
 ul.button-nav li a:focus,
-a.bp-title-button:focus,
-button.focus,
+a.bp-title-button.focus,
 a.button.focus,
+button.focus,
 input[type=button].focus,
 input[type=reset].focus,
 ul.button-nav li a.focus,
-a.bp-title-button.focus,
-button:active,
+a.bp-title-button:active,
 a.button:active,
+button:active,
 input[type=button]:active,
 input[type=reset]:active,
 ul.button-nav li a:active,
-a.bp-title-button:active,
-button.active,
+a.bp-title-button.active,
 a.button.active,
+button.active,
 input[type=button].active,
 input[type=reset].active,
 ul.button-nav li a.active,
-a.bp-title-button.active,
-.open > .dropdown-togglebutton,
+.open > .dropdown-togglea.bp-title-button,
 .open > .dropdown-togglea.button,
+.open > .dropdown-togglebutton,
 .open > .dropdown-toggleinput[type=button],
 .open > .dropdown-toggleinput[type=reset],
-.open > .dropdown-toggleul.button-nav li a,
-.open > .dropdown-togglea.bp-title-button {
+.open > .dropdown-toggleul.button-nav li a {
   color: #333333;
   background-color: #e6e6e6;
   border-color: #adadad;
 }
-button:active,
+a.bp-title-button:active,
 a.button:active,
+button:active,
 input[type=button]:active,
 input[type=reset]:active,
 ul.button-nav li a:active,
-a.bp-title-button:active,
-button.active,
+a.bp-title-button.active,
 a.button.active,
+button.active,
 input[type=button].active,
 input[type=reset].active,
 ul.button-nav li a.active,
-a.bp-title-button.active,
-.open > .dropdown-togglebutton,
+.open > .dropdown-togglea.bp-title-button,
 .open > .dropdown-togglea.button,
+.open > .dropdown-togglebutton,
 .open > .dropdown-toggleinput[type=button],
 .open > .dropdown-toggleinput[type=reset],
-.open > .dropdown-toggleul.button-nav li a,
-.open > .dropdown-togglea.bp-title-button {
+.open > .dropdown-toggleul.button-nav li a {
   background-image: none;
 }
-button.disabled,
+a.bp-title-button.disabled,
 a.button.disabled,
+button.disabled,
 input[type=button].disabled,
 input[type=reset].disabled,
 ul.button-nav li a.disabled,
-a.bp-title-button.disabled,
-button[disabled],
+a.bp-title-button[disabled],
 a.button[disabled],
+button[disabled],
 input[type=button][disabled],
 input[type=reset][disabled],
 ul.button-nav li a[disabled],
-a.bp-title-button[disabled],
-fieldset[disabled] button,
+fieldset[disabled] a.bp-title-button,
 fieldset[disabled] a.button,
+fieldset[disabled] button,
 fieldset[disabled] input[type=button],
 fieldset[disabled] input[type=reset],
 fieldset[disabled] ul.button-nav li a,
-fieldset[disabled] a.bp-title-button,
-button.disabled:hover,
+a.bp-title-button.disabled:hover,
 a.button.disabled:hover,
+button.disabled:hover,
 input[type=button].disabled:hover,
 input[type=reset].disabled:hover,
 ul.button-nav li a.disabled:hover,
-a.bp-title-button.disabled:hover,
-button[disabled]:hover,
+a.bp-title-button[disabled]:hover,
 a.button[disabled]:hover,
+button[disabled]:hover,
 input[type=button][disabled]:hover,
 input[type=reset][disabled]:hover,
 ul.button-nav li a[disabled]:hover,
-a.bp-title-button[disabled]:hover,
-fieldset[disabled] button:hover,
+fieldset[disabled] a.bp-title-button:hover,
 fieldset[disabled] a.button:hover,
+fieldset[disabled] button:hover,
 fieldset[disabled] input[type=button]:hover,
 fieldset[disabled] input[type=reset]:hover,
 fieldset[disabled] ul.button-nav li a:hover,
-fieldset[disabled] a.bp-title-button:hover,
-button.disabled:focus,
+a.bp-title-button.disabled:focus,
 a.button.disabled:focus,
+button.disabled:focus,
 input[type=button].disabled:focus,
 input[type=reset].disabled:focus,
 ul.button-nav li a.disabled:focus,
-a.bp-title-button.disabled:focus,
-button[disabled]:focus,
+a.bp-title-button[disabled]:focus,
 a.button[disabled]:focus,
+button[disabled]:focus,
 input[type=button][disabled]:focus,
 input[type=reset][disabled]:focus,
 ul.button-nav li a[disabled]:focus,
-a.bp-title-button[disabled]:focus,
-fieldset[disabled] button:focus,
+fieldset[disabled] a.bp-title-button:focus,
 fieldset[disabled] a.button:focus,
+fieldset[disabled] button:focus,
 fieldset[disabled] input[type=button]:focus,
 fieldset[disabled] input[type=reset]:focus,
 fieldset[disabled] ul.button-nav li a:focus,
-fieldset[disabled] a.bp-title-button:focus,
-button.disabled.focus,
+a.bp-title-button.disabled.focus,
 a.button.disabled.focus,
+button.disabled.focus,
 input[type=button].disabled.focus,
 input[type=reset].disabled.focus,
 ul.button-nav li a.disabled.focus,
-a.bp-title-button.disabled.focus,
-button[disabled].focus,
+a.bp-title-button[disabled].focus,
 a.button[disabled].focus,
+button[disabled].focus,
 input[type=button][disabled].focus,
 input[type=reset][disabled].focus,
 ul.button-nav li a[disabled].focus,
-a.bp-title-button[disabled].focus,
-fieldset[disabled] button.focus,
+fieldset[disabled] a.bp-title-button.focus,
 fieldset[disabled] a.button.focus,
+fieldset[disabled] button.focus,
 fieldset[disabled] input[type=button].focus,
 fieldset[disabled] input[type=reset].focus,
 fieldset[disabled] ul.button-nav li a.focus,
-fieldset[disabled] a.bp-title-button.focus,
-button.disabled:active,
+a.bp-title-button.disabled:active,
 a.button.disabled:active,
+button.disabled:active,
 input[type=button].disabled:active,
 input[type=reset].disabled:active,
 ul.button-nav li a.disabled:active,
-a.bp-title-button.disabled:active,
-button[disabled]:active,
+a.bp-title-button[disabled]:active,
 a.button[disabled]:active,
+button[disabled]:active,
 input[type=button][disabled]:active,
 input[type=reset][disabled]:active,
 ul.button-nav li a[disabled]:active,
-a.bp-title-button[disabled]:active,
-fieldset[disabled] button:active,
+fieldset[disabled] a.bp-title-button:active,
 fieldset[disabled] a.button:active,
+fieldset[disabled] button:active,
 fieldset[disabled] input[type=button]:active,
 fieldset[disabled] input[type=reset]:active,
 fieldset[disabled] ul.button-nav li a:active,
-fieldset[disabled] a.bp-title-button:active,
-button.disabled.active,
+a.bp-title-button.disabled.active,
 a.button.disabled.active,
+button.disabled.active,
 input[type=button].disabled.active,
 input[type=reset].disabled.active,
 ul.button-nav li a.disabled.active,
-a.bp-title-button.disabled.active,
-button[disabled].active,
+a.bp-title-button[disabled].active,
 a.button[disabled].active,
+button[disabled].active,
 input[type=button][disabled].active,
 input[type=reset][disabled].active,
 ul.button-nav li a[disabled].active,
-a.bp-title-button[disabled].active,
-fieldset[disabled] button.active,
+fieldset[disabled] a.bp-title-button.active,
 fieldset[disabled] a.button.active,
+fieldset[disabled] button.active,
 fieldset[disabled] input[type=button].active,
 fieldset[disabled] input[type=reset].active,
-fieldset[disabled] ul.button-nav li a.active,
-fieldset[disabled] a.bp-title-button.active {
+fieldset[disabled] ul.button-nav li a.active {
   background-color: #ffffff;
   border-color: #cccccc;
 }
-button .badge,
+a.bp-title-button .badge,
 a.button .badge,
+button .badge,
 input[type=button] .badge,
 input[type=reset] .badge,
-ul.button-nav li a .badge,
-a.bp-title-button .badge {
+ul.button-nav li a .badge {
   color: #ffffff;
   background-color: #333333;
 }
@@ -1279,9 +1521,9 @@ input[type=submit] .badge {
   color: #289ea5;
   background-color: #ffffff;
 }
-a.bp-primary-action,
 #reply-title small a,
 #upload,
+a.bp-primary-action,
 input[type=submit] {
   display: inline-block;
   margin-bottom: 0;
@@ -1306,72 +1548,72 @@ input[type=submit] {
   background-color: #289ea5;
   border-color: #238a90;
 }
-a.bp-primary-action:focus,
 #reply-title small a:focus,
 #upload:focus,
+a.bp-primary-action:focus,
 input[type=submit]:focus,
-a.bp-primary-action:active:focus,
 #reply-title small a:active:focus,
 #upload:active:focus,
+a.bp-primary-action:active:focus,
 input[type=submit]:active:focus,
-a.bp-primary-action.active:focus,
 #reply-title small a.active:focus,
 #upload.active:focus,
+a.bp-primary-action.active:focus,
 input[type=submit].active:focus,
-a.bp-primary-action.focus,
 #reply-title small a.focus,
 #upload.focus,
+a.bp-primary-action.focus,
 input[type=submit].focus,
-a.bp-primary-action:active.focus,
 #reply-title small a:active.focus,
 #upload:active.focus,
+a.bp-primary-action:active.focus,
 input[type=submit]:active.focus,
-a.bp-primary-action.active.focus,
 #reply-title small a.active.focus,
 #upload.active.focus,
+a.bp-primary-action.active.focus,
 input[type=submit].active.focus {
   outline: thin dotted;
   outline: 5px auto -webkit-focus-ring-color;
   outline-offset: -2px;
 }
-a.bp-primary-action:hover,
 #reply-title small a:hover,
 #upload:hover,
+a.bp-primary-action:hover,
 input[type=submit]:hover,
-a.bp-primary-action:focus,
 #reply-title small a:focus,
 #upload:focus,
+a.bp-primary-action:focus,
 input[type=submit]:focus,
-a.bp-primary-action.focus,
 #reply-title small a.focus,
 #upload.focus,
+a.bp-primary-action.focus,
 input[type=submit].focus {
   color: #333333;
   text-decoration: none;
 }
-a.bp-primary-action:active,
 #reply-title small a:active,
 #upload:active,
+a.bp-primary-action:active,
 input[type=submit]:active,
-a.bp-primary-action.active,
 #reply-title small a.active,
 #upload.active,
+a.bp-primary-action.active,
 input[type=submit].active {
   outline: 0;
   background-image: none;
   box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
 }
-a.bp-primary-action.disabled,
 #reply-title small a.disabled,
 #upload.disabled,
+a.bp-primary-action.disabled,
 input[type=submit].disabled,
-a.bp-primary-action[disabled],
 #reply-title small a[disabled],
 #upload[disabled],
+a.bp-primary-action[disabled],
 input[type=submit][disabled],
-fieldset[disabled] a.bp-primary-action,
 fieldset[disabled] #reply-title small a,
 fieldset[disabled] #upload,
+fieldset[disabled] a.bp-primary-action,
 fieldset[disabled] input[type=submit] {
   cursor: not-allowed;
   pointer-events: none;
@@ -1379,126 +1621,126 @@ fieldset[disabled] input[type=submit] {
   filter: alpha(opacity=65);
   box-shadow: none;
 }
-a.bp-primary-action:hover,
 #reply-title small a:hover,
 #upload:hover,
+a.bp-primary-action:hover,
 input[type=submit]:hover,
-a.bp-primary-action:focus,
 #reply-title small a:focus,
 #upload:focus,
+a.bp-primary-action:focus,
 input[type=submit]:focus,
-a.bp-primary-action.focus,
 #reply-title small a.focus,
 #upload.focus,
+a.bp-primary-action.focus,
 input[type=submit].focus,
-a.bp-primary-action:active,
 #reply-title small a:active,
 #upload:active,
+a.bp-primary-action:active,
 input[type=submit]:active,
-a.bp-primary-action.active,
 #reply-title small a.active,
 #upload.active,
+a.bp-primary-action.active,
 input[type=submit].active,
-.open > .dropdown-togglea.bp-primary-action,
 .open > .dropdown-toggle#reply-title small a,
 .open > .dropdown-toggle#upload,
+.open > .dropdown-togglea.bp-primary-action,
 .open > .dropdown-toggleinput[type=submit] {
   color: #ffffff;
   background-color: #1e777c;
   border-color: #175b5f;
 }
-a.bp-primary-action:active,
 #reply-title small a:active,
 #upload:active,
+a.bp-primary-action:active,
 input[type=submit]:active,
-a.bp-primary-action.active,
 #reply-title small a.active,
 #upload.active,
+a.bp-primary-action.active,
 input[type=submit].active,
-.open > .dropdown-togglea.bp-primary-action,
 .open > .dropdown-toggle#reply-title small a,
 .open > .dropdown-toggle#upload,
+.open > .dropdown-togglea.bp-primary-action,
 .open > .dropdown-toggleinput[type=submit] {
   background-image: none;
 }
-a.bp-primary-action.disabled,
 #reply-title small a.disabled,
 #upload.disabled,
+a.bp-primary-action.disabled,
 input[type=submit].disabled,
-a.bp-primary-action[disabled],
 #reply-title small a[disabled],
 #upload[disabled],
+a.bp-primary-action[disabled],
 input[type=submit][disabled],
-fieldset[disabled] a.bp-primary-action,
 fieldset[disabled] #reply-title small a,
 fieldset[disabled] #upload,
+fieldset[disabled] a.bp-primary-action,
 fieldset[disabled] input[type=submit],
-a.bp-primary-action.disabled:hover,
 #reply-title small a.disabled:hover,
 #upload.disabled:hover,
+a.bp-primary-action.disabled:hover,
 input[type=submit].disabled:hover,
-a.bp-primary-action[disabled]:hover,
 #reply-title small a[disabled]:hover,
 #upload[disabled]:hover,
+a.bp-primary-action[disabled]:hover,
 input[type=submit][disabled]:hover,
-fieldset[disabled] a.bp-primary-action:hover,
 fieldset[disabled] #reply-title small a:hover,
 fieldset[disabled] #upload:hover,
+fieldset[disabled] a.bp-primary-action:hover,
 fieldset[disabled] input[type=submit]:hover,
-a.bp-primary-action.disabled:focus,
 #reply-title small a.disabled:focus,
 #upload.disabled:focus,
+a.bp-primary-action.disabled:focus,
 input[type=submit].disabled:focus,
-a.bp-primary-action[disabled]:focus,
 #reply-title small a[disabled]:focus,
 #upload[disabled]:focus,
+a.bp-primary-action[disabled]:focus,
 input[type=submit][disabled]:focus,
-fieldset[disabled] a.bp-primary-action:focus,
 fieldset[disabled] #reply-title small a:focus,
 fieldset[disabled] #upload:focus,
+fieldset[disabled] a.bp-primary-action:focus,
 fieldset[disabled] input[type=submit]:focus,
-a.bp-primary-action.disabled.focus,
 #reply-title small a.disabled.focus,
 #upload.disabled.focus,
+a.bp-primary-action.disabled.focus,
 input[type=submit].disabled.focus,
-a.bp-primary-action[disabled].focus,
 #reply-title small a[disabled].focus,
 #upload[disabled].focus,
+a.bp-primary-action[disabled].focus,
 input[type=submit][disabled].focus,
-fieldset[disabled] a.bp-primary-action.focus,
 fieldset[disabled] #reply-title small a.focus,
 fieldset[disabled] #upload.focus,
+fieldset[disabled] a.bp-primary-action.focus,
 fieldset[disabled] input[type=submit].focus,
-a.bp-primary-action.disabled:active,
 #reply-title small a.disabled:active,
 #upload.disabled:active,
+a.bp-primary-action.disabled:active,
 input[type=submit].disabled:active,
-a.bp-primary-action[disabled]:active,
 #reply-title small a[disabled]:active,
 #upload[disabled]:active,
+a.bp-primary-action[disabled]:active,
 input[type=submit][disabled]:active,
-fieldset[disabled] a.bp-primary-action:active,
 fieldset[disabled] #reply-title small a:active,
 fieldset[disabled] #upload:active,
+fieldset[disabled] a.bp-primary-action:active,
 fieldset[disabled] input[type=submit]:active,
-a.bp-primary-action.disabled.active,
 #reply-title small a.disabled.active,
 #upload.disabled.active,
+a.bp-primary-action.disabled.active,
 input[type=submit].disabled.active,
-a.bp-primary-action[disabled].active,
 #reply-title small a[disabled].active,
 #upload[disabled].active,
+a.bp-primary-action[disabled].active,
 input[type=submit][disabled].active,
-fieldset[disabled] a.bp-primary-action.active,
 fieldset[disabled] #reply-title small a.active,
 fieldset[disabled] #upload.active,
+fieldset[disabled] a.bp-primary-action.active,
 fieldset[disabled] input[type=submit].active {
   background-color: #289ea5;
   border-color: #238a90;
 }
-a.bp-primary-action .badge,
 #reply-title small a .badge,
 #upload .badge,
+a.bp-primary-action .badge,
 input[type=submit] .badge {
   color: #289ea5;
   background-color: #ffffff;
@@ -1584,8 +1826,8 @@ fieldset[disabled] .acomment-options .button:focus {
   color: #8d8d8d;
   text-decoration: none;
 }
-a.bp-primary-action,
-#reply-title small a {
+#reply-title small a,
+a.bp-primary-action {
   font-size: 80%;
   margin-right: 5px;
   text-decoration: none;
@@ -1652,7 +1894,9 @@ a.bp-title-button .badge {
   color: #333333;
   background-color: #ffffff;
   border-color: #cccccc;
-  background: #f9f9f9;
+  background: transparent;
+  border: 0;
+  display: none;
 }
 .dir-search input[type=submit]:hover,
 .dir-search input[type=submit]:focus,
