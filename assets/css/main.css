@@ -6346,6 +6346,8 @@ p {
 }
 .wefoster-framework .bootstrap-select > .dropdown-toggle {
   width: auto !important;
+  border: 0;
+  background: transparent;
 }
 .wefoster-framework .bootstrap-select:not([class*="col-"]):not([class*="form-control"]):not(.input-group-btn) {
   width: auto;
@@ -6612,6 +6614,9 @@ p {
 }
 .sidebar .widget h4 a {
   color: #343434;
+}
+.sidebar .widget h4 img {
+  display: inline;
 }
 .sidebar .widget:last-child {
   border-radius: 0 0 4px 4px;
