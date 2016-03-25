@@ -1340,6 +1340,8 @@ function wf_plus_register_settings( $fields ) {
 		)
 	) );
 
+
+
 	// Posts and Pages (WordPress)
 	Kirki::add_field( 'wefoster_plus', array(
 		'type'     => 'slider',
@@ -1427,6 +1429,22 @@ function wf_plus_register_settings( $fields ) {
 		'priority'    => 10,
 		'default'     => 50,
 	) );
+
+
+		// Posts and Pages (WordPress)
+		Kirki::add_field( 'wefoster_plus', array(
+			'type'        => 'radio',
+			'settings'    => 'wf_plus_show_avatar',
+			'label'       => __( 'Author Avatar', 'wefoster' ),
+			'description' => __( 'Do you want to show the author avatar inside the featured images?', 'wefoster' ),
+			'section'     => 'wf_plus_archives_section',
+			'default'     => 'show',
+			'priority'    => 10,
+			'choices'     => array(
+				'show' => __( 'Show the Author Avatar', 'wefoster' ),
+				'hide'  => __( 'Hide the author avatar', 'wefoster' )
+			)
+		) );
 
 	/// Homepage Settings
 

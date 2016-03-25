@@ -123,7 +123,7 @@ function wff_register_sections( $wp_customize ) {
 	) );
 
 	$wp_customize->add_section( 'wf_plus_archives_section', array(
-		'title'       => __( 'Archives', 'wefoster' ),
+		'title'       => __( 'Single Posts & Archives', 'wefoster' ),
 		'priority'    => 10,
 		'panel'       => 'wf_plus_wordpress_panel',
 		'description' => __( 'Change how your Post Archives look', 'wefoster' ),

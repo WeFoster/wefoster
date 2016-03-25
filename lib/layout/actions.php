@@ -154,8 +154,10 @@ if ( ! function_exists( 'wff_post_thumbnail_location' ) ) {
 */
 if ( ! function_exists( 'wff_post_author_avatar' ) ) {
 	function wff_post_author_avatar() {
-		//Don't show avatars on pages.
-		if ( ! is_page() ) {
+	
+		$avatar_settings = get_theme_mod( 'wf_plus_show_avatar', 'show' );
+
+		if ( ! is_page() && $avatar_settings == 'show'  ) {
 			get_template_part( 'templates/parts/author-avatar' );
 		}
 	}
