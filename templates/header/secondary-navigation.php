@@ -1,6 +1,6 @@
 <?php
 if ( has_nav_menu( 'secondary_navigation' ) ) {
-	do_action( 'before_secondary_header_navigation' );
+	do_action( 'wf_before_secondary_header_navigation' );
 	?>
 	<div class="secondary-nav-wrap navbar-collapse container-fluid <?php do_action( 'wf_class_container_secondary_navbar' ); ?> box-light" role="navigation">
 		<div class="container">
@@ -22,5 +22,5 @@ if ( has_nav_menu( 'secondary_navigation' ) ) {
 	</div>
 	<?php
 }
-do_action( 'after_secondary_header_navigation' );
+do_action( 'wf_after_secondary_header_navigation' );
 ?>

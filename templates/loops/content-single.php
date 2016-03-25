@@ -2,7 +2,7 @@
 
 	<?php
 	//This action is used to insert the Post Title/Post Meta & Post Thumbnail
-	do_action( 'before_entry_content' );
+	do_action( 'wf_before_entry_content' );
 	?>
 
 	<div class="entry-content <?php do_action( 'wf_entry_content_class' ); ?>">

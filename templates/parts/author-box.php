@@ -1,7 +1,7 @@
 <?php if ( get_the_author_meta( 'description' ) ): ?>
 	<div class="author-bio <?php do_action( 'wf_author_bio_class' ); ?>">
 		<?php
-		do_action( 'open_author_box' );
+		do_action( 'wf_open_author_box' );
 		?>
 		<div id="author-description">
 			<?php if ( ! is_archive() ): ?>
@@ -24,7 +24,7 @@
 		</div>
 
 		<?php
-		do_action( 'close_author_box' );
+		do_action( 'wf_close_author_box' );
 		?>
 	</div>
 <?php endif ?>

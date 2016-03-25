@@ -12,7 +12,7 @@
 
 	<?php
 	// Used for the Post Thumbnails see lib/layout.php
-	do_action( 'before_single_content' );
+	do_action( 'wf_before_single_content' );
 	?>
 
 	<?php while ( have_posts() ) : the_post(); ?>

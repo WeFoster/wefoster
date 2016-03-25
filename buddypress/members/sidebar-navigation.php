@@ -1,6 +1,6 @@
 <?php
 //This action is used to load the profile avatar.
-do_action( 'before_bp_profile_sidebar_navigation' );
+do_action( 'wf_before_bp_profile_sidebar_navigation' );
 ?>
 <div class="sidebar-activity-tabs no-ajax item-list-tabs vertical-list-tabs widget" role="navigation">
 	<?php do_action( 'wf_open_bp_profile_sidebar_navigation' ); ?>

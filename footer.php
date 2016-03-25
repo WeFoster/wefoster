@@ -18,7 +18,7 @@
 
 
 	<div class="<?php do_action( 'wf_class_container' );
-	do_action( 'class_container_footer' ); ?>">
+	do_action( 'wf_class_container_footer' ); ?>">
 
 		<?php do_action( 'wf_open_footer' ); ?>
 

@@ -88,7 +88,7 @@
 </div><!-- /.main -->
 
 <?php
-do_action( 'after_homepage' );
+do_action( 'wf_after_homepage' );
 ?>
 
 <?php get_template_part( 'footer' ); ?>

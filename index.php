@@ -14,7 +14,7 @@
 
 	<?php
 	//Use to Load to Post Title, Page Titles & Archive Titles. see lib/layout/actions.php
-	do_action( 'before_page_content' );
+	do_action( 'wf_before_page_content' );
 	?>
 
 	<?php do_action( 'wf_before_loop' ); ?>

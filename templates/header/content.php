@@ -21,8 +21,8 @@
 
 			<?php
 			// This hook is used to add the navigation on the minimal layout.
-			do_action( 'before_header_navigation' );
-			do_action( 'after_header_navigation' );
+			do_action( 'wf_before_header_navigation' );
+			do_action( 'wf_after_header_navigation' );
 			?>
 
 		</div>
@@ -30,7 +30,7 @@
 
 	<?php
 	// This load the full header
-	do_action( 'close_header' );
+	do_action( 'wf_close_header' );
 	?>
 </header>
 <?php do_action( 'wf_after_header' ); ?>

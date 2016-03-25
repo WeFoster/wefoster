@@ -31,7 +31,7 @@ if ( has_post_thumbnail() ) {
 
 		<?php
 		//Used to show the Post Author Avatar
-		do_action( 'open_post_thumbnail' );
+		do_action( 'wf_open_post_thumbnail' );
 		?>
 
 	</div>

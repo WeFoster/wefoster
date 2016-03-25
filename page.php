@@ -14,7 +14,7 @@
 <div id="main-content" class="main <?php do_action( 'wf_class_main' ); ?>" role="main">
 	<?php
 	//Use to Load to Page Title. see lib/actions.php
-	do_action( 'before_page_content' );
+	do_action( 'wf_before_page_content' );
 	?>
 
 	<?php while ( have_posts() ) : the_post(); ?>
