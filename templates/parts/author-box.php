@@ -1,9 +1,8 @@
 <?php if ( get_the_author_meta( 'description' ) ): ?>
-	<div class="author-bio <?php do_action( 'wf_author_bio_class' ); ?>">
+	<div class="author-bio wf-grid wf-grid--align-center <?php do_action( 'wf_author_bio_class' ); ?>">
 		<?php
 		do_action( 'wf_open_author_box' );
 		?>
-		<div id="author-description">
 			<?php if ( ! is_archive() ): ?>
 				<h3>
 					Who is <?php the_author_link(); ?>
@@ -12,16 +11,14 @@
 					</a>
 				</h3>
 			<?php endif ?>
-			<div class="avatar">
+			<div class="avatar wf-grid__col-2 padding-none">
 				<?php
 				print get_avatar( get_the_author_meta( 'user_email' ), '100' );
 				?>
 			</div>
-			<div class="author-text">
-				<?php the_author_meta( 'description' ); ?>
+			<div class="author-text wf-grid__col-10">
+					<?php the_author_meta( 'description' ); ?>
 			</div>
-
-		</div>
 
 		<?php
 		do_action( 'wf_close_author_box' );

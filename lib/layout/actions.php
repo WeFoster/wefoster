@@ -154,7 +154,7 @@ if ( ! function_exists( 'wff_post_thumbnail_location' ) ) {
 */
 if ( ! function_exists( 'wff_post_author_avatar' ) ) {
 	function wff_post_author_avatar() {
-	
+
 		$avatar_settings = get_theme_mod( 'wf_plus_show_avatar', 'show' );
 
 		if ( ! is_page() && $avatar_settings == 'show'  ) {
@@ -176,7 +176,7 @@ if ( ! function_exists( 'wff_archive_intro' ) ) {
 		get_template_part( 'templates/parts/archive-intro' );
 	}
 
-	add_action( 'wf_before_page_content', 'wff_archive_intro', 20 );
+	add_action( 'wf_before_archive_loop', 'wff_archive_intro', 20 );
 }
 
 /*

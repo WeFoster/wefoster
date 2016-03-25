@@ -22,6 +22,8 @@
 		</div>
 	</header>
 
+	<?php do_action( 'wf_before_archive_loop' ); ?>
+
 	<?php do_action( 'wf_before_loop' ); ?>
 
 	<?php if ( ! have_posts() ) : ?>

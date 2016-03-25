@@ -7919,16 +7919,20 @@ body.wefoster-navbar-fixed-top {
   padding-left: 35px;
   padding-right: 35px;
   margin-top: 35px;
+  overflow: hidden;
 }
-.author-bio #author-description {
-  padding-top: 35px;
-  padding-bottom: 35px;
-  font-size: 90%;
-}
-.author-bio #author-description .author-text {
+.author-bio .author-text {
   opacity: 0.8;
+  font-size: 110%;
 }
-.author-bio #author-description h3 {
+.author-bio .avatar {
+  padding: 0;
+}
+.author-bio .avatar img {
+  padding: 0;
+  border: 0;
+}
+.author-bio h3 {
   margin: 0;
   padding: 0;
   font-size: 135%;
@@ -7936,14 +7940,6 @@ body.wefoster-navbar-fixed-top {
   padding-bottom: 7px;
   margin-top: -10px;
   color: #343434;
-}
-.author-bio img.avatar {
-  height: 50px;
-  width: 50px;
-  float: left;
-  margin-right: 15px;
-  position: relative;
-  top: 6px;
 }
 .author-bio .all-author-posts {
   font-size: 75%;
