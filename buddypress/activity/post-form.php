@@ -11,7 +11,7 @@
 
 <form action="<?php bp_activity_post_form_action(); ?>" method="post" id="whats-new-form" name="whats-new-form" role="complementary">
 
-	<?php do_action( 'wf_bp_before_activity_post_form' ); ?>
+	<?php do_action( 'bp_before_activity_post_form' ); ?>
 
 	<p class="activity-greeting"><?php if ( bp_is_group() ) {
 			printf( __( "What's new in %s, %s?", 'buddypress' ), bp_get_group_name(), bp_get_user_firstname() );
@@ -59,7 +59,7 @@
 
 			<?php endif; ?>
 
-			<?php do_action( 'wf_bp_activity_post_form_options' ); ?>
+			<?php do_action( 'bp_activity_post_form_options' ); ?>
 
 		</div><!-- #whats-new-options -->
 	</div><!-- #whats-new-content -->
@@ -67,7 +67,7 @@
 	<?php wp_nonce_field( 'post_update', '_wpnonce_post_update' ); ?>
 
 	<div id="whats-new-js-wrap" class="js-flash">
-		<?php do_action( 'wf_bp_after_activity_post_form' ); ?>
+		<?php do_action( 'bp_after_activity_post_form' ); ?>
 	</div>
 
 </form><!-- #whats-new-form -->

@@ -9,7 +9,7 @@ do_action( 'bp_before_group_header' );
 		<span class="highlight"><?php bp_group_type(); ?></span> <span
 			class="activity"><?php printf( __( 'active %s', 'buddypress' ), bp_get_group_last_active() ); ?></span>
 
-		<?php do_action( 'wf_bp_before_group_header_meta' ); ?>
+		<?php do_action( 'bp_before_group_header_meta' ); ?>
 
 	</div><!-- #item-header-content -->
 
@@ -21,7 +21,7 @@ do_action( 'bp_before_group_header' );
 do_action( 'template_notices' );
 ?>
 
-<?php do_action( 'wf_bp_group_header_meta' ); ?>
+<?php do_action( 'bp_group_header_meta' ); ?>
 
 	<div class="wf-group-meta-wrap row">
 
