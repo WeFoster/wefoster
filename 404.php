@@ -13,7 +13,7 @@
 <div id="main-content" class="main <?php do_action( 'wf_class_main' ); ?>" role="main">
 
 	<div class="page-header">
-		<h1><?php _e( 'This is pretty lame, we found nothing here!', 'wefoster' ); ?></h1>
+		<h1><?php _e( 'Woops, we found nothing here!', 'wefoster' ); ?></h1>
 	</div>
 
 	<p>
