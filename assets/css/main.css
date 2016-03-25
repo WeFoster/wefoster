@@ -7913,6 +7913,9 @@ body.wefoster-navbar-fixed-top {
   margin-top: -35px;
   margin-bottom: 35px;
 }
+.author-bio-wrap {
+  margin-right: -70px;
+}
 .author-bio {
   margin-left: -35px;
   margin-right: -35px;
