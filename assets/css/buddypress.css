@@ -2242,26 +2242,26 @@ div.item-list-tabs ul li a {
 div.item-list-tabs ul li a:hover {
   color: #393939;
 }
-div.item-list-tabs ul li.selected a,
-div.item-list-tabs ul li.current a,
 div.item-list-tabs ul li.active a,
-div.item-list-tabs ul li.active a:hover {
+div.item-list-tabs ul li.active a:hover,
+div.item-list-tabs ul li.current a,
+div.item-list-tabs ul li.selected a {
   background: #28a587;
   font-weight: inherit;
   color: #ffffff;
 }
-div.item-list-tabs ul li.selected a span,
-div.item-list-tabs ul li.current a span,
 div.item-list-tabs ul li.active a span,
-div.item-list-tabs ul li.active a:hover span {
+div.item-list-tabs ul li.active a:hover span,
+div.item-list-tabs ul li.current a span,
+div.item-list-tabs ul li.selected a span {
   color: #ffffff;
   background: #47d2b1;
   border: 1px solid #3bcfac;
 }
-div.item-list-tabs ul li.selected a:before,
-div.item-list-tabs ul li.current a:before,
 div.item-list-tabs ul li.active a:before,
-div.item-list-tabs ul li.active a:hover:before {
+div.item-list-tabs ul li.active a:hover:before,
+div.item-list-tabs ul li.current a:before,
+div.item-list-tabs ul li.selected a:before {
   opacity: 0.8;
 }
 div.item-list-tabs ul span {
@@ -2281,6 +2281,9 @@ div.item-list-tabs ul li.last {
 div.item-list-tabs ul li.last .bootstrap-select span {
   font-size: 85% !important;
 }
+div.item-list-tabs ul li.last label {
+  font-weight: 400;
+}
 div.item-list-tabs ul li.last select {
   max-width: 175px;
 }
@@ -2297,17 +2300,17 @@ div.item-list-tabs ul li.last label {
   margin-right: 8px;
   color: #676767;
 }
-.groups.single-item div.item-list-tabs ul li.last,
-.bp-user div.item-list-tabs ul li.last {
+.bp-user div.item-list-tabs ul li.last,
+.groups.single-item div.item-list-tabs ul li.last {
   top: 15.5px;
 }
-#group-create-nav,
 #blog-create-nav,
+#group-create-nav,
 #invite-members-nav {
   float: right;
 }
-#group-create-nav a,
 #blog-create-nav a,
+#group-create-nav a,
 #invite-members-nav a {
   color: #454a54;
   font-weight: inherit;
@@ -2315,8 +2318,8 @@ div.item-list-tabs ul li.last label {
 .main .item-list-tabs li:first-child a {
   padding-left: 0;
 }
-.main .item-list-tabs li.selected:first-child a,
-.main .item-list-tabs li.current:first-child a {
+.main .item-list-tabs li.current:first-child a,
+.main .item-list-tabs li.selected:first-child a {
   padding-left: 17.5px;
 }
 #subnav.item-list-tabs {

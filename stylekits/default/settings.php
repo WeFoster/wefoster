@@ -24,11 +24,12 @@ function default_stylekit_settings( $fields ) {
 		'default'  => 'blue',
 		'priority' => 30,
 		'choices'  => array(
-			'blue'   => __( 'Blue', 'wefoster' ),
-			'green'  => __( 'Green', 'wefoster' ),
-			'black'  => __( 'Black', 'wefoster' ),
-			'purple' => __( 'Purple', 'wefoster' ),
-			'red'    => __( 'Red', 'wefoster' ),
+			'default'    => __( 'Green', 'wefoster' ),
+			'blue'       => __( 'Blue', 'wefoster' ),
+			'accessible' => __( 'Accessibility Friendly', 'wefoster' ),
+			'black'      => __( 'Black', 'wefoster' ),
+			'purple'     => __( 'Purple', 'wefoster' ),
+			'red'        => __( 'Red', 'wefoster' ),
 		),
 		'required' => array(
 			array(
@@ -42,18 +43,17 @@ function default_stylekit_settings( $fields ) {
 
 	Kirki::add_field( 'wefoster_plus', array(
 		'type'     => 'radio',
-		'settings' => 'stylekit_color_scheme',
-		'label'    => __( 'Color Scheme', 'translation_domain' ),
+		'settings' => 'stylekit_layout_preset',
+		'label'    => __( 'Layout Preset', 'translation_domain' ),
 		'section'  => 'wf_plus_stylekit_section',
-		'default'  => 'default',
-		'priority' => 30,
+		'default'  => 'boxed-full',
+		'priority' => 20,
 		'choices'  => array(
-			'default'    => __( 'Green', 'wefoster' ),
-			'blue'       => __( 'Blue', 'wefoster' ),
-			'accessible' => __( 'Accessibility Friendly', 'wefoster' ),
-			'black'      => __( 'Black', 'wefoster' ),
-			'purple'     => __( 'Purple', 'wefoster' ),
-			'red'        => __( 'Red', 'wefoster' ),
+			'boxed-full'    => __( 'Boxed Layout with Full Header', 'wefoster' ),
+			'fluid-full'       => __( 'Fluid Layout with Full Header', 'wefoster' ),
+			'boxed-inversed-full' => __( 'Boxed Layout with Inversed (Dark) Header', 'wefoster' ),
+			'fluid-minimal'      => __( 'Fluid Layout with Minimal Header', 'wefoster' ),
+			'boxed-minimal-inversed'     => __( 'Boxed Layout with Inversed Header', 'wefoster' )
 		)
 	) );
 }
@@ -61,7 +61,6 @@ function default_stylekit_settings( $fields ) {
 add_filter( 'kirki/fields', 'default_stylekit_settings' );
 
 $color = get_theme_mod( 'stylekit_color_scheme', 'default' );
-
 if ( $color == 'accessible' ) {
 	// Set the Default Font size.
 	define( 'WEFOSTER_FONT_SIZE', '18px' );
@@ -71,4 +70,33 @@ if ( $color == 'accessible' ) {
 	define( 'WEFOSTER_NAVIGATION_FONT_FAMILY', 'Roboto' );
 	define( 'WEFOSTER_HEADINGS_FONT_FAMILY', 'Roboto' );
 }
+
+//Load our custom stylesheet
+function wefoster_plus_layout_preset() {
+
+	$layout = get_theme_mod( 'stylekit_layout_preset', 'boxed-full' );
+
+	if ( $layout == 'fluid-full' ) {
+		define( 'WEFOSTER_LAYOUT_CLASS', 'container-fluid' );
+	}
+	if ( $layout == 'boxed-inversed-full' ) {
+		define( 'WEFOSTER_LAYOUT_CLASS', 'container' );
+		define( 'WEFOSTER_HEADER_STYLE', 'navbar-inverse' );
+	}
+	if ( $layout == 'fluid-minimal' ) {
+		define( 'WEFOSTER_LAYOUT_FULL_PRIMARY_MENU_POSITION', 'outside' );
+		define( 'WEFOSTER_LAYOUT_PRESET', 'minimal' );
+		define( 'WEFOSTER_LAYOUT_CLASS', 'container-fluid' );
+		define( 'WEFOSTER_HEADER_STICKY', 'navbar-static-top' );
+		define( 'WEFOSTER_HEADER_HIDE', 'navbar-headroom' );
+	}
+	if ( $layout == 'boxed-minimal-inversed' ) {
+		define( 'WEFOSTER_LAYOUT_CLASS', 'container' );
+		define( 'WEFOSTER_HEADER_STICKY', 'navbar-static-top' );
+		define( 'WEFOSTER_HEADER_HIDE', 'navbar-headroom' );
+		define( 'WEFOSTER_HEADER_STYLE', 'navbar-inverse' );
+	}
+
+}
+add_action( 'wp_head', 'wefoster_plus_layout_preset', 10000 );
 ?>

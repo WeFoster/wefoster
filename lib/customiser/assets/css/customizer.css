@@ -5,6 +5,9 @@
 .wp-full-overlay.expanded {
   margin-left: 23%;
 }
+.wp-full-overlay.collapsed .wp-full-overlay-sidebar {
+  margin-left: -23%;
+}
 input#wefoster-reset {
   margin-right: 11px;
   margin-top: 10px;
@@ -80,10 +83,10 @@ input#wefoster-reset {
 }
 #customize-theme-controls .prefix-upsell-link {
   display: inline-block;
-  background-color: #48C3AC;
+  background-color: #C34848;
   color: #fff;
   text-transform: uppercase;
-  margin-top: 6px;
+  margin-top: 7px;
   padding: 3px 6px;
   font-size: 9px;
   letter-spacing: 1px;

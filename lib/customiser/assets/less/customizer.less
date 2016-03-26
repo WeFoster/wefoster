@@ -1,10 +1,16 @@
+@width: 23%;
+
 .wp-full-overlay-sidebar {
-  width: 23%;
+  width: @width;
   max-width: 360px;
 }
 
 .wp-full-overlay.expanded {
-  margin-left: 23%;
+  margin-left: @width;
+}
+
+.wp-full-overlay.collapsed .wp-full-overlay-sidebar {
+  margin-left: -@width;
 }
 
 input#wefoster-reset {
@@ -85,10 +91,10 @@ input#wefoster-reset {
 
   .prefix-upsell-link {
     display: inline-block;
-    background-color: #48C3AC;
+    background-color: #C34848;
     color: #fff;
     text-transform: uppercase;
-    margin-top: 6px;
+    margin-top: 7px;
     padding: 3px 6px;
     font-size: 9px;
     letter-spacing: 1px;
@@ -125,8 +131,8 @@ input#wefoster-reset {
   }
 
   #accordion-section-wf_plus_stylekit_section {
-     > h3:before,
-    .panel-title:before {
+    .panel-title:before,
+    > h3:before {
       content: '\f100';
     }
   }
@@ -141,8 +147,8 @@ margin-top: -15px; */
   }
 
   #accordion-panel-wf_plus_stylekit_panel {
-     > h3:before,
-    .panel-title:before {
+    .panel-title:before,
+    > h3:before {
       content: '\f115';
       opacity: 1;
     }
@@ -153,8 +159,8 @@ margin-top: -15px; */
   }
 
   #accordion-section-cei-section {
-     > h3:before,
-    .panel-title:before {
+    .panel-title:before,
+    > h3:before {
       content: '\f316';
       opacity: 1;
     }
@@ -165,57 +171,57 @@ margin-top: -15px; */
   }
 
   #accordion-panel-wf_plus_appearance_panel {
-     > h3:before,
-    .panel-title:before {
+    .panel-title:before,
+    > h3:before {
       content: '\f135';
     }
   }
 
   #accordion-panel-wf_plus_typography_panel {
-     > h3:before,
-    .panel-title:before {
+    .panel-title:before,
+    > h3:before {
       content: '\f205';
     }
   }
 
   #accordion-panel-wf_plus_wordpress_panel {
-     > h3:before,
-    .panel-title:before {
+    .panel-title:before,
+    > h3:before {
       content: '\f120';
     }
   }
 
   #accordion-panel-wf_plus_buddypress_panel {
-     > h3:before,
-    .panel-title:before {
+    .panel-title:before,
+    > h3:before {
       content: '\f448';
     }
   }
 
   #accordion-section-wf_plus_bp_general_section {
-     > h3:before,
-    .panel-title:before {
+    .panel-title:before,
+    > h3:before {
       content: '\f108';
     }
   }
 
   #accordion-section-wf_plus_members_section {
-     > h3:before,
-    .panel-title:before {
+    .panel-title:before,
+    > h3:before {
       content: '\f110';
     }
   }
 
   #accordion-section-wf_plus_activity_section {
-     > h3:before,
-    .panel-title:before {
+    .panel-title:before,
+    > h3:before {
       content: '\f452';
     }
   }
 
   #accordion-section-wf_plus_groups_section {
-     > h3:before,
-    .panel-title:before {
+    .panel-title:before,
+    > h3:before {
       content: '\f307';
     }
   }
