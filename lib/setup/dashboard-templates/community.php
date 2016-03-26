@@ -23,8 +23,13 @@
 	// Grab Some Recent Posts
 	$posts = wff_get_community_posts();
 
-	if ( empty( $posts ) ) {
-		return;
+	if ( empty( $posts ) ) {?>
+			<div class="wf-post-content wf-grid__col-12">
+				<div class="wf-inner-grid wf-admin-box">
+					We were unable to retrieve the latest articles from our community.... Please try again later!
+				</div>
+			</div>
+		<?php return;
 	}
 	foreach ( $posts as $post ) {
 		?>

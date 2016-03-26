@@ -10,8 +10,11 @@
 	// Grab Some Recent Posts
 	$posts = wff_get_theme_docs();
 
-	if ( empty( $posts ) ) {
-		return;
+	if ( empty( $posts ) ) {?>
+		<div class="wf-post-content">
+				We were unable to retrieve the documentation articles.... Please try again later!
+		</div>
+		<?php return;
 	}
 	foreach ( $posts as $post ) {
 		?>
