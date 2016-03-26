@@ -52,7 +52,14 @@
 		<p>The WeFoster Theme automatically sets up some default widgets and your homepage so you can hit the ground running. We have written an extensive
 			getting started guide that walks you through setting up your community in a snap. Everything from setting up Menus, using the 70+ Customiser options
 			and much more!</p>
-		<p><a href="https://documentation.wefoster.co/kb/wefoster-theme-documentation/" target="_blank">Read our Documentation</a></p>
+		<p>
+
+			<ul class="nav nav-pills">
+				<li role="presentation"><a href="<?php echo get_site_url()?>/wp-admin/customize.php"><i class="fa fa-eye"></i> Open The Theme Customiser!</a>
+				</li>
+				<li role="presentation"><a href="https://documentation.wefoster.co/kb/wefoster-theme-documentation/" target="_blank">Read our Documentation</a></li>
+			</ul>
+</p>
 	</div>
 </div>
 
@@ -86,9 +93,8 @@
 	</div>
 	<div class="col-sm-9">
 		<h3><span>Step 2 -</span> Join the WeFoster Community</h3>
-		<p>Launching a succesfull social network ain't easy, but we're here to help! Join our community of BuddyPress developers and site owners to learn
-			everything there is to know about building succesful communities! By creating your profile you can connect to other site owners with similar
-			goals. </p>
+		<p>Launching a successful social network ain't easy, but we're here to help! Join our community of BuddyPress developers and site owners and learn
+			everything there is to know about building succesful communities with BuddyPress! Create your profile and connect to other site owners with similar goals and learn from the best. </p>
 		<p><a target="_blank" href="https://wefoster.co/create-your-account/">Create Your WeFoster Account</a></p>
 	</div>
 </div>
