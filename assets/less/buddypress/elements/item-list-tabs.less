@@ -43,10 +43,10 @@ div.item-list-tabs {
       }
     }
 
-    li.selected a,
-    li.current a,
     li.active a,
-    li.active a:hover {
+    li.active a:hover,
+    li.current a,
+    li.selected a {
       background: @item-tabs-active-bg;
       font-weight: @item-tabs-active-font-weight;
       color: @item-tabs-active-color;
@@ -81,6 +81,10 @@ div.item-list-tabs {
         font-size: 85% !important;
       }
 
+      label {
+        font-weight: 400;
+      }
+
       select {
         max-width: 175px;
       }
@@ -105,15 +109,15 @@ div.item-list-tabs {
   }
 }
 
-.groups.single-item,
-.bp-user {
+.bp-user,
+.groups.single-item {
   div.item-list-tabs ul li.last {
     top: (@item-tabs-padding - 2 );
   }
 }
 
-#group-create-nav,
 #blog-create-nav,
+#group-create-nav,
 #invite-members-nav {
   float: right;
 
@@ -128,8 +132,8 @@ div.item-list-tabs {
     padding-left: 0;
   }
 
-  li.selected:first-child a,
-  li.current:first-child a {
+  li.current:first-child a,
+  li.selected:first-child a {
     padding-left: @padding-half;
   }
 }

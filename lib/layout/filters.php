@@ -475,7 +475,7 @@ add_filter( 'body_class', 'wff_inside_menu_navigation_body_class' );
  *
  */
 function wff_author_bio() {
-	echo apply_filters( 'wff_author_bio_class', 'box-light margin-vertical-full padding-vertical-half' );
+	echo apply_filters( 'wff_author_bio_class', 'box-light margin-vertical-full padding-vertical-full' );
 }
 
 add_action( 'wf_author_bio_class', 'wff_author_bio' );
