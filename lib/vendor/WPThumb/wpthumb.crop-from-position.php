@@ -53,7 +53,7 @@ function wpthumb_media_form_crop_position( $fields, $post ) {
 	$html .= '</div>';
 
 	$fields['crop-from-position'] = array(
-		'label' => __( 'Crop Position', 'wpthumb' ),
+		'label' => __( 'Crop Position', 'wefoster' ),
 		'input' => 'html',
 		'html'  => $html
 	);

@@ -11,7 +11,7 @@
  */
 function wf_theme_customizer_tweaks( $config ) {
 	return wp_parse_args( array(
-		                      'description' => esc_attr__( 'Build Better Communities', 'kirki' ),
+		                      'description' => esc_attr__( 'Build Better Communities', 'wefoster' ),
 		                      'width'       => '40%',
 		                      'url_path'    => WEFOSTER_CUSTOMIZER_URL . '/lib/vendor/kirki/'
 	                      ), $config );

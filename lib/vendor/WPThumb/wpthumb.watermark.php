@@ -226,7 +226,7 @@ function wpthumb_media_form_watermark_position( $fields, $post ) {
 	$html = ob_get_clean();
 
 	$fields['watermark-position'] = array(
-		'label' => __( 'Watermark', 'wpthumb' ),
+		'label' => __( 'Watermark', 'wefoster' ),
 		'input' => 'html',
 		'html'  => $html
 	);

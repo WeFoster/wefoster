@@ -756,7 +756,7 @@ function wpthumb_errors() {
 	$dir_upload = $dir_upload['path'];
 
 	if ( file_exists( $dir_upload ) && ! is_writable( $dir_upload ) ) {
-		echo '<div id="wpthumb-warning" class="updated fade"><p><strong>' . __( 'WPThumb has detected a problem.', 'wpthumb' ) . '</strong> ' . sprintf( __( 'The directory <code>%s</code> is not writable.', 'wpthumb' ), $dir_upload ) . '</p></div>';
+		echo '<div id="wpthumb-warning" class="updated fade"><p><strong>' . __( 'WPThumb has detected a problem.', 'wefoster' ) . '</strong> ' . sprintf( __( 'The directory <code>%s</code> is not writable.', 'wefoster' ), $dir_upload ) . '</p></div>';
 	}
 
 }

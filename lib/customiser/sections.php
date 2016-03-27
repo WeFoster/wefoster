@@ -139,10 +139,10 @@ function wff_register_sections( $wp_customize ) {
 
 	// Typography
 	$wp_customize->add_section( 'wf_plus_typography_navigation_section', array(
-		'title'       => __( 'Navigation', 'kirki' ),
+		'title'       => __( 'Navigation', 'wefoster' ),
 		'priority'    => 10,
 		'panel'       => 'wf_plus_typography_panel',
-		'description' => __( 'Change the Navigation Font Settings', 'kirki' ),
+		'description' => __( 'Change the Navigation Font Settings', 'wefoster' ),
 	) );
 
 }

@@ -19,7 +19,7 @@ function default_stylekit_settings( $fields ) {
 	Kirki::add_field( 'wefoster_plus', array(
 		'type'     => 'radio',
 		'settings' => 'stylekit_color_scheme',
-		'label'    => __( 'Color Scheme', 'translation_domain' ),
+		'label'    => __( 'Color Scheme', 'wefoster' ),
 		'section'  => 'wf_plus_stylekit_section',
 		'default'  => 'blue',
 		'priority' => 30,
@@ -44,7 +44,7 @@ function default_stylekit_settings( $fields ) {
 	Kirki::add_field( 'wefoster_plus', array(
 		'type'     => 'radio',
 		'settings' => 'stylekit_layout_preset',
-		'label'    => __( 'Layout Preset', 'translation_domain' ),
+		'label'    => __( 'Layout Preset', 'kirki' ),
 		'section'  => 'wf_plus_stylekit_section',
 		'default'  => 'boxed-full',
 		'priority' => 20,

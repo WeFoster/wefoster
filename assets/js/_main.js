@@ -32,10 +32,6 @@
         $('#whats-new-js-wrap').removeClass('js-flash');
         $('#whats-new-options').removeClass('js-flash');
 
-        if ($("html").hasClass('touch')) {
-          FastClick.attach(document.body);
-        }
-
         //Hide header on down scroll
         $(".navbar-headroom").headroom({
           "tolerance": 5,
@@ -183,6 +179,10 @@
     // Home page
     wefosterismobile: {
       init: function() {
+
+        if ($("html").hasClass('touch')) {
+          FastClick.attach(document.body);
+        }
 
         //Hide Unstyled Flash
         $('#mobile-primary-navigation').removeClass('js-flash');

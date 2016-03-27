@@ -189,6 +189,10 @@ module.exports = function(grunt) {
           '!config.codekit',
           '!assets/vendor/**',
           '!lib/vendor/kirki/assets/js/vendor/ace/**',
+          '!bower.json',
+          '!npm-debug.log',
+          '!package.json',
+          '!prepos.cfg',
           '!.ds_store',
 
           //Include font awesome

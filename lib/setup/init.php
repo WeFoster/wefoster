@@ -150,7 +150,7 @@ if ( ! function_exists( 'wff_comments_template' ) ) :
 		 */
 		function wff_comment_form( $args ) {
 			$args['comment_field'] = '<div class="form-group comment-form-comment">
-	            <label for="comment">' . _x( 'Comment', 'noun' ) . '</label>
+	            <label for="comment">' . _x( 'Comment', 'wefoster' ) . '</label>
 	            <textarea class="form-control" id="comment" name="comment" cols="45" rows="8" width="100%" aria-required="true"></textarea>
 	        </div>';
 			$args['class_submit']  = 'btn btn-default';

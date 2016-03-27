@@ -61,15 +61,15 @@ function wf_plus_register_settings( $fields ) {
 	Kirki::add_field( 'wefoster_plus', array(
 		'type'        => 'radio',
 		'settings'    => 'wf_body_background_type',
-		'label'       => __( 'Body Background Image', 'kirki' ),
+		'label'       => __( 'Body Background Image', 'wefoster' ),
 		'section'     => 'wf_plus_body_section',
 		'default'     => 'picture',
 		'description' => __( 'A beautiful background image or pattern does wonders for the look of your site. You can select one of our carefully picked photos or textures, or upload your own.', 'wefoster' ),
 		'priority'    => 10,
 		'choices'     => array(
-			'upload'  => __( 'Upload your own image', 'kirki' ),
-			'picture' => __( 'Choose a background image', 'kirki' ),
-			'none'    => __( 'Choose color or pattern', 'kirki' )
+			'upload'  => __( 'Upload your own image', 'wefoster' ),
+			'picture' => __( 'Choose a background image', 'wefoster' ),
+			'none'    => __( 'Choose color or pattern', 'wefoster' )
 		)
 	) );
 
@@ -94,7 +94,7 @@ function wf_plus_register_settings( $fields ) {
 	Kirki::add_field( 'wefoster_plus', array(
 		'type'        => 'select',
 		'settings'    => 'wf_body_background_picture',
-		'label'       => __( 'Choose a background picture', 'kirki' ),
+		'label'       => __( 'Choose a background picture', 'wefoster' ),
 		'section'     => 'wf_plus_body_section',
 		'description' => __( 'All pictures are handpicked from Unsplash.com and come with a unlimited license. This means they can be used for personal or commercial use.', 'wefoster' ),
 		'default'     => WEFOSTER_BODY_BACKGROUND,
@@ -205,7 +205,7 @@ function wf_plus_register_settings( $fields ) {
 	Kirki::add_field( 'wefoster_plus', array(
 		'type'        => 'select',
 		'settings'    => 'wf_body_background_texture',
-		'label'       => __( 'Background Pattern', 'kirki' ),
+		'label'       => __( 'Background Pattern', 'wefoster' ),
 		'description' => __( 'Choose from a collection of patterns taken from Subtlepaterns.com. You can achieve some great looking results by setting a background color or picture and overlaying it with a pattern!', 'wefoster' ),
 		'section'     => 'wf_plus_body_section',
 		'default'     => 'none',
@@ -714,15 +714,15 @@ function wf_plus_register_settings( $fields ) {
 	Kirki::add_field( 'wefoster_plus', array(
 		'type'        => 'radio',
 		'settings'    => 'wf_header_background_type',
-		'label'       => __( 'Header Background Image', 'kirki' ),
+		'label'       => __( 'Header Background Image', 'wefoster' ),
 		'description' => __( 'A beautiful background image or pattern does wonders for the look of your site. You can select one of our carefully picked photos or textures, or upload your own.', 'wefoster' ),
 		'section'     => 'wf_plus_header_section',
 		'default'     => 'picture',
 		'priority'    => 10,
 		'choices'     => array(
-			'upload'  => __( 'Upload a background', 'kirki' ),
-			'picture' => __( 'Choose a Background Photo', 'kirki' ),
-			'texture' => __( 'Choose a Background Pattern/Texture', 'kirki' )
+			'upload'  => __( 'Upload a background', 'wefoster' ),
+			'picture' => __( 'Choose a Background Photo', 'wefoster' ),
+			'texture' => __( 'Choose a Background Pattern/Texture', 'wefoster' )
 		),
 		'required'    => array(
 			array(
@@ -735,7 +735,7 @@ function wf_plus_register_settings( $fields ) {
 	Kirki::add_field( 'wefoster_plus', array(
 		'type'        => 'select',
 		'settings'    => 'wf_header_background_picture',
-		'label'       => __( 'Choose a background picture', 'kirki' ),
+		'label'       => __( 'Choose a background picture', 'wefoster' ),
 		'description' => __( 'All pictures are handpicked from Unsplash.com and come with a unlimited license. This means they can be used for personal or commercial use.', 'wefoster' ),
 		'section'     => 'wf_plus_header_section',
 		'default'     => WEFOSTER_HEADER_BACKGROUND,
@@ -793,8 +793,8 @@ function wf_plus_register_settings( $fields ) {
 	Kirki::add_field( 'wefoster_plus', array(
 		'type'        => 'select',
 		'settings'    => 'wf_header_background_texture',
-		'label'       => __( 'Choose a background texture', 'kirki' ),
-		'description' => __( 'Choose a background texture or pattern to use for your header', 'kirki' ),
+		'label'       => __( 'Choose a background texture', 'wefoster' ),
+		'description' => __( 'Choose a background texture or pattern to use for your header', 'wefoster' ),
 		'section'     => 'wf_plus_header_section',
 		'default'     => 'default',
 		'priority'    => 10,
@@ -987,7 +987,7 @@ function wf_plus_register_settings( $fields ) {
 		'type'        => 'typography',
 		'settings'    => 'base_typography_font_family',
 		'description' => 'Customize the font style...',
-		'label'       => esc_attr__( 'Control Label', 'kirki' ),
+		'label'       => esc_attr__( 'Control Label', 'wefoster' ),
 		'section'     => 'wf_plus_typography_body_section',
 		'default'     => array(
 			'font-family' => WEFOSTER_FONT_FAMILY,
@@ -1005,7 +1005,7 @@ function wf_plus_register_settings( $fields ) {
 		'type'        => 'typography',
 		'settings'    => 'heading_typography_navigation_font_style',
 		'description' => 'Customize the font style...',
-		'label'       => esc_attr__( 'Font Family', 'kirki' ),
+		'label'       => esc_attr__( 'Font Family', 'wefoster' ),
 		'section'     => 'wf_plus_typography_navigation_section',
 		'default'     => array(
 			'font-family' => WEFOSTER_NAVIGATION_FONT_FAMILY,
@@ -1503,20 +1503,20 @@ function wf_plus_register_settings( $fields ) {
 	Kirki::add_field( 'wefoster_plus', array(
 		'type'        => 'radio',
 		'settings'    => 'wf_hero_background_type',
-		'label'       => __( 'Hero Background Image', 'kirki' ),
+		'label'       => __( 'Hero Background Image', 'wefoster' ),
 		'description' => __( 'A beautiful background image or pattern does wonders for the look of your site. You can select one of our carefully picked photos or textures, or upload your own.', 'wefoster' ),
 		'section'     => 'wf_plus_hero_section',
 		'default'     => 'picture',
 		'priority'    => 10,
 		'choices'     => array(
-			'upload'  => __( 'Upload a background', 'kirki' ),
-			'picture' => __( 'Choose a Background Photo', 'kirki' )
+			'upload'  => __( 'Upload a background', 'wefoster' ),
+			'picture' => __( 'Choose a Background Photo', 'wefoster' )
 		),
 	) );
 	Kirki::add_field( 'wefoster_plus', array(
 		'type'        => 'select',
 		'settings'    => 'wf_hero_background_picture',
-		'label'       => __( 'Choose a background picture', 'kirki' ),
+		'label'       => __( 'Choose a background picture', 'wefoster' ),
 		'description' => __( 'All pictures are handpicked from Unsplash.com and come with a unlimited license. This means they can be used for personal or commercial use.', 'wefoster' ),
 		'section'     => 'wf_plus_hero_section',
 		'default'     => WEFOSTER_HERO_BACKGROUND,

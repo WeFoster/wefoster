@@ -26,7 +26,7 @@ class Test_Kirki_Add_Field extends WP_UnitTestCase {
 
 		Kirki::add_field( 'global', array(
 			'settings' => 'my_setting_global',
-			'label'    => __( 'My custom control', 'translation_domain' ),
+			'label'    => __( 'My custom control', 'wefoster' ),
 			'section'  => 'my_section',
 			'type'     => 'text',
 			'priority' => 10,
@@ -35,7 +35,7 @@ class Test_Kirki_Add_Field extends WP_UnitTestCase {
 
 		Kirki::add_field( 'test', array(
 			'settings' => 'my_setting_test',
-			'label'    => __( 'My custom control', 'translation_domain' ),
+			'label'    => __( 'My custom control', 'wefoster' ),
 			'section'  => 'my_section',
 			'type'     => 'text',
 			'priority' => 10,
@@ -120,7 +120,7 @@ class Test_Kirki_Add_Field extends WP_UnitTestCase {
 
 		Kirki::add_field( 'global', array(
 			'settings' => 'my_setting_global',
-			'label'    => __( 'My custom control', 'translation_domain' ),
+			'label'    => __( 'My custom control', 'wefoster' ),
 			'section'  => 'my_section',
 			'type'     => 'textarea',
 			'priority' => 10,
