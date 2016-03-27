@@ -166,7 +166,7 @@ function wff_wp_nav_menu_objects( $sorted_menu_items, $args ) {
 add_filter( 'wp_nav_menu_objects', 'wff_wp_nav_menu_objects', 10, 2 );
 
 function wf_menu_fallback( $args ) {
-	if ( current_user_can( 'manage_options' ) ) {
+	if ( current_user_can( 'edit_theme_options' ) ) {
 		extract( $args );
 		$fb_output = null;
 		if ( $container ) {
