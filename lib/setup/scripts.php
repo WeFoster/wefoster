@@ -35,12 +35,6 @@ function wff_scripts() {
 		wp_enqueue_script( 'comment-reply' );
 	}
 
-	// Add jQuery Fastclick for mobile devices
-	if ( wp_is_mobile() ) {
-		wp_register_script( 'wff-fastclick', $path . '/vendor/fastclick/lib/fastclick.js', array(), null, false );
-		wp_enqueue_script( 'wff-fastclick' );
-	}
-
 	// Modernizr
 	wp_register_script( 'modernizr', $path . '/js/vendor/modernizr-2.7.0.min.js', array(), null, false );
 
@@ -60,6 +54,8 @@ function wff_scripts() {
 		wp_enqueue_script( 'touchswipe_js' );
 		wp_enqueue_script( 'sidr_js' );
 		wp_enqueue_script( 'perfect_scrollbar' );
+		wp_register_script( 'wff-fastclick', $path . '/vendor/fastclick/lib/fastclick.js', array(), null, false );
+		wp_enqueue_script( 'wff-fastclick' );
 	}
 
 	wp_enqueue_script( 'jquery' );
