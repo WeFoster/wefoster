@@ -1,4 +1,6 @@
 <?php
+$option = get_theme_mod( 'wf_plus_bp_cover_photo_default_sizes' );
+
 if ( $option == 'custom' ) {
 	$settings['width']  = get_theme_mod( 'wf_plus_bp_cover_photo_width' ) - 40;
 	$settings['height'] = get_theme_mod( 'wf_plus_bp_cover_photo_height' ) - 40;

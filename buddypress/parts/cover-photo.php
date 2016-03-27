@@ -1,4 +1,5 @@
 <?php
+global $bp;
 // This template adds the BuddyPress Cover Photos into Member and Group headers.
 // The size is based on the Default Post Thumb sizes OR the customizer settings.
 // If no image is found a default fallback is used based on the constants you've set.
@@ -19,6 +20,8 @@ if ( bp_is_user() ) {
 		$text = esc_html__( 'Change Your Cover Photo', 'wefoster' );
 
 		$action = '<div class="cover-photo-action vertical-center site-description my-profile"><a data-toggle="tooltip" data-placement="right" title="' . $text . '" data-container="body" href=' . $link . '><i class="fa fa-camera-retro"></i></a></div>';
+	}  else {
+					$action = '';
 	}
 
 	//No photo set? Show default + message
@@ -29,6 +32,8 @@ if ( bp_is_user() ) {
 			$text = esc_html__( 'Upload Your Cover Photo', 'wefoster' );
 
 			$action = '<div class="cover-photo-action vertical-center site-description my-profile"><a data-toggle="tooltip" data-placement="right" title="' . $text . '" data-container="body" href=' . $link . '><i class="fa fa-camera-retro"></i></a></div>';
+		}  else {
+						$action = '';
 		}
 	}
 
@@ -47,6 +52,8 @@ if ( bp_is_user() ) {
 		$text = esc_html__( 'Change Group Cover Photo', 'wefoster' );
 
 		$action = '<div class="cover-photo-action vertical-center site-description my-profile"><a data-toggle="tooltip" data-placement="right" title="' . $text . '" data-container="body" href=' . $link . '><i class="fa fa-camera-retro"></i></a></div>';
+	} else {
+					$action = '';
 	}
 
 	//No photo set? Show default image + change upload message
@@ -58,7 +65,8 @@ if ( bp_is_user() ) {
 			$text = esc_html__( 'Upload Group Cover Photo', 'wefoster' );
 
 			$action = '<div class="cover-photo-action vertical-center site-description my-profile"><a data-toggle="tooltip" data-placement="right" title="' . $text . '" data-container="body" href=' . $link . '><i class="fa fa-camera-retro"></i></a></div>';
-
+		} else {
+						$action = '';
 		}
 	}
 }
