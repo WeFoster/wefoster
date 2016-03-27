@@ -3,7 +3,7 @@
 	<div class="row wf-admin-box wf-no-buddypress">
 		<div class="col-sm-3">
 			<div class="media-container">
-				<img src="https://cdn.wefoster.co/dashboard/bp-logo.png" alt="">
+				<img src="<?php echo get_template_directory_uri();?>/customiser/assets/img/bp-logo.png" alt="">
 			</div>
 		</div>
 		<div class="col-sm-9">

@@ -37,7 +37,7 @@
 			<div class="wf-inner-grid wf-admin-box">
 				<a target="_blank" href="<?php echo $post->link; ?>">
 					<?php if ( empty( $post->better_featured_image->media_details->sizes->medium->source_url ) ): ?>
-						<img src="https://cdn.wefoster.co/backgrounds/autumn-desk.jpeg" alt="<?php echo $post->title->rendered; ?>">
+						<img src="<?php echo get_stylesheet_directory_uri();?>/assets/img/default-cover-photo.png" alt="<?php echo $post->title->rendered; ?>">
 					<?php else: ?>
 						<img src="<?php echo $post->better_featured_image->media_details->sizes->medium->source_url; ?>"
 						     alt="<?php echo $post->title->rendered; ?>">

@@ -237,19 +237,6 @@ function wf_plus_register_settings( $fields ) {
 		)
 	) );
 
-	Kirki::add_field( 'wefoster_plus', array(
-		'type'        => 'radio',
-		'settings'    => 'wf_plus_hide_admin_bar',
-		'label'       => __( 'Hide Admin Bar', 'wefoster' ),
-		'description' => __( 'Do you want to hide the WordPress Admin bar for all users except site administrators?', 'wefoster' ),
-		'section'     => 'wf_plus_admin_bar_section',
-		'default'     => 'hide',
-		'priority'    => 10,
-		'choices'     => array(
-			'hide' => __( 'Hide Adminbar for all members', 'wefoster' ),
-			'show' => __( 'Show Adminbar to all members', 'wefoster' )
-		)
-	) );
 
 	//
 	// Content

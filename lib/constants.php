@@ -265,8 +265,7 @@ if ( ! defined( 'WEFOSTER_BODY_BACKGROUND' ) ) {
 if ( ! defined( 'WEFOSTER_HEADER_BACKGROUND' ) ) {
 	//Local
 	define( 'WEFOSTER_HEADER_BACKGROUND', WEFOSTER_ASSETS_URL . '/assets/img/bg.jpg' );
-	//External
-	//define('WEFOSTER_HEADER_BACKGROUND', 'https://cdn.wefoster.co/backgrounds/into-the-wild.jpeg');
+	//External: You can put in the link to a remotely hosted image as well.
 }
 
 if ( ! defined( 'WEFOSTER_HERO_BACKGROUND' ) ) {

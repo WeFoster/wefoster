@@ -485,17 +485,3 @@ if ( $option == 'custom' ) {
 
 	add_filter( 'wff_post_thumbnail_sizes', 'wefoster_plus_thumb_sizes', 11 );
 }
-
-/**
- * Check theme options to see if the WordPress Admin bar should be hidden for non-admins.
- *
- * @since 1.0.0
- *
- */
-$option = get_theme_mod( 'wf_plus_hide_admin_bar', 'hide' );
-if ( $option == 'hide' ) {
-
-	if ( ! current_user_can( 'administrator' ) && ! is_admin() ) {
-		add_filter( 'show_admin_bar', '__return_false' );
-	}
-}

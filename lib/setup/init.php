@@ -18,21 +18,6 @@ if ( ! function_exists( 'wff_jetpack_responsive_videos_setup' ) ) {
 
 	add_action( 'after_setup_theme', 'wff_jetpack_responsive_videos_setup' );
 }
-
-
-/**
- * $content_width is a global variable used by WordPress for max image upload sizes
- * and media embeds (in pixels).
- * @since 1.0.0
- *
- * Example: If the content area is 640px wide, set $content_width = 620; so images and videos will not overflow.
- * Default: 1140px is the default Bootstrap container width.
- */
-if ( ! isset( $content_width ) ) {
-	$content_width = 1140;
-}
-
-
 /**
  * wefoster initial setup and constants
  *

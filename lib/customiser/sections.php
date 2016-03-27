@@ -55,13 +55,6 @@ function wff_register_sections( $wp_customize ) {
 		'description' => __( 'Change the way your site footer looks', 'wefoster' ),
 	) );
 
-	$wp_customize->add_section( 'wf_plus_admin_bar_section', array(
-		'title'       => __( 'Admin Bar', 'wefoster' ),
-		'priority'    => 10,
-		'panel'       => 'wf_plus_appearance_panel',
-		'description' => __( 'Show or Hide the Admin Bar', 'wefoster' ),
-	) );
-
 	if ( function_exists( 'bp_is_member' ) ) {
 
 		// buddypress
