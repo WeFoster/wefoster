@@ -53,8 +53,6 @@ Join our community of BuddyPress site owners and developers on [WeFoster.co](htt
 
 All theme customization options are located at "Appearance > Customize".
 
-
-
 ## Navigation ##
 
 This theme supports two navigation menus. You can edit this menu in WordPress at "Appearance > Menus".
@@ -77,15 +75,41 @@ Join our community on WeFoster.co and we will be happy to answer any questions y
 
 [WeFoster Community](https://wefoster.co/communities)
 
-## License Info ##
+## Copyright ##
 
-Bootstrap 3 - ​getbootstrap.com/
-License: MIT - https://github.com/twbs/bootstrap/blob/master/LICENSE
+WeFoster WordPress Theme, Copyright 2015-2016 WeFoster.co
+WeFoster is distributed under the terms of the GNU GPL
 
-Kirki - https://github.com/aristath/kirki
-License: GPL-2.0+ - http://www.gnu.org/licenses/gpl-2.0.html
-Copyright: @aristath
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 2 of the License, or
+(at your option) any later version.
 
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+GNU General Public License for more details.
+
+### WeFoster bundles the following third-party resources ###
+
+Bootstrap 3 - ​getbootstrap.com/License: MIT
+Kirki, by @aristath, GPL2.0+ License
+FontAwesome Icons, copyright http://fontawesome.com , MIT License
+AutoSize- Copyright Jack Moore, MIT License.
+Bootstrap Select - Copyright bootstrap-select, MIT License
+FastClick - Copyright The Financial Times Ltd, GP2.0 License
+FitVids - Copyright Chris Coyier, WTFPL License
+Headroom - Copyright Nick Williams, MIT License
+jQuery Autogrow Area - Copyright Bruno Sampaio, MIT License
+ReflexGrid - Copyright Lee Jordan, MIT License
+SmartMenus - Copyright Vasil Dinkov, MIT License
+
+Textures by SubtlePatterns.com, CC3.0 License
+Photos by Unsplash.com, CC 3.0 License
+
+## Notes ##
+
+Choose the "Accessibility Ready" design preset (Appearance > Customize > Designs > Classic > Accessibility) design for increased contrast, bigger fonts and other improvements that improve the experience.
 
 ## Changelog ##
 

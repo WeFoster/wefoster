@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: WeFoster 1.1.3\n"
 "Report-Msgid-Bugs-To: https://github.com/WeFoster/wefoster/\n"
-"POT-Creation-Date: 2016-03-23 20:03:09+00:00\n"
+"POT-Creation-Date: 2016-03-28 17:21:13+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -14,7 +14,7 @@ msgstr ""
 "X-Generator: grunt-wp-i18n 0.5.3\n"
 
 #: 404.php:16
-msgid "This is pretty lame, we found nothing here!"
+msgid "Woops, we found nothing here!"
 msgstr ""
 
 #: 404.php:20
@@ -33,56 +33,56 @@ msgstr ""
 msgid "How about you try using our search form?"
 msgstr ""
 
-#: buddypress/navigation-menu.php:36
+#: archive.php:32 index.php:26 search.php:19
+msgid "Sorry, no results were found."
+msgstr ""
+
+#: archive.php:52 index.php:50 search.php:37
+msgid "&larr; Older posts"
+msgstr ""
+
+#: archive.php:53 index.php:51 search.php:38
+msgid "Newer posts &rarr;"
+msgstr ""
+
+#: buddypress/navigation-menu.php:37
 #: templates/sidebar/buddypress-mobile-user-navigation.php:29
 msgid "Log In"
 msgstr ""
 
-#: buddypress/navigation-menu.php:56
+#: buddypress/navigation-menu.php:57
 msgid "Register"
 msgstr ""
 
-#: buddypress/parts/cover-photo.php:19
+#: buddypress/parts/cover-photo.php:20
 msgid "Change Your Cover Photo"
 msgstr ""
 
-#: buddypress/parts/cover-photo.php:29
+#: buddypress/parts/cover-photo.php:32
 msgid "Upload Your Cover Photo"
 msgstr ""
 
-#: buddypress/parts/cover-photo.php:47
+#: buddypress/parts/cover-photo.php:52
 msgid "Change Group Cover Photo"
 msgstr ""
 
-#: buddypress/parts/cover-photo.php:58
+#: buddypress/parts/cover-photo.php:65
 msgid "Upload Group Cover Photo"
 msgstr ""
 
-#: footer.php:32
+#: footer.php:33
 msgid "Powered by WordPress. Theme developed by %s"
 msgstr ""
 
-#: header.php:28
+#: header.php:25
 msgid "Skip to main content"
 msgstr ""
 
-#: header.php:30
+#: header.php:28
 msgid ""
 "You are using an <strong>outdated</strong> browser. Please <a "
-"href=\"http://browsehappy.com/\">upgrade your browser</a> to improve your "
-"experience."
-msgstr ""
-
-#: index.php:25 search.php:19
-msgid "Sorry, no results were found."
-msgstr ""
-
-#: index.php:45 search.php:37
-msgid "&larr; Older posts"
-msgstr ""
-
-#: index.php:46 search.php:38
-msgid "Newer posts &rarr;"
+"href=\"http://browsehappy.com/\">upgrade your browser</a>\n"
+"\tto improve your experience."
 msgstr ""
 
 #: lib/buddypress/bp-hooks.php:15
@@ -91,11 +91,11 @@ msgid ""
 "id=\"reset\">Click here to reset</a>"
 msgstr ""
 
-#: lib/customiser/init.php:28
+#: lib/customiser/init.php:14
 msgid "Build Better Communities"
 msgstr ""
 
-#: lib/customiser/init.php:82
+#: lib/customiser/init.php:72
 msgid "Upgrade to WeFoster +"
 msgstr ""
 
@@ -211,1018 +211,1011 @@ msgstr ""
 msgid "Change the way your site footer looks"
 msgstr ""
 
-#: lib/customiser/sections.php:59
-msgid "Admin Bar"
-msgstr ""
-
 #: lib/customiser/sections.php:62
-msgid "Show or Hide the Admin Bar"
-msgstr ""
-
-#: lib/customiser/sections.php:69
 msgid "General"
 msgstr ""
 
-#: lib/customiser/sections.php:72
+#: lib/customiser/sections.php:65
 msgid "General BuddyPress Settings"
 msgstr ""
 
-#: lib/customiser/sections.php:76
+#: lib/customiser/sections.php:69
 msgid "Members Directory"
 msgstr ""
 
-#: lib/customiser/sections.php:79
+#: lib/customiser/sections.php:72
 msgid "Change the Members Directory"
 msgstr ""
 
-#: lib/customiser/sections.php:83
+#: lib/customiser/sections.php:76
 msgid "Member Profiles"
 msgstr ""
 
-#: lib/customiser/sections.php:86
+#: lib/customiser/sections.php:79
 msgid "Change Member Profiles"
 msgstr ""
 
-#: lib/customiser/sections.php:90
+#: lib/customiser/sections.php:83
 msgid "Groups Directory"
 msgstr ""
 
-#: lib/customiser/sections.php:93
+#: lib/customiser/sections.php:86
 msgid "Change the Groups Directory"
 msgstr ""
 
-#: lib/customiser/sections.php:97 lib/customiser/sections.php:100
+#: lib/customiser/sections.php:90 lib/customiser/sections.php:93
 msgid "Single Groups"
 msgstr ""
 
-#: lib/customiser/sections.php:104
+#: lib/customiser/sections.php:97
 msgid "Activity"
 msgstr ""
 
-#: lib/customiser/sections.php:107
+#: lib/customiser/sections.php:100
 msgid "Change the Activity Directory"
 msgstr ""
 
-#: lib/customiser/sections.php:112 lib/customiser/settings.php:1312
+#: lib/customiser/sections.php:105 lib/customiser/settings.php:1298
 msgid "Featured Images"
 msgstr ""
 
-#: lib/customiser/sections.php:115
+#: lib/customiser/sections.php:108
 msgid "Change the Featured Image Dimensions"
 msgstr ""
 
-#: lib/customiser/sections.php:119
+#: lib/customiser/sections.php:112
 msgid "Hero Header"
 msgstr ""
 
-#: lib/customiser/sections.php:122
+#: lib/customiser/sections.php:115
 msgid "Change the Hero Header"
 msgstr ""
 
-#: lib/customiser/sections.php:126 lib/setup/activation.php:203
-#: lib/setup/activation.php:237
-msgid "Archives"
+#: lib/customiser/sections.php:119
+msgid "Single Posts & Archives"
 msgstr ""
 
-#: lib/customiser/sections.php:129
+#: lib/customiser/sections.php:122
 msgid "Change how your Post Archives look"
 msgstr ""
 
-#: lib/customiser/sections.php:134
+#: lib/customiser/sections.php:127
 msgid "Global"
 msgstr ""
 
-#: lib/customiser/sections.php:137
+#: lib/customiser/sections.php:130
 msgid "Change the Global Font Settings"
 msgstr ""
 
-#: lib/customiser/sections.php:142
+#: lib/customiser/sections.php:135
 msgid "Navigation"
 msgstr ""
 
-#: lib/customiser/sections.php:145
+#: lib/customiser/sections.php:138
 msgid "Change the Navigation Font Settings"
 msgstr ""
 
-#: lib/customiser/settings.php:16
+#: lib/customiser/settings.php:15
 msgid "Apply Stylekit"
 msgstr ""
 
-#: lib/customiser/settings.php:17
+#: lib/customiser/settings.php:16
 msgid "Choose a stylekit below..."
 msgstr ""
 
-#: lib/customiser/settings.php:27 lib/customiser/settings.php:1454
+#: lib/customiser/settings.php:26 lib/customiser/settings.php:1458
 msgid "Instructions"
 msgstr ""
 
-#: lib/customiser/settings.php:48
+#: lib/customiser/settings.php:47
 msgid "Layout Width"
 msgstr ""
 
-#: lib/customiser/settings.php:49
+#: lib/customiser/settings.php:48
 msgid "Choose a layout width"
 msgstr ""
 
-#: lib/customiser/settings.php:54
+#: lib/customiser/settings.php:53
 msgid "Boxed"
 msgstr ""
 
-#: lib/customiser/settings.php:55
+#: lib/customiser/settings.php:54
 msgid "Fluid"
 msgstr ""
 
-#: lib/customiser/settings.php:65
+#: lib/customiser/settings.php:64
 msgid "Body Background Image"
 msgstr ""
 
-#: lib/customiser/settings.php:68 lib/customiser/settings.php:719
-#: lib/customiser/settings.php:1490
+#: lib/customiser/settings.php:67 lib/customiser/settings.php:705
+#: lib/customiser/settings.php:1494
 msgid ""
 "A beautiful background image or pattern does wonders for the look of your "
 "site. You can select one of our carefully picked photos or textures, or "
 "upload your own."
 msgstr ""
 
-#: lib/customiser/settings.php:71
+#: lib/customiser/settings.php:70
 msgid "Upload your own image"
 msgstr ""
 
-#: lib/customiser/settings.php:72
+#: lib/customiser/settings.php:71
 msgid "Choose a background image"
 msgstr ""
 
-#: lib/customiser/settings.php:73
+#: lib/customiser/settings.php:72
 msgid "Choose color or pattern"
 msgstr ""
 
-#: lib/customiser/settings.php:80 lib/customiser/settings.php:814
-#: lib/customiser/settings.php:1520
+#: lib/customiser/settings.php:79 lib/customiser/settings.php:800
+#: lib/customiser/settings.php:1524
 msgid "Upload a background image"
 msgstr ""
 
-#: lib/customiser/settings.php:98 lib/customiser/settings.php:739
-#: lib/customiser/settings.php:1502
+#: lib/customiser/settings.php:97 lib/customiser/settings.php:725
+#: lib/customiser/settings.php:1506
 msgid "Choose a background picture"
 msgstr ""
 
-#: lib/customiser/settings.php:100 lib/customiser/settings.php:740
-#: lib/customiser/settings.php:1503
+#: lib/customiser/settings.php:99 lib/customiser/settings.php:726
+#: lib/customiser/settings.php:1507
 msgid ""
 "All pictures are handpicked from Unsplash.com and come with a unlimited "
 "license. This means they can be used for personal or commercial use."
 msgstr ""
 
-#: lib/customiser/settings.php:117 lib/customiser/settings.php:838
-#: lib/customiser/settings.php:1534
+#: lib/customiser/settings.php:116 lib/customiser/settings.php:824
+#: lib/customiser/settings.php:1538
 msgid "Image Effect"
 msgstr ""
 
-#: lib/customiser/settings.php:118
+#: lib/customiser/settings.php:117
 msgid ""
 "Apply an image effect to your header. Note: Some of these effects will not "
 "work on Internet Explorer. In these cases the image will be shown without "
 "the effect."
 msgstr ""
 
-#: lib/customiser/settings.php:136
+#: lib/customiser/settings.php:135
 msgid "Image Blur"
 msgstr ""
 
-#: lib/customiser/settings.php:137
+#: lib/customiser/settings.php:136
 msgid "Blur your image."
 msgstr ""
 
-#: lib/customiser/settings.php:159 lib/customiser/settings.php:886
-#: lib/customiser/settings.php:1545
+#: lib/customiser/settings.php:158 lib/customiser/settings.php:872
+#: lib/customiser/settings.php:1549
 msgid "Image Opacity"
 msgstr ""
 
-#: lib/customiser/settings.php:160 lib/customiser/settings.php:887
-#: lib/customiser/settings.php:1546
+#: lib/customiser/settings.php:159 lib/customiser/settings.php:873
+#: lib/customiser/settings.php:1550
 msgid "Change the opacity of your image."
 msgstr ""
 
-#: lib/customiser/settings.php:185
+#: lib/customiser/settings.php:184
 msgid "Background Color"
 msgstr ""
 
-#: lib/customiser/settings.php:186
+#: lib/customiser/settings.php:185
 msgid "Set a background color."
 msgstr ""
 
-#: lib/customiser/settings.php:209
+#: lib/customiser/settings.php:208
 msgid "Background Pattern"
 msgstr ""
 
-#: lib/customiser/settings.php:210
+#: lib/customiser/settings.php:209
 msgid ""
 "Choose from a collection of patterns taken from Subtlepaterns.com. You can "
 "achieve some great looking results by setting a background color or picture "
 "and overlaying it with a pattern!"
 msgstr ""
 
-#: lib/customiser/settings.php:221
+#: lib/customiser/settings.php:220
 msgid "Pattern Opacity"
 msgstr ""
 
-#: lib/customiser/settings.php:222
+#: lib/customiser/settings.php:221
 msgid "Change the opacity of your pattern.."
 msgstr ""
 
-#: lib/customiser/settings.php:244
-msgid "Hide Admin Bar"
-msgstr ""
-
-#: lib/customiser/settings.php:245
-msgid ""
-"Do you want to hide the WordPress Admin bar for all users except site "
-"administrators?"
-msgstr ""
-
-#: lib/customiser/settings.php:250
-msgid "Hide Adminbar for all members"
-msgstr ""
-
-#: lib/customiser/settings.php:251
-msgid "Show Adminbar to all members"
-msgstr ""
-
-#: lib/customiser/settings.php:261
+#: lib/customiser/settings.php:247
 msgid "Content Width"
 msgstr ""
 
-#: lib/customiser/settings.php:262
+#: lib/customiser/settings.php:248
 msgid "The size of your content area in relation to your sidebar."
 msgstr ""
 
-#: lib/customiser/settings.php:282
+#: lib/customiser/settings.php:268
 msgid "Sidebar Position"
 msgstr ""
 
-#: lib/customiser/settings.php:283 lib/customiser/settings.php:1158
-#: lib/customiser/settings.php:1242 lib/customiser/settings.php:1295
+#: lib/customiser/settings.php:269 lib/customiser/settings.php:1144
+#: lib/customiser/settings.php:1228 lib/customiser/settings.php:1281
 msgid "Where do you want to show the sidebar?"
 msgstr ""
 
-#: lib/customiser/settings.php:301
+#: lib/customiser/settings.php:287
 msgid "Logo Type"
 msgstr ""
 
-#: lib/customiser/settings.php:302
+#: lib/customiser/settings.php:288
 msgid "What type of logo do you like to display?"
 msgstr ""
 
-#: lib/customiser/settings.php:306 lib/customiser/settings.php:406
+#: lib/customiser/settings.php:292 lib/customiser/settings.php:392
 msgid "Upload a Logo"
 msgstr ""
 
-#: lib/customiser/settings.php:307 lib/customiser/settings.php:407
+#: lib/customiser/settings.php:293 lib/customiser/settings.php:393
 msgid "Minimal Logo Inversed"
 msgstr ""
 
-#: lib/customiser/settings.php:308 lib/customiser/settings.php:408
+#: lib/customiser/settings.php:294 lib/customiser/settings.php:394
 msgid "Minimal Logo Regular"
 msgstr ""
 
-#: lib/customiser/settings.php:309 lib/customiser/settings.php:409
+#: lib/customiser/settings.php:295 lib/customiser/settings.php:395
 msgid "Full Logo Inversed"
 msgstr ""
 
-#: lib/customiser/settings.php:310 lib/customiser/settings.php:410
+#: lib/customiser/settings.php:296 lib/customiser/settings.php:396
 msgid "Full Logo Regular"
 msgstr ""
 
-#: lib/customiser/settings.php:311 lib/customiser/settings.php:411
+#: lib/customiser/settings.php:297 lib/customiser/settings.php:397
 msgid "Text"
 msgstr ""
 
-#: lib/customiser/settings.php:312
+#: lib/customiser/settings.php:298
 msgid "Text and Description"
 msgstr ""
 
-#: lib/customiser/settings.php:313
+#: lib/customiser/settings.php:299
 msgid "Hide Logo"
 msgstr ""
 
-#: lib/customiser/settings.php:314 lib/customiser/settings.php:412
-#: lib/customiser/settings.php:431 lib/customiser/settings.php:447
-#: lib/customiser/settings.php:469 lib/customiser/settings.php:567
-#: lib/customiser/settings.php:627 lib/customiser/settings.php:922
-#: lib/customiser/settings.php:938
+#: lib/customiser/settings.php:300 lib/customiser/settings.php:398
+#: lib/customiser/settings.php:417 lib/customiser/settings.php:433
+#: lib/customiser/settings.php:455 lib/customiser/settings.php:553
+#: lib/customiser/settings.php:613 lib/customiser/settings.php:908
+#: lib/customiser/settings.php:924
 msgid "Default"
 msgstr ""
 
-#: lib/customiser/settings.php:321
+#: lib/customiser/settings.php:307
 msgid "Your Custom Logo"
 msgstr ""
 
-#: lib/customiser/settings.php:322
+#: lib/customiser/settings.php:308
 msgid "Upload a custom logo for your site."
 msgstr ""
 
-#: lib/customiser/settings.php:337
+#: lib/customiser/settings.php:323
 msgid "Logo Height"
 msgstr ""
 
-#: lib/customiser/settings.php:338
+#: lib/customiser/settings.php:324
 msgid "Set the height of your logo"
 msgstr ""
 
-#: lib/customiser/settings.php:373
+#: lib/customiser/settings.php:359
 msgid "Logo Position"
 msgstr ""
 
-#: lib/customiser/settings.php:374
+#: lib/customiser/settings.php:360
 msgid "Set the position of your logo"
 msgstr ""
 
-#: lib/customiser/settings.php:401
+#: lib/customiser/settings.php:387
 msgid "Mobile Logo"
 msgstr ""
 
-#: lib/customiser/settings.php:402
+#: lib/customiser/settings.php:388
 msgid "What type of logo do you like to display on mobile devices?"
 msgstr ""
 
-#: lib/customiser/settings.php:422
+#: lib/customiser/settings.php:408
 msgid "Header Design"
 msgstr ""
 
-#: lib/customiser/settings.php:423
+#: lib/customiser/settings.php:409
 msgid "Choose a Header Design"
 msgstr ""
 
-#: lib/customiser/settings.php:424
+#: lib/customiser/settings.php:410
 msgid ""
 "You can make your header as fancy as you wish. Choose between a minimal "
 "design or choose the Full Header to add some extra branding and flair to "
 "your site!"
 msgstr ""
 
-#: lib/customiser/settings.php:429
+#: lib/customiser/settings.php:415
 msgid "Minimal Header"
 msgstr ""
 
-#: lib/customiser/settings.php:430
+#: lib/customiser/settings.php:416
 msgid "Full Header"
 msgstr ""
 
-#: lib/customiser/settings.php:439 lib/customiser/settings.php:490
+#: lib/customiser/settings.php:425 lib/customiser/settings.php:476
 msgid "Navigation Menu Position"
 msgstr ""
 
-#: lib/customiser/settings.php:440
+#: lib/customiser/settings.php:426
 msgid "Where do you want to show your primary navigation menu?"
 msgstr ""
 
-#: lib/customiser/settings.php:444 lib/customiser/settings.php:467
+#: lib/customiser/settings.php:430 lib/customiser/settings.php:453
 msgid "Above your header"
 msgstr ""
 
-#: lib/customiser/settings.php:445
+#: lib/customiser/settings.php:431
 msgid "Inside your Header"
 msgstr ""
 
-#: lib/customiser/settings.php:446 lib/customiser/settings.php:468
+#: lib/customiser/settings.php:432 lib/customiser/settings.php:454
 msgid "Below your header"
 msgstr ""
 
-#: lib/customiser/settings.php:462
+#: lib/customiser/settings.php:448
 msgid "Secondary Navigation Position"
 msgstr ""
 
-#: lib/customiser/settings.php:463
+#: lib/customiser/settings.php:449
 msgid "Where do you want to show your secondary navigation menu?"
 msgstr ""
 
-#: lib/customiser/settings.php:491
+#: lib/customiser/settings.php:477
 msgid "Where do you want to show your menu?"
 msgstr ""
 
-#: lib/customiser/settings.php:495 lib/customiser/settings.php:512
+#: lib/customiser/settings.php:481 lib/customiser/settings.php:498
 msgid "Left"
 msgstr ""
 
-#: lib/customiser/settings.php:496 lib/customiser/settings.php:513
+#: lib/customiser/settings.php:482 lib/customiser/settings.php:499
 msgid "Right"
 msgstr ""
 
-#: lib/customiser/settings.php:497 lib/customiser/settings.php:514
+#: lib/customiser/settings.php:483 lib/customiser/settings.php:500
 msgid "Center"
 msgstr ""
 
-#: lib/customiser/settings.php:507
+#: lib/customiser/settings.php:493
 msgid "BuddyPress Navigation Menu Position"
 msgstr ""
 
-#: lib/customiser/settings.php:508
+#: lib/customiser/settings.php:494
 msgid "Where do you want to show your BuddyPress Menu?"
 msgstr ""
 
-#: lib/customiser/settings.php:515
+#: lib/customiser/settings.php:501
 msgid "Hidden"
 msgstr ""
 
-#: lib/customiser/settings.php:525
+#: lib/customiser/settings.php:511
 msgid "Color Style"
 msgstr ""
 
-#: lib/customiser/settings.php:530
+#: lib/customiser/settings.php:516
 msgid "Inversed Color"
 msgstr ""
 
-#: lib/customiser/settings.php:531
+#: lib/customiser/settings.php:517
 msgid "Regular Color"
 msgstr ""
 
-#: lib/customiser/settings.php:539
+#: lib/customiser/settings.php:525
 msgid "Sticky Header"
 msgstr ""
 
-#: lib/customiser/settings.php:540
+#: lib/customiser/settings.php:526
 msgid "Stick your header to the top of the page?"
 msgstr ""
 
-#: lib/customiser/settings.php:544 lib/customiser/settings.php:565
-#: lib/customiser/settings.php:1446
+#: lib/customiser/settings.php:530 lib/customiser/settings.php:551
+#: lib/customiser/settings.php:1450
 msgid "Yes"
 msgstr ""
 
-#: lib/customiser/settings.php:545 lib/customiser/settings.php:566
-#: lib/customiser/settings.php:1447
+#: lib/customiser/settings.php:531 lib/customiser/settings.php:552
+#: lib/customiser/settings.php:1451
 msgid "No"
 msgstr ""
 
-#: lib/customiser/settings.php:560
+#: lib/customiser/settings.php:546
 msgid "Hide Header on Scroll"
 msgstr ""
 
-#: lib/customiser/settings.php:561
+#: lib/customiser/settings.php:547
 msgid "Hide the header when you scroll down?"
 msgstr ""
 
-#: lib/customiser/settings.php:581
+#: lib/customiser/settings.php:567
 msgid "The height of your header"
 msgstr ""
 
-#: lib/customiser/settings.php:582
+#: lib/customiser/settings.php:568
 msgid "Change the height of your header."
 msgstr ""
 
-#: lib/customiser/settings.php:620
+#: lib/customiser/settings.php:606
 msgid "Show Site Description?"
 msgstr ""
 
-#: lib/customiser/settings.php:621
+#: lib/customiser/settings.php:607
 msgid "Do you want to show the site description and title?"
 msgstr ""
 
-#: lib/customiser/settings.php:625
+#: lib/customiser/settings.php:611
 msgid "Show"
 msgstr ""
 
-#: lib/customiser/settings.php:626
+#: lib/customiser/settings.php:612
 msgid "Hide"
 msgstr ""
 
-#: lib/customiser/settings.php:641
+#: lib/customiser/settings.php:627
 msgid "Header Text Color"
 msgstr ""
 
-#: lib/customiser/settings.php:676
+#: lib/customiser/settings.php:662
 msgid "Title Font Size"
 msgstr ""
 
-#: lib/customiser/settings.php:677
+#: lib/customiser/settings.php:663
 msgid "The font size of the description"
 msgstr ""
 
-#: lib/customiser/settings.php:718
+#: lib/customiser/settings.php:704
 msgid "Header Background Image"
 msgstr ""
 
-#: lib/customiser/settings.php:724 lib/customiser/settings.php:1495
+#: lib/customiser/settings.php:710 lib/customiser/settings.php:1499
 msgid "Upload a background"
 msgstr ""
 
-#: lib/customiser/settings.php:725 lib/customiser/settings.php:1496
+#: lib/customiser/settings.php:711 lib/customiser/settings.php:1500
 msgid "Choose a Background Photo"
 msgstr ""
 
-#: lib/customiser/settings.php:726
+#: lib/customiser/settings.php:712
 msgid "Choose a Background Pattern/Texture"
 msgstr ""
 
-#: lib/customiser/settings.php:762
+#: lib/customiser/settings.php:748
 msgid "Background Position"
 msgstr ""
 
-#: lib/customiser/settings.php:797
+#: lib/customiser/settings.php:783
 msgid "Choose a background texture"
 msgstr ""
 
-#: lib/customiser/settings.php:798
+#: lib/customiser/settings.php:784
 msgid "Choose a background texture or pattern to use for your header"
 msgstr ""
 
-#: lib/customiser/settings.php:839 lib/customiser/settings.php:1535
+#: lib/customiser/settings.php:825 lib/customiser/settings.php:1539
 msgid ""
 "Apply an image effect to your background. Note: Some of these effects will "
 "not work on Internet Explorer. In these cases the image will be shown "
 "without the effect."
 msgstr ""
 
-#: lib/customiser/settings.php:913
+#: lib/customiser/settings.php:899
 msgid "Footer Widgets"
 msgstr ""
 
-#: lib/customiser/settings.php:914
+#: lib/customiser/settings.php:900
 msgid "How many widgets do you want for your footer?"
 msgstr ""
 
-#: lib/customiser/settings.php:918
+#: lib/customiser/settings.php:904
 msgid "One Widget"
 msgstr ""
 
-#: lib/customiser/settings.php:919
+#: lib/customiser/settings.php:905
 msgid "Two Widgets"
 msgstr ""
 
-#: lib/customiser/settings.php:920
+#: lib/customiser/settings.php:906
 msgid "Three Widgets"
 msgstr ""
 
-#: lib/customiser/settings.php:921
+#: lib/customiser/settings.php:907
 msgid "Four Widgets"
 msgstr ""
 
-#: lib/customiser/settings.php:930
+#: lib/customiser/settings.php:916
 msgid "Footer Style"
 msgstr ""
 
-#: lib/customiser/settings.php:931
+#: lib/customiser/settings.php:917
 msgid "Choose the colors for your footer"
 msgstr ""
 
-#: lib/customiser/settings.php:936
+#: lib/customiser/settings.php:922
 msgid "Inversed"
 msgstr ""
 
-#: lib/customiser/settings.php:937
+#: lib/customiser/settings.php:923
 msgid "Regular"
 msgstr ""
 
-#: lib/customiser/settings.php:946
+#: lib/customiser/settings.php:932
 msgid "Footer Text"
 msgstr ""
 
-#: lib/customiser/settings.php:947 lib/customiser/settings.php:1148
+#: lib/customiser/settings.php:933 lib/customiser/settings.php:1134
 msgid "Change the text displayed in your footer. You can use hyperlinks as well."
 msgstr ""
 
-#: lib/customiser/settings.php:958
+#: lib/customiser/settings.php:944
 msgid "Global Font Style"
 msgstr ""
 
-#: lib/customiser/settings.php:991
+#: lib/customiser/settings.php:977
 msgid "Control Label"
 msgstr ""
 
-#: lib/customiser/settings.php:1009
+#: lib/customiser/settings.php:995
 msgid "Font Family"
 msgstr ""
 
-#: lib/customiser/settings.php:1032
+#: lib/customiser/settings.php:1018
 msgid "Cover Photos"
 msgstr ""
 
-#: lib/customiser/settings.php:1033
+#: lib/customiser/settings.php:1019
 msgid "Do you want to set custom image sizes for your BuddyPress Cover Photos?"
 msgstr ""
 
-#: lib/customiser/settings.php:1038 lib/customiser/settings.php:1318
+#: lib/customiser/settings.php:1024 lib/customiser/settings.php:1304
 msgid "No, use default sizes"
 msgstr ""
 
-#: lib/customiser/settings.php:1039 lib/customiser/settings.php:1319
+#: lib/customiser/settings.php:1025 lib/customiser/settings.php:1305
 msgid "Yes, set custom image sizes"
 msgstr ""
 
-#: lib/customiser/settings.php:1047
+#: lib/customiser/settings.php:1033
 msgid "Cover Image Width"
 msgstr ""
 
-#: lib/customiser/settings.php:1067
+#: lib/customiser/settings.php:1053
 msgid "Cover Image Height"
 msgstr ""
 
-#: lib/customiser/settings.php:1088 lib/customiser/settings.php:1413
+#: lib/customiser/settings.php:1074 lib/customiser/settings.php:1401
 msgid "Image Effects"
 msgstr ""
 
-#: lib/customiser/settings.php:1089 lib/customiser/settings.php:1414
+#: lib/customiser/settings.php:1075 lib/customiser/settings.php:1402
 msgid ""
 "Apply an image effect to your featured images. Note: Some of these effects "
 "will not work on Internet Explorer. In these cases the image will be shown "
 "without the effect."
 msgstr ""
 
-#: lib/customiser/settings.php:1100
+#: lib/customiser/settings.php:1086
 msgid "Default Member Photo"
 msgstr ""
 
-#: lib/customiser/settings.php:1101
+#: lib/customiser/settings.php:1087
 msgid ""
 "The default picture that is shown for new members who have not set a "
 "profile picture yet."
 msgstr ""
 
-#: lib/customiser/settings.php:1109
+#: lib/customiser/settings.php:1095
 msgid "Default Group Avatar"
 msgstr ""
 
-#: lib/customiser/settings.php:1110
+#: lib/customiser/settings.php:1096
 msgid ""
 "The default picture that is shown for new group who have not set a group "
 "photo yet."
 msgstr ""
 
-#: lib/customiser/settings.php:1118
+#: lib/customiser/settings.php:1104
 msgid "Show User Name in Menu"
 msgstr ""
 
-#: lib/customiser/settings.php:1119
+#: lib/customiser/settings.php:1105
 msgid "Do you want show the full name of the user in the Profile Navigation Menu?"
 msgstr ""
 
-#: lib/customiser/settings.php:1124
+#: lib/customiser/settings.php:1110
 msgid "No, only show the avatar"
 msgstr ""
 
-#: lib/customiser/settings.php:1125
+#: lib/customiser/settings.php:1111
 msgid "Yes, show name and avatar"
 msgstr ""
 
-#: lib/customiser/settings.php:1135 lib/customiser/settings.php:1209
-#: lib/customiser/settings.php:1281
+#: lib/customiser/settings.php:1121 lib/customiser/settings.php:1195
+#: lib/customiser/settings.php:1267
 msgid "Page Title"
 msgstr ""
 
-#: lib/customiser/settings.php:1136
+#: lib/customiser/settings.php:1122
 msgid "Change the title of the Members page"
 msgstr ""
 
-#: lib/customiser/settings.php:1147 lib/customiser/settings.php:1174
+#: lib/customiser/settings.php:1133 lib/customiser/settings.php:1160
 msgid "Intro Text"
 msgstr ""
 
-#: lib/customiser/settings.php:1151
+#: lib/customiser/settings.php:1137
 msgid "This is your Member Introduction text."
 msgstr ""
 
-#: lib/customiser/settings.php:1157 lib/customiser/settings.php:1241
+#: lib/customiser/settings.php:1143 lib/customiser/settings.php:1227
 msgid "Group Sidebar Position"
 msgstr ""
 
-#: lib/customiser/settings.php:1175
+#: lib/customiser/settings.php:1161
 msgid ""
 "Change the text displayed on your Groups Directory page. You can use "
 "hyperlinks as well."
 msgstr ""
 
-#: lib/customiser/settings.php:1178
+#: lib/customiser/settings.php:1164
 msgid "This is your Group Introduction text."
 msgstr ""
 
-#: lib/customiser/settings.php:1184
+#: lib/customiser/settings.php:1170
 msgid "Directory Display"
 msgstr ""
 
-#: lib/customiser/settings.php:1185
+#: lib/customiser/settings.php:1171
 msgid "Choose how you want your directory to look"
 msgstr ""
 
-#: lib/customiser/settings.php:1190
+#: lib/customiser/settings.php:1176
 msgid "10 Members"
 msgstr ""
 
-#: lib/customiser/settings.php:1191
+#: lib/customiser/settings.php:1177
 msgid "20 Members"
 msgstr ""
 
-#: lib/customiser/settings.php:1192
+#: lib/customiser/settings.php:1178
 msgid "30 Members"
 msgstr ""
 
-#: lib/customiser/settings.php:1193
+#: lib/customiser/settings.php:1179
 msgid "40 Members"
 msgstr ""
 
-#: lib/customiser/settings.php:1194
+#: lib/customiser/settings.php:1180
 msgid "50 Members"
 msgstr ""
 
-#: lib/customiser/settings.php:1195
+#: lib/customiser/settings.php:1181
 msgid "60 Members"
 msgstr ""
 
-#: lib/customiser/settings.php:1196
+#: lib/customiser/settings.php:1182
 msgid "70 Members"
 msgstr ""
 
-#: lib/customiser/settings.php:1197
+#: lib/customiser/settings.php:1183
 msgid "80 Members"
 msgstr ""
 
-#: lib/customiser/settings.php:1198
+#: lib/customiser/settings.php:1184
 msgid "90 Members"
 msgstr ""
 
-#: lib/customiser/settings.php:1199
+#: lib/customiser/settings.php:1185
 msgid "100 Members"
 msgstr ""
 
-#: lib/customiser/settings.php:1210
+#: lib/customiser/settings.php:1196
 msgid "Change the title of the Groups page"
 msgstr ""
 
-#: lib/customiser/settings.php:1219
+#: lib/customiser/settings.php:1205
 msgid "Groups Per Page"
 msgstr ""
 
-#: lib/customiser/settings.php:1220
+#: lib/customiser/settings.php:1206
 msgid "How many Groups do you want to display per page?"
 msgstr ""
 
-#: lib/customiser/settings.php:1225
+#: lib/customiser/settings.php:1211
 msgid "10 Groups"
 msgstr ""
 
-#: lib/customiser/settings.php:1226
+#: lib/customiser/settings.php:1212
 msgid "20 Groups"
 msgstr ""
 
-#: lib/customiser/settings.php:1227
+#: lib/customiser/settings.php:1213
 msgid "30 Groups"
 msgstr ""
 
-#: lib/customiser/settings.php:1228
+#: lib/customiser/settings.php:1214
 msgid "40 Groups"
 msgstr ""
 
-#: lib/customiser/settings.php:1229
+#: lib/customiser/settings.php:1215
 msgid "50 Groups"
 msgstr ""
 
-#: lib/customiser/settings.php:1230
+#: lib/customiser/settings.php:1216
 msgid "60 Groups"
 msgstr ""
 
-#: lib/customiser/settings.php:1231
+#: lib/customiser/settings.php:1217
 msgid "70 Groups"
 msgstr ""
 
-#: lib/customiser/settings.php:1232
+#: lib/customiser/settings.php:1218
 msgid "80 Groups"
 msgstr ""
 
-#: lib/customiser/settings.php:1233
+#: lib/customiser/settings.php:1219
 msgid "90 Groups"
 msgstr ""
 
-#: lib/customiser/settings.php:1234
+#: lib/customiser/settings.php:1220
 msgid "100 Groups"
 msgstr ""
 
-#: lib/customiser/settings.php:1259
+#: lib/customiser/settings.php:1245
 msgid "Entries Per Page"
 msgstr ""
 
-#: lib/customiser/settings.php:1260
+#: lib/customiser/settings.php:1246
 msgid "How many Activity entries do you want to display by default?"
 msgstr ""
 
-#: lib/customiser/settings.php:1265
+#: lib/customiser/settings.php:1251
 msgid "10 Entries"
 msgstr ""
 
-#: lib/customiser/settings.php:1266
+#: lib/customiser/settings.php:1252
 msgid "20 Entries"
 msgstr ""
 
-#: lib/customiser/settings.php:1267
+#: lib/customiser/settings.php:1253
 msgid "30 Entries"
 msgstr ""
 
-#: lib/customiser/settings.php:1268
+#: lib/customiser/settings.php:1254
 msgid "40 Entries"
 msgstr ""
 
-#: lib/customiser/settings.php:1269
+#: lib/customiser/settings.php:1255
 msgid "50 Entries"
 msgstr ""
 
-#: lib/customiser/settings.php:1270
+#: lib/customiser/settings.php:1256
 msgid "60 Entries"
 msgstr ""
 
-#: lib/customiser/settings.php:1271
+#: lib/customiser/settings.php:1257
 msgid "70 Entries"
 msgstr ""
 
-#: lib/customiser/settings.php:1272
+#: lib/customiser/settings.php:1258
 msgid "80 Entries"
 msgstr ""
 
-#: lib/customiser/settings.php:1273
+#: lib/customiser/settings.php:1259
 msgid "90 Entries"
 msgstr ""
 
-#: lib/customiser/settings.php:1274
+#: lib/customiser/settings.php:1260
 msgid "100 Entries"
 msgstr ""
 
-#: lib/customiser/settings.php:1282
+#: lib/customiser/settings.php:1268
 msgid "Change the title of the Activity page"
 msgstr ""
 
-#: lib/customiser/settings.php:1294
+#: lib/customiser/settings.php:1280
 msgid "Activity Sidebar Position"
 msgstr ""
 
-#: lib/customiser/settings.php:1313
+#: lib/customiser/settings.php:1299
 msgid ""
 "Do you want to set custom image sizes for your posts, pages and full width "
 "template pages?"
 msgstr ""
 
-#: lib/customiser/settings.php:1327
+#: lib/customiser/settings.php:1313
 msgid "Posts/Pages Image Width"
 msgstr ""
 
-#: lib/customiser/settings.php:1348
+#: lib/customiser/settings.php:1336
 msgid "Posts/Pages Image Height"
 msgstr ""
 
-#: lib/customiser/settings.php:1370
+#: lib/customiser/settings.php:1358
 msgid "Full Width Page Image Width"
 msgstr ""
 
-#: lib/customiser/settings.php:1392
+#: lib/customiser/settings.php:1380
 msgid "Full Width Pages Image Height"
 msgstr ""
 
-#: lib/customiser/settings.php:1425
+#: lib/customiser/settings.php:1413
 msgid "Excerpt Length"
 msgstr ""
 
-#: lib/customiser/settings.php:1426
+#: lib/customiser/settings.php:1414
 msgid "How many words should the excerpts on your Post Archive contain?"
 msgstr ""
 
-#: lib/customiser/settings.php:1440
+#: lib/customiser/settings.php:1425
+msgid "Author Avatar"
+msgstr ""
+
+#: lib/customiser/settings.php:1426
+msgid "Do you want to show the author avatar inside the featured images?"
+msgstr ""
+
+#: lib/customiser/settings.php:1431
+msgid "Show the Author Avatar"
+msgstr ""
+
+#: lib/customiser/settings.php:1432
+msgid "Hide the author avatar"
+msgstr ""
+
+#: lib/customiser/settings.php:1444
 msgid "Show Hero Header"
 msgstr ""
 
-#: lib/customiser/settings.php:1441
+#: lib/customiser/settings.php:1445
 msgid "Do you want to show the Hero Header?"
 msgstr ""
 
-#: lib/customiser/settings.php:1474
+#: lib/customiser/settings.php:1478
 msgid "Hero Style"
 msgstr ""
 
-#: lib/customiser/settings.php:1479
+#: lib/customiser/settings.php:1483
 msgid "Primary Branding Colors"
 msgstr ""
 
-#: lib/customiser/settings.php:1480
+#: lib/customiser/settings.php:1484
 msgid "Secondary Branding Colors"
 msgstr ""
 
-#: lib/customiser/settings.php:1481
+#: lib/customiser/settings.php:1485
 msgid "Complimentary Branding Colors"
 msgstr ""
 
-#: lib/customiser/settings.php:1482
+#: lib/customiser/settings.php:1486
 msgid "Light Colors"
 msgstr ""
 
-#: lib/customiser/settings.php:1489
+#: lib/customiser/settings.php:1493
 msgid "Hero Background Image"
 msgstr ""
 
-#: lib/options/bp-options.php:180
+#: lib/options/bp-options.php:185
 msgid ""
 "This is your Member Introduction text. Use this space to tell your members "
 "something about the members displayed below! You can edit this text via the "
 "WordPress customizer."
 msgstr ""
 
-#: lib/options/bp-options.php:215
+#: lib/options/bp-options.php:221
 msgid ""
 "    This is your Group Introduction text. Use this space to tell your "
 "members something about the groups displayed below! You can edit this text "
 "via the WordPress customizer."
 msgstr ""
 
-#: lib/setup/activation.php:115
+#: lib/setup/activation.php:117
 msgid ""
 "<h2 class=\"box-light padding-full box-full margin-bottom-half "
 "text-align-center\">What is happening  in our community?</h2>"
 msgstr ""
 
-#: lib/setup/activation.php:134 lib/setup/activation.php:352
+#: lib/setup/activation.php:136 lib/setup/activation.php:354
 msgid "Groups"
 msgstr ""
 
-#: lib/setup/activation.php:149
+#: lib/setup/activation.php:151
 msgid "Members"
 msgstr ""
 
-#: lib/setup/activation.php:163 lib/setup/activation.php:214
-#: lib/setup/activation.php:245
+#: lib/setup/activation.php:165 lib/setup/activation.php:216
+#: lib/setup/activation.php:247
 msgid "Recent Blog Posts"
 msgstr ""
 
-#: lib/setup/activation.php:173
+#: lib/setup/activation.php:175
 msgid ""
 "<h2 class=\"box-light padding-full box-full margin-bottom-half "
 "text-align-center\">Check out our most recent content</h2>"
 msgstr ""
 
-#: lib/setup/activation.php:192 lib/setup/activation.php:256
+#: lib/setup/activation.php:194 lib/setup/activation.php:258
 msgid "Pages"
 msgstr ""
 
-#: lib/setup/activation.php:229 searchform.php:16
+#: lib/setup/activation.php:205 lib/setup/activation.php:239
+msgid "Archives"
+msgstr ""
+
+#: lib/setup/activation.php:231 searchform.php:18
 msgid "Search"
 msgstr ""
 
-#: lib/setup/activation.php:267
+#: lib/setup/activation.php:269
 msgid "Contact Us"
 msgstr ""
 
-#: lib/setup/activation.php:268
+#: lib/setup/activation.php:270
 msgid ""
 "You can put your contact information in this widget or some information "
 "about your community. Footer content shows on every page of your site, so "
 "use this space wisely."
 msgstr ""
 
-#: lib/setup/activation.php:279
+#: lib/setup/activation.php:281
 msgid "About"
 msgstr ""
 
-#: lib/setup/activation.php:280
+#: lib/setup/activation.php:282
 msgid ""
 "What is the most important thing you want people to know about your site "
 "when their first visit? Tell them about your mission and add a link to your "
 "about page."
 msgstr ""
 
-#: lib/setup/activation.php:291
+#: lib/setup/activation.php:293
 msgid "Social Links"
 msgstr ""
 
-#: lib/setup/activation.php:292
+#: lib/setup/activation.php:294
 msgid ""
 "This could be a good place to ask people to connect with your brand on "
 "others social media platforms. Share some links and increase your exposure."
 msgstr ""
 
-#: lib/setup/activation.php:303
+#: lib/setup/activation.php:305
 msgid "Recent Posts"
 msgstr ""
 
-#: lib/setup/activation.php:304
+#: lib/setup/activation.php:306
 msgid ""
 "This would be a great place to show the most recent articles from your "
 "blog. The Recent Posts widget does exactly this."
 msgstr ""
 
-#: lib/setup/activation.php:318 lib/setup/activation.php:330
+#: lib/setup/activation.php:320 lib/setup/activation.php:332
 msgid "Who's Online"
 msgstr ""
 
-#: lib/setup/activation.php:339
+#: lib/setup/activation.php:341
 msgid "Recently Active Members"
 msgstr ""
 
-#: lib/setup/activation.php:367
+#: lib/setup/activation.php:369
 msgid "Topic View List"
 msgstr ""
 
-#: lib/setup/activation.php:375
+#: lib/setup/activation.php:377
 msgid "Recent Topics"
 msgstr ""
 
-#: lib/setup/activation.php:384
+#: lib/setup/activation.php:386
 msgid "Recent Replies"
 msgstr ""
 
-#: lib/setup/activation.php:536
+#: lib/setup/activation.php:543
 msgid ""
 "<p>You can use this space to welcome new and returning visitors! Maybe tell "
 "them something about your community and why they should become a member? "
@@ -1235,7 +1228,7 @@ msgid ""
 "fa-user-plus\"></i> Create Your Account</a></p>"
 msgstr ""
 
-#: lib/setup/activation.php:541
+#: lib/setup/activation.php:548
 msgid ""
 "<p>You can use this space to welcome new and returning visitors! Maybe tell "
 "them something about your community and why they should become a member? "
@@ -1248,47 +1241,47 @@ msgid ""
 "Us</a></p>"
 msgstr ""
 
-#: lib/setup/dashboard.php:76 lib/setup/dashboard.php:77
+#: lib/setup/dashboard.php:78 lib/setup/dashboard.php:79
 msgid "Getting Started"
 msgstr ""
 
-#: lib/setup/helpers.php:124
+#: lib/setup/helpers.php:132
 msgid "Latest Posts"
 msgstr ""
 
-#: lib/setup/helpers.php:133
+#: lib/setup/helpers.php:141
 msgid "Daily Archives: %s"
 msgstr ""
 
-#: lib/setup/helpers.php:135
+#: lib/setup/helpers.php:143
 msgid "Monthly Archives: %s"
 msgstr ""
 
-#: lib/setup/helpers.php:137
+#: lib/setup/helpers.php:145
 msgid "Yearly Archives: %s"
 msgstr ""
 
-#: lib/setup/helpers.php:140
+#: lib/setup/helpers.php:149
 msgid "Author Archives: %s"
 msgstr ""
 
-#: lib/setup/helpers.php:145
+#: lib/setup/helpers.php:154
 msgid "Search Results for %s"
 msgstr ""
 
-#: lib/setup/helpers.php:147
+#: lib/setup/helpers.php:156
 msgid "Not Found"
 msgstr ""
 
-#: lib/setup/init.php:124
+#: lib/setup/init.php:117
 msgid "Name"
 msgstr ""
 
-#: lib/setup/init.php:126
+#: lib/setup/init.php:119
 msgid "Email"
 msgstr ""
 
-#: lib/setup/init.php:128
+#: lib/setup/init.php:121
 msgid "Website"
 msgstr ""
 
@@ -1300,36 +1293,60 @@ msgstr ""
 msgid "Secondary Navigation"
 msgstr ""
 
-#: searchform.php:19
+#: searchform.php:21
 msgid "Search for:"
 msgstr ""
 
-#: stylekits/default/settings.php:22 stylekits/default/settings.php:46
+#: stylekits/default/settings.php:22
 msgid "Color Scheme"
 msgstr ""
 
-#: stylekits/default/settings.php:27 stylekits/default/settings.php:52
-msgid "Blue"
-msgstr ""
-
-#: stylekits/default/settings.php:28 stylekits/default/settings.php:51
+#: stylekits/default/settings.php:27
 msgid "Green"
 msgstr ""
 
-#: stylekits/default/settings.php:29 stylekits/default/settings.php:54
+#: stylekits/default/settings.php:28
+msgid "Blue"
+msgstr ""
+
+#: stylekits/default/settings.php:29
+msgid "Accessibility Friendly"
+msgstr ""
+
+#: stylekits/default/settings.php:30
 msgid "Black"
 msgstr ""
 
-#: stylekits/default/settings.php:30 stylekits/default/settings.php:55
+#: stylekits/default/settings.php:31
 msgid "Purple"
 msgstr ""
 
-#: stylekits/default/settings.php:31 stylekits/default/settings.php:56
+#: stylekits/default/settings.php:32
 msgid "Red"
 msgstr ""
 
+#: stylekits/default/settings.php:47
+msgid "Layout Preset"
+msgstr ""
+
+#: stylekits/default/settings.php:52
+msgid "Boxed Layout with Full Header"
+msgstr ""
+
 #: stylekits/default/settings.php:53
-msgid "Accessibility Friendly"
+msgid "Fluid Layout with Full Header"
+msgstr ""
+
+#: stylekits/default/settings.php:54
+msgid "Boxed Layout with Inversed (Dark) Header"
+msgstr ""
+
+#: stylekits/default/settings.php:55
+msgid "Fluid Layout with Minimal Header"
+msgstr ""
+
+#: stylekits/default/settings.php:56
+msgid "Boxed Layout with Inversed Header"
 msgstr ""
 
 #: templates/header/mobile-navigation-left.php:8
@@ -1344,7 +1361,7 @@ msgstr ""
 msgid "Comments are closed."
 msgstr ""
 
-#: templates/parts/author-box.php:11
+#: templates/parts/author-box.php:17
 msgid "View all posts by %s"
 msgstr ""
 
@@ -1368,15 +1385,15 @@ msgstr ""
 msgid "Newer Comments"
 msgstr ""
 
-#: templates/parts/entry-meta.php:22
+#: templates/parts/entry-meta.php:23
 msgid "No Comments"
 msgstr ""
 
-#: templates/parts/entry-meta.php:23
+#: templates/parts/entry-meta.php:24
 msgid "1 Comment"
 msgstr ""
 
-#: templates/parts/entry-meta.php:24
+#: templates/parts/entry-meta.php:25
 msgid "% Comments"
 msgstr ""
 
@@ -1393,7 +1410,7 @@ msgstr ""
 msgid "<i class=\"fa fa-pencil edit-link\"></i>"
 msgstr ""
 
-#: templates/parts/single-comment.php:19
+#: templates/parts/single-comment.php:21
 msgid "Your comment is awaiting moderation."
 msgstr ""
 
@@ -1406,7 +1423,7 @@ msgid "WeFoster"
 msgstr ""
 
 #. Theme URI of the plugin/theme
-msgid "https://wefoster.co"
+msgid "https://wefoster.co/products/wefoster-framework"
 msgstr ""
 
 #. Description of the plugin/theme
@@ -1443,33 +1460,33 @@ msgstr ""
 msgid "Sidebar Left Page"
 msgstr ""
 
-#: lib/setup/activation.php:411 lib/setup/activation.php:441
+#: lib/setup/activation.php:412 lib/setup/activation.php:442
 msgctxt "the link in the header navigation bar"
 msgid "Home"
 msgstr ""
 
-#: lib/setup/activation.php:416
+#: lib/setup/activation.php:417
 msgctxt "the link in the header navigation bar"
 msgid "Members"
 msgstr ""
 
-#: lib/setup/activation.php:421
+#: lib/setup/activation.php:422
 msgctxt "the link in the header navigation bar"
 msgid "Groups"
 msgstr ""
 
-#: lib/setup/activation.php:426
+#: lib/setup/activation.php:427
 msgctxt "the link in the header navigation bar"
 msgid "Sites"
 msgstr ""
 
-#: lib/setup/activation.php:431
+#: lib/setup/activation.php:432
 msgctxt "the link in the header navigation bar"
 msgid "Activity"
 msgstr ""
 
-#: lib/setup/init.php:144
-msgctxt "noun"
+#: lib/setup/init.php:138
+msgctxt "wefoster"
 msgid "Comment"
 msgstr ""
 
