@@ -44,7 +44,7 @@ function default_stylekit_settings( $fields ) {
 	Kirki::add_field( 'wefoster_plus', array(
 		'type'     => 'radio',
 		'settings' => 'stylekit_layout_preset',
-		'label'    => __( 'Layout Preset', 'kirki' ),
+		'label'    => __( 'Layout Preset', 'wefoster' ),
 		'section'  => 'wf_plus_stylekit_section',
 		'default'  => 'boxed-full',
 		'priority' => 20,
