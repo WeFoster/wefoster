@@ -191,7 +191,8 @@ module.exports = function(grunt) {
           '!bower.json',
           '!npm-debug.log',
           '!package.json',
-          '!prepos.cfg',
+          '!prepros.cfg',
+          '!Gruntfile.js',
           '!.ds_store',
 
           //Include font awesome
