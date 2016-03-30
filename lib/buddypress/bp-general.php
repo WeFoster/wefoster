@@ -51,20 +51,18 @@ add_action( 'wp_head', 'wff_add_bp_head' );
  * by making the template functions fall back on the current group when the
  * loop global is not populated.
  */
-function wff_populate_group_global() {
-	global $groups_template;
-
-	if ( bp_is_group() && isset( $groups_template->groups[0]->group_id ) && empty( $groups_template->groups[0]->name ) ) {
-		$current_group = groups_get_current_group();
-
-		// Fill in all missing properties
-		foreach ( $current_group as $cur_key => $cur_value ) {
-			if ( ! isset( $groups_template->groups[0]->{$cur_key} ) ) {
-				$groups_template->groups[0]->{$cur_key} = $cur_value;
-			}
-		}
-	}
-}
+ function wff_populate_group_global() {
+ 	global $groups_template;
+ 	if ( bp_is_group() && isset( $groups_template->groups[0]->group_id ) && empty( $groups_template->groups[0]->name ) ) {
+ 		$current_group = groups_get_current_group();
+ 		// Fill in all missing properties
+ 		foreach ( $current_group as $cur_key => $cur_value ) {
+ 			if ( ! isset( $groups_template->groups[0]->{$cur_key} ) ) {
+ 				$groups_template->groups[0]->{$cur_key} = $cur_value;
+ 			}
+ 		}
+ 	}
+ }
 
 /**
  * Activity Stream Conditional

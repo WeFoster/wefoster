@@ -116,7 +116,6 @@ if ( ! function_exists( 'wff_theme_group_navigation' ) ) {
 	function wff_theme_group_navigation() {
 
 		if ( bp_is_group() ) :
-			wff_populate_group_global();
 			get_template_part( 'buddypress/groups/group-sidebar-navigation' );
 		endif;
 	}

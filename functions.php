@@ -86,7 +86,6 @@ if ( WEFOSTER_CUSTOMIZER_SETTINGS == 'true' ) {
 require_once( WEFOSTER_THEME_DIR . '/lib/customiser/custom.php' );
 require_once( WEFOSTER_THEME_DIR . '/lib/customiser/fonts.php' );
 require_once( WEFOSTER_THEME_DIR . '/lib/customiser/settings.php' );
-require_once( WEFOSTER_THEME_DIR . '/lib/customiser/reset/customizer-reset.php' );
 
 // Using our Customizer Values. Developers can disable most of these settings. See constants.php
 if ( WEFOSTER_CUSTOMIZER_VALUES == 'true' ) {
