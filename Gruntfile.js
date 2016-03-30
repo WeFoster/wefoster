@@ -104,6 +104,15 @@ module.exports = function(grunt) {
     },
     // Minify JS and compile into scripts
     uglify: {
+      options: {
+        //JS source map: to enable, uncomment the lines below and update sourceMappingURL based on your install
+        sourceMap: 'assets/js/scripts.min.js.map',
+        sourceMappingURL: '/wp-content/themes/wefoster/assets/js/scripts.min.js.map',
+        compress: false,
+        mangle: false,
+        preserveComments: true,
+        beautify: true
+      },
       dist: {
         files: {
           'assets/js/scripts.min.js': [
@@ -136,14 +145,6 @@ module.exports = function(grunt) {
 
             '!assets/js/scripts.min.js'
           ]
-        },
-        options: {
-          //JS source map: to enable, uncomment the lines below and update sourceMappingURL based on your install
-          sourceMap: 'assets/js/scripts.min.js.map',
-          sourceMappingURL: '/wp-content/themes/wefoster/assets/js/scripts.min.js.map',
-          compress: false,
-      mangle: false,
-      preserveComments: false
         }
       }
     },
@@ -197,7 +198,6 @@ module.exports = function(grunt) {
 
           //Include font awesome
           'assets/vendor/fontawesome/fonts/*',
-
           'assets/vendor/fastclick/lib/fastclick.js'
         ],
         dest: 'build/',
