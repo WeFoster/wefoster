@@ -108,9 +108,7 @@ module.exports = function(grunt) {
         //JS source map: to enable, uncomment the lines below and update sourceMappingURL based on your install
         sourceMap: 'assets/js/scripts.min.js.map',
         sourceMappingURL: '/wp-content/themes/wefoster/assets/js/scripts.min.js.map',
-        compress: false,
-        mangle: false,
-        preserveComments: true,
+        preserveComments: false,
         beautify: true
       },
       dist: {
