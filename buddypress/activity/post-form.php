@@ -1,5 +1,4 @@
 <?php
-
 /**
  * BuddyPress - Activity Post Form
  *
@@ -11,32 +10,41 @@
 
 <form action="<?php bp_activity_post_form_action(); ?>" method="post" id="whats-new-form" name="whats-new-form" role="complementary">
 
-	<?php do_action( 'bp_before_activity_post_form' ); ?>
+	<?php
 
-	<p class="activity-greeting"><?php if ( bp_is_group() ) {
-			printf( __( "What's new in %s, %s?", 'buddypress' ), bp_get_group_name(), bp_get_user_firstname() );
-		} else {
-			printf( __( "What's new, %s?", 'buddypress' ), bp_get_user_firstname() );
-		}
-		?></p>
+	/**
+	 * Fires before the activity post form.
+	 *
+	 * @since 1.2.0
+	 */
+	do_action( 'bp_before_activity_post_form' ); ?>
+
+	<p class="activity-greeting"><?php if ( bp_is_group() )
+		printf( __( "What's new in %s, %s?", 'buddypress' ), bp_get_group_name(), bp_get_user_firstname( bp_get_loggedin_user_fullname() ) );
+	else
+		printf( __( "What's new, %s?", 'buddypress' ), bp_get_user_firstname( bp_get_loggedin_user_fullname() ) );
+	?></p>
 
 	<div id="whats-new-content">
 		<div id="whats-new-textarea">
-			<textarea class="bp-suggestions form-control" name="whats-new" id="whats-new" cols="50"
-			          rows="10"><?php if ( isset( $_GET['r'] ) ) : ?>@<?php echo esc_textarea( $_GET['r'] ); ?><?php endif; ?></textarea>
+			<label for="whats-new" class="bp-screen-reader-text"><?php _e( 'Post what\'s new', 'buddypress' ); ?></label>
+			<textarea class="bp-suggestions form-control" name="whats-new" id="whats-new" cols="50" rows="10"
+				<?php if ( bp_is_group() ) : ?>data-suggestions-group-id="<?php echo esc_attr( (int) bp_get_current_group_id() ); ?>" <?php endif; ?>
+			><?php if ( isset( $_GET['r'] ) ) : ?>@<?php echo esc_textarea( $_GET['r'] ); ?> <?php endif; ?></textarea>
 		</div>
 
-		<div id="whats-new-options" class="js-flash">
+		<div id="whats-new-options">
 			<div id="whats-new-submit">
-				<input type="submit" name="aw-whats-new-submit" id="aw-whats-new-submit" value="<?php esc_attr_e( 'Post Update', 'buddypress' ); ?>"/>
+				<input type="submit" name="aw-whats-new-submit" id="aw-whats-new-submit" value="<?php esc_attr_e( 'Post Update', 'buddypress' ); ?>" />
 			</div>
 
-			<?php if ( bp_is_active( 'groups' ) && ! bp_is_my_profile() && ! bp_is_group() ) : ?>
+			<?php if ( bp_is_active( 'groups' ) && !bp_is_my_profile() && !bp_is_group() ) : ?>
 
 				<div id="whats-new-post-in-box">
 
 					<?php _e( 'Post in', 'buddypress' ); ?>:
 
+					<label for="whats-new-post-in" class="bp-screen-reader-text"><?php _e( 'Post in', 'buddypress' ); ?></label>
 					<select id="whats-new-post-in" name="whats-new-post-in">
 						<option selected="selected" value="0"><?php _e( 'My Profile', 'buddypress' ); ?></option>
 
@@ -50,22 +58,30 @@
 
 					</select>
 				</div>
-				<input type="hidden" id="whats-new-post-object" name="whats-new-post-object" value="groups"/>
+				<input type="hidden" id="whats-new-post-object" name="whats-new-post-object" value="groups" />
 
 			<?php elseif ( bp_is_group_activity() ) : ?>
 
-				<input type="hidden" id="whats-new-post-object" name="whats-new-post-object" value="groups"/>
-				<input type="hidden" id="whats-new-post-in" name="whats-new-post-in" value="<?php bp_group_id(); ?>"/>
+				<input type="hidden" id="whats-new-post-object" name="whats-new-post-object" value="groups" />
+				<input type="hidden" id="whats-new-post-in" name="whats-new-post-in" value="<?php bp_group_id(); ?>" />
 
 			<?php endif; ?>
 
-			<?php do_action( 'bp_activity_post_form_options' ); ?>
+			<?php
+
+			/**
+			 * Fires at the end of the activity post form markup.
+			 *
+			 * @since 1.2.0
+			 */
+			do_action( 'bp_activity_post_form_options' ); ?>
 
 		</div><!-- #whats-new-options -->
 	</div><!-- #whats-new-content -->
 
 	<?php wp_nonce_field( 'post_update', '_wpnonce_post_update' ); ?>
 
+	<!-- MODIFICATION - Add a class to the whats new form. -->
 	<div id="whats-new-js-wrap" class="js-flash">
 		<?php do_action( 'bp_after_activity_post_form' ); ?>
 	</div>

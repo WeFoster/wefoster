@@ -1,12 +1,32 @@
-<?php do_action( 'bp_before_directory_activity' ); ?>
+<?php
+/**
+ * BuddyPress Activity templates
+ *
+ * @since 2.3.0
+ *
+ * @package BuddyPress
+ * @subpackage bp-legacy
+ */
+
+/**
+ * Fires before the activity directory listing.
+ *
+ * @since 1.5.0
+ */
+do_action( 'bp_before_directory_activity' ); ?>
 
 <div id="buddypress">
 
-	<?php if ( ! wp_is_mobile() ) : ?>
-		<?php get_template_part( 'buddypress/activity/activity-dropdown' ); ?>
-	<?php endif; ?>
+	<?php
 
-	<?php do_action( 'bp_before_directory_activity_content' ); ?>
+	/**
+	 * Fires before the activity directory display content.
+	 *
+	 * @since 1.2.0
+	 */
+	do_action( 'bp_before_directory_activity_content' ); ?>
+
+	<?php get_template_part( 'buddypress/activity/activity-dropdown' ); ?>
 
 	<?php if ( is_user_logged_in() ) : ?>
 
@@ -14,27 +34,63 @@
 
 	<?php endif; ?>
 
-	<?php do_action( 'wf_template_notices' ); ?>
+	<?php
+
+	/**
+	 * Fires towards the top of template pages for notice display.
+	 *
+	 * @since 1.0.0
+	 */
+	do_action( 'template_notices' ); ?>
+
+	<?php
+
+	/**
+	 * Fires before the display of the activity list.
+	 *
+	 * @since 1.5.0
+	 */
+	do_action( 'bp_before_directory_activity_list' ); ?>
+
+	<div class="activity">
 
 
-	<?php do_action( 'bp_before_directory_activity_list' ); ?>
-
-	<div class="activity" role="main">
-
-		<?php //if ( wp_is_mobile() ) : ?>
-		<?php get_template_part( 'buddypress/parts/activity-dropdown' ); ?>
-		<?php //endif; ?>
-
-		<?php bp_get_template_part( 'activity/activity-loop' ); ?>
+				<?php bp_get_template_part( 'activity/activity-loop' ); ?>
 
 	</div><!-- .activity -->
 
-	<?php do_action( 'bp_after_directory_activity_list' ); ?>
+	<?php
 
-	<?php do_action( 'bp_directory_activity_content' ); ?>
+	/**
+	 * Fires after the display of the activity list.
+	 *
+	 * @since 1.5.0
+	 */
+	do_action( 'bp_after_directory_activity_list' ); ?>
 
-	<?php do_action( 'bp_after_directory_activity_content' ); ?>
+	<?php
 
-	<?php do_action( 'bp_after_directory_activity' ); ?>
+	/**
+	 * Fires inside and displays the activity directory display content.
+	 */
+	do_action( 'bp_directory_activity_content' ); ?>
+
+	<?php
+
+	/**
+	 * Fires after the activity directory display content.
+	 *
+	 * @since 1.2.0
+	 */
+	do_action( 'bp_after_directory_activity_content' ); ?>
+
+	<?php
+
+	/**
+	 * Fires after the activity directory listing.
+	 *
+	 * @since 1.5.0
+	 */
+	do_action( 'bp_after_directory_activity' ); ?>
 
 </div>
