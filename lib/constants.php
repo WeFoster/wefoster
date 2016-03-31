@@ -405,3 +405,10 @@ if ( ! defined( 'WEFOSTER_MOBILE_OPTIMISATION' ) ) {
 	//Options: 'on' or 'off'
 	define( 'WEFOSTER_MOBILE_OPTIMISATION', 'off' );
 }
+
+//If you are using WordPress Multisite and would like to load the BP stylesheet on every blog
+// turn this constant "on".
+if ( ! defined( 'WEFOSTER_MS_LOAD_BUDDYPRESS_STYLES' ) ) {
+	//Options: 'on' or 'off'
+	define( 'WEFOSTER_MS_LOAD_BUDDYPRESS_STYLES', 'off' );
+}
