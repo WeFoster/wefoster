@@ -79,7 +79,7 @@ if ( ! defined( 'WEFOSTER_FOOTER_WIDGETS' ) ) {
 
 //Footer: Footer Class
 if ( ! defined( 'WEFOSTER_FOOTER_CLASS' ) ) {
-	// 'wefoster-sidebar-right' or 'wefoster-sidebar-left'
+	// 'footer-regular' or 'footer-inverse'
 	define( 'WEFOSTER_FOOTER_CLASS', 'footer-inverse' );
 }
 
