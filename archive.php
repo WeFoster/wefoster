@@ -12,15 +12,10 @@
 
 <div id="main-content" class="main <?php do_action( 'wf_class_main' ); ?>" role="main">
 
-	<header>
-		<div class="page-header <?php do_action( 'wf_page_header_class' ); ?>">
-			<?php
-			do_action( 'wf_open_archive_header' );
-			the_archive_title( '<h1>', '</h1>' );
-			do_action( 'wf_close_archive_header' );
-			?>
-		</div>
-	</header>
+	<?php
+	//Use to Load to Archive Title. see lib/actions.php
+	do_action( 'wf_before_archive_content' );
+	?>
 
 	<?php do_action( 'wf_before_archive_loop' ); ?>
 

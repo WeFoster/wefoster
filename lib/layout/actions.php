@@ -110,7 +110,7 @@ if ( ! function_exists( 'wff_homepage_hero' ) ) {
 }
 
 /*
-* Hook the Page Titles into our pages and posts.
+* Hook the Page Titles into our pages, posts and archives
 *
 * @since 1.0.0
 */
@@ -130,6 +130,15 @@ if ( ! function_exists( 'wff_post_header' ) ) {
 
 	add_action( 'wf_before_entry_content', 'wff_post_header' );
 }
+
+if ( ! function_exists( 'wff_archive_header' ) ) {
+	function wff_archive_header() {
+
+		get_template_part( 'templates/parts/archive-header' );
+	}
+	add_action( 'wf_before_archive_content', 'wff_archive_header' );
+}
+
 
 /*
 * Hook the post thumbnails into our pages and posts.
