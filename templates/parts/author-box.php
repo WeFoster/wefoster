@@ -1,5 +1,5 @@
 <?php if ( get_the_author_meta( 'description' ) ): ?>
-	<div class="author-bio-wrap">
+<div class="author-bio-wrap">
 	<div class="author-bio wf-grid wf-grid--align-center <?php do_action( 'wf_author_bio_class' ); ?>">
 		<?php
 		do_action( 'wf_open_author_box' );
@@ -25,5 +25,5 @@
 		do_action( 'wf_close_author_box' );
 		?>
 	</div>
-<?php endif ?>
 </div>
+<?php endif ?>
