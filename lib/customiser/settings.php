@@ -668,7 +668,6 @@ function wf_plus_register_settings( $fields ) {
 			'max'  => 50,
 			'step' => 1
 		),
-		'default'     => 28,
 		'js_vars'     => array(
 			array(
 				'element'  => '.site-description, .site-description',
@@ -944,7 +943,6 @@ function wf_plus_register_settings( $fields ) {
 		'label'       => __( 'Global Font Style', 'wefoster' ),
 		'section'     => 'wf_plus_typography_body_section',
 		'description' => 'Choose a font size..',
-		'default'     => '16',
 		'priority'    => 10,
 		'choices'     => array(
 			'min'  => 13,
