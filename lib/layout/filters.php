@@ -489,5 +489,4 @@ add_action( 'wf_author_bio_class', 'wff_author_bio' );
 function wff_post_meta() {
 	echo apply_filters( 'wff_post_meta_class', 'box-light' );
 }
-
 add_action( 'wf_post_meta_class', 'wff_post_meta' );
