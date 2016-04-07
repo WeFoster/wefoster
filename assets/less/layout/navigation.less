@@ -26,9 +26,7 @@
     visibility: hidden !important;
   }
 }
-
 // Make some small changed on the inside menu
-
 .inside-menu {
   margin-left: auto;
 }
@@ -95,7 +93,6 @@
     }
   }
 }
-
 //Secondary Navigation {
 @media screen and (min-width: @grid-float-breakpoint-max) {
   .secondary-nav-wrap {
@@ -118,41 +115,43 @@
   }
 }
 
-.navbar {
-  .primary-nav-wrap {
-    li.active,
-    li.active:hover,
-    li:hover {
-      a {
-        background: transparent;
-        color: @navbar-default-link-color;
-      }
+.full-header-wrap {
+  .navbar {
+    .primary-nav-wrap {
+      li.active,
+      li.active:hover,
+      li:hover {
+        a {
+          background: transparent;
+          color: @navbar-default-link-color;
+        }
 
-      &:after {
-        border-bottom: 5px solid darken(@white, 6%);
-        bottom: 0;
-        content: ' ';
-        left: 0;
-        position: absolute;
-        right: 0;
-        top: -8px;
-        z-index: -1;
-        /* border-radius: 3px; */
-        width: 100%;
-        text-align: center;
-        display: inherit;
-        margin: 0 auto;
+        &:after {
+          border-bottom: 5px solid darken(@white, 6%);
+          bottom: 0;
+          content: ' ';
+          left: 0;
+          position: absolute;
+          right: 0;
+          top: -8px;
+          z-index: -1;
+          /* border-radius: 3px; */
+          width: 100%;
+          text-align: center;
+          display: inherit;
+          margin: 0 auto;
+        }
       }
     }
-  }
 
-  &.navbar-inverse .primary-nav-wrap {
-    li.active,
-    li.active:hover,
-    li:hover {
-      &:after {
-        border-bottom: 5px solid lighten(@navbar-inverse-bg, 6%);
-        color: @navbar-inverse-link-color;
+    &.navbar-inverse .primary-nav-wrap {
+      li.active,
+      li.active:hover,
+      li:hover {
+        &:after {
+          border-bottom: 5px solid lighten(@navbar-inverse-bg, 6%);
+          color: @navbar-inverse-link-color;
+        }
       }
     }
   }
