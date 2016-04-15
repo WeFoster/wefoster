@@ -23,12 +23,12 @@ function wff_scripts() {
 		class_exists( 'BuddyPress' ) && defined( 'BP_ENABLE_MULTIBLOG' ) ||
 		WEFOSTER_MS_LOAD_BUDDYPRESS_STYLES == 'on'
 	) {
-		wp_enqueue_style( 'wff_buddypress', $path . '/css/buddypress.css', false, '9ad14980d2d75af2ed431fe686bad3f0' );
+		wp_enqueue_style( 'wff_buddypress', $path . '/css/buddypress.css', false, '9ad14980d2sd75af2ed431fe686bad3f0' );
 	}
 
 	if ( WEFOSTER_ICON_FONT == 'font-awesome' ) {
 		// Enqueue Font Awesome
-		wp_enqueue_style( 'wff_font_awesome', $path . '/css/font-awesome.css', false, '6ee17105aaae3sffd20bb56ee840e0cabcd' );
+		wp_enqueue_style( 'wff_font_awesome', $path . '/css/font-awesome.css', false, '6ee17s105aaae3sffd20bb56ee840e0cabcd' );
 	}
 
 	if ( is_single() && comments_open() && get_option( 'thread_comments' ) ) {
