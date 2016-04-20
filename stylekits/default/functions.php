@@ -13,7 +13,8 @@ function wefoster_plus_load_preset() {
 	if ( $color_scheme != 'default' ) {
 		wp_dequeue_style( 'wff_main' );
 		wp_dequeue_style( 'wff_buddypress' );
-		wp_dequeue_style( 'wff_child_custom_less' );
+		wp_dequeue_style( 'wff_child_custom_main_less' );
+		wp_dequeue_style( 'wff_child_custom_bp_less' );
 		wp_enqueue_style( 'wff_plus_bp_stylekit_' . WEFOSTER_PLUS_STYLEKIT_NAME . '', WEFOSTER_THEME_URL . '/stylekits/' . WEFOSTER_PLUS_STYLEKIT_NAME . '/css/' . $color_scheme . '/style-bp.css', false );
 		wp_enqueue_style( 'wff_plus_stylekit_' . WEFOSTER_PLUS_STYLEKIT_NAME . '', WEFOSTER_THEME_URL . '/stylekits/' . WEFOSTER_PLUS_STYLEKIT_NAME . '/css/' . $color_scheme . '/style.css', false );
 	}
