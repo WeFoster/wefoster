@@ -49,7 +49,7 @@ function wff_scripts() {
 	wp_enqueue_script( 'modernizr' );
 
 	//Developer: See lib/constants.php to enable mobile optimisation. This is currently experimentatal.
-	if ( is_handheld() || WEFOSTER_MOBILE_OPTIMISATION == 'off' ) {
+	if ( wff_is_device() || WEFOSTER_MOBILE_OPTIMISATION == 'off' ) {
 		//Only load our scripts on mobile
 		wp_enqueue_script( 'touchswipe_js' );
 		wp_enqueue_script( 'sidr_js' );

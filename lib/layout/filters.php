@@ -351,7 +351,7 @@ if ( WEFOSTER_LAYOUT_CLASS == 'container' ) {
  */
 function wff_mobile_body_class( $classes ) {
 
-	if ( is_handheld() || WEFOSTER_MOBILE_OPTIMISATION == 'off' ) {
+	if ( wff_is_device() || WEFOSTER_MOBILE_OPTIMISATION == 'off' ) {
 		$classes[] = 'wefosterismobile';
 	} else {
 		$classes[] = 'wefosterisdesktop';

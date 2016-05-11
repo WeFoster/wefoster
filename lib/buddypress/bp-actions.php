@@ -269,7 +269,7 @@ if ( ! function_exists( 'wff_buddypress_cover_photo_css' ) ) {
 if ( ! function_exists( 'wff_bp_add_mobile_template_parts' ) ) {
 	function wff_bp_add_mobile_template_parts() {
 
-		if ( is_handheld() || WEFOSTER_MOBILE_OPTIMISATION == 'off' ) {
+		if ( wff_is_device() || WEFOSTER_MOBILE_OPTIMISATION == 'off' ) {
 			//Add Actions
 			add_action( 'wf_open_bp_mobile_sidebar', 'wff_theme_group_navigation' );
 			add_action( 'wf_open_bp_mobile_sidebar', 'wff_theme_activity_tabs', 1 );
@@ -293,7 +293,7 @@ if ( ! function_exists( 'wff_bp_mobile_sidebar' ) ) {
 	 * Load our BuddyPress Navigation on Mobile
 	 */
 	function wff_bp_mobile_sidebar() {
-		if ( is_handheld() || WEFOSTER_MOBILE_OPTIMISATION == 'off' ) :
+		if ( wff_is_device() || WEFOSTER_MOBILE_OPTIMISATION == 'off' ) :
 			//Our User Navigation
 			get_template_part( 'templates/sidebar/buddypress-mobile-user-navigation' );
 			//Our Member/Group Navigation
@@ -310,7 +310,7 @@ if ( ! function_exists( 'wff_bp_mobile_sidebar' ) ) {
  *
  */
 function bp_mobile_sidebar_triggers() {
-	if ( is_handheld() || WEFOSTER_MOBILE_OPTIMISATION == 'off' ) :
+	if ( wff_is_device() || WEFOSTER_MOBILE_OPTIMISATION == 'off' ) :
 		?>
 		<div class="mobile-content-trigger hidden-lg hidden-md">
 			<?php if ( bp_is_groups_component() && bp_is_group() ): ?>
