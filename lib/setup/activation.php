@@ -35,67 +35,7 @@ if ( WEFOSTER_AUTO_SETUP == 'true' ) {
 
 	// Only assign when the theme is activated.
 	add_action( 'after_switch_theme', 'wf_theme_magic_setup' );
-}
 
-
-/**
- * Automagically create a front page if one has not been set already
- *
- * @since 1.0.0
- */
-function wff_theme_auto_create_home_page() {
-
-	// if we're not on the root blog , do not auto create the homepage
-	if ( ! is_main_site() ) {
-		return;
-	}
-	// get frontpage ID
-	$front_page = get_option( 'page_on_front' );
-	// no frontpage?
-	if ( ! $front_page ) {
-		// set our flag to create a page to true by default
-		$create_page = true;
-		// grab current auto-created home page id
-		$home_page_id = get_option( '_wf_theme_auto_create_home_page' );
-		// we have a page ID, but does it still exist?
-		if ( is_numeric( $home_page_id ) ) {
-			// page exists, so set $create_page flag to false
-			if ( get_post( $home_page_id ) ) {
-				$create_page = false;
-			}
-		}
-		// we need to create a new page
-		if ( $create_page ) {
-			// create the new page
-			$home_page_id = wp_insert_post( array(
-				                                'post_type'   => 'page',
-				                                'post_title'  => 'Welcome to ' . get_bloginfo() . '',
-				                                'post_status' => 'publish'
-			                                ) );
-
-			// set the new page as the frontpage and use our homepage template
-			update_post_meta( $home_page_id, '_wp_page_template', 'templates/homepage-template.php' );
-			update_option( 'show_on_front', 'page' );
-			update_option( 'page_on_front', $home_page_id );
-			update_option( '_wf_theme_auto_create_home_page', $home_page_id );
-		}
-		// check if front page still exists
-	} else {
-		// do this check only on 404 pages b/c if the front page doesn't exist,
-		// the front page will 404, so we can run our check then to prevent
-		// unnecessary DB queries on other pages
-		if ( is_404() && get_post( $front_page ) === null ) {
-			// front page no longer exists so purge the following options
-			delete_option( 'page_on_front' );
-			delete_option( '_wf_theme_auto_create_home_page' );
-			// redirect back to homepage
-			wp_redirect( get_home_url() );
-			die();
-		}
-	}
-}
-
-add_action( 'wp', 'wff_theme_auto_create_home_page' );
 
 /**
  * Populates sidebars throughout the theme on activation
@@ -550,4 +490,6 @@ function wff_homepage_welcome_text() {
 		<p>
 		<a class="btn btn-primary btn-success" href="%s">Read More About Us</a></p>', 'wefoster' ), get_site_url() . '/about-us' );
 	}
+}
+
 }
