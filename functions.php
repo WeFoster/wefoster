@@ -110,6 +110,7 @@ if ( class_exists( 'BuddyPress' ) ) {
 	require_once WEFOSTER_THEME_DIR . '/lib/buddypress/bp-actions.php';
 	require_once WEFOSTER_THEME_DIR . '/lib/buddypress/bp-hooks.php';
 	require_once WEFOSTER_THEME_DIR . '/lib/buddypress/bp-filters.php';
+	require_once WEFOSTER_THEME_DIR . '/lib/buddypress/third-party.php';
 }
 
 // Our Thumbnail Class.
