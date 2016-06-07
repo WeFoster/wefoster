@@ -14,6 +14,74 @@
 
 // Note: To keep things easy we are working from top to bottom according to the HTML structure.
 
+$layout = get_theme_mod( 'stylekit_layout_preset', 'boxed-full' );
+
+// Fluid Full
+if ( $layout == 'fluid-full' ) {
+	if ( ! defined( 'WEFOSTER_LAYOUT_CLASS' ) ) {
+		define( 'WEFOSTER_LAYOUT_CLASS', 'container-fluid' );
+	}
+}
+
+// Boxed Inversed Full
+if ( $layout == 'boxed-inversed-full' ) {
+
+	if ( ! defined( 'WEFOSTER_LAYOUT_CLASS' ) ) {
+		define( 'WEFOSTER_LAYOUT_CLASS', 'container' );
+	}
+
+	if ( ! defined( 'WEFOSTER_HEADER_STYLE' ) ) {
+		define( 'WEFOSTER_HEADER_STYLE', 'navbar-inverse' );
+	}
+
+}
+
+// Fluid Minimal
+if ( $layout == 'fluid-minimal' ) {
+
+	if ( ! defined( 'WEFOSTER_LAYOUT_FULL_PRIMARY_MENU_POSITION' ) ) {
+		define( 'WEFOSTER_LAYOUT_FULL_PRIMARY_MENU_POSITION', 'outside' );
+	}
+
+	if ( ! defined( 'WEFOSTER_LAYOUT_PRESET' ) ) {
+		define( 'WEFOSTER_LAYOUT_PRESET', 'minimal' );
+	}
+
+	if ( ! defined( 'WEFOSTER_LAYOUT_CLASS' ) ) {
+		define( 'WEFOSTER_LAYOUT_CLASS', 'container-fluid' );
+	}
+
+	if ( ! defined( 'WEFOSTER_HEADER_STICKY' ) ) {
+		define( 'WEFOSTER_HEADER_STICKY', 'navbar-static-top' );
+	}
+
+	if ( ! defined( 'WEFOSTER_HEADER_HIDE' ) ) {
+		define( 'WEFOSTER_HEADER_HIDE', 'navbar-headroom' );
+	}
+
+}
+
+// Boxed Minimal Inversed
+if ( $layout == 'boxed-minimal-inversed' ) {
+
+	if ( ! defined( 'WEFOSTER_LAYOUT_CLASS' ) ) {
+		define( 'WEFOSTER_LAYOUT_CLASS', 'container' );
+	}
+
+	if ( ! defined( 'WEFOSTER_HEADER_STICKY' ) ) {
+		define( 'WEFOSTER_HEADER_STICKY', 'navbar-static-top' );
+	}
+
+	if ( ! defined( 'WEFOSTER_HEADER_HIDE' ) ) {
+		define( 'WEFOSTER_HEADER_HIDE', 'navbar-headroom' );
+	}
+
+	if ( ! defined( 'WEFOSTER_HEADER_STYLE' ) ) {
+		define( 'WEFOSTER_HEADER_STYLE', 'navbar-inverse' );
+	}
+
+}
+
 // Layout Class: Choose our main container class that is wrapped around our main elements.
 if ( ! defined( 'WEFOSTER_LAYOUT_CLASS' ) ) {
 	// 'container' or 'container-fluid'

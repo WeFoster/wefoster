@@ -12,6 +12,6 @@
 
 <div class="visible-xs">
 	<a class="navbar-brand" href="<?php echo esc_url( home_url( '/' ) ); ?>">
-		<?php echo apply_filters( 'wff_mobile_logo', $logo ); ?>
+		<?php echo apply_filters( 'wff_mobile_logo', '<img src="' . WEFOSTER_DEFAULT_MOBILE_LOGO . '">' ); ?>
 	</a>
 </div>

@@ -24,7 +24,7 @@ function default_stylekit_settings( $fields ) {
 		'default'  => 'blue',
 		'priority' => 30,
 		'choices'  => array(
-			'default'    => __( 'Green', 'wefoster' ),
+			'default'    => __( 'Green (Default)', 'wefoster' ),
 			'blue'       => __( 'Blue', 'wefoster' ),
 			'accessible' => __( 'Accessibility Friendly', 'wefoster' ),
 			'black'      => __( 'Black', 'wefoster' ),
@@ -70,33 +70,3 @@ if ( $color == 'accessible' ) {
 	define( 'WEFOSTER_NAVIGATION_FONT_FAMILY', 'Roboto' );
 	define( 'WEFOSTER_HEADINGS_FONT_FAMILY', 'Roboto' );
 }
-
-//Load our custom stylesheet
-function wefoster_plus_layout_preset() {
-
-	$layout = get_theme_mod( 'stylekit_layout_preset', 'boxed-full' );
-
-	if ( $layout == 'fluid-full' ) {
-		define( 'WEFOSTER_LAYOUT_CLASS', 'container-fluid' );
-	}
-	if ( $layout == 'boxed-inversed-full' ) {
-		define( 'WEFOSTER_LAYOUT_CLASS', 'container' );
-		define( 'WEFOSTER_HEADER_STYLE', 'navbar-inverse' );
-	}
-	if ( $layout == 'fluid-minimal' ) {
-		define( 'WEFOSTER_LAYOUT_FULL_PRIMARY_MENU_POSITION', 'outside' );
-		define( 'WEFOSTER_LAYOUT_PRESET', 'minimal' );
-		define( 'WEFOSTER_LAYOUT_CLASS', 'container-fluid' );
-		define( 'WEFOSTER_HEADER_STICKY', 'navbar-static-top' );
-		define( 'WEFOSTER_HEADER_HIDE', 'navbar-headroom' );
-	}
-	if ( $layout == 'boxed-minimal-inversed' ) {
-		define( 'WEFOSTER_LAYOUT_CLASS', 'container' );
-		define( 'WEFOSTER_HEADER_STICKY', 'navbar-static-top' );
-		define( 'WEFOSTER_HEADER_HIDE', 'navbar-headroom' );
-		define( 'WEFOSTER_HEADER_STYLE', 'navbar-inverse' );
-	}
-
-}
-add_action( 'wp_head', 'wefoster_plus_layout_preset', 10000 );
-?>

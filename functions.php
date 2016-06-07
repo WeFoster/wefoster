@@ -117,4 +117,3 @@ if ( class_exists( 'BuddyPress' ) ) {
 if ( ! class_exists( 'WP_Thumb' ) ) {
 	require_once WEFOSTER_THEME_DIR . '/lib/vendor/WPThumb/wpthumb.php';
 }
-?>

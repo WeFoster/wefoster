@@ -23,4 +23,3 @@ if ( has_nav_menu( 'secondary_navigation' ) ) {
 	<?php
 }
 do_action( 'wf_after_secondary_header_navigation' );
-?>

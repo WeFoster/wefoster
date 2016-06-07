@@ -14,7 +14,11 @@ Template Name: Full Width Page
 	do_action( 'wf_before_page_content' );
 	?>
 
-	<?php get_template_part( 'templates/loops/content', 'page' ); ?>
+	<?php while( have_posts() ) : the_post() ; ?>
+
+		<?php get_template_part( 'templates/loops/content', 'page' ); ?>
+
+	<?php endwhile; ?>
 
 	<?php do_action( 'wf_close_page_content' ); ?>
 

@@ -30,7 +30,7 @@ function wf_plus_body_background_div() {
 			$bg_picture = get_theme_mod( 'wf_body_background_picture', WEFOSTER_BODY_BACKGROUND );
 
 			//Nothing set? Add an 1px image.
-			if ( empty( $bg_picture ) ) {
+			if ( empty( $bg_picture ) || 'none' == $bg_picture ) {
 				$bg_picture = 'data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7';
 			}
 		} //Nothing? Set as none.
@@ -157,8 +157,13 @@ function wf_plus_header_background_effects() {
 			$header_image_url = get_theme_mod( 'wf_header_background_picture', WEFOSTER_HEADER_BACKGROUND );
 		} //Nothing? Set as none.
 		else {
-			$header_image_url = get_theme_mod( 'wf_header_background_picture', 'none' );
+			$header_image_url = get_theme_mod( 'wf_header_background_picture' );
 		}
+
+		if ( empty( $header_image_url ) ) {
+			return;
+		}
+
 		$header_image_cropped = 'url("' . wpthumb( $header_image_url, 'width=1600&crop=0' ) . '")';
 
 	} //Or is it a preset TEXTURE?
