@@ -76,4 +76,3 @@ function wf_plus_upgrade_notice() {
 }
 
 add_action( 'customize_controls_enqueue_scripts', 'wf_plus_upgrade_notice' );
-?>

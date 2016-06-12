@@ -22,4 +22,3 @@ function wefoster_plus_load_preset() {
 }
 
 add_action( 'wp_enqueue_scripts', 'wefoster_plus_load_preset', 10000 );
-?>
