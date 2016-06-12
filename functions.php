@@ -24,6 +24,13 @@ if ( ! defined( 'WEFOSTER_CUSTOMIZER_URL' ) ) {
 	define( 'WEFOSTER_CUSTOMIZER_URL', get_template_directory_uri() );
 }
 
+//Initialize the update checker.
+require WEFOSTER_THEME_DIR . '/lib/vendor/theme-updates.php';
+$example_update_checker = new ThemeUpdateChecker(
+    'wefoster',
+    'https://wefoster.co/updates/?action=get_metadata&slug=wefoster'
+);
+
 // Our Mobile Devices Class that helps with loading responsive template parts and assets.
 // We include this class because wp_is_mobile is unreliable in some cases.
 if ( ! function_exists( 'wff_notphone' ) ) {
