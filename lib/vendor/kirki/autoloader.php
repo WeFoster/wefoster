@@ -20,7 +20,7 @@ if ( ! function_exists( 'kirki_autoload_classes' ) ) {
 			$levels   = count( $exploded );
 
 			$previous_path = '';
-			for ( $i = 0; $i < $levels; $i ++ ) {
+			for ( $i = 0; $i < $levels; $i++ ) {
 				$paths[] = $path . $previous_path . strtolower( $exploded[ $i ] ) . '/' . $filename;
 				$previous_path .= strtolower( $exploded[ $i ] ) . '/';
 			}
@@ -29,7 +29,6 @@ if ( ! function_exists( 'kirki_autoload_classes' ) ) {
 				$path = wp_normalize_path( $path );
 				if ( file_exists( $path ) ) {
 					include_once $path;
-
 					return;
 				}
 			}
@@ -37,7 +36,6 @@ if ( ! function_exists( 'kirki_autoload_classes' ) ) {
 		}
 
 	}
-
 	// Run the autoloader
 	spl_autoload_register( 'kirki_autoload_classes' );
 }

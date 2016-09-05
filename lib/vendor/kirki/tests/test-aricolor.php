@@ -6,7 +6,7 @@ class Test_ariColor extends WP_UnitTestCase {
 
 		$colors = array(
 			'000000' => array(
-				'input'  => array(
+				'input' => array(
 					'hex'  => '#000000',
 					'rgb'  => 'rgb(0, 0, 0)',
 					'rgba' => 'rgba(0, 0, 0, 1)',
@@ -27,7 +27,7 @@ class Test_ariColor extends WP_UnitTestCase {
 				),
 			),
 			'FFFFFF' => array(
-				'input'  => array(
+				'input' => array(
 					'hex'  => '#ffffff',
 					'rgb'  => 'rgb(255, 255, 255)',
 					'rgba' => 'rgba(255, 255, 255, 1)',
@@ -48,7 +48,7 @@ class Test_ariColor extends WP_UnitTestCase {
 				),
 			),
 			'049CBE' => array(
-				'input'  => array(
+				'input' => array(
 					'hex'  => '#049CBE',
 					'rgb'  => 'rgb(4, 156, 190)',
 					'rgba' => 'rgba(4, 156, 190, 1)',
@@ -69,7 +69,7 @@ class Test_ariColor extends WP_UnitTestCase {
 				),
 			),
 			'038703' => array(
-				'input'  => array(
+				'input' => array(
 					'hex'  => '#038703',
 					'rgb'  => 'rgb(3, 135, 3)',
 					'rgba' => 'rgba(3, 135, 3, 1)',
@@ -90,7 +90,7 @@ class Test_ariColor extends WP_UnitTestCase {
 				),
 			),
 			'D8D5AC' => array(
-				'input'  => array(
+				'input' => array(
 					'hex'  => '#D8D5AC',
 					'rgb'  => 'rgb(216, 213, 172)',
 					'rgba' => 'rgba(216, 213, 172, 1)',
@@ -111,7 +111,7 @@ class Test_ariColor extends WP_UnitTestCase {
 				),
 			),
 			'B8191E' => array(
-				'input'  => array(
+				'input' => array(
 					'hex'  => '#B8191E',
 					'rgb'  => 'rgb(184, 25, 30)',
 					'rgba' => 'rgba(184, 25, 30, 1)',
@@ -132,7 +132,7 @@ class Test_ariColor extends WP_UnitTestCase {
 				),
 			),
 			'9600AD' => array(
-				'input'  => array(
+				'input' => array(
 					'hex'  => '#9600AD',
 					'rgb'  => 'rgb(150, 0, 173)',
 					'rgba' => 'rgba(150, 0, 173, 1)',
@@ -153,7 +153,7 @@ class Test_ariColor extends WP_UnitTestCase {
 				),
 			),
 			'011B1E' => array(
-				'input'  => array(
+				'input' => array(
 					'hex'  => '#011B1E',
 					'rgb'  => 'rgb(1, 27, 30)',
 					'rgba' => 'rgba(1, 27, 30, 1)',
@@ -343,7 +343,7 @@ class Test_ariColor extends WP_UnitTestCase {
 
 	public function get_material_design_main_colors() {
 
-		$mdc    = array();
+		$mdc = array();
 		$colors = array(
 			'F44336',
 			'E91E63',
@@ -368,7 +368,6 @@ class Test_ariColor extends WP_UnitTestCase {
 		foreach ( $colors as $color ) {
 			$mdc[] = '#' . $color;
 		}
-
 		return $mdc;
 
 	}

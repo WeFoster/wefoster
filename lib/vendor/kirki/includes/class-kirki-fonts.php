@@ -1,17 +1,55 @@
 <?php
+/**
+ * A simple object containing properties for fonts.
+ *
+ * @package     Kirki
+ * @category    Core
+ * @author      Aristeides Stathopoulos
+ * @copyright   Copyright (c) 2016, Aristeides Stathopoulos
+ * @license     http://opensource.org/licenses/https://opensource.org/licenses/MIT
+ * @since       1.0
+ */
 
 if ( ! class_exists( 'Kirki_Fonts' ) ) {
 
+	/**
+	 * The Kirki_Fonts object.
+	 */
 	final class Kirki_Fonts {
 
+		/**
+		 * The mode we'll be using to add google fonts.
+		 * This is a todo item, not yet functional.
+		 *
+		 * @static
+		 * @todo
+		 * @access public
+		 * @var string
+		 */
 		public static $mode = 'link';
 
+		/**
+		 * Holds a single instance of this object.
+		 *
+		 * @static
+		 * @access private
+		 * @var null|object
+		 */
 		private static $instance = null;
 
+		/**
+		 * An array of our google fonts.
+		 *
+		 * @static
+		 * @access public
+		 * @var null|object
+		 */
 		public static $google_fonts = null;
 
-		private function __construct() {
-		}
+		/**
+		 * The class constructor.
+		 */
+		private function __construct() {}
 
 		/**
 		 * Get the one, true instance of this class.
@@ -23,7 +61,6 @@ if ( ! class_exists( 'Kirki_Fonts' ) ) {
 			if ( null === self::$instance ) {
 				self::$instance = new self();
 			}
-
 			return self::$instance;
 		}
 
@@ -44,23 +81,23 @@ if ( ! class_exists( 'Kirki_Fonts' ) ) {
 		 *
 		 * @return array    Standard websafe fonts.
 		 */
-		public static function get_standard_fonts() {
+		 public static function get_standard_fonts() {
 			$i18n = Kirki_l10n::get_strings();
-
-			return apply_filters( 'kirki/fonts/standard_fonts', array(
-				'serif'      => array(
+			$standard_fonts = array(
+				'serif' => array(
 					'label' => $i18n['serif'],
 					'stack' => 'Georgia,Times,"Times New Roman",serif',
 				),
 				'sans-serif' => array(
-					'label' => $i18n['sans-serif'],
-					'stack' => 'Helvetica,Arial,sans-serif',
+					'label'  => $i18n['sans-serif'],
+					'stack'  => 'Helvetica,Arial,sans-serif',
 				),
-				'monospace'  => array(
+				'monospace' => array(
 					'label' => $i18n['monospace'],
 					'stack' => 'Monaco,"Lucida Sans Typewriter","Lucida Typewriter","Courier New",Courier,monospace',
 				),
-			) );
+			);
+			return apply_filters( 'kirki/fonts/standard_fonts', $standard_fonts );
 		}
 
 		/**
@@ -76,7 +113,6 @@ if ( ! class_exists( 'Kirki_Fonts' ) ) {
 				'handwriting' => '"Comic Sans MS", cursive, sans-serif',
 				'monospace'   => '"Lucida Console", Monaco, monospace',
 			);
-
 			return apply_filters( 'kirki/fonts/backup_fonts', $backup_fonts );
 		}
 
@@ -89,8 +125,7 @@ if ( ! class_exists( 'Kirki_Fonts' ) ) {
 
 			if ( null === self::$google_fonts || empty( self::$google_fonts ) ) {
 
-				$fonts_path = wp_normalize_path( dirname( dirname( __FILE__ ) ) . '/assets/json/webfonts.php' );
-				$fonts      = include $fonts_path;
+				$fonts = include wp_normalize_path( Kirki::$path . '/includes/webfonts.php' );
 
 				$google_fonts = array();
 				if ( is_array( $fonts ) ) {
@@ -113,15 +148,23 @@ if ( ! class_exists( 'Kirki_Fonts' ) ) {
 		}
 
 		/**
-		 * dummy function to avoid issues with backwards-compatibility.
+		 * Dummy function to avoid issues with backwards-compatibility.
 		 * This is not functional, but it will prevent PHP Fatal errors.
+		 *
+		 * @static
+		 * @access public
 		 */
-		public static function get_google_font_uri() {
-		}
+		public static function get_google_font_uri() {}
 
+		/**
+		 * Returns an array of all available subsets.
+		 *
+		 * @static
+		 * @access public
+		 * @return array
+		 */
 		public static function get_google_font_subsets() {
 			$i18n = Kirki_l10n::get_strings();
-
 			return array(
 				// 'all'          => $i18n['all'],
 				'cyrillic'     => $i18n['cyrillic'],
@@ -143,9 +186,15 @@ if ( ! class_exists( 'Kirki_Fonts' ) ) {
 			);
 		}
 
+		/**
+		 * Returns an array of all available variants.
+		 *
+		 * @static
+		 * @access public
+		 * @return array
+		 */
 		public static function get_all_variants() {
 			$i18n = Kirki_l10n::get_strings();
-
 			return array(
 				'100'       => $i18n['ultra-light'],
 				'100italic' => $i18n['ultra-light-italic'],
@@ -169,22 +218,31 @@ if ( ! class_exists( 'Kirki_Fonts' ) ) {
 		}
 
 		/**
-		 * @param string $fontname
+		 * Determine if a font-name is a valid google font or not.
+		 *
+		 * @static
+		 * @access public
+		 * @param string $fontname The name of the font we want to check.
+		 * @return bool
 		 */
 		public static function is_google_font( $fontname ) {
 			return ( array_key_exists( $fontname, self::$google_fonts ) );
 		}
 
+		/**
+		 * Gets available options for a font.
+		 *
+		 * @static
+		 * @access public
+		 * @return array
+		 */
 		public static function get_font_choices() {
-			$fonts       = self::get_all_fonts();
+			$fonts = self::get_all_fonts();
 			$fonts_array = array();
 			foreach ( $fonts as $key => $args ) {
 				$fonts_array[ $key ] = $key;
 			}
-
 			return $fonts_array;
 		}
-
 	}
-
 }
