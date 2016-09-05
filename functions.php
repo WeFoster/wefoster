@@ -24,16 +24,9 @@ if ( ! defined( 'WEFOSTER_CUSTOMIZER_URL' ) ) {
 	define( 'WEFOSTER_CUSTOMIZER_URL', get_template_directory_uri() );
 }
 
-//Initialize the update checker.
-require WEFOSTER_THEME_DIR . '/lib/vendor/theme-updates.php';
-$example_update_checker = new ThemeUpdateChecker(
-    'wefoster',
-    'https://wefoster.co/updates/?action=get_metadata&slug=wefoster'
-);
-
 // Our Mobile Devices Class that helps with loading responsive template parts and assets.
 // We include this class because wp_is_mobile is unreliable in some cases.
-if ( ! function_exists( 'wff_notphone' ) ) {
+if ( ! function_exists( 'wff_notphone') && ! defined( 'WP_CLI') ) {
 	require_once WEFOSTER_THEME_DIR . '/lib/vendor/Mobile-Detect/wp-mobile-detect.php';
 }
 
@@ -102,9 +95,11 @@ if ( WEFOSTER_CUSTOMIZER_VALUES == 'true' ) {
 }
 
 //Our layout actions, filters. a lot of these contain our constants.
-require_once WEFOSTER_THEME_DIR . '/lib/layout/filters.php';           // Set up our filters.
-require_once WEFOSTER_THEME_DIR . '/lib/layout/custom-login.php';      // Make the login pretty.
-require_once WEFOSTER_THEME_DIR . '/lib/layout/actions.php';           // Set up our actions.
+if ( ! defined( 'WP_CLI') ) {
+	require_once WEFOSTER_THEME_DIR . '/lib/layout/filters.php';           // Set up our filters.
+	require_once WEFOSTER_THEME_DIR . '/lib/layout/custom-login.php';      // Make the login pretty.
+	require_once WEFOSTER_THEME_DIR . '/lib/layout/actions.php';           // Set up our actions.
+}
 
 /**
  * BuddyPress Specific
@@ -117,10 +112,10 @@ if ( class_exists( 'BuddyPress' ) ) {
 	require_once WEFOSTER_THEME_DIR . '/lib/buddypress/bp-actions.php';
 	require_once WEFOSTER_THEME_DIR . '/lib/buddypress/bp-hooks.php';
 	require_once WEFOSTER_THEME_DIR . '/lib/buddypress/bp-filters.php';
-	require_once WEFOSTER_THEME_DIR . '/lib/buddypress/third-party.php';
 }
 
 // Our Thumbnail Class.
 if ( ! class_exists( 'WP_Thumb' ) ) {
 	require_once WEFOSTER_THEME_DIR . '/lib/vendor/WPThumb/wpthumb.php';
 }
+?>
