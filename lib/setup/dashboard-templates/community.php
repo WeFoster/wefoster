@@ -1,6 +1,6 @@
 <div class="wf-admin-intro wf-admin-box">
-	Want to stay up to date about everything that is happening in the world of BuddyPress? Our community newsletter is sent out bi-weekly and contains a
-	carefully curated collection of news, articles and resources that are useful for those who are building their communities using WordPress and BuddyPress.
+	Want to stay up to date about everything that is happening in the world of WordPress? Our community newsletter is sent out bi-weekly and contains a
+	carefully curated collection of news, articles and resources that are useful for those who are building their communities using WordPress!
 
 	<div id="mc_embed_signup" class="margin-top-half">
 		<form action="//wefoster.us11.list-manage.com/subscribe/post?u=5eae74b046d61832422e97744&amp;id=ed2ab6113d" method="post"

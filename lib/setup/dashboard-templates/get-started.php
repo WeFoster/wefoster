@@ -1,28 +1,3 @@
-<?php if ( ! class_exists( 'BuddyPress' ) ): ?>
-
-	<div class="row wf-admin-box wf-no-buddypress">
-		<div class="col-sm-3">
-			<div class="media-container">
-				<img src="<?php echo get_template_directory_uri();?>/customiser/assets/img/bp-logo.png" alt="">
-			</div>
-		</div>
-		<div class="col-sm-9">
-			<h3>It seems BuddyPress is not installed </h3>
-			<p>The WeFoster Theme can be used as a regular WordPress theme, but it was developed from the ground up with BuddyPress in mind! We recommend that
-				you install and activate BuddyPress first to unlock all of the powerful features that come with it!</p>
-			<p>
-				<?php
-				$plugin_name  = 'BuddyPress';
-				$install_link = '<a href="' . esc_url( network_admin_url( 'plugin-install.php?tab=plugin-information&plugin=' . $plugin_name . '&TB_iframe=true&width=900&height=600' ) ) . '" class="thickbox"><span class="dashicons dashicons-admin-plugins"></span> Install ' . $plugin_name . ' Now</a>';
-				?>
-				<?php echo $install_link; ?>
-			</p>
-		</div>
-	</div>
-
-<?php endif; ?>
-
-
 <div class="row wf-admin-box">
 	<div class="col-sm-3">
 		<div class="media-container">
@@ -48,7 +23,7 @@
 		</div>
 	</div>
 	<div class="col-sm-9">
-		<h3><span>Step 1 -</span> Set up your theme!</h3>
+		<h3><span>Step 1 -</span> Set up your community!</h3>
 		<p>The WeFoster Theme automatically sets up some default widgets and your homepage so you can hit the ground running. We have written an extensive
 			getting started guide that walks you through setting up your community in a snap. Everything from setting up Menus, using the 70+ Customiser options
 			and much more!</p>
@@ -57,7 +32,7 @@
 			<ul class="nav nav-pills">
 				<li role="presentation"><a href="<?php echo get_site_url()?>/wp-admin/customize.php"><i class="fa fa-eye"></i> Open The Theme Customiser!</a>
 				</li>
-				<li role="presentation"><a href="https://documentation.wefoster.co/kb/wefoster-theme-documentation/" target="_blank">Read our Documentation</a></li>
+				<li role="presentation"><a href="https://wefoster.helpscoutdocs.com" target="_blank">Read our Documentation</a></li>
 			</ul>
 </p>
 	</div>
@@ -93,9 +68,9 @@
 	</div>
 	<div class="col-sm-9">
 		<h3><span>Step 2 -</span> Join the WeFoster Community</h3>
-		<p>Launching a successful social network ain't easy, but we're here to help! Join our community of BuddyPress developers and site owners and learn
-			everything there is to know about building succesful communities with BuddyPress! Create your profile and connect to other site owners with similar goals and learn from the best. </p>
-		<p><a target="_blank" href="https://wefoster.co/create-your-account/">Create Your WeFoster Account</a></p>
+		<p>Launching a successful social network ain't easy, but we're here to help! Join our community of WordPress Community Builders and Developers and learn
+			everything there is to know about building succesful communities with WordPress! Create your profile and connect to other site owners with similar goals and learn from the best. </p>
+		<p><a target="_blank" href="https://wefoster.co/">Join our Community</a></p>
 	</div>
 </div>
 
@@ -131,14 +106,14 @@
 	</div>
 	<div class="col-sm-9">
 		<h3><span>Step 3 -</span>Foster Your Community</h3>
-		<p>Whether you are still in the planning stages or are already a BuddyPress & WordPress expert, we've got plenty of resources on how to build better
+		<p>Whether you are still in the planning stages or are already a WordPress expert, we've got plenty of resources on how to build better
 			communities for your audience. Simply follow the links below and you'll be an expert in no-time!</p>
 		<p>
 		<ul class="nav nav-pills">
-			<li role="presentation"><a href="https://wefoster.co/buddypress-news/"><i class="fa fa-newspaper-o"></i> Newsfeed</a></li>
+			<li role="presentation"><a href="https://wefoster.co/community-news/"><i class="fa fa-newspaper-o"></i> Community News</a></li>
 			<li target="_blank" role="presentation"><a href="https://wefoster.co/community-questions/"><i class="fa fa-comments"></i> Question & Answers</a>
 			</li>
-			<li target="_blank" role="presentation"><a href="https://wefoster.co/buddypress-communities/"><i class="fa fa-users"></i> Communities</a></li>
+			<li target="_blank" role="presentation"><a href="https://wefoster.co/community-showcase/"><i class="fa fa-users"></i> Community Showcase</a></li>
 			<li role="presentation"><a href="https://wefoster.co/blog/"><i class="fa fa-book"></i> Articles</a></li>
 		</ul>
 		</p>
@@ -195,11 +170,9 @@
 			should I use? How do I grow my community? Where do I find a custom developer? The links below will help you answer those questions.</p>
 		<p>
 		<ul class="nav nav-pills">
-			<li role="presentation"><a href="https://wefoster.co/buddypress-developer/"><i class="fa fa-code"></i> Finding a BuddyPress Developer</a></li>
-			<li target="_blank" role="presentation"><a href="http://development.wefoster.co/buddypress-plugins/"><i class="fa fa-list-alt"></i> BuddyPress
-					Plugin Repository</a></li>
-			<li target="_blank" role="presentation"><a href="https://wefoster.co/community/community-building/"></i> <i class="fa fa-leaf"></i> Community
-					Building</a></li>
+			<li role="presentation"><a href="https://wefoster.co/platform/community-care/"><i class="fa fa-heart"></i> Community Care</a></li>
+			<li target="_blank" role="presentation"><a href="https://wefoster.co/profiles/type/developers/"><i class="fa fa-list-alt"></i> Developer Directory</a></li>
+			<li target="_blank" role="presentation"><a href="https://slackwefoster.herokuapp.com"></i> <i class="fa fa-leaf"></i> Join Our Slack Channel</a></li>
 		</ul>
 		</p>
 	</div>

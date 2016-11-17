@@ -12,7 +12,7 @@
 
 	if ( empty( $posts ) ) {?>
 		<div class="wf-post-content">
-				We were unable to retrieve the documentation articles.... Please try again later!
+				We were unable to retrieve the documentation articles.... <a href="https://wefoster.helpscoutdocs.com/collection/1-wefoster-platform">Visit our KnowledgeBase</a>
 		</div>
 		<?php return;
 	}
@@ -34,9 +34,11 @@
 	// Grab Some Recent Posts
 	$posts = wff_get_developer_docs();
 
-	if ( empty( $posts ) ) {
-		return;
-	}
+	if ( empty( $posts ) ) { ?>
+		<div class="wf-post-content">
+				We were unable to retrieve the documentation articles.... <a href="https://wefoster.helpscoutdocs.com/collection/1-wefoster-platform">Visit our KnowledgeBase</a>
+		</div>
+	<?php }
 	foreach ( $posts as $post ) {
 		?>
 		<li class="wf-doc">
